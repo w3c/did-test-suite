@@ -1,7 +1,7 @@
 # W3C Decentralized Identifiers Working Group Test Suite
 
 This repository contains the W3C
-[CREDENTIALS COMMUNITY GROUP](https://www.w3.org/community/credentials/) test suite.
+[Credentials Community Group](https://www.w3.org/community/credentials/) test suite.
 Any conforming implementation MUST pass all tests in the test suite.
 
 There are multiple test suites, each of which is detailed below.
