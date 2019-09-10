@@ -1,18 +1,18 @@
 # W3C Decentralized Identifiers Working Group Test Suite
 
 This repository contains the W3C
-[Credentials Community Group](https://www.w3.org/community/credentials/) test suite.
-Any conforming implementation MUST pass all tests in the test suite.
-
-There are multiple test suites, each of which is detailed below.
+[Decentralized Identifiers Working Group](https://www.w3.org/community/credentials/) 
+test suite.
 
 ## Decentralized Identifiers 1.0 Test Suite
 
-This test suite will check any application that generates [Decentralized Identifiers](https://w3c-ccg.github.io/did-spec/) documents to
+This test suite will check any application that generates 
+[Decentralized Identifier](https://w3c.github.io/did-spec/) documents to
 ensure conformance with the specification.
 
 ### Creating a Binary
-You web application will need to be accessible from the command line. It will also need to accept the following command line parameters:
+You web application will need to be accessible from the command line. It
+will also need to accept the following command line parameters:
 ```
 Usage: <your_program> [options] [command]
 
@@ -23,7 +23,8 @@ Options:
 Commands:
   validate? // TODO commands
 ```
-All tests will run against your binary and assume that an exit code greater than 0 represents an error.
+All tests will run against your binary and assume that an exit code greater
+than 0 represents an error.
 
 ### Creating a config file
 An example local configuration for the test suite. To use:
@@ -58,4 +59,4 @@ An example local configuration for the test suite. To use:
 
 You may contribute to this test suite by submitting pull requests here:
 
-https://github.com/w3c-ccg/did-test-suite
+https://github.com/w3c/did-test-suite
