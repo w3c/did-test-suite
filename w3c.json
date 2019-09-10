@@ -1,11 +1,6 @@
-// TODO: get group and contacts
 {
-  "group": [
-    null
-  ],
-  "contacts": [
-    null
-  ],
+  "group":      [117488],
+  "contacts":   ["iherman"],
   "shortName": "did-test-suite",
   "repo-type": "tests"
 }
