@@ -1,8 +1,11 @@
 # W3C Decentralized Identifiers Working Group Test Suite
 
-This repository contains the W3C
-[Decentralized Identifiers Working Group](https://www.w3.org/community/credentials/) 
-test suite.
+![W3C Logo](https://www.w3.org/Icons/w3c_home)
+
+# Test Suite and Implementation Report
+
+This is the repository of the W3C’s note on Test Suite and Implementation
+Report, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/).
 
 ## Decentralized Identifiers 1.0 Test Suite
 
@@ -55,8 +58,19 @@ An example local configuration for the test suite. To use:
 5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
    pull request for your implementation.
 
-## Contributing
 
-You may contribute to this test suite by submitting pull requests here:
+## Contributing to the Repository
 
-https://github.com/w3c/did-test-suite
+Use the standard fork, branch, and pull request workflow to propose changes
+to the test suite. Please make branch names informative—by including the
+issue or bug number for example.
+
+Editorial changes that improve the readability of the spec or correct
+spelling or grammatical mistakes are welcome.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md), about licensing
+contributions.
+
+## Code of Conduct
+
+W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
