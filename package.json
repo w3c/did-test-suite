@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/w3c-ccg/did-test-suite"
+    "url": "git+https://github.com/w3c/did-test-suite"
   },
   "keywords": [
     "verifiable",
@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/w3c-ccg/did-test-suite/issues"
+    "url": "https://github.com/w3c/did-test-suite/issues"
   },
-  "homepage": "https://github.com/w3c-ccg/did-test-suite#readme"
+  "homepage": "https://github.com/w3c/did-test-suite#readme"
 }
