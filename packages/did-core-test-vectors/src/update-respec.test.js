@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
+const moment = require('moment');
 
 const request = require('supertest');
 const { app } = require('did-core-test-server');
@@ -43,7 +44,12 @@ ${JSON.stringify(results, null, 2)}
     );
 
     $('#raw-rest-results-last-updated').replaceWith(
-      `Last Updated ${new Date().toISOString()}`
+      `<p id="raw-rest-results-last-updated" class="note">
+These test results were last generated 
+<span id="raw-rest-results-last-updated-date">
+${moment().format('LLLL')}
+</span>
+      </p>`
     );
 
     const updatedSpec = $.html();

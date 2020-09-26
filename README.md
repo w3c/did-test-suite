@@ -13,7 +13,76 @@ This test suite will check any application that generates
 [Decentralized Identifier](https://w3c.github.io/did-spec/) documents to
 ensure conformance with the specification.
 
-## How does this work?
+## Contributing to the Repository
+
+Use the standard fork, branch, and pull request workflow to propose changes
+to the test suite. Please make branch names informative—by including the
+issue or bug number for example.
+
+Editorial changes that improve the readability of the spec or correct
+spelling or grammatical mistakes are welcome.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md), about licensing
+contributions.
+
+## Code of Conduct
+
+W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
+
+## Usage
+
+You may need to [install node.js](https://nodejs.org/en/).
+
+```
+git clone git@github.com:w3c/did-test-suite.git
+npm i
+```
+
+You may also need to [install docker](https://docs.docker.com/get-docker/).
+
+To update the test report, run this command from the root directory of this repository:
+
+```
+npm run update-test-report
+```
+
+### Test Server
+
+[did-core-test-server](./packages/did-core-test-server)
+
+This module is responsible for evaluating "test scenarios".
+
+To run this server, simply run this command from the root directory of this repository:
+
+```
+npm run start
+```
+
+### Test Fixtures
+
+[did-core-test-vectors](./packages/did-core-test-vectors)
+
+This module is responsible for asking storing "test scenario" inputs and expected outputs.
+
+You can run these tests without starting the test server.
+
+Simply run this command from the `did-core-test-vectors` directory:
+
+```
+npm run test
+```
+
+When test in this module run, they compare the results of running tests against the latest source code in the `test-server`, with the expected outputs.
+
+If a test fails, a fixture will need to be updated.
+
+The `test-server` is the source of truth, fixtures tests are just a way of covering that truth with tests.
+
+DO NOT attempt to update the `test-server` to get a fixture test to pass.
+
+Test implementers may find it useful to write unit tests in `test-server` before attempting test fixture tests.
+
+## What is a scenario?
 
 A scenario is defined in JSON, for example "resolve"
 
@@ -82,7 +151,7 @@ Multiple scenarios can be submitted at once:
 ```
 curl -s -X POST http://localhost:8080/test \
 -H "Content-Type: application/json" \
--d @./packages/did-core-test-vectors/did-method/did-key/test-all.json \
+-d @./packages/did-core-test-vectors/src/__fixtures__/example/test-all.json \
 | jq '.'
 ```
 
@@ -91,7 +160,7 @@ And all results are produced as json:
 ```
 ❯ curl -s -X POST http://localhost:8080/test \
 -H "Content-Type: application/json" \
--d @./packages/did-core-test-vectors/did-method/did-key/test-all.json \
+-d @./packages/did-core-test-vectors/src/__fixtures__/example/test-all.json \
 | jq '.'
 {
   "test": "PASS",
@@ -130,22 +199,6 @@ docker run --publish 3000:3000 --detach --name dcts or13/did-core-test-server:1.
 ```
 npm run docker:up
 ```
-
-## Contributing to the Repository
-
-Use the standard fork, branch, and pull request workflow to propose changes
-to the test suite. Please make branch names informative—by including the
-issue or bug number for example.
-
-Editorial changes that improve the readability of the spec or correct
-spelling or grammatical mistakes are welcome.
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md), about licensing
-contributions.
-
-## Code of Conduct
-
-W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 
 ## DID Working Group Repositories
 
