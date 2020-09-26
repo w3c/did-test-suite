@@ -57,10 +57,12 @@ const renderPrettyTestResults = (results) => {
 };
 
 const renderTestResults = () => {
+  let url = testResultsRelativeUrl;
+  if (window.origin === 'https://pr-preview.s3.amazonaws.com') {
+    url = `https://pr-preview.s3.amazonaws.com/w3c/did-test-suite/pull/${testResultsRelativeUrl}`;
+  }
   (async () => {
-    const results = await fetch(testResultsRelativeUrl).then((response) =>
-      response.json()
-    );
+    const results = await fetch(url).then((response) => response.json());
     renderPrettyTestResults(results);
     renderRawTestResults(results);
   })();
