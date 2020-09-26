@@ -1,0 +1,5 @@
+{
+  "scenario": "resolve",
+  "test": "PASS",
+  "assertion_results": { "did should match did-document id": true }
+}

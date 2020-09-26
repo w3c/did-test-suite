@@ -1,37 +1,37 @@
 {
-  "name": "did-test-suite",
+  "name": "root",
   "version": "0.0.1",
+  "license": "Apache-2.0",
+  "private": true,
   "description": "Decentralized Identifiers Test Suite",
-  "dependencies": {},
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "mocha": "^5.2.0"
-  },
-  "scripts": {
-    "report": "mocha --recursive test/vc-data-model-1.0/ -R json > implementations/report.json",
-    "summary": "cd implementations && node generate.js",
-    "test": "mocha --recursive test/vc-data-model-1.0/"
-  },
+  "homepage": "https://github.com/w3c/did-test-suite#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/w3c/did-test-suite"
   },
+  "bugs": {
+    "url": "https://github.com/w3c/did-test-suite/issues"
+  },
   "keywords": [
-    "verifiable",
-    "credentials",
     "test",
     "suite",
     "w3c"
   ],
-  "author": {
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com/"
+  "scripts": {
+    "install:ci": "npm install --ignore-scripts && lerna link && lerna bootstrap --since origin/master --include-dependencies",
+    "postinstall": "lerna bootstrap",
+    "start": "npm run docker:up",
+    "lint": "lerna run lint --stream",
+    "test": "lerna run test --stream",
+    "docker:up": "docker-compose up --build"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/w3c/did-test-suite/issues"
+  "devDependencies": {
+    "lerna": "^3.22.1"
   },
-  "homepage": "https://github.com/w3c/did-test-suite#readme"
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
 }

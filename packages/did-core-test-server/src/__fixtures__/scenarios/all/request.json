@@ -1,0 +1,23 @@
+{
+  "scenarios": [
+    {
+      "request": {
+        "name": "resolve",
+        "input": {
+          "did": "did:example:123",
+          "did-resolution-input-metadata": {}
+        },
+        "output": {
+          "did-document": { "id": "did:example:123" },
+          "did-document-metadata": {},
+          "did-resolution-metadata": {}
+        }
+      },
+      "response": {
+        "scenario": "resolve",
+        "test": "PASS",
+        "assertion_results": { "did should match did-document id": true }
+      }
+    }
+  ]
+}
