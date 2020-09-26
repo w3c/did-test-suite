@@ -53,12 +53,16 @@
     </section>
 
     <section id="raw-test-results">
-      <h2>Raw Test Results</h2>
+      <h2>Test Results</h2>
       <p id="raw-rest-results-last-updated" class="note">
         These test results were last generated
         <span id="raw-rest-results-last-updated-date">
           Saturday, September 26, 2020 4:30 PM
         </span>
+      </p>
+      <p class="note">
+        Scenarios ending is <code>-positive-tests</code> and
+        <code>-negative-tests</code> are merged above for readability.
       </p>
       <script type="application/json" id="test-results-raw-json">
         {
@@ -121,7 +125,7 @@
             const bool = scenario.assertion_results[assertion];
             return `
             <tr>
-              <td>${booleanToEmoji(bool)} ${booleanToTestResult(bool)}</td>
+              <td>${booleanToEmoji(bool)}</td>
               <td>${assertion}</td>
             </tr>
             `;
@@ -139,11 +143,10 @@
 
         <table class="simple" style="width: 100%;">
           <tr>
-            <th>Assertion</th>
-            <th>Description</th>
+            <th></th>
+            <th>Statements</th>
           </tr>
           ${renderRows(scenario)}
-
         </table>
       </section>
       `;
@@ -182,10 +185,46 @@
         return results;
       };
 
+      const mergePositiveAndNegativeTests = (results) => {
+        const simpleScenarios = results.scenarios.filter((s) => {
+          return (
+            s.scenario.indexOf('positive') === -1 &&
+            s.scenario.indexOf('negative') === -1
+          );
+        });
+        const positiveOrNegativeScenarios = results.scenarios.filter((s) => {
+          return (
+            s.scenario.indexOf('positive') !== -1 ||
+            s.scenario.indexOf('negative') !== -1
+          );
+        });
+        const merged = {};
+        while (positiveOrNegativeScenarios.length) {
+          const s = positiveOrNegativeScenarios.pop();
+          let name = s.scenario.replace('-positive-tests', '');
+          name = name.replace('-negative-tests', '');
+          if (!merged[name]) {
+            merged[name] = s;
+            merged[name].scenario = name;
+          } else {
+            const assertionKeys = Object.keys(merged[name].assertion_results);
+            assertionKeys.forEach((assert) => {
+              merged[name].assertion_results[assert] =
+                merged[name].assertion_results[assert] &&
+                s.assertion_results[assert];
+            });
+          }
+        }
+        return {
+          scenarios: [...simpleScenarios, ...Object.values(merged)],
+        };
+      };
+
       const renderTestResults = () => {
         (async () => {
           const results = await getResults();
-          renderPrettyTestResults(results);
+          const mergedResults = mergePositiveAndNegativeTests(results);
+          renderPrettyTestResults(mergedResults);
           renderRawTestResults(results);
         })();
       };
