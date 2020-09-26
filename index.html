@@ -48,12 +48,55 @@
       <p>This document contains a summary of the did test suite results.</p>
     </section>
 
+    <section>
+      <h2>Terminology</h2>
+
+      <p>This section defines the terms used in the did core test suite.</p>
+
+      <section>
+        <h2>Scenario</h2>
+
+        <p>
+          A scenario is a json data structure containing all inputs and outputs
+          needed to test a collection of normative statements.
+        </p>
+
+        <p>Scenarios MUST have unique descriptive names.</p>
+        <p>Scenarios MAY be split into positive and negative cases.</p>
+        <p>
+          If a scenario ending in <code>-positive-tests</code> exists, a
+          corrosponding<code>-negative-tests</code> scenario MUST exist.
+        </p>
+        <p>
+          A scenarios is considered passing when all associated assertions are
+          true.
+        </p>
+        <p>
+          A scenarios is considered passing when all associated assertions are
+          true.
+        </p>
+      </section>
+
+      <section>
+        <h2>Assertion</h2>
+        <p>
+          An assertion is a function from <code>scenario</code> to
+          <code>boolean</code>.
+        </p>
+        <p>Assertions SHOULD match normative statements in the DID Core.</p>
+        <p>
+          Assertions SHOULD reuse utility functions like
+          <code>isAsciiString</code>, or <code>decodeBase64UrlToString</code>.
+        </p>
+      </section>
+    </section>
+
     <section id="test-results">
       <h2>Scenarios</h2>
     </section>
 
     <section id="raw-test-results">
-      <h2>Test Results</h2>
+      <h2>Latest Results</h2>
       <p id="raw-rest-results-last-updated" class="note">
         These test results were last generated
         <span id="raw-rest-results-last-updated-date">

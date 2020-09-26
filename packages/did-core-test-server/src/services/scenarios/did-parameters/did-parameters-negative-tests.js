@@ -1,4 +1,8 @@
-const { isAsciiString, decodeBase64UrlToString } = require('../../utils');
+const {
+  isAsciiString,
+  decodeBase64UrlToString,
+  generateScenarioResults,
+} = require('../../utils');
 
 const assertions = {
   '[hl] The associated value MUST be an ASCII string.': (scenario) => {
@@ -37,23 +41,4 @@ const assertions = {
   },
 };
 
-module.exports = (scenario) => {
-  let assertion_results = {};
-
-  Object.keys(assertions).forEach((assertion) => {
-    assertion_results = {
-      ...assertion_results,
-      [assertion]: assertions[assertion](scenario),
-    };
-  });
-
-  const test_result = Object.values(assertion_results).every((result) => {
-    return result === true;
-  });
-
-  return {
-    scenario: scenario.name,
-    test: test_result ? 'PASS' : 'FAIL',
-    assertion_results,
-  };
-};
+module.exports = generateScenarioResults(assertions);

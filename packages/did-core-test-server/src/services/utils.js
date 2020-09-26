@@ -16,7 +16,31 @@ const encodeBufferAsBase64url = (buffer) => {
   return base64url.encode(buffer);
 };
 
+const generateScenarioResults = (assertions) => {
+  return (scenario) => {
+    let assertion_results = {};
+
+    Object.keys(assertions).forEach((assertion) => {
+      assertion_results = {
+        ...assertion_results,
+        [assertion]: assertions[assertion](scenario),
+      };
+    });
+
+    const test_result = Object.values(assertion_results).every((result) => {
+      return result === true;
+    });
+
+    return {
+      scenario: scenario.name,
+      test: test_result ? 'PASS' : 'FAIL',
+      assertion_results,
+    };
+  };
+};
+
 module.exports = {
+  generateScenarioResults,
   isAsciiString,
   getQueryParamValueFromDidUri,
   decodeBase64UrlToString,
