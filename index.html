@@ -57,7 +57,7 @@
       <p id="raw-rest-results-last-updated" class="note">
         These test results were last generated
         <span id="raw-rest-results-last-updated-date">
-          Saturday, September 26, 2020 3:44 PM
+          Saturday, September 26, 2020 4:30 PM
         </span>
       </p>
       <script type="application/json" id="test-results-raw-json">
@@ -69,6 +69,17 @@
               "test": "PASS",
               "assertion_results": {
                 "did should match did-document id": true
+              }
+            },
+            {
+              "scenario": "did-parameters-negative-tests",
+              "test": "PASS",
+              "assertion_results": {
+                "[hl] The associated value MUST be an ASCII string.": true,
+                "[service] The associated value MUST be an ASCII string.": true,
+                "[version-id] The associated value MUST be an ASCII string.": true,
+                "[version-time] The associated value MUST be an ASCII string.": true,
+                "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
               }
             },
             {
@@ -181,5 +192,13 @@
 
       renderTestResults();
     </script>
+
+    <section id="conformance">
+      <p>
+        A conforming DID Library must be able to handle the scenarios specified
+        in JSON, and should throw errors or return structured responses that
+        match the normative statements this test suite covers.
+      </p>
+    </section>
   </body>
 </html>
