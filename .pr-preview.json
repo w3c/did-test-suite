@@ -1,4 +1,5 @@
 {
-    "src_file": "index.html",
-    "type": "respec"
+  "src_file": "index.html",
+  "type": "respec",
+  "includes": ["test-all-results.json"]
 }

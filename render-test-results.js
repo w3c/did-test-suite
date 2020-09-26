@@ -1,4 +1,4 @@
-const testResultsRelativeUrl = '/test-results/test-all-results.json';
+const testResultsRelativeUrl = '/test-all-results.json';
 const rawTestResultsContainer = 'raw-test-results';
 const testResultsContainer = 'test-results';
 
@@ -50,9 +50,7 @@ const renderRawTestResults = (results) => {
 
 const renderPrettyTestResults = (results) => {
   document.getElementById(testResultsContainer).innerHTML += `
-
   ${results.scenarios.map(renderScenario)}
- 
   `;
 };
 
