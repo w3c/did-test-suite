@@ -22,6 +22,7 @@
     "fastify-swagger": "^3.3.0"
   },
   "devDependencies": {
+    "base64url": "^3.0.1",
     "eslint": "^7.9.0",
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-node": "^11.1.0",

@@ -4,7 +4,20 @@
     {
       "scenario": "resolve",
       "test": "PASS",
-      "assertion_results": { "did should match did-document id": true }
+      "assertion_results": {
+        "did should match did-document id": true
+      }
+    },
+    {
+      "scenario": "did-parameters-negative-tests",
+      "test": "PASS",
+      "assertion_results": {
+        "[hl] The associated value MUST be an ASCII string.": true,
+        "[service] The associated value MUST be an ASCII string.": true,
+        "[version-id] The associated value MUST be an ASCII string.": true,
+        "[version-time] The associated value MUST be an ASCII string.": true,
+        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+      }
     },
     {
       "scenario": "did-parameters-positive-tests",

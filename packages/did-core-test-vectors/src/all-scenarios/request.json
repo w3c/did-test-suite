@@ -25,6 +25,29 @@
     },
     {
       "request": {
+        "name": "did-parameters-negative-tests",
+        "input": {
+          "hl_base64url_encoded_non_ascii_string": "PIGC",
+          "service_base64url_encoded_non_ascii_string": "PIGC",
+          "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
+          "version_id_base64url_encoded_non_ascii_string": "PIGC",
+          "version_time_base64url_encoded_non_ascii_string": "PIGC"
+        }
+      },
+      "response": {
+        "scenario": "did-parameters-negative-tests",
+        "test": "PASS",
+        "assertion_results": {
+          "[hl] The associated value MUST be an ASCII string.": true,
+          "[service] The associated value MUST be an ASCII string.": true,
+          "[version-id] The associated value MUST be an ASCII string.": true,
+          "[version-time] The associated value MUST be an ASCII string.": true,
+          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+        }
+      }
+    },
+    {
+      "request": {
         "name": "did-parameters-positive-tests",
         "input": {
           "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",

@@ -6,10 +6,11 @@ const moment = require('moment');
 const request = require('supertest');
 const { app } = require('did-core-test-server');
 
-const { example } = require('./__fixtures__');
+const allScenarios = require('./all-scenarios');
 let api;
 
-const UPDATE_RESPEC_TEST_REPORT = process.env.UPDATE_RESPEC_TEST_REPORT; // expect 'YES' / 'NO'
+// expect 'YES' / 'NO'
+const UPDATE_RESPEC_TEST_REPORT = process.env.UPDATE_RESPEC_TEST_REPORT;
 
 beforeAll(async () => {
   await app.ready();
@@ -26,11 +27,11 @@ it('should run all tests', async () => {
   const response = await api
     .post('/test')
     .set('Accept', 'application/json')
-    .send(example.request);
+    .send(allScenarios.request);
   expect(response.status).toBe(200);
   // Uncomment to capture fixture
   // console.log(JSON.stringify(response.body, null, 2));
-  expect(response.body).toEqual(example.response);
+  expect(response.body).toEqual(allScenarios.response);
   results = response.body;
 });
 
