@@ -30,7 +30,6 @@
         noRecTrack: 'true',
       };
     </script>
-    <script src="render-test-results.js"></script>
   </head>
   <body>
     <section id="abstract">
@@ -56,7 +55,107 @@
     <section id="raw-test-results">
       <h2>Raw Test Results</h2>
     </section>
+
+    <script type="application/json" id="test-results-raw-json">
+      {
+        "test": "PASS",
+        "scenarios": [
+          {
+            "scenario": "resolve",
+            "test": "PASS",
+            "assertion_results": { "did should match did-document id": true }
+          }
+        ]
+      }
+    </script>
+
     <script>
+      const testResultsRelativeUrl = '/test-all-results.json';
+      const rawTestResultsContainer = 'raw-test-results';
+      const testResultsContainer = 'test-results';
+
+      const resultToEmoji = (test) => {
+        return test === 'PASS' ? `✅` : `❌`;
+      };
+
+      const booleanToTestResult = (bool) => {
+        return bool ? `PASS` : `FAIL`;
+      };
+
+      const booleanToEmoji = (bool) => {
+        return resultToEmoji(booleanToTestResult(bool));
+      };
+
+      const renderScenario = (scenario) => {
+        return `
+  <section>
+    <h3>${scenario.scenario}</h3>
+    <p>
+    ${resultToEmoji(scenario.test)} ${scenario.test}
+    </p>
+   
+    <table class="simple" style="width: 100%;">
+      <tr>
+        <th>Assertion</th>
+        <th>Description</th>
+      </tr>
+      ${Object.keys(scenario.assertion_results).map((assertion) => {
+        const bool = scenario.assertion_results[assertion];
+        return `
+        <tr>
+          <td>${booleanToEmoji(bool)} ${booleanToTestResult(bool)}</td>
+          <td>${assertion}</td>
+        </tr>
+        `;
+      })}
+      
+    </table>
+  </section>
+  `;
+      };
+
+      const renderRawTestResults = (results) => {
+        document.getElementById(
+          rawTestResultsContainer
+        ).innerHTML += `<pre>${JSON.stringify(results, null, 2)}</pre>`;
+      };
+
+      const renderPrettyTestResults = (results) => {
+        document.getElementById(testResultsContainer).innerHTML += `
+  ${results.scenarios.map(renderScenario)}
+  `;
+      };
+
+      const getResults = async () => {
+        let results = undefined;
+        // not possible to file split because of PR Preview:
+        // See https://github.com/tobie/pr-preview/issues/80
+        // try {
+        //   let url = testResultsRelativeUrl;
+        //   if (window.origin === 'https://pr-preview.s3.amazonaws.com') {
+        //     url = `https://pr-preview.s3.amazonaws.com/w3c/did-test-suite/pull/${testResultsRelativeUrl}`;
+        //   }
+        //   results = await fetch(url).then((response) => response.json());
+        // } catch (e) {
+        //   console.warn(e);
+        // }
+        // if (results) {
+        //   return results;
+        // }
+        results = JSON.parse(
+          document.getElementById('test-results-raw-json').innerHTML
+        );
+        return results;
+      };
+
+      const renderTestResults = () => {
+        (async () => {
+          const results = await getResults();
+          renderPrettyTestResults(results);
+          renderRawTestResults(results);
+        })();
+      };
+
       renderTestResults();
     </script>
   </body>
