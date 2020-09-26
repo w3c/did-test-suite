@@ -1,7 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <title>Test Suite and Implementation Report</title>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer"
+      class="remove"
+    ></script>
     <script class="remove">
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
@@ -49,35 +55,35 @@
     <section id="raw-test-results">
       <h2>Raw Test Results</h2>
       <p id="raw-rest-results-last-updated" class="note">
-These test results were last generated 
-<span id="raw-rest-results-last-updated-date">
-Saturday, September 26, 2020 3:35 PM
-</span>
+        These test results were last generated
+        <span id="raw-rest-results-last-updated-date">
+          Saturday, September 26, 2020 3:44 PM
+        </span>
       </p>
       <script type="application/json" id="test-results-raw-json">
-{
-  "test": "PASS",
-  "scenarios": [
-    {
-      "scenario": "resolve",
-      "test": "PASS",
-      "assertion_results": {
-        "did should match did-document id": true
-      }
-    },
-    {
-      "scenario": "did-parameters-positive-tests",
-      "test": "PASS",
-      "assertion_results": {
-        "[hl] The associated value MUST be an ASCII string.": true,
-        "[service] The associated value MUST be an ASCII string.": true,
-        "[version-id] The associated value MUST be an ASCII string.": true,
-        "[version-time] The associated value MUST be an ASCII string.": true,
-        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-      }
-    }
-  ]
-}
+        {
+          "test": "PASS",
+          "scenarios": [
+            {
+              "scenario": "resolve",
+              "test": "PASS",
+              "assertion_results": {
+                "did should match did-document id": true
+              }
+            },
+            {
+              "scenario": "did-parameters-positive-tests",
+              "test": "PASS",
+              "assertion_results": {
+                "[hl] The associated value MUST be an ASCII string.": true,
+                "[service] The associated value MUST be an ASCII string.": true,
+                "[version-id] The associated value MUST be an ASCII string.": true,
+                "[version-time] The associated value MUST be an ASCII string.": true,
+                "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+              }
+            }
+          ]
+        }
       </script>
     </section>
 
@@ -98,32 +104,38 @@ Saturday, September 26, 2020 3:35 PM
         return resultToEmoji(booleanToTestResult(bool));
       };
 
+      const renderRows = (scenario) => {
+        return Object.keys(scenario.assertion_results)
+          .map((assertion) => {
+            const bool = scenario.assertion_results[assertion];
+            return `
+            <tr>
+              <td>${booleanToEmoji(bool)} ${booleanToTestResult(bool)}</td>
+              <td>${assertion}</td>
+            </tr>
+            `;
+          })
+          .join('');
+      };
+
       const renderScenario = (scenario) => {
         return `
-  <section>
-    <h3>${scenario.scenario}</h3>
-    <p>
-    ${resultToEmoji(scenario.test)} ${scenario.test}
-    </p>
-   
-    <table class="simple" style="width: 100%;">
-      <tr>
-        <th>Assertion</th>
-        <th>Description</th>
-      </tr>
-      ${Object.keys(scenario.assertion_results).map((assertion) => {
-        const bool = scenario.assertion_results[assertion];
-        return `
-        <tr>
-          <td>${booleanToEmoji(bool)} ${booleanToTestResult(bool)}</td>
-          <td>${assertion}</td>
-        </tr>
-        `;
-      })}
-      
-    </table>
-  </section>
-  `;
+      <section>
+        <h3>${scenario.scenario}</h3>
+        <p>
+        ${resultToEmoji(scenario.test)} ${scenario.scenario}
+        </p>
+
+        <table class="simple" style="width: 100%;">
+          <tr>
+            <th>Assertion</th>
+            <th>Description</th>
+          </tr>
+          ${renderRows(scenario)}
+
+        </table>
+      </section>
+      `;
       };
 
       const renderRawTestResults = (results) => {
@@ -133,9 +145,8 @@ Saturday, September 26, 2020 3:35 PM
       };
 
       const renderPrettyTestResults = (results) => {
-        document.getElementById(testResultsContainer).innerHTML += `
-  ${results.scenarios.map(renderScenario)}
-  `;
+        let str = results.scenarios.map(renderScenario).join('');
+        document.getElementById(testResultsContainer).innerHTML += str;
       };
 
       const getResults = async () => {
@@ -170,6 +181,5 @@ Saturday, September 26, 2020 3:35 PM
 
       renderTestResults();
     </script>
-  
-
-</body></html>
+  </body>
+</html>
