@@ -28,6 +28,8 @@ it('should run all tests', async () => {
     .set('Accept', 'application/json')
     .send(example.request);
   expect(response.status).toBe(200);
+  // Uncomment to capture fixture
+  // console.log(JSON.stringify(response.body, null, 2));
   expect(response.body).toEqual(example.response);
   results = response.body;
 });

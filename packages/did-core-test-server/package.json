@@ -22,10 +22,11 @@
     "fastify-swagger": "^3.3.0"
   },
   "devDependencies": {
-    "jest": "^26.4.2",
-    "supertest": "^4.0.2",
     "eslint": "^7.9.0",
     "eslint-plugin-jest": "^24.0.2",
-    "eslint-plugin-node": "^11.1.0"
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^26.4.2",
+    "querystring": "^0.2.0",
+    "supertest": "^4.0.2"
   }
 }

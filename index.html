@@ -51,7 +51,7 @@
       <p id="raw-rest-results-last-updated" class="note">
 These test results were last generated 
 <span id="raw-rest-results-last-updated-date">
-Saturday, September 26, 2020 11:37 AM
+Saturday, September 26, 2020 3:35 PM
 </span>
       </p>
       <script type="application/json" id="test-results-raw-json">
@@ -63,6 +63,17 @@ Saturday, September 26, 2020 11:37 AM
       "test": "PASS",
       "assertion_results": {
         "did should match did-document id": true
+      }
+    },
+    {
+      "scenario": "did-parameters-positive-tests",
+      "test": "PASS",
+      "assertion_results": {
+        "[hl] The associated value MUST be an ASCII string.": true,
+        "[service] The associated value MUST be an ASCII string.": true,
+        "[version-id] The associated value MUST be an ASCII string.": true,
+        "[version-time] The associated value MUST be an ASCII string.": true,
+        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
       }
     }
   ]
