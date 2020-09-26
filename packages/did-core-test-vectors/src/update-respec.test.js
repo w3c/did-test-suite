@@ -8,7 +8,7 @@ const { app } = require('did-core-test-server');
 const { example } = require('./__fixtures__');
 let api;
 
-const UPDATE_RESPEC = process.env.UPDATE_RESPEC; // expect 'YES' / 'NO'
+const UPDATE_RESPEC_TEST_REPORT = process.env.UPDATE_RESPEC_TEST_REPORT; // expect 'YES' / 'NO'
 
 beforeAll(async () => {
   await app.ready();
@@ -33,7 +33,7 @@ it('should run all tests', async () => {
 
 it('should update respec', async () => {
   const respecPath = path.resolve(__dirname, '../../../index.html');
-  if (UPDATE_RESPEC === 'YES' && results) {
+  if (UPDATE_RESPEC_TEST_REPORT === 'YES' && results) {
     const spec = fs.readFileSync(respecPath).toString();
     const $ = cheerio.load(spec);
     $('#test-results-raw-json').replaceWith(
@@ -41,6 +41,11 @@ it('should update respec', async () => {
 ${JSON.stringify(results, null, 2)}
       </script>`
     );
+
+    $('#raw-rest-results-last-updated').replaceWith(
+      `Last Updated ${new Date().toISOString()}`
+    );
+
     const updatedSpec = $.html();
     fs.writeFileSync(respecPath, updatedSpec);
   }

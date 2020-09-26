@@ -1,7 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <title>Test Suite and Implementation Report</title>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer"
+      class="remove"
+    ></script>
     <script class="remove">
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
@@ -48,22 +54,22 @@
 
     <section id="raw-test-results">
       <h2>Raw Test Results</h2>
-    </section>
-
-    <script type="application/json" id="test-results-raw-json">
-{
-  "test": "PASS",
-  "scenarios": [
-    {
-      "scenario": "resolve",
-      "test": "PASS",
-      "assertion_results": {
-        "did should match did-document id": true
-      }
-    }
-  ]
-}
+      <p id="raw-rest-results-last-updated"></p>
+      <script type="application/json" id="test-results-raw-json">
+        {
+          "test": "PASS",
+          "scenarios": [
+            {
+              "scenario": "resolve",
+              "test": "PASS",
+              "assertion_results": {
+                "did should match did-document id": true
+              }
+            }
+          ]
+        }
       </script>
+    </section>
 
     <script>
       const testResultsRelativeUrl = '/test-all-results.json';
@@ -154,6 +160,5 @@
 
       renderTestResults();
     </script>
-  
-
-</body></html>
+  </body>
+</html>

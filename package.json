@@ -23,6 +23,7 @@
     "start": "npm run docker:up",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
+    "update-test-report": "UPDATE_RESPEC_TEST_REPORT='YES' lerna run test --scope did-core-test-vectors --stream",
     "docker:up": "docker-compose up --build"
   },
   "devDependencies": {
