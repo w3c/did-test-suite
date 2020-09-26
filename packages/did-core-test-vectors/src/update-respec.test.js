@@ -40,8 +40,15 @@ it('should update respec', async () => {
   if (UPDATE_RESPEC_TEST_REPORT === 'YES' && results) {
     const spec = fs.readFileSync(respecPath).toString();
     const $ = cheerio.load(spec);
-    $('#test-results-raw-json').replaceWith(
-      `<script type="application/json" id="test-results-raw-json">
+
+    $('#all-scenarios-request-json').replaceWith(
+      `<script type="application/json" id="all-scenarios-request-json">
+${JSON.stringify(allScenarios.request, null, 2)}
+      </script>`
+    );
+
+    $('#all-scenarios-response-json').replaceWith(
+      `<script type="application/json" id="all-scenarios-response-json">
 ${JSON.stringify(results, null, 2)}
       </script>`
     );

@@ -33,7 +33,10 @@
   </head>
   <body>
     <section id="abstract">
-      <p>This document contains a summary of the did test suite.</p>
+      <p>
+        This document describes the did core test suite, and summarizes the
+        latest test results.
+      </p>
     </section>
     <section id="sotd">
       <p>
@@ -43,15 +46,8 @@
       </p>
     </section>
 
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>This document contains a summary of the did test suite results.</p>
-    </section>
-
     <section>
       <h2>Terminology</h2>
-
-      <p>This section defines the terms used in the did core test suite.</p>
 
       <section>
         <h2>Scenario</h2>
@@ -60,6 +56,19 @@
           A scenario is a json data structure containing all inputs and outputs
           needed to test a collection of normative statements.
         </p>
+        <pre class="example">
+            {
+              &quot;name&quot;: &quot;did-parameters-positive-tests&quot;,
+              &quot;input&quot;: {
+                &quot;hl&quot;: &quot;did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e&quot;,
+                &quot;service&quot;: &quot;did:example:123?service=agent&amp;relativeRef=%2Fpath%2Fto%2Fresource&quot;,
+                &quot;version-id&quot;: &quot;did:example:123?version-id=0.1.0&quot;,
+                &quot;version-time&quot;: &quot;did:example:123?version-time=1601151242&quot;
+              }
+            }
+          </pre
+        >
+        <p></p>
 
         <p>Scenarios MUST have unique descriptive names.</p>
         <p>Scenarios MAY be split into positive and negative cases.</p>
@@ -68,11 +77,7 @@
           corrosponding<code>-negative-tests</code> scenario MUST exist.
         </p>
         <p>
-          A scenarios is considered passing when all associated assertions are
-          true.
-        </p>
-        <p>
-          A scenarios is considered passing when all associated assertions are
+          A scenario is considered passing when all associated assertions are
           true.
         </p>
       </section>
@@ -80,9 +85,22 @@
       <section>
         <h2>Assertion</h2>
         <p>
-          An assertion is a function from <code>scenario</code> to
-          <code>boolean</code>.
+          An assertion is a normative statment mapped to a function which takes
+          a scenario as input and produces a boolean as output.
         </p>
+        <pre class="example">
+            {
+              &apos;[version-id] The associated value MUST be an ASCII string.&apos;: (scenario) =&gt; {
+                const value = getQueryParamValueFromDidUri(
+                  scenario.input[&apos;version-id&apos;],
+                  &apos;version-id&apos;
+                );
+                return isAsciiString(value);
+              },
+            }
+          </pre
+        >
+        <p></p>
         <p>Assertions SHOULD match normative statements in the DID Core.</p>
         <p>
           Assertions SHOULD reuse utility functions like
@@ -91,65 +109,157 @@
       </section>
     </section>
 
-    <section id="test-results">
+    <section id="all-scenarios-report">
       <h2>Scenarios</h2>
     </section>
 
-    <section id="raw-test-results">
-      <h2>Latest Results</h2>
-      <p id="raw-rest-results-last-updated" class="note">
-        These test results were last generated
+    <section id="all-scenarios-fixtures">
+      <h2>Test Fixtures</h2>
+
+      <p id="raw-rest-results-last-updated" class="advisement">
+        Fixtures were last generated
         <span id="raw-rest-results-last-updated-date">
-          Saturday, September 26, 2020 4:30 PM
+          Saturday, September 26, 2020 6:26 PM
         </span>
       </p>
+
+      <p class="advisement">
+        These objects are automatically generated from the test suite, and are
+        completely UNSTABLE.
+      </p>
+
+      <p>
+        This section contains the JSON request and response objects used to
+        evaluate all normative statments in DID Core.
+      </p>
+
       <p class="note">
         Scenarios ending is <code>-positive-tests</code> and
-        <code>-negative-tests</code> are merged above for readability.
+        <code>-negative-tests</code> are merged in the reporting table in
+        section <a href="#all-scenarios-report"></a>.
       </p>
-      <script type="application/json" id="test-results-raw-json">
-        {
-          "test": "PASS",
-          "scenarios": [
-            {
-              "scenario": "resolve",
-              "test": "PASS",
-              "assertion_results": {
-                "did should match did-document id": true
+
+      <section id="all-scenarios-request">
+        <h3>Test Input Request</h3>
+        <script type="application/json" id="all-scenarios-request-json">
+          {
+            "scenarios": [
+              {
+                "request": {
+                  "name": "resolve",
+                  "input": {
+                    "did": "did:example:123",
+                    "did-resolution-input-metadata": {}
+                  },
+                  "output": {
+                    "did-document": {
+                      "id": "did:example:123"
+                    },
+                    "did-document-metadata": {},
+                    "did-resolution-metadata": {}
+                  }
+                },
+                "response": {
+                  "scenario": "resolve",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "did should match did-document id": true
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "did-parameters-negative-tests",
+                  "input": {
+                    "hl_base64url_encoded_non_ascii_string": "PIGC",
+                    "service_base64url_encoded_non_ascii_string": "PIGC",
+                    "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
+                    "version_id_base64url_encoded_non_ascii_string": "PIGC",
+                    "version_time_base64url_encoded_non_ascii_string": "PIGC"
+                  }
+                },
+                "response": {
+                  "scenario": "did-parameters-negative-tests",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "[hl] The associated value MUST be an ASCII string.": true,
+                    "[service] The associated value MUST be an ASCII string.": true,
+                    "[version-id] The associated value MUST be an ASCII string.": true,
+                    "[version-time] The associated value MUST be an ASCII string.": true,
+                    "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "did-parameters-positive-tests",
+                  "input": {
+                    "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+                    "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+                    "version-id": "did:example:123?version-id=0.1.0",
+                    "version-time": "did:example:123?version-time=1601151242"
+                  }
+                },
+                "response": {
+                  "scenario": "did-parameters-positive-tests",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "[hl] The associated value MUST be an ASCII string.": true,
+                    "[service] The associated value MUST be an ASCII string.": true,
+                    "[version-id] The associated value MUST be an ASCII string.": true,
+                    "[version-time] The associated value MUST be an ASCII string.": true,
+                    "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                  }
+                }
               }
-            },
-            {
-              "scenario": "did-parameters-negative-tests",
-              "test": "PASS",
-              "assertion_results": {
-                "[hl] The associated value MUST be an ASCII string.": true,
-                "[service] The associated value MUST be an ASCII string.": true,
-                "[version-id] The associated value MUST be an ASCII string.": true,
-                "[version-time] The associated value MUST be an ASCII string.": true,
-                "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+            ]
+          }
+        </script>
+      </section>
+
+      <section id="all-scenarios-response">
+        <h3>Test Output Response</h3>
+
+        <script type="application/json" id="all-scenarios-response-json">
+          {
+            "test": "PASS",
+            "scenarios": [
+              {
+                "scenario": "resolve",
+                "test": "PASS",
+                "assertion_results": {
+                  "did should match did-document id": true
+                }
+              },
+              {
+                "scenario": "did-parameters-negative-tests",
+                "test": "PASS",
+                "assertion_results": {
+                  "[hl] The associated value MUST be an ASCII string.": true,
+                  "[service] The associated value MUST be an ASCII string.": true,
+                  "[version-id] The associated value MUST be an ASCII string.": true,
+                  "[version-time] The associated value MUST be an ASCII string.": true,
+                  "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                }
+              },
+              {
+                "scenario": "did-parameters-positive-tests",
+                "test": "PASS",
+                "assertion_results": {
+                  "[hl] The associated value MUST be an ASCII string.": true,
+                  "[service] The associated value MUST be an ASCII string.": true,
+                  "[version-id] The associated value MUST be an ASCII string.": true,
+                  "[version-time] The associated value MUST be an ASCII string.": true,
+                  "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                }
               }
-            },
-            {
-              "scenario": "did-parameters-positive-tests",
-              "test": "PASS",
-              "assertion_results": {
-                "[hl] The associated value MUST be an ASCII string.": true,
-                "[service] The associated value MUST be an ASCII string.": true,
-                "[version-id] The associated value MUST be an ASCII string.": true,
-                "[version-time] The associated value MUST be an ASCII string.": true,
-                "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-              }
-            }
-          ]
-        }
-      </script>
+            ]
+          }
+        </script>
+      </section>
     </section>
 
     <script>
-      const testResultsRelativeUrl = '/test-all-results.json';
-      const rawTestResultsContainer = 'raw-test-results';
-      const testResultsContainer = 'test-results';
-
       const resultToEmoji = (test) => {
         return test === 'PASS' ? `✅` : `❌`;
       };
@@ -195,38 +305,19 @@
       `;
       };
 
-      const renderRawTestResults = (results) => {
+      const renderJson = (containerId, results) => {
         document.getElementById(
-          rawTestResultsContainer
+          containerId
         ).innerHTML += `<pre>${JSON.stringify(results, null, 2)}</pre>`;
       };
 
       const renderPrettyTestResults = (results) => {
         let str = results.scenarios.map(renderScenario).join('');
-        document.getElementById(testResultsContainer).innerHTML += str;
+        document.getElementById('all-scenarios-report').innerHTML += str;
       };
 
-      const getResults = async () => {
-        let results = undefined;
-        // not possible to file split because of PR Preview:
-        // See https://github.com/tobie/pr-preview/issues/80
-        // try {
-        //   let url = testResultsRelativeUrl;
-        //   if (window.origin === 'https://pr-preview.s3.amazonaws.com') {
-        //     url = `https://pr-preview.s3.amazonaws.com/w3c/did-test-suite/pull/${testResultsRelativeUrl}`;
-        //   }
-        //   results = await fetch(url).then((response) => response.json());
-        // } catch (e) {
-        //   console.warn(e);
-        // }
-        // if (results) {
-        //   return results;
-        // }
-        results = JSON.parse(
-          document.getElementById('test-results-raw-json').innerHTML
-        );
-        return results;
-      };
+      // not possible to file split because of PR Preview:
+      // See https://github.com/tobie/pr-preview/issues/80
 
       const mergePositiveAndNegativeTests = (results) => {
         const simpleScenarios = results.scenarios.filter((s) => {
@@ -263,23 +354,32 @@
         };
       };
 
-      const renderTestResults = () => {
-        (async () => {
-          const results = await getResults();
-          const mergedResults = mergePositiveAndNegativeTests(results);
-          renderPrettyTestResults(mergedResults);
-          renderRawTestResults(results);
-        })();
-      };
+      const testResultsRequest = JSON.parse(
+        document.getElementById('all-scenarios-request-json').innerHTML
+      );
 
-      renderTestResults();
+      const testResultsResponse = JSON.parse(
+        document.getElementById('all-scenarios-response-json').innerHTML
+      );
+
+      renderJson('all-scenarios-request', testResultsRequest);
+      renderJson('all-scenarios-response', testResultsResponse);
+
+      const mergedResults = mergePositiveAndNegativeTests(testResultsResponse);
+      renderPrettyTestResults(mergedResults);
     </script>
 
     <section id="conformance">
       <p>
-        A conforming DID Library must be able to handle the scenarios specified
-        in JSON, and should throw errors or return structured responses that
-        match the normative statements this test suite covers.
+        See
+        <a href="https://www.w3.org/TR/did-core/#conformance"
+          >DID Core Conformance.</a
+        >
+      </p>
+
+      <p>
+        A conforming test suite must implement support for section
+        <a href="#all-scenarios-report"></a>.
       </p>
     </section>
   </body>
