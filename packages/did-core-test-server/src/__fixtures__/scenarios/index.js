@@ -7,4 +7,5 @@ module.exports = {
   unknown_scenario,
   all,
   ['did-parameters']: require('./did-parameters'),
+  ['json-production']: require('./json-production'),
 };

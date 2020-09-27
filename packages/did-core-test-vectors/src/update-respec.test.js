@@ -4,9 +4,8 @@ const cheerio = require('cheerio');
 const moment = require('moment');
 
 const request = require('supertest');
-const { app } = require('did-core-test-server');
+const { app, allScenarios } = require('did-core-test-server');
 
-const allScenarios = require('./all-scenarios');
 let api;
 
 // expect 'YES' / 'NO'

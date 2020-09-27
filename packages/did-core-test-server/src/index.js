@@ -1,2 +1,5 @@
 const { app } = require('./app');
-module.exports = { app };
+
+const allScenarios = require('./__fixtures__/scenarios/all');
+
+module.exports = { app, allScenarios };

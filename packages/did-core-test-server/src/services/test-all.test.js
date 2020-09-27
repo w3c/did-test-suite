@@ -22,6 +22,7 @@ it('should write latest fixtures to disk', async () => {
     require('../__fixtures__/scenarios/resolve'),
     require('../__fixtures__/scenarios/did-parameters').negative,
     require('../__fixtures__/scenarios/did-parameters').positive,
+    require('../__fixtures__/scenarios/json-production').positive,
   ];
   // beware that this can differ from the fixure on disk.
   // especially when changes have not be commited.
@@ -42,7 +43,7 @@ it('all requests should match test fixtures', async () => {
   // expect(response.status).toBe(200);
   // uncomment to write fixtures to disk
   // fs.writeFileSync(
-  //   path.resolve(__dirname, '../__fixtures__/all/response.json'),
+  //   path.resolve(__dirname, '../__fixtures__/scenarios/all/response.json'),
   //   JSON.stringify(response.body, null, 2)
   // );
   expect(response.body).toEqual(fixtures.scenarios.all.response);
