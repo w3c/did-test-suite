@@ -1,0 +1,14 @@
+{
+  "test": "PASS",
+  "scenarios": [
+    {
+      "scenario": "did-syntax",
+      "test": "PASS",
+      "assertion_results": {
+        "Negative test: DID must be a valid URL": true,
+        "Negative test: The URI scheme MUST be 'did:'": true,
+        "Negative test: The DID method name MUST be an ASCII lowercase string": true
+      }
+    }
+  ]
+}

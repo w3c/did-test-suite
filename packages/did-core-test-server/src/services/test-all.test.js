@@ -20,6 +20,7 @@ afterAll(async () => {
 it('should write latest fixtures to disk', async () => {
   const scenarios = [
     require('../__fixtures__/scenarios/resolve'),
+    require('../__fixtures__/scenarios/did-syntax'),
     require('../__fixtures__/scenarios/did-parameters').negative,
     require('../__fixtures__/scenarios/did-parameters').positive,
     require('../__fixtures__/scenarios/json-production').positive,
