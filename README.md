@@ -9,55 +9,9 @@ Report, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/).
 
 ## Decentralized Identifiers 1.0 Test Suite
 
-This test suite will check any application that generates 
+This test suite will check any application that generates
 [Decentralized Identifier](https://w3c.github.io/did-spec/) documents to
 ensure conformance with the specification.
-
-### Creating a Binary
-You web application will need to be accessible from the command line. It
-will also need to accept the following command line parameters:
-```
-Usage: <your_program> [options] [command]
-
-Options:
-  -?, --question                         //TODO add commands
-  -h, --help                             output usage information
-
-Commands:
-  validate? // TODO commands
-```
-All tests will run against your binary and assume that an exit code greater
-than 0 represents an error.
-
-### Creating a config file
-An example local configuration for the test suite. To use:
-
-1. Copy the file config.json.example to a new file called config.json.
-2. Modify the file and replace with appropriate values for your system.
-
-```
-{
-  "generator": "../your-application/bin",
-}
-```
-
-### Running the Test Suite
-
-1. npm install
-2. Copy the `config.json.example` file to `config.json` and modify.
-3. All that is needed is a path to the binary that runs the tests
-4. npm test
-
-### Submit an Implementation Report
-
-1. npm install
-2. Copy the `config.json.example` file to `config.json` and modify.
-3. npm run report
-4. Rename implementation/results.json to
-   implementation/YOUR_IMPLEMENTATION-results.json.
-5. git add implementations/YOUR_IMPLEMENTATION-results.json and submit a
-   pull request for your implementation.
-
 
 ## Contributing to the Repository
 
@@ -75,11 +29,182 @@ contributions.
 
 W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 
+## Usage
+
+You may need to [install node.js](https://nodejs.org/en/).
+
+```
+git clone git@github.com:w3c/did-test-suite.git
+npm i
+```
+
+You may also need to [install docker](https://docs.docker.com/get-docker/).
+
+To update the test report, run this command from the root directory of this repository:
+
+```
+npm run update-test-report
+```
+
+### Test Server
+
+[did-core-test-server](./packages/did-core-test-server)
+
+This module is responsible for evaluating "test scenarios".
+
+To run this server, simply run this command from the root directory of this repository:
+
+```
+npm run start
+```
+
+### Test Fixtures
+
+[did-core-test-vectors](./packages/did-core-test-vectors)
+
+This module is responsible for asking storing "test scenario" inputs and expected outputs.
+
+You can run these tests without starting the test server.
+
+Simply run this command from the `did-core-test-vectors` directory:
+
+```
+npm run test
+```
+
+When test in this module run, they compare the results of running tests against the latest source code in the `test-server`, with the expected outputs.
+
+If a test fails, a fixture will need to be updated.
+
+The `test-server` is the source of truth, fixtures tests are just a way of covering that truth with tests.
+
+DO NOT attempt to update the `test-server` to get a fixture test to pass.
+
+Test implementers may find it useful to write unit tests in `test-server` before attempting test fixture tests.
+
+## What is a scenario?
+
+A scenario is defined in JSON, for example "resolve"
+
+```
+{
+  "name": "resolve",
+  "input": {
+    "did": "did:example:123",
+    "did-resolution-input-metadata": {}
+  },
+  "output": {
+    "did-document": {
+      "id": "did:example:123"
+    },
+    "did-document-metadata": {},
+    "did-resolution-metadata": {}
+  }
+}
+```
+
+A JSON object representing the scenario is posted to the server,
+
+A small javascript function processes the request and returns a response:
+
+```
+const assertions = {
+  "did should match did-document id": (scenario) => {
+    return scenario.input.did === scenario.output["did-document"].id;
+  },
+};
+
+const testResolve = (scenario) => {
+  let assertion_results = {};
+
+  Object.keys(assertions).forEach((assertion) => {
+    assertion_results = {
+      ...assertion_results,
+      [assertion]: assertions[assertion](scenario),
+    };
+  });
+
+  const test_result = Object.values(assertion_results).every((result) => {
+    return result === true;
+  });
+
+  return {
+    scenario: scenario.name,
+    test: test_result ? "PASS" : "FAIL",
+    assertion_results,
+  };
+};
+```
+
+For example:
+
+```
+{
+  "scenario": "resolve",
+  "test": "PASS",
+  "assertion_results": { "did should match did-document id": true }
+}
+```
+
+Multiple scenarios can be submitted at once:
+
+```
+curl -s -X POST http://localhost:8080/test \
+-H "Content-Type: application/json" \
+-d @./packages/did-core-test-vectors/src/__fixtures__/example/test-all.json \
+| jq '.'
+```
+
+And all results are produced as json:
+
+```
+❯ curl -s -X POST http://localhost:8080/test \
+-H "Content-Type: application/json" \
+-d @./packages/did-core-test-vectors/src/__fixtures__/example/test-all.json \
+| jq '.'
+{
+  "test": "PASS",
+  "scenarios": [
+    {
+      "scenario": "resolve",
+      "test": "PASS",
+      "assertion_results": {
+        "did should match did-document id": true
+      }
+    }
+  ]
+}
+```
+
+## Designing Scenarios
+
+Scenarios can be simple or complex, but they require a vendor to be honest about the inputs and outputs of their system with respect to the did core data model.
+
+A vendor might write extra software to be able to autoamtically generate scenarios for validation.
+
+If a concept can't be represented via a JSON data model and some small javascript program that validates it, it cannot be tested.
+
+## Presentation of Test Results
+
+With more time, test results might be better structured for being consumed in 3rd party software.
+
+### Run Docker Image
+
+```
+docker run --publish 3000:3000 --detach --name dcts or13/did-core-test-server:1.0
+```
+
+### Run Server Locally
+
+```
+npm run docker:up
+```
+
 ## DID Working Group Repositories
 
-* [W3C Decentralized Identifier Specification v1.0](https://github.com/w3c/did-core)
-* [Home page of the Decentralized Identifier Working Group](https://github.com/w3c/did-wg)
-* [Specs and documentation for all DID-related /.well-known resources](https://github.com/decentralized-identity/.well-known)
-* [W3C Decentralized Characteristics Rubric v1.0](https://github.com/w3c/did-rubric)
-* [Decentralized Identifier Use Cases v1.0](https://github.com/w3c/did-use-cases)
-* [W3C DID Test Suite and Implementation Report](https://github.com/w3c/did-test-suite)
+- [W3C Decentralized Identifier Specification v1.0](https://github.com/w3c/did-core)
+- [Home page of the Decentralized Identifier Working Group](https://github.com/w3c/did-wg)
+- [Specs and documentation for all DID-related /.well-known resources](https://github.com/decentralized-identity/.well-known)
+- [W3C Decentralized Characteristics Rubric v1.0](https://github.com/w3c/did-rubric)
+- [Decentralized Identifier Use Cases v1.0](https://github.com/w3c/did-use-cases)
+- [W3C DID Test Suite and Implementation Report](https://github.com/w3c/did-test-suite)

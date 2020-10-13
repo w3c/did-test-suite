@@ -1,0 +1,123 @@
+{
+  "scenarios": [
+    {
+      "request": {
+        "name": "resolve",
+        "input": {
+          "did": "did:example:123",
+          "did-resolution-input-metadata": {}
+        },
+        "output": {
+          "did-document": {
+            "id": "did:example:123"
+          },
+          "did-document-metadata": {},
+          "did-resolution-metadata": {}
+        }
+      },
+      "response": {
+        "scenario": "resolve",
+        "test": "PASS",
+        "assertion_results": {
+          "did should match did-document id": true
+        }
+      }
+    },
+    {
+      "request": {
+        "name": "did-parameters-negative-tests",
+        "input": {
+          "hl_base64url_encoded_non_ascii_string": "PIGC",
+          "service_base64url_encoded_non_ascii_string": "PIGC",
+          "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
+          "version_id_base64url_encoded_non_ascii_string": "PIGC",
+          "version_time_base64url_encoded_non_ascii_string": "PIGC"
+        }
+      },
+      "response": {
+        "scenario": "did-parameters-negative-tests",
+        "test": "PASS",
+        "assertion_results": {
+          "[hl] The associated value MUST be an ASCII string.": true,
+          "[service] The associated value MUST be an ASCII string.": true,
+          "[version-id] The associated value MUST be an ASCII string.": true,
+          "[version-time] The associated value MUST be an ASCII string.": true,
+          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+        }
+      }
+    },
+    {
+      "request": {
+        "name": "did-parameters-positive-tests",
+        "input": {
+          "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+          "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+          "version-id": "did:example:123?version-id=0.1.0",
+          "version-time": "did:example:123?version-time=1601151242"
+        }
+      },
+      "response": {
+        "scenario": "did-parameters-positive-tests",
+        "test": "PASS",
+        "assertion_results": {
+          "[hl] The associated value MUST be an ASCII string.": true,
+          "[service] The associated value MUST be an ASCII string.": true,
+          "[version-id] The associated value MUST be an ASCII string.": true,
+          "[version-time] The associated value MUST be an ASCII string.": true,
+          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+        }
+      }
+    },
+    {
+      "request": {
+        "name": "json-production-positive-tests",
+        "input": {
+          "id": "did:example:123",
+          "deactivated": false,
+          "accountBalance": 12.5,
+          "authorization": null,
+          "verificationMethod": [
+            {
+              "id": "#key-1",
+              "type": "JsonWebKey2020",
+              "controller": "did:example:123",
+              "publicKeyJwk": {
+                "kty": "EC",
+                "crv": "P-256",
+                "x": "NQl3RznAAss_tn7A3UYUFxdaccpILzViHYlu7-1uj84",
+                "y": "-Zvp5lHJZA8J8wNRENbYsgcbiZKzXhQ_5g3bfl-MwxE"
+              }
+            },
+            {
+              "id": "#key-2",
+              "type": "JsonWebKey2020",
+              "controller": "did:example:123",
+              "publicKeyJwk": {
+                "kty": "EC",
+                "crv": "P-384",
+                "x": "j11K7RDZkGfVIflJrJ6O6k3W_-q3Gz_KdZ5uSGT-4EHh6h2RxHPlLzWGDmtgn-1P",
+                "y": "P0RrA4l7G7F0kTUcy0yebNGMFJFL1csJllRIveFOF7vkjctRLBwH8PbjFPXU6ZXB"
+              }
+            }
+          ],
+          "authentication": [
+            "#key-2",
+            "#key-1"
+          ]
+        }
+      },
+      "response": {
+        "scenario": "json-production-positive-tests",
+        "test": "FAIL",
+        "assertion_results": {
+          "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
+          "Boolean values MUST be represented as a Boolean literal.": false,
+          "Sequence value MUST be represented as an Array type.": false,
+          "Unordered sets of values MUST be represented as an Array type.": false,
+          "Sets of properties MUST be represented as an Object type.": false,
+          "Empty values MUST be represented as a null literal.": false
+        }
+      }
+    }
+  ]
+}

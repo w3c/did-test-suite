@@ -1,0 +1,14 @@
+{
+  "name": "resolve",
+  "input": {
+    "did": "did:example:123",
+    "did-resolution-input-metadata": {}
+  },
+  "output": {
+    "did-document": {
+      "id": "did:example:123"
+    },
+    "did-document-metadata": {},
+    "did-resolution-metadata": {}
+  }
+}

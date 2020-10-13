@@ -1,0 +1,46 @@
+{
+  "test": "FAIL",
+  "scenarios": [
+    {
+      "scenario": "resolve",
+      "test": "PASS",
+      "assertion_results": {
+        "did should match did-document id": true
+      }
+    },
+    {
+      "scenario": "did-parameters-negative-tests",
+      "test": "PASS",
+      "assertion_results": {
+        "[hl] The associated value MUST be an ASCII string.": true,
+        "[service] The associated value MUST be an ASCII string.": true,
+        "[version-id] The associated value MUST be an ASCII string.": true,
+        "[version-time] The associated value MUST be an ASCII string.": true,
+        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+      }
+    },
+    {
+      "scenario": "did-parameters-positive-tests",
+      "test": "PASS",
+      "assertion_results": {
+        "[hl] The associated value MUST be an ASCII string.": true,
+        "[service] The associated value MUST be an ASCII string.": true,
+        "[version-id] The associated value MUST be an ASCII string.": true,
+        "[version-time] The associated value MUST be an ASCII string.": true,
+        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+      }
+    },
+    {
+      "scenario": "json-production-positive-tests",
+      "test": "FAIL",
+      "assertion_results": {
+        "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
+        "Boolean values MUST be represented as a Boolean literal.": false,
+        "Sequence value MUST be represented as an Array type.": false,
+        "Unordered sets of values MUST be represented as an Array type.": false,
+        "Sets of properties MUST be represented as an Object type.": false,
+        "Empty values MUST be represented as a null literal.": false
+      }
+    }
+  ]
+}

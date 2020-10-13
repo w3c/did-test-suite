@@ -6,7 +6,7 @@
 .settings
 TAGS
 config.json
-node_modules/
+node_modules
 package-lock.json
 config.json
 .idea

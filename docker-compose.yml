@@ -1,0 +1,6 @@
+version: "3"
+services:
+  did-core-test-server:
+    build: ./packages/did-core-test-server
+    ports:
+      - 8080:8080
