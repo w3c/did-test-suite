@@ -10,7 +10,7 @@ Report, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/).
 ## Decentralized Identifiers 1.0 Test Suite
 
 This test suite will check any application that generates
-[Decentralized Identifier](https://w3c.github.io/did-spec/) documents to
+[Decentralized Identifier](https://w3c.github.io/did-core/) documents to
 ensure conformance with the specification.
 
 ## Contributing to the Repository
