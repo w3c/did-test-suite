@@ -1,0 +1,19 @@
+{
+  "request": {
+    "name": "did-syntax-negative-tests",
+    "input": {
+      "did_must_be_valid_url": [
+        "",
+      ],
+      "uri_scheme_must_be_did": [
+        "urn:uuid:1c1a2a58-aadd-472e-a719-971b8d3fe1d8",
+      ],
+      "method_name_must_be_lowercase_string": [
+        "did:EXAMPLE:123",
+      ],
+      "method_name_must_not_be_empty": [
+        "did::123"
+      ]
+    }
+  }
+}

@@ -1,3 +1,4 @@
-const request = require("./request.json");
-const response = require("./response.json");
-module.exports = { request, response };
+const negative = require('./negative.json');
+const positive = require('./positive.json');
+
+module.exports = { negative, positive };
