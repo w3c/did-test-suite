@@ -8,4 +8,5 @@ module.exports = {
   all,
   ['did-parameters']: require('./did-parameters'),
   ['json-production']: require('./json-production'),
+  ['equivalence-properties']: require('./equivalence-properties'),
 };
