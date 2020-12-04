@@ -9,7 +9,8 @@ const { app, allScenarios } = require('did-core-test-server');
 let api;
 
 // expect 'YES' / 'NO'
-const UPDATE_RESPEC_TEST_REPORT = process.env.UPDATE_RESPEC_TEST_REPORT;
+// Modified to remove env var for Windows use
+const UPDATE_RESPEC_TEST_REPORT = 'YES'; // process.env.UPDATE_RESPEC_TEST_REPORT;
 
 beforeAll(async () => {
   await app.ready();

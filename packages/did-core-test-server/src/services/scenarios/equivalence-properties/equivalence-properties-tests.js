@@ -30,8 +30,8 @@ const getMethod = id => id.split(':')[1];
 
 const assertions = {
   [`canonicalId and equivalentId must be of the same DID Method as the resolved ID`]: (scenario) => {
-    let doc = scenario.output['did-document'];
-    let meta = scenario.output['did-document-metadata'];
+    let doc = scenario.output.sameMethod['did-document'];
+    let meta = scenario.output.sameMethod['did-document-metadata'];
     let method = getMethod(doc.id);
     return getMethod(meta.canonicalId) === method && meta.equivalentId.every(id => getMethod(id) === method);
   },

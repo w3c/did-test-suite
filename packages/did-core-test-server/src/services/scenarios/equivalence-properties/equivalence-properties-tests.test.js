@@ -18,11 +18,11 @@ it('should should test that both DID URIs are from the resolving DID method', as
   const response = await api
     .post('/test/scenarios')
     .set('Accept', 'application/json')
-    .send(fixture.bothPositive.request);
+    .send(fixture.equivalence.request);
   // uncomment to align with fixtures
   // console.log(JSON.stringify(response.body, null, 2));
   expect(response.status).toBe(200);
-  expect(response.body).toEqual(fixture.bothPositive.response);
+  expect(response.body).toEqual(fixture.equivalence.response);
 });
 
 // it('should should match test fixture expectations', async () => {
