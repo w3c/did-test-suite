@@ -41,6 +41,14 @@
         "Sets of properties MUST be represented as an Object type.": false,
         "Empty values MUST be represented as a null literal.": false
       }
+    },
+    {
+      "scenario": "equivalence-properties",
+      "test": "FAIL",
+      "assertion_results": {
+        "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
+        "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,      
+        "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false      }
     }
   ]
 }

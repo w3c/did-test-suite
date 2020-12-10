@@ -118,6 +118,52 @@
           "Empty values MUST be represented as a null literal.": false
         }
       }
-    }
+    },
+    {
+      "request": {
+        "name": "equivalence-properties",
+        "input": {
+          "did": "did:example:000"
+        },
+        "output": {
+          "sameMethod": {
+            "did-document": {
+              "id": "did:example:000"
+            },
+            "did-document-metadata": {
+              "canonicalId": "did:example:123",
+              "equivalentId": ["did:example:456", "did:example:789"]
+            },
+            "did-resolution-metadata": {}
+          },
+          "canonicalId": {
+            "did-document": {
+              "id": "did:example:000"
+            },
+            "did-document-metadata": {
+              "canonicalId": "did:example:123"
+            },
+            "did-resolution-metadata": {}
+          },
+          "equivalentId": {
+            "did-document": {
+              "id": "did:example:000"
+            },
+            "did-document-metadata": {
+              "equivalentId": ["did:example:456", "did:example:789"]
+            },
+            "did-resolution-metadata": {}
+          }
+        }
+      },
+      "response": {
+        "scenario": "equivalence-properties",
+        "test": "FAIL",
+        "assertion_results": {
+          "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
+          "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,      
+          "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false      }
+      }
+    }    
   ]
 }
