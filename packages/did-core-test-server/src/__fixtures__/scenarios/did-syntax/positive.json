@@ -1,0 +1,11 @@
+{
+  "request": {
+    "name": "did-syntax-positive-tests",
+    "input": {
+      "dids": [
+        "did:example:123",
+        "did:example:sub:123"
+      ]
+    }
+  }
+}

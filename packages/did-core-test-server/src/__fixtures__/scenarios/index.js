@@ -6,6 +6,7 @@ module.exports = {
   resolve,
   unknown_scenario,
   all,
+  ['did-syntax']: require('./did-syntax'),
   ['did-parameters']: require('./did-parameters'),
   ['json-production']: require('./json-production'),
 };
