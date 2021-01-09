@@ -19,7 +19,7 @@ npm run start
 ```
 curl -s -X POST http://localhost:8080/test-suite-manager/generate-report \
 -H "Content-Type: application/json" \
--d @./__fixtures__/suitesInput.json \
+-d @./suites/did-spec/default.json \
 | jq '.'
 ```
 
