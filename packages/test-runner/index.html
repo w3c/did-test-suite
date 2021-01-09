@@ -65,7 +65,7 @@
       <button
         style="
           float: right;
-          background-color: orchid;
+          background-color: blueviolet;
           border: none;
           border-radius: 8px;
           padding: 8px;
@@ -113,9 +113,52 @@
 
     const reportSuiteInput = [
       {
-        name: 'test-suite-a',
-        a: 1,
-        b: 2,
+        name: 'did-spec',
+        didMethods: {
+          'did:example': {
+            supportedContentTypes: ['application/did+json'],
+            dids: ['did:example:123'],
+            'did:example:123': {
+              'application/did+json': {
+                didDocument: {
+                  '@context': ['https://www.w3.org/ns/did/v1'],
+                  id: 'did:example:123',
+                  verificationMethod: [
+                    {
+                      id: '#key-0',
+                      type: 'JsonWebKey2020',
+                      controller: 'did:example:123',
+                      publicKeyJwk: {
+                        kty: 'OKP',
+                        crv: 'Ed25519',
+                        x: 'VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE',
+                      },
+                    },
+                    {
+                      id: '#key-1',
+                      type: 'JsonWebKey2020',
+                      controller: 'did:example:123',
+                      publicKeyJwk: {
+                        kty: 'OKP',
+                        crv: 'X25519',
+                        x: '3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8',
+                      },
+                    },
+                  ],
+                  authentication: ['#key-0'],
+                  assertionMethod: ['#key-0'],
+                  capabilityInvocation: ['#key-0'],
+                  capabilityDelegation: ['#key-0'],
+                  keyAgreement: ['#key-1'],
+                },
+                didDocumentMetaData: {
+                  'content-type': 'application/did+json',
+                },
+                didResolutionMetaData: {},
+              },
+            },
+          },
+        },
       },
     ];
 
@@ -123,6 +166,11 @@
     editor.setTheme('ace/theme/github');
     editor.session.setMode('ace/mode/json');
     editor.setValue(JSON.stringify(reportSuiteInput, null, 2));
+
+    var term = new Terminal({
+      convertEol: true,
+    });
+    term.open(document.getElementById('terminal'));
 
     var generateReport = async () => {
       const res = await fetch(testSuiteManagerEndpoint, {
@@ -135,16 +183,14 @@
       });
 
       const responseBody = await res.json();
-      var term = new Terminal({
-        convertEol: true,
-      });
 
       let encodedReport = responseBody.suitesReportTerminal;
       console.log({
         input: reportSuiteInput,
         output: responseBody,
       });
-      term.open(document.getElementById('terminal'));
+
+      term.reset();
       term.write(b64DecodeUnicode(encodedReport));
     };
   </script>
