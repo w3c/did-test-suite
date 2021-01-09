@@ -6,6 +6,7 @@ module.exports = sanitizeAllResults = (allResults) => {
       suite: element.results.testResults[0].testResults[0].ancestorTitles[0],
       testResults: element.results.testResults[0].testResults.map((tr) => {
         return {
+          ancestors: tr.ancestorTitles,
           title: tr.title,
           status: tr.status,
         };
