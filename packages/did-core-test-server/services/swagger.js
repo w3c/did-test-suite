@@ -5,15 +5,15 @@ const registerSwagger = (server) => {
     swagger: {
       info: {
         title: 'DID Core Test Server',
-        description: 'HTTP API for Testing DID Core Conformance.',
+        description: 'DID Core Test Conformance.',
         version: '0.0.0',
         license: {
-          name: 'W3C Specification',
-          url: 'https://www.w3.org/TR/did-core/',
+          name: 'DID Core Specification',
+          url: 'https://github.com/w3c/did-core',
         },
         contact: {
           name: 'GitHub Source Code',
-          url: 'https://github.com/w3c/did-core',
+          url: 'https://github.com/w3c/did-test-suite',
         },
       },
 

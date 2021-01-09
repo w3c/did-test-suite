@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DID Core Suite Runner</title>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer"
+      class="remove"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.css"
+    />
+    <style type="text/css" media="screen">
+      #report-suites-input {
+        position: relative;
+        width: 100%;
+        height: 700px;
+      }
+    </style>
+    <script
+      src="https://pagecdn.io/lib/ace/1.4.5/ace.js"
+      integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
+    <script class="remove">
+      // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
+      var respecConfig = {
+        specStatus: 'ED',
+        shortName: 'did-core-test-suite',
+        group: 'did',
+        github: {
+          repoURL: 'https://github.com/transmute-industries/vc.transmute.world',
+          branch: 'master',
+        },
+        editors: [
+          {
+            name: 'Orie Steele',
+            url: 'https://www.linkedin.com/in/or13b/',
+            company: 'Transmute',
+            companyURL: 'https://www.transmute.industries/',
+            w3cid: 109171,
+          },
+        ],
+        noRecTrack: 'true',
+      };
+    </script>
+  </head>
+  <body>
+    <section id="abstract">
+      <p></p>
+    </section>
+    <section id="sotd">
+      <p></p>
+    </section>
+
+    <section>
+      <h2>DID Core Conformance</h2>
+    </section>
+
+    <section>
+      <h2>Live Test Runner</h2>
+      <button
+        style="
+          float: right;
+          background-color: orchid;
+          border: none;
+          border-radius: 8px;
+          padding: 8px;
+          color: white;
+          font-size: medium;
+          cursor: pointer;
+        "
+        onclick="generateReport()"
+      >
+        Generate Report
+      </button>
+      <p>Generate a test suite conformance report from the browser!</p>
+
+      <section>
+        <h4>Input</h4>
+        <div id="report-suites-input"></div>
+      </section>
+
+      <section>
+        <h4>Output</h4>
+        <div id="terminal"></div>
+      </section>
+    </section>
+
+    <section id="conformance"></section>
+  </body>
+
+  <script>
+    const testSuiteManagerEndpoint =
+      window.location.hostname === 'localhost'
+        ? 'http://localhost:8080/test-suite-manager/generate-report'
+        : 'https://vc.transmute.world/test-suite-manager/generate-report';
+
+    function b64DecodeUnicode(str) {
+      // Going backwards: from bytestream, to percent-encoding, to original string.
+      return decodeURIComponent(
+        atob(str)
+          .split('')
+          .map(function (c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join('')
+      );
+    }
+
+    const reportSuiteInput = [
+      {
+        name: 'test-suite-a',
+        a: 1,
+        b: 2,
+      },
+    ];
+
+    var editor = ace.edit('report-suites-input');
+    editor.setTheme('ace/theme/github');
+    editor.session.setMode('ace/mode/json');
+    editor.setValue(JSON.stringify(reportSuiteInput, null, 2));
+
+    var generateReport = async () => {
+      const res = await fetch(testSuiteManagerEndpoint, {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/ld+json',
+        },
+        method: 'post',
+        body: editor.getValue(),
+      });
+
+      const responseBody = await res.json();
+      var term = new Terminal({
+        convertEol: true,
+      });
+
+      let encodedReport = responseBody.suitesReportTerminal;
+      console.log({
+        input: reportSuiteInput,
+        output: responseBody,
+      });
+      term.open(document.getElementById('terminal'));
+      term.write(b64DecodeUnicode(encodedReport));
+    };
+  </script>
+</html>
