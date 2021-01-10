@@ -1,7 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
     <title>Test Suite and Implementation Report</title>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer"
+      class="remove"
+    ></script>
     <script class="remove">
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
@@ -50,7 +56,8 @@
           A scenario is a json data structure containing all inputs and outputs
           needed to test a collection of normative statements.
         </p>
-        <pre class="example">            {
+        <pre class="example">
+            {
               &quot;name&quot;: &quot;did-parameters-positive-tests&quot;,
               &quot;input&quot;: {
                 &quot;hl&quot;: &quot;did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e&quot;,
@@ -59,7 +66,8 @@
                 &quot;version-time&quot;: &quot;did:example:123?version-time=1601151242&quot;
               }
             }
-          </pre>
+          </pre
+        >
         <p></p>
 
         <p>Scenarios MUST have unique descriptive names.</p>
@@ -80,7 +88,8 @@
           An assertion is a normative statment mapped to a function which takes
           a scenario as input and produces a boolean as output.
         </p>
-        <pre class="example">            {
+        <pre class="example">
+            {
               &apos;[version-id] The associated value MUST be an ASCII string.&apos;: (scenario) =&gt; {
                 const value = getQueryParamValueFromDidUri(
                   scenario.input[&apos;version-id&apos;],
@@ -89,7 +98,8 @@
                 return isAsciiString(value);
               },
             }
-          </pre>
+          </pre
+        >
         <p></p>
         <p>Assertions SHOULD match normative statements in the DID Core.</p>
         <p>
@@ -107,10 +117,10 @@
       <h2>Test Fixtures</h2>
 
       <p id="raw-rest-results-last-updated" class="note">
-These test results were last generated 
-<span id="raw-rest-results-last-updated-date">
-Friday, December 4, 2020 10:37 AM
-</span>
+        These test results were last generated
+        <span id="raw-rest-results-last-updated-date">
+          Friday, December 4, 2020 10:37 AM
+        </span>
       </p>
 
       <p class="advisement">
@@ -132,245 +142,236 @@ Friday, December 4, 2020 10:37 AM
       <section id="all-scenarios-request">
         <h3>Test Input Request</h3>
         <script type="application/json" id="all-scenarios-request-json">
-{
-  "scenarios": [
-    {
-      "request": {
-        "name": "resolve",
-        "input": {
-          "did": "did:example:123",
-          "did-resolution-input-metadata": {}
-        },
-        "output": {
-          "did-document": {
-            "id": "did:example:123"
-          },
-          "did-document-metadata": {},
-          "did-resolution-metadata": {}
-        }
-      },
-      "response": {
-        "scenario": "resolve",
-        "test": "PASS",
-        "assertion_results": {
-          "did should match did-document id": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "did-parameters-negative-tests",
-        "input": {
-          "hl_base64url_encoded_non_ascii_string": "PIGC",
-          "service_base64url_encoded_non_ascii_string": "PIGC",
-          "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
-          "version_id_base64url_encoded_non_ascii_string": "PIGC",
-          "version_time_base64url_encoded_non_ascii_string": "PIGC"
-        }
-      },
-      "response": {
-        "scenario": "did-parameters-negative-tests",
-        "test": "PASS",
-        "assertion_results": {
-          "[hl] The associated value MUST be an ASCII string.": true,
-          "[service] The associated value MUST be an ASCII string.": true,
-          "[version-id] The associated value MUST be an ASCII string.": true,
-          "[version-time] The associated value MUST be an ASCII string.": true,
-          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "did-parameters-positive-tests",
-        "input": {
-          "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
-          "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-          "version-id": "did:example:123?version-id=0.1.0",
-          "version-time": "did:example:123?version-time=1601151242"
-        }
-      },
-      "response": {
-        "scenario": "did-parameters-positive-tests",
-        "test": "PASS",
-        "assertion_results": {
-          "[hl] The associated value MUST be an ASCII string.": true,
-          "[service] The associated value MUST be an ASCII string.": true,
-          "[version-id] The associated value MUST be an ASCII string.": true,
-          "[version-time] The associated value MUST be an ASCII string.": true,
-          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "json-production-positive-tests",
-        "input": {
-          "id": "did:example:123",
-          "deactivated": false,
-          "accountBalance": 12.5,
-          "authorization": null,
-          "verificationMethod": [
-            {
-              "id": "#key-1",
-              "type": "JsonWebKey2020",
-              "controller": "did:example:123",
-              "publicKeyJwk": {
-                "kty": "EC",
-                "crv": "P-256",
-                "x": "NQl3RznAAss_tn7A3UYUFxdaccpILzViHYlu7-1uj84",
-                "y": "-Zvp5lHJZA8J8wNRENbYsgcbiZKzXhQ_5g3bfl-MwxE"
+          {
+            "scenarios": [
+              {
+                "request": {
+                  "name": "resolve",
+                  "input": {
+                    "did": "did:example:123",
+                    "did-resolution-input-metadata": {}
+                  },
+                  "output": {
+                    "did-document": {
+                      "id": "did:example:123"
+                    },
+                    "did-document-metadata": {},
+                    "did-resolution-metadata": {}
+                  }
+                },
+                "response": {
+                  "scenario": "resolve",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "did should match did-document id": true
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "did-parameters-negative-tests",
+                  "input": {
+                    "hl_base64url_encoded_non_ascii_string": "PIGC",
+                    "service_base64url_encoded_non_ascii_string": "PIGC",
+                    "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
+                    "version_id_base64url_encoded_non_ascii_string": "PIGC",
+                    "version_time_base64url_encoded_non_ascii_string": "PIGC"
+                  }
+                },
+                "response": {
+                  "scenario": "did-parameters-negative-tests",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "[hl] The associated value MUST be an ASCII string.": true,
+                    "[service] The associated value MUST be an ASCII string.": true,
+                    "[version-id] The associated value MUST be an ASCII string.": true,
+                    "[version-time] The associated value MUST be an ASCII string.": true,
+                    "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "did-parameters-positive-tests",
+                  "input": {
+                    "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+                    "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+                    "version-id": "did:example:123?version-id=0.1.0",
+                    "version-time": "did:example:123?version-time=1601151242"
+                  }
+                },
+                "response": {
+                  "scenario": "did-parameters-positive-tests",
+                  "test": "PASS",
+                  "assertion_results": {
+                    "[hl] The associated value MUST be an ASCII string.": true,
+                    "[service] The associated value MUST be an ASCII string.": true,
+                    "[version-id] The associated value MUST be an ASCII string.": true,
+                    "[version-time] The associated value MUST be an ASCII string.": true,
+                    "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "json-production-positive-tests",
+                  "input": {
+                    "id": "did:example:123",
+                    "deactivated": false,
+                    "accountBalance": 12.5,
+                    "authorization": null,
+                    "verificationMethod": [
+                      {
+                        "id": "#key-1",
+                        "type": "JsonWebKey2020",
+                        "controller": "did:example:123",
+                        "publicKeyJwk": {
+                          "kty": "EC",
+                          "crv": "P-256",
+                          "x": "NQl3RznAAss_tn7A3UYUFxdaccpILzViHYlu7-1uj84",
+                          "y": "-Zvp5lHJZA8J8wNRENbYsgcbiZKzXhQ_5g3bfl-MwxE"
+                        }
+                      },
+                      {
+                        "id": "#key-2",
+                        "type": "JsonWebKey2020",
+                        "controller": "did:example:123",
+                        "publicKeyJwk": {
+                          "kty": "EC",
+                          "crv": "P-384",
+                          "x": "j11K7RDZkGfVIflJrJ6O6k3W_-q3Gz_KdZ5uSGT-4EHh6h2RxHPlLzWGDmtgn-1P",
+                          "y": "P0RrA4l7G7F0kTUcy0yebNGMFJFL1csJllRIveFOF7vkjctRLBwH8PbjFPXU6ZXB"
+                        }
+                      }
+                    ],
+                    "authentication": ["#key-2", "#key-1"]
+                  }
+                },
+                "response": {
+                  "scenario": "json-production-positive-tests",
+                  "test": "FAIL",
+                  "assertion_results": {
+                    "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
+                    "Boolean values MUST be represented as a Boolean literal.": false,
+                    "Sequence value MUST be represented as an Array type.": false,
+                    "Unordered sets of values MUST be represented as an Array type.": false,
+                    "Sets of properties MUST be represented as an Object type.": false,
+                    "Empty values MUST be represented as a null literal.": false
+                  }
+                }
+              },
+              {
+                "request": {
+                  "name": "equivalence-properties",
+                  "input": {
+                    "did": "did:example:000"
+                  },
+                  "output": {
+                    "sameMethod": {
+                      "did-document": {
+                        "id": "did:example:000"
+                      },
+                      "did-document-metadata": {
+                        "canonicalId": "did:example:123",
+                        "equivalentId": ["did:example:456", "did:example:789"]
+                      },
+                      "did-resolution-metadata": {}
+                    },
+                    "canonicalId": {
+                      "did-document": {
+                        "id": "did:example:000"
+                      },
+                      "did-document-metadata": {
+                        "canonicalId": "did:example:123"
+                      },
+                      "did-resolution-metadata": {}
+                    },
+                    "equivalentId": {
+                      "did-document": {
+                        "id": "did:example:000"
+                      },
+                      "did-document-metadata": {
+                        "equivalentId": ["did:example:456", "did:example:789"]
+                      },
+                      "did-resolution-metadata": {}
+                    }
+                  }
+                },
+                "response": {
+                  "scenario": "equivalence-properties",
+                  "test": "FAIL",
+                  "assertion_results": {
+                    "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
+                    "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
+                    "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
+                  }
+                }
               }
-            },
-            {
-              "id": "#key-2",
-              "type": "JsonWebKey2020",
-              "controller": "did:example:123",
-              "publicKeyJwk": {
-                "kty": "EC",
-                "crv": "P-384",
-                "x": "j11K7RDZkGfVIflJrJ6O6k3W_-q3Gz_KdZ5uSGT-4EHh6h2RxHPlLzWGDmtgn-1P",
-                "y": "P0RrA4l7G7F0kTUcy0yebNGMFJFL1csJllRIveFOF7vkjctRLBwH8PbjFPXU6ZXB"
-              }
-            }
-          ],
-          "authentication": [
-            "#key-2",
-            "#key-1"
-          ]
-        }
-      },
-      "response": {
-        "scenario": "json-production-positive-tests",
-        "test": "FAIL",
-        "assertion_results": {
-          "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
-          "Boolean values MUST be represented as a Boolean literal.": false,
-          "Sequence value MUST be represented as an Array type.": false,
-          "Unordered sets of values MUST be represented as an Array type.": false,
-          "Sets of properties MUST be represented as an Object type.": false,
-          "Empty values MUST be represented as a null literal.": false
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "equivalence-properties",
-        "input": {
-          "did": "did:example:000"
-        },
-        "output": {
-          "sameMethod": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "canonicalId": "did:example:123",
-              "equivalentId": [
-                "did:example:456",
-                "did:example:789"
-              ]
-            },
-            "did-resolution-metadata": {}
-          },
-          "canonicalId": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "canonicalId": "did:example:123"
-            },
-            "did-resolution-metadata": {}
-          },
-          "equivalentId": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "equivalentId": [
-                "did:example:456",
-                "did:example:789"
-              ]
-            },
-            "did-resolution-metadata": {}
+            ]
           }
-        }
-      },
-      "response": {
-        "scenario": "equivalence-properties",
-        "test": "FAIL",
-        "assertion_results": {
-          "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
-          "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
-          "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
-        }
-      }
-    }
-  ]
-}
-      </script>
+        </script>
       </section>
 
       <section id="all-scenarios-response">
         <h3>Test Output Response</h3>
 
         <script type="application/json" id="all-scenarios-response-json">
-{
-  "test": "FAIL",
-  "scenarios": [
-    {
-      "scenario": "resolve",
-      "test": "PASS",
-      "assertion_results": {
-        "did should match did-document id": true
-      }
-    },
-    {
-      "scenario": "did-parameters-negative-tests",
-      "test": "PASS",
-      "assertion_results": {
-        "[hl] The associated value MUST be an ASCII string.": true,
-        "[service] The associated value MUST be an ASCII string.": true,
-        "[version-id] The associated value MUST be an ASCII string.": true,
-        "[version-time] The associated value MUST be an ASCII string.": true,
-        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-      }
-    },
-    {
-      "scenario": "did-parameters-positive-tests",
-      "test": "PASS",
-      "assertion_results": {
-        "[hl] The associated value MUST be an ASCII string.": true,
-        "[service] The associated value MUST be an ASCII string.": true,
-        "[version-id] The associated value MUST be an ASCII string.": true,
-        "[version-time] The associated value MUST be an ASCII string.": true,
-        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-      }
-    },
-    {
-      "scenario": "json-production-positive-tests",
-      "test": "FAIL",
-      "assertion_results": {
-        "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
-        "Boolean values MUST be represented as a Boolean literal.": false,
-        "Sequence value MUST be represented as an Array type.": false,
-        "Unordered sets of values MUST be represented as an Array type.": false,
-        "Sets of properties MUST be represented as an Object type.": false,
-        "Empty values MUST be represented as a null literal.": false
-      }
-    },
-    {
-      "scenario": "equivalence-properties",
-      "test": "FAIL",
-      "assertion_results": {
-        "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
-        "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
-        "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
-      }
-    }
-  ]
-}
-      </script>
+          {
+            "test": "FAIL",
+            "scenarios": [
+              {
+                "scenario": "resolve",
+                "test": "PASS",
+                "assertion_results": {
+                  "did should match did-document id": true
+                }
+              },
+              {
+                "scenario": "did-parameters-negative-tests",
+                "test": "PASS",
+                "assertion_results": {
+                  "[hl] The associated value MUST be an ASCII string.": true,
+                  "[service] The associated value MUST be an ASCII string.": true,
+                  "[version-id] The associated value MUST be an ASCII string.": true,
+                  "[version-time] The associated value MUST be an ASCII string.": true,
+                  "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                }
+              },
+              {
+                "scenario": "did-parameters-positive-tests",
+                "test": "PASS",
+                "assertion_results": {
+                  "[hl] The associated value MUST be an ASCII string.": true,
+                  "[service] The associated value MUST be an ASCII string.": true,
+                  "[version-id] The associated value MUST be an ASCII string.": true,
+                  "[version-time] The associated value MUST be an ASCII string.": true,
+                  "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
+                }
+              },
+              {
+                "scenario": "json-production-positive-tests",
+                "test": "FAIL",
+                "assertion_results": {
+                  "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
+                  "Boolean values MUST be represented as a Boolean literal.": false,
+                  "Sequence value MUST be represented as an Array type.": false,
+                  "Unordered sets of values MUST be represented as an Array type.": false,
+                  "Sets of properties MUST be represented as an Object type.": false,
+                  "Empty values MUST be represented as a null literal.": false
+                }
+              },
+              {
+                "scenario": "equivalence-properties",
+                "test": "FAIL",
+                "assertion_results": {
+                  "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
+                  "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
+                  "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
+                }
+              }
+            ]
+          }
+        </script>
       </section>
     </section>
 
@@ -487,7 +488,9 @@ Friday, December 4, 2020 10:37 AM
     <section id="conformance">
       <p>
         See
-        <a href="https://www.w3.org/TR/did-core/#conformance">DID Core Conformance.</a>
+        <a href="https://www.w3.org/TR/did-core/#conformance"
+          >DID Core Conformance.</a
+        >
       </p>
 
       <p>
@@ -495,6 +498,5 @@ Friday, December 4, 2020 10:37 AM
         <a href="#all-scenarios-report"></a>.
       </p>
     </section>
-  
-
-</body></html>
+  </body>
+</html>

@@ -5,14 +5,17 @@
       "suite": "test-suite-a",
       "testResults": [
         {
+          "ancestors": ["test-suite-a"],
           "title": "suite config should have correct name",
           "status": "passed"
         },
         {
+          "ancestors": ["test-suite-a"],
           "title": "a should be 1",
           "status": "passed"
         },
         {
+          "ancestors": ["test-suite-a"],
           "title": "b should be 2",
           "status": "passed"
         }
@@ -22,14 +25,17 @@
       "suite": "test-suite-b",
       "testResults": [
         {
+          "ancestors": ["test-suite-b"],
           "title": "suite config should have correct name",
           "status": "passed"
         },
         {
+          "ancestors": ["test-suite-b"],
           "title": "x should be 3",
           "status": "passed"
         },
         {
+          "ancestors": ["test-suite-b"],
           "title": "y should be 4",
           "status": "passed"
         }

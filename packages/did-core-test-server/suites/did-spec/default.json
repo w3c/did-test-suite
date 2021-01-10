@@ -44,6 +44,22 @@
             "didResolutionMetaData": {}
           }
         }
+      },
+      "did:Cool": {
+        "supportedContentTypes": ["application/did+cool+json"],
+        "dids": ["did:Cool:123"],
+        "did:Cool:123": {
+          "application/did+cool+json": {
+            "didDocument": {
+              "id": "did:Cool:123",
+              "forbidden__proto__": { "vulnerable": "cool?" }
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+cool+json"
+            },
+            "didResolutionMetaData": {}
+          }
+        }
       }
     }
   }

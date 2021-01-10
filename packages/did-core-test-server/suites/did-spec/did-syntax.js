@@ -14,6 +14,7 @@ const didSyntaxTests = (suiteConfig) => {
         it('The DID method name MUST be an ASCII lowercase string.', () => {
           const method = didExample.split(':')[1];
           expect(utils.isAsciiString(method)).toBe(true);
+          expect(method.toLowerCase()).toBe(method);
         });
         it('The DID method name MUST NOT be empty.', () => {
           const method = didExample.split(':')[1];

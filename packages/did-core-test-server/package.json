@@ -10,7 +10,7 @@
     "serve": "node run.js",
     "generate-report": "node generate-test-report.js",
     "docker:build": "docker build --tag or13/did-core-test-server:1.0 .",
-    "docker:run": "docker run --publish 3000:3000 --detach --name dcts or13/did-core-test-server:1.0",
+    "docker:run": "docker run --publish 8080:8080 or13/did-core-test-server:1.0",
     "docker:publish": "docker push or13/did-core-test-server:1.0"
   },
   "dependencies": {
