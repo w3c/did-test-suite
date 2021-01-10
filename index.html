@@ -684,30 +684,31 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
     term.open(document.getElementById('terminal'));
 
     var generateReport = async () => {
-      const res = await fetch(testSuiteManagerEndpoint, {
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/ld+json',
-        },
-        method: 'post',
-        body: editor.getValue(),
-      });
+      try {
+        const res = await fetch(testSuiteManagerEndpoint, {
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/ld+json',
+          },
+          method: 'post',
+          body: editor.getValue(),
+        });
 
-      const responseBody = await res.json();
+        const responseBody = await res.json();
 
-      let encodedReport = responseBody.suitesReportTerminal;
-      console.log({
-        input: reportSuiteInput,
-        output: responseBody,
-      });
+        let encodedReport = responseBody.suitesReportTerminal;
 
-      renderReportResults(
-        'on-demand-report-results',
-        responseBody.suitesReportJson
-      );
+        renderReportResults(
+          'on-demand-report-results',
+          responseBody.suitesReportJson
+        );
 
-      term.reset();
-      term.write(b64DecodeUnicode(encodedReport));
+        term.reset();
+        term.write(b64DecodeUnicode(encodedReport));
+        alert('succeeded');
+      } catch (e) {
+        alert('failed');
+      }
     };
 
     const resultToEmoji = (test) => {
