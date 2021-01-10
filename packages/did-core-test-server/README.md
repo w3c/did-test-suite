@@ -1,5 +1,7 @@
 ### Jest Test Server
 
+See [The DID Core Test Suite](https://w3c.github.io/did-test-suite/) for motivation.
+
 This module exposes a set of jest suites that operate on custom json configurations as an async function `getReportResults`.
 
 The suites can be tests manually, using:
