@@ -31,7 +31,7 @@ W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 
 ## Getting Started
 
-See the [Test Server]('./packages/did-core-test-server).
+See the [Test Server](./packages/did-core-test-server).
 
 ## DID Working Group Repositories
 
