@@ -1,8 +1,46 @@
-## DID Core Test Server
+### Jest Test Server
 
-This module implements the conformance tests used to confirm the normative statements in DID Core.
+See [The DID Core Test Suite](https://w3c.github.io/did-test-suite/) for motivation.
 
-### Scripts
+This module exposes a set of jest suites that operate on custom json configurations as an async function `getReportResults`.
+
+## Usage
+
+You may need to [install node.js](https://nodejs.org/en/).
+You may also need to [install docker](https://docs.docker.com/get-docker/).
+
+```
+git clone git@github.com:w3c/did-test-suite.git
+npm i
+cd ./packages/did-core-test-suite
+```
+
+The suites can be tests manually, using:
+
+```
+npm run generate-report
+```
+
+Or via http,
+
+```
+npm run start
+```
+
+### Testing with CURL
+
+```
+curl -s -X POST http://localhost:8080/test-suite-manager/generate-report \
+-H "Content-Type: application/json" \
+-d @./suites/did-spec/default.json \
+| jq '.suiteReportJson[0]'
+```
+
+### Embedding
+
+The test suite functionality can be embedded in any HTTP server,
+
+See [example](./routes/index.js).
 
 ```
 npm run test

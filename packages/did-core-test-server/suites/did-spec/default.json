@@ -1,0 +1,66 @@
+[
+  {
+    "name": "did-spec",
+    "didMethods": {
+      "did:example": {
+        "supportedContentTypes": ["application/did+json"],
+        "dids": ["did:example:123"],
+        "did:example:123": {
+          "application/did+json": {
+            "didDocument": {
+              "@context": ["https://www.w3.org/ns/did/v1"],
+              "id": "did:example:123",
+              "verificationMethod": [
+                {
+                  "id": "#key-0",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:example:123",
+                  "publicKeyJwk": {
+                    "kty": "OKP",
+                    "crv": "Ed25519",
+                    "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE"
+                  }
+                },
+                {
+                  "id": "#key-1",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:example:123",
+                  "publicKeyJwk": {
+                    "kty": "OKP",
+                    "crv": "X25519",
+                    "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
+                  }
+                }
+              ],
+              "authentication": ["#key-0"],
+              "assertionMethod": ["#key-0"],
+              "capabilityInvocation": ["#key-0"],
+              "capabilityDelegation": ["#key-0"],
+              "keyAgreement": ["#key-1"]
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+json"
+            },
+            "didResolutionMetaData": {}
+          }
+        }
+      },
+      "did:Cool": {
+        "supportedContentTypes": ["application/did+cool+json"],
+        "dids": ["did:Cool:123"],
+        "did:Cool:123": {
+          "application/did+cool+json": {
+            "didDocument": {
+              "id": "did:Cool:123",
+              "forbidden__proto__": { "vulnerable": "cool?" }
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+cool+json"
+            },
+            "didResolutionMetaData": {}
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "suitesReportTerminal": "G1s5OTlEG1tLG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvdGVzdC1zdWl0ZS1hLxtbMjJtG1sxbXRlc3Qtc3VpdGUtYS5zcGVjLmpzG1syMm0KICB0ZXN0LXN1aXRlLWEKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUgKDEgbXMpG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybWEgc2hvdWxkIGJlIDEbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJtYiBzaG91bGQgYmUgMiAoMSBtcykbWzIybQoKG1s5OTlEG1tLG1sxbVRlc3QgU3VpdGVzOiAbWzIybRtbMW0bWzMybTEgcGFzc2VkG1szOW0bWzIybSwgMSB0b3RhbAobWzFtVGVzdHM6ICAgICAgIBtbMjJtG1sxbRtbMzJtMyBwYXNzZWQbWzM5bRtbMjJtLCAzIHRvdGFsChtbMW1TbmFwc2hvdHM6ICAgG1syMm0wIHRvdGFsChtbMW1UaW1lOhtbMjJtICAgICAgICAwLjgzNCBzLCBlc3RpbWF0ZWQgMSBzChtbMm1SYW4gYWxsIHRlc3Qgc3VpdGVzG1syMm0bWzJtLhtbMjJtChtbOTk5RBtbSxtbMG0bWzdtG1sxbRtbMzJtIFBBU1MgG1szOW0bWzIybRtbMjdtG1swbSAbWzJtc3VpdGVzL3Rlc3Qtc3VpdGUtYi8bWzIybRtbMW10ZXN0LXN1aXRlLWIuc3BlYy5qcxtbMjJtCiAgdGVzdC1zdWl0ZS1iCiAgICAbWzMybeKckxtbMzltIBtbMm1zdWl0ZSBjb25maWcgc2hvdWxkIGhhdmUgY29ycmVjdCBuYW1lG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybXggc2hvdWxkIGJlIDMbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJteSBzaG91bGQgYmUgNCAoMSBtcykbWzIybQoKG1s5OTlEG1tLG1sxbVRlc3QgU3VpdGVzOiAbWzIybRtbMW0bWzMybTEgcGFzc2VkG1szOW0bWzIybSwgMSB0b3RhbAobWzFtVGVzdHM6ICAgICAgIBtbMjJtG1sxbRtbMzJtMyBwYXNzZWQbWzM5bRtbMjJtLCAzIHRvdGFsChtbMW1TbmFwc2hvdHM6ICAgG1syMm0wIHRvdGFsChtbMW1UaW1lOhtbMjJtICAgICAgICAwLjE1OSBzLCBlc3RpbWF0ZWQgMSBzChtbMm1SYW4gYWxsIHRlc3Qgc3VpdGVzG1syMm0bWzJtLhtbMjJtCg==",
+  "suitesReportJson": [
+    {
+      "suite": "test-suite-a",
+      "testResults": [
+        {
+          "ancestors": [
+            "test-suite-a"
+          ],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": [
+            "test-suite-a"
+          ],
+          "title": "a should be 1",
+          "status": "passed"
+        },
+        {
+          "ancestors": [
+            "test-suite-a"
+          ],
+          "title": "b should be 2",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "suite": "test-suite-b",
+      "testResults": [
+        {
+          "ancestors": [
+            "test-suite-b"
+          ],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": [
+            "test-suite-b"
+          ],
+          "title": "x should be 3",
+          "status": "passed"
+        },
+        {
+          "ancestors": [
+            "test-suite-b"
+          ],
+          "title": "y should be 4",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}

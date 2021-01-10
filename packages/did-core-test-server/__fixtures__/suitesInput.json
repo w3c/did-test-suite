@@ -1,0 +1,12 @@
+[
+  {
+    "name": "test-suite-a",
+    "a": 1,
+    "b": 2
+  },
+  {
+    "name": "test-suite-b",
+    "x": 3,
+    "y": 4
+  }
+]

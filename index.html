@@ -1,7 +1,30 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <title>Test Suite and Implementation Report</title>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>DID Core Specification Test Suite</title>
+    <script
+      src="https://www.w3.org/Tools/respec/respec-w3c"
+      defer="defer"
+      class="remove"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.css"
+    />
+    <style type="text/css" media="screen">
+      #report-suites-input {
+        position: relative;
+        width: 100%;
+        height: 700px;
+      }
+    </style>
+    <script
+      src="https://pagecdn.io/lib/ace/1.4.5/ace.js"
+      integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
     <script class="remove">
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
@@ -40,461 +63,674 @@
       </p>
     </section>
 
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        The DID Core Specification strives to make no untestable normative
+        statements with [[RFC2119]] Language.
+      </p>
+
+      <p>
+        This document attempts to demonstrate that all such language has been
+        tested, and is supported by at least 2 independent implementations.
+      </p>
+
+      <p class="issue">
+        This document does not contain a comprehensive lists of normative
+        statements made by the did core spec.
+      </p>
+
+      <p class="issue">Not all statements in this document have been tested.</p>
+    </section>
+
     <section>
       <h2>Terminology</h2>
 
       <section>
-        <h2>Scenario</h2>
-
+        <h2>Suite</h2>
         <p>
-          A scenario is a json data structure containing all inputs and outputs
-          needed to test a collection of normative statements.
+          A test suite is a collection of tests and a json suite configuration
+          file.
         </p>
-        <pre class="example">            {
-              &quot;name&quot;: &quot;did-parameters-positive-tests&quot;,
-              &quot;input&quot;: {
-                &quot;hl&quot;: &quot;did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e&quot;,
-                &quot;service&quot;: &quot;did:example:123?service=agent&amp;relativeRef=%2Fpath%2Fto%2Fresource&quot;,
-                &quot;version-id&quot;: &quot;did:example:123?version-id=0.1.0&quot;,
-                &quot;version-time&quot;: &quot;did:example:123?version-time=1601151242&quot;
-              }
-            }
-          </pre>
+        <pre class="example" title="Example json suite configuration">
+          {
+            "name": "test-suite-a",
+            "a": 1,
+            "b": 2
+          }          
+          </pre
+        >
+
+        <pre class="example" title="Example javascript test file">
+let { suiteConfig } = global;
+
+if (!suiteConfig) {
+  suiteConfig = require("./defaultSuiteConfig.json");
+}
+
+describe("test-suite-a", () => {
+  it("suite config should have correct name", async () => {
+    expect(suiteConfig.name).toBe("test-suite-a");
+  });
+
+  it("a should be 1", async () => {
+    expect(suiteConfig.a).toBe(1);
+  });
+
+  it("b should be 2", async () => {
+    expect(suiteConfig.b).toBe(2);
+  });
+});
+          </pre
+        >
         <p></p>
 
-        <p>Scenarios MUST have unique descriptive names.</p>
-        <p>Scenarios MAY be split into positive and negative cases.</p>
-        <p>
-          If a scenario ending in <code>-positive-tests</code> exists, a
-          corrosponding<code>-negative-tests</code> scenario MUST exist.
+        <p>Test Suites MUST have unique descriptive names.</p>
+
+        <p class="note">
+          For the purposes of the DID Core WG, the suite name is assumed to be
+          "did-spec". However, we may choose to add additional test suites, with
+          different names in the future.
         </p>
+        <p>Test suites MAY be split into positive and negative cases.</p>
+
         <p>
-          A scenario is considered passing when all associated assertions are
-          true.
+          A suite is considered passing when all associated tests are passing.
         </p>
       </section>
 
       <section>
-        <h2>Assertion</h2>
+        <h2>Statement</h2>
+        <p>Normative statements are mapped to one or more tests.</p>
+        <pre class="example" title="Example normative statement">
+          The DID method name MUST be an ASCII lowercase string.
+          </pre
+        >
+
+        <pre class="example" title="Example test of statement">
+it('The DID method name MUST be an ASCII lowercase string.', () => {
+  const method = did.split(':')[1];
+  expect(utils.isAsciiString(method)).toBe(true);
+  expect(method.toLowerCase()).toBe(method);
+});
+          </pre
+        >
+        <p>Tests SHOULD match normative statements in the DID Core.</p>
         <p>
-          An assertion is a normative statment mapped to a function which takes
-          a scenario as input and produces a boolean as output.
-        </p>
-        <pre class="example">            {
-              &apos;[version-id] The associated value MUST be an ASCII string.&apos;: (scenario) =&gt; {
-                const value = getQueryParamValueFromDidUri(
-                  scenario.input[&apos;version-id&apos;],
-                  &apos;version-id&apos;
-                );
-                return isAsciiString(value);
-              },
-            }
-          </pre>
-        <p></p>
-        <p>Assertions SHOULD match normative statements in the DID Core.</p>
-        <p>
-          Assertions SHOULD reuse utility functions like
+          Tests SHOULD reuse utility functions like
           <code>isAsciiString</code>, or <code>decodeBase64UrlToString</code>.
         </p>
       </section>
-    </section>
 
-    <section id="all-scenarios-report">
-      <h2>Scenarios</h2>
-    </section>
-
-    <section id="all-scenarios-fixtures">
-      <h2>Test Fixtures</h2>
-
-      <p id="raw-rest-results-last-updated" class="note">
-These test results were last generated 
-<span id="raw-rest-results-last-updated-date">
-Friday, December 4, 2020 10:37 AM
-</span>
-      </p>
-
-      <p class="advisement">
-        These objects are automatically generated from the test suite, and are
-        completely UNSTABLE.
-      </p>
-
-      <p>
-        This section contains the JSON request and response objects used to
-        evaluate all normative statments in DID Core.
-      </p>
-
-      <p class="note">
-        Scenarios ending is <code>-positive-tests</code> and
-        <code>-negative-tests</code> are merged in the reporting table in
-        section <a href="#all-scenarios-report"></a>.
-      </p>
-
-      <section id="all-scenarios-request">
-        <h3>Test Input Request</h3>
-        <script type="application/json" id="all-scenarios-request-json">
-{
-  "scenarios": [
-    {
-      "request": {
-        "name": "resolve",
-        "input": {
-          "did": "did:example:123",
-          "did-resolution-input-metadata": {}
-        },
-        "output": {
-          "did-document": {
-            "id": "did:example:123"
-          },
-          "did-document-metadata": {},
-          "did-resolution-metadata": {}
-        }
-      },
-      "response": {
-        "scenario": "resolve",
-        "test": "PASS",
-        "assertion_results": {
-          "did should match did-document id": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "did-parameters-negative-tests",
-        "input": {
-          "hl_base64url_encoded_non_ascii_string": "PIGC",
-          "service_base64url_encoded_non_ascii_string": "PIGC",
-          "relative_ref_base64url_encoded_non_ascii_string": "PIGC",
-          "version_id_base64url_encoded_non_ascii_string": "PIGC",
-          "version_time_base64url_encoded_non_ascii_string": "PIGC"
-        }
-      },
-      "response": {
-        "scenario": "did-parameters-negative-tests",
-        "test": "PASS",
-        "assertion_results": {
-          "[hl] The associated value MUST be an ASCII string.": true,
-          "[service] The associated value MUST be an ASCII string.": true,
-          "[version-id] The associated value MUST be an ASCII string.": true,
-          "[version-time] The associated value MUST be an ASCII string.": true,
-          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "did-parameters-positive-tests",
-        "input": {
-          "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
-          "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-          "version-id": "did:example:123?version-id=0.1.0",
-          "version-time": "did:example:123?version-time=1601151242"
-        }
-      },
-      "response": {
-        "scenario": "did-parameters-positive-tests",
-        "test": "PASS",
-        "assertion_results": {
-          "[hl] The associated value MUST be an ASCII string.": true,
-          "[service] The associated value MUST be an ASCII string.": true,
-          "[version-id] The associated value MUST be an ASCII string.": true,
-          "[version-time] The associated value MUST be an ASCII string.": true,
-          "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "json-production-positive-tests",
-        "input": {
-          "id": "did:example:123",
-          "deactivated": false,
-          "accountBalance": 12.5,
-          "authorization": null,
-          "verificationMethod": [
-            {
-              "id": "#key-1",
-              "type": "JsonWebKey2020",
-              "controller": "did:example:123",
-              "publicKeyJwk": {
-                "kty": "EC",
-                "crv": "P-256",
-                "x": "NQl3RznAAss_tn7A3UYUFxdaccpILzViHYlu7-1uj84",
-                "y": "-Zvp5lHJZA8J8wNRENbYsgcbiZKzXhQ_5g3bfl-MwxE"
-              }
-            },
-            {
-              "id": "#key-2",
-              "type": "JsonWebKey2020",
-              "controller": "did:example:123",
-              "publicKeyJwk": {
-                "kty": "EC",
-                "crv": "P-384",
-                "x": "j11K7RDZkGfVIflJrJ6O6k3W_-q3Gz_KdZ5uSGT-4EHh6h2RxHPlLzWGDmtgn-1P",
-                "y": "P0RrA4l7G7F0kTUcy0yebNGMFJFL1csJllRIveFOF7vkjctRLBwH8PbjFPXU6ZXB"
-              }
-            }
-          ],
-          "authentication": [
-            "#key-2",
-            "#key-1"
-          ]
-        }
-      },
-      "response": {
-        "scenario": "json-production-positive-tests",
-        "test": "FAIL",
-        "assertion_results": {
-          "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
-          "Boolean values MUST be represented as a Boolean literal.": false,
-          "Sequence value MUST be represented as an Array type.": false,
-          "Unordered sets of values MUST be represented as an Array type.": false,
-          "Sets of properties MUST be represented as an Object type.": false,
-          "Empty values MUST be represented as a null literal.": false
-        }
-      }
-    },
-    {
-      "request": {
-        "name": "equivalence-properties",
-        "input": {
-          "did": "did:example:000"
-        },
-        "output": {
-          "sameMethod": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "canonicalId": "did:example:123",
-              "equivalentId": [
-                "did:example:456",
-                "did:example:789"
-              ]
-            },
-            "did-resolution-metadata": {}
-          },
-          "canonicalId": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "canonicalId": "did:example:123"
-            },
-            "did-resolution-metadata": {}
-          },
-          "equivalentId": {
-            "did-document": {
-              "id": "did:example:000"
-            },
-            "did-document-metadata": {
-              "equivalentId": [
-                "did:example:456",
-                "did:example:789"
-              ]
-            },
-            "did-resolution-metadata": {}
-          }
-        }
-      },
-      "response": {
-        "scenario": "equivalence-properties",
-        "test": "FAIL",
-        "assertion_results": {
-          "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
-          "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
-          "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
-        }
-      }
-    }
-  ]
-}
-      </script>
-      </section>
-
-      <section id="all-scenarios-response">
-        <h3>Test Output Response</h3>
-
-        <script type="application/json" id="all-scenarios-response-json">
-{
-  "test": "FAIL",
-  "scenarios": [
-    {
-      "scenario": "resolve",
-      "test": "PASS",
-      "assertion_results": {
-        "did should match did-document id": true
-      }
-    },
-    {
-      "scenario": "did-parameters-negative-tests",
-      "test": "PASS",
-      "assertion_results": {
-        "[hl] The associated value MUST be an ASCII string.": true,
-        "[service] The associated value MUST be an ASCII string.": true,
-        "[version-id] The associated value MUST be an ASCII string.": true,
-        "[version-time] The associated value MUST be an ASCII string.": true,
-        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-      }
-    },
-    {
-      "scenario": "did-parameters-positive-tests",
-      "test": "PASS",
-      "assertion_results": {
-        "[hl] The associated value MUST be an ASCII string.": true,
-        "[service] The associated value MUST be an ASCII string.": true,
-        "[version-id] The associated value MUST be an ASCII string.": true,
-        "[version-time] The associated value MUST be an ASCII string.": true,
-        "[relative-ref] The associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.": true
-      }
-    },
-    {
-      "scenario": "json-production-positive-tests",
-      "test": "FAIL",
-      "assertion_results": {
-        "Numeric values representable as IEEE754 MUST be represented as a Number type.": false,
-        "Boolean values MUST be represented as a Boolean literal.": false,
-        "Sequence value MUST be represented as an Array type.": false,
-        "Unordered sets of values MUST be represented as an Array type.": false,
-        "Sets of properties MUST be represented as an Object type.": false,
-        "Empty values MUST be represented as a null literal.": false
-      }
-    },
-    {
-      "scenario": "equivalence-properties",
-      "test": "FAIL",
-      "assertion_results": {
-        "canonicalId and equivalentId must be of the same DID Method as the resolved ID": true,
-        "When canonicalId is present, it must be recognized as the primary ID reference, \n    and if the resolved ID differs from canonicalId, it must be recognized as an \n    equivalent reference": false,
-        "When equivalentId is present, its values must be recognized as equivalent ID references, \n    and the resolved ID must be recognized as the primary reference, \n    absent a specified canonicalId": false
-      }
-    }
-  ]
-}
-      </script>
-      </section>
-    </section>
-
-    <script>
-      const resultToEmoji = (test) => {
-        return test === 'PASS' ? `✅` : `❌`;
-      };
-
-      const booleanToTestResult = (bool) => {
-        return bool ? `PASS` : `FAIL`;
-      };
-
-      const booleanToEmoji = (bool) => {
-        return resultToEmoji(booleanToTestResult(bool));
-      };
-
-      const renderRows = (scenario) => {
-        return Object.keys(scenario.assertion_results)
-          .map((assertion) => {
-            const bool = scenario.assertion_results[assertion];
-            return `
-            <tr>
-              <td>${booleanToEmoji(bool)}</td>
-              <td>${assertion}</td>
-            </tr>
-            `;
-          })
-          .join('');
-      };
-
-      const renderScenario = (scenario) => {
-        return `
       <section>
-        <h3>${scenario.scenario}</h3>
+        <h2>Suite Input</h2>
         <p>
-        ${resultToEmoji(scenario.test)} ${scenario.scenario}
+          In order to run a test suite, a configuration file must be provided
+          for the test file to be run against.
         </p>
 
-        <table class="simple" style="width: 100%;">
-          <tr>
-            <th></th>
-            <th>Statements</th>
-          </tr>
-          ${renderRows(scenario)}
-        </table>
-      </section>
-      `;
-      };
+        <p>Multiple suites can be run at once.</p>
 
-      const renderJson = (containerId, results) => {
-        document.getElementById(
-          containerId
-        ).innerHTML += `<pre>${JSON.stringify(results, null, 2)}</pre>`;
-      };
-
-      const renderPrettyTestResults = (results) => {
-        let str = results.scenarios.map(renderScenario).join('');
-        document.getElementById('all-scenarios-report').innerHTML += str;
-      };
-
-      // not possible to file split because of PR Preview:
-      // See https://github.com/tobie/pr-preview/issues/80
-
-      const mergePositiveAndNegativeTests = (results) => {
-        const simpleScenarios = results.scenarios.filter((s) => {
-          return (
-            s.scenario.indexOf('positive') === -1 &&
-            s.scenario.indexOf('negative') === -1
-          );
-        });
-        const positiveOrNegativeScenarios = results.scenarios.filter((s) => {
-          return (
-            s.scenario.indexOf('positive') !== -1 ||
-            s.scenario.indexOf('negative') !== -1
-          );
-        });
-        const merged = {};
-        while (positiveOrNegativeScenarios.length) {
-          const s = positiveOrNegativeScenarios.pop();
-          let name = s.scenario.replace('-positive-tests', '');
-          name = name.replace('-negative-tests', '');
-          if (!merged[name]) {
-            merged[name] = s;
-            merged[name].scenario = name;
-          } else {
-            const assertionKeys = Object.keys(merged[name].assertion_results);
-            assertionKeys.forEach((assert) => {
-              merged[name].assertion_results[assert] =
-                merged[name].assertion_results[assert] &&
-                s.assertion_results[assert];
-            });
+        <p class="advisement">
+          For the latest version of this file, please see
+          <a href="https://github.com/w3c/did-test-suite/broken-path-to-file">
+            latest did spec suite configuration
+          </a>
+        </p>
+        <pre
+          id="did-spec-suite-configuration"
+          class="example"
+          title="The current did-spec configuration file"
+        >
+[
+  {
+    "name": "did-spec",
+    "didMethods": {
+      "did:example": {
+        "supportedContentTypes": ["application/did+json"],
+        "dids": ["did:example:123"],
+        "did:example:123": {
+          "application/did+json": {
+            "didDocument": {
+              "@context": ["https://www.w3.org/ns/did/v1"],
+              "id": "did:example:123",
+              "verificationMethod": [
+                {
+                  "id": "#key-0",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:example:123",
+                  "publicKeyJwk": {
+                    "kty": "OKP",
+                    "crv": "Ed25519",
+                    "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE"
+                  }
+                },
+                {
+                  "id": "#key-1",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:example:123",
+                  "publicKeyJwk": {
+                    "kty": "OKP",
+                    "crv": "X25519",
+                    "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
+                  }
+                }
+              ],
+              "authentication": ["#key-0"],
+              "assertionMethod": ["#key-0"],
+              "capabilityInvocation": ["#key-0"],
+              "capabilityDelegation": ["#key-0"],
+              "keyAgreement": ["#key-1"]
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+json"
+            },
+            "didResolutionMetaData": {}
           }
         }
-        return {
-          scenarios: [...simpleScenarios, ...Object.values(merged)],
+      },
+      "did:Cool": {
+        "supportedContentTypes": ["application/did+cool+json"],
+        "dids": ["did:Cool:123"],
+        "did:Cool:123": {
+          "application/did+cool+json": {
+            "didDocument": {
+              "id": "did:Cool:123",
+              "forbidden__proto__": { "vulnerable": "cool?" }
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+cool+json"
+            },
+            "didResolutionMetaData": {}
+          }
+        }
+      }
+    }
+  }
+]
+      </pre
+        >
+      </section>
+
+      <section>
+        <h2>Suite Output</h2>
+        <p>
+          Test results are produced by <a href="https://jestjs.io/">jest</a>.
+        </p>
+
+        <p>Both console and json output are provided.</p>
+
+        <pre class="example" title="Example test results">
+{
+  "suitesReportTerminal": "G1s5OTlEG1tLG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvdGVzdC1zdWl0ZS1hLxtbMjJtG1sxbXRlc3Qtc3VpdGUtYS5zcGVjLmpzG1syMm0KICB0ZXN0LXN1aXRlLWEKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUgKDEgbXMpG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybWEgc2hvdWxkIGJlIDEbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJtYiBzaG91bGQgYmUgMhtbMjJtCgobWzk5OUQbW0sbWzFtVGVzdCBTdWl0ZXM6IBtbMjJtG1sxbRtbMzJtMSBwYXNzZWQbWzM5bRtbMjJtLCAxIHRvdGFsChtbMW1UZXN0czogICAgICAgG1syMm0bWzFtG1szMm0zIHBhc3NlZBtbMzltG1syMm0sIDMgdG90YWwKG1sxbVNuYXBzaG90czogICAbWzIybTAgdG90YWwKG1sxbVRpbWU6G1syMm0gICAgICAgIDAuODk5IHMsIGVzdGltYXRlZCAxIHMKG1sybVJhbiBhbGwgdGVzdCBzdWl0ZXMbWzIybRtbMm0uG1syMm0KG1s5OTlEG1tLG1s5OTlEG1tLG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvdGVzdC1zdWl0ZS1iLxtbMjJtG1sxbXRlc3Qtc3VpdGUtYi5zcGVjLmpzG1syMm0KICB0ZXN0LXN1aXRlLWIKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJteCBzaG91bGQgYmUgMyAoMSBtcykbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJteSBzaG91bGQgYmUgNBtbMjJtCgobWzk5OUQbW0sbWzFtVGVzdCBTdWl0ZXM6IBtbMjJtG1sxbRtbMzJtMSBwYXNzZWQbWzM5bRtbMjJtLCAxIHRvdGFsChtbMW1UZXN0czogICAgICAgG1syMm0bWzFtG1szMm0zIHBhc3NlZBtbMzltG1syMm0sIDMgdG90YWwKG1sxbVNuYXBzaG90czogICAbWzIybTAgdG90YWwKG1sxbVRpbWU6G1syMm0gICAgICAgIDAuMTQzIHMsIGVzdGltYXRlZCAxIHMKG1sybVJhbiBhbGwgdGVzdCBzdWl0ZXMbWzIybRtbMm0uG1syMm0KG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvaXNzdWVyLWFwaS8bWzIybRtbMW1pc3N1ZXItYXBpLnNwZWMuanMbWzIybQogIGlzc3Vlci1hcGkKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJtZW5kcG9pbnQgbXVzdCBjb250YWluIC9pc3N1ZS9jcmVkZW50aWFscxtbMjJtCiAgICAbWzMybeKckxtbMzltIBtbMm12ZXJpZmljYXRpb25NZXRob2RzIG11c3QgYmUgZ3JlYXRlciB0aGFuIDEgKDEgbXMpG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybWNyZWRlbnRpYWxzIG11c3QgYmUgYXQgbGVhc3QgMRtbMjJtCiAgICAbWzMybeKckxtbMzltIBtbMm1jYW4gaXNzdWUgYWxsIGNyZWRlbnRpYWxzIGZyb20gYWxsIHZlcmlmaWNhdGlvbk1ldGhvZHMgKDY0NCBtcykbWzIybQoKG1s5OTlEG1tLG1sxbVRlc3QgU3VpdGVzOiAbWzIybRtbMW0bWzMybTEgcGFzc2VkG1szOW0bWzIybSwgMSB0b3RhbAobWzFtVGVzdHM6ICAgICAgIBtbMjJtG1sxbRtbMzJtNSBwYXNzZWQbWzM5bRtbMjJtLCA1IHRvdGFsChtbMW1TbmFwc2hvdHM6ICAgG1syMm0wIHRvdGFsChtbMW1UaW1lOhtbMjJtICAgICAgICAwLjk3OCBzLCBlc3RpbWF0ZWQgNCBzChtbMm1SYW4gYWxsIHRlc3Qgc3VpdGVzG1syMm0bWzJtLhtbMjJtCg==",
+  "suitesReportJson": [
+    {
+      "suite": "test-suite-a",
+      "testResults": [
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "a should be 1",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "b should be 2",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "suite": "test-suite-b",
+      "testResults": [
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "x should be 3",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "y should be 4",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}                   
+</pre
+        >
+        <p>
+          The member <code>suitesReportTerminal</code> contains encoded captures
+          from standard out and error, and can be safely ignored.
+        </p>
+      </section>
+    </section>
+
+    <section id="report-results">
+      <h2>Method Conformance</h2>
+    </section>
+
+    <section>
+      <h2>On Demand</h2>
+      <button
+        style="
+          float: right;
+          background-color: blueviolet;
+          border: none;
+          border-radius: 8px;
+          padding: 8px;
+          color: white;
+          font-size: medium;
+          cursor: pointer;
+        "
+        onclick="generateReport()"
+      >
+        Generate Report
+      </button>
+      <p>On demand conformance results from a remote server.</p>
+      <br />
+      <p class="advisement">
+        This feature is experimental and may be removed in the future.
+      </p>
+
+      <div id="report-suites-input"></div>
+      <p>Details related to your remote test run will be shown here:</p>
+      <div id="terminal"></div>
+
+      <section id="on-demand-report-results">
+        <h2>Method Conformance</h2>
+      </section>
+    </section>
+
+    <section id="conformance"></section>
+  </body>
+
+  <script>
+    const testSuiteManagerEndpoint =
+      window.location.hostname === 'localhost'
+        ? 'http://localhost:8080/test-suite-manager/generate-report'
+        : 'https://vc.transmute.world/test-suite-manager/generate-report';
+
+    function b64DecodeUnicode(str) {
+      // Going backwards: from bytestream, to percent-encoding, to original string.
+      return decodeURIComponent(
+        atob(str)
+          .split('')
+          .map(function (c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+          })
+          .join('')
+      );
+    }
+
+    const reportSuiteOutput = [
+      {
+        suite: 'did-spec',
+        testResults: [
+          {
+            ancestors: [
+              'did-spec',
+              'did:example',
+              'did-syntax',
+              'did:example:123',
+            ],
+            title: 'MUST be a valid URL.',
+            status: 'passed',
+          },
+          {
+            ancestors: [
+              'did-spec',
+              'did:example',
+              'did-syntax',
+              'did:example:123',
+            ],
+            title: 'The URI scheme MUST be "did:"',
+            status: 'passed',
+          },
+          {
+            ancestors: [
+              'did-spec',
+              'did:example',
+              'did-syntax',
+              'did:example:123',
+            ],
+            title: 'The DID method name MUST be an ASCII lowercase string.',
+            status: 'passed',
+          },
+          {
+            ancestors: [
+              'did-spec',
+              'did:example',
+              'did-syntax',
+              'did:example:123',
+            ],
+            title: 'The DID method name MUST NOT be empty.',
+            status: 'passed',
+          },
+          {
+            ancestors: [
+              'did-spec',
+              'did:example',
+              'resolution',
+              'did:example:123',
+              'application/did+json',
+            ],
+            title: 'did should match did-document id',
+            status: 'passed',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title:
+              'Numeric values representable as IEEE754 MUST be represented as a Number type.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title: 'Boolean values MUST be represented as a Boolean literal.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title: 'Sequence value MUST be represented as an Array type.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title:
+              'Unordered sets of values MUST be represented as an Array type.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title: 'Sets of properties MUST be represented as an Object type.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:example', 'did-json-production'],
+            title: 'Empty values MUST be represented as a null literal.',
+            status: 'todo',
+          },
+          {
+            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
+            title: 'MUST be a valid URL.',
+            status: 'passed',
+          },
+          {
+            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
+            title: 'The URI scheme MUST be "did:"',
+            status: 'passed',
+          },
+          {
+            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
+            title: 'The DID method name MUST be an ASCII lowercase string.',
+            status: 'failed',
+          },
+          {
+            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
+            title: 'The DID method name MUST NOT be empty.',
+            status: 'passed',
+          },
+          {
+            ancestors: [
+              'did-spec',
+              'did:Cool',
+              'resolution',
+              'did:Cool:123',
+              'application/did+cool+json',
+            ],
+            title: 'did should match did-document id',
+            status: 'passed',
+          },
+        ],
+      },
+    ];
+
+    const reportSuiteInput = [
+      {
+        name: 'did-spec',
+        didMethods: {
+          'did:range14': {
+            supportedContentTypes: ['application/did+json'],
+            dids: ['did:range14:123'],
+            'did:range14:123': {
+              'application/did+json': {
+                didDocument: {
+                  '@context': ['https://www.w3.org/ns/did/v1'],
+                  id: 'did:range14:123',
+                  verificationMethod: [
+                    {
+                      id: '#key-0',
+                      type: 'JsonWebKey2020',
+                      controller: 'did:range14:123',
+                      publicKeyJwk: {
+                        kty: 'OKP',
+                        crv: 'Ed25519',
+                        x: 'VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE',
+                      },
+                    },
+                    {
+                      id: '#key-1',
+                      type: 'JsonWebKey2020',
+                      controller: 'did:range14:123',
+                      publicKeyJwk: {
+                        kty: 'OKP',
+                        crv: 'X25519',
+                        x: '3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8',
+                      },
+                    },
+                  ],
+                  authentication: ['#key-0'],
+                  assertionMethod: ['#key-0'],
+                  capabilityInvocation: ['#key-0'],
+                  capabilityDelegation: ['#key-0'],
+                  keyAgreement: ['#key-1'],
+                },
+                didDocumentMetaData: {
+                  'content-type': 'application/did+json',
+                },
+                didResolutionMetaData: {},
+              },
+            },
+          },
+        },
+      },
+    ];
+
+    var editor = ace.edit('report-suites-input');
+    editor.setTheme('ace/theme/github');
+    editor.session.setMode('ace/mode/json');
+    editor.setValue(JSON.stringify(reportSuiteInput, null, 2));
+
+    var term = new Terminal({
+      convertEol: true,
+    });
+    term.open(document.getElementById('terminal'));
+
+    var generateReport = async () => {
+      const res = await fetch(testSuiteManagerEndpoint, {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/ld+json',
+        },
+        method: 'post',
+        body: editor.getValue(),
+      });
+
+      const responseBody = await res.json();
+
+      let encodedReport = responseBody.suitesReportTerminal;
+      console.log({
+        input: reportSuiteInput,
+        output: responseBody,
+      });
+
+      renderReportResults(
+        'on-demand-report-results',
+        responseBody.suitesReportJson
+      );
+
+      term.reset();
+      term.write(b64DecodeUnicode(encodedReport));
+    };
+
+    const resultToEmoji = (test) => {
+      return test === 'passed' ? `✅` : `❌`;
+    };
+
+    const renderReportResults = (target, results) => {
+      let flattenMethodResults = {};
+
+      results[0].testResults.forEach((tr) => {
+        let ancestorsWithoutMethod = tr.ancestors.filter((a) => {
+          return !a.includes(tr.ancestors[1]);
+        });
+
+        let testAncestorsWithoutMethod = ancestorsWithoutMethod.join(' > ');
+        let testKey = `${testAncestorsWithoutMethod} > ${tr.title}`;
+        let didMethodTestResult = {
+          status: tr.status,
+          method: tr.ancestors[1],
         };
+
+        if (!flattenMethodResults[testKey]) {
+          flattenMethodResults[testKey] = {
+            ancestorsWithoutMethod: ancestorsWithoutMethod.splice(1),
+            title: tr.title,
+            didMethods: [didMethodTestResult],
+          };
+        } else {
+          flattenMethodResults[testKey].didMethods.push(didMethodTestResult);
+        }
+      });
+
+      const resultsSorted = Object.values(flattenMethodResults).sort((a, b) => {
+        return a.ancestorsWithoutMethod.join(' > ') >
+          b.ancestorsWithoutMethod.join(' > ')
+          ? 1
+          : -1;
+      });
+
+      // this makes thing hierarchical again
+      let resultsBySection = {};
+      let root = resultsBySection;
+      resultsSorted.forEach((tr) => {
+        root = resultsBySection;
+        if (tr.ancestorsWithoutMethod.length > 1) {
+          for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
+            let sectionName = tr.ancestorsWithoutMethod[i];
+            if (!root[sectionName]) {
+              root[sectionName] = {};
+            }
+            if (i === tr.ancestorsWithoutMethod.length - 1) {
+              root[sectionName] = {
+                ...root[sectionName],
+                isLeaf: true,
+                [tr.title]: tr.didMethods,
+              };
+            }
+            root = root[sectionName];
+          }
+        } else {
+          root[tr.ancestorsWithoutMethod[0]] = {
+            ...root[tr.ancestorsWithoutMethod[0]],
+            isLeaf: true,
+            [tr.title]: tr.didMethods,
+          };
+        }
+      });
+
+      const recursiveRenderSection = (section, level) => {
+        let result = '';
+        if (section && !section.isLeaf && Object.keys(section).length) {
+          result = `
+
+        ${Object.keys(section)
+          .map((key) => {
+            const value = section[key];
+            const subSection = recursiveRenderSection(value, level + 1);
+            return `
+<section>
+<h${level}>${key}</h${level}>
+${subSection}
+</section>
+        `;
+          })
+          .join('\n')}
+
+                  `;
+        } else {
+          result = Object.keys(section)
+            .map((statement) => {
+              if (statement === 'isLeaf') {
+                return '';
+              }
+
+              const count = section[statement]
+                .map((test) => {
+                  return {
+                    status: test.status === 'passed' ? 'passed' : 'failed',
+                  };
+                })
+                .reduce((tally, test) => {
+                  if (!tally[test.status]) {
+                    tally[test.status] = 1;
+                  } else {
+                    tally[test.status] = tally[test.status] + 1;
+                  }
+                  return tally;
+                }, {});
+
+              const resultTable = `
+<table class="simple" >
+<tbody>
+<tr>
+<th> </th>
+<th> ${count.failed ? resultToEmoji('failed') + ` (${count.failed})` : ''} 
+&nbsp;
+${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''} 
+</th>
+</tr>
+    ${section[statement]
+      .map((tr) => {
+        return `
+<tr>
+<td>${resultToEmoji(tr.status)}</td>
+<td style="width: 100%;">${tr.method}</td>
+</tr>
+`;
+      })
+      .join('\n')}
+</table>
+`;
+
+              return `
+<div>
+<p>${statement}</p>
+${resultTable}
+</div>
+`;
+            })
+            .join('\n');
+        }
+
+        return result;
       };
 
-      const testResultsRequest = JSON.parse(
-        document.getElementById('all-scenarios-request-json').innerHTML
-      );
+      let level = 3;
+      const testResultReport = recursiveRenderSection(resultsBySection, level);
+      document.getElementById(target).innerHTML =
+        document.getElementById(target).innerHTML + testResultReport;
+    };
 
-      const testResultsResponse = JSON.parse(
-        document.getElementById('all-scenarios-response-json').innerHTML
-      );
-
-      renderJson('all-scenarios-request', testResultsRequest);
-      renderJson('all-scenarios-response', testResultsResponse);
-
-      const mergedResults = mergePositiveAndNegativeTests(testResultsResponse);
-      renderPrettyTestResults(mergedResults);
-    </script>
-
-    <section id="conformance">
-      <p>
-        See
-        <a href="https://www.w3.org/TR/did-core/#conformance">DID Core Conformance.</a>
-      </p>
-
-      <p>
-        A conforming test suite must implement support for section
-        <a href="#all-scenarios-report"></a>.
-      </p>
-    </section>
-  
-
-</body></html>
+    renderReportResults('report-results', reportSuiteOutput);
+  </script>
+</html>
