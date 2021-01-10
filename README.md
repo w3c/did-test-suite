@@ -29,17 +29,6 @@ contributions.
 
 W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 
-## Usage
-
-You may need to [install node.js](https://nodejs.org/en/).
-
-```
-git clone git@github.com:w3c/did-test-suite.git
-npm i
-```
-
-You may also need to [install docker](https://docs.docker.com/get-docker/).
-
 ## Getting Started
 
 See the [Test Server]('./packages/did-core-test-server).
