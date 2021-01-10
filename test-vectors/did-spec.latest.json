@@ -1,0 +1,257 @@
+[
+  {
+    "suite": "did-spec",
+    "testResults": [
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-syntax",
+          "did:example:123"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-syntax",
+          "did:example:123"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-syntax",
+          "did:example:123"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-syntax",
+          "did:example:123"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "hl"
+        ],
+        "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "service"
+        ],
+        "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "relative-ref"
+        ],
+        "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "relative-ref"
+        ],
+        "title": "MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "version-id"
+        ],
+        "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-parameters",
+          "version-time"
+        ],
+        "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "canonicalId"
+        ],
+        "title": "MUST be of the same DID Method as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "canonicalId"
+        ],
+        "title": "MUST be recognized as the primary ID reference",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "canonicalId"
+        ],
+        "title": "If the resolved ID differs from canonicalId, it must be recognized as an equivalent reference",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "equivalentId"
+        ],
+        "title": "MUST be of the same DID Method as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "equivalentId"
+        ],
+        "title": "Its values must be recognized as equivalent ID references.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+json",
+          "equivalentId"
+        ],
+        "title": "Resolved ID must be recognized as the primary reference, absent a specified canonicalId",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "resolution",
+          "did:example:123",
+          "application/did+ld+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "status": "todo"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "status": "todo"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Sequence value MUST be represented as an Array type.",
+        "status": "todo"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "status": "todo"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Sets of properties MUST be represented as an Object type.",
+        "status": "todo"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "did-json-production"
+        ],
+        "title": "Empty values MUST be represented as a null literal.",
+        "status": "todo"
+      }
+    ]
+  }
+]

@@ -16,7 +16,7 @@
       #report-suites-input {
         position: relative;
         width: 100%;
-        height: 700px;
+        height: 500px;
       }
     </style>
     <script
@@ -173,7 +173,9 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
 
         <p class="advisement">
           For the latest version of this file, please see
-          <a href="https://github.com/w3c/did-test-suite/broken-path-to-file">
+          <a
+            href="https://github.com/w3c/did-test-suite/blob/master/packages/did-core-test-server/suites/did-spec/default.json"
+          >
             latest did spec suite configuration
           </a>
         </p>
@@ -317,6 +319,277 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
 
     <section id="report-results">
       <h2>Method Conformance</h2>
+      <p>
+        See latest report json.
+        <a
+          href="https://github.com/w3c/did-test-suite/tree/master/test-vectors/did-spec.latest.json"
+        >
+          here</a
+        >
+      </p>
+      <pre
+        id="did-spec-suite-report"
+        class="example"
+        title="did-spec latest report results"
+      >
+      [
+      {
+        "suite": "did-spec",
+        "testResults": [
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-syntax",
+              "did:example:123"
+            ],
+            "title": "MUST be a valid URL.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-syntax",
+              "did:example:123"
+            ],
+            "title": "The URI scheme MUST be \"did:\"",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-syntax",
+              "did:example:123"
+            ],
+            "title": "The DID method name MUST be an ASCII lowercase string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-syntax",
+              "did:example:123"
+            ],
+            "title": "The DID method name MUST NOT be empty.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "hl"
+            ],
+            "title": "The associated value MUST be an ASCII string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "service"
+            ],
+            "title": "The associated value MUST be an ASCII string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "relative-ref"
+            ],
+            "title": "The associated value MUST be an ASCII string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "relative-ref"
+            ],
+            "title": "MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "version-id"
+            ],
+            "title": "The associated value MUST be an ASCII string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-parameters",
+              "version-time"
+            ],
+            "title": "The associated value MUST be an ASCII string.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "id"
+            ],
+            "title": "MUST be the same as the resolved ID",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "canonicalId"
+            ],
+            "title": "MUST be of the same DID Method as the resolved ID",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "canonicalId"
+            ],
+            "title": "MUST be recognized as the primary ID reference",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "canonicalId"
+            ],
+            "title": "If the resolved ID differs from canonicalId, it must be recognized as an equivalent reference",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "equivalentId"
+            ],
+            "title": "MUST be of the same DID Method as the resolved ID",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "equivalentId"
+            ],
+            "title": "Its values must be recognized as equivalent ID references.",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+json",
+              "equivalentId"
+            ],
+            "title": "Resolved ID must be recognized as the primary reference, absent a specified canonicalId",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "resolution",
+              "did:example:123",
+              "application/did+ld+json",
+              "id"
+            ],
+            "title": "MUST be the same as the resolved ID",
+            "status": "passed"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+            "status": "todo"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Boolean values MUST be represented as a Boolean literal.",
+            "status": "todo"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Sequence value MUST be represented as an Array type.",
+            "status": "todo"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Unordered sets of values MUST be represented as an Array type.",
+            "status": "todo"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Sets of properties MUST be represented as an Object type.",
+            "status": "todo"
+          },
+          {
+            "ancestors": [
+              "did-spec",
+              "did:example",
+              "did-json-production"
+            ],
+            "title": "Empty values MUST be represented as a null literal.",
+            "status": "todo"
+          }
+        ]
+      }
+    ]
+      </pre>
     </section>
 
     <section>
@@ -372,183 +645,38 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
       );
     }
 
-    const reportSuiteOutput = [
-      {
-        suite: 'did-spec',
-        testResults: [
-          {
-            ancestors: [
-              'did-spec',
-              'did:example',
-              'did-syntax',
-              'did:example:123',
-            ],
-            title: 'MUST be a valid URL.',
-            status: 'passed',
-          },
-          {
-            ancestors: [
-              'did-spec',
-              'did:example',
-              'did-syntax',
-              'did:example:123',
-            ],
-            title: 'The URI scheme MUST be "did:"',
-            status: 'passed',
-          },
-          {
-            ancestors: [
-              'did-spec',
-              'did:example',
-              'did-syntax',
-              'did:example:123',
-            ],
-            title: 'The DID method name MUST be an ASCII lowercase string.',
-            status: 'passed',
-          },
-          {
-            ancestors: [
-              'did-spec',
-              'did:example',
-              'did-syntax',
-              'did:example:123',
-            ],
-            title: 'The DID method name MUST NOT be empty.',
-            status: 'passed',
-          },
-          {
-            ancestors: [
-              'did-spec',
-              'did:example',
-              'resolution',
-              'did:example:123',
-              'application/did+json',
-            ],
-            title: 'did should match did-document id',
-            status: 'passed',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title:
-              'Numeric values representable as IEEE754 MUST be represented as a Number type.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title: 'Boolean values MUST be represented as a Boolean literal.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title: 'Sequence value MUST be represented as an Array type.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title:
-              'Unordered sets of values MUST be represented as an Array type.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title: 'Sets of properties MUST be represented as an Object type.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:example', 'did-json-production'],
-            title: 'Empty values MUST be represented as a null literal.',
-            status: 'todo',
-          },
-          {
-            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
-            title: 'MUST be a valid URL.',
-            status: 'passed',
-          },
-          {
-            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
-            title: 'The URI scheme MUST be "did:"',
-            status: 'passed',
-          },
-          {
-            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
-            title: 'The DID method name MUST be an ASCII lowercase string.',
-            status: 'failed',
-          },
-          {
-            ancestors: ['did-spec', 'did:Cool', 'did-syntax', 'did:Cool:123'],
-            title: 'The DID method name MUST NOT be empty.',
-            status: 'passed',
-          },
-          {
-            ancestors: [
-              'did-spec',
-              'did:Cool',
-              'resolution',
-              'did:Cool:123',
-              'application/did+cool+json',
-            ],
-            title: 'did should match did-document id',
-            status: 'passed',
-          },
-        ],
-      },
-    ];
-
-    const reportSuiteInput = [
-      {
-        name: 'did-spec',
-        didMethods: {
-          'did:range14': {
-            supportedContentTypes: ['application/did+json'],
-            dids: ['did:range14:123'],
-            'did:range14:123': {
-              'application/did+json': {
-                didDocument: {
-                  '@context': ['https://www.w3.org/ns/did/v1'],
-                  id: 'did:range14:123',
-                  verificationMethod: [
-                    {
-                      id: '#key-0',
-                      type: 'JsonWebKey2020',
-                      controller: 'did:range14:123',
-                      publicKeyJwk: {
-                        kty: 'OKP',
-                        crv: 'Ed25519',
-                        x: 'VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE',
-                      },
-                    },
-                    {
-                      id: '#key-1',
-                      type: 'JsonWebKey2020',
-                      controller: 'did:range14:123',
-                      publicKeyJwk: {
-                        kty: 'OKP',
-                        crv: 'X25519',
-                        x: '3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8',
-                      },
-                    },
-                  ],
-                  authentication: ['#key-0'],
-                  assertionMethod: ['#key-0'],
-                  capabilityInvocation: ['#key-0'],
-                  capabilityDelegation: ['#key-0'],
-                  keyAgreement: ['#key-1'],
-                },
-                didDocumentMetaData: {
-                  'content-type': 'application/did+json',
-                },
-                didResolutionMetaData: {},
-              },
-            },
-          },
-        },
-      },
-    ];
-
     var editor = ace.edit('report-suites-input');
     editor.setTheme('ace/theme/github');
     editor.session.setMode('ace/mode/json');
-    editor.setValue(JSON.stringify(reportSuiteInput, null, 2));
+    editor.setValue(
+      JSON.stringify(
+        [
+          {
+            name: 'did-spec',
+            didMethods: {
+              'did:range14': {
+                supportedContentTypes: ['application/did+json'],
+                dids: ['did:range14:123'],
+                'did:range14:123': {
+                  'application/did+json': {
+                    didDocument: {
+                      '@context': ['https://www.w3.org/ns/did/v1'],
+                      id: 'did:range14:123',
+                    },
+                    didDocumentMetaData: {
+                      'content-type': 'application/did+json',
+                    },
+                    didResolutionMetaData: {},
+                  },
+                },
+              },
+            },
+          },
+        ],
+        null,
+        2
+      )
+    );
 
     var term = new Terminal({
       convertEol: true,
@@ -625,20 +753,26 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
       resultsSorted.forEach((tr) => {
         root = resultsBySection;
         if (tr.ancestorsWithoutMethod.length > 1) {
+          let tail;
           for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
             let sectionName = tr.ancestorsWithoutMethod[i];
             if (!root[sectionName]) {
               root[sectionName] = {};
-            }
-            if (i === tr.ancestorsWithoutMethod.length - 1) {
+            } else {
               root[sectionName] = {
                 ...root[sectionName],
-                isLeaf: true,
-                [tr.title]: tr.didMethods,
               };
             }
+            tail = root;
             root = root[sectionName];
           }
+          Object.keys(tail).forEach((tailKey) => {
+            tail[tailKey] = {
+              ...tail[tailKey],
+              [tr.title]: tr.didMethods,
+              isLeaf: true,
+            };
+          });
         } else {
           root[tr.ancestorsWithoutMethod[0]] = {
             ...root[tr.ancestorsWithoutMethod[0]],
@@ -673,7 +807,6 @@ ${subSection}
               if (statement === 'isLeaf') {
                 return '';
               }
-
               const count = section[statement]
                 .map((test) => {
                   return {
@@ -731,6 +864,10 @@ ${resultTable}
         document.getElementById(target).innerHTML + testResultReport;
     };
 
-    renderReportResults('report-results', reportSuiteOutput);
+    const lastDidSpecReport = JSON.parse(
+      document.getElementById('did-spec-suite-report').innerHTML
+    );
+
+    renderReportResults('report-results', lastDidSpecReport);
   </script>
 </html>

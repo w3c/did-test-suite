@@ -8,7 +8,7 @@
     "start": "npm run serve",
     "test": "jest",
     "serve": "node run.js",
-    "generate-report": "node generate-test-report.js",
+    "generate-report": "node generate-latest-respec-data.js",
     "docker:build": "docker build --tag or13/did-core-test-server:1.0 .",
     "docker:run": "docker run --publish 8080:8080 or13/did-core-test-server:1.0",
     "docker:publish": "docker push or13/did-core-test-server:1.0"

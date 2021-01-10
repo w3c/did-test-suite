@@ -4,17 +4,19 @@ const didResolutionTests = (suiteConfig) => {
       describe(didExample, () => {
         suiteConfig.supportedContentTypes.forEach((contentType) => {
           describe(contentType, () => {
-            it('did should match did-document id', async () => {
-              expect(suiteConfig[didExample][contentType].didDocument.id).toBe(
-                didExample
-              );
+            describe('id', () => {
+              it('MUST be the same as the resolved ID', async () => {
+                expect(
+                  suiteConfig[didExample][contentType].didDocument.id
+                ).toBe(didExample);
+              });
             });
 
             if (
               suiteConfig[didExample][contentType].didDocument['canonicalId']
             ) {
               describe('canonicalId', () => {
-                it('canonicalId MUST be of the same DID Method as the resolved ID', async () => {
+                it('MUST be of the same DID Method as the resolved ID', async () => {
                   const canonicalIdMethod = suiteConfig[didExample][
                     contentType
                   ].didDocument['canonicalId'].split(':')[1];
@@ -22,7 +24,7 @@ const didResolutionTests = (suiteConfig) => {
                   expect(canonicalIdMethod).toBe(resolvedIdMethod);
                 });
 
-                it('canonicalId MUST be recognized as the primary ID reference', async () => {
+                it('MUST be recognized as the primary ID reference', async () => {
                   return false;
                 });
 
@@ -48,7 +50,7 @@ const didResolutionTests = (suiteConfig) => {
               suiteConfig[didExample][contentType].didDocument['equivalentId']
             ) {
               describe('equivalentId', () => {
-                it('equivalentId MUST be of the same DID Method as the resolved ID', async () => {
+                it('MUST be of the same DID Method as the resolved ID', async () => {
                   const { didDocument } = suiteConfig[didExample][contentType];
                   const equivalentIdMethod = didDocument.equivalentId.split(
                     ':'
