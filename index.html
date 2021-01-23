@@ -108,16 +108,16 @@ if (!suiteConfig) {
   suiteConfig = require("./defaultSuiteConfig.json");
 }
 
-describe("test-suite-a", () => {
-  it("suite config should have correct name", async () => {
+describe("test-suite-a", () =&gt; {
+  it("suite config should have correct name", async () =&gt; {
     expect(suiteConfig.name).toBe("test-suite-a");
   });
 
-  it("a should be 1", async () => {
+  it("a should be 1", async () =&gt; {
     expect(suiteConfig.a).toBe(1);
   });
 
-  it("b should be 2", async () => {
+  it("b should be 2", async () =&gt; {
     expect(suiteConfig.b).toBe(2);
   });
 });
@@ -148,7 +148,7 @@ describe("test-suite-a", () => {
         >
 
         <pre class="example" title="Example test of statement">
-it('The DID method name MUST be an ASCII lowercase string.', () => {
+it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
   const method = did.split(':')[1];
   expect(utils.isAsciiString(method)).toBe(true);
   expect(method.toLowerCase()).toBe(method);
@@ -327,268 +327,609 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
           here</a
         >
       </p>
+      <p id="did-spec-report-date" class="note">
+        These test results were last generated
+        <span> Saturday, January 23, 2021 4:42 PM </span>
+      </p>
+
       <pre
-        id="did-spec-suite-report"
+        id="did-spec-suite-input"
         class="example"
-        title="did-spec latest report results"
+        title="did-spec latest input report"
       >
-      [
-      {
-        "suite": "did-spec",
-        "testResults": [
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-syntax",
-              "did:example:123"
-            ],
-            "title": "MUST be a valid URL.",
-            "status": "passed"
+[
+  {
+    "name": "did-spec",
+    "didMethods": {
+      "did:key": {
+        "supportedContentTypes": [
+          "application/did+json",
+          "application/did+ld+json"
+        ],
+        "dids": [
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+        ],
+        "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB": {
+          "application/did+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+                }
+              ],
+              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+              "verificationMethod": [
+                {
+                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyJwk": {
+                    "crv": "Ed25519",
+                    "x": "LKacPea7et-QMhcyS02ZjsTHEVadsCj_XNnfFJYbwHo",
+                    "kty": "OKP"
+                  }
+                },
+                {
+                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
+                  "type": "JsonWebKey2020",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyJwk": {
+                    "kty": "OKP",
+                    "crv": "X25519",
+                    "x": "USe317eZOgxr3-neAHaJ8fZ056kb7miDxZvb5ymFKVM"
+                  }
+                }
+              ],
+              "authentication": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "assertionMethod": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityInvocation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityDelegation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "keyAgreement": [
+                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
+              ]
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+json"
+            },
+            "didResolutionMetaData": {}
           },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-syntax",
-              "did:example:123"
-            ],
-            "title": "The URI scheme MUST be \"did:\"",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-syntax",
-              "did:example:123"
-            ],
-            "title": "The DID method name MUST be an ASCII lowercase string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-syntax",
-              "did:example:123"
-            ],
-            "title": "The DID method name MUST NOT be empty.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "hl"
-            ],
-            "title": "The associated value MUST be an ASCII string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "service"
-            ],
-            "title": "The associated value MUST be an ASCII string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "relative-ref"
-            ],
-            "title": "The associated value MUST be an ASCII string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "relative-ref"
-            ],
-            "title": "MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "version-id"
-            ],
-            "title": "The associated value MUST be an ASCII string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-parameters",
-              "version-time"
-            ],
-            "title": "The associated value MUST be an ASCII string.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "id"
-            ],
-            "title": "MUST be the same as the resolved ID",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "canonicalId"
-            ],
-            "title": "MUST be of the same DID Method as the resolved ID",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "canonicalId"
-            ],
-            "title": "MUST be recognized as the primary ID reference",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "canonicalId"
-            ],
-            "title": "If the resolved ID differs from canonicalId, it must be recognized as an equivalent reference",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "equivalentId"
-            ],
-            "title": "MUST be of the same DID Method as the resolved ID",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "equivalentId"
-            ],
-            "title": "Its values must be recognized as equivalent ID references.",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+json",
-              "equivalentId"
-            ],
-            "title": "Resolved ID must be recognized as the primary reference, absent a specified canonicalId",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "resolution",
-              "did:example:123",
-              "application/did+ld+json",
-              "id"
-            ],
-            "title": "MUST be the same as the resolved ID",
-            "status": "passed"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
-            "status": "todo"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Boolean values MUST be represented as a Boolean literal.",
-            "status": "todo"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Sequence value MUST be represented as an Array type.",
-            "status": "todo"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Unordered sets of values MUST be represented as an Array type.",
-            "status": "todo"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Sets of properties MUST be represented as an Object type.",
-            "status": "todo"
-          },
-          {
-            "ancestors": [
-              "did-spec",
-              "did:example",
-              "did-json-production"
-            ],
-            "title": "Empty values MUST be represented as a null literal.",
-            "status": "todo"
+          "application/did+ld+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+                }
+              ],
+              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+              "verificationMethod": [
+                {
+                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "type": "Ed25519VerificationKey2018",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyBase58": "41JHobRgR1SiXc8SEKbizupfXvSz7dQTRqdByQWRUU5o"
+                },
+                {
+                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
+                  "type": "X25519KeyAgreementKey2019",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyBase58": "6To9j5SAVt4U4Nue2hnNnQBvijGpqsUKhEuMfPhoZoRC"
+                }
+              ],
+              "authentication": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "assertionMethod": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityInvocation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityDelegation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "keyAgreement": [
+                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
+              ]
+            },
+            "didDocumentMetaData": {
+              "content-type": "application/did+ld+json"
+            },
+            "didResolutionMetaData": {}
           }
-        ]
+        }
+      },
+      "did:web": {
+        "supportedContentTypes": [
+          "application/did+json",
+          "application/did+ld+json"
+        ],
+        "dids": [
+          "did:web:did.actor:mike"
+        ],
+        "did:web:did.actor:mike": {
+          "application/did+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:web:did.actor:mike",
+                  "rating": "https://schema.org/Rating",
+                  "publicAccess": "https://schema.org/publicAccess"
+                }
+              ],
+              "id": "did:web:did.actor:mike",
+              "rating": 4.5,
+              "publicAccess": true,
+              "additionalType": null,
+              "verificationMethod": [
+                {
+                  "id": "#g1",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G1",
+                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                  }
+                },
+                {
+                  "id": "#g2",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G2",
+                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                  }
+                }
+              ],
+              "authentication": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ],
+              "assertionMethod": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ]
+            }
+          },
+          "application/did+ld+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:web:did.actor:mike",
+                  "rating": "https://schema.org/Rating",
+                  "publicAccess": "https://schema.org/publicAccess"
+                }
+              ],
+              "id": "did:web:did.actor:mike",
+              "rating": 4.5,
+              "publicAccess": true,
+              "additionalType": null,
+              "verificationMethod": [
+                {
+                  "id": "#g1",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G1",
+                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                  }
+                },
+                {
+                  "id": "#g2",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G2",
+                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                  }
+                }
+              ],
+              "authentication": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ],
+              "assertionMethod": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+]
+      </pre>
+
+      <pre
+        id="did-spec-suite-output"
+        class="example"
+        title="did-spec latest output report"
+      >
+[
+  {
+    "suite": "did-spec",
+    "testResults": [
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-syntax",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-syntax",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-syntax",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-syntax",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "resolution",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+          "application/did+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "resolution",
+          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+          "application/did+ld+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Sequence value MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Sets of properties MUST be represented as an Object type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-json-production"
+        ],
+        "title": "Empty values MUST be represented as a null literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "The value of @context MUST be exactly one of these values.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Sequence value MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Sets of properties MUST be represented as an Object type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key",
+          "did-ld-json-production"
+        ],
+        "title": "Empty values MUST be represented as a null literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "resolution",
+          "did:web:did.actor:mike",
+          "application/did+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "resolution",
+          "did:web:did.actor:mike",
+          "application/did+ld+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Sequence value MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Sets of properties MUST be represented as an Object type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-json-production"
+        ],
+        "title": "Empty values MUST be represented as a null literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "The value of @context MUST be exactly one of these values.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Sequence value MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Sets of properties MUST be represented as an Object type.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:web",
+          "did-ld-json-production"
+        ],
+        "title": "Empty values MUST be represented as a null literal.",
+        "status": "passed"
       }
     ]
+  }
+]
       </pre>
     </section>
 
@@ -625,168 +966,169 @@ it('The DID method name MUST be an ASCII lowercase string.', () => {
     </section>
 
     <section id="conformance"></section>
-  </body>
 
-  <script>
-    const testSuiteManagerEndpoint =
-      window.location.hostname === 'localhost'
-        ? 'http://localhost:8080/test-suite-manager/generate-report'
-        : 'https://vc.transmute.world/test-suite-manager/generate-report';
+    <script>
+      const testSuiteManagerEndpoint =
+        window.location.hostname === 'localhost'
+          ? 'http://localhost:8080/test-suite-manager/generate-report'
+          : 'https://vc.transmute.world/test-suite-manager/generate-report';
 
-    function b64DecodeUnicode(str) {
-      // Going backwards: from bytestream, to percent-encoding, to original string.
-      return decodeURIComponent(
-        atob(str)
-          .split('')
-          .map(function (c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-          })
-          .join('')
-      );
-    }
+      function b64DecodeUnicode(str) {
+        // Going backwards: from bytestream, to percent-encoding, to original string.
+        return decodeURIComponent(
+          atob(str)
+            .split('')
+            .map(function (c) {
+              return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join('')
+        );
+      }
 
-    var editor = ace.edit('report-suites-input');
-    editor.setTheme('ace/theme/github');
-    editor.session.setMode('ace/mode/json');
-    editor.setValue(
-      JSON.stringify(
-        [
-          {
-            name: 'did-spec',
-            didMethods: {
-              'did:range14': {
-                supportedContentTypes: ['application/did+json'],
-                dids: ['did:range14:123'],
-                'did:range14:123': {
-                  'application/did+json': {
-                    didDocument: {
-                      '@context': ['https://www.w3.org/ns/did/v1'],
-                      id: 'did:range14:123',
+      var editor = ace.edit('report-suites-input');
+      editor.setTheme('ace/theme/github');
+      editor.session.setMode('ace/mode/json');
+      editor.setValue(
+        JSON.stringify(
+          [
+            {
+              name: 'did-spec',
+              didMethods: {
+                'did:range14': {
+                  supportedContentTypes: ['application/did+json'],
+                  dids: ['did:range14:123'],
+                  'did:range14:123': {
+                    'application/did+json': {
+                      didDocument: {
+                        '@context': ['https://www.w3.org/ns/did/v1'],
+                        id: 'did:range14:123',
+                      },
+                      didDocumentMetaData: {
+                        'content-type': 'application/did+json',
+                      },
+                      didResolutionMetaData: {},
                     },
-                    didDocumentMetaData: {
-                      'content-type': 'application/did+json',
-                    },
-                    didResolutionMetaData: {},
                   },
                 },
               },
             },
-          },
-        ],
-        null,
-        2
-      )
-    );
+          ],
+          null,
+          2
+        )
+      );
 
-    var term = new Terminal({
-      convertEol: true,
-    });
-    term.open(document.getElementById('terminal'));
+      var term = new Terminal({
+        convertEol: true,
+      });
+      term.open(document.getElementById('terminal'));
 
-    var generateReport = async () => {
-      try {
-        const res = await fetch(testSuiteManagerEndpoint, {
-          headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/ld+json',
-          },
-          method: 'post',
-          body: editor.getValue(),
+      var generateReport = async () => {
+        try {
+          const res = await fetch(testSuiteManagerEndpoint, {
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/ld+json',
+            },
+            method: 'post',
+            body: editor.getValue(),
+          });
+
+          const responseBody = await res.json();
+
+          let encodedReport = responseBody.suitesReportTerminal;
+
+          renderReportResults(
+            'on-demand-report-results',
+            responseBody.suitesReportJson
+          );
+
+          term.reset();
+          term.write(b64DecodeUnicode(encodedReport));
+          alert('succeeded');
+        } catch (e) {
+          alert('failed');
+        }
+      };
+
+      const resultToEmoji = (test) => {
+        return test === 'passed' ? `✅` : `❌`;
+      };
+
+      const renderReportResults = (target, results) => {
+        let flattenMethodResults = {};
+
+        results[0].testResults.forEach((tr) => {
+          let ancestorsWithoutMethod = tr.ancestors.filter((a) => {
+            return !a.includes(tr.ancestors[1]);
+          });
+
+          let testAncestorsWithoutMethod = ancestorsWithoutMethod.join(' > ');
+          let testKey = `${testAncestorsWithoutMethod} > ${tr.title}`;
+          let didMethodTestResult = {
+            status: tr.status,
+            method: tr.ancestors[1],
+          };
+
+          if (!flattenMethodResults[testKey]) {
+            flattenMethodResults[testKey] = {
+              ancestorsWithoutMethod: ancestorsWithoutMethod.splice(1),
+              title: tr.title,
+              didMethods: [didMethodTestResult],
+            };
+          } else {
+            flattenMethodResults[testKey].didMethods.push(didMethodTestResult);
+          }
         });
 
-        const responseBody = await res.json();
-
-        let encodedReport = responseBody.suitesReportTerminal;
-
-        renderReportResults(
-          'on-demand-report-results',
-          responseBody.suitesReportJson
+        const resultsSorted = Object.values(flattenMethodResults).sort(
+          (a, b) => {
+            return a.ancestorsWithoutMethod.join(' > ') >
+              b.ancestorsWithoutMethod.join(' > ')
+              ? 1
+              : -1;
+          }
         );
 
-        term.reset();
-        term.write(b64DecodeUnicode(encodedReport));
-        alert('succeeded');
-      } catch (e) {
-        alert('failed');
-      }
-    };
-
-    const resultToEmoji = (test) => {
-      return test === 'passed' ? `✅` : `❌`;
-    };
-
-    const renderReportResults = (target, results) => {
-      let flattenMethodResults = {};
-
-      results[0].testResults.forEach((tr) => {
-        let ancestorsWithoutMethod = tr.ancestors.filter((a) => {
-          return !a.includes(tr.ancestors[1]);
+        // this makes thing hierarchical again
+        let resultsBySection = {};
+        let root = resultsBySection;
+        resultsSorted.forEach((tr) => {
+          root = resultsBySection;
+          if (tr.ancestorsWithoutMethod.length > 1) {
+            let tail;
+            for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
+              let sectionName = tr.ancestorsWithoutMethod[i];
+              if (!root[sectionName]) {
+                root[sectionName] = {};
+              } else {
+                root[sectionName] = {
+                  ...root[sectionName],
+                };
+              }
+              tail = root;
+              root = root[sectionName];
+            }
+            Object.keys(tail).forEach((tailKey) => {
+              tail[tailKey] = {
+                ...tail[tailKey],
+                [tr.title]: tr.didMethods,
+                isLeaf: true,
+              };
+            });
+          } else {
+            root[tr.ancestorsWithoutMethod[0]] = {
+              ...root[tr.ancestorsWithoutMethod[0]],
+              isLeaf: true,
+              [tr.title]: tr.didMethods,
+            };
+          }
         });
 
-        let testAncestorsWithoutMethod = ancestorsWithoutMethod.join(' > ');
-        let testKey = `${testAncestorsWithoutMethod} > ${tr.title}`;
-        let didMethodTestResult = {
-          status: tr.status,
-          method: tr.ancestors[1],
-        };
-
-        if (!flattenMethodResults[testKey]) {
-          flattenMethodResults[testKey] = {
-            ancestorsWithoutMethod: ancestorsWithoutMethod.splice(1),
-            title: tr.title,
-            didMethods: [didMethodTestResult],
-          };
-        } else {
-          flattenMethodResults[testKey].didMethods.push(didMethodTestResult);
-        }
-      });
-
-      const resultsSorted = Object.values(flattenMethodResults).sort((a, b) => {
-        return a.ancestorsWithoutMethod.join(' > ') >
-          b.ancestorsWithoutMethod.join(' > ')
-          ? 1
-          : -1;
-      });
-
-      // this makes thing hierarchical again
-      let resultsBySection = {};
-      let root = resultsBySection;
-      resultsSorted.forEach((tr) => {
-        root = resultsBySection;
-        if (tr.ancestorsWithoutMethod.length > 1) {
-          let tail;
-          for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
-            let sectionName = tr.ancestorsWithoutMethod[i];
-            if (!root[sectionName]) {
-              root[sectionName] = {};
-            } else {
-              root[sectionName] = {
-                ...root[sectionName],
-              };
-            }
-            tail = root;
-            root = root[sectionName];
-          }
-          Object.keys(tail).forEach((tailKey) => {
-            tail[tailKey] = {
-              ...tail[tailKey],
-              [tr.title]: tr.didMethods,
-              isLeaf: true,
-            };
-          });
-        } else {
-          root[tr.ancestorsWithoutMethod[0]] = {
-            ...root[tr.ancestorsWithoutMethod[0]],
-            isLeaf: true,
-            [tr.title]: tr.didMethods,
-          };
-        }
-      });
-
-      const recursiveRenderSection = (section, level) => {
-        let result = '';
-        if (section && !section.isLeaf && Object.keys(section).length) {
-          result = `
+        const recursiveRenderSection = (section, level) => {
+          let result = '';
+          if (section && !section.isLeaf && Object.keys(section).length) {
+            result = `
 
         ${Object.keys(section)
           .map((key) => {
@@ -802,28 +1144,28 @@ ${subSection}
           .join('\n')}
 
                   `;
-        } else {
-          result = Object.keys(section)
-            .map((statement) => {
-              if (statement === 'isLeaf') {
-                return '';
-              }
-              const count = section[statement]
-                .map((test) => {
-                  return {
-                    status: test.status === 'passed' ? 'passed' : 'failed',
-                  };
-                })
-                .reduce((tally, test) => {
-                  if (!tally[test.status]) {
-                    tally[test.status] = 1;
-                  } else {
-                    tally[test.status] = tally[test.status] + 1;
-                  }
-                  return tally;
-                }, {});
+          } else {
+            result = Object.keys(section)
+              .map((statement) => {
+                if (statement === 'isLeaf') {
+                  return '';
+                }
+                const count = section[statement]
+                  .map((test) => {
+                    return {
+                      status: test.status === 'passed' ? 'passed' : 'failed',
+                    };
+                  })
+                  .reduce((tally, test) => {
+                    if (!tally[test.status]) {
+                      tally[test.status] = 1;
+                    } else {
+                      tally[test.status] = tally[test.status] + 1;
+                    }
+                    return tally;
+                  }, {});
 
-              const resultTable = `
+                const resultTable = `
 <table class="simple" >
 <tbody>
 <tr>
@@ -846,29 +1188,33 @@ ${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''}
 </table>
 `;
 
-              return `
+                return `
 <div>
 <p>${statement}</p>
 ${resultTable}
 </div>
 `;
-            })
-            .join('\n');
-        }
+              })
+              .join('\n');
+          }
 
-        return result;
+          return result;
+        };
+
+        let level = 3;
+        const testResultReport = recursiveRenderSection(
+          resultsBySection,
+          level
+        );
+        document.getElementById(target).innerHTML =
+          document.getElementById(target).innerHTML + testResultReport;
       };
 
-      let level = 3;
-      const testResultReport = recursiveRenderSection(resultsBySection, level);
-      document.getElementById(target).innerHTML =
-        document.getElementById(target).innerHTML + testResultReport;
-    };
+      const lastDidSpecReport = JSON.parse(
+        document.getElementById('did-spec-suite-output').innerHTML
+      );
 
-    const lastDidSpecReport = JSON.parse(
-      document.getElementById('did-spec-suite-report').innerHTML
-    );
-
-    renderReportResults('report-results', lastDidSpecReport);
-  </script>
+      renderReportResults('report-results', lastDidSpecReport);
+    </script>
+  </body>
 </html>

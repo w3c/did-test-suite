@@ -1,9 +1,22 @@
-const didJsonProductionTests = (suiteConfig) => {
-  if (suiteConfig.supportedContentTypes.includes('application/did+json')) {
-    describe('did-json-production', () => {
+const didLdJsonProductionTests = (suiteConfig) => {
+  if (suiteConfig.supportedContentTypes.includes('application/did+ld+json')) {
+    describe('did-ld-json-production', () => {
+      it('The value of @context MUST be exactly one of these values.', () => {
+        const [did] = suiteConfig.dids;
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
+        if (typeof didDocument['@context'] === 'string') {
+          expect(didDocument['@context']).toBe('https://www.w3.org/ns/did/v1');
+        }
+        if (Array.isArray(didDocument['@context'])) {
+          expect(didDocument['@context'][0]).toBe(
+            'https://www.w3.org/ns/did/v1'
+          );
+        }
+      });
+
       it('Numeric values representable as IEEE754 MUST be represented as a Number type.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
         const knownNumericProperties = ['rating'];
         for (const [key, value] of Object.entries(didDocument)) {
           if (knownNumericProperties.includes(key)) {
@@ -14,7 +27,7 @@ const didJsonProductionTests = (suiteConfig) => {
 
       it('Boolean values MUST be represented as a Boolean literal.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
         const knownPublicProperties = ['publicAccess'];
         for (const [key, value] of Object.entries(didDocument)) {
           if (knownPublicProperties.includes(key)) {
@@ -24,7 +37,7 @@ const didJsonProductionTests = (suiteConfig) => {
       });
       it('Sequence value MUST be represented as an Array type.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
 
         if (didDocument.verificationMethod) {
           expect(Array.isArray(didDocument.verificationMethod)).toBe(true);
@@ -51,7 +64,7 @@ const didJsonProductionTests = (suiteConfig) => {
       });
       it('Unordered sets of values MUST be represented as an Array type.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
 
         if (didDocument.verificationMethod) {
           expect(Array.isArray(didDocument.verificationMethod)).toBe(true);
@@ -78,12 +91,12 @@ const didJsonProductionTests = (suiteConfig) => {
       });
       it('Sets of properties MUST be represented as an Object type.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
         expect(typeof didDocument).toBe('object');
       });
       it('Empty values MUST be represented as a null literal.', () => {
         const [did] = suiteConfig.dids;
-        const { didDocument } = suiteConfig[did]['application/did+json'];
+        const { didDocument } = suiteConfig[did]['application/did+ld+json'];
         const knownNullProperties = ['additionalType'];
         for (const [key, value] of Object.entries(didDocument)) {
           if (knownNullProperties.includes(key)) {
@@ -95,4 +108,4 @@ const didJsonProductionTests = (suiteConfig) => {
   }
 };
 
-module.exports = { didJsonProductionTests };
+module.exports = { didLdJsonProductionTests };

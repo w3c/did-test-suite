@@ -14,6 +14,9 @@ describe('did-spec', () => {
       require('./did-json-production').didJsonProductionTests(
         didMethodSuiteConfig
       );
+      require('./did-ld-json-production').didLdJsonProductionTests(
+        didMethodSuiteConfig
+      );
     });
   });
 });

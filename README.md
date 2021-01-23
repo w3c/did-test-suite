@@ -33,6 +33,11 @@ W3C functions under a [code of conduct](https://www.w3.org/Consortium/cepc/).
 
 See the [Test Server](./packages/did-core-test-server).
 
+```
+npm i
+npm run generate-report
+```
+
 ## DID Working Group Repositories
 
 - [W3C Decentralized Identifier Specification v1.0](https://github.com/w3c/did-core)

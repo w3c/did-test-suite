@@ -2,53 +2,59 @@
   {
     "name": "did-spec",
     "didMethods": {
-      "did:example": {
+      "did:key": {
         "supportedContentTypes": [
           "application/did+json",
           "application/did+ld+json"
         ],
-        "dids": ["did:example:123"],
-        "didParameters": {
-          "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
-          "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-          "relative-ref": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-          "version-id": "did:example:123?version-id=0.1.0",
-          "version-time": "did:example:123?version-time=1601151242"
-        },
-        "did:example:123": {
+        "dids": ["did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"],
+        "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB": {
           "application/did+json": {
             "didDocument": {
-              "@context": ["https://www.w3.org/ns/did/v1"],
-              "id": "did:example:123",
-              "canonicalId": "did:example:one-two-three",
-              "equivalentId": "did:example:one-two-three",
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+                }
+              ],
+              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
               "verificationMethod": [
                 {
-                  "id": "#key-0",
+                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
                   "type": "JsonWebKey2020",
-                  "controller": "did:example:123",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
                   "publicKeyJwk": {
-                    "kty": "OKP",
                     "crv": "Ed25519",
-                    "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE"
+                    "x": "LKacPea7et-QMhcyS02ZjsTHEVadsCj_XNnfFJYbwHo",
+                    "kty": "OKP"
                   }
                 },
                 {
-                  "id": "#key-1",
+                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
                   "type": "JsonWebKey2020",
-                  "controller": "did:example:123",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
                   "publicKeyJwk": {
                     "kty": "OKP",
                     "crv": "X25519",
-                    "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
+                    "x": "USe317eZOgxr3-neAHaJ8fZ056kb7miDxZvb5ymFKVM"
                   }
                 }
               ],
-              "authentication": ["#key-0"],
-              "assertionMethod": ["#key-0"],
-              "capabilityInvocation": ["#key-0"],
-              "capabilityDelegation": ["#key-0"],
-              "keyAgreement": ["#key-1"]
+              "authentication": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "assertionMethod": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityInvocation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityDelegation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "keyAgreement": [
+                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
+              ]
             },
             "didDocumentMetaData": {
               "content-type": "application/did+json"
@@ -57,47 +63,147 @@
           },
           "application/did+ld+json": {
             "didDocument": {
-              "@context": ["https://www.w3.org/ns/did/v1"],
-              "id": "did:example:123",
-              "verificationMethod": [
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
                 {
-                  "id": "#key-0",
-                  "type": "Ed25519VerificationKey2018",
-                  "controller": "did:example:123",
-                  "publicKeyBase58": "6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx"
-                },
-                {
-                  "id": "#key-1",
-                  "type": "X25519KeyAgreementKey2019",
-                  "controller": "did:example:123",
-                  "publicKeyBase58": "FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2"
+                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
                 }
               ],
-              "authentication": ["#key-0"],
-              "assertionMethod": ["#key-0"],
-              "capabilityInvocation": ["#key-0"],
-              "capabilityDelegation": ["#key-0"],
-              "keyAgreement": ["#key-1"]
+              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+              "verificationMethod": [
+                {
+                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "type": "Ed25519VerificationKey2018",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyBase58": "41JHobRgR1SiXc8SEKbizupfXvSz7dQTRqdByQWRUU5o"
+                },
+                {
+                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
+                  "type": "X25519KeyAgreementKey2019",
+                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+                  "publicKeyBase58": "6To9j5SAVt4U4Nue2hnNnQBvijGpqsUKhEuMfPhoZoRC"
+                }
+              ],
+              "authentication": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "assertionMethod": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityInvocation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "capabilityDelegation": [
+                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+              ],
+              "keyAgreement": [
+                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
+              ]
             },
             "didDocumentMetaData": {
               "content-type": "application/did+ld+json"
             },
             "didResolutionMetaData": {}
           }
-        },
-        "did:Cool": {
-          "supportedContentTypes": ["application/did+cool+json"],
-          "dids": ["did:Cool:123"],
-          "did:Cool:123": {
-            "application/did+cool+json": {
-              "didDocument": {
-                "id": "did:Cool:123",
-                "forbidden__proto__": { "vulnerable": "cool?" }
-              },
-              "didDocumentMetaData": {
-                "content-type": "application/did+cool+json"
-              },
-              "didResolutionMetaData": {}
+        }
+      },
+      "did:web": {
+        "supportedContentTypes": [
+          "application/did+json",
+          "application/did+ld+json"
+        ],
+        "dids": ["did:web:did.actor:mike"],
+        "did:web:did.actor:mike": {
+          "application/did+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:web:did.actor:mike",
+                  "rating": "https://schema.org/Rating",
+                  "publicAccess": "https://schema.org/publicAccess"
+                }
+              ],
+              "id": "did:web:did.actor:mike",
+              "rating": 4.5,
+              "publicAccess": true,
+              "additionalType": null,
+              "verificationMethod": [
+                {
+                  "id": "#g1",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G1",
+                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                  }
+                },
+                {
+                  "id": "#g2",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G2",
+                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                  }
+                }
+              ],
+              "authentication": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ],
+              "assertionMethod": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ]
+            }
+          },
+          "application/did+ld+json": {
+            "didDocument": {
+              "@context": [
+                "https://www.w3.org/ns/did/v1",
+                {
+                  "@base": "did:web:did.actor:mike",
+                  "rating": "https://schema.org/Rating",
+                  "publicAccess": "https://schema.org/publicAccess"
+                }
+              ],
+              "id": "did:web:did.actor:mike",
+              "rating": 4.5,
+              "publicAccess": true,
+              "additionalType": null,
+              "verificationMethod": [
+                {
+                  "id": "#g1",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G1",
+                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                  }
+                },
+                {
+                  "id": "#g2",
+                  "controller": "did:web:did.actor:mike",
+                  "type": "JsonWebKey2020",
+                  "publicKeyJwk": {
+                    "kty": "EC",
+                    "crv": "BLS12381_G2",
+                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                  }
+                }
+              ],
+              "authentication": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ],
+              "assertionMethod": [
+                "did:web:did.actor:mike#g1",
+                "did:web:did.actor:mike#g2"
+              ]
             }
           }
         }
