@@ -1,9 +1,11 @@
 const didKey = require('./did-key/did-key');
 const didWeb = require('./did-web');
+const didElem = require('./did-elem');
 
 const resolutionObjects = {
   ...didKey,
   ...didWeb,
+  ...didElem,
 };
 
 module.exports = {

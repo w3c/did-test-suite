@@ -326,6 +326,46 @@
         "ancestors": [
           "transmute",
           "did:key",
+          "did-syntax",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
           "resolution",
           "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
           "application/did+ld+json",
@@ -508,6 +548,30 @@
           "did:key",
           "resolution",
           "did:web:did.actor:mike",
+          "application/did+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "resolution",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA",
+          "application/did+ld+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "resolution",
+          "did:elem:ropsten:EiCnhBQAmgedjtaxY3TYng-xlnH7Q-cfOsDR2v1gkXpwvA",
           "application/did+json",
           "id"
         ],
