@@ -1,102 +1,22 @@
 {
   "name": "did-spec",
-  "didMethods": {
-    "did:example": {
-      "supportedContentTypes": [
-        "application/did+json",
-        "application/did+ld+json"
-      ],
-      "dids": ["did:example:123"],
-      "didParameters": {
-        "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
-        "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "relative-ref": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "version-id": "did:example:123?version-id=0.1.0",
-        "version-time": "did:example:123?version-time=1601151242"
-      },
-      "did:example:123": {
-        "application/did+json": {
-          "didDocument": {
-            "@context": ["https://www.w3.org/ns/did/v1"],
-            "id": "did:example:123",
-            "canonicalId": "did:example:one-two-three",
-            "equivalentId": "did:example:one-two-three",
-            "verificationMethod": [
-              {
-                "id": "#key-0",
-                "type": "JsonWebKey2020",
-                "controller": "did:example:123",
-                "publicKeyJwk": {
-                  "kty": "OKP",
-                  "crv": "Ed25519",
-                  "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE"
-                }
+  "vendors": {
+    "transmute": {
+      "didMethods": {
+        "did:example": {
+          "supportedContentTypes": ["application/did+ld+json"],
+          "dids": ["did:example:123"],
+          "did:example:123": {
+            "application/did+ld+json": {
+              "didDocument": {
+                "@context": ["https://www.w3.org/ns/did/v1"],
+                "id": "did:example:123"
               },
-              {
-                "id": "#key-1",
-                "type": "JsonWebKey2020",
-                "controller": "did:example:123",
-                "publicKeyJwk": {
-                  "kty": "OKP",
-                  "crv": "X25519",
-                  "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
-                }
-              }
-            ],
-            "authentication": ["#key-0"],
-            "assertionMethod": ["#key-0"],
-            "capabilityInvocation": ["#key-0"],
-            "capabilityDelegation": ["#key-0"],
-            "keyAgreement": ["#key-1"]
-          },
-          "didDocumentMetaData": {
-            "content-type": "application/did+json"
-          },
-          "didResolutionMetaData": {}
-        },
-        "application/did+ld+json": {
-          "didDocument": {
-            "@context": ["https://www.w3.org/ns/did/v1"],
-            "id": "did:example:123",
-            "verificationMethod": [
-              {
-                "id": "#key-0",
-                "type": "Ed25519VerificationKey2018",
-                "controller": "did:example:123",
-                "publicKeyBase58": "6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx"
+              "didDocumentMetaData": {
+                "content-type": "application/did+ld+json"
               },
-              {
-                "id": "#key-1",
-                "type": "X25519KeyAgreementKey2019",
-                "controller": "did:example:123",
-                "publicKeyBase58": "FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2"
-              }
-            ],
-            "authentication": ["#key-0"],
-            "assertionMethod": ["#key-0"],
-            "capabilityInvocation": ["#key-0"],
-            "capabilityDelegation": ["#key-0"],
-            "keyAgreement": ["#key-1"]
-          },
-          "didDocumentMetaData": {
-            "content-type": "application/did+ld+json"
-          },
-          "didResolutionMetaData": {}
-        }
-      },
-      "did:Cool": {
-        "supportedContentTypes": ["application/did+cool+json"],
-        "dids": ["did:Cool:123"],
-        "did:Cool:123": {
-          "application/did+cool+json": {
-            "didDocument": {
-              "id": "did:Cool:123",
-              "forbidden__proto__": { "vulnerable": "cool?" }
-            },
-            "didDocumentMetaData": {
-              "content-type": "application/did+cool+json"
-            },
-            "didResolutionMetaData": {}
+              "didResolutionMetaData": {}
+            }
           }
         }
       }

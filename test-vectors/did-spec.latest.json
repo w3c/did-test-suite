@@ -1,65 +1,333 @@
 [
   {
-    "suite": "did-spec",
+    "suite": "transmute",
     "testResults": [
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "MUST be a valid URL.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The URI scheme MUST be \"did:\"",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The DID method name MUST be an ASCII lowercase string.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The DID method name MUST NOT be empty.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "resolution",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-          "application/did+json",
-          "id"
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
         ],
-        "title": "MUST be the same as the resolved ID",
+        "title": "MUST be a valid URL.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
           "did:key",
           "resolution",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
           "application/did+ld+json",
           "id"
         ],
@@ -68,165 +336,176 @@
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+          "application/did+json",
+          "id"
         ],
-        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+          "application/did+json",
+          "id"
         ],
-        "title": "Sequence value MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+          "application/did+json",
+          "id"
         ],
-        "title": "Sets of properties MUST be represented as an Object type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Empty values MUST be represented as a null literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+          "application/did+json",
+          "id"
         ],
-        "title": "The value of @context MUST be exactly one of these values.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+          "application/did+json",
+          "id"
         ],
-        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Sequence value MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+          "application/did+json",
+          "id"
         ],
-        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Sets of properties MUST be represented as an Object type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+          "application/did+json",
+          "id"
         ],
-        "title": "Empty values MUST be represented as a null literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
+          "transmute",
+          "did:key",
+          "resolution",
+          "did:web:did.actor:mike",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "MUST be a valid URL.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The URI scheme MUST be \"did:\"",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The DID method name MUST be an ASCII lowercase string.",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The DID method name MUST NOT be empty.",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "resolution",
           "did:web:did.actor:mike",
           "application/did+json",
@@ -237,20 +516,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "resolution",
-          "did:web:did.actor:mike",
-          "application/did+ld+json",
-          "id"
-        ],
-        "title": "MUST be the same as the resolved ID",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
@@ -258,8 +525,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Boolean values MUST be represented as a Boolean literal.",
@@ -267,8 +534,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Sequence value MUST be represented as an Array type.",
@@ -276,8 +543,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Unordered sets of values MUST be represented as an Array type.",
@@ -285,8 +552,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Sets of properties MUST be represented as an Object type.",
@@ -294,8 +561,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Empty values MUST be represented as a null literal.",
@@ -303,8 +570,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "The value of @context MUST be exactly one of these values.",
@@ -312,8 +579,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
@@ -321,8 +588,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Boolean values MUST be represented as a Boolean literal.",
@@ -330,8 +597,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Sequence value MUST be represented as an Array type.",
@@ -339,8 +606,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Unordered sets of values MUST be represented as an Array type.",
@@ -348,8 +615,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Sets of properties MUST be represented as an Object type.",
@@ -357,8 +624,8 @@
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Empty values MUST be represented as a null literal.",

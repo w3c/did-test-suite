@@ -1,22 +1,9 @@
 let { suiteConfig } = global;
 
+const { runSuite } = require('./run-suite');
+
 if (!suiteConfig) {
   suiteConfig = require('./defaultSuiteConfig.json');
 }
 
-describe('did-spec', () => {
-  Object.keys(suiteConfig.didMethods).forEach((didMethod) => {
-    describe(didMethod, () => {
-      const didMethodSuiteConfig = suiteConfig.didMethods[didMethod];
-      require('./did-syntax').didSyntaxTests(didMethodSuiteConfig);
-      require('./did-parameters').didParametersTests(didMethodSuiteConfig);
-      require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
-      require('./did-json-production').didJsonProductionTests(
-        didMethodSuiteConfig
-      );
-      require('./did-ld-json-production').didLdJsonProductionTests(
-        didMethodSuiteConfig
-      );
-    });
-  });
-});
+runSuite(suiteConfig);

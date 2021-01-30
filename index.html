@@ -174,84 +174,11 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
         <p class="advisement">
           For the latest version of this file, please see
           <a
-            href="https://github.com/w3c/did-test-suite/blob/master/packages/did-core-test-server/suites/did-spec/default.json"
+            href="https://github.com/w3c/did-test-suite/blob/master/packages/did-core-test-server/suites/did-spec"
           >
             latest did spec suite configuration
           </a>
         </p>
-        <pre
-          id="did-spec-suite-configuration"
-          class="example"
-          title="The current did-spec configuration file"
-        >
-[
-  {
-    "name": "did-spec",
-    "didMethods": {
-      "did:example": {
-        "supportedContentTypes": ["application/did+json"],
-        "dids": ["did:example:123"],
-        "did:example:123": {
-          "application/did+json": {
-            "didDocument": {
-              "@context": ["https://www.w3.org/ns/did/v1"],
-              "id": "did:example:123",
-              "verificationMethod": [
-                {
-                  "id": "#key-0",
-                  "type": "JsonWebKey2020",
-                  "controller": "did:example:123",
-                  "publicKeyJwk": {
-                    "kty": "OKP",
-                    "crv": "Ed25519",
-                    "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE"
-                  }
-                },
-                {
-                  "id": "#key-1",
-                  "type": "JsonWebKey2020",
-                  "controller": "did:example:123",
-                  "publicKeyJwk": {
-                    "kty": "OKP",
-                    "crv": "X25519",
-                    "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
-                  }
-                }
-              ],
-              "authentication": ["#key-0"],
-              "assertionMethod": ["#key-0"],
-              "capabilityInvocation": ["#key-0"],
-              "capabilityDelegation": ["#key-0"],
-              "keyAgreement": ["#key-1"]
-            },
-            "didDocumentMetaData": {
-              "content-type": "application/did+json"
-            },
-            "didResolutionMetaData": {}
-          }
-        }
-      },
-      "did:Cool": {
-        "supportedContentTypes": ["application/did+cool+json"],
-        "dids": ["did:Cool:123"],
-        "did:Cool:123": {
-          "application/did+cool+json": {
-            "didDocument": {
-              "id": "did:Cool:123",
-              "forbidden__proto__": { "vulnerable": "cool?" }
-            },
-            "didDocumentMetaData": {
-              "content-type": "application/did+cool+json"
-            },
-            "didResolutionMetaData": {}
-          }
-        }
-      }
-    }
-  }
-]
-      </pre
-        >
       </section>
 
       <section>
@@ -329,8 +256,10 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       </p>
       <p id="did-spec-report-date" class="note">
         These test results were last generated
-        <span> Saturday, January 23, 2021 4:42 PM </span>
+        <span> Friday, January 29, 2021 6:24 PM </span>
       </p>
+
+      <div id="terminal"></div>
 
       <pre
         id="did-spec-suite-input"
@@ -340,213 +269,701 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
 [
   {
     "name": "did-spec",
-    "didMethods": {
-      "did:key": {
-        "supportedContentTypes": [
-          "application/did+json",
-          "application/did+ld+json"
-        ],
-        "dids": [
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-        ],
-        "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB": {
-          "application/did+json": {
-            "didDocument": {
-              "@context": [
-                "https://www.w3.org/ns/did/v1",
-                {
-                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-                }
-              ],
-              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-              "verificationMethod": [
-                {
-                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "type": "JsonWebKey2020",
-                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "publicKeyJwk": {
-                    "crv": "Ed25519",
-                    "x": "LKacPea7et-QMhcyS02ZjsTHEVadsCj_XNnfFJYbwHo",
-                    "kty": "OKP"
-                  }
+    "vendors": {
+      "transmute": {
+        "didMethods": {
+          "did:key": {
+            "supportedContentTypes": [
+              "application/did+ld+json",
+              "application/did+json"
+            ],
+            "dids": [
+              "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+              "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+              "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+              "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+              "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+              "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+              "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+              "did:web:did.actor:mike"
+            ],
+            "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                    }
+                  ],
+                  "id": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                  "verificationMethod": [
+                    {
+                      "id": "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "publicKeyJwk": {
+                        "crv": "Ed25519",
+                        "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE",
+                        "kty": "OKP"
+                      }
+                    },
+                    {
+                      "id": "#z6LSrdqo4M24WRDJj1h2hXxgtDTyzjjKCiyapYVgrhwZAySn",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "publicKeyJwk": {
+                        "kty": "OKP",
+                        "crv": "X25519",
+                        "x": "3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "assertionMethod": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "capabilityInvocation": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "capabilityDelegation": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "keyAgreement": [
+                    "#z6LSrdqo4M24WRDJj1h2hXxgtDTyzjjKCiyapYVgrhwZAySn"
+                  ]
                 },
-                {
-                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
-                  "type": "JsonWebKey2020",
-                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "publicKeyJwk": {
-                    "kty": "OKP",
-                    "crv": "X25519",
-                    "x": "USe317eZOgxr3-neAHaJ8fZ056kb7miDxZvb5ymFKVM"
-                  }
-                }
-              ],
-              "authentication": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "assertionMethod": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "capabilityInvocation": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "capabilityDelegation": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "keyAgreement": [
-                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
-              ]
-            },
-            "didDocumentMetaData": {
-              "content-type": "application/did+json"
-            },
-            "didResolutionMetaData": {}
-          },
-          "application/did+ld+json": {
-            "didDocument": {
-              "@context": [
-                "https://www.w3.org/ns/did/v1",
-                {
-                  "@base": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-                }
-              ],
-              "id": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-              "verificationMethod": [
-                {
-                  "id": "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "type": "Ed25519VerificationKey2018",
-                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "publicKeyBase58": "41JHobRgR1SiXc8SEKbizupfXvSz7dQTRqdByQWRUU5o"
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
                 },
-                {
-                  "id": "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx",
-                  "type": "X25519KeyAgreementKey2019",
-                  "controller": "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-                  "publicKeyBase58": "6To9j5SAVt4U4Nue2hnNnQBvijGpqsUKhEuMfPhoZoRC"
-                }
-              ],
-              "authentication": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "assertionMethod": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "capabilityInvocation": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "capabilityDelegation": [
-                "#z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
-              ],
-              "keyAgreement": [
-                "#z6LSh8yKFPF2bLnD9mHQZMJL6zQQZsowYUeUaDd39rMLHBBx"
-              ]
-            },
-            "didDocumentMetaData": {
-              "content-type": "application/did+ld+json"
-            },
-            "didResolutionMetaData": {}
-          }
-        }
-      },
-      "did:web": {
-        "supportedContentTypes": [
-          "application/did+json",
-          "application/did+ld+json"
-        ],
-        "dids": [
-          "did:web:did.actor:mike"
-        ],
-        "did:web:did.actor:mike": {
-          "application/did+json": {
-            "didDocument": {
-              "@context": [
-                "https://www.w3.org/ns/did/v1",
-                {
-                  "@base": "did:web:did.actor:mike",
-                  "rating": "https://schema.org/Rating",
-                  "publicAccess": "https://schema.org/publicAccess"
-                }
-              ],
-              "id": "did:web:did.actor:mike",
-              "rating": 4.5,
-              "publicAccess": true,
-              "additionalType": null,
-              "verificationMethod": [
-                {
-                  "id": "#g1",
-                  "controller": "did:web:did.actor:mike",
-                  "type": "JsonWebKey2020",
-                  "publicKeyJwk": {
-                    "kty": "EC",
-                    "crv": "BLS12381_G1",
-                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
-                  }
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                    }
+                  ],
+                  "id": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                  "verificationMethod": [
+                    {
+                      "id": "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "type": "Ed25519VerificationKey2018",
+                      "controller": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "publicKeyBase58": "6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx"
+                    },
+                    {
+                      "id": "#z6LSrdqo4M24WRDJj1h2hXxgtDTyzjjKCiyapYVgrhwZAySn",
+                      "type": "X25519KeyAgreementKey2019",
+                      "controller": "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+                      "publicKeyBase58": "FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2"
+                    }
+                  ],
+                  "authentication": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "assertionMethod": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "capabilityInvocation": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "capabilityDelegation": [
+                    "#z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+                  ],
+                  "keyAgreement": [
+                    "#z6LSrdqo4M24WRDJj1h2hXxgtDTyzjjKCiyapYVgrhwZAySn"
+                  ]
                 },
-                {
-                  "id": "#g2",
-                  "controller": "did:web:did.actor:mike",
-                  "type": "JsonWebKey2020",
-                  "publicKeyJwk": {
-                    "kty": "EC",
-                    "crv": "BLS12381_G2",
-                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
-                  }
-                }
-              ],
-              "authentication": [
-                "did:web:did.actor:mike#g1",
-                "did:web:did.actor:mike#g2"
-              ],
-              "assertionMethod": [
-                "did:web:did.actor:mike#g1",
-                "did:web:did.actor:mike#g2"
-              ]
-            }
-          },
-          "application/did+ld+json": {
-            "didDocument": {
-              "@context": [
-                "https://www.w3.org/ns/did/v1",
-                {
-                  "@base": "did:web:did.actor:mike",
-                  "rating": "https://schema.org/Rating",
-                  "publicAccess": "https://schema.org/publicAccess"
-                }
-              ],
-              "id": "did:web:did.actor:mike",
-              "rating": 4.5,
-              "publicAccess": true,
-              "additionalType": null,
-              "verificationMethod": [
-                {
-                  "id": "#g1",
-                  "controller": "did:web:did.actor:mike",
-                  "type": "JsonWebKey2020",
-                  "publicKeyJwk": {
-                    "kty": "EC",
-                    "crv": "BLS12381_G1",
-                    "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
-                  }
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
                 },
-                {
-                  "id": "#g2",
-                  "controller": "did:web:did.actor:mike",
-                  "type": "JsonWebKey2020",
-                  "publicKeyJwk": {
-                    "kty": "EC",
-                    "crv": "BLS12381_G2",
-                    "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
-                  }
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+                    }
+                  ],
+                  "id": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                  "verificationMethod": [
+                    {
+                      "id": "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                      "controller": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G1",
+                        "x": "qH6myua4BZE66j1OE3sr1EWmNz1i6-J5HInRix5-2l4lxQ-cqazt1QLw1X5zv5Dq"
+                      }
+                    },
+                    {
+                      "id": "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM",
+                      "controller": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G2",
+                        "x": "uLCfsRSeIGnubSEzVtCgWMOoBZecHkvpByb61dqt-ua8A9NsQ1TRruHCEo0KrHutCWC2bOKkbUNrxyxXg5RP0PiQ3YUu3cf455fo0Lm-F3uZiFvR0GbU4bAMTzkUCN2S"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "assertionMethod": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "capabilityInvocation": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "capabilityDelegation": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+                    }
+                  ],
+                  "id": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                  "verificationMethod": [
+                    {
+                      "id": "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                      "type": "Bls12381G1Key2020",
+                      "controller": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                      "publicKeyBase58": "7BVES4h78wzabPAfMhchXyH5d8EX78S5TtzePH2YkftWcE6by9yj3NTAv9nsyCeYch"
+                    },
+                    {
+                      "id": "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM",
+                      "type": "Bls12381G2Key2020",
+                      "controller": "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+                      "publicKeyBase58": "26d2BdqELsXg7ZHCWKL2D5Y2S7mYrpkdhJemSEEvokd4qy4TULJeeU44hYPGKo4x4DbBp5ARzkv1D6xuB3bmhpdpKAXuXtode67wzh9PCtW8kTqQhH19VSiFZkLNkhe9rtf3"
+                    }
+                  ],
+                  "authentication": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "assertionMethod": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "capabilityInvocation": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ],
+                  "capabilityDelegation": [
+                    "#z3tEG5qmJZX29jJSX5kyhDR5YJNnefJFdwTxRqk6zbEPv4Pf2xF12BpmXv9NExxSRFGfxd",
+                    "#zUC7LTa4hWtaE9YKyDsMVGiRNqPMN3s4rjBdB3MFi6PcVWReNfR72y3oGW2NhNcaKNVhMobh7aHp8oZB3qdJCs7RebM2xsodrSm8MmePbN25NTGcpjkJMwKbcWfYDX7eHCJjPGM"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+                    }
+                  ],
+                  "id": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                  "verificationMethod": [
+                    {
+                      "id": "#z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                      "publicKeyJwk": {
+                        "kty": "OKP",
+                        "crv": "X25519",
+                        "x": "lVdVtPzTGXvkWLaSuxk-WFvOSxnVThxrEoRPJLrkCko"
+                      }
+                    }
+                  ],
+                  "keyAgreement": [
+                    "#z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+                    }
+                  ],
+                  "id": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                  "verificationMethod": [
+                    {
+                      "id": "#z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                      "type": "X25519KeyAgreementKey2019",
+                      "controller": "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+                      "publicKeyBase58": "B3xzCuy2AxwM2EMSQw4yLRakn6QEuuNytiRidWpCoUcH"
+                    }
+                  ],
+                  "keyAgreement": [
+                    "#z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                    }
+                  ],
+                  "id": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                  "verificationMethod": [
+                    {
+                      "id": "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "P-256",
+                        "x": "2w4e1cqjwyQGJU56fhSI22Y8zSqS_2JtP2850_e7Ea4",
+                        "y": "PhznICBI7r_i9YkhBQEQoxlm90d3uv12tPhv1-y9QmY"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "assertionMethod": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "capabilityInvocation": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "capabilityDelegation": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "keyAgreement": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                    }
+                  ],
+                  "id": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                  "verificationMethod": [
+                    {
+                      "id": "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                      "type": "UnsupportedVerificationMethod2020",
+                      "controller": "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+                      "publicKeyBase58": "5P22HwyT6RgTwNvcBDCrWvxmWVmndHKACdvUVfiyzxipcQYiREHkszfpAB8k2knYwW7Widy5xew4LwrC33aBEam3"
+                    }
+                  ],
+                  "authentication": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "assertionMethod": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "capabilityInvocation": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "capabilityDelegation": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ],
+                  "keyAgreement": [
+                    "#zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                    }
+                  ],
+                  "id": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                  "verificationMethod": [
+                    {
+                      "id": "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "P-384",
+                        "x": "xUR9xMCEiRd4j4X9zEu2p61mDmNDoAZnwPmMSnRLxvK7fYuJkNFTm7yB1lTr744c",
+                        "y": "mVUlJvS8qMwO2JHI38L1HNY2e3cnCReom1MgV_5jEZOWgW4MeayBtgUIEcCFD40U"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "assertionMethod": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "capabilityInvocation": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "capabilityDelegation": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "keyAgreement": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                    }
+                  ],
+                  "id": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                  "verificationMethod": [
+                    {
+                      "id": "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                      "type": "UnsupportedVerificationMethod2020",
+                      "controller": "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+                      "publicKeyBase58": "2AxKHUNcvU8XTbedeVibNLRDsNDq9aKxcG6VYVK1BBpKqDikuYXZ8tRRprD4NmqnBaCb7LTXMWzT4jNYCUYXCRjJN33uAmG57PYXe2f7Az2nSA3RHbgXuHPh5Afz7AKRmYbd"
+                    }
+                  ],
+                  "authentication": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "assertionMethod": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "capabilityInvocation": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "capabilityDelegation": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ],
+                  "keyAgreement": [
+                    "#zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                    }
+                  ],
+                  "id": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                  "verificationMethod": [
+                    {
+                      "id": "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "P-521",
+                        "x": "AQTiD5aAjx4MM5iZvI8gE5IwEqwKJAQnWOVRleUV5mbWyJ8leyUVyhhxWSyrA9Ja_GgaE5aWdx411FzqJp3MF2Ni",
+                        "y": "AV50Jamjutx59grg7uir3ZHvixiOhLj65WWIPRetnSfP6Y1byEExrvsjMtCVVqniGidU-jsh2Fxkbwa4IqKnNj4Z"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "assertionMethod": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "capabilityInvocation": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "capabilityDelegation": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "keyAgreement": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                    }
+                  ],
+                  "id": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                  "verificationMethod": [
+                    {
+                      "id": "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                      "type": "UnsupportedVerificationMethod2020",
+                      "controller": "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+                      "publicKeyBase58": "gaYpXMYKyCbjrCUwQusJzYp9ZWt7cAXAYesDkiVJ5tkFGXuceTK39h345iKKoc7UZw6NPsPr2e5ES4exR7311Txg2HHbwjvUG5sB4feDyGTZxnzGPJtr8aonjVrxHVSzFTHAyGkrdCNJtHA3sZWCiLCT1CkJr2XbdrJZKjy8xLgEJdggdQC"
+                    }
+                  ],
+                  "authentication": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "assertionMethod": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "capabilityInvocation": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "capabilityDelegation": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ],
+                  "keyAgreement": [
+                    "#zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                    }
+                  ],
+                  "id": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                  "verificationMethod": [
+                    {
+                      "id": "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                      "type": "JsonWebKey2020",
+                      "controller": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "secp256k1",
+                        "x": "ZCkxL14Ix2EDzwOIOJ5D_kNG7lAzIAkO7aFQ82Kru0w",
+                        "y": "dvzo1xuPbe7pTelHPEjP_BCF-S-n34NBxU3qC57PdgQ"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "assertionMethod": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "capabilityInvocation": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "capabilityDelegation": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+json"
+                },
+                "didResolutionMetaData": {}
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                    }
+                  ],
+                  "id": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                  "verificationMethod": [
+                    {
+                      "id": "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                      "type": "EcdsaSecp256k1VerificationKey2019",
+                      "controller": "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+                      "publicKeyBase58": "iCcwcQBt8hPmfj9NzGCpuDZrHAryuByUvCKHTc1F4tJo"
+                    }
+                  ],
+                  "authentication": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "assertionMethod": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "capabilityInvocation": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ],
+                  "capabilityDelegation": [
+                    "#zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+                  ]
+                },
+                "didDocumentMetaData": {
+                  "content-type": "application/did+ld+json"
+                },
+                "didResolutionMetaData": {}
+              }
+            },
+            "did:web:did.actor:mike": {
+              "application/did+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:web:did.actor:mike",
+                      "rating": "https://schema.org/Rating",
+                      "publicAccess": "https://schema.org/publicAccess",
+                      "additionalType": "https://schema.org/additionalType"
+                    }
+                  ],
+                  "id": "did:web:did.actor:mike",
+                  "rating": 4.5,
+                  "publicAccess": true,
+                  "additionalType": null,
+                  "verificationMethod": [
+                    {
+                      "id": "#g1",
+                      "controller": "did:web:did.actor:mike",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G1",
+                        "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                      }
+                    },
+                    {
+                      "id": "#g2",
+                      "controller": "did:web:did.actor:mike",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G2",
+                        "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "did:web:did.actor:mike#g1",
+                    "did:web:did.actor:mike#g2"
+                  ],
+                  "assertionMethod": [
+                    "did:web:did.actor:mike#g1",
+                    "did:web:did.actor:mike#g2"
+                  ]
                 }
-              ],
-              "authentication": [
-                "did:web:did.actor:mike#g1",
-                "did:web:did.actor:mike#g2"
-              ],
-              "assertionMethod": [
-                "did:web:did.actor:mike#g1",
-                "did:web:did.actor:mike#g2"
-              ]
+              },
+              "application/did+ld+json": {
+                "didDocument": {
+                  "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    {
+                      "@base": "did:web:did.actor:mike",
+                      "rating": "https://schema.org/Rating",
+                      "publicAccess": "https://schema.org/publicAccess",
+                      "additionalType": "https://schema.org/additionalType"
+                    }
+                  ],
+                  "id": "did:web:did.actor:mike",
+                  "rating": 4.5,
+                  "publicAccess": true,
+                  "additionalType": null,
+                  "verificationMethod": [
+                    {
+                      "id": "#g1",
+                      "controller": "did:web:did.actor:mike",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G1",
+                        "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                      }
+                    },
+                    {
+                      "id": "#g2",
+                      "controller": "did:web:did.actor:mike",
+                      "type": "JsonWebKey2020",
+                      "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G2",
+                        "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                      }
+                    }
+                  ],
+                  "authentication": [
+                    "did:web:did.actor:mike#g1",
+                    "did:web:did.actor:mike#g2"
+                  ],
+                  "assertionMethod": [
+                    "did:web:did.actor:mike#g1",
+                    "did:web:did.actor:mike#g2"
+                  ]
+                }
+              }
             }
           }
         }
@@ -563,66 +980,334 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       >
 [
   {
-    "suite": "did-spec",
+    "suite": "transmute",
     "testResults": [
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "MUST be a valid URL.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The URI scheme MUST be \"did:\"",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The DID method name MUST be an ASCII lowercase string.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
           "did-syntax",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB"
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
         ],
         "title": "The DID method name MUST NOT be empty.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "resolution",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
-          "application/did+json",
-          "id"
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
         ],
-        "title": "MUST be the same as the resolved ID",
+        "title": "MUST be a valid URL.",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
+          "did:key",
+          "did-syntax",
+          "did:web:did.actor:mike"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "transmute",
           "did:key",
           "resolution",
-          "did:key:z6MkhTZLPqg7kYwBe6y8utZZr1NfMViqXWep7rY7ogUSPgsB",
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
           "application/did+ld+json",
           "id"
         ],
@@ -631,165 +1316,176 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL",
+          "application/did+json",
+          "id"
         ],
-        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z5TcESXuYUE9aZWYwSdrUEGK1HNQFHyTt4aVpaCTVZcDXQmUheFwfNZmRksaAbBneNm5KyE52SdJeRCN1g6PJmF31GsHWwFiqUDujvasK3wTiDr3vvkYwEJHt7H5RGEKYEp1ErtQtcEBgsgY2DA9JZkHj1J9HZ8MRDTguAhoFtR4aTBQhgnkP4SwVbxDYMEZoF2TMYn3s",
+          "application/did+json",
+          "id"
         ],
-        "title": "Sequence value MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:z6LSmj99jDmtGRf67cjCwaavf1oEdEwMcWZ8mh9Q7yTjWrP3",
+          "application/did+json",
+          "id"
         ],
-        "title": "Sets of properties MUST be represented as an Object type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-json-production"
+          "resolution",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Empty values MUST be represented as a null literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zXwpDcwhs3ryJCCM3vYz9nJ7jB7Mbp8ioihWmRkNjy1XPjTqMEn5MvjaH3i1qsegxku36mBUc5fQ5NEW5JfHRr6i3TVf",
+          "application/did+json",
+          "id"
         ],
-        "title": "The value of @context MUST be exactly one of these values.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zACHdsDxFYhAtvHaBEoQbRwjvfBmnMTojArVxjFdTYgyXsw11YiNqcwK1VkYuKj7P9YSoCzXYL1WX8Z1GAHYinztHn9z91oerTi1fp6pUGEr7BPJ562vSiL93NHJCM81JS8j19rT",
+          "application/did+json",
+          "id"
         ],
-        "title": "Boolean values MUST be represented as a Boolean literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Sequence value MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zJss7xG657npJqTZwxK45hjdX55aT9SbSbwvSURgbYZEoepdsYVGLtnLrmgGYpGH525wbYKWAwto2BWovBuJcveCZUK2UjEb3pJi7ume5yhhWj3qZrqGdHjBDxrt1CHb5wNu16GpiqRNKNXFXt8TskvNkr7CrhizbKqeUH43je19bUjXGVRwJH2ja",
+          "application/did+json",
+          "id"
         ],
-        "title": "Unordered sets of values MUST be represented as an Array type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "Sets of properties MUST be represented as an Object type.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
+          "transmute",
           "did:key",
-          "did-ld-json-production"
+          "resolution",
+          "did:key:zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+          "application/did+json",
+          "id"
         ],
-        "title": "Empty values MUST be represented as a null literal.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
+          "transmute",
+          "did:key",
+          "resolution",
+          "did:web:did.actor:mike",
+          "application/did+ld+json",
+          "id"
         ],
-        "title": "MUST be a valid URL.",
+        "title": "MUST be the same as the resolved ID",
         "status": "passed"
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The URI scheme MUST be \"did:\"",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The DID method name MUST be an ASCII lowercase string.",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
-          "did-syntax",
-          "did:web:did.actor:mike"
-        ],
-        "title": "The DID method name MUST NOT be empty.",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "resolution",
           "did:web:did.actor:mike",
           "application/did+json",
@@ -800,20 +1496,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
-          "resolution",
-          "did:web:did.actor:mike",
-          "application/did+ld+json",
-          "id"
-        ],
-        "title": "MUST be the same as the resolved ID",
-        "status": "passed"
-      },
-      {
-        "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
@@ -821,8 +1505,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Boolean values MUST be represented as a Boolean literal.",
@@ -830,8 +1514,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Sequence value MUST be represented as an Array type.",
@@ -839,8 +1523,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Unordered sets of values MUST be represented as an Array type.",
@@ -848,8 +1532,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Sets of properties MUST be represented as an Object type.",
@@ -857,8 +1541,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-json-production"
         ],
         "title": "Empty values MUST be represented as a null literal.",
@@ -866,8 +1550,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "The value of @context MUST be exactly one of these values.",
@@ -875,8 +1559,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Numeric values representable as IEEE754 MUST be represented as a Number type.",
@@ -884,8 +1568,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Boolean values MUST be represented as a Boolean literal.",
@@ -893,8 +1577,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Sequence value MUST be represented as an Array type.",
@@ -902,8 +1586,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Unordered sets of values MUST be represented as an Array type.",
@@ -911,8 +1595,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Sets of properties MUST be represented as an Object type.",
@@ -920,8 +1604,8 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       },
       {
         "ancestors": [
-          "did-spec",
-          "did:web",
+          "transmute",
+          "did:key",
           "did-ld-json-production"
         ],
         "title": "Empty values MUST be represented as a null literal.",
@@ -933,46 +1617,15 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
       </pre>
     </section>
 
-    <section>
-      <h2>On Demand</h2>
-      <button
-        style="
-          float: right;
-          background-color: blueviolet;
-          border: none;
-          border-radius: 8px;
-          padding: 8px;
-          color: white;
-          font-size: medium;
-          cursor: pointer;
-        "
-        onclick="generateReport()"
-      >
-        Generate Report
-      </button>
-      <p>On demand conformance results from a remote server.</p>
-      <br />
-      <p class="advisement">
-        This feature is experimental and may be removed in the future.
-      </p>
-
-      <div id="report-suites-input"></div>
-      <p>Details related to your remote test run will be shown here:</p>
-      <div id="terminal"></div>
-
-      <section id="on-demand-report-results">
-        <h2>Method Conformance</h2>
-      </section>
-    </section>
+    <script id="did-spec-report-terminal-results" type="application/json">
+      {
+        "suitesReportTerminal": "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c3cxMVlpTnFjd0sxVmtZdUtqN1A5WVNvQ3pYWUwxV1g4WjFHQUhZaW56dEhuOXo5MW9lclRpMWZwNnBVR0VyN0JQSjU2MnZTaUw5M05ISkNNODFKUzhqMTlyVAogICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSBhIHZhbGlkIFVSTC4bWzIybQogICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtVGhlIFVSSSBzY2hlbWUgTVVTVCBiZSAiZGlkOiIgKDEgbXMpG1syMm0KICAgICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVRoZSBESUQgbWV0aG9kIG5hbWUgTVVTVCBiZSBhbiBBU0NJSSBsb3dlcmNhc2Ugc3RyaW5nLhtbMjJtCiAgICAgICAgICAbWzMybeKckxtbMzltIBtbMm1UaGUgRElEIG1ldGhvZCBuYW1lIE1VU1QgTk9UIGJlIGVtcHR5LhtbMjJtCiAgICAgICAgZGlkOmtleTp6SnNzN3hHNjU3bnBKcVRad3hLNDVoamRYNTVhVDlTYlNid3ZTVVJnYllaRW9lcGRzWVZHTHRuTHJtZ0dZcEdINTI1d2JZS1dBd3RvMkJXb3ZCdUpjdmVDWlVLMlVqRWIzcEppN3VtZTV5aGhXajNxWnJxR2RIakJEeHJ0MUNIYjV3TnUxNkdwaXFSTktOWEZYdDhUc2t2TmtyN0NyaGl6YktxZVVINDNqZTE5YlVqWEdWUndKSDJqYQogICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSBhIHZhbGlkIFVSTC4gKDEgbXMpG1syMm0KICAgICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVRoZSBVUkkgc2NoZW1lIE1VU1QgYmUgImRpZDoiICgxIG1zKRtbMjJtCiAgICAgICAgICAbWzMybeKckxtbMzltIBtbMm1UaGUgRElEIG1ldGhvZCBuYW1lIE1VU1QgYmUgYW4gQVNDSUkgbG93ZXJjYXNlIHN0cmluZy4bWzIybQogICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtVGhlIERJRCBtZXRob2QgbmFtZSBNVVNUIE5PVCBiZSBlbXB0eS4gKDEgbXMpG1syMm0KICAgICAgICBkaWQ6a2V5OnpRM3NoVTlt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TWJwOGlvaWhXbVJrTmp5MVhQalRxTUVuNU12amFIM2kxcXNlZ3hrdTM2bUJVYzVmUTVORVc1SmZIUnI2aTNUVmYKICAgICAgICAgIGFwcGxpY2F0aW9uL2RpZCtsZCtqc29uCiAgICAgICAgICAgIGlkCiAgICAgICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSB0aGUgc2FtZSBhcyB0aGUgcmVzb2x2ZWQgSUQbWzIybQogICAgICAgICAgYXBwbGljYXRpb24vZGlkK2pzb24KICAgICAgICAgICAgaWQKICAgICAgICAgICAgICAbWzMybeKckxtbMzltIBtbMm1NVVNUIGJlIHRoZSBzYW1lIGFzIHRoZSByZXNvbHZlZCBJRBtbMjJtCiAgICAgICAgZGlkOmtleTp6QUNIZHNEeEZZaEF0dkhhQkVvUWJSd2p2ZkJtbk1Ub2pBclZ4akZkVFlneVhzdzExWWlOcWN3SzFWa1l1S2o3UDlZU29DelhZTDFXWDhaMUdBSFlpbnp0SG45ejkxb2VyVGkxZnA2cFVHRXI3QlBKNTYydlNpTDkzTkhKQ004MUpTOGoxOXJUCiAgICAgICAgICBhcHBsaWNhdGlvbi9kaWQrbGQranNvbgogICAgICAgICAgICBpZAogICAgICAgICAgICAgIBtbMzJt4pyTG1szOW0gG1sybU1VU1QgYmUgdGhlIHNhbWUgYXMgdGhlIHJlc29sdmVkIElEG1syMm0KICAgICAgICAgIGFwcGxpY2F0aW9uL2RpZCtqc29uCiAgICAgICAgICAgIGlkCiAgICAgICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSB0aGUgc2FtZSBhcyB0aGUgcmVzb2x2ZWQgSUQbWzIybQogICAgICAgIGRpZDprZXk6ekpzczd4RzY1N25wSnFUWnd4SzQ1aGpkWDU1YVQ5U2JTYnd2U1VSZ2JZWkVvZXBkc1lWR0x0bkxybWdHWXBHSDUyNXdiWUtXQXd0bzJCV292QnVKY3ZlQ1pVSzJVakViM3BKaTd1bWU1eWhoV2ozcVpycUdkSGpCRHhydDFDSGI1d051MTZHcGlxUk5LTlhGWHQ4VHNrdk5rcjdDcmhpemJLcWVVSDQzamUxOWJValhHVlJ3SkgyamEKICAgICAgICAgIGFwcGxpY2F0aW9uL2RpZCtsZCtqc29uCiAgICAgICAgICAgIGlkCiAgICAgICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSB0aGUgc2FtZSBhcyB0aGUgcmVzb2x2ZWQgSUQgKDEgbXMpG1syMm0KICAgICAgICAgIGFwcGxpY2F0aW9uL2RpZCtqc29uCiAgICAgICAgICAgIGlkCiAgICAgICAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtTVVTVCBiZSB0aGUgc2FtZSBhcyB0aGUgcmVzb2x2ZWQgSUQbWzIybQogICAgICAgIGRpZDprZXk6elEzc2hVOW14VFlmTVRMY2V1cHBvTk01c2lvd0h2dzN4QmsyMXI4NTVrd2dOSE5BWAogICAgICAgICAgYXBwbGljYXRpb24vZGlkK2xkK2pzb24KICAgICAgICAgICAgaWQKICAgICAgICAgICAgICAbWzMybeKckxtbMzltIBtbMm1NVVNUIGJlIHRoZSBzYW1lIGFzIHRoZSByZXNvbHZlZCBJRBtbMjJtCiAgICAgICAgICBhcHBsaWNhdGlvbi9kaWQranNvbgogICAgICAgICAgICBpZAogICAgICAgICAgICAgIBtbMzJt4pyTG1szOW0gG1sybU1VU1QgYmUgdGhlIHNhbWUgYXMgdGhlIHJlc29sdmVkIElEICgxIG1zKRtbMjJtCiAgICAgICAgZGlkOndlYjpkaWQuYWN0b3I6bWlrZQogICAgICAgICAgYXBwbGljYXRpb24vZGlkK2xkK2pzb24KICAgICAgICAgICAgaWQKICAgICAgICAgICAgICAbWzMybeKckxtbMzltIBtbMm1NVVNUIGJlIHRoZSBzYW1lIGFzIHRoZSByZXNvbHZlZCBJRBtbMjJtCiAgICAgICAgICBhcHBsaWNhdGlvbi9kaWQranNvbgogICAgICAgICAgICBpZAogICAgICAgICAgICAgIBtbMzJt4pyTG1szOW0gG1sybU1VU1QgYmUgdGhlIHNhbWUgYXMgdGhlIHJlc29sdmVkIElEG1syMm0KICAgICAgZGlkLWpzb24tcHJvZHVjdGlvbgogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybU51bWVyaWMgdmFsdWVzIHJlcHJlc2VudGFibGUgYXMgSUVFRTc1NCBNVVNUIGJlIHJlcHJlc2VudGVkIGFzIGEgTnVtYmVyIHR5cGUuICgxIG1zKRtbMjJtCiAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtQm9vbGVhbiB2YWx1ZXMgTVVTVCBiZSByZXByZXNlbnRlZCBhcyBhIEJvb2xlYW4gbGl0ZXJhbC4bWzIybQogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVNlcXVlbmNlIHZhbHVlIE1VU1QgYmUgcmVwcmVzZW50ZWQgYXMgYW4gQXJyYXkgdHlwZS4gKDEgbXMpG1syMm0KICAgICAgICAbWzMybeKckxtbMzltIBtbMm1Vbm9yZGVyZWQgc2V0cyBvZiB2YWx1ZXMgTVVTVCBiZSByZXByZXNlbnRlZCBhcyBhbiBBcnJheSB0eXBlLiAoMSBtcykbWzIybQogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVNldHMgb2YgcHJvcGVydGllcyBNVVNUIGJlIHJlcHJlc2VudGVkIGFzIGFuIE9iamVjdCB0eXBlLhtbMjJtCiAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtRW1wdHkgdmFsdWVzIE1VU1QgYmUgcmVwcmVzZW50ZWQgYXMgYSBudWxsIGxpdGVyYWwuG1syMm0KICAgICAgZGlkLWxkLWpzb24tcHJvZHVjdGlvbgogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVRoZSB2YWx1ZSBvZiBAY29udGV4dCBNVVNUIGJlIGV4YWN0bHkgb25lIG9mIHRoZXNlIHZhbHVlcy4bWzIybQogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybU51bWVyaWMgdmFsdWVzIHJlcHJlc2VudGFibGUgYXMgSUVFRTc1NCBNVVNUIGJlIHJlcHJlc2VudGVkIGFzIGEgTnVtYmVyIHR5cGUuG1syMm0KICAgICAgICAbWzMybeKckxtbMzltIBtbMm1Cb29sZWFuIHZhbHVlcyBNVVNUIGJlIHJlcHJlc2VudGVkIGFzIGEgQm9vbGVhbiBsaXRlcmFsLhtbMjJtCiAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtU2VxdWVuY2UgdmFsdWUgTVVTVCBiZSByZXByZXNlbnRlZCBhcyBhbiBBcnJheSB0eXBlLiAoMSBtcykbWzIybQogICAgICAgIBtbMzJt4pyTG1szOW0gG1sybVVub3JkZXJlZCBzZXRzIG9mIHZhbHVlcyBNVVNUIGJlIHJlcHJlc2VudGVkIGFzIGFuIEFycmF5IHR5cGUuICgxIG1zKRtbMjJtCiAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtU2V0cyBvZiBwcm9wZXJ0aWVzIE1VU1QgYmUgcmVwcmVzZW50ZWQgYXMgYW4gT2JqZWN0IHR5cGUuICgxIG1zKRtbMjJtCiAgICAgICAgG1szMm3inJMbWzM5bSAbWzJtRW1wdHkgdmFsdWVzIE1VU1QgYmUgcmVwcmVzZW50ZWQgYXMgYSBudWxsIGxpdGVyYWwuG1syMm0KChtbOTk5RBtbSxtbMW1UZXN0IFN1aXRlczogG1syMm0bWzFtG1szMm0xIHBhc3NlZBtbMzltG1syMm0sIDEgdG90YWwKG1sxbVRlc3RzOiAgICAgICAbWzIybRtbMW0bWzMybTYxIHBhc3NlZBtbMzltG1syMm0sIDYxIHRvdGFsChtbMW1TbmFwc2hvdHM6ICAgG1syMm0wIHRvdGFsChtbMW1UaW1lOhtbMjJtICAgICAgICAwLjkxOCBzLCBlc3RpbWF0ZWQgMSBzChtbMm1SYW4gYWxsIHRlc3Qgc3VpdGVzG1syMm0bWzJtLhtbMjJtCg=="
+      }
+    </script>
 
     <section id="conformance"></section>
 
     <script>
-      const testSuiteManagerEndpoint =
-        window.location.hostname === 'localhost'
-          ? 'http://localhost:8080/test-suite-manager/generate-report'
-          : 'https://vc.transmute.world/test-suite-manager/generate-report';
-
       function b64DecodeUnicode(str) {
         // Going backwards: from bytestream, to percent-encoding, to original string.
         return decodeURIComponent(
@@ -985,236 +1638,17 @@ it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
         );
       }
 
-      var editor = ace.edit('report-suites-input');
-      editor.setTheme('ace/theme/github');
-      editor.session.setMode('ace/mode/json');
-      editor.setValue(
-        JSON.stringify(
-          [
-            {
-              name: 'did-spec',
-              didMethods: {
-                'did:range14': {
-                  supportedContentTypes: ['application/did+json'],
-                  dids: ['did:range14:123'],
-                  'did:range14:123': {
-                    'application/did+json': {
-                      didDocument: {
-                        '@context': ['https://www.w3.org/ns/did/v1'],
-                        id: 'did:range14:123',
-                      },
-                      didDocumentMetaData: {
-                        'content-type': 'application/did+json',
-                      },
-                      didResolutionMetaData: {},
-                    },
-                  },
-                },
-              },
-            },
-          ],
-          null,
-          2
-        )
-      );
+      const suitesReportTerminal = JSON.parse(
+        document.getElementById('did-spec-report-terminal-results').innerHTML
+      ).suitesReportTerminal;
 
       var term = new Terminal({
         convertEol: true,
       });
       term.open(document.getElementById('terminal'));
 
-      var generateReport = async () => {
-        try {
-          const res = await fetch(testSuiteManagerEndpoint, {
-            headers: {
-              'Content-Type': 'application/json',
-              Accept: 'application/ld+json',
-            },
-            method: 'post',
-            body: editor.getValue(),
-          });
-
-          const responseBody = await res.json();
-
-          let encodedReport = responseBody.suitesReportTerminal;
-
-          renderReportResults(
-            'on-demand-report-results',
-            responseBody.suitesReportJson
-          );
-
-          term.reset();
-          term.write(b64DecodeUnicode(encodedReport));
-          alert('succeeded');
-        } catch (e) {
-          alert('failed');
-        }
-      };
-
-      const resultToEmoji = (test) => {
-        return test === 'passed' ? `✅` : `❌`;
-      };
-
-      const renderReportResults = (target, results) => {
-        let flattenMethodResults = {};
-
-        results[0].testResults.forEach((tr) => {
-          let ancestorsWithoutMethod = tr.ancestors.filter((a) => {
-            return !a.includes(tr.ancestors[1]);
-          });
-
-          let testAncestorsWithoutMethod = ancestorsWithoutMethod.join(' > ');
-          let testKey = `${testAncestorsWithoutMethod} > ${tr.title}`;
-          let didMethodTestResult = {
-            status: tr.status,
-            method: tr.ancestors[1],
-          };
-
-          if (!flattenMethodResults[testKey]) {
-            flattenMethodResults[testKey] = {
-              ancestorsWithoutMethod: ancestorsWithoutMethod.splice(1),
-              title: tr.title,
-              didMethods: [didMethodTestResult],
-            };
-          } else {
-            flattenMethodResults[testKey].didMethods.push(didMethodTestResult);
-          }
-        });
-
-        const resultsSorted = Object.values(flattenMethodResults).sort(
-          (a, b) => {
-            return a.ancestorsWithoutMethod.join(' > ') >
-              b.ancestorsWithoutMethod.join(' > ')
-              ? 1
-              : -1;
-          }
-        );
-
-        // this makes thing hierarchical again
-        let resultsBySection = {};
-        let root = resultsBySection;
-        resultsSorted.forEach((tr) => {
-          root = resultsBySection;
-          if (tr.ancestorsWithoutMethod.length > 1) {
-            let tail;
-            for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
-              let sectionName = tr.ancestorsWithoutMethod[i];
-              if (!root[sectionName]) {
-                root[sectionName] = {};
-              } else {
-                root[sectionName] = {
-                  ...root[sectionName],
-                };
-              }
-              tail = root;
-              root = root[sectionName];
-            }
-            Object.keys(tail).forEach((tailKey) => {
-              tail[tailKey] = {
-                ...tail[tailKey],
-                [tr.title]: tr.didMethods,
-                isLeaf: true,
-              };
-            });
-          } else {
-            root[tr.ancestorsWithoutMethod[0]] = {
-              ...root[tr.ancestorsWithoutMethod[0]],
-              isLeaf: true,
-              [tr.title]: tr.didMethods,
-            };
-          }
-        });
-
-        const recursiveRenderSection = (section, level) => {
-          let result = '';
-          if (section && !section.isLeaf && Object.keys(section).length) {
-            result = `
-
-        ${Object.keys(section)
-          .map((key) => {
-            const value = section[key];
-            const subSection = recursiveRenderSection(value, level + 1);
-            return `
-<section>
-<h${level}>${key}</h${level}>
-${subSection}
-</section>
-        `;
-          })
-          .join('\n')}
-
-                  `;
-          } else {
-            result = Object.keys(section)
-              .map((statement) => {
-                if (statement === 'isLeaf') {
-                  return '';
-                }
-                const count = section[statement]
-                  .map((test) => {
-                    return {
-                      status: test.status === 'passed' ? 'passed' : 'failed',
-                    };
-                  })
-                  .reduce((tally, test) => {
-                    if (!tally[test.status]) {
-                      tally[test.status] = 1;
-                    } else {
-                      tally[test.status] = tally[test.status] + 1;
-                    }
-                    return tally;
-                  }, {});
-
-                const resultTable = `
-<table class="simple" >
-<tbody>
-<tr>
-<th> </th>
-<th> ${count.failed ? resultToEmoji('failed') + ` (${count.failed})` : ''} 
-&nbsp;
-${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''} 
-</th>
-</tr>
-    ${section[statement]
-      .map((tr) => {
-        return `
-<tr>
-<td>${resultToEmoji(tr.status)}</td>
-<td style="width: 100%;">${tr.method}</td>
-</tr>
-`;
-      })
-      .join('\n')}
-</table>
-`;
-
-                return `
-<div>
-<p>${statement}</p>
-${resultTable}
-</div>
-`;
-              })
-              .join('\n');
-          }
-
-          return result;
-        };
-
-        let level = 3;
-        const testResultReport = recursiveRenderSection(
-          resultsBySection,
-          level
-        );
-        document.getElementById(target).innerHTML =
-          document.getElementById(target).innerHTML + testResultReport;
-      };
-
-      const lastDidSpecReport = JSON.parse(
-        document.getElementById('did-spec-suite-output').innerHTML
-      );
-
-      renderReportResults('report-results', lastDidSpecReport);
+      term.reset();
+      term.write(b64DecodeUnicode(suitesReportTerminal));
     </script>
   </body>
 </html>

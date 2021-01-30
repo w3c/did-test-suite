@@ -3,11 +3,12 @@ const path = require('path');
 const cheerio = require('cheerio');
 const moment = require('moment');
 const getReportResults = require('./services/getReportResults');
-const suitesInput = require('./suites/did-spec/default.json');
+
+const suitesInput = [require('./suites/did-spec/suite-config.js')];
 
 const respecPath = path.resolve(__dirname, '../../index.html');
 
-const updateRespec = (suitesInput, suitesReportJson) => {
+const updateRespec = (suitesInput, suitesReportJson, suitesReportTerminal) => {
   const spec = fs.readFileSync(respecPath).toString();
   const $ = cheerio.load(spec);
 
@@ -40,15 +41,26 @@ ${moment().format('LLLL')}
       </p>`
   );
 
+  $('#did-spec-report-terminal-results').replaceWith(
+    `<script id="did-spec-report-terminal-results">
+${JSON.stringify({ suitesReportTerminal }, null, 2)}
+      </script>`
+  );
+
   const updatedSpec = $.html();
   fs.writeFileSync(respecPath, updatedSpec);
 };
 
 (async () => {
-  const { suitesReportJson } = await getReportResults(suitesInput);
-  updateRespec(suitesInput, suitesReportJson);
+  const report = await getReportResults(suitesInput);
+
+  updateRespec(
+    suitesInput,
+    report.suitesReportJson,
+    report.suitesReportTerminal
+  );
   fs.writeFileSync(
     `../../test-vectors/did-spec.latest.json`,
-    JSON.stringify(suitesReportJson, null, 2)
+    JSON.stringify(report.suitesReportJson, null, 2)
   );
 })();
