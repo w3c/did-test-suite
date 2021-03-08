@@ -10,14 +10,21 @@ const didParametersTests = (suiteConfig) => {
     describe('did-parameters', () => {
       Object.keys(suiteConfig.didParameters).forEach((didParameter) => {
         describe(didParameter, () => {
-          it('The associated value MUST be an ASCII string.', async () => {
-            const didUrl = suiteConfig.didParameters[didParameter];
-            const param = utils.getQueryParamValueFromDidUri(
-              didUrl,
-              didParameter
-            );
-            expect(utils.isAsciiString(param)).toBe(true);
-          });
+          if (didParameter === 'service'
+           || didParameter === 'relativeRef'
+           || didParameter === 'versionId'
+           || didParameter === 'versionTime'
+           || didParameter === 'hl'
+          ) {
+            it('The associated value MUST be an ASCII string.', async () => {
+              const didUrl = suiteConfig.didParameters[didParameter];
+              const param = utils.getQueryParamValueFromDidUri(
+                didUrl,
+                didParameter
+              );
+              expect(utils.isAsciiString(param)).toBe(true);
+            });
+          }
 
           if (didParameter === 'relativeRef') {
             it('MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.', async () => {
