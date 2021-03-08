@@ -12,7 +12,7 @@
         "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
         "relativeRef": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
         "versionId": "did:example:123?versionId=0.1.0",
-        "versionTime": "did:example:123?versionTime=1601151242"
+        "versionTime": "did:example:123?versionTime=2020-09-26T20:14:02Z"
       },
       "did:example:123": {
         "application/did+json": {
