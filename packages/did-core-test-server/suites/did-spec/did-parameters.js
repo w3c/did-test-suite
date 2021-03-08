@@ -14,7 +14,7 @@ const didParametersTests = (suiteConfig) => {
             expect(utils.isAsciiString(param)).toBe(true);
           });
 
-          if (didParameter === 'relative-ref') {
+          if (didParameter === 'relativeRef') {
             it('MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.', async () => {
               const didUrl = suiteConfig.didParameters[didParameter];
               const param = utils.getQueryParamValueFromDidUri(
