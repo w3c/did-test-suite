@@ -19,6 +19,7 @@ describe('did-spec', () => {
         didMethodSuiteConfig
       );
       require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
+      require('./did-consumer').didConsumerTests(didMethodSuiteConfig);
     });
   });
 });
