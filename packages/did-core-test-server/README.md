@@ -12,7 +12,7 @@ You may also need to [install docker](https://docs.docker.com/get-docker/).
 ```
 git clone git@github.com:w3c/did-test-suite.git
 npm i
-cd ./packages/did-core-test-suite
+cd ./packages/did-core-test-server
 ```
 
 The suites can be tests manually, using:
@@ -25,6 +25,12 @@ Or via http,
 
 ```
 npm run start
+```
+
+Or run only the test:
+
+```
+npm run test
 ```
 
 ### Testing with CURL
