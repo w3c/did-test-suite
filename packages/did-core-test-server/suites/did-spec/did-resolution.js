@@ -1,3 +1,5 @@
+const utils = require('./utils');
+
 const didResolutionTests = (suiteConfig) => {
   describe('resolution', () => {
     suiteConfig.dids.forEach((didExample) => {
@@ -13,7 +15,7 @@ const didResolutionTests = (suiteConfig) => {
             });
 
             if (
-              suiteConfig[didExample][contentType].didDocument['canonicalId']
+              suiteConfig[didExample][contentType].didDocumentMetadata['canonicalId']
             ) {
               describe('canonicalId', () => {
                 it('MUST be of the same DID Method as the resolved ID', async () => {
@@ -73,6 +75,82 @@ const didResolutionTests = (suiteConfig) => {
                   expect(primaryId).toBeDefined();
                 });
               });
+            }
+
+            if (suiteConfig[didExample][contentType].didDocumentMetadata['created']) {
+              describe('created', () => {
+                it('Must be an XML Datetime', async () => {
+                  const {
+                    didDocumentMetadata: { created }
+                  } = suiteConfig[didExample][contentType];
+                  expect(utils.isXmlDatetime(created)).toBe(true)
+                })
+              })
+            }
+
+            if (suiteConfig[didExample][contentType].didDocumentMetadata['updated']) {
+              describe('updated', () => {
+                it('Must be an XML Datetime', async () => {
+                  const {
+                    didDocumentMetadata: { updated }
+                  } = suiteConfig[didExample][contentType];
+                  expect(utils.isXmlDatetime(updated)).toBe(true)
+                })
+
+                it('Must be larger than or equal to "created"', async () => {
+                  const {
+                    didDocumentMetadata: { created, updated }
+                  } = suiteConfig[didExample][contentType];
+                  expect((new Date(updated)).getTime()).toBeGreaterThanOrEqual((new Date(created)).getTime())
+                })
+              })
+            }
+
+            if (suiteConfig[didExample][contentType].didDocumentMetadata['nextUpdate']) {
+              describe('nextUpdate', () => {
+                it('Must be an XML Datetime', async () => {
+                  const {
+                    didDocumentMetadata: { nextUpdate }
+                  } = suiteConfig[didExample][contentType];
+                  expect(utils.isXmlDatetime(nextUpdate)).toBe(true)
+                })
+
+                it('Must be larger than to "updated"', async () => {
+                  const {
+                    didDocumentMetadata: { updated, nextUpdate }
+                  } = suiteConfig[didExample][contentType];
+                  expect((new Date(nextUpdate)).getTime()).toBeGreaterThan((new Date(updated)).getTime())
+                })
+              })
+            }
+
+            if (suiteConfig[didExample][contentType].didDocumentMetadata['versionId']) {
+              describe('versionId', () => {
+                it('Must be an ASCII string', async () => {
+                  const {
+                    didDocumentMetadata: { versionId }
+                  } = suiteConfig[didExample][contentType];
+                  expect(utils.isAsciiString(versionId)).toBe(true);
+                })
+              })
+            }
+
+            if (suiteConfig[didExample][contentType].didDocumentMetadata['nextVersionId']) {
+              describe('nextVersionId', () => {
+                it('Must be an ASCII string', async () => {
+                  const {
+                    didDocumentMetadata: { nextVersionId }
+                  } = suiteConfig[didExample][contentType];
+                  expect(utils.isAsciiString(nextVersionId)).toBe(true);
+                })
+
+                it('Must not be equal to versionId', async () => {
+                  const {
+                    didDocumentMetadata: { versionId, nextVersionId }
+                  } = suiteConfig[didExample][contentType];
+                  expect(nextVersionId).not.toEqual(versionId)
+                })
+              })
             }
           });
         });
