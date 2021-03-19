@@ -57,7 +57,7 @@
             "nextVersionId": "0.2.0"
           },
           "didResolutionMetadata": {
-            "content-type": "application/did+json"
+            "contentType": "application/did+json"
           }
         },
         "application/did+ld+json": {
@@ -86,7 +86,7 @@
           },
           "didDocumentMetadata": {},
           "didResolutionMetadata": {
-            "content-type": "application/did+ld+json"
+            "contentType": "application/did+ld+json"
           }
         }
       },
@@ -101,7 +101,7 @@
             },
             "didDocumentMetadata": {},
             "didResolutionMetadata": {
-              "content-type": "application/did+cool+json"
+              "contentType": "application/did+cool+json"
             }
           }
         }
