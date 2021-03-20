@@ -5,6 +5,68 @@
       {
         "ancestors": [
           "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "did-syntax",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "title": "MUST be a valid URL.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "did-syntax",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "title": "The URI scheme MUST be \"did:\"",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "did-syntax",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "title": "The DID method name MUST be an ASCII lowercase string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "did-syntax",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "title": "The DID method name MUST NOT be empty.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "5. Core Properties",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "title": "5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in § 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:key - 2018 Ed25519 cryptosuite - did-key-js - Digital Bazaar",
+          "resolution",
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+          "application/did+ld+json",
+          "id"
+        ],
+        "title": "MUST be the same as the resolved ID",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
           "did:example",
           "did-syntax",
           "did:example:123"
@@ -100,6 +162,26 @@
           "versionTime"
         ],
         "title": "The associated value MUST be an ASCII string.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "5. Core Properties",
+          "did:example:123"
+        ],
+        "title": "5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in § 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.",
+        "status": "passed"
+      },
+      {
+        "ancestors": [
+          "did-spec",
+          "did:example",
+          "5. Core Properties",
+          "did:example:123"
+        ],
+        "title": "5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in § 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.",
         "status": "passed"
       },
       {
