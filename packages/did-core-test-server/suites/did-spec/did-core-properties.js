@@ -1,5 +1,6 @@
 const utils = require('./utils');
-const {isValidDID, isValidURI} = utils;
+const {isValidDID, isValidURI, isValidBase58, isValidJwk} = utils;
+const jose = require('node-jose');
 
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 
@@ -42,59 +43,112 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'OPTIONAL. If present, the value MUST be an ordered set of verification ' +
     'methods, where each verification method is expressed using a map.',
     async () => {
-
+      const {verificationMethod} = didDocument;
+      if(verificationMethod) {
+        expect(Array.isArray(verificationMethod)).toBe(true);
+        verificationMethod.forEach(verificationMethodValue => {
+          expect(isValidURI(verificationMethodValue)).toBe(true);
+        });
+      }
   });
 
-  it.skip('5.2 Verification Methods - The verification method map MUST include ' +
+  it('5.2 Verification Methods - The verification method map MUST include ' +
     'the id, type, controller, and specific verification material properties ' +
     'that are determined by the value of type and are defined in ' +
     '§ 5.2.1 Verification Material.', async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        expect(vm).toHaveProperty('id');
+        expect(vm).toHaveProperty('type');
+        expect(vm).toHaveProperty('controller');
+      });
   });
 
-  it.skip('5.2 Verification Methods - The value of the id property for a ' +
+  it('5.2 Verification Methods - The value of the id property for a ' +
     'verification method MUST be a string that conforms to the rules in ' +
     'Section § 3.2 DID URL Syntax.', async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        expect(isValidDID(vm.id)).toBe(true);
+      });
   });
 
-  it.skip('5.2 Verification Methods - The value of the type property MUST be a ' +
-    'string that references exactly one verification method type.',
+  it('5.2 Verification Methods - The value of the type property MUST be ' +
+    'a string that references exactly one verification method type.',
     async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        expect(typeof vm.type === 'string').toBe(true);
+      });
   });
 
-  it.skip('5.2 Verification Methods - The value of the controller property ' +
+  it('5.2 Verification Methods - The value of the controller property ' +
     'MUST be a string that conforms to the rules in § 3.1 DID Syntax.',
     async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        expect(isValidDID(vm.controller)).toBe(true);
+      });
   });
 
-  it.skip('5.2 Verification Methods - The publicKeyBase58 property is ' +
+  it('5.2 Verification Methods - The publicKeyBase58 property is ' +
     'OPTIONAL. This feature is non-normative. If present, the value MUST be a' +
     'string representation of a [BASE58] encoded public key.', async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        const {publicKeyBase58} = vm;
+        if(publicKeyBase58) {
+          expect(isValidBase58(publicKeyBase58)).toBe(true);
+        }
+      });
   });
 
-  it.skip('5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. ' +
+  it('5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. ' +
     'If present, the value MUST be a map representing a JSON Web Key that ' +
     'conforms to [RFC7517].', async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        const {publicKeyJwk} = vm;
+        if(publicKeyJwk) {
+          expect(isValidJwk(publicKeyJwk)).toBe(true);
+        }
+      });
   });
 
-  it.skip('5.2 Verification Methods - The map MUST NOT contain "d", or any ' +
+  it('5.2 Verification Methods - The map MUST NOT contain "d", or any ' +
     'other members of the private information class as described in ' +
     'Registration Template.', async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        const {publicKeyJwk} = vm;
+        if(publicKeyJwk) {
+          expect(publicKeyJwk).not.toHaveProperty('d');
+          expect(publicKeyJwk).not.toHaveProperty('p');
+          expect(publicKeyJwk).not.toHaveProperty('q');
+          expect(publicKeyJwk).not.toHaveProperty('dp');
+          expect(publicKeyJwk).not.toHaveProperty('dq');
+          expect(publicKeyJwk).not.toHaveProperty('qi');
+          expect(publicKeyJwk).not.toHaveProperty('oth');
+          expect(publicKeyJwk).not.toHaveProperty('k');
+        }
+      });
   });
 
-  it.skip('5.2.1 Verification Material - A verification method MUST NOT ' +
+  it('5.2.1 Verification Material - A verification method MUST NOT ' +
     'contain multiple verification material properties for the same ' +
     'material. For example, expressing key material in a verification method ' +
     'using both publicKeyJwk and publicKeyBase58 at the same time is ' +
     'prohibited.',
     async () => {
-
+      const verificationMethods = getAllVerificationMethods(didDocument);
+      verificationMethods.forEach(vm => {
+        const {publicKeyBase58} = vm;
+        const {publicKeyJwk} = vm;
+        if(publicKeyBase58 !== undefined && publicKeyJwk !== undefined) {
+          throw new Error('Both publicKeyJwk and publicKeyBase58 are ' +
+            'defined at the same time.');
+        }
+      });
   });
 
   it.skip('5.3.1 Authentication - The authentication property is OPTIONAL. ' +
@@ -171,6 +225,22 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
 
   });
 }
+
+const getAllVerificationMethods = (didDocument) => {
+  const verificationMethods = [];
+  const verificationRelationships = ['verificationMethod', 'authentication',
+    'assertionMethod', 'keyAgreement', 'capabilityInvocation',
+    'capabilityDelegation'];
+  verificationRelationships.forEach(name => {
+    didDocument[name].forEach(vr => {
+      if(typeof vr === 'object') {
+        verificationMethods.push(vr);
+      }
+    });
+  })
+
+  return verificationMethods;
+};
 
 const didCorePropertiesTests = (suiteConfig) => {
   describe('did-core-properties', () => {

@@ -64,7 +64,7 @@
             "id": "did:example:123",
             "verificationMethod": [
               {
-                "id": "#key-0",
+                "id": "did:example:123#key-0",
                 "type": "JsonWebKey2020",
                 "controller": "did:example:123",
                 "publicKeyJwk": {
@@ -74,7 +74,7 @@
                 }
               },
               {
-                "id": "#key-1",
+                "id": "did:example:123#key-1",
                 "type": "JsonWebKey2020",
                 "controller": "did:example:123",
                 "publicKeyJwk": {
@@ -109,13 +109,13 @@
             "id": "did:example:123",
             "verificationMethod": [
               {
-                "id": "#key-0",
+                "id": "did:example:123#key-0",
                 "type": "Ed25519VerificationKey2018",
                 "controller": "did:example:123",
                 "publicKeyBase58": "6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx"
               },
               {
-                "id": "#key-1",
+                "id": "did:example:123#key-1",
                 "type": "X25519KeyAgreementKey2019",
                 "controller": "did:example:123",
                 "publicKeyBase58": "FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2"
