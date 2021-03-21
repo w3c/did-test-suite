@@ -224,48 +224,128 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
       });
   });
 
-  it.skip('5.4 Services - The service property is OPTIONAL. If present, the ' +
+  it('5.4 Services - The service property is OPTIONAL. If present, the ' +
     'associated value MUST be an ordered set of services, where each service ' +
     'is described by a map.', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        expect(Array.isArray(service)).toBe(true);
+        service.forEach(serviceValue => {
+          expect(typeof serviceValue === 'object').toBe(true);
+        });
+      }
   });
 
-  it.skip('5.4 Services - Each service map MUST contain id, type, and ' +
+  it('5.4 Services - Each service map MUST contain id, type, and ' +
     'serviceEndpoint properties.', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        service.forEach(serviceValue => {
+          expect(serviceValue).toHaveProperty('id');
+          expect(serviceValue).toHaveProperty('type');
+          expect(serviceValue).toHaveProperty('serviceEndpoint');
+        });
+      }
   });
 
-  it.skip('5.4 Services - The value of the id property MUST be a URI ' +
+  it('5.4 Services - The value of the id property MUST be a URI ' +
     'conforming to [RFC3986].', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        service.forEach(serviceValue => {
+          expect(isValidURI(serviceValue.id)).toBe(true);
+        });
+      }
   });
 
-  it.skip('5.4 Services - A conforming producer MUST NOT produce multiple ' +
+  it('5.4 Services - A conforming producer MUST NOT produce multiple ' +
     'service entries with the same id.', async () => {
-
+      const {service} = didDocument;
+      const allIds = [];
+      if(service) {
+        service.forEach(serviceValue => {
+          allIds.push(serviceValue.id);
+        });
+        const allUniqueIds = new Set(allIds);
+        expect(allUniqueIds.size === allIds.length).toBe(true);
+      }
   });
 
-  it.skip('5.4 Services - A conforming consumer MUST produce an error if it ' +
+  it('5.4 Services - A conforming consumer MUST produce an error if it ' +
     'detects multiple service entries with the same id.', async () => {
+      const {service} = didDocument;
+      const allIds = [];
+      if(service) {
+        // Implementation #1
+        service.forEach(serviceValue => {
+          allIds.push(serviceValue.id);
+        });
+        const allUniqueIds = new Set(allIds);
+        expect(allUniqueIds.size === allIds.length).toBe(true);
 
+        // TODO: Implementation #2
+      }
   });
 
-  it.skip('5.4 Services - The value of the type property MUST be a string or ' +
+  it('5.4 Services - The value of the type property MUST be a string or ' +
     'an ordered set of strings.', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        service.forEach(serviceValue => {
+          if(typeof serviceValue.type === 'string') {
+            expect(serviceValue.type.length > 0).toBe(true);
+          } else if(Array.isArray(serviceValue.type)) {
+            const types = serviceValue.type;
+            types.forEach(type => {
+              expect(typeof type === 'string').toBe(true);
+            });
+          } else {
+            throw new Error('Invalid value for `type` property.');
+          }
+        });
+      }
   });
 
-  it.skip('5.4 Services - The value of the serviceEndpoint property MUST be ' +
+  it('5.4 Services - The value of the serviceEndpoint property MUST be ' +
     'a string, a map, or an ordered set composed of one or more strings ' +
     'and/or maps.', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        service.forEach(serviceValue => {
+          const {serviceEndpoint} = serviceValue;
+          if(typeof serviceEndpoint === 'string') {
+            expect(serviceEndpoint.length > 0).toBe(true);
+          } else if(typeof serviceEndpoint === 'object') {
+            expect(Object.entries(serviceEndpoint).length > 0).toBe(true);
+          } else if(Array.isArray(serviceEndpoint)) {
+            serviceEndpoint.forEach(endpointValue => {
+              if(typeof endpointValue === 'string') {
+                expect(endpointValue.length > 0).toBe(true);
+              } else if(typeof endpointValue === 'object') {
+                expect(Object.entries(endpointValue).length > 0).toBe(true);
+              }
+            });
+          } else {
+            throw new Error(
+              'Unknown value for serviceEndpoint: ' + serviceEndpoint);
+          }
+        });
+      }
   });
 
-  it.skip('5.4 Services - All [serviceEndpoint] string values MUST be valid ' +
+  it('5.4 Services - All [serviceEndpoint] string values MUST be valid ' +
     'URIs conforming to [RFC3986] and normalized according to the ' +
     'Normalization and Comparison rules in RFC3986 and to any normalization ' +
     'rules in its applicable URI scheme specification.', async () => {
-
+      const {service} = didDocument;
+      if(service) {
+        service.forEach(serviceValue => {
+          const {serviceEndpoint} = serviceValue;
+          if(typeof serviceEndpoint === 'string') {
+            expect(isValidURI(serviceEndpoint)).toBe(true);
+          }
+        });
+      }
   });
 }
 
