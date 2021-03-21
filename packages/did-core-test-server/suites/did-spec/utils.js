@@ -60,7 +60,53 @@ const isValidDID = (did) => {
   return didRegex.test(did);
 };
 
+const getAbsoluteDIDURL = (base, relativeURL) => {
+  let absoluteURL = relativeURL;
+  if(!relativeURL.startsWith('did:')) {
+    absoluteURL = base + relativeURL;
+  }
+  return absoluteURL;
+}
+
+const isValidVerificationMethod = (vm) => {
+  expect(vm).toHaveProperty('id');
+  expect(vm).toHaveProperty('type');
+  expect(vm).toHaveProperty('controller');
+  expect(isValidDID(vm.id)).toBe(true);
+  expect(typeof vm.type === 'string').toBe(true);
+  expect(isValidDID(vm.controller)).toBe(true);
+
+  const {publicKeyBase58} = vm;
+  if(publicKeyBase58) {
+    expect(isValidBase58(publicKeyBase58)).toBe(true);
+  }
+
+  const {publicKeyJwk} = vm;
+  if(publicKeyJwk) {
+    expect(isValidJwk(publicKeyJwk)).toBe(true);
+    expect(publicKeyJwk).not.toHaveProperty('d');
+    expect(publicKeyJwk).not.toHaveProperty('p');
+    expect(publicKeyJwk).not.toHaveProperty('q');
+    expect(publicKeyJwk).not.toHaveProperty('dp');
+    expect(publicKeyJwk).not.toHaveProperty('dq');
+    expect(publicKeyJwk).not.toHaveProperty('qi');
+    expect(publicKeyJwk).not.toHaveProperty('oth');
+    expect(publicKeyJwk).not.toHaveProperty('k');
+  }
+
+  if(publicKeyBase58 !== undefined && publicKeyJwk !== undefined) {
+    throw new Error('Both publicKeyJwk and publicKeyBase58 are ' +
+      'defined at the same time.');
+  }
+
+  return true;
+}
+>>>>>>> Add Core Properties tests for Section 5.3.x.
+
 module.exports = {
+  getAbsoluteDIDURL,
+  getQueryParamValueFromDidUri,
+  isAsciiString,
   isValidBase58,
   isValidDID,
   isValidJwk,
@@ -69,4 +115,5 @@ module.exports = {
   isXmlDatetime,
   isAsciiString,
   getQueryParamValueFromDidUri,
+  isValidVerificationMethod
 };
