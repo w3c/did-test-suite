@@ -1,5 +1,8 @@
 const utils = require('./utils');
-const {isValidDID, isValidURI, isValidBase58, isValidJwk} = utils;
+const {
+  isValidDID, isValidURI, isValidBase58, isValidJwk, isValidVerificationMethod,
+  getAbsoluteDIDURL
+} = utils;
 const jose = require('node-jose');
 
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
@@ -151,34 +154,74 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
       });
   });
 
-  it.skip('5.3.1 Authentication - The authentication property is OPTIONAL. ' +
+  it('5.3.1 Authentication - The authentication property is OPTIONAL. ' +
     'If present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
-
+      const {authentication} = didDocument;
+      authentication.forEach(vm => {
+        if(typeof vm === 'string') {
+          let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
+          expect(isValidDID(absoluteURL)).toBe(true);
+        } else {
+          expect(isValidVerificationMethod(vm)).toBe(true);
+        }
+      });
   });
 
-  it.skip('5.3.2 Assertion - The assertionMethod property is OPTIONAL. If ' +
+  it('5.3.2 Assertion - The assertionMethod property is OPTIONAL. If ' +
     'present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
-
+      const {assertionMethod} = didDocument;
+      assertionMethod.forEach(vm => {
+        if(typeof vm === 'string') {
+          let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
+          expect(isValidDID(absoluteURL)).toBe(true);
+        } else {
+          expect(isValidVerificationMethod(vm)).toBe(true);
+        }
+      });
   });
 
-  it.skip('5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If ' +
+  it('5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If ' +
     'present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
-
+      const {keyAgreement} = didDocument;
+      keyAgreement.forEach(vm => {
+        if(typeof vm === 'string') {
+          let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
+          expect(isValidDID(absoluteURL)).toBe(true);
+        } else {
+          expect(isValidVerificationMethod(vm)).toBe(true);
+        }
+      });
   });
 
-  it.skip('5.3.4 Capability Invocation - The capabilityInvocation property ' +
+  it('5.3.4 Capability Invocation - The capabilityInvocation property ' +
     'is OPTIONAL. If present, the associated value MUST be an ordered set of ' +
     'one or more verification methods.', async () => {
-
+      const {capabilityInvocation} = didDocument;
+      capabilityInvocation.forEach(vm => {
+        if(typeof vm === 'string') {
+          let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
+          expect(isValidDID(absoluteURL)).toBe(true);
+        } else {
+          expect(isValidVerificationMethod(vm)).toBe(true);
+        }
+      });
   });
 
   it.skip('5.3.5 Capability Delegation - The capabilityDelegation property ' +
     'is OPTIONAL. If present, the associated value MUST be an ordered set of ' +
     'one or more verification methods.', async () => {
-
+      const {capabilityDelegation} = didDocument;
+      capabilityDelegation.forEach(vm => {
+        if(typeof vm === 'string') {
+          let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
+          expect(isValidDID(absoluteURL)).toBe(true);
+        } else {
+          expect(isValidVerificationMethod(vm)).toBe(true);
+        }
+      });
   });
 
   it.skip('5.4 Services - The service property is OPTIONAL. If present, the ' +
