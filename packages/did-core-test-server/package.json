@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "base64url": "^3.0.1",
+    "deep-equal": "^2.0.5",
     "fastify": "^3.9.1",
     "fastify-cors": "^5.0.0",
     "fastify-swagger": "^3.5.0",

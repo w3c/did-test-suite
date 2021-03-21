@@ -12,10 +12,13 @@ describe('did-spec', () => {
       require('./did-parameters').didParametersTests(didMethodSuiteConfig);
       require('./did-core-properties').didCorePropertiesTests(
         didMethodSuiteConfig);
-      require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
       require('./did-json-production').didJsonProductionTests(
         didMethodSuiteConfig
       );
+      require('./did-jsonld-production').didJsonldProductionTests(
+        didMethodSuiteConfig
+      );
+      require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
     });
   });
 });

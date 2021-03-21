@@ -210,7 +210,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
       });
   });
 
-  it.skip('5.3.5 Capability Delegation - The capabilityDelegation property ' +
+  it('5.3.5 Capability Delegation - The capabilityDelegation property ' +
     'is OPTIONAL. If present, the associated value MUST be an ordered set of ' +
     'one or more verification methods.', async () => {
       const {capabilityDelegation} = didDocument;
