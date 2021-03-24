@@ -10,9 +10,9 @@
       "didParameters": {
         "hl": "did:example:123?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
         "service": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "relative-ref": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "version-id": "did:example:123?version-id=0.1.0",
-        "version-time": "did:example:123?version-time=2020-09-26T20:14:02.000Z"
+        "relativeRef": "did:example:123?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+        "versionId": "did:example:123?versionId=0.1.0",
+        "versionTime": "did:example:123?versionTime=2020-09-26T20:14:02Z"
       },
       "did:example:123": {
         "application/did+json": {
