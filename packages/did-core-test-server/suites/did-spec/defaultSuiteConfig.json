@@ -143,10 +143,10 @@
               "publicKeyBase58": "JhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr"
             }]
           },
-          "didDocumentMetaData": {
+          "didDocumentMetadata": {
             "content-type": "application/did+ld+json"
           },
-          "didResolutionMetaData": {}
+          "didResolutionMetadata": {}
         }
       }
     }

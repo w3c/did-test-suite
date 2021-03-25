@@ -54,12 +54,6 @@ const isXmlDatetime = (data) => {
   return regex.test(data)
 };
 
-const isValidDID = (did) => {
-  const didRegex = /did:(?<method>[a-z0-9]+):(?<idchar>[a-zA-Z0-9:\\-_]+)/;
-
-  return didRegex.test(did);
-};
-
 const getAbsoluteDIDURL = (base, relativeURL) => {
   let absoluteURL = relativeURL;
   if(!relativeURL.startsWith('did:')) {
@@ -101,7 +95,6 @@ const isValidVerificationMethod = (vm) => {
 
   return true;
 }
->>>>>>> Add Core Properties tests for Section 5.3.x.
 
 module.exports = {
   getAbsoluteDIDURL,
