@@ -1,0 +1,135 @@
+{
+  "name": "did-resolution",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 4, 5, 6 ],
+    "invalidDidErrorOutcome": [ 1 ],
+    "notFoundErrorOutcome": [ 2 ],
+    "representationNotSupportedErrorOutcome": [ ],
+    "deactivatedOutcome": [ 3 ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:example:111",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+        },
+        "didDocument": {
+          "id": "did:example:111",
+          "verificationMethod": [],
+          "service": []
+        },
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:example_222",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "error": "invalidDid"
+        },
+        "didDocument": null,
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:example:333",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "error": "notFound"
+        },
+        "didDocument": null,
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:example:444",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        },
+        "didDocument": {
+          "id": "did:example:444",
+          "verificationMethod": [],
+          "service": []
+        },
+        "didDocumentMetadata": {
+          "deactivated": true
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:example:555",
+        "resolutionOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:example:555\",\"verificationMethod\":[],\"service\":[]}",
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:example:666",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:example:666\",\"verificationMethod\":[],\"service\":[]}",
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:example:777",
+        "resolutionOptions": {
+          "accept": "application/did+cbor"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+cbor"
+        },
+        "didDocumentStream": "62a36469646f6469653a6178706d656c313a3332767272656669636974616f694d6e74656f68806473677265697665630080",
+        "didDocumentMetadata": {
+        }
+      }
+    }
+  ]
+}
