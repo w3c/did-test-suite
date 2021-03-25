@@ -38,7 +38,7 @@ const generateJsonldProductionTests = ({did, resolutionResult}) => {
     'representation of a DID document, a conforming producer MUST specify a ' +
     'media type of application/did+ld+json to downstream applications such ' +
     'as described in § 7.1.2 DID Resolution Metadata.', async () => {
-      const contentType = resolutionResult.didDocumentMetaData['content-type'];
+      const {contentType} = resolutionResult.didResolutionMetadata;
       expect(contentType).toBe('application/did+ld+json');
   });
 }
