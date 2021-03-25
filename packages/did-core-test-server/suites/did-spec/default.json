@@ -50,10 +50,10 @@
               "capabilityDelegation": ["#key-0"],
               "keyAgreement": ["#key-1"]
             },
-            "didDocumentMetaData": {
-              "content-type": "application/did+json"
-            },
-            "didResolutionMetaData": {}
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+              "contentType": "application/did+json"
+            }
           },
           "application/did+ld+json": {
             "didDocument": {
@@ -79,10 +79,10 @@
               "capabilityDelegation": ["#key-0"],
               "keyAgreement": ["#key-1"]
             },
-            "didDocumentMetaData": {
-              "content-type": "application/did+ld+json"
-            },
-            "didResolutionMetaData": {}
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+              "contentType": "application/did+ld+json"
+            }
           }
         },
         "did:Cool": {
@@ -94,10 +94,10 @@
                 "id": "did:Cool:123",
                 "forbidden__proto__": { "vulnerable": "cool?" }
               },
-              "didDocumentMetaData": {
-                "content-type": "application/did+cool+json"
-              },
-              "didResolutionMetaData": {}
+              "didDocumentMetadata": {},
+              "didResolutionMetadata": {
+                "contentType": "application/did+cool+json"
+              }
             }
           }
         }
@@ -138,10 +138,10 @@
                 "publicKeyBase58": "JhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr"
               }]
             },
-            "didDocumentMetaData": {
-              "content-type": "application/did+ld+json"
-            },
-            "didResolutionMetaData": {}
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+              "contentType": "application/did+ld+json"
+            }
           }
         }
       }
