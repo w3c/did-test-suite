@@ -19,7 +19,9 @@
     "fastify-cors": "^5.0.0",
     "fastify-swagger": "^3.5.0",
     "jest": "^26.6.3",
+    "jose": "^2.0.4",
     "node-fetch": "^2.6.1",
-    "querystring": "^0.2.0"
+    "querystring": "^0.2.0",
+    "uri-js": "^4.4.1"
   }
 }

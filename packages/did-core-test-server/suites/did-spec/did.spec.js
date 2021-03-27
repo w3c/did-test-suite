@@ -10,6 +10,8 @@ describe('did-spec', () => {
       const didMethodSuiteConfig = suiteConfig.didMethods[didMethod];
       require('./did-syntax').didSyntaxTests(didMethodSuiteConfig);
       require('./did-parameters').didParametersTests(didMethodSuiteConfig);
+      require('./did-core-properties').didCorePropertiesTests(
+        didMethodSuiteConfig);
       require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
       require('./did-json-production').didJsonProductionTests(
         didMethodSuiteConfig
