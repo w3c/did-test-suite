@@ -11,7 +11,11 @@ const didMetadataStructureTests = (suiteConfig) => {
                                     expect(didDocumentMetadata instanceof Object).toBeTruthy();
                                 });
 
-                                it.todo('Each property name MUST be a string.');
+                                it('Each property name MUST be a string.', () => {
+                                    Object.keys(didDocumentMetadata).forEach((property_name) => {
+                                        expect(typeof property_name).toBe("string");
+                                    });
+                                });
 
                                 it.todo('Each property value MUST be a string, map, list, ordered set, boolean, or null.');
 
