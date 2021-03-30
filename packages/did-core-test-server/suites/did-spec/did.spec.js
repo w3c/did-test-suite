@@ -21,9 +21,6 @@ describe('did-spec', () => {
       require('./did-producer').didProducerTests(
         didMethodSuiteConfig
       );
-      require('./did-jsonld-consumption').didJsonldConsumptionTests(
-        didMethodSuiteConfig
-      );
       require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
     });
   });
