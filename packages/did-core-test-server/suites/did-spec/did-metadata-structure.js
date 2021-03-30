@@ -7,7 +7,9 @@ const didMetadataStructureTests = (suiteConfig) => {
                         const didDocumentMetadata = suiteConfig[didExample][contentType].didDocumentMetadata;
                         if (didDocumentMetadata) {
                             describe("didDocumentMetadata", () => {
-                                it.todo('The structure used to communicate this metadata MUST be a map of properties.');
+                                it('The structure used to communicate this metadata MUST be a map of properties.', () => {
+                                    expect(didDocumentMetadata instanceof Object).toBeTruthy();
+                                });
 
                                 it.todo('Each property name MUST be a string.');
 
