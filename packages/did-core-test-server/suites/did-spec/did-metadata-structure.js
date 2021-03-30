@@ -29,8 +29,15 @@ const didMetadataStructureTest_r = (didDocumentMetadata) => {
             '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
             'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
 
-        it.todo('The entire metadata structure MUST be serializable according to the JSON ' +
-            'serialization rules in the [INFRA] specification.');
+        it('The entire metadata structure MUST be serializable according to the JSON ' +
+            'serialization rules in the [INFRA] specification.', () => {
+                // Checking this by serialize/deserialize to/from JSON, then compare the result
+                var obj = {};
+                expect(() => {
+                    obj = JSON.parse(JSON.stringify(didDocumentMetadata));
+                }).not.toThrow();
+                expect(didDocumentMetadata).toEqual(obj);
+        });
     });
 };
 
