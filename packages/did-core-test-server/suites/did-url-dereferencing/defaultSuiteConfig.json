@@ -1,0 +1,79 @@
+{
+  "name": "did-url-dereferencing",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ 2 ],
+    "notFoundErrorOutcome": [ 3 ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example:111",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\",:\"did:example:111\",\"verificationMethod\":[],\"service\":[]}",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example:222#key-1",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\",:\"did:example:222#key-1\",\"controller\":\"did:example:222\",\"publicKeyBase58\":\"F6NxfeuPJ5NhmDM6QT2TeSFxcnnkQBgtv6yfQziS5NPM\"}",
+        "contentMetadata": {
+          "contentType": "application/did+json"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example_333",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "invalidDidUrl"
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example:444",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "notFound"
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+[{
+  "name": "did-url-dereferencing",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ 2 ],
+    "notFoundErrorOutcome": [ ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example:123",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\",:\"did:example:123\",\"verificationMethod\":[],\"service\":[]}",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example:123#key-1",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\",:\"did:example:123#key-1\",\"controller\":\"did:example:123\",\"publicKeyBase58\":\"F6NxfeuPJ5NhmDM6QT2TeSFxcnnkQBgtv6yfQziS5NPM\"}",
+        "contentMetadata": {
+          "contentType": "application/did+json"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:example_123",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "invalidDidUrl"
+        },
+        "contentStream": null
+        "contentMetadata": {
+        }
+      }
+    }
+  ]
+}
+]
