@@ -20,6 +20,9 @@ describe('did-spec', () => {
       require('./did-jsonld-production').didJsonldProductionTests(
         didMethodSuiteConfig
       );
+      require('./did-producer').didProducerTests(
+        didMethodSuiteConfig
+      );
       require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
       require('./did-consumer').didConsumerTests(didMethodSuiteConfig);
     });
