@@ -17,7 +17,6 @@
       "did:example:123": {
         "application/did+json": {
           "didDocument": {
-            "@context": ["https://www.w3.org/ns/did/v1"],
             "id": "did:example:123",
             "verificationMethod": [
               {
