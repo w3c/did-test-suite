@@ -12,6 +12,8 @@ describe('did-spec', () => {
       require('./did-parameters').didParametersTests(didMethodSuiteConfig);
       require('./did-core-properties').didCorePropertiesTests(
         didMethodSuiteConfig);
+      require('./did-metadata-structure').didMetadataStructureTests(
+          didMethodSuiteConfig);
       require('./did-json-production').didJsonProductionTests(
         didMethodSuiteConfig
       );
