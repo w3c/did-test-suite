@@ -1,7 +1,7 @@
 let { suiteConfig } = global;
 
 if (!suiteConfig) {
-  suiteConfig = require('./defaultSuiteConfig.json');
+  suiteConfig = require('./default.js');
 }
 
 describe('did-spec', () => {
@@ -23,7 +23,6 @@ describe('did-spec', () => {
       require('./did-producer').didProducerTests(
         didMethodSuiteConfig
       );
-      require('./did-consumer').didConsumerTests(didMethodSuiteConfig);
     });
   });
 });
