@@ -1,17 +1,19 @@
 let { suiteConfig } = global;
 
 if (!suiteConfig) {
-  suiteConfig = require('./defaultSuiteConfig.json');
+  suiteConfig = require('./default');
 }
 
 const utils = require('./utils');
 
-describe('did-url-dereferencing', () => {
+describe('7.2 DID URL Dereferencing', () => {
   let i = 0;
-  suiteConfig.executions.forEach((execution) => {
-    const expectedOutcome = utils.findExpectedOutcome(suiteConfig.expectedOutcomes, i++);
-    describe(execution.input.didUrl, () => {
-      require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome);
+  suiteConfig.dereferencers.forEach((dereferencer) => {
+    dereferencer.executions.forEach((execution) => {
+      const expectedOutcome = utils.findExpectedOutcome(dereferencer.expectedOutcomes, i++);
+      describe(execution.input.didUrl, () => {
+        require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome);
+      });
     });
   });
 });
