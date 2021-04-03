@@ -1,7 +1,7 @@
 const utils = require('../utils');
 
 const didSyntaxTests = (suiteConfig) => {
-  describe('did-syntax', () => {
+  describe('3.1 DID Syntax', () => {
     suiteConfig.dids.forEach((didExample) => {
       describe(didExample, () => {
         it('MUST be a valid URL.', async () => {
