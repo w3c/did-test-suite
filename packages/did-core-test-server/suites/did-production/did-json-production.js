@@ -1,6 +1,6 @@
 const didJsonProductionTests = (suiteConfig) => {
   if (suiteConfig.supportedContentTypes.includes('application/did+json')) {
-    describe('did-json-production', () => {
+    describe('6.2.1 JSON Production', () => {
       it.todo(
         'Numeric values representable as IEEE754 MUST be represented as a Number type.'
       );

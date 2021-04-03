@@ -4,19 +4,20 @@ if (!suiteConfig) {
   suiteConfig = require('./default.js');
 }
 
-describe('6.x Production', () => {
-  Object.keys(suiteConfig.didMethods).forEach((didMethod) => {
-    describe(didMethod, () => {
-      const didMethodSuiteConfig = suiteConfig.didMethods[didMethod];
-      require('./did-producer').didProducerTests(
-        didMethodSuiteConfig
-      );
-      require('./did-json-production').didJsonProductionTests(
-        didMethodSuiteConfig
-      );
-      require('./did-jsonld-production').didJsonldProductionTests(
-        didMethodSuiteConfig
-      );
-    });
+suiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
+  const {didMethod, implementation, implementer} = didMethodSuiteConfig;
+  let suiteName =
+    `6.x Production - ${didMethod} - ${implementation} - ${implementer}`;
+
+  describe(suiteName, () => {
+    require('./did-producer').didProducerTests(
+      didMethodSuiteConfig
+    );
+    require('./did-json-production').didJsonProductionTests(
+      didMethodSuiteConfig
+    );
+    require('./did-jsonld-production').didJsonldProductionTests(
+      didMethodSuiteConfig
+    );
   });
 });
