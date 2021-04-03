@@ -1,4 +1,4 @@
-const utils = require('./utils');
+const utils = require('../utils');
 
 const didSyntaxTests = (suiteConfig) => {
   describe('did-syntax', () => {
