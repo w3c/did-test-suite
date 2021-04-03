@@ -23,7 +23,6 @@ describe('did-spec', () => {
       require('./did-producer').didProducerTests(
         didMethodSuiteConfig
       );
-      require('./did-resolution').didResolutionTests(didMethodSuiteConfig);
       require('./did-consumer').didConsumerTests(didMethodSuiteConfig);
     });
   });
