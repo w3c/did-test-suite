@@ -1,4 +1,4 @@
-const utils = require('./utils');
+const utils = require('../utils');
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 const deepEqual = require('deep-equal')
 
