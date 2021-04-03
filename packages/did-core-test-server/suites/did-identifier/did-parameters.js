@@ -7,7 +7,7 @@ const versionTimeRe = /^(-?(?:[1-9][0-9]{3,})|(?:0[0-9]{3}))-(0[1-9]|1[0-2])-(0[
 
 const didParametersTests = (suiteConfig) => {
   if (suiteConfig.didParameters) {
-    describe('did-parameters', () => {
+    describe('3.2.1 DID Parameters', () => {
       Object.keys(suiteConfig.didParameters).forEach((didParameter) => {
         describe(didParameter, () => {
           const didUrl = suiteConfig.didParameters[didParameter];
