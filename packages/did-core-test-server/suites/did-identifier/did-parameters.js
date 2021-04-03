@@ -6,8 +6,8 @@ const utils = require('../utils');
 const versionTimeRe = /^(-?(?:[1-9][0-9]{3,})|(?:0[0-9]{3}))-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T((?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]|24:00:00)(?:\.0+)?(?:Z|[+-]00:00)$/;
 
 const didParametersTests = (suiteConfig) => {
-  if (suiteConfig.didParameters) {
-    describe('3.2.1 DID Parameters', () => {
+  if(suiteConfig.didParameters) {
+    describe('3.2 DID URL Syntax', () => {
       Object.keys(suiteConfig.didParameters).forEach((didParameter) => {
         describe(didParameter, () => {
           const didUrl = suiteConfig.didParameters[didParameter];

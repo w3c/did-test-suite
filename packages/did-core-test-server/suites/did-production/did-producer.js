@@ -56,7 +56,7 @@ const generateDidProducerTests = ({did, resolutionResult}) => {
 }
 
 const didProducerTests = (suiteConfig) => {
-  describe('did-producer', () => {
+  describe('6.1 Production', () => {
     suiteConfig.dids.forEach((did) => {
       describe(did, () => {
         for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {

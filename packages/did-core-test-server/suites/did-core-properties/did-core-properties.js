@@ -366,15 +366,13 @@ const getAllVerificationMethods = (didDocument) => {
 };
 
 const didCorePropertiesTests = (suiteConfig) => {
-  describe('did-core-properties', () => {
-    suiteConfig.dids.forEach((did) => {
-      describe(did, () => {
-        for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
-          if(jsonMediaTypes.includes(mediaType)) {
-            generateDidCorePropertiesTests({did, resolutionResult});
-          }
+  suiteConfig.dids.forEach((did) => {
+    describe(did, () => {
+      for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
+        if(jsonMediaTypes.includes(mediaType)) {
+          generateDidCorePropertiesTests({did, resolutionResult});
         }
-      });
+      }
     });
   });
 };

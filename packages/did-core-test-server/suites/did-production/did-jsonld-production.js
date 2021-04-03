@@ -44,7 +44,7 @@ const generateJsonldProductionTests = ({did, resolutionResult}) => {
 }
 
 const didJsonldProductionTests = (suiteConfig) => {
-  describe('did-jsonld-production', () => {
+  describe('6.3.1 JSON-LD Production', () => {
     suiteConfig.dids.forEach((did) => {
       describe(did, () => {
         for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
