@@ -4,6 +4,6 @@ if (!suiteConfig) {
   suiteConfig = require('./default');
 }
 
-describe('did-consumption', () => {
+describe('6.x Consumption', () => {
   require('./did-consumer').didConsumerTests(suiteConfig);
 });
