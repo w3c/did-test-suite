@@ -1,7 +1,7 @@
 {
   "didMethod": "did:key",
-  "didImplementation": "did-method-key-js (2018 cryptosuite)",
-  "didImplementer": "Digital Bazaar",
+  "implementation": "did-method-key-js (2018 cryptosuite)",
+  "implementer": "Digital Bazaar",
   "supportedContentTypes": [
     "application/did+ld+json"
   ],
