@@ -1,4 +1,4 @@
-const utils = require('./utils');
+const utils = require('../utils');
 
 // https://www.w3.org/TR/xmlschema11-2/#nt-dateTimeRep
 // Constrained to UTC and without sub-second decimal precision.
