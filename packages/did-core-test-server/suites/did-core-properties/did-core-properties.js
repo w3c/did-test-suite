@@ -8,7 +8,7 @@ const jose = require('node-jose');
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 
 const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
-  const {didDocument} = resolutionResult;
+  const didDocument = resolutionResult.dmProperties;
 
   it('5.1.1 DID Subject - The value of id MUST be a string that ' +
     'conforms to the rules in § 3.1 DID Syntax and MUST exist in the root ' +
