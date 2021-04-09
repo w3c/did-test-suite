@@ -1,7 +1,10 @@
 const deepEqual = require('deep-equal')
 
 const generateJsonldProductionTests = ({did, resolutionResult}) => {
-  const {didDocument} = resolutionResult;
+  const didDocument = {
+    ...resolutionResult.dmRepresentationSpecificEntries,
+    ...resolutionResult.dmProperties
+  };
 
   it('6.3.1 JSON-LD Production - The DID document and any DID document ' +
     'data structures expressed by the data model MUST be serialized to the ' +

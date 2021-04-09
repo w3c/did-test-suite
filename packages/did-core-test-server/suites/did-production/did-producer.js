@@ -3,7 +3,8 @@ const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 const deepEqual = require('deep-equal')
 
 const generateDidProducerTests = ({did, resolutionResult}) => {
-  const {didDocument} = resolutionResult;
+  const didDocument = resolutionResult.dmProperties;
+  const dmRse = resolutionResult.dmRepresentationSpecificEntries;
   const contentType = resolutionResult.didResolutionMetadata['contentType'];
 
   it('6.1 Production and Consumption - A conforming producer MUST take a ' +
@@ -11,7 +12,7 @@ const generateDidProducerTests = ({did, resolutionResult}) => {
     'input into the production process. The conforming producer MAY accept ' +
     'additional options as input into the production process.', async () => {
       if(contentType === 'application/did+ld+json') {
-        const context = didDocument['@context'];
+        const context = dmRse['@context'];
         if(typeof context === 'string') {
           expect(context).toBe('https://www.w3.org/ns/did/v1');
         } else if(Array.isArray(context)) {
