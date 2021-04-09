@@ -3,26 +3,17 @@ const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 const deepEqual = require('deep-equal')
 
 const generateDidProducerTests = ({did, resolutionResult}) => {
-  const didDocument = resolutionResult.dmProperties;
+  const dmProperties = resolutionResult.dmProperties;
   const dmRse = resolutionResult.dmRepresentationSpecificEntries;
+  const {representation} = resolutionResult;
   const contentType = resolutionResult.didResolutionMetadata['contentType'];
 
   it('6.1 Production and Consumption - A conforming producer MUST take a ' +
     'DID document data model and a representation-specific entries map as ' +
     'input into the production process. The conforming producer MAY accept ' +
     'additional options as input into the production process.', async () => {
-      if(contentType === 'application/did+ld+json') {
-        const context = dmRse['@context'];
-        if(typeof context === 'string') {
-          expect(context).toBe('https://www.w3.org/ns/did/v1');
-        } else if(Array.isArray(context)) {
-          expect(context[0]).toBe('https://www.w3.org/ns/did/v1');
-          reserializedContext = JSON.parse(JSON.stringify(context));
-          expect(deepEqual(context, reserializedContext)).toBe(true);
-        } else {
-          throw new Error('Invalid @context value '+ context);
-        }
-      }
+      expect(dmProperties).toBeDefined();
+      expect(dmRse).toBeDefined();
   });
 
   it('6.1 Production and Consumption - A conforming producer MUST ' +
@@ -32,8 +23,10 @@ const generateDidProducerTests = ({did, resolutionResult}) => {
     'representation\'s data type processing rules and return the ' +
     'serialization after the production process completes.', async () => {
       if(jsonMediaTypes.includes(contentType)) {
-        reserializedDidDocument = JSON.parse(JSON.stringify(didDocument));
-        expect(deepEqual(didDocument, reserializedDidDocument)).toBe(true);
+        const dataModel = {...dmRse, ...dmProperties};
+        const parsedDataModel = JSON.parse(representation);
+
+        expect(deepEqual(dataModel, parsedDataModel)).toBe(true);
       } else {
         throw new Error('Unknown producer for content-type: '+ contentType);
       }
@@ -48,8 +41,9 @@ const generateDidProducerTests = ({did, resolutionResult}) => {
   it('6.1 Production and Consumption - A conforming producer MUST NOT ' +
     'produce non-conforming DIDs or DID documents.', async () => {
       if(jsonMediaTypes.includes(contentType)) {
-        reserializedDidDocument = JSON.parse(JSON.stringify(didDocument));
-        expect(deepEqual(didDocument, reserializedDidDocument)).toBe(true);
+        const dataModel = {...dmRse, ...dmProperties};
+        parsedDataModel = JSON.parse(JSON.stringify(dataModel));
+        expect(deepEqual(dataModel, parsedDataModel)).toBe(true);
       } else {
         throw new Error('Unknown producer for content-type: '+ contentType);
       }
