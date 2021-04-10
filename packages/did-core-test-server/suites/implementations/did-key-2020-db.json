@@ -9,12 +9,14 @@
   "didParameters": {},
   "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH": {
     "application/did+ld+json": {
-      "didDocument": {
+      "dmRepresentationSpecificEntries": {
         "@context": [
           "https://www.w3.org/ns/did/v1",
           "https://w3id.org/security/suites/ed25519-2020/v1",
-          "https://w3id.org/security/suites/x25519-2020/v1",
-        ],
+          "https://w3id.org/security/suites/x25519-2020/v1"
+        ]
+      },
+      "dmProperties": {
         "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
         "verificationMethod": [{
           "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
@@ -41,6 +43,7 @@
           "publicKeyMultibase": "zJhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr"
         }]
       },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/x25519-2020/v1\"],\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"verificationMethod\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyMultibase\":\"zB12NYF8RrR3h41TDCTJojY59usg3mbtbjnFs7Eud1Y6u\"}],\"authentication\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"assertionMethod\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityDelegation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityInvocation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"keyAgreement\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#zBzoR5sqFgi6q3iFia8JPNfENCpi7RNSTKF7XNXX96SBY4\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyMultibase\":\"zJhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr\"}]}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
