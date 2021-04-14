@@ -15,9 +15,10 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
   - toBeInfraString / isInfraString
 - DID Core specific tests
   - toBeValidDid / isValidDid
+  - toBeDidCoreDatetime / isDidCoreDatetime
 - Various encoding formats
   - toBeBase58String / isBase58String
-
+  
 ## Targets
 
 Since the package relys on Babel, it require build.
