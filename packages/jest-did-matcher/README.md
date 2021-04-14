@@ -9,6 +9,7 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
   - toBeAsciiString / isAsciiString
 - Generic Web related
   - toBeValidUrl / isValidUrl
+  - toBeValidUri / isValidUri
 - INFRA specific tests
   - toBeInfraMap / isInfraMap
   - toBeInfraString / isInfraString
