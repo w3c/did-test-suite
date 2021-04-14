@@ -1,11 +1,11 @@
 const didMetadataStructureTest_Map_Recursive = (didDocumentMetadata) => {
     it('The structure used to communicate this metadata MUST be a map of properties.', () => {
-        expect(didDocumentMetadata instanceof Object).toBeTruthy();
+        expect(didDocumentMetadata).toBeInfraMap();
     });
 
     it('Each property name MUST be a string.', () => {
         Object.keys(didDocumentMetadata).forEach((property_name) => {
-            expect(typeof property_name).toBe("string");
+            expect(property_name).toBeString();
         });
     });
 
