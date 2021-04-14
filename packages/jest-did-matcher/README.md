@@ -7,6 +7,8 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
 
 - JavaScript and common types
   - toBeAsciiString / isAsciiString
+- Generic Web related
+  - toBeValidUrl / isValidUrl
 - INFRA specific tests
   - toBeInfraMap / isInfraMap
   - toBeInfraString / isInfraString
