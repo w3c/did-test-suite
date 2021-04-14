@@ -35,7 +35,7 @@ For the test of this package itself, run `npm test`
 Since this is a matcher for testing, all of the predicates are stricter than standard definition.
 The following is the list of design choices made.
 
-- Following predicates checks whether the target is string or not, to not allow NaN and undefined as a value
+- Following predicates check whether the target is string or not, to not allow `NaN` or `undefined` as a value
   - toBeAsciiString
   - toBeBase58String
   - toBeValidUri
