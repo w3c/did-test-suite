@@ -20,10 +20,18 @@
     "fastify-cors": "^5.0.0",
     "fastify-swagger": "^3.5.0",
     "jest": "^26.6.3",
+    "jest-did-matcher": "file:../jest-did-matcher",
+    "jest-extended": "^0.11.5",
     "jose": "^2.0.4",
     "node-fetch": "^2.6.1",
     "node-jose": "^2.0.0",
     "querystring": "^0.2.0",
     "uri-js": "^4.4.1"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "jest-extended",
+      "jest-did-matcher"
+    ]
   }
 }
