@@ -50,7 +50,7 @@ const isValidURL = (data) => {
 };
 
 const isXmlDatetime = (data) => {
-  const regex = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/
+  const regex = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z/
   return regex.test(data)
 };
 
