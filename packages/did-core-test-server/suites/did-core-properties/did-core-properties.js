@@ -158,7 +158,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'If present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
       const {authentication} = didDocument;
-      authentication.forEach(vm => {
+      authentication?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
           expect(isValidDID(absoluteURL)).toBe(true);
@@ -172,7 +172,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
       const {assertionMethod} = didDocument;
-      assertionMethod.forEach(vm => {
+      assertionMethod?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
           expect(isValidDID(absoluteURL)).toBe(true);
@@ -186,7 +186,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'present, the associated value MUST be an ordered set of one or more ' +
     'verification methods.', async () => {
       const {keyAgreement} = didDocument;
-      keyAgreement.forEach(vm => {
+      keyAgreement?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
           expect(isValidDID(absoluteURL)).toBe(true);
@@ -200,7 +200,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'is OPTIONAL. If present, the associated value MUST be an ordered set of ' +
     'one or more verification methods.', async () => {
       const {capabilityInvocation} = didDocument;
-      capabilityInvocation.forEach(vm => {
+      capabilityInvocation?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
           expect(isValidDID(absoluteURL)).toBe(true);
@@ -214,7 +214,7 @@ const generateDidCorePropertiesTests = ({did, resolutionResult}) => {
     'is OPTIONAL. If present, the associated value MUST be an ordered set of ' +
     'one or more verification methods.', async () => {
       const {capabilityDelegation} = didDocument;
-      capabilityDelegation.forEach(vm => {
+      capabilityDelegation?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
           expect(isValidDID(absoluteURL)).toBe(true);
@@ -355,7 +355,7 @@ const getAllVerificationMethods = (didDocument) => {
     'assertionMethod', 'keyAgreement', 'capabilityInvocation',
     'capabilityDelegation'];
   verificationRelationships.forEach(name => {
-    didDocument[name].forEach(vr => {
+    didDocument[name]?.forEach(vr => {
       if(typeof vr === 'object') {
         verificationMethods.push(vr);
       }
