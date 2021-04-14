@@ -5,14 +5,15 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
 
 ## Currently Implemented Matchers and Predicates
 
-- Generic tests
+- JavaScript and common types
   - toBeAsciiString / isAsciiString
-  - toBeBase58String / isBase58String
 - INFRA specific tests
   - toBeInfraMap / isInfraMap
   - toBeInfraString / isInfraString
-- DID Core specific tsts
+- DID Core specific tests
   - toBeValidDid / isValidDid
+- Various encoding formats
+  - toBeBase58String / isBase58String
 
 ## Targets
 
