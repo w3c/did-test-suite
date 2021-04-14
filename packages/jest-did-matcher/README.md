@@ -28,3 +28,14 @@ For the test of this package itself, run `npm test`
 ## Reference from did-core-test-server
 
 `../did-core-test-server/package.json` contains filesytem relative reference to this package.
+
+## Predicates design policy
+
+Since this is a matcher for testing, all of the predicates are stricter than standard defifnition.
+Followings are the list of design choices made.
+
+- Following predicates checks whether the target is string or not, to not allow NaN and undefined as a value
+  - toBeAsciiString
+  - toBeBase58String
+  - toBeValidUri
+- toBeValidUri: not allowing empty URI
