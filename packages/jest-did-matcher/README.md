@@ -33,7 +33,7 @@ For the test of this package itself, run `npm test`
 ## Predicates design policy
 
 Since this is a matcher for testing, all of the predicates are stricter than standard definition.
-Followings are the list of design choices made.
+The following is the list of design choices made.
 
 - Following predicates checks whether the target is string or not, to not allow NaN and undefined as a value
   - toBeAsciiString
