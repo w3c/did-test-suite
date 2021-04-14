@@ -6,6 +6,7 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
 ## Currently Implemented
 
 - toBeInfraMap and isInfraMap to test whether the object is an INFRA map or not
+- toBeInfraString and isInfraString to test whether the object is an INFRA string or not
 - toBeValidDid and isValidDid to test whether the object is a DID string or not
 
 ## Targets
