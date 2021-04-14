@@ -12,12 +12,12 @@ var _predicate2 = _interopRequireDefault(_predicate);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const passMessage = received => () => (0, _jestMatcherUtils.matcherHint)('.not.toBeInfraMap', 'received', '') + '\n\n' + 'Expected value to not be of type IFRA map received:\n' + `  ${(0, _jestMatcherUtils.printReceived)(received)}`;
+const passMessage = received => () => (0, _jestMatcherUtils.matcherHint)('.not.toBeAsciiString', 'received', '') + '\n\n' + 'Expected value to not be of type INFRA string received:\n' + `  ${(0, _jestMatcherUtils.printReceived)(received)}`;
 
-const failMessage = received => () => (0, _jestMatcherUtils.matcherHint)('.toBeInfraMap', 'received', '') + '\n\n' + 'Expected value to be of type INFRA map:\n' + `  ${(0, _jestMatcherUtils.printExpected)('type of INFRA map')}` + 'Received:\n' + `  ${(0, _jestMatcherUtils.printReceived)(received)}`;
+const failMessage = received => () => (0, _jestMatcherUtils.matcherHint)('.toBeAsciiString', 'received', '') + '\n\n' + 'Expected value to be of type INFRA string:\n' + `  ${(0, _jestMatcherUtils.printExpected)('type of INFRA string')}` + 'Received:\n' + `  ${(0, _jestMatcherUtils.printReceived)(received)}`;
 
 exports.default = {
-    toBeInfraMap: expected => {
+    toBeAsciiString: expected => {
         const pass = (0, _predicate2.default)(expected);
         if (pass) {
             return { pass: true, message: passMessage(expected) };
@@ -26,7 +26,7 @@ exports.default = {
         return { pass: false, message: failMessage(expected) };
     },
 
-    isInfraMap: obj => {
+    isAsciiString: obj => {
         return (0, _predicate2.default)(obj);
     }
 };
