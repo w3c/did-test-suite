@@ -3,13 +3,16 @@
 This package helps write tests for Decentralized Identifier (DID).
 Developed based on the structure of [jest/community/jest-extended](https://github.com/jest-community/jest-extended) package.
 
-## Currently Implemented
+## Currently Implemented Matchers and Predicates
 
-- toBeAsciiString and isAsciiString to test whether the object is an ASCII string or not
-- toBeBase58String and isBase58String to test whether the object is an Base58 string or not
-- toBeInfraMap and isInfraMap to test whether the object is an INFRA map or not
-- toBeInfraString and isInfraString to test whether the object is an INFRA string or not
-- toBeValidDid and isValidDid to test whether the object is a DID string or not
+- Generic tests
+  - toBeAsciiString / isAsciiString
+  - toBeBase58String / isBase58String
+- INFRA specific tests
+  - toBeInfraMap / isInfraMap
+  - toBeInfraString / isInfraString
+- DID Core specific tsts
+  - toBeValidDid / isValidDid
 
 ## Targets
 
