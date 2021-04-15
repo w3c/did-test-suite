@@ -273,14 +273,10 @@ const didResolutionTests = (execution, expectedOutcome) => {
               expect(parseDidMethod(equivalentid)).toBe(parseDidMethod(didDocument['id']));
             })
           });
-          it('A conforming DID Method specification MUST guarantee that each equivalentId value is logically equivalent to the id property value.', async () => {
-            // TODO: I don't think this is testable.
-            expect(false).toBe(true);
-          });
-          it('equivalentId is a much stronger form of equivalence than alsoKnownAs because the equivalence MUST be guaranteed by the governing DID method.', async () => {
-            // TODO: I don't think this is testable.
-            expect(false).toBe(true);
-          })
+          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+          it.skip('A conforming DID Method specification MUST guarantee that each equivalentId value is logically equivalent to the id property value.');
+          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+          it.skip('equivalentId is a much stronger form of equivalence than alsoKnownAs because the equivalence MUST be guaranteed by the governing DID method.');
         }
       });
       describe('canonicalId', () => {
@@ -293,10 +289,8 @@ const didResolutionTests = (execution, expectedOutcome) => {
             // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
             expect(parseDidMethod(didDocumentMetadata['canonicalId'])).toBe(parseDidMethod(didDocument['id']));
           });
-          it('A conforming DID Method specification MUST guarantee that the canonicalId value is logically equivalent to the id property value.', async () => {
-            // TODO: I don't think this is testable.
-            expect(false).toBe(true);
-          })
+          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+          it.skip('A conforming DID Method specification MUST guarantee that the canonicalId value is logically equivalent to the id property value.');
         }
       });
     });
