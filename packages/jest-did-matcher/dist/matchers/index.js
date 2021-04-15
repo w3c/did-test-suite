@@ -30,13 +30,17 @@ var _index6 = require('./toBeValidDid/index.js');
 
 var _toBeValidDidIndexJs = _interopRequireWildcard(_index6);
 
-var _index7 = require('./toBeValidUri/index.js');
+var _index7 = require('./toBeValidDidUrl/index.js');
 
-var _toBeValidUriIndexJs = _interopRequireWildcard(_index7);
+var _toBeValidDidUrlIndexJs = _interopRequireWildcard(_index7);
 
-var _index8 = require('./toBeValidUrl/index.js');
+var _index8 = require('./toBeValidUri/index.js');
 
-var _toBeValidUrlIndexJs = _interopRequireWildcard(_index8);
+var _toBeValidUriIndexJs = _interopRequireWildcard(_index8);
+
+var _index9 = require('./toBeValidUrl/index.js');
+
+var _toBeValidUrlIndexJs = _interopRequireWildcard(_index9);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -47,6 +51,7 @@ const imports = {
   './toBeInfraMap/index.js': _toBeInfraMapIndexJs,
   './toBeInfraString/index.js': _toBeInfraStringIndexJs,
   './toBeValidDid/index.js': _toBeValidDidIndexJs,
+  './toBeValidDidUrl/index.js': _toBeValidDidUrlIndexJs,
   './toBeValidUri/index.js': _toBeValidUriIndexJs,
   './toBeValidUrl/index.js': _toBeValidUrlIndexJs
 };
