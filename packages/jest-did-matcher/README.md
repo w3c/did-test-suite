@@ -15,6 +15,7 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
   - toBeInfraString / isInfraString
 - DID Core specific tests
   - toBeValidDid / isValidDid
+  - toBeValidDidUrl / isValidDidUrl
   - toBeDidCoreDatetime / isDidCoreDatetime
 - Various encoding formats
   - toBeBase58String / isBase58String
