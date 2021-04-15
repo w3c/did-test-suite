@@ -9,7 +9,7 @@
   "dids": ["did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd"],
   "didParameters": {
     "versionId": "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd?versionId=bafyreidmpfv7aumgqeqacprb2yv3t7sapsoro6dpopopyxtelknfbxifia",
-    "versionTime": "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd?versionTime=2021-03-16T10:09:21.000Z"
+    "versionTime": "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd?versionTime=2021-03-16T10:09:21Z"
   },
   "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd": {
     "application/did+json": {
@@ -54,8 +54,8 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "updated": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "updated": "2021-03-16T10:11:17Z",
         "versionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu"
       }
     },
@@ -102,13 +102,13 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "updated": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "updated": "2021-03-16T10:11:17Z",
         "versionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu"
       }
     }
   },
-  "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd?versionTime=2021-03-16T10:09:21.000Z": {
+  "did:3:kjzl6cwe1jw145m7jxh4jpa6iw1ps3jcjordpo81e0w04krcpz8knxvg5ygiabd?versionTime=2021-03-16T10:09:21Z": {
     "application/did+json": {
       "didResolutionMetadata":{
         "contentType":"application/did+json"
@@ -151,10 +151,10 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "nextUpdate": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "nextUpdate": "2021-03-16T10:11:17Z",
         "nextVersionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu",
-        "updated": "2021-03-16T10:08:21.000Z",
+        "updated": "2021-03-16T10:08:21Z",
         "versionId": "bafyreidmpfv7aumgqeqacprb2yv3t7sapsoro6dpopopyxtelknfbxifia"
       }
     },
@@ -201,10 +201,10 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "nextUpdate": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "nextUpdate": "2021-03-16T10:11:17Z",
         "nextVersionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu",
-        "updated": "2021-03-16T10:08:21.000Z",
+        "updated": "2021-03-16T10:08:21Z",
         "versionId": "bafyreidmpfv7aumgqeqacprb2yv3t7sapsoro6dpopopyxtelknfbxifia"
       }
     }
@@ -252,10 +252,10 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "nextUpdate": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "nextUpdate": "2021-03-16T10:11:17Z",
         "nextVersionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu",
-        "updated": "2021-03-16T10:08:21.000Z",
+        "updated": "2021-03-16T10:08:21Z",
         "versionId": "bafyreidmpfv7aumgqeqacprb2yv3t7sapsoro6dpopopyxtelknfbxifia"
       }
     },
@@ -302,10 +302,10 @@
         }]
       },
       "didDocumentMetadata":{
-        "created": "2021-03-16T10:08:21.000Z",
-        "nextUpdate": "2021-03-16T10:11:17.000Z",
+        "created": "2021-03-16T10:08:21Z",
+        "nextUpdate": "2021-03-16T10:11:17Z",
         "nextVersionId": "bafyreigxsxcy6goi2rk6pnjf3ij5quw2re2pmjpnk44bge6bb7a6borzdu",
-        "updated": "2021-03-16T10:08:21.000Z",
+        "updated": "2021-03-16T10:08:21Z",
         "versionId": "bafyreidmpfv7aumgqeqacprb2yv3t7sapsoro6dpopopyxtelknfbxifia"
       }
     }
