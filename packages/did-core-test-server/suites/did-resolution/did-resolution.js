@@ -70,7 +70,9 @@ const didResolutionTests = (execution, expectedOutcome) => {
         });
         it('The value of id in the resolved DID document MUST match the DID that was resolved.', async () => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
-            expect(didDocument['id']).toBe(did);
+            // remove any query string in the DID uri
+            const expectedId = did.split('?')[0]
+            expect(didDocument['id']).toBe(expectedId);
           }
         });
         it('If the resolution is unsuccessful, this value MUST be empty.', async () => {
