@@ -7,7 +7,10 @@ expect.extend(matcher);
 describe('.toBeValidDid', () => {
   each([
     ["did:example:123"],
-    ["did:example:123456789abcdefghi"]
+    ["did:example:123456789abcdefghi"],
+    ["did:example:123456789-abcdefghi"],
+    ["did:example:123456789_abcdefghi"],
+    ["did:example:123456789%20abcdefghi"]
   ]).test('passes when the item is a valid DID: %s', given => {
     expect(given).toBeValidDid();
   });
