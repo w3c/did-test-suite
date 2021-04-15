@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = expected => {
-    const pchar = "[a-zA-Z-\\._~]|%[0-9a-fA-F][0-9a-fA-F]|[!$&'()*+,;=:@]";
+    const pchar = "[a-zA-Z-\\._~]|%[0-9a-fA-F]{2}|[!$&'()*+,;=:@]";
     const didUrl = "^" + "did:" + "([a-z0-9]+)" + // method_name
     "(:" + // method-specific-id
     "([a-zA-Z0-9\\.\\-_]|%[0-9a-fA-F]{2})+" + ")+" + "(/(" + pchar + ")*)?"; // + // path-abempty
