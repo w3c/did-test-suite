@@ -17,6 +17,7 @@ Developed based on the structure of [jest/community/jest-extended](https://githu
   - toBeValidDid / isValidDid
   - toBeValidDidUrl / isValidDidUrl
   - toBeDidCoreDatetime / isDidCoreDatetime
+  - toBeDidDocumentPropertyValueType / isDidDocumentPropertyValueType
 - Various encoding formats
   - toBeBase58String / isBase58String
   
