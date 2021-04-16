@@ -11,7 +11,7 @@ const didMetadataStructureTest_Map_Recursive = (didDocumentMetadata) => {
 
     it('Each property value MUST be a string, map, list, ordered set, boolean, or null.', () => {
         Object.keys(didDocumentMetadata).forEach((property_name) => {
-            expect(typeof didDocumentMetadata[property_name]).toEqual(expect.stringMatching(/(string|object|boolean)/));  // map, list, set and null are objects
+            expect(didDocumentMetadata[property_name]).toBeDidDocumentPropertyValueType();
         });
     });
 
