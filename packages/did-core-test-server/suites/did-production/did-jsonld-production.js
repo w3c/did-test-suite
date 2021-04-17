@@ -1,9 +1,10 @@
 const deepEqual = require('deep-equal')
 
-const generateJsonldProductionTests = ({did, resolutionResult}) => {
+const generateJsonldProductionTests = (
+  {did, didDocumentDataModel, resolutionResult}) => {
   const didDocument = {
-    ...resolutionResult.dmRepresentationSpecificEntries,
-    ...resolutionResult.dmProperties
+    ...didDocumentDataModel.properties,
+    ...didDocumentDataModel.representationSpecificEntries
   };
 
   it('6.3.1 JSON-LD Production - The DID document and any DID document ' +
@@ -26,6 +27,7 @@ const generateJsonldProductionTests = ({did, resolutionResult}) => {
     'https://www.w3.org/ns/did/v1 and the subsequent items are serialized ' +
     'according to the JSON representation production rules.', async () => {
       const context = didDocument['@context'];
+
       if(typeof context === 'string') {
         expect(context).toBe('https://www.w3.org/ns/did/v1');
       } else if(Array.isArray(context)) {
@@ -52,7 +54,13 @@ const didJsonldProductionTests = (suiteConfig) => {
       describe(did, () => {
         for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
           if(mediaType === 'application/did+ld+json') {
-            generateJsonldProductionTests({did, resolutionResult});
+            const {didDocumentDataModel} = suiteConfig[did];
+            didDocumentDataModel.representationSpecificEntries =
+              resolutionResult.didDocumentDataModel.
+              representationSpecificEntries;
+
+            generateJsonldProductionTests(
+              {did, didDocumentDataModel, resolutionResult});
           }
         }
       });

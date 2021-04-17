@@ -15,8 +15,8 @@
     "versionTime": "did:example:123?versionTime=2020-09-26T20:14:02Z"
   },
   "did:example:123": {
-    "application/did+json": {
-      "dmProperties": {
+    "didDocumentDataModel": {
+      "properties": {
         "id": "did:example:123",
         "verificationMethod": [
           {
@@ -45,8 +45,12 @@
         "capabilityInvocation": ["#key-0"],
         "capabilityDelegation": ["#key-0"],
         "keyAgreement": ["#key-1"]
-      },
-      "dmRepresentationSpecificEntries": {
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
       },
       "representation": "{\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"]}",
       "didDocumentMetadata": {
@@ -63,32 +67,12 @@
       }
     },
     "application/did+ld+json": {
-      "dmProperties": {
-        "id": "did:example:123",
-        "verificationMethod": [
-          {
-            "id": "did:example:123#key-0",
-            "type": "Ed25519VerificationKey2018",
-            "controller": "did:example:123",
-            "publicKeyBase58": "6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx"
-          },
-          {
-            "id": "did:example:123#key-1",
-            "type": "X25519KeyAgreementKey2019",
-            "controller": "did:example:123",
-            "publicKeyBase58": "FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2"
-          }
-        ],
-        "authentication": ["#key-0"],
-        "assertionMethod": ["#key-0"],
-        "capabilityInvocation": ["#key-0"],
-        "capabilityDelegation": ["#key-0"],
-        "keyAgreement": ["#key-1"]
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": ["https://www.w3.org/ns/did/v1"]
+        }
       },
-      "dmRepresentationSpecificEntries": {
-        "@context": ["https://www.w3.org/ns/did/v1"]
-      },
-      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:example:123\",\"publicKeyBase58\":\"6fioC1zcDPyPEL19pXRS2E4iJ46zH7xP6uSgAaPdwDrx\"},{\"id\":\"did:example:123#key-1\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:example:123\",\"publicKeyBase58\":\"FxfdY3DCQxVZddKGAtSjZdFW9bCCW7oRwZn1NFJ2Tbg2\"}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"]}",
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"]}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"

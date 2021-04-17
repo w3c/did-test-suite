@@ -2,9 +2,11 @@ const utils = require('../utils');
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
 const deepEqual = require('deep-equal')
 
-const generateDidProducerTests = ({did, resolutionResult}) => {
-  const dmProperties = resolutionResult.dmProperties;
-  const dmRse = resolutionResult.dmRepresentationSpecificEntries;
+const generateDidProducerTests = (
+  {did, didDocumentDataModel, resolutionResult}) => {
+
+  const dmProperties = didDocumentDataModel.properties;
+  const dmRse = didDocumentDataModel.representationSpecificEntries;
   const {representation} = resolutionResult;
   const contentType = resolutionResult.didResolutionMetadata['contentType'];
 
@@ -25,7 +27,6 @@ const generateDidProducerTests = ({did, resolutionResult}) => {
       if(jsonMediaTypes.includes(contentType)) {
         const dataModel = {...dmRse, ...dmProperties};
         const parsedDataModel = JSON.parse(representation);
-
         expect(deepEqual(dataModel, parsedDataModel)).toBe(true);
       } else {
         throw new Error('Unknown producer for content-type: '+ contentType);
@@ -55,7 +56,14 @@ const didProducerTests = (suiteConfig) => {
     suiteConfig.dids.forEach((did) => {
       describe(did, () => {
         for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
-          generateDidProducerTests({did, resolutionResult});
+          if(resolutionResult.didDocumentDataModel === undefined) continue;
+
+          const {didDocumentDataModel} = suiteConfig[did];
+          didDocumentDataModel.representationSpecificEntries =
+            resolutionResult.didDocumentDataModel.representationSpecificEntries;
+
+          generateDidProducerTests(
+            {did, didDocumentDataModel, resolutionResult});
         }
       });
     });
