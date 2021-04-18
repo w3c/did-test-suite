@@ -5,7 +5,7 @@ const didSyntaxTests = (suiteConfig) => {
     suiteConfig.dids.forEach((didExample) => {
       describe(didExample, () => {
         it('MUST be a valid URL.', async () => {
-          expect(utils.isValidURL(didExample)).toBe(true);
+          expect(didExample).toBeValidUrl();
         });
         it('The URI scheme MUST be "did:"', () => {
           const url = new URL(didExample);
@@ -13,7 +13,7 @@ const didSyntaxTests = (suiteConfig) => {
         });
         it('The DID method name MUST be an ASCII lowercase string.', () => {
           const method = didExample.split(':')[1];
-          expect(utils.isAsciiString(method)).toBe(true);
+          expect(method).toBeAsciiString();
           expect(method.toLowerCase()).toBe(method);
         });
         it('The DID method name MUST NOT be empty.', () => {
