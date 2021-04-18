@@ -18,13 +18,13 @@ const didParametersTests = (suiteConfig) => {
 
           if (didParameter === 'service') {
             it('3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.', async () => {
-              expect(utils.isAsciiString(param)).toBe(true);
+              expect(param).toBeAsciiString();
             });
           }
 
           if (didParameter === 'relativeRef') {
             it('3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.', async () => {
-              expect(utils.isAsciiString(param)).toBe(true);
+              expect(param).toBeAsciiString();
               if (param.includes('/')) {
                 expect(didUrl.includes('%2F')).toBe(true);
               }
@@ -33,20 +33,20 @@ const didParametersTests = (suiteConfig) => {
 
           if (didParameter === 'versionId') {
             it('3.2.1 DID Parameters - versionId - If present, the associated value MUST be an ASCII string.', async () => {
-              expect(utils.isAsciiString(param)).toBe(true);
+              expect(param).toBeAsciiString();
             });
           }
 
           if (didParameter === 'versionTime') {
             it('3.2.1 DID Parameters - versionTime - If present, the associated value MUST be an ASCII string which is a valid XML datetime value, as defined in section 3.3.7 of W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes [XMLSCHEMA11-2]. This datetime value MUST be normalized to UTC 00:00:00 and without sub-second decimal precision. For example: 2020-12-20T19:17:47Z.', async () => {
-              expect(utils.isAsciiString(param)).toBe(true);
-              expect(versionTimeRe.test(param)).toBe(true);
+              expect(param).toBeAsciiString();
+              expect(param).toBeDidCoreDatetime();
             });
           }
 
           if (didParameter === 'hl') {
             it('3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.', async () => {
-              expect(utils.isAsciiString(param)).toBe(true);
+              expect(param).toBeAsciiString();
             });
           }
 
