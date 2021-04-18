@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "babel src -d dist --ignore *.test.js",
+    "prepare": "babel src -d dist --ignore *.test.js",
     "test": "jest"
   },
   "keywords": [

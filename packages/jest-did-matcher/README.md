@@ -3,6 +3,9 @@
 This package helps write tests for Decentralized Identifier (DID).
 Developed based on the structure of [jest/community/jest-extended](https://github.com/jest-community/jest-extended) package.
 
+To use this package, run `npm run prepare` for preparing runtime JavaScripts in `./dist` directory.
+You can also prepare by running `npm run prepare` at the top level of `did-test-suite`.
+
 ## Currently Implemented Matchers and Predicates
 
 - JavaScript and common types
