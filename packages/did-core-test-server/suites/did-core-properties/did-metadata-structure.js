@@ -1,22 +1,26 @@
 const didMetadataStructureTest_Map_Recursive = (didDocumentMetadata) => {
-    it('The structure used to communicate this metadata MUST be a map of properties.', () => {
+    it('7.3 Metadata Structure - ' +
+       'The structure used to communicate this metadata MUST be a map of properties.', () => {
         expect(didDocumentMetadata).toBeInfraMap();
     });
 
-    it('Each property name MUST be a string.', () => {
+    it('7.3 Metadata Structure - ' +
+       'Each property name MUST be a string.', () => {
         Object.keys(didDocumentMetadata).forEach((property_name) => {
             expect(property_name).toBeString();
         });
     });
 
-    it('Each property value MUST be a string, map, list, ordered set, boolean, or null.', () => {
+    it('7.3 Metadata Structure - ' +
+       'Each property value MUST be a string, map, list, ordered set, boolean, or null.', () => {
         Object.keys(didDocumentMetadata).forEach((property_name) => {
             expect(didDocumentMetadata[property_name]).toBeDidDocumentPropertyValueType();
         });
     });
 
-    it('The values within any complex data structures such as maps and lists ' +
-        'MUST be one of these data types as well.', () => {
+    it('7.3 Metadata Structure - ' +
+       'The values within any complex data structures such as maps and lists ' +
+       'MUST be one of these data types as well.', () => {
             Object.keys(didDocumentMetadata).forEach((property_name) => {
                 if (typeof didDocumentMetadata[property_name] == "object") {
                     didMetadataStructureTest_r(didDocumentMetadata[property_name]);
@@ -35,7 +39,8 @@ const didMetadataStructureTests = (suiteConfig) => {
                     if (didDocumentMetadata) {
                         didMetadataStructureTest_Map_Recursive(didDocumentMetadata);
 
-                        it('The entire metadata structure MUST be serializable according to the JSON ' +
+                        it('7.3 Metadata Structure - ' +
+                           'The entire metadata structure MUST be serializable according to the JSON ' +
                            'serialization rules in the [INFRA] specification.', () => {
                             // Checking this by serialize/deserialize to/from JSON, then compare the result
                             var obj = {};
@@ -45,9 +50,10 @@ const didMetadataStructureTests = (suiteConfig) => {
                             expect(didDocumentMetadata).toEqual(obj);
                         });
 
-                        it.todo('All metadata property definitions registered in the DID Specification Registries ' +
-                        '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
-                        'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
+                        it.todo('7.3 Metadata Structure - ' +
+                                'All metadata property definitions registered in the DID Specification Registries ' +
+                                '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
+                                'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
 
                     };
                 });
