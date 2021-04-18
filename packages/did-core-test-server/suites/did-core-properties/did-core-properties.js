@@ -15,7 +15,7 @@ const generateDidCorePropertiesTests = (
     'conforms to the rules in § 3.1 DID Syntax and MUST exist in the root ' +
     'map of the data model for the DID document.', async () => {
       expect(didDocument).toHaveProperty('id');
-      expect(isValidDID(didDocument.id)).toBe(true);
+      expect(didDocument.id).toBeValidDid();
   });
 
   it('5.1.2 DID Controller - The controller property is OPTIONAL. If ' +
@@ -26,7 +26,7 @@ const generateDidCorePropertiesTests = (
         const controllers =
           (Array.isArray(controller)) ? controller : [controller];
         controllers.forEach(didController => {
-          expect(isValidDID(didController)).toBe(true);
+          expect(didController).toBeValidDid();
         });
       }
   });
@@ -38,7 +38,7 @@ const generateDidCorePropertiesTests = (
       if(alsoKnownAs) {
         expect(Array.isArray(alsoKnownAs)).toBe(true);
         alsoKnownAs.forEach(alsoKnownAsValue => {
-          expect(isValidURI(alsoKnownAsValue)).toBe(true);
+          expect(alsoKnownAsValue).toBeValidUri();
         });
       }
   });
@@ -51,7 +51,7 @@ const generateDidCorePropertiesTests = (
       if(verificationMethod) {
         expect(Array.isArray(verificationMethod)).toBe(true);
         verificationMethod.forEach(verificationMethodValue => {
-          expect(isValidURI(verificationMethodValue)).toBe(true);
+          expect(verificationMethodValue).toBeInfraMap();
         });
       }
   });
@@ -73,7 +73,7 @@ const generateDidCorePropertiesTests = (
     'Section § 3.2 DID URL Syntax.', async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        expect(isValidDID(vm.id)).toBe(true);
+        expect(vm.id).toBeValidDidUrl();
       });
   });
 
@@ -82,7 +82,7 @@ const generateDidCorePropertiesTests = (
     async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        expect(typeof vm.type === 'string').toBe(true);
+        expect(vm.type).toBeInfraString();
       });
   });
 
@@ -91,7 +91,7 @@ const generateDidCorePropertiesTests = (
     async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        expect(isValidDID(vm.controller)).toBe(true);
+        expect(vm.controller).toBeValidDid();
       });
   });
 
@@ -102,7 +102,7 @@ const generateDidCorePropertiesTests = (
       verificationMethods.forEach(vm => {
         const {publicKeyBase58} = vm;
         if(publicKeyBase58) {
-          expect(isValidBase58(publicKeyBase58)).toBe(true);
+          expect(publicKeyBase58).toBeBase58String();
         }
       });
   });
@@ -162,7 +162,7 @@ const generateDidCorePropertiesTests = (
       authentication?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
-          expect(isValidDID(absoluteURL)).toBe(true);
+          expect(absoluteURL).toBeValidDidUrl();
         } else {
           expect(isValidVerificationMethod(vm)).toBe(true);
         }
@@ -176,7 +176,7 @@ const generateDidCorePropertiesTests = (
       assertionMethod?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
-          expect(isValidDID(absoluteURL)).toBe(true);
+          expect(absoluteURL).toBeValidDidUrl();
         } else {
           expect(isValidVerificationMethod(vm)).toBe(true);
         }
@@ -190,7 +190,7 @@ const generateDidCorePropertiesTests = (
       keyAgreement?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
-          expect(isValidDID(absoluteURL)).toBe(true);
+          expect(absoluteURL).toBeValidDidUrl();
         } else {
           expect(isValidVerificationMethod(vm)).toBe(true);
         }
@@ -204,7 +204,7 @@ const generateDidCorePropertiesTests = (
       capabilityInvocation?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
-          expect(isValidDID(absoluteURL)).toBe(true);
+          expect(absoluteURL).toBeValidDidUrl();
         } else {
           expect(isValidVerificationMethod(vm)).toBe(true);
         }
@@ -218,7 +218,7 @@ const generateDidCorePropertiesTests = (
       capabilityDelegation?.forEach(vm => {
         if(typeof vm === 'string') {
           let absoluteURL = getAbsoluteDIDURL(didDocument.id, vm);
-          expect(isValidDID(absoluteURL)).toBe(true);
+          expect(absoluteURL).toBeValidDidUrl();
         } else {
           expect(isValidVerificationMethod(vm)).toBe(true);
         }
@@ -232,7 +232,7 @@ const generateDidCorePropertiesTests = (
       if(service) {
         expect(Array.isArray(service)).toBe(true);
         service.forEach(serviceValue => {
-          expect(typeof serviceValue === 'object').toBe(true);
+          expect(serviceValue).toBeInfraMap();
         });
       }
   });
@@ -254,7 +254,7 @@ const generateDidCorePropertiesTests = (
       const {service} = didDocument;
       if(service) {
         service.forEach(serviceValue => {
-          expect(isValidURI(serviceValue.id)).toBe(true);
+          expect(serviceValue.id).toBeValidUri();
         });
       }
   });
@@ -298,7 +298,7 @@ const generateDidCorePropertiesTests = (
           } else if(Array.isArray(serviceValue.type)) {
             const types = serviceValue.type;
             types.forEach(type => {
-              expect(typeof type === 'string').toBe(true);
+              expect(type).toBeInfraString();
             });
           } else {
             throw new Error('Invalid value for `type` property.');
@@ -343,7 +343,7 @@ const generateDidCorePropertiesTests = (
         service.forEach(serviceValue => {
           const {serviceEndpoint} = serviceValue;
           if(typeof serviceEndpoint === 'string') {
-            expect(isValidURI(serviceEndpoint)).toBe(true);
+            expect(serviceEndpoint).toBeValidUri();
           }
         });
       }
