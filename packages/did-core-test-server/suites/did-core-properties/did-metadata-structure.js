@@ -1,4 +1,4 @@
-const didMetadataStructureTest_r = (didDocumentMetadata) => {
+const didMetadataStructureTest_Map_Recursive = (didDocumentMetadata) => {
     it('The structure used to communicate this metadata MUST be a map of properties.', () => {
         expect(didDocumentMetadata instanceof Object).toBeTruthy();
     });
@@ -24,19 +24,6 @@ const didMetadataStructureTest_r = (didDocumentMetadata) => {
             });
         });
 
-    it.todo('All metadata property definitions registered in the DID Specification Registries ' +
-        '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
-        'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
-
-    it('The entire metadata structure MUST be serializable according to the JSON ' +
-        'serialization rules in the [INFRA] specification.', () => {
-            // Checking this by serialize/deserialize to/from JSON, then compare the result
-            var obj = {};
-            expect(() => {
-                obj = JSON.parse(JSON.stringify(didDocumentMetadata));
-            }).not.toThrow();
-            expect(didDocumentMetadata).toEqual(obj);
-    });
 };
 
 const didMetadataStructureTests = (suiteConfig) => {
@@ -46,7 +33,22 @@ const didMetadataStructureTests = (suiteConfig) => {
                 describe(contentType, () => {
                     const didDocumentMetadata = suiteConfig[didExample][contentType].didDocumentMetadata;
                     if (didDocumentMetadata) {
-                        didMetadataStructureTest_r(didDocumentMetadata);
+                        didMetadataStructureTest_Map_Recursive(didDocumentMetadata);
+
+                        it('The entire metadata structure MUST be serializable according to the JSON ' +
+                           'serialization rules in the [INFRA] specification.', () => {
+                            // Checking this by serialize/deserialize to/from JSON, then compare the result
+                            var obj = {};
+                            expect(() => {
+                                obj = JSON.parse(JSON.stringify(didDocumentMetadata));
+                            }).not.toThrow();
+                            expect(didDocumentMetadata).toEqual(obj);
+                        });
+
+                        it.todo('All metadata property definitions registered in the DID Specification Registries ' +
+                        '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
+                        'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
+
                     };
                 });
             })
