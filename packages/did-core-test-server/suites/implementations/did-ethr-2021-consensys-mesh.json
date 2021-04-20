@@ -1,0 +1,126 @@
+{
+  "didMethod": "did:ethr",
+  "implementation": "ethr-did-resolver",
+  "implementer": "ConsenSys Mesh",
+  "supportedContentTypes": [
+    "application/did+ld+json",
+    "application/did+json"
+  ],
+  "dids": ["did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388"],
+  "didParameters": {
+    "versionId": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=0"
+  },
+  "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388": {
+    "didDocumentDataModel": {
+      "properties": {   
+        "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+        "verificationMethod": [
+          {
+            "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller",
+            "type": "EcdsaSecp256k1RecoveryMethod2020",
+            "controller": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+            "blockchainAccountId": "0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1"
+          },
+          {
+            "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+            "publicKeyHex": "04808f0530d0f39b3f71e9258c555666f63d839bb8aa06beb77dbb2b5d81ed7e59ed4507188a89f231bb36fe85918c9b8b3bd1bcd105163604e6e288f1ccdd72d3"
+          }
+        ],
+        "authentication": [
+          "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller"
+        ],
+        "assertionMethod": [
+          "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller",
+          "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1"
+        ]      
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"},{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"publicKeyHex\":\"04808f0530d0f39b3f71e9258c555666f63d839bb8aa06beb77dbb2b5d81ed7e59ed4507188a89f231bb36fe85918c9b8b3bd1bcd105163604e6e288f1ccdd72d3\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\"]}",
+      "didResolutionMetadata":{
+        "contentType":"application/did+json"
+      },
+      "didDocumentMetadata":{
+        "versionId": "12090175",
+        "updated": "2021-03-22T18:14:29Z"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel":{
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https:\/\/www.w3.org\/ns\/did\/v1\",\"https:\/\/identity.foundation\/EcdsaSecp256k1RecoverySignature2020\/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"},{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"publicKeyHex\":\"04808f0530d0f39b3f71e9258c555666f63d839bb8aa06beb77dbb2b5d81ed7e59ed4507188a89f231bb36fe85918c9b8b3bd1bcd105163604e6e288f1ccdd72d3\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\"]}",
+      "didResolutionMetadata":{
+        "contentType":"application/did+ld+json"
+      },
+      "didDocumentMetadata":{
+        "versionId": "12090175",
+        "updated": "2021-03-22T18:14:29Z"
+      }
+    }
+  },
+  "erreee?versionId=0": {
+    "didDocumentDataModel": {
+      "properties": {
+          "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+          "verificationMethod": [
+            {
+              "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller",
+              "type": "EcdsaSecp256k1RecoveryMethod2020",
+              "controller": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+              "blockchainAccountId": "0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1"
+            }
+          ],
+          "authentication": [
+            "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller"
+          ],
+          "assertionMethod": [
+            "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller"
+          ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"]}",
+      "didResolutionMetadata":{
+        "contentType":"application/did+json"
+      },
+      "didDocumentMetadata":{
+        "nextVersionId": "12090175",
+        "nextUpdate": "2021-03-22T18:14:29Z"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel":{
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https:\/\/www.w3.org\/ns\/did\/v1\",\"https:\/\/identity.foundation\/EcdsaSecp256k1RecoverySignature2020\/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"]}",
+      "didResolutionMetadata":{
+        "contentType":"application/did+ld+json"
+      },
+      "didDocumentMetadata":{
+        "nextVersionId": "12090175",
+        "nextUpdate": "2021-03-22T18:14:29Z"
+      }
+    }
+  }
+}
