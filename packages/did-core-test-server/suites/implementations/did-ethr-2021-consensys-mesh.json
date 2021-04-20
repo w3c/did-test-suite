@@ -70,7 +70,7 @@
       }
     }
   },
-  "erreee?versionId=0": {
+  "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=0": {
     "didDocumentDataModel": {
       "properties": {
           "id": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
