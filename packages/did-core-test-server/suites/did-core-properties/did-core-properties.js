@@ -36,7 +36,7 @@ const generateDidCorePropertiesTests = (
     'is a URI conforming to [RFC3986].', async () => {
       const {alsoKnownAs} = didDocument;
       if(alsoKnownAs) {
-        expect(Array.isArray(alsoKnownAs)).toBe(true);
+        expect(alsoKnownAs).toBeArray();
         alsoKnownAs.forEach(alsoKnownAsValue => {
           expect(alsoKnownAsValue).toBeValidUri();
         });
@@ -49,7 +49,7 @@ const generateDidCorePropertiesTests = (
     async () => {
       const {verificationMethod} = didDocument;
       if(verificationMethod) {
-        expect(Array.isArray(verificationMethod)).toBe(true);
+        expect(verificationMethod).toArray();
         verificationMethod.forEach(verificationMethodValue => {
           expect(verificationMethodValue).toBeInfraMap();
         });
