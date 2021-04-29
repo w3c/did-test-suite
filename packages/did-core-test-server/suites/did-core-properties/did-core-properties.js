@@ -49,7 +49,7 @@ const generateDidCorePropertiesTests = (
     async () => {
       const {verificationMethod} = didDocument;
       if(verificationMethod) {
-        expect(verificationMethod).toArray();
+        expect(verificationMethod).toBeArray();
         verificationMethod.forEach(verificationMethodValue => {
           expect(verificationMethodValue).toBeInfraMap();
         });
