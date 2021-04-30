@@ -23,62 +23,64 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
       expect(contentType).toBe('application/did+json');
   });
 
-  it('6.2.1 JSON Production - string: A JSON String.', async () => {
+  it('6.2.1 JSON Production - DID Documents MUST have an id property, ' +
+    'and they MUST be strings:', async () => {
     expect(typeof didDocument.id).toBe('string');
   });
 
-  it('6.2.1 JSON Production - set: A JSON Array, where each element of the set ' +
-    'is added, in order, as a value of the array according to its type, as ' +
-    'defined in this table', async () => {
-      if ('verificationMethod' in didDocument) {
-        expect(Array.isArray(didDocument.verificationMethod)).toBe(true);
-      }
-      else expect(didDocument.verificationMethod).toBe(undefined);
-  });
+  it('6.2.1 JSON Production - the JSON representation should only parse ' +
+    'known properties, and should ensure they are populated with allowed ' +
+    'value types, per section 6.2 JSON', async () => {
 
-  it('6.2.1 JSON Production - properties that are polymorphic should be one of their ' +
-      ' allowed value types', async () => {
+      // only operate on known properties, and discard any unknown props
+      for (let prop in didDocument) {
 
-        if ('controller' in didDocument) {
-          expect(typeof didDocument.controller === 'string' || Array.isArray(didDocument.controller)).toBe(true);
-        }
-    
-        if ('alsoKnownAs' in didDocument) {
-          let alsoKnownAs = didDocument.alsoKnownAs;
-          expect(
-            typeof alsoKnownAs === 'string' || 
-            (Array.isArray(alsoKnownAs) && alsoKnownAs.every(entry => typeof entry === 'string'))
-          ).toBe(true);
-        }
-    
-        if ('service' in didDocument) {
-          expect(
-            Array.isArray(didDocument.service) && 
-            didDocument.service.every(entry => typeof entry === 'object' && !Array.isArray(entry))
-          ).toBe(true);
-        }
+        switch (prop){
 
-        if ('verificationMethod' in didDocument) {
-          expect(
-            Array.isArray(didDocument.verificationMethod) && 
-            didDocument.verificationMethod.every(entry => typeof entry === 'object' && !Array.isArray(entry))
-          ).toBe(true);
-        }
+          case 'controller':
+            expect(
+              typeof didDocument.controller === 'string' || 
+              Array.isArray(didDocument.controller)
+            ).toBe(true);
+          break;
 
-        let verificationRelationships = [
-          'authentication',
-          'assertionMethod',
-          'keyAgreement',
-          'capabilityInvocation',
-          'capabilityDelegation',
-        ].every(prop => {
-          return prop in didDocument ? 
-            Array.isArray(didDocument[prop]) && didDocument.every(entry => {
+          case 'alsoKnownAs':
+            let alsoKnownAs = didDocument.alsoKnownAs;
+            expect(
+              typeof alsoKnownAs === 'string' || 
+              (Array.isArray(alsoKnownAs) && alsoKnownAs.every(entry => typeof entry === 'string'))
+            ).toBe(true);
+          break;
+
+          case 'service':
+            expect(
+              Array.isArray(didDocument.service) && 
+              didDocument.service.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+            ).toBe(true);
+          break;
+
+          case 'verificationMethod':
+            expect(
+              Array.isArray(didDocument.verificationMethod) && 
+              didDocument.verificationMethod.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+            ).toBe(true);
+          break;
+
+          case 'authentication':
+          case 'assertionMethod':
+          case 'keyAgreement':
+          case 'capabilityInvocation':
+          case 'capabilityDelegation':
+            expect(Array.isArray(didDocument[prop]) && didDocument.every(entry => {
               return typeof entry === 'string' || (typeof entry === 'object' && !Array.isArray(entry))
-            }) : 
-            true;
-        });  
-        expect(verificationRelationships).toBe(true);
+            })).toBe(true);
+          break;
+
+          default:
+            console.log(`This is plain JSON, baby - I refuse to touch your unknown '${prop}' property!`)
+        }
+
+      }
   });
 
 };
