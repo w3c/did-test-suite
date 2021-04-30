@@ -23,18 +23,55 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
       expect(contentType).toBe('application/did+json');
   });
 
-  // if (suiteConfig.supportedContentTypes.includes('application/did+json')) {
-  //   describe('6.2.1 JSON Production', () => {
-  //     it.todo(
-  //       'Numeric values representable as IEEE754 MUST be represented as a Number type.'
-  //     );
-  //     it.todo('Boolean values MUST be represented as a Boolean literal.');
-  //     it.todo('Sequence value MUST be represented as an Array type.');
-  //     it.todo('Unordered sets of values MUST be represented as an Array type.');
-  //     it.todo('Sets of properties MUST be represented as an Object type.');
-  //     it.todo('Empty values MUST be represented as a null literal.');
-  //   });
-  // }
+  it('6.2.1 JSON Production - If known properties are present, they MUST be' +
+  'of the correct value types/formats described in the § 6.2.1 JSON ' +
+  'Representation Type table.', async () => {
+
+    expect(typeof didDocument.id).toBe('string');
+
+    if ('controller' in didDocument) {
+      expect(typeof didDocument.controller === 'string' || Array.isArray(didDocument.controller)).toBe(true);
+    }
+
+    if ('alsoKnownAs' in didDocument) {
+      let alsoKnownAs = didDocument.alsoKnownAs;
+      expect(
+        typeof alsoKnownAs === 'string' || 
+        (Array.isArray(alsoKnownAs) && alsoKnownAs.every(entry => typeof entry === 'string'))
+      ).toBe(true);
+    }
+
+    if ('service' in didDocument) {
+      expect(
+        Array.isArray(didDocument.service) && 
+        didDocument.service.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+      ).toBe(true);
+    }
+
+    if ('verificationMethod' in didDocument) {
+      expect(
+        Array.isArray(didDocument.verificationMethod) && 
+        didDocument.verificationMethod.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+      ).toBe(true);
+    }
+
+    let relationshipsAreLookinAllGoodInDaHood = [
+      'authentication',
+      'assertionMethod',
+      'keyAgreement',
+      'capabilityInvocation',
+      'capabilityDelegation',
+    ].every(prop => {
+      return prop in didDocument ? 
+        Array.isArray(didDocument[prop]) && didDocument.every(entry => {
+          return typeof entry === 'string' || (typeof entry === 'object' && !Array.isArray(entry))
+        }) : 
+        true;
+    })
+
+    expect(relationshipsAreLookinAllGoodInDaHood).toBe(true);
+  });
+
 };
 
 module.exports = { generateJsonProductionTests };
