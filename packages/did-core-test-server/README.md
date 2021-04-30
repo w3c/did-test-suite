@@ -15,6 +15,8 @@ npm i
 cd ./packages/did-core-test-server
 ```
 
+Important note: since this test suite depends on a local, non-published package [`jest-did-matcher`](../jest-did-matcher), please run `npm i` at the top-level of this repository to correctly configure the relationship of packages.
+
 The suites can be tests manually, using:
 
 ```
