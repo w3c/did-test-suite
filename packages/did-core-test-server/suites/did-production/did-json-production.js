@@ -33,12 +33,12 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
       if ('verificationMethod' in didDocument) {
         expect(Array.isArray(didDocument.verificationMethod)).toBe(true);
       }
-      else expect(Array.isArray(didDocument.verificationMethod)).toBe(undefined);
+      else expect(didDocument.verificationMethod).toBe(undefined);
   });
 
   it('6.2.1 JSON Production - properties that are polymorphic should be one of their ' +
       ' allowed value types', async () => {
-        
+
         if ('controller' in didDocument) {
           expect(typeof didDocument.controller === 'string' || Array.isArray(didDocument.controller)).toBe(true);
         }
