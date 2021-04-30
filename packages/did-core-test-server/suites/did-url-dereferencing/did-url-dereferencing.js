@@ -21,12 +21,18 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
         }
       });
 
+      it.todo('3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.') {
+        if(! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
+          // TODO: Need relative URL dereferencing test
+        }
+      });
+
       it('A conformant DID URL as a single string.', async() => {
         if (! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
           expectConformantDidUrl(didUrl);
         }
       });
-      it('To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.', async () => {
+      it.todo('To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.', async () => {
         // TODO: Not sure yet how to test this.
       });
       it('This input is REQUIRED.', async () => {
