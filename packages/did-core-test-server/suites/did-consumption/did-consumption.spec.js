@@ -4,6 +4,17 @@ if (!suiteConfig) {
   suiteConfig = require('./default');
 }
 
-describe('6.x Consumption', () => {
-  require('./did-consumer').didConsumerTests(suiteConfig);
+suiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
+  const {didMethod, implementation, implementer} = didMethodSuiteConfig;
+  let suiteName =
+    `6.x Consumption - ${didMethod} - ${implementation} - ${implementer}`;
+
+  describe(suiteName, () => {
+    require('./did-consumer').didConsumerTests(
+      didMethodSuiteConfig
+    );
+    require('./did-jsonld-consumption').didJsonldConsumptionTests(
+      didMethodSuiteConfig
+    );
+  });
 });
