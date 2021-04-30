@@ -1,19 +1,21 @@
-# W3C Decentralized Identifiers Working Group Test Suite
+# ![W3C Logo](https://www.w3.org/Icons/w3c_home) DID Test Suite
 
-![W3C Logo](https://www.w3.org/Icons/w3c_home)
+This test suite performs interoperability tests on the W3C
+[Decentralized Identifier](https://www.w3.org/TR/did-core/) specification and
+is maintained by the W3C [DID Working Group](https://www.w3.org/2019/did-wg/).
 
-# Test Suite and Implementation Report
+## Adding Your DID Implementation
 
-This is the repository of the W3C’s note on Test Suite and Implementation
-Report, developed by the [DID Working Group](https://www.w3.org/2019/did-wg/).
+There are three types of implementations that this test suite tests:
+DID Methods, DID Resolvers, and DID URL Dereferencers. In order to add
+your implementation to this test suite:
 
-## Decentralized Identifiers 1.0 Test Suite
+1. Add your input file(s) to the [implementations](https://github.com/w3c/did-test-suite/tree/main/packages/did-core-test-server/suites/implementations) directory. For an example, see the [example DID Method implementation](https://github.com/w3c/did-test-suite/blob/main/packages/did-core-test-server/suites/implementations/did-example-didwg.json) (or any other file that looks closest to your implementation in the directory).
+2. Add your input file to all relevant `default.js` test suite configurations. For example, DID Methods should add themselves to the did-identifier, did-core-properties, did-production, and did-consumption suites. Resolver implementations should only be added to the did-resolution test suite. See the [current list of implementations listed for did-core-properties](https://github.com/w3c/did-test-suite/blob/main/packages/did-core-test-server/suites/did-core-properties/default.js) for more information. Implementers might want to peruse the [list of all the test suites](https://github.com/w3c/did-test-suite/tree/main/packages/did-core-test-server/suites) for more detail.
+3. Run the test suite and make sure your implementation passes.
+4. Submit a pull request on this repository to add your implementation.
 
-This test suite will check any application that generates
-[Decentralized Identifier](https://w3c.github.io/did-core/) documents to
-ensure conformance with the specification.
-
-## Contributing to the Repository
+## Adding and Modifying Tests
 
 Use the standard fork, branch, and pull request workflow to propose changes
 to the test suite. Please make branch names informative—by including the
