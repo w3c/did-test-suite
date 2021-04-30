@@ -14,6 +14,13 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
   const { dereferencingMetadata, contentStream, contentMetadata } = execution.output;
   describe(didUrl + ' (expected outcome: ' + expectedOutcome + ')', () => {
     describe('didUrl', () => {
+      it('3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ' +
+        'ABNF Rules.', async () => {
+        if(! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
+          expect(didUrl).toBeValidDidUrl();
+        }
+      });
+
       it('A conformant DID URL as a single string.', async() => {
         if (! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
           expectConformantDidUrl(didUrl);

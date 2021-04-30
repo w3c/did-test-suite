@@ -4,8 +4,9 @@ const didSyntaxTests = (suiteConfig) => {
   describe('3.1 DID Syntax', () => {
     suiteConfig.dids.forEach((didExample) => {
       describe(didExample, () => {
-        it('MUST be a valid URL.', async () => {
-          expect(didExample).toBeValidUrl();
+        it('3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ' +
+          'ABNF Rules.', async () => {
+          expect(didExample).toBeValidDid();
         });
         it('The URI scheme MUST be "did:"', () => {
           const url = new URL(didExample);
