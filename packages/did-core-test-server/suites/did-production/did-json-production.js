@@ -15,7 +15,7 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
       expect(deepEqual(didDocument, reserializedDidDocument)).toBe(true);
   });
 
-  it('6.2.1 JSON Production - When serializing a JSON-LD ' +
+  it('6.2.1 JSON Production - When serializing a JSON ' +
     'representation of a DID document, a conforming producer MUST specify a ' +
     'media type of application/did+json to downstream applications such ' +
     'as described in § 7.1.2 DID Resolution Metadata.', async () => {
@@ -23,53 +23,62 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
       expect(contentType).toBe('application/did+json');
   });
 
-  it('6.2.1 JSON Production - If known properties are present, they MUST be' +
-  'of the correct value types/formats described in the § 6.2.1 JSON ' +
-  'Representation Type table.', async () => {
-
+  it('6.2.1 JSON Production - string: A JSON String.', async () => {
     expect(typeof didDocument.id).toBe('string');
+  });
 
-    if ('controller' in didDocument) {
-      expect(typeof didDocument.controller === 'string' || Array.isArray(didDocument.controller)).toBe(true);
-    }
+  it('6.2.1 JSON Production - set: A JSON Array, where each element of the set ' +
+    'is added, in order, as a value of the array according to its type, as ' +
+    'defined in this table', async () => {
+      if ('verificationMethod' in didDocument) {
+        expect(Array.isArray(didDocument.verificationMethod)).toBe(true);
+      }
+      else expect(Array.isArray(didDocument.verificationMethod)).toBe(undefined);
+  });
 
-    if ('alsoKnownAs' in didDocument) {
-      let alsoKnownAs = didDocument.alsoKnownAs;
-      expect(
-        typeof alsoKnownAs === 'string' || 
-        (Array.isArray(alsoKnownAs) && alsoKnownAs.every(entry => typeof entry === 'string'))
-      ).toBe(true);
-    }
+  it('6.2.1 JSON Production - properties that are polymorphic should be one of their ' +
+      ' allowed value types', async () => {
+        
+        if ('controller' in didDocument) {
+          expect(typeof didDocument.controller === 'string' || Array.isArray(didDocument.controller)).toBe(true);
+        }
+    
+        if ('alsoKnownAs' in didDocument) {
+          let alsoKnownAs = didDocument.alsoKnownAs;
+          expect(
+            typeof alsoKnownAs === 'string' || 
+            (Array.isArray(alsoKnownAs) && alsoKnownAs.every(entry => typeof entry === 'string'))
+          ).toBe(true);
+        }
+    
+        if ('service' in didDocument) {
+          expect(
+            Array.isArray(didDocument.service) && 
+            didDocument.service.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+          ).toBe(true);
+        }
 
-    if ('service' in didDocument) {
-      expect(
-        Array.isArray(didDocument.service) && 
-        didDocument.service.every(entry => typeof entry === 'object' && !Array.isArray(entry))
-      ).toBe(true);
-    }
+        if ('verificationMethod' in didDocument) {
+          expect(
+            Array.isArray(didDocument.verificationMethod) && 
+            didDocument.verificationMethod.every(entry => typeof entry === 'object' && !Array.isArray(entry))
+          ).toBe(true);
+        }
 
-    if ('verificationMethod' in didDocument) {
-      expect(
-        Array.isArray(didDocument.verificationMethod) && 
-        didDocument.verificationMethod.every(entry => typeof entry === 'object' && !Array.isArray(entry))
-      ).toBe(true);
-    }
-
-    let relationshipsAreLookinAllGoodInDaHood = [
-      'authentication',
-      'assertionMethod',
-      'keyAgreement',
-      'capabilityInvocation',
-      'capabilityDelegation',
-    ].every(prop => {
-      return prop in didDocument ? 
-        Array.isArray(didDocument[prop]) && didDocument.every(entry => {
-          return typeof entry === 'string' || (typeof entry === 'object' && !Array.isArray(entry))
-        }) : 
-        true;
-    })
-
-    expect(relationshipsAreLookinAllGoodInDaHood).toBe(true);
+        let verificationRelationships = [
+          'authentication',
+          'assertionMethod',
+          'keyAgreement',
+          'capabilityInvocation',
+          'capabilityDelegation',
+        ].every(prop => {
+          return prop in didDocument ? 
+            Array.isArray(didDocument[prop]) && didDocument.every(entry => {
+              return typeof entry === 'string' || (typeof entry === 'object' && !Array.isArray(entry))
+            }) : 
+            true;
+        });  
+        expect(verificationRelationships).toBe(true);
   });
 
 };
