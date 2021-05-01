@@ -24,7 +24,7 @@ const generateJsonProductionTests = ({did, didDocumentDataModel, resolutionResul
   });
 
   it('6.2.1 JSON Production - DID Documents MUST have an id property, ' +
-    'and they MUST be strings:', async () => {
+    'and it MUST be a string:', async () => {
     expect(typeof didDocument.id).toBe('string');
   });
 
