@@ -13,6 +13,9 @@ suiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     require('./did-consumer').didConsumerTests(
       didMethodSuiteConfig
     );
+    require('./did-json-consumption').didJsonConsumptionTests(
+      didMethodSuiteConfig
+    );
     require('./did-jsonld-consumption').didJsonldConsumptionTests(
       didMethodSuiteConfig
     );
