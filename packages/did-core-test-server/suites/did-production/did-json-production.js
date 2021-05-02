@@ -26,7 +26,7 @@ const generateJsonProductionTests = (
           'according to its type, as defined in this table.', () => {
           expect(serializationSuccess(value)).toBe(true);
         });
-      } else if(typeof value === 'object') {
+      } else if(value !== null && typeof value === 'object') {
         it('6.2.1 JSON Production - map: A JSON Object, where each entry ' +
           'is serialized as a member of the JSON Object with the entry key ' +
           'as a JSON String member name and the entry value according to ' +
