@@ -1,16 +1,125 @@
-const didJsonProductionTests = (suiteConfig) => {
-  if (suiteConfig.supportedContentTypes.includes('application/did+json')) {
-    describe('6.2.1 JSON Production', () => {
-      it.todo(
-        'Numeric values representable as IEEE754 MUST be represented as a Number type.'
-      );
-      it.todo('Boolean values MUST be represented as a Boolean literal.');
-      it.todo('Sequence value MUST be represented as an Array type.');
-      it.todo('Unordered sets of values MUST be represented as an Array type.');
-      it.todo('Sets of properties MUST be represented as an Object type.');
-      it.todo('Empty values MUST be represented as a null literal.');
+const deepEqual = require('deep-equal')
+const {isXmlDatetime} = require('../utils');
+
+const generateJsonProductionTests = (
+  {did, didDocumentDataModel, resolutionResult}) => {
+  const didDocument = {
+    ...didDocumentDataModel.properties,
+    ...didDocumentDataModel.representationSpecificEntries
+  };
+
+  describe('6.2.1 JSON Production - The DID document, DID document data ' +
+    'structures, and representation-specific entries map MUST be ' +
+    'serialized to the JSON representation according to the following ' +
+    'production rules:', () => {
+    allValues = _getAllValues(didDocument);
+
+    allValues.forEach(value => {
+      if(Array.isArray(value)) {
+        it('6.2.1 JSON Production - list: A JSON Array, where each element ' +
+          'of the list is serialized, in order, as a value of the array ' +
+          'according to its type, as defined in this table.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+        it('6.2.1 JSON Production - set: A JSON Array, where each element ' +
+          'of the set is added, in order, as a value of the array ' +
+          'according to its type, as defined in this table.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else if(typeof value === 'object') {
+        it('6.2.1 JSON Production - map: A JSON Object, where each entry ' +
+          'is serialized as a member of the JSON Object with the entry key ' +
+          'as a JSON String member name and the entry value according to ' +
+          'its type, as defined in this table.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else if(typeof value === 'string' && isXmlDatetime(value)) {
+        it('6.2.1 JSON Production - datetime: A JSON String serialized as an ' +
+          'XML Datetime normalized to UTC 00:00:00 and without sub-second ' +
+          'decimal precision.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else if(typeof value === 'string') {
+        it('6.2.1 JSON Production - string: A JSON String.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else if(typeof value === 'number') {
+        if(!Number.isInteger(value)) {
+          it('6.2.1 JSON Production - integer: A JSON Number without a ' +
+            'decimal or fractional component.', () => {
+            expect(serializationSuccess(value)).toBe(true);
+          });
+        } else {
+          it('6.2.1 JSON Production - double: A JSON Number with a decimal ' +
+            'and fractional component.', () => {
+            expect(serializationSuccess(value)).toBe(true);
+          });
+        }
+      } else if(typeof value === 'boolean') {
+        it('6.2.1 JSON Production - boolean: A JSON Boolean.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else if(value === null) {
+        it('6.2.1 JSON Production - null: A JSON null literal.', () => {
+          expect(serializationSuccess(value)).toBe(true);
+        });
+      } else {
+        it('UNKNOWN JSON TYPE '+ value, () => {
+          expect(true).toBe(true);
+        });
+      }
     });
-  }
+  });
+
+  it('6.2.1 JSON Production - All entries of a DID document MUST be included ' +
+    'in the root JSON Object.', () => {
+    expect(typeof didDocument === 'object');
+  });
+
+  it('6.2.1 JSON Production - When serializing a DID document, a conforming ' +
+    'producer MUST specify a media type of application/did+json to ' +
+    'downstream applications such as described in ' +
+    '§ 7.1.2 DID Resolution Metadata.', async () => {
+      const {contentType} = resolutionResult.didResolutionMetadata;
+      expect(contentType).toBe('application/did+json');
+  });
+}
+
+const serializationSuccess = (value) => {
+  const reserialization = JSON.parse(JSON.stringify(value));
+  return deepEqual(value, reserialization);
+}
+
+const _getAllValues = (obj, results = []) => {
+  const r = results;
+  Object.keys(obj).forEach(key => {
+    const value = obj[key];
+    r.push(value);
+    if(value !== null && typeof value === 'object') {
+     _getAllValues(value, r);
+    }
+  });
+  return r;
+};
+
+const didJsonProductionTests = (suiteConfig) => {
+  describe('6.2.1 JSON Production', () => {
+    suiteConfig.dids.forEach((did) => {
+      describe(did, () => {
+        for(const [mediaType, resolutionResult] of Object.entries(suiteConfig[did])) {
+          if(mediaType === 'application/did+json') {
+            const {didDocumentDataModel} = suiteConfig[did];
+            didDocumentDataModel.representationSpecificEntries =
+              resolutionResult.didDocumentDataModel.
+              representationSpecificEntries;
+
+            generateJsonProductionTests(
+              {did, didDocumentDataModel, resolutionResult});
+          }
+        }
+      });
+    });
+  });
 };
 
 module.exports = { didJsonProductionTests };

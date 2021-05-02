@@ -44,7 +44,12 @@
         "assertionMethod": ["#key-0"],
         "capabilityInvocation": ["#key-0"],
         "capabilityDelegation": ["#key-0"],
-        "keyAgreement": ["#key-1"]
+        "keyAgreement": ["#key-1"],
+        "bespokeDatetime": "2020-09-26T20:14:02Z",
+        "bespokeDouble": 1.2,
+        "bespokeInteger": 5,
+        "bespokeBoolean": true,
+        "bespokeNull": null
       }
     },
     "application/did+json": {
@@ -52,7 +57,7 @@
         "representationSpecificEntries": {
         }
       },
-      "representation": "{\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"]}",
+      "representation": "{\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"],\"bespokeDatetime\":\"2020-09-26T20:14:02Z\",\"bespokeDouble\":1.2,\"bespokeInteger\":5,\"bespokeBoolean\":true,\"bespokeNull\":null}",
       "didDocumentMetadata": {
         "canonicalId": "did:example:one-two-three",
         "equivalentId": "did:example:one-two-three",
@@ -72,7 +77,7 @@
           "@context": ["https://www.w3.org/ns/did/v1"]
         }
       },
-      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"]}",
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:example:123\",\"verificationMethod\":[{\"id\":\"did:example:123#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE\"}},{\"id\":\"did:example:123#key-1\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:example:123\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"3kY9jl1by7pLzgJktUH-e9H6fihdVUb00-sTzkfmIl8\"}}],\"authentication\":[\"#key-0\"],\"assertionMethod\":[\"#key-0\"],\"capabilityInvocation\":[\"#key-0\"],\"capabilityDelegation\":[\"#key-0\"],\"keyAgreement\":[\"#key-1\"],\"bespokeDatetime\":\"2020-09-26T20:14:02Z\",\"bespokeDouble\":1.2,\"bespokeInteger\":5,\"bespokeBoolean\":true,\"bespokeNull\":null}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
