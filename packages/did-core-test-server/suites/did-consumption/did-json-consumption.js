@@ -18,14 +18,14 @@ const generateJsonConsumptionTests = (
           'Array is added to the list in order, converted based on the JSON ' +
           'representation type of the array value, as defined in this ' +
           'table.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
         it('6.2.2 JSON Consumption - JSON Array where the data model entry ' +
           'value is a set: A set, where each value of the JSON Array is ' +
           'added to the set in order, converted based on the JSON ' +
           'representation type of the array value, as defined in this ' +
           'table.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else if(value !== null && typeof value === 'object') {
         it('6.2.2 JSON Consumption - JSON Object: A map, where each member ' +
@@ -35,44 +35,43 @@ const generateJsonConsumptionTests = (
           'JSON representation type as defined in this table. Since order ' +
           'is not specified by JSON Objects, no insertion order is ' +
           'guaranteed.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else if(typeof value === 'string' && isXmlDatetime(value)) {
         it('6.2.2 JSON Consumption - JSON String where data model entry ' +
           'value is a datetime: A datetime.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else if(typeof value === 'string') {
         it('6.2.2 JSON Consumption - JSON String, where the data model ' +
           'entry value type is string or unknown: A string.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else if(typeof value === 'number') {
         if(!Number.isInteger(value)) {
           it('6.2.2 JSON Consumption - JSON Number without a decimal or ' +
             'fractional component: An integer.', () => {
-            expect(reserializationSuccess(value)).toBe(true);
+            expect(consume(value)).toBe(true);
           });
         } else {
           it('6.2.2 JSON Consumption - JSON Number with a decimal and ' +
             'fractional component, or when entry value is a double ' +
             'regardless of inclusion of fractional component: ' +
             'A double.', () => {
-            expect(reserializationSuccess(value)).toBe(true);
+            expect(consume(value)).toBe(true);
           });
         }
       } else if(typeof value === 'boolean') {
         it('6.2.2 JSON Consumption - JSON Boolean: A boolean.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else if(value === null) {
         it('6.2.2 JSON Consumption - JSON null literal: A null value.', () => {
-          expect(reserializationSuccess(value)).toBe(true);
+          expect(consume(value)).toBe(true);
         });
       } else {
-        it('UNKNOWN JSON TYPE '+ value, () => {
-          expect(true).toBe(true);
-        });
+        throw new Error(
+          'Unknown application/did+json data model type for value: '+ value);
       }
     });
   });
@@ -93,9 +92,11 @@ const generateJsonConsumptionTests = (
   });
 }
 
-const reserializationSuccess = (value) => {
+const consume = (value) => {
   const reserialization = JSON.parse(JSON.stringify(value));
-  return deepEqual(value, reserialization);
+  // the next line will throw if production of the value doesn't round trip
+  expect(value).toEqual(reserialization);
+  return true;
 }
 
 const _getAllValues = (obj, results = []) => {
