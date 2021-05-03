@@ -1,3 +1,4 @@
+const findExecutionByDidUrl = require('./utils').findExecutionByDidUrl;
 const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
@@ -5,7 +6,7 @@ const expectConformantMetadataStructure = require('./utils').expectConformantMet
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
 const expectConformantRepresentation = require('./utils').expectConformantRepresentation;
 
-const didUrlDereferencingTests = (execution, expectedOutcome) => {
+const didUrlDereferencingTests = (execution, expectedOutcome, implementation) => {
   const { didUrl, dereferenceOptions } = execution.input;
   const { dereferencingMetadata, contentStream, contentMetadata } = execution.output;
   describe(didUrl + ' (expected outcome: ' + expectedOutcome + ')', () => {
@@ -23,9 +24,16 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
           expect(didUrl).toBeValidDidUrl();
         }
       });
-
-      it.todo('To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.');
-
+      it('To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.', async () => {
+        if(didUrl.includes('#')) {
+          const didUrlWithoutFragment = didUrl.substring(0, didUrl.indexOf('#'));
+          const executionWithoutFragment = findExecutionByDidUrl(implementation, didUrlWithoutFragment);
+          if (executionWithoutFragment !== undefined) {
+            const contentStreamWithoutFragment = executionWithoutFragment.output.contentStream;
+            expect(contentStreamWithoutFragment).not.toBe(contentStream);
+          }
+        }
+      });
       it('This input is REQUIRED.', async () => {
         expect(didUrl).not.toBeFalsy();
       });

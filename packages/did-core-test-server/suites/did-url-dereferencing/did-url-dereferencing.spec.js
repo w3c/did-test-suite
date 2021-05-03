@@ -7,11 +7,11 @@ if (!suiteConfig) {
 const utils = require('./utils');
 
 describe('7.2.x DID URL Dereferencing', () => {
-  let i = 0;
-  suiteConfig.dereferencers.forEach((dereferencer) => {
-    dereferencer.executions.forEach((execution) => {
-      const expectedOutcome = utils.findExpectedOutcome(dereferencer.expectedOutcomes, i++);
-      require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome);
+  suiteConfig.dereferencers.forEach((implementation) => {
+    let i = 0;
+    implementation.executions.forEach((execution) => {
+      const expectedOutcome = utils.findExpectedOutcome(implementation.expectedOutcomes, i++);
+      require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome, implementation);
     });
   });
 });
