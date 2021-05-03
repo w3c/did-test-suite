@@ -2,7 +2,6 @@ const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
 const produceRepresentation = require('./utils').produceRepresentation;
 const consumeRepresentation = require('./utils').consumeRepresentation;
-const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
@@ -187,14 +186,14 @@ const didResolutionTests = (execution, expectedOutcome) => {
       describe('created', () => {
         if (didDocumentMetadata.hasOwnProperty('created')) {
           it('The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
-            expectXmlDateTimeNormalizedToUtcWithoutPrecision(didDocumentMetadata['created']);
+            expect(didDocumentMetadata['created']).toBeDidCoreDatetime();
           });
         }
       });
       describe('updated', () => {
         if (didDocumentMetadata.hasOwnProperty('updated')) {
           it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
-            expectXmlDateTimeNormalizedToUtcWithoutPrecision(didDocumentMetadata['updated']);
+            expect(didDocumentMetadata['updated']).toBeDidCoreDatetime();
           });
           if (didDocumentMetadata.hasOwnProperty('created')) {
             it('updated is later or equal than created.', async () => {
@@ -221,7 +220,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
       describe('nextUpdate', () => {
         if (didDocumentMetadata.hasOwnProperty('nextUpdate')) {
           it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
-            expectXmlDateTimeNormalizedToUtcWithoutPrecision(didDocumentMetadata['nextUpdate']);
+            expect(didDocumentMetadata['nextUpdate']).toBeDidCoreDatetime();
           });
           if (didDocumentMetadata.hasOwnProperty('created')) {
             it('nextUpdate is later than created.', async () => {
