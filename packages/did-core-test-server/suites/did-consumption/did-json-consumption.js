@@ -79,7 +79,7 @@ const generateJsonConsumptionTests = (
   it('6.2.2 JSON Consumption - A conforming consumer for a JSON ' +
     'representation that is consuming a DID document with a root ' +
     'element that is not a JSON Object MUST report an error.', () => {
-    expect(typeof didDocument === 'object');
+    expect(typeof didDocument === 'object').toBeTruthy();
   });
 
   it('6.2.2 JSON Production - If media type information is available to ' +
