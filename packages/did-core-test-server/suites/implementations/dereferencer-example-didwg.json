@@ -38,7 +38,6 @@
         },
         "contentStream": "{\"id\": \"did:example:222#key-1\",\"controller\": \"did:example:222\",\"publicKeyBase58\": \"F6NxfeuPJ5NhmDM6QT2TeSFxcnnkQBgtv6yfQziS5NPM\"}",
         "contentMetadata": {
-          "contentType": "application/did+json"
         }
       }
     },

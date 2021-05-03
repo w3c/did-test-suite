@@ -25,6 +25,8 @@
           "service": []
         },
         "didDocumentMetadata": {
+          "canonicalId": "did:example:oneoneone",
+          "equivalentId": ["did:example:one1one", "did:example:1one1"]
         }
       }
     },
@@ -69,7 +71,6 @@
       },
       "output": {
         "didResolutionMetadata": {
-          "contentType": "application/did+json"
         },
         "didDocument": {
           "id": "did:example:444",
