@@ -36,44 +36,48 @@ const parseDidMethod = (did) => {
   return match[1];
 };
 
-const produceRepresentation = (didDocument) => {
-  // TODO: properly produce, try to re-use other test code
-  return JSON.stringify(didDocument);
-};
-
-const consumeRepresentation = (representation) => {
-  // TODO: properly consume, try to re-use other test code
-  return JSON.parse(representation);
-};
-
-const expectConformantDidDocument = ((didDocument, not) => {
-  // TODO: properly test if this is a conformant DID document (abstract data model)
-  (not ? expect(Object.keys(didDocument)).not : expect(Object.keys(didDocument)))
-      .toContain('id');
-});
-
-const expectConformantMetadataStructure = ((metaDataStructure, not) => {
-  // TODO: properly test if this is a conformant metadata structure, try to re-use other test code
-  (not ? expect(typeof metaDataStructure).not : expect(typeof metaDataStructure))
-      .toBe('object');
-});
-
-const expectKnownConformantMediaType = ((mediaType) => {
-  expect(mediaType.startsWith('application/did+ld+json') ||
-      mediaType.startsWith('application/did+json') ||
-      mediaType.startsWith('application/did+cbor')).toBe(true);
-});
-
-const expectConformantRepresentation = ((mediaType, representation) => {
-  // TODO: properly test if the representation conforms to the mediaType, try to re-use other test code
-  if (mediaType.startsWith('application/did+ld+json')) {
-    expect(() => { JSON.parse(representation); }).not.toThrow();
-    expect(Object.keys(JSON.parse(representation))).constructor('@context');
-  } else if (mediaType.startsWith('application/did+json')) {
-    expect(() => { JSON.parse(representation); }).not.toThrow();
-  } else if (mediaType.startsWith('application/did+cbor')) {
-    expect(parseInt('0x' + representation)).not.toBeNaN();
+const produceRepresentation = (didDocument, contentType) => {
+  // TODO: improve this by re-using other test code
+  if (contentType.startsWith('application/did+json') ||
+      contentType.startsWith('application/did+ld+json')) {
+    return JSON.stringify(didDocument);
+  } else if (contentType.startsWith('application/did+cbor')) {
+    return '00';
   }
+};
+
+const consumeRepresentation = (representation, contentType) => {
+  // TODO: improve this by re-using other test code
+  if (contentType.startsWith('application/did+ld+json')) {
+    let didDocument = JSON.parse(representation);
+    expect(Object.keys(didDocument)).toContain('@context');
+    return didDocument;
+  } else if (contentType.startsWith('application/did+json')) {
+    let didDocument = JSON.parse(representation);
+    return didDocument;
+  } else if (contentType.startsWith('application/did+cbor')) {
+    expect(parseInt('0x' + representation)).not.toBeNaN();
+    let didDocument = { 'id': 'did:ex:123' };
+    return didDocument;
+  }
+};
+
+const expectConformantDidDocument = ((didDocument) => {
+  // TODO: improve this by re-using other test code
+  expect(didDocument).toBeInfraMap();
+  expect(Object.keys(didDocument)).toContain('id');
+});
+
+const expectConformantDidDocumentRepresentation = ((didDocumentStream, contentType) => {
+  // TODO: improve this by re-using other test code
+  const didDocument = consumeRepresentation(didDocumentStream, contentType);
+  expect(didDocument).not.toBeFalsy();
+  expectConformantDidDocument(didDocument);
+});
+
+const expectConformantMetadataStructure = ((metaDataStructure) => {
+  // TODO: improve this by re-using other test code
+  expect(metaDataStructure).toBeInfraMap();
 });
 
 module.exports = {
@@ -85,7 +89,6 @@ module.exports = {
   produceRepresentation,
   consumeRepresentation,
   expectConformantDidDocument,
-  expectConformantMetadataStructure,
-  expectKnownConformantMediaType,
-  expectConformantRepresentation
+  expectConformantDidDocumentRepresentation,
+  expectConformantMetadataStructure
 };

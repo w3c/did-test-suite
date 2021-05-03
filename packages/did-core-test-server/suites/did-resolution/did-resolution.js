@@ -34,8 +34,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
         if (execution.function === 'resolveRepresentation') {
           expect(Object.keys(didResolutionMetadata)).toContain('contentType');
           expect(didResolutionMetadata['contentType']).toBeMediaType();
-          utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
-          utils.expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
+          utils.expectConformantDidDocumentRepresentation(didDocumentStream, didResolutionMetadata['contentType']);
         }
       });
       it('If the resolution is not successful, this structure MUST contain an error property describing the error.', async () => {
@@ -50,11 +49,10 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
       describe('didDocument', () => {
         it('If the resolution is successful, and if the resolve function was called, this MUST be a DID document abstract data model (a map) as described in § 4. Data Model that is capable of being transformed into a conforming DID Document (representation), using the production rules specified by the representation.', async () => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
-            expect(typeof didDocument).toBe('object');
             utils.expectConformantDidDocument(didDocument);
+            const didDocumentStream = utils.produceRepresentation(didDocument, 'application/did+json');
+            utils.expectConformantDidDocumentRepresentation(didDocumentStream, 'application/did+json');
           }
-          // TODO: Test if the DID document abstract data model is capable of being transformed into a conforming DID Document (representation).
-          //       This should re-use code from other tests (production).
         });
         it('The value of id in the resolved DID document MUST match the DID that was resolved.', async () => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
@@ -77,8 +75,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
             expect(didDocumentStream).not.toBeFalsy();
             expect(didResolutionMetadata['contentType']).toBeMediaType();
-            utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
-            utils.expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
+            utils.expectConformantDidDocumentRepresentation(didDocumentStream, didResolutionMetadata['contentType']);
           }
         });
         it('If the resolution is unsuccessful, this value MUST be an empty stream.', async () => {
@@ -121,12 +118,12 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
     describe('DID Resolution Metadata', () => {
       describe('contentType', () => {
         it('This property is REQUIRED if resolution is successful and if the resolveRepresentation function was called.', async() => {
-          if (! didResolutionMetadata.hasOwnProperty('error') && execution.input.function === 'resolveRepresentation') {
+          if (! didResolutionMetadata.hasOwnProperty('error') && execution.function === 'resolveRepresentation') {
             expect(Object.keys(didResolutionMetadata)).toContain('contentType');
           }
         });
         it('This property MUST NOT be present if the resolve function was called.', async () => {
-          if (execution.input.function === 'resolve') {
+          if (execution.function === 'resolve') {
             expect(Object.keys(didResolutionMetadata)).not.toContain('contentType');
           }
         });
@@ -134,11 +131,15 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
           it('The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.', async () => {
               expect(didResolutionMetadata['contentType']).toBeAsciiString();
               expect(didResolutionMetadata['contentType']).toBeMediaType();
-              utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
+              utils.expectConformantDidDocumentRepresentation(didDocumentStream, didResolutionMetadata['contentType']);
           });
         }
         it('The caller of the resolveRepresentation function MUST use this value when determining how to parse and process the didDocumentStream returned by this function into the data model.', async() => {
-          // TODO: This should re-use code from other tests (consumption).
+          if (didResolutionMetadata.hasOwnProperty('contentType')) {
+            expect(didDocumentStream).not.toBeFalsy();
+            expect(utils.consumeRepresentation(didDocumentStream, didResolutionMetadata['contentType'])).not.toBeFalsy();
+            expect(utils.consumeRepresentation(didDocumentStream, 'image/jpeg')).toBeFalsy();
+          }
         });
       });
       describe('error', () => {
@@ -174,116 +175,122 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
       });
     });
     describe('DID Document Metadata', () => {
-      describe('created', () => {
-        if (didDocumentMetadata.hasOwnProperty('created')) {
-          it('The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
-            expect(didDocumentMetadata['created']).toBeDidCoreDatetime();
-          });
-        }
-      });
-      describe('updated', () => {
-        if (didDocumentMetadata.hasOwnProperty('updated')) {
-          it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
-            expect(didDocumentMetadata['updated']).toBeDidCoreDatetime();
-          });
-          if (didDocumentMetadata.hasOwnProperty('created')) {
-            it('updated is later or equal than created.', async () => {
-              expect((new Date(didDocumentMetadata['updated'])).getTime()).toBeGreaterThanOrEqual((new Date(didDocumentMetadata['created'])).getTime())
-            });
-          }
-        }
-      });
-      describe('deactivated', () => {
-        if (expectedOutcome === 'deactivatedOutcome') {
-          it('If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.', async () => {
-            expect(Object.keys(didDocumentMetadata)).toContain('deactivated');
-            expect(didDocumentMetadata['deactivated']).toBe(true);
-          });
-        }
-        if (expectedOutcome !== 'deactivatedOutcome') {
-          if (didDocumentMetadata.hasOwnProperty('deactivated')) {
-            it('If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.', async () => {
-              expect(didDocumentMetadata['deactivated']).toBe(false);
-            });
-          }
-        }
-      });
-      describe('nextUpdate', () => {
-        if (didDocumentMetadata.hasOwnProperty('nextUpdate')) {
-          it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
-            expect(didDocumentMetadata['nextUpdate']).toBeDidCoreDatetime();
-          });
-          if (didDocumentMetadata.hasOwnProperty('created')) {
-            it('nextUpdate is later than created.', async () => {
-              expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['created'])).getTime())
-            });
-          }
-          if (didDocumentMetadata.hasOwnProperty('updated')) {
-            it('nextUpdate is later than updated.', async () => {
-              expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['updated'])).getTime())
-            });
-          }
-        }
-      });
-      describe('versionId', () => {
-        if (didDocumentMetadata.hasOwnProperty('versionId')) {
-          it('The value of the property MUST be an ASCII string.', async () => {
-            expect(didDocumentMetadata['versionId']).toBeAsciiString();
-          });
-        }
-      });
-      describe('nextVersionId', () => {
-        if (didDocumentMetadata.hasOwnProperty('nextVersionId')) {
-          it('The value of the property MUST be an ASCII string.', async () => {
-            expect(didDocumentMetadata['nextVersionId']).toBeAsciiString();
-          });
-          if (didDocumentMetadata.hasOwnProperty('versionId')) {
-            it('nextVersionId is different from versionId.', async () => {
-              expect(didDocumentMetadata['nextVersionId']).not.toBe(didDocumentMetadata['versionId']);
-            });
-          }
-        }
-      });
-      describe('equivalentId', () => {
-        // TODO: According to the spec, 'equivalentId' is currently not optional, even though that's definitely what the WG intended - see https://github.com/w3c/did-core/issues/717.
-        if (didDocumentMetadata.hasOwnProperty('equivalentId')) {
-          it('The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
-            expect(typeof didDocumentMetadata['equivalentId']).toBe('array');
-            didDocumentMetadata['equivalentId'].forEach((i) => {
-              const equivalentid = didDocumentMetadata['equivalentId'][i];
-              expect(equivalentid).toBeValidDid();
-            })
-          });
-          it('Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
-            didDocumentMetadata['equivalentId'].forEach((i) => {
-              const equivalentid = didDocumentMetadata['equivalentId'][i];
-              // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
-              expect(utils.parseDidMethod(equivalentid)).toBe(utils.parseDidMethod(didDocument['id']));
-            })
-          });
-          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
-          it.skip('A conforming DID Method specification MUST guarantee that each equivalentId value is logically equivalent to the id property value.');
-          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
-          it.skip('equivalentId is a much stronger form of equivalence than alsoKnownAs because the equivalence MUST be guaranteed by the governing DID method.');
-        }
-      });
-      describe('canonicalId', () => {
-        // TODO: According to the spec, 'canonicalId' is currently not optional, even though that's definitely what the WG intended - see https://github.com/w3c/did-core/issues/717.
-        if (didDocumentMetadata.hasOwnProperty('canonicalId')) {
-          it('The value of canonicalId MUST be a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
-            const canonicalId = didDocumentMetadata['canonicalId'][i];
-            expect(didDocumentMetadata['canonicalId']).toBeValidDid();
-          });
-          it('A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
-            // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
-            expect(utils.parseDidMethod(didDocumentMetadata['canonicalId'])).toBe(utils.parseDidMethod(didDocument['id']));
-          });
-          // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
-          it.skip('A conforming DID Method specification MUST guarantee that the canonicalId value is logically equivalent to the id property value.');
-        }
-      });
+      testDidDocumentMetadata(didDocumentMetadata, didDocument, expectedOutcome);
     });
   });
 };
 
-module.exports = { didResolutionTests };
+const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutcome) => {
+  describe('created', () => {
+    if (didDocumentMetadata.hasOwnProperty('created')) {
+      it('The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
+        expect(didDocumentMetadata['created']).toBeDidCoreDatetime();
+      });
+    }
+  });
+  describe('updated', () => {
+    if (didDocumentMetadata.hasOwnProperty('updated')) {
+      it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
+        expect(didDocumentMetadata['updated']).toBeDidCoreDatetime();
+      });
+      if (didDocumentMetadata.hasOwnProperty('created')) {
+        it('updated is later or equal than created.', async () => {
+          expect((new Date(didDocumentMetadata['updated'])).getTime()).toBeGreaterThanOrEqual((new Date(didDocumentMetadata['created'])).getTime())
+        });
+      }
+    }
+  });
+  describe('deactivated', () => {
+    if (expectedOutcome && (expectedOutcome === 'deactivatedOutcome')) {
+      it('If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.', async () => {
+        expect(Object.keys(didDocumentMetadata)).toContain('deactivated');
+        expect(didDocumentMetadata['deactivated']).toBe(true);
+      });
+    }
+    if (expectedOutcome && (expectedOutcome !== 'deactivatedOutcome')) {
+      if (didDocumentMetadata.hasOwnProperty('deactivated')) {
+        it('If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.', async () => {
+          expect(didDocumentMetadata['deactivated']).toBe(false);
+        });
+      }
+    }
+  });
+  describe('nextUpdate', () => {
+    if (didDocumentMetadata.hasOwnProperty('nextUpdate')) {
+      it('The value of the property MUST follow the same formatting rules as the created property.', async () => {
+        expect(didDocumentMetadata['nextUpdate']).toBeDidCoreDatetime();
+      });
+      if (didDocumentMetadata.hasOwnProperty('created')) {
+        it('nextUpdate is later than created.', async () => {
+          expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['created'])).getTime())
+        });
+      }
+      if (didDocumentMetadata.hasOwnProperty('updated')) {
+        it('nextUpdate is later than updated.', async () => {
+          expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['updated'])).getTime())
+        });
+      }
+    }
+  });
+  describe('versionId', () => {
+    if (didDocumentMetadata.hasOwnProperty('versionId')) {
+      it('The value of the property MUST be an ASCII string.', async () => {
+        expect(didDocumentMetadata['versionId']).toBeAsciiString();
+      });
+    }
+  });
+  describe('nextVersionId', () => {
+    if (didDocumentMetadata.hasOwnProperty('nextVersionId')) {
+      it('The value of the property MUST be an ASCII string.', async () => {
+        expect(didDocumentMetadata['nextVersionId']).toBeAsciiString();
+      });
+      if (didDocumentMetadata.hasOwnProperty('versionId')) {
+        it('nextVersionId is different from versionId.', async () => {
+          expect(didDocumentMetadata['nextVersionId']).not.toBe(didDocumentMetadata['versionId']);
+        });
+      }
+    }
+  });
+  describe('equivalentId', () => {
+    if (didDocumentMetadata.hasOwnProperty('equivalentId')) {
+      it('The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
+        expect(Array.isArray(didDocumentMetadata['equivalentId'])).toBe(true);
+        didDocumentMetadata['equivalentId'].forEach((equivalentId) => {
+          expect(equivalentId).toBeValidDid();
+        })
+      });
+      it('Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
+        if (didDocument) {
+          didDocumentMetadata['equivalentId'].forEach((equivalentId) => {
+            expect(utils.parseDidMethod(equivalentId)).toBe(utils.parseDidMethod(didDocument['id']));
+          });
+        }
+      });
+      // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+      it.skip('A conforming DID Method specification MUST guarantee that each equivalentId value is logically equivalent to the id property value.', () => {
+      });
+      // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+      it.skip('equivalentId is a much stronger form of equivalence than alsoKnownAs because the equivalence MUST be guaranteed by the governing DID method.', () => {
+      });
+    }
+  });
+  describe('canonicalId', () => {
+    if (didDocumentMetadata.hasOwnProperty('canonicalId')) {
+      it('The value of canonicalId MUST be a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
+        const canonicalId = didDocumentMetadata['canonicalId'];
+        expect(canonicalId).toBeValidDid();
+      });
+      it('A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
+        if (didDocument) {
+          const canonicalId = didDocumentMetadata['canonicalId'];
+          expect(utils.parseDidMethod(canonicalId)).toBe(utils.parseDidMethod(didDocument['id']));
+        }
+      });
+      // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
+      it.skip('A conforming DID Method specification MUST guarantee that the canonicalId value is logically equivalent to the id property value.', () => {
+      });
+    }
+  });
+};
+
+module.exports = { didResolutionTests, testDidDocumentMetadata };

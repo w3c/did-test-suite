@@ -14,8 +14,7 @@ suiteConfig.resolvers.forEach((implementation) => {
       expect(implementation.executions).not.toBeEmpty();
       const execution = implementation.executions.find((execution) => (execution.function === 'resolveRepresentation'));
       expect(execution).not.toBeFalsy();
-      utils.expectKnownConformantMediaType(execution.output.didResolutionMetadata.contentType);
-      utils.expectConformantDidDocument(utils.consumeRepresentation(execution.output.didDocumentStream));
+      utils.expectConformantDidDocumentRepresentation(execution.output.didDocumentStream, execution.output.didResolutionMetadata.contentType);
     });
     let i = 0;
     implementation.executions.forEach((execution) => {

@@ -1,4 +1,5 @@
 const utils = require('../resolution-utils');
+const resolution = require('../did-resolution/did-resolution.js');
 
 const didUrlDereferencingTests = (execution, expectedOutcome, implementation) => {
   const { didUrl, dereferenceOptions } = execution.input;
@@ -78,8 +79,14 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
           utils.expectConformantMetadataStructure(contentMetadata);
         }
       });
-      it('If the contentStream is a DID document, this MUST be a didDocumentMetadata structure as described in DID Resolution.', async () => {
-        // TODO
+      describe('If the contentStream is a DID document, this MUST be a didDocumentMetadata structure as described in DID Resolution.', () => {
+        if (! dereferencingMetadata.hasOwnProperty('error')) {
+          const didDocument = utils.consumeRepresentation(contentStream, dereferencingMetadata['contentType']);
+          if (didDocument) {
+            utils.expectConformantMetadataStructure(contentMetadata);
+            resolution.testDidDocumentMetadata(contentMetadata, didDocument, execution);
+          }
+        }
       });
       it('If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.', async () => {
         if (dereferencingMetadata.hasOwnProperty('error')) {
