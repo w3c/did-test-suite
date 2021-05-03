@@ -2,7 +2,6 @@ const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
 const produceRepresentation = require('./utils').produceRepresentation;
 const consumeRepresentation = require('./utils').consumeRepresentation;
-const expectAsciiString = require('./utils').expectAsciiString;
 const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
@@ -119,7 +118,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
             expectMediaType(resolutionOptions['accept']);
           });
           it('The Media Type MUST be expressed as an ASCII string.', async () => {
-            expectAsciiString(resolutionOptions['accept']);
+            expect(resolutionOptions['accept']).toBeAsciiString();
           });
         }
         it('This property is OPTIONAL for the resolveRepresentation function and MUST NOT be used with the resolve function.', async () => {
@@ -143,7 +142,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
         });
         if (didResolutionMetadata.hasOwnProperty('contentType')) {
           it('The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.', async () => {
-              expectAsciiString(didResolutionMetadata['contentType']);
+              expect(didResolutionMetadata['contentType']).toBeAsciiString();
               expectMediaType(didResolutionMetadata['contentType']);
               expectKnownConformantMediaType(didResolutionMetadata['contentType']);
           });
@@ -160,7 +159,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
         });
         if (didResolutionMetadata.hasOwnProperty('error')) {
           it('The value of this property MUST be a single keyword ASCII string.', async () => {
-            expectAsciiString(didResolutionMetadata['error']);
+            expect(didResolutionMetadata['error']).toBeAsciiString();
             expect(didResolutionMetadata['error']).not.toMatch('\\s');
           });
         }
@@ -239,14 +238,14 @@ const didResolutionTests = (execution, expectedOutcome) => {
       describe('versionId', () => {
         if (didDocumentMetadata.hasOwnProperty('versionId')) {
           it('The value of the property MUST be an ASCII string.', async () => {
-            expectAsciiString(didDocumentMetadata['versionId']);
+            expect(didDocumentMetadata['versionId']).toBeAsciiString();
           });
         }
       });
       describe('nextVersionId', () => {
         if (didDocumentMetadata.hasOwnProperty('nextVersionId')) {
           it('The value of the property MUST be an ASCII string.', async () => {
-            expectAsciiString(didDocumentMetadata['nextVersionId']);
+            expect(didDocumentMetadata['nextVersionId']).toBeAsciiString();
           });
           if (didDocumentMetadata.hasOwnProperty('versionId')) {
             it('nextVersionId is different from versionId.', async () => {
