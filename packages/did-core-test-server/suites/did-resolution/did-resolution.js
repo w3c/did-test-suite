@@ -1,17 +1,9 @@
-const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
-const parseDidMethod = require('./utils').parseDidMethod;
-const produceRepresentation = require('./utils').produceRepresentation;
-const consumeRepresentation = require('./utils').consumeRepresentation;
-const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
-const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
-const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
-const expectConformantRepresentation = require('./utils').expectConformantRepresentation;
+const utils = require('../resolution-utils');
 
 const didResolutionTests = (execution, expectedOutcome, implementation) => {
   const { did, resolutionOptions } = execution.input;
   const { didResolutionMetadata, didDocument, didDocumentStream, didDocumentMetadata } = execution.output;
   describe(did + ' (expected outcome: ' + expectedOutcome + ')', () => {
-    it.todo('All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.');
     describe('did', () => {
       it('This input is REQUIRED and the value MUST be a conformant DID as defined in § 3.1 DID Syntax.', async () => {
         expect(did).not.toBeFalsy();
@@ -22,7 +14,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
     });
     describe('resolutionOptions', () => {
       it('A metadata structure.', async () => {
-        expectConformantMetadataStructure(resolutionOptions);
+        utils.expectConformantMetadataStructure(resolutionOptions);
       });
       it('This input is REQUIRED, but the structure MAY be empty.', async () => {
         expect(resolutionOptions).not.toBeFalsy();
@@ -30,11 +22,11 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
     });
     describe('didResolutionMetadata', () => {
       it('A metadata structure.', async () => {
-        expectConformantMetadataStructure(didResolutionMetadata);
+        utils.expectConformantMetadataStructure(didResolutionMetadata);
       });
       it('This structure is REQUIRED, and in the case of an error in the resolution process, this MUST NOT be empty.', async () => {
         expect(didResolutionMetadata).not.toBeFalsy();
-        if (isErrorExpectedOutcome(expectedOutcome)) {
+        if (utils.isErrorExpectedOutcome(expectedOutcome)) {
           expect(Object.keys(didResolutionMetadata)).not.toHaveLength(0);
         }
       });
@@ -42,12 +34,12 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
         if (execution.function === 'resolveRepresentation') {
           expect(Object.keys(didResolutionMetadata)).toContain('contentType');
           expect(didResolutionMetadata['contentType']).toBeMediaType();
-          expectKnownConformantMediaType(didResolutionMetadata['contentType']);
-          expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
+          utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
+          utils.expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
         }
       });
       it('If the resolution is not successful, this structure MUST contain an error property describing the error.', async () => {
-        if (isErrorExpectedOutcome(expectedOutcome)) {
+        if (utils.isErrorExpectedOutcome(expectedOutcome)) {
           expect(Object.keys(didResolutionMetadata)).toContain('error');
           expect(didResolutionMetadata['error']).toBeTruthy();
         }
@@ -59,7 +51,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
         it('If the resolution is successful, and if the resolve function was called, this MUST be a DID document abstract data model (a map) as described in § 4. Data Model that is capable of being transformed into a conforming DID Document (representation), using the production rules specified by the representation.', async () => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
             expect(typeof didDocument).toBe('object');
-            expectConformantDidDocument(didDocument);
+            utils.expectConformantDidDocument(didDocument);
           }
           // TODO: Test if the DID document abstract data model is capable of being transformed into a conforming DID Document (representation).
           //       This should re-use code from other tests (production).
@@ -85,8 +77,8 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
             expect(didDocumentStream).not.toBeFalsy();
             expect(didResolutionMetadata['contentType']).toBeMediaType();
-            expectKnownConformantMediaType(didResolutionMetadata['contentType']);
-            expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
+            utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
+            utils.expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
           }
         });
         it('If the resolution is unsuccessful, this value MUST be an empty stream.', async () => {
@@ -99,12 +91,12 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
     describe('didDocumentMetadata', () => {
       it('If the resolution is successful, this MUST be a metadata structure.', async () => {
         if (! didResolutionMetadata.hasOwnProperty('error')) {
-          expectConformantMetadataStructure(didDocumentMetadata);
+          utils.expectConformantMetadataStructure(didDocumentMetadata);
         }
       });
       it('If the resolution is unsuccessful, this output MUST be an empty metadata structure.', async () => {
         if (didResolutionMetadata.hasOwnProperty('error')) {
-          expectConformantMetadataStructure(didDocumentMetadata);
+          utils.expectConformantMetadataStructure(didDocumentMetadata);
           expect(Object.keys(didDocumentMetadata)).toHaveLength(0);
         }
       });
@@ -142,7 +134,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
           it('The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.', async () => {
               expect(didResolutionMetadata['contentType']).toBeAsciiString();
               expect(didResolutionMetadata['contentType']).toBeMediaType();
-              expectKnownConformantMediaType(didResolutionMetadata['contentType']);
+              utils.expectKnownConformantMediaType(didResolutionMetadata['contentType']);
           });
         }
         it('The caller of the resolveRepresentation function MUST use this value when determining how to parse and process the didDocumentStream returned by this function into the data model.', async() => {
@@ -151,7 +143,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
       });
       describe('error', () => {
         it('This property is REQUIRED when there is an error in the resolution process.', async () => {
-          if (isErrorExpectedOutcome(expectedOutcome)) {
+          if (utils.isErrorExpectedOutcome(expectedOutcome)) {
             expect(Object.keys(didResolutionMetadata)).toContain('error');
           }
         });
@@ -266,7 +258,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
             didDocumentMetadata['equivalentId'].forEach((i) => {
               const equivalentid = didDocumentMetadata['equivalentId'][i];
               // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
-              expect(parseDidMethod(equivalentid)).toBe(parseDidMethod(didDocument['id']));
+              expect(utils.parseDidMethod(equivalentid)).toBe(utils.parseDidMethod(didDocument['id']));
             })
           });
           // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
@@ -284,7 +276,7 @@ const didResolutionTests = (execution, expectedOutcome, implementation) => {
           });
           it('A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
             // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
-            expect(parseDidMethod(didDocumentMetadata['canonicalId'])).toBe(parseDidMethod(didDocument['id']));
+            expect(utils.parseDidMethod(didDocumentMetadata['canonicalId'])).toBe(utils.parseDidMethod(didDocument['id']));
           });
           // As discussed on the 2021-04-13 DID WG topic call, the following test can be skipped (see https://www.w3.org/2019/did-wg/Meetings/Minutes/2021-04-13-did-topic)
           it.skip('A conforming DID Method specification MUST guarantee that the canonicalId value is logically equivalent to the id property value.');

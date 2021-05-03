@@ -1,11 +1,23 @@
 const findExpectedOutcome = ((expectedOutcomes, i) => {
   const expectedOutcomesArray = [];
   Object.keys(expectedOutcomes).forEach((expectedOutcome) => {
-    expectedOutcomes[expectedOutcome].forEach((expectedOutcomeIndex) => {
-      expectedOutcomesArray[expectedOutcomeIndex] = expectedOutcome;
-    });
-  });
+        expectedOutcomes[expectedOutcome].forEach((expectedOutcomeIndex) => {
+          expectedOutcomesArray[expectedOutcomeIndex] = expectedOutcome;
+        });
+      });
   return expectedOutcomesArray[i];
+});
+
+const isErrorExpectedOutcome = ((expectedOutcome) => {
+  return expectedOutcome.endsWith('ErrorOutcome');
+});
+
+const findExecutionByDid = ((implementation, did) => {
+  implementation.executions.forEach((execution) => {
+    if (execution.input.did == did) {
+      return execution;
+    }
+  });
 });
 
 const findExecutionByDidUrl = ((implementation, didUrl) => {
@@ -17,10 +29,6 @@ const findExecutionByDidUrl = ((implementation, didUrl) => {
     }
   });
   return found;
-});
-
-const isErrorExpectedOutcome = ((expectedOutcome) => {
-  return expectedOutcome.endsWith('ErrorOutcome');
 });
 
 const parseDidMethod = (did) => {
@@ -70,8 +78,9 @@ const expectConformantRepresentation = ((mediaType, representation) => {
 
 module.exports = {
   findExpectedOutcome,
-  findExecutionByDidUrl,
   isErrorExpectedOutcome,
+  findExecutionByDid,
+  findExecutionByDidUrl,
   parseDidMethod,
   produceRepresentation,
   consumeRepresentation,
