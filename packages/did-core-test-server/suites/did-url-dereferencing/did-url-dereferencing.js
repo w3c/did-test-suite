@@ -1,6 +1,5 @@
 const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
-const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
