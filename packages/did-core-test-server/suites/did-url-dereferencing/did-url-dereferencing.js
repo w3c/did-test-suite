@@ -1,10 +1,4 @@
-const findExecutionByDidUrl = require('./utils').findExecutionByDidUrl;
-const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
-const parseDidMethod = require('./utils').parseDidMethod;
-const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
-const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
-const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
-const expectConformantRepresentation = require('./utils').expectConformantRepresentation;
+const utils = require('../resolution-utils');
 
 const didUrlDereferencingTests = (execution, expectedOutcome, implementation) => {
   const { didUrl, dereferenceOptions } = execution.input;
@@ -27,7 +21,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
       it('To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.', async () => {
         if(didUrl.includes('#')) {
           const didUrlWithoutFragment = didUrl.substring(0, didUrl.indexOf('#'));
-          const executionWithoutFragment = findExecutionByDidUrl(implementation, didUrlWithoutFragment);
+          const executionWithoutFragment = utils.findExecutionByDidUrl(implementation, didUrlWithoutFragment);
           if (executionWithoutFragment !== undefined) {
             const contentStreamWithoutFragment = executionWithoutFragment.output.contentStream;
             expect(contentStreamWithoutFragment).not.toBe(contentStream);
@@ -40,7 +34,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
     });
     describe('dereferenceOptions', () => {
       it('A metadata structure.', async () => {
-        expectConformantMetadataStructure(dereferenceOptions);
+        utils.expectConformantMetadataStructure(dereferenceOptions);
       });
       it('This input is REQUIRED, but the structure MAY be empty.', async () => {
         expect(dereferenceOptions).not.toBeFalsy();
@@ -48,16 +42,16 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
     });
     describe('dereferencingMetadata', () => {
       it('A metadata structure.', async () => {
-        expectConformantMetadataStructure(dereferencingMetadata);
+        utils.expectConformantMetadataStructure(dereferencingMetadata);
       });
       it('This structure is REQUIRED, and in the case of an error in the dereferencing process, this MUST NOT be empty.', async () => {
         expect(dereferencingMetadata).not.toBeFalsy();
-        if (isErrorExpectedOutcome(expectedOutcome)) {
+        if (utils.isErrorExpectedOutcome(expectedOutcome)) {
           expect(Object.keys(dereferencingMetadata)).not.toHaveLength(0);
         }
       });
       it('If the dereferencing is not successful, this structure MUST contain an error property describing the error.', async () => {
-        if (isErrorExpectedOutcome(expectedOutcome)) {
+        if (utils.isErrorExpectedOutcome(expectedOutcome)) {
           expect(Object.keys(dereferencingMetadata)).toContain('error');
           expect(dereferencingMetadata['error']).toBeTruthy();
         }
@@ -81,7 +75,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
     describe('contentMetadata', () => {
       it('If the dereferencing is successful, this MUST be a metadata structure, but the structure MAY be empty.', async () => {
         if (! dereferencingMetadata.hasOwnProperty('error')) {
-          expectConformantMetadataStructure(contentMetadata);
+          utils.expectConformantMetadataStructure(contentMetadata);
         }
       });
       it('If the contentStream is a DID document, this MUST be a didDocumentMetadata structure as described in DID Resolution.', async () => {
@@ -89,7 +83,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
       });
       it('If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.', async () => {
         if (dereferencingMetadata.hasOwnProperty('error')) {
-          expectConformantMetadataStructure(contentMetadata);
+          utils.expectConformantMetadataStructure(contentMetadata);
           expect(Object.keys(contentMetadata)).toHaveLength(0);
         }
       });
@@ -117,7 +111,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
       });
       describe('error', () => {
         it('This property is REQUIRED when there is an error in the dereferencing process.', async () => {
-          if (isErrorExpectedOutcome(expectedOutcome)) {
+          if (utils.isErrorExpectedOutcome(expectedOutcome)) {
             expect(Object.keys(dereferencingMetadata)).toContain('error');
           }
         });
