@@ -19,54 +19,53 @@ const generateJsonProductionTests = (
         it('6.2.1 JSON Production - list: A JSON Array, where each element ' +
           'of the list is serialized, in order, as a value of the array ' +
           'according to its type, as defined in this table.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
         it('6.2.1 JSON Production - set: A JSON Array, where each element ' +
           'of the set is added, in order, as a value of the array ' +
           'according to its type, as defined in this table.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else if(value !== null && typeof value === 'object') {
         it('6.2.1 JSON Production - map: A JSON Object, where each entry ' +
           'is serialized as a member of the JSON Object with the entry key ' +
           'as a JSON String member name and the entry value according to ' +
           'its type, as defined in this table.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else if(typeof value === 'string' && isXmlDatetime(value)) {
         it('6.2.1 JSON Production - datetime: A JSON String serialized as an ' +
           'XML Datetime normalized to UTC 00:00:00 and without sub-second ' +
           'decimal precision.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else if(typeof value === 'string') {
         it('6.2.1 JSON Production - string: A JSON String.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else if(typeof value === 'number') {
         if(!Number.isInteger(value)) {
           it('6.2.1 JSON Production - integer: A JSON Number without a ' +
             'decimal or fractional component.', () => {
-            expect(serializationSuccess(value)).toBe(true);
+            expect(produce(value)).toBe(true);
           });
         } else {
           it('6.2.1 JSON Production - double: A JSON Number with a decimal ' +
             'and fractional component.', () => {
-            expect(serializationSuccess(value)).toBe(true);
+            expect(produce(value)).toBe(true);
           });
         }
       } else if(typeof value === 'boolean') {
         it('6.2.1 JSON Production - boolean: A JSON Boolean.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else if(value === null) {
         it('6.2.1 JSON Production - null: A JSON null literal.', () => {
-          expect(serializationSuccess(value)).toBe(true);
+          expect(produce(value)).toBe(true);
         });
       } else {
-        it('UNKNOWN JSON TYPE '+ value, () => {
-          expect(true).toBe(true);
-        });
+        throw new Error(
+          'Unknown application/did+json data model type for value: '+ value);
       }
     });
   });
@@ -85,9 +84,11 @@ const generateJsonProductionTests = (
   });
 }
 
-const serializationSuccess = (value) => {
+const produce = (value) => {
   const reserialization = JSON.parse(JSON.stringify(value));
-  return deepEqual(value, reserialization);
+  // the next line will throw if production of the value doesn't round trip
+  expect(value).toEqual(reserialization);
+  return true;
 }
 
 const _getAllValues = (obj, results = []) => {
