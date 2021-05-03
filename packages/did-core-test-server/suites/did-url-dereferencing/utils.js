@@ -27,11 +27,6 @@ const consumeRepresentation = (representation) => {
   return JSON.parse(representation);
 };
 
-const expectMediaType = (mediaType, not) => {
-  (not ? expect(mediaType).not : expect(mediaType))
-      .toMatch(/^\w+\/[-+.\w]+/);
-};
-
 const expectConformantDidDocument = ((didDocument, not) => {
   // TODO: properly test if this is a conformant DID document (abstract data model)
   (not ? expect(Object.keys(didDocument)).not : expect(Object.keys(didDocument)))
@@ -68,7 +63,6 @@ module.exports = {
   parseDidMethod,
   produceRepresentation,
   consumeRepresentation,
-  expectMediaType,
   expectConformantDidDocument,
   expectConformantMetadataStructure,
   expectKnownConformantMediaType,

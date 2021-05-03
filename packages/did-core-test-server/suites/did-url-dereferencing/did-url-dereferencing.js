@@ -1,6 +1,5 @@
 const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
-const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
@@ -91,7 +90,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
       describe('accept', () => {
         if (dereferenceOptions.hasOwnProperty('accept')) {
           it('The Media Type that the caller prefers for contentStream.', async () => {
-              expectMediaType(dereferenceOptions['accept']);
+              expect(dereferenceOptions['accept']).toBeMediaType();
           });
           it('The Media Type MUST be expressed as an ASCII string.', async () => {
               expect(dereferenceOptions['accept']).toBeAsciiString();
@@ -103,7 +102,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
       describe('contentType', () => {
         if (dereferencingMetadata.hasOwnProperty('contentType')) {
           it('The Media Type value MUST be expressed as an ASCII string.', async () => {
-            expectMediaType(dereferencingMetadata['contentType']);
+            expect(dereferencingMetadata['contentType']).toBeMediaType();
             expect(dereferencingMetadata['contentType']).toBeAsciiString();
           });
         }

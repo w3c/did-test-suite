@@ -2,7 +2,6 @@ const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
 const produceRepresentation = require('./utils').produceRepresentation;
 const consumeRepresentation = require('./utils').consumeRepresentation;
-const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
@@ -42,7 +41,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
       it('If resolveRepresentation was called, this structure MUST contain a contentType property containing the Media Type of the representation found in the didDocumentStream.', async () => {
         if (execution.function === 'resolveRepresentation') {
           expect(Object.keys(didResolutionMetadata)).toContain('contentType');
-          expectMediaType(didResolutionMetadata['contentType']);
+          expect(didResolutionMetadata['contentType']).toBeMediaType();
           expectKnownConformantMediaType(didResolutionMetadata['contentType']);
           expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
         }
@@ -85,7 +84,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
         it('If the resolution is successful, and if the resolveRepresentation function was called, this MUST be a byte stream of the resolved DID document in one of the conformant representations.', async () => {
           if (! didResolutionMetadata.hasOwnProperty('error')) {
             expect(didDocumentStream).not.toBeFalsy();
-            expectMediaType(didResolutionMetadata['contentType']);
+            expect(didResolutionMetadata['contentType']).toBeMediaType();
             expectKnownConformantMediaType(didResolutionMetadata['contentType']);
             expectConformantRepresentation(didResolutionMetadata['contentType'], didDocumentStream);
           }
@@ -114,7 +113,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
       describe('accept', () => {
         if (resolutionOptions.hasOwnProperty('accept')) {
           it('The Media Type of the caller\'s preferred representation of the DID document.', async () => {
-            expectMediaType(resolutionOptions['accept']);
+            expect(resolutionOptions['accept']).toBeMediaType();
           });
           it('The Media Type MUST be expressed as an ASCII string.', async () => {
             expect(resolutionOptions['accept']).toBeAsciiString();
@@ -142,7 +141,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
         if (didResolutionMetadata.hasOwnProperty('contentType')) {
           it('The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.', async () => {
               expect(didResolutionMetadata['contentType']).toBeAsciiString();
-              expectMediaType(didResolutionMetadata['contentType']);
+              expect(didResolutionMetadata['contentType']).toBeMediaType();
               expectKnownConformantMediaType(didResolutionMetadata['contentType']);
           });
         }
