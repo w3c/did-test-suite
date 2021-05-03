@@ -42,18 +42,6 @@ const expectMediaType = (mediaType, not) => {
       .toMatch(/^\w+\/[-+.\w]+/);
 };
 
-const expectConformantDid = ((did, not) => {
-  // TODO: properly test if this is a conformant DID, try to re-use other test code
-  (not ? expect(did).not : expect(did))
-      .toMatch(/^did:(.+):(.+)$/);
-});
-
-const expectConformantDidUrl = ((didUrl, not) => {
-  // TODO: properly test if this is a conformant DID URL, try to re-use other test code
-  (not ? expect(didUrl).not : expect(didUrl))
-      .toMatch(/^did:(.+):(.+)$/);
-});
-
 const expectConformantDidDocument = ((didDocument, not) => {
   // TODO: properly test if this is a conformant DID document (abstract data model)
   (not ? expect(Object.keys(didDocument)).not : expect(Object.keys(didDocument)))
@@ -93,8 +81,6 @@ module.exports = {
   expectAsciiString,
   expectXmlDateTimeNormalizedToUtcWithoutPrecision,
   expectMediaType,
-  expectConformantDid,
-  expectConformantDidUrl,
   expectConformantDidDocument,
   expectConformantMetadataStructure,
   expectKnownConformantMediaType,
