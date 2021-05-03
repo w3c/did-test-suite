@@ -3,7 +3,6 @@ const parseDidMethod = require('./utils').parseDidMethod;
 const expectAsciiString = require('./utils').expectAsciiString;
 const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
-const expectConformantDidUrl = require('./utils').expectConformantDidUrl;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
@@ -24,7 +23,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
       it.todo('3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.');
       it('A conformant DID URL as a single string.', async() => {
         if (! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
-          expectConformantDidUrl(didUrl);
+          expect(didUrl).toBeValidDidUrl();
         }
       });
 
@@ -126,7 +125,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
         if (expectedOutcome === 'invalidDidUrlErrorOutcome') {
           it('invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.', async () => {
             expect(dereferencingMetadata['error']).toBe('invalidDidUrl');
-            // TODO: Check if the input didUrl is really invalid.
+            expect(didUrl).not.toBeValidDidUrl();
           });
         }
         if (expectedOutcome === 'notFoundErrorOutcome') {

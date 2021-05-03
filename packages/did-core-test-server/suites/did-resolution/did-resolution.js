@@ -5,7 +5,6 @@ const consumeRepresentation = require('./utils').consumeRepresentation;
 const expectAsciiString = require('./utils').expectAsciiString;
 const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
-const expectConformantDid = require('./utils').expectConformantDid;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
 const expectConformantMetadataStructure = require('./utils').expectConformantMetadataStructure;
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
@@ -20,7 +19,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
       it('This input is REQUIRED and the value MUST be a conformant DID as defined in § 3.1 DID Syntax.', async () => {
         expect(did).not.toBeFalsy();
         if (! didResolutionMetadata.hasOwnProperty('error') || didResolutionMetadata['error'] !== 'invalidDid') {
-          expectConformantDid(did);
+          expect(did).toBeValidDid();
         }
       });
     });
@@ -168,7 +167,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
         if (expectedOutcome === 'invalidDidErrorOutcome') {
           it('invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.', async () => {
             expect(didResolutionMetadata['error']).toBe('invalidDid');
-            expectConformantDid(did, true);
+            expect(did).not.toBeValidDid();
             expect(didDocument).toBeFalsy();
           });
         }
@@ -263,7 +262,7 @@ const didResolutionTests = (execution, expectedOutcome) => {
             expect(typeof didDocumentMetadata['equivalentId']).toBe('array');
             didDocumentMetadata['equivalentId'].forEach((i) => {
               const equivalentid = didDocumentMetadata['equivalentId'][i];
-              expectConformantDid(equivalentid);
+              expect(equivalentid).toBeValidDid();
             })
           });
           it('Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
@@ -283,7 +282,8 @@ const didResolutionTests = (execution, expectedOutcome) => {
         // TODO: According to the spec, 'canonicalId' is currently not optional, even though that's definitely what the WG intended - see https://github.com/w3c/did-core/issues/717.
         if (didDocumentMetadata.hasOwnProperty('canonicalId')) {
           it('The value of canonicalId MUST be a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
-            expectConformantDid(didDocumentMetadata['canonicalId']);
+            const canonicalId = didDocumentMetadata['canonicalId'][i];
+            expect(didDocumentMetadata['canonicalId']).toBeValidDid();
           });
           it('A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
             // TODO: This will currently only work if the 'resolve' function is called, not 'resolveRepresentation'.
