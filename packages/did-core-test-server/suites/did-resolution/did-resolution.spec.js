@@ -11,7 +11,7 @@ describe('7.1.x DID Resolution', () => {
     let i = 0;
     implementation.executions.forEach((execution) => {
       const expectedOutcome = utils.findExpectedOutcome(implementation.expectedOutcomes, i++);
-      require('./did-resolution').didResolutionTests(execution, expectedOutcome);
+      require('./did-resolution').didResolutionTests(execution, expectedOutcome, implementation);
     });
   });
 });

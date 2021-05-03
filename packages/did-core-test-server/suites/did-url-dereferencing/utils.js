@@ -8,6 +8,17 @@ const findExpectedOutcome = ((expectedOutcomes, i) => {
   return expectedOutcomesArray[i];
 });
 
+const findExecutionByDidUrl = ((implementation, didUrl) => {
+  var found;
+  implementation.executions.forEach((execution) => {
+    if (execution.input.didUrl === didUrl) {
+      found = execution;
+      return;
+    }
+  });
+  return found;
+});
+
 const isErrorExpectedOutcome = ((expectedOutcome) => {
   return expectedOutcome.endsWith('ErrorOutcome');
 });
@@ -59,6 +70,7 @@ const expectConformantRepresentation = ((mediaType, representation) => {
 
 module.exports = {
   findExpectedOutcome,
+  findExecutionByDidUrl,
   isErrorExpectedOutcome,
   parseDidMethod,
   produceRepresentation,

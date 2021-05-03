@@ -7,7 +7,7 @@ const expectConformantMetadataStructure = require('./utils').expectConformantMet
 const expectKnownConformantMediaType = require('./utils').expectKnownConformantMediaType;
 const expectConformantRepresentation = require('./utils').expectConformantRepresentation;
 
-const didResolutionTests = (execution, expectedOutcome) => {
+const didResolutionTests = (execution, expectedOutcome, implementation) => {
   const { did, resolutionOptions } = execution.input;
   const { didResolutionMetadata, didDocument, didDocumentStream, didDocumentMetadata } = execution.output;
   describe(did + ' (expected outcome: ' + expectedOutcome + ')', () => {

@@ -8,6 +8,14 @@ const findExpectedOutcome = ((expectedOutcomes, i) => {
   return expectedOutcomesArray[i];
 });
 
+const findExecutionByDid = ((implementation, did) => {
+  implementation.executions.forEach((execution) => {
+    if (execution.input.did == did) {
+      return execution;
+    }
+  });
+});
+
 const isErrorExpectedOutcome = ((expectedOutcome) => {
   return expectedOutcome.endsWith('ErrorOutcome');
 });
