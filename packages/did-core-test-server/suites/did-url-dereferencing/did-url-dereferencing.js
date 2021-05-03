@@ -123,7 +123,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
             expect(dereferencingMetadata['error']).not.toMatch('\\s');
           });
         }
-        if (expectedOutcome === 'invalidDidErrorUrlOutcome') {
+        if (expectedOutcome === 'invalidDidUrlErrorOutcome') {
           it('invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.', async () => {
             expect(dereferencingMetadata['error']).toBe('invalidDidUrl');
             // TODO: Check if the input didUrl is really invalid.
