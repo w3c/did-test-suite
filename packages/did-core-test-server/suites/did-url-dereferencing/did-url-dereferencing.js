@@ -1,6 +1,5 @@
 const isErrorExpectedOutcome = require('./utils').isErrorExpectedOutcome;
 const parseDidMethod = require('./utils').parseDidMethod;
-const expectAsciiString = require('./utils').expectAsciiString;
 const expectXmlDateTimeNormalizedToUtcWithoutPrecision = require('./utils').expectXmlDateTimeNormalizedToUtcWithoutPrecision;
 const expectMediaType = require('./utils').expectMediaType;
 const expectConformantDidDocument = require('./utils').expectConformantDidDocument;
@@ -96,7 +95,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
               expectMediaType(dereferenceOptions['accept']);
           });
           it('The Media Type MUST be expressed as an ASCII string.', async () => {
-              expectAsciiString(dereferenceOptions['accept']);
+              expect(dereferenceOptions['accept']).toBeAsciiString();
           });
         }
       });
@@ -106,7 +105,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
         if (dereferencingMetadata.hasOwnProperty('contentType')) {
           it('The Media Type value MUST be expressed as an ASCII string.', async () => {
             expectMediaType(dereferencingMetadata['contentType']);
-            expectAsciiString(dereferencingMetadata['contentType']);
+            expect(dereferencingMetadata['contentType']).toBeAsciiString();
           });
         }
       });
@@ -118,7 +117,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome) => {
         });
         if (dereferencingMetadata.hasOwnProperty('error')) {
           it('The value of this property MUST be a single keyword ASCII string.', async () => {
-            expectAsciiString(dereferencingMetadata['error']);
+            expect(dereferencingMetadata['error']).toBeAsciiString();
             expect(dereferencingMetadata['error']).not.toMatch('\\s');
           });
         }

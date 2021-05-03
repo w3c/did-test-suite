@@ -27,11 +27,6 @@ const consumeRepresentation = (representation) => {
   return JSON.parse(representation);
 };
 
-const expectAsciiString = (string, not) => {
-  (not ? expect(string).not : expect(string))
-      .toMatch(/^[\x00-\x7F]*$/);
-};
-
 const expectXmlDateTimeNormalizedToUtcWithoutPrecision = (xmlDateTime, not) => {
   (not ? expect(xmlDateTime).not : expect(xmlDateTime))
       .toMatch(/^([0-9]{4})-([0-1][0-9])-([0-3][0-9]T[0-2][0-9]:[0-6][0-9]:[0-6][0-9](Z))$/);
@@ -78,7 +73,6 @@ module.exports = {
   parseDidMethod,
   produceRepresentation,
   consumeRepresentation,
-  expectAsciiString,
   expectXmlDateTimeNormalizedToUtcWithoutPrecision,
   expectMediaType,
   expectConformantDidDocument,
