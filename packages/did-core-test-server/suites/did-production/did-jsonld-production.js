@@ -1,5 +1,3 @@
-const deepEqual = require('deep-equal')
-
 const generateJsonldProductionTests = (
   {did, didDocumentDataModel, resolutionResult}) => {
   const didDocument = {
@@ -12,7 +10,7 @@ const generateJsonldProductionTests = (
     'JSON-LD representation according to the JSON representation production ' +
     'rules as defined in § 6.2 JSON.', async () => {
       reserializedDidDocument = JSON.parse(JSON.stringify(didDocument));
-      expect(deepEqual(didDocument, reserializedDidDocument)).toBe(true);
+      expect(didDocument).toEqual(reserializedDidDocument);
   });
 
   it('6.3.1 JSON-LD Production - In addition to using the JSON  ' +
@@ -33,7 +31,7 @@ const generateJsonldProductionTests = (
       } else if(Array.isArray(context)) {
         expect(context[0]).toBe('https://www.w3.org/ns/did/v1');
         reserializedContext = JSON.parse(JSON.stringify(context));
-        expect(deepEqual(context, reserializedContext)).toBe(true);
+        expect(context).toEqual(reserializedContext);
       } else {
         throw new Error('Invalid @context value '+ context);
       }

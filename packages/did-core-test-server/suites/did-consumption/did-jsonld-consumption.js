@@ -1,5 +1,3 @@
-const deepEqual = require('deep-equal')
-
 const generateJsonldConsumptionTests = (
   {did, didDocumentDataModel, resolutionResult}) => {
   const didDocument = {
@@ -13,7 +11,7 @@ const generateJsonldConsumptionTests = (
     'deserialized into the data model according to the JSON ' +
     'representation consumption rules as defined in § 6.2 JSON.', async () => {
       const consumedDidDocument = JSON.parse(representation);
-      expect(deepEqual(didDocument, consumedDidDocument)).toBe(true);
+      expect(didDocument).toEqual(consumedDidDocument);
   });
 }
 
