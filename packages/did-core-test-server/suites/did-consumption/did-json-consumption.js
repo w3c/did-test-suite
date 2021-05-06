@@ -1,4 +1,3 @@
-const deepEqual = require('deep-equal')
 const {isXmlDatetime} = require('../utils');
 
 const generateJsonConsumptionTests = (
