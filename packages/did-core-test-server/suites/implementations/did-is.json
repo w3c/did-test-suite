@@ -49,13 +49,13 @@
           "representationSpecificEntries": {
           }
         },
-        "representation": "{\"verificationMethod\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\",\"publicKeyBase58\":\"wAAADkMFQkqxaUPB8jGq4ZoJVsaK9Y5M8riM76zugM6d\"}],\"service\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#blockexplorer\",\"type\":\"BlockExplorer\",\"serviceEndpoint\":\"https://explorer.blockcore.net\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#didresolver\",\"type\":\"DIDResolver\",\"serviceEndpoint\":\"https://my.did.is\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#edv\",\"type\":\"EncryptedDataVault\",\"serviceEndpoint\":\"https://vault.blockcore.net/\"}],\"authentication\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"assertionMethod\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\"}",
+        "representation": "{\"verificationMethod\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\",\"publicKeyBase58\":\"wAAADkMFQkqxaUPB8jGq4ZoJVsaK9Y5M8riM76zugM6d\"}],\"service\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#blockexplorer\",\"type\":\"BlockExplorer\",\"serviceEndpoint\":\"https://explorer.blockcore.net\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#didresolver\",\"type\":\"DIDResolver\",\"serviceEndpoint\":\"https://my.did.is\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#edv\",\"type\":\"EncryptedDataVault\",\"serviceEndpoint\":\"https://vault.blockcore.net/\"}],\"authentication\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"assertionMethod\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\"}",
         "didDocumentMetadata": {
             "created": "2021-05-07T17:24:28.787Z"
         },
         "didResolutionMetadata": {
             "retrieved": "2021-05-07T17:58:24.387Z",
-            "content-type": "application/json",
+            "contentType": "application/did+json",
             "sequence": 0,
             "proof": {
                 "type": "JwtProof2020",
