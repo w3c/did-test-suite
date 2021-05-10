@@ -1,0 +1,65 @@
+{
+  "didMethod": "did:v1",
+  "implementation": "did-veres-one (2021)",
+  "implementer": "Veres One Foundation",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": ["did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4"],
+  "didParameters": {},
+  "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+        "authentication": [{
+          "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6Mkum9tkEP9Hca9ELFj5Uxf6EYoRUWFB37dB4hE8eiW5sYa",
+          "type": "Ed25519VerificationKey2020",
+          "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+
+          "publicKeyMultibase": "zGJtr9z8hx55g7qR2PuzpF8zobuEPm9sGV3nJJNkVAemC"
+        }],
+        "assertionMethod": [{
+          "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6MktzrKJagc3G2DBDhqP4VauGhAy4U9Es4SXrHHg15FWLwH",
+          "type": "Ed25519VerificationKey2020",
+          "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+          "publicKeyMultibase": "zFYbGiLSAhiXk4is8hVXk4B9B9VCHpyp5qqNMqj7Eb89u"
+        }],
+        "capabilityDelegation": [{
+          "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6MkevuxCHzVotrqFWnUiYoGKNuUvcSimaQUHFkCUQBNeaKt",
+          "type": "Ed25519VerificationKey2020",
+          "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+          "publicKeyMultibase": "zUeuc3k4UMNN91wn2yqRUHMV73AsMhA7bEqGe8DMjMYW"
+        }],
+        "capabilityInvocation": [{
+          "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+          "type": "Ed25519VerificationKey2020",
+          "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+          "publicKeyMultibase": "zDeGeui2Q2PaSx3GsNnxrctGUvo5RU9BzaBaTytU3gd2g"
+        }],
+        "keyAgreement": [{
+          "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6LSnC6LhWn2cDxEyFcNxLBvVMhRoNczmPhnQmV5S4kwrboR",
+          "type": "X25519KeyAgreementKey2020",
+          "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
+          "publicKeyMultibase": "zBWvBBCyAWmEVssEcRgfyAmUwxE5t4nXdXnmPwc7R9E2f"
+        }]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/veres-one/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1",
+            "https://w3id.org/security/suites/x25519-2020/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/veres-one/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/x25519-2020/v1\"],\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"authentication\":[{\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6Mkum9tkEP9Hca9ELFj5Uxf6EYoRUWFB37dB4hE8eiW5sYa\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"publicKeyMultibase\":\"zGJtr9z8hx55g7qR2PuzpF8zobuEPm9sGV3nJJNkVAemC\"}],\"assertionMethod\":[{\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6MktzrKJagc3G2DBDhqP4VauGhAy4U9Es4SXrHHg15FWLwH\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"publicKeyMultibase\":\"zFYbGiLSAhiXk4is8hVXk4B9B9VCHpyp5qqNMqj7Eb89u\"}],\"capabilityDelegation\":[{\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6MkevuxCHzVotrqFWnUiYoGKNuUvcSimaQUHFkCUQBNeaKt\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"publicKeyMultibase\":\"zUeuc3k4UMNN91wn2yqRUHMV73AsMhA7bEqGe8DMjMYW\"}],\"capabilityInvocation\":[{\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"publicKeyMultibase\":\"zDeGeui2Q2PaSx3GsNnxrctGUvo5RU9BzaBaTytU3gd2g\"}],\"keyAgreement\":[{\"id\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6LSnC6LhWn2cDxEyFcNxLBvVMhRoNczmPhnQmV5S4kwrboR\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4\",\"publicKeyMultibase\":\"zBWvBBCyAWmEVssEcRgfyAmUwxE5t4nXdXnmPwc7R9E2f\"}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
