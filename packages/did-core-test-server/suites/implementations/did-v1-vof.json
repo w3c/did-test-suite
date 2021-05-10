@@ -15,7 +15,6 @@
           "id": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4#z6Mkum9tkEP9Hca9ELFj5Uxf6EYoRUWFB37dB4hE8eiW5sYa",
           "type": "Ed25519VerificationKey2020",
           "controller": "did:v1:nym:z6Mks6XhVxGqMw4v4Y7a4MvhTypUkNMGt2SMGCVPpAS4bqp4",
-
           "publicKeyMultibase": "zGJtr9z8hx55g7qR2PuzpF8zobuEPm9sGV3nJJNkVAemC"
         }],
         "assertionMethod": [{
