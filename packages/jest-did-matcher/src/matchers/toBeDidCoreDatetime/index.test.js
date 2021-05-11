@@ -23,7 +23,13 @@ describe('.not.toBeDidCoreDatetime', () => {
     [() => {}],
     [null],
     [undefined],
-    [NaN]
+    [NaN],
+    ["2020-12-20T19:17:47.000Z"],
+    ["2020-12-20T19:17:47.100Z"],
+    ["2020-12-20T19:17:47+09:00"],
+    ["2020-12-20T19:17:47+0900"],
+    ["2020-12-20T19:17:47+09"],
+    ["2020-12-20T19:17:47I"],
   ]).test('passes when the item is not a valid DID Core Datetime: %s', given => {
     expect(given).not.toBeDidCoreDatetime();
   });
