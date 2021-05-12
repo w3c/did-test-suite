@@ -1,0 +1,76 @@
+{
+  "didMethod": "did:trust",
+  "implementation": "DID Test Suite",
+  "implementer": "TrustCerts GmbH",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": ["did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh"],
+  "didParameters": {},
+  "did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh",
+        "controller": [],
+        "verificationMethod": [
+          {
+            "id": "did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun",
+            "type": "RsaVerificationKey2018",
+            "controller": "did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh",
+            "publicKeyJwk": {
+              "e": "AQAB",
+              "n": "ybWVtY6n1EgbnnNTwS-MIYg2G5z4rudDdRfnIQ8UIAVbjxngEOyBDn60IyYKBLQ0t9mJAWnrdPtRBFXktllu_KPlsPBZRhplxH4cg929xJCBbY_EP_vUf9pe5s75bEeo7ZA8c9o0Q_LWpIjkJM1BURkRrbjxKfFLZHrWsSZWxqMVg27EOqEtgdCZpimD-kTw2QAuWDfGudppYNu-V7hLZ5UcuimzFEsLbhx1CIahu9RXmUm2zmbX2z4MoCP7bhl7vJXD9laQMFEWfXDdwGthQVwS-V_j0Oe6Uu6rtIgUs1ZtYrRCNYelduAmIlH-ZX9hIKumIDK5r4ajpHYyLzYfbQ",
+              "alg": "RS256",
+              "ext": true,
+              "kty": "RSA",
+              "key_ops": [
+                "verify"
+              ]
+            }
+          }
+        ],
+        "authentication": [],
+        "service": [],
+        "assertionMethod": [
+          "did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun"
+        ],
+        "role": []
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh\",\"controller\": [],\"verificationMethod\": [{\"id\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun\",\"type\": \"RsaVerificationKey2018\",\"controller\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh\",\"publicKeyJwk\": {\"e\": \"AQAB\",\"n\": \"ybWVtY6n1EgbnnNTwS-MIYg2G5z4rudDdRfnIQ8UIAVbjxngEOyBDn60IyYKBLQ0t9mJAWnrdPtRBFXktllu_KPlsPBZRhplxH4cg929xJCBbY_EP_vUf9pe5s75bEeo7ZA8c9o0Q_LWpIjkJM1BURkRrbjxKfFLZHrWsSZWxqMVg27EOqEtgdCZpimD-kTw2QAuWDfGudppYNu-V7hLZ5UcuimzFEsLbhx1CIahu9RXmUm2zmbX2z4MoCP7bhl7vJXD9laQMFEWfXDdwGthQVwS-V_j0Oe6Uu6rtIgUs1ZtYrRCNYelduAmIlH-ZX9hIKumIDK5r4ajpHYyLzYfbQ\",\"alg\": \"RS256\",\"ext\": true,\"kty\": \"RSA\",\"key_ops\": [\"verify\"]}}],\"authentication\": [],\"service\": [],\"assertionMethod\": [\"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun\"],\"role\": []}",
+      "didDocumentMetadata": {
+          "created": "2021-05-06T18:00:02.244Z",
+          "versionId": "2",
+          "updated": "2021-05-06T18:00:30.019Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+json",
+        "signatures": [
+            {
+              "signature": "4GBZFJkJt2exmbuCG8YGeDHBCitUJMXJtpQdPCop79o6jWLS4N43u3iKgQkVBXuNBStBCgrtrCjvbZF2gosbWw67iVVnehmJXAa33U7HfqnShPr961XEngd9ThWPDokDknZcwszuopAVi2h7R9HwvK5W5oThHwzBxC6DonQ8X8csmbeA3U36EjhsDf6QCfpYYjnGVmyQrbhAArcFZrJaLmnMpx7u5ywPnL7i8WJzUbNT5tyzAQ2qBUKUjDn7wRzeWQq9FtQjMow1mZjLpFv17EzmUUFsqnGw2VDwNc5wg4JDW9Ky3ZyJhXmnDw3yVfDimx1SAzRiQ9xuPG2HBcCiuKwB8fW3zW",
+              "identifier": "did:trust:tc:dev:id:XLzBJ69keqEgq7oqqdEsHW#474EuQ8HEiBiC7ukshjEC4azE9tWBdRVc9apjK43s26a"
+            }
+          ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": ["https://www.w3.org/ns/did/v1"]
+        }
+      },
+      "representation": "{\"@context\": [\"https://www.w3.org/ns/did/v1\"],\"id\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh\",\"controller\": [],\"verificationMethod\": [{\"id\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun\",\"type\": \"RsaVerificationKey2018\",\"controller\": \"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh\",\"publicKeyJwk\": {\"e\": \"AQAB\",\"n\": \"ybWVtY6n1EgbnnNTwS-MIYg2G5z4rudDdRfnIQ8UIAVbjxngEOyBDn60IyYKBLQ0t9mJAWnrdPtRBFXktllu_KPlsPBZRhplxH4cg929xJCBbY_EP_vUf9pe5s75bEeo7ZA8c9o0Q_LWpIjkJM1BURkRrbjxKfFLZHrWsSZWxqMVg27EOqEtgdCZpimD-kTw2QAuWDfGudppYNu-V7hLZ5UcuimzFEsLbhx1CIahu9RXmUm2zmbX2z4MoCP7bhl7vJXD9laQMFEWfXDdwGthQVwS-V_j0Oe6Uu6rtIgUs1ZtYrRCNYelduAmIlH-ZX9hIKumIDK5r4ajpHYyLzYfbQ\",\"alg\": \"RS256\",\"ext\": true,\"kty\": \"RSA\",\"key_ops\": [\"verify\"]}}],\"authentication\": [],\"service\": [],\"assertionMethod\": [\"did:trust:tc:dev:id:GvMM3dpmWH6mRhGK88Ykdh#EkHffN21Q34nzAV8VfkQ5QMcWP3BXL6zjfTXkN64dYun\"],\"role\": []}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
+
