@@ -1,0 +1,69 @@
+{
+    "didMethod": "did:is",
+    "implementation": "DID IS Test Suite",
+    "implementer": "Blockcore",
+    "supportedContentTypes": [
+      "application/did+json"
+    ],
+    "dids": ["did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd"],
+    "didParameters": {},
+    "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd": {
+      "didDocumentDataModel": {
+        "properties": {
+            "id": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd",
+            "verificationMethod": [
+              {
+                "id": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1",
+                "type": "EcdsaSecp256k1VerificationKey2019",
+                "controller": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd",
+                "publicKeyBase58": "wAAADkMFQkqxaUPB8jGq4ZoJVsaK9Y5M8riM76zugM6d"
+              }
+            ],
+            "service": [
+              {
+                "id": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#blockexplorer",
+                "type": "BlockExplorer",
+                "serviceEndpoint": "https://explorer.blockcore.net"
+              },
+              {
+                "id": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#didresolver",
+                "type": "DIDResolver",
+                "serviceEndpoint": "https://my.did.is"
+              },
+              {
+                "id": "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#edv",
+                "type": "EncryptedDataVault",
+                "serviceEndpoint": "https://vault.blockcore.net/"
+              }
+            ],
+            "authentication": [
+              "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1"
+            ],
+            "assertionMethod": [
+              "did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1"
+            ]
+        }
+      },
+      "application/did+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {
+          }
+        },
+        "representation": "{\"verificationMethod\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\",\"publicKeyBase58\":\"wAAADkMFQkqxaUPB8jGq4ZoJVsaK9Y5M8riM76zugM6d\"}],\"service\":[{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#blockexplorer\",\"type\":\"BlockExplorer\",\"serviceEndpoint\":\"https://explorer.blockcore.net\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#didresolver\",\"type\":\"DIDResolver\",\"serviceEndpoint\":\"https://my.did.is\"},{\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#edv\",\"type\":\"EncryptedDataVault\",\"serviceEndpoint\":\"https://vault.blockcore.net/\"}],\"authentication\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"assertionMethod\":[\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd#key-1\"],\"id\":\"did:is:PMW1Ks7h4brpN8FdDVLwhPDKJ7LdA7mVdd\"}",
+        "didDocumentMetadata": {
+            "created": "2021-05-07T17:24:28.787Z"
+        },
+        "didResolutionMetadata": {
+            "retrieved": "2021-05-07T17:58:24.387Z",
+            "contentType": "application/did+json",
+            "sequence": 0,
+            "proof": {
+                "type": "JwtProof2020",
+                "jwt": "eyJpc3N1ZXIiOiJkaWQ6aXM6UE1XMUtzN2g0YnJwTjhGZERWTHdoUERLSjdMZEE3bVZkZCIsImFsZyI6IkVTMjU2SyJ9.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvZGlkL3YxIl0sImlkIjoiZGlkOmlzOlBNVzFLczdoNGJycE44RmREVkx3aFBES0o3TGRBN21WZGQiLCJ2ZXJpZmljYXRpb25NZXRob2QiOlt7ImlkIjoiZGlkOmlzOlBNVzFLczdoNGJycE44RmREVkx3aFBES0o3TGRBN21WZGQja2V5LTEiLCJ0eXBlIjoiRWNkc2FTZWNwMjU2azFWZXJpZmljYXRpb25LZXkyMDE5IiwiY29udHJvbGxlciI6ImRpZDppczpQTVcxS3M3aDRicnBOOEZkRFZMd2hQREtKN0xkQTdtVmRkIiwicHVibGljS2V5QmFzZTU4Ijoid0FBQURrTUZRa3F4YVVQQjhqR3E0Wm9KVnNhSzlZNU04cmlNNzZ6dWdNNmQifV0sInNlcnZpY2UiOlt7ImlkIjoiZGlkOmlzOlBNVzFLczdoNGJycE44RmREVkx3aFBES0o3TGRBN21WZGQjYmxvY2tleHBsb3JlciIsInR5cGUiOiJCbG9ja0V4cGxvcmVyIiwic2VydmljZUVuZHBvaW50IjoiaHR0cHM6Ly9leHBsb3Jlci5ibG9ja2NvcmUubmV0In0seyJpZCI6ImRpZDppczpQTVcxS3M3aDRicnBOOEZkRFZMd2hQREtKN0xkQTdtVmRkI2RpZHJlc29sdmVyIiwidHlwZSI6IkRJRFJlc29sdmVyIiwic2VydmljZUVuZHBvaW50IjoiaHR0cHM6Ly9teS5kaWQuaXMifSx7ImlkIjoiZGlkOmlzOlBNVzFLczdoNGJycE44RmREVkx3aFBES0o3TGRBN21WZGQjZWR2IiwidHlwZSI6IkVuY3J5cHRlZERhdGFWYXVsdCIsInNlcnZpY2VFbmRwb2ludCI6Imh0dHBzOi8vdmF1bHQuYmxvY2tjb3JlLm5ldC8ifV0sImF1dGhlbnRpY2F0aW9uIjpbImRpZDppczpQTVcxS3M3aDRicnBOOEZkRFZMd2hQREtKN0xkQTdtVmRkI2tleS0xIl0sImFzc2VydGlvbk1ldGhvZCI6WyJkaWQ6aXM6UE1XMUtzN2g0YnJwTjhGZERWTHdoUERLSjdMZEE3bVZkZCNrZXktMSJdfQ.3a93hWe2NVPAgkdmnCLE6P2RCt9UK2QQrpmB5o3L_WlhuWqqmaTbskjvGYC5V96b6h8Tka0jNsOSwHSSwBG9jA"
+            },
+            "duration": 7
+        }
+      }
+    }
+  }
+  
