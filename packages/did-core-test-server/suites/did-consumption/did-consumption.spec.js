@@ -1,10 +1,7 @@
-let { suiteConfig } = global;
+defaultSuiteConfig = require('./default');
+runtimeSuiteConfig = Object.assign({}, defaultSuiteConfig, systemSuiteConfig);
 
-if (!suiteConfig) {
-  suiteConfig = require('./default');
-}
-
-suiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
+runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
   const {didMethod, implementation, implementer} = didMethodSuiteConfig;
   let suiteName =
     `6.x Consumption - ${didMethod} - ${implementation} - ${implementer}`;

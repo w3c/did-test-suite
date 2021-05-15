@@ -4,11 +4,11 @@ const cheerio = require('cheerio');
 const moment = require('moment');
 const getReportResults = require('./services/getReportResults');
 
-const suitesInput = [require('./suites/did-spec/suite-config.js')];
+const systemSuitesConfig = require('./suites/suite-config.js');
 
 const respecPath = path.resolve(__dirname, '../../index.html');
 
-const updateRespec = (suitesInput, suitesReportJson, suitesReportTerminal) => {
+const updateRespec = (systemSuitesConfig, suitesReportJson, suitesReportTerminal) => {
   const spec = fs.readFileSync(respecPath).toString();
   const $ = cheerio.load(spec);
 
@@ -18,7 +18,7 @@ const updateRespec = (suitesInput, suitesReportJson, suitesReportTerminal) => {
         class="example"
         title="did-spec latest input report"
       >
-${JSON.stringify(suitesInput, null, 2)}
+${JSON.stringify(systemSuitesConfig, null, 2)}
       </pre>`
   );
 
@@ -52,10 +52,10 @@ ${JSON.stringify({ suitesReportTerminal }, null, 2)}
 };
 
 (async () => {
-  const report = await getReportResults(suitesInput);
+  const report = await getReportResults(systemSuitesConfig);
 
   updateRespec(
-    suitesInput,
+    systemSuitesConfig,
     report.suitesReportJson,
     report.suitesReportTerminal
   );

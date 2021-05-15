@@ -1,12 +1,9 @@
-let { suiteConfig } = global;
-
-if (!suiteConfig) {
-  suiteConfig = require('./default.js');
-}
+defaultSuiteConfig = require('./default');
+runtimeSuiteConfig = Object.assign({}, defaultSuiteConfig, systemSuiteConfig);
 
 const utils = require('../resolution-utils');
 
-suiteConfig.resolvers.forEach((implementation) => {
+runtimeSuiteConfig.resolvers.forEach((implementation) => {
   let implementationName = `7.1.x DID Resolution - ${implementation.implementation} - ${implementation.implementer}`;
 
   describe(implementationName, () => {
