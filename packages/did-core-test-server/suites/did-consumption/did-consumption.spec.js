@@ -1,3 +1,7 @@
+let { systemSuiteConfig } = global;
+if (!systemSuiteConfig) { // when run via command line
+  systemSuiteConfig = {};
+}
 defaultSuiteConfig = require('./default');
 runtimeSuiteConfig = Object.assign({}, defaultSuiteConfig, systemSuiteConfig);
 
