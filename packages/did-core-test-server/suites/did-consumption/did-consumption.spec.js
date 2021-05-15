@@ -11,14 +11,16 @@ runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     `6.x Consumption - ${didMethod} - ${implementation} - ${implementer}`;
 
   describe(suiteName, () => {
-    require('./did-consumer').didConsumerTests(
-      didMethodSuiteConfig
-    );
-    require('./did-json-consumption').didJsonConsumptionTests(
-      didMethodSuiteConfig
-    );
-    require('./did-jsonld-consumption').didJsonldConsumptionTests(
-      didMethodSuiteConfig
-    );
+    describe("IMPLEMENTATION <" + implementation + ">", () => {
+      require('./did-consumer').didConsumerTests(
+        didMethodSuiteConfig
+      );
+      require('./did-json-consumption').didJsonConsumptionTests(
+        didMethodSuiteConfig
+      );
+      require('./did-jsonld-consumption').didJsonldConsumptionTests(
+        didMethodSuiteConfig
+      );
+    });
   });
 });
