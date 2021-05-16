@@ -6997,7 +6997,7 @@ describe("test-suite-a", () =&gt; {
     const renderReportResults = (results) => {
       let flattenMethodResults = {};
       let by_suite = {};
-      let by_method = {};
+      // let by_method = {};
 
       results.forEach((r) => { r.testResults.forEach((tr) => {
         let ancestors = [...tr.ancestors];
@@ -7028,16 +7028,16 @@ describe("test-suite-a", () =&gt; {
           by_suite[suite_name][tr.title].push(didMethodTestResult);
         }
 
-        if (!by_method[method_name]) {
-          by_method[method_name] = {};
-          by_method[method_name][suite_name] = [ didMethodTestResult ];
-        }
-        else {
-          if (!by_method[method_name][suite_name]) {
-            by_method[method_name][suite_name] = [];
-          }
-          by_method[method_name][suite_name].push(didMethodTestResult);
-        }
+        // if (!by_method[method_name]) {
+        //   by_method[method_name] = {};
+        //   by_method[method_name][suite_name] = [ didMethodTestResult ];
+        // }
+        // else {
+        //   if (!by_method[method_name][suite_name]) {
+        //     by_method[method_name][suite_name] = [];
+        //   }
+        //   by_method[method_name][suite_name].push(didMethodTestResult);
+        // }
 
         if (!flattenMethodResults[testKey]) {
           flattenMethodResults[testKey] = {
@@ -7135,7 +7135,7 @@ ${resultTable}
 
       let level = 3;
       let target = 'conformance-by-test-suites';
-      const testResultReport = recursiveRenderSection(target, by_suite, level);
+      let testResultReport = recursiveRenderSection(target, by_suite, level);
       document.getElementById(target).innerHTML =
         document.getElementById(target).innerHTML + testResultReport;
     };
