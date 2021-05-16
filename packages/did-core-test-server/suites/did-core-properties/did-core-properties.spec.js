@@ -9,7 +9,7 @@ describe("suites/did-core-properties", () => {
   runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     const {didMethod, implementation, implementer} = didMethodSuiteConfig;
 
-    describe("IMPLEMENTATION <" + implementation + ">", () => {
+    describe("IMPLEMENTATION ::" + implementation + "::", () => {
       let suiteName =
       `5.x Core Properties - ${didMethod} - ${implementation} - ${implementer}`;
       describe(suiteName, () => {

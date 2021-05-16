@@ -10,7 +10,7 @@ const utils = require('../resolution-utils');
 describe("suites/did-resolution", () => {
   runtimeSuiteConfig.resolvers.forEach((implementation) => {
   
-    describe("IMPLEMENTATION <" + implementation.implementation + ">", () => {
+    describe("IMPLEMENTATION ::" + implementation.implementation + "::", () => {
       let suiteName = `7.1.x DID Resolution - ${implementation.implementation} - ${implementation.implementer}`;
 
       describe(suiteName, () => {

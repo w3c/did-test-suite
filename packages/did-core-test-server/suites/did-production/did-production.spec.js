@@ -9,7 +9,7 @@ describe("suites/did-production", () => {
   runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     const {didMethod, implementation, implementer} = didMethodSuiteConfig;
 
-    describe("IMPLEMENTATION <" + implementation + ">", () => {
+    describe("IMPLEMENTATION ::" + implementation + "::", () => {
       let suiteName =
       `6.x Production - ${didMethod} - ${implementation} - ${implementer}`;
 

@@ -9,7 +9,7 @@ describe("suites/did-identifier", () => {
   runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     const {didMethod, implementation, implementer} = didMethodSuiteConfig;
 
-    describe("IMPLEMENTATION <" + implementation + ">", () => {
+    describe("IMPLEMENTATION ::" + implementation + "::", () => {
       const suiteName =
         `3.x Identifier - ${didMethod} - ${implementation} - ${implementer}`;
       describe(suiteName, () => {
