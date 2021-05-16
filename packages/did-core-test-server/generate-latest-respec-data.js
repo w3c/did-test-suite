@@ -12,11 +12,11 @@ const updateRespec = (systemSuitesConfig, suitesReportJson, suitesReportTerminal
   const spec = fs.readFileSync(respecPath).toString();
   const $ = cheerio.load(spec);
 
-  $('#did-spec-suite-input').replaceWith(
+  $('#did-spec-suite-configuration').replaceWith(
     `<pre
-        id="did-spec-suite-input"
+        id="did-spec-suite-configuration"
         class="example"
-        title="did-spec latest input report"
+        title="The current did-spec configuration file"
       >
 ${JSON.stringify(systemSuitesConfig, null, 2)}
       </pre>`
@@ -39,6 +39,10 @@ These test results were last generated
 ${moment().format('LLLL')}
 </span>
       </p>`
+  );
+
+  $('#did-spec-raw-result-date').replaceWith(
+    `<span id="did-spec-raw-result-date">${moment().format('LLLL')}</span>`
   );
 
   $('#did-spec-report-terminal-results').replaceWith(
