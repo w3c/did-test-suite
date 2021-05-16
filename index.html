@@ -266,6 +266,7 @@ describe("test-suite-a", () =&gt; {
 
       <section id="conformance-by-method">
         <h2>Conformance by Methods</h2>
+        
       </section>
 
     </section>
@@ -305,7 +306,7 @@ describe("test-suite-a", () =&gt; {
       <h1>Raw Test Suite Run Result</h1>
       <p>
         Following is the test result ran on
-        <span id="did-spec-raw-result-date">Sunday, May 16, 2021 11:01 AM</span>.
+        <span id="did-spec-raw-result-date">Sunday, May 16, 2021 4:16 PM</span>.
         For the latest report json, refer to the JSON file
         <a href="https://github.com/w3c/did-test-suite/tree/master/test-vectors/did-spec.latest.json">
           here</a>.
@@ -6991,31 +6992,62 @@ describe("test-suite-a", () =&gt; {
       return test === 'passed' ? `✅` : `❌`;
     };
 
-    const renderReportResults = (target, results) => {
+    const renderReportResults = (results) => {
       let flattenMethodResults = {};
+      let by_suite = {};
+      let by_method = {};
 
-      results[0].testResults.forEach((tr) => {
-        let ancestorsWithoutMethod = tr.ancestors.filter((a) => {
-          return !a.includes(tr.ancestors[1]);
-        });
-
+      results.forEach((r) => { r.testResults.forEach((tr) => {
+        let ancestors = [...tr.ancestors];
+        let suite_name = ancestors.shift().match(/suites\/(.*)/)[1];
+        let method_name = ancestors.shift().match(/IMPLEMENTATION ::(.*)::/)[1];
+        let ancestorsWithoutMethod = ancestors;
+        let did = ancestors.find( a => a.match(/^did:/) );
+        let mime_type = ancestors.find( a => a.match(/^application\//) );
+        let mime_subtype = mime_type ? mime_type.match(/^application\/(.*$)/)[1] : undefined;
         let testAncestorsWithoutMethod = ancestorsWithoutMethod.join(' > ');
-        let testKey = `${testAncestorsWithoutMethod} > ${tr.title}`;
+        let testKey = [suite_name, tr.title].join(' > ');
         let didMethodTestResult = {
           status: tr.status,
-          method: tr.ancestors[1],
+          method: method_name,
+          suite_name: suite_name,
+          did: did,
+          mime_subtype: mime_subtype
         };
+
+        if (!by_suite[suite_name]) {
+          by_suite[suite_name] = {};
+          by_suite[suite_name][tr.title] = [ didMethodTestResult ]
+        }
+        else {
+          if (!by_suite[suite_name][tr.title]) {
+            by_suite[suite_name][tr.title] = [];
+          }
+          by_suite[suite_name][tr.title].push(didMethodTestResult);
+        }
+
+        if (!by_method[method_name]) {
+          by_method[method_name] = {};
+          by_method[method_name][suite_name] = [ didMethodTestResult ];
+        }
+        else {
+          if (!by_method[method_name][suite_name]) {
+            by_method[method_name][suite_name] = [];
+          }
+          by_method[method_name][suite_name].push(didMethodTestResult);
+        }
 
         if (!flattenMethodResults[testKey]) {
           flattenMethodResults[testKey] = {
             ancestorsWithoutMethod: ancestorsWithoutMethod.splice(1),
+            suite_name: suite_name,
             title: tr.title,
-            didMethods: [didMethodTestResult],
+            didMethods: [didMethodTestResult]
           };
         } else {
           flattenMethodResults[testKey].didMethods.push(didMethodTestResult);
         }
-      });
+      }); });
 
       const resultsSorted = Object.values(flattenMethodResults).sort((a, b) => {
         return a.ancestorsWithoutMethod.join(' > ') >
@@ -7024,52 +7056,18 @@ describe("test-suite-a", () =&gt; {
           : -1;
       });
 
-      // this makes thing hierarchical again
-      let resultsBySection = {};
-      let root = resultsBySection;
-      resultsSorted.forEach((tr) => {
-        root = resultsBySection;
-        if (tr.ancestorsWithoutMethod.length > 1) {
-          let tail;
-          for (let i = 0; i < tr.ancestorsWithoutMethod.length; i++) {
-            let sectionName = tr.ancestorsWithoutMethod[i];
-            if (!root[sectionName]) {
-              root[sectionName] = {};
-            } else {
-              root[sectionName] = {
-                ...root[sectionName],
-              };
-            }
-            tail = root;
-            root = root[sectionName];
-          }
-          Object.keys(tail).forEach((tailKey) => {
-            tail[tailKey] = {
-              ...tail[tailKey],
-              [tr.title]: tr.didMethods,
-              isLeaf: true,
-            };
-          });
-        } else {
-          root[tr.ancestorsWithoutMethod[0]] = {
-            ...root[tr.ancestorsWithoutMethod[0]],
-            isLeaf: true,
-            [tr.title]: tr.didMethods,
-          };
-        }
-      });
-
-      const recursiveRenderSection = (section, level) => {
+      const recursiveRenderSection = (id, section, level) => {
         let result = '';
-        if (section && !section.isLeaf && Object.keys(section).length) {
+        let section_number = 1;
+        if (section && id && Object.keys(section).length) {
           result = `
 
         ${Object.keys(section)
           .map((key) => {
             const value = section[key];
-            const subSection = recursiveRenderSection(value, level + 1);
+            const subSection = recursiveRenderSection(null, value, level + 1);
             return `
-<section>
+<section id="${id}-${section_number++}">
 <h${level}>${key}</h${level}>
 ${subSection}
 </section>
@@ -7081,9 +7079,6 @@ ${subSection}
         } else {
           result = Object.keys(section)
             .map((statement) => {
-              if (statement === 'isLeaf') {
-                return '';
-              }
               const count = section[statement]
                 .map((test) => {
                   return {
@@ -7098,23 +7093,24 @@ ${subSection}
                   }
                   return tally;
                 }, {});
-
               const resultTable = `
 <table class="simple" >
 <tbody>
 <tr>
-<th> </th>
-<th> ${count.failed ? resultToEmoji('failed') + ` (${count.failed})` : ''} 
-&nbsp;
-${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''} 
+<th> ${count.failed ? resultToEmoji('failed') + ` (${count.failed})` : ''}
+  ${(count.failed && count.passed) ? `<br/>` : ''}
+  ${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''} 
 </th>
+<th>Method</th><th>DID</th><th>subtype</th>
 </tr>
     ${section[statement]
       .map((tr) => {
         return `
 <tr>
-<td>${resultToEmoji(tr.status)}</td>
-<td style="width: 100%;">${tr.method}</td>
+<td style="width: 10%;">${resultToEmoji(tr.status)}</td>
+<td style="width: 30%;">${tr.method}</td>
+<td style="width: 50%;">${tr.did}</td>
+<td style="width: 10%;">${tr.mime_subtype != null ? tr.mime_subtype : "N/A"}</td>
 </tr>
 `;
       })
@@ -7136,16 +7132,17 @@ ${resultTable}
       };
 
       let level = 3;
-      const testResultReport = recursiveRenderSection(resultsBySection, level);
+      let target = 'conformance-by-test-suites';
+      const testResultReport = recursiveRenderSection(target, by_suite, level);
       document.getElementById(target).innerHTML =
         document.getElementById(target).innerHTML + testResultReport;
     };
 
     const lastDidSpecReport = JSON.parse(
-      document.getElementById('did-spec-suite-report').innerHTML
+      document.getElementById('did-spec-suite-output').innerHTML
     );
 
-    renderReportResults('report-results', lastDidSpecReport);
+    renderReportResults(lastDidSpecReport);
   </script>
 
 </body></html>
