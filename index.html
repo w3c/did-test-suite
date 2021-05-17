@@ -6991,7 +6991,11 @@ describe("test-suite-a", () =&gt; {
     };
 
     const resultToEmoji = (test) => {
-      return test === 'passed' ? `✅` : `❌`;
+      switch (test) {
+        case 'passed': return `✅`;
+        case 'failed' : return `❌`;
+        default: return `⚠️`;
+      };
     };
 
     const renderReportResults = (results) => {
@@ -7084,7 +7088,7 @@ ${subSection}
               const count = section[statement]
                 .map((test) => {
                   return {
-                    status: test.status === 'passed' ? 'passed' : 'failed',
+                    status: test.status === 'passed' ? 'passed' : ( test.status === 'failed' ? 'failed' : 'todo'),
                   };
                 })
                 .reduce((tally, test) => {
@@ -7102,6 +7106,8 @@ ${subSection}
 <th> ${count.failed ? resultToEmoji('failed') + ` (${count.failed})` : ''}
   ${(count.failed && count.passed) ? `<br/>` : ''}
   ${count.passed ? resultToEmoji('passed') + ` (${count.passed})` : ''} 
+  ${(count.todo && count.todo) ? `<br/>` : ''}
+  ${count.todo ? resultToEmoji('todo') + ` (${count.todo})` : ''} 
 </th>
 <th>Method</th><th>DID</th><th>subtype</th>
 </tr>
