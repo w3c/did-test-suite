@@ -9,6 +9,7 @@ module.exports = {
     require('../implementations/did-ethr-2021-consensys-mesh.json'),
     require('../implementations/did-trust.json'),
     require('../implementations/did-v1-vof.json'),
-    require('../implementations/did-monid.json')
+    require('../implementations/did-monid.json'),
+
   ]
 }
