@@ -383,9 +383,10 @@ const didCorePropertiesTests = (suiteConfig) => {
           const {didDocumentDataModel} = suiteConfig[did];
           didDocumentDataModel.representationSpecificEntries =
             resolutionResult.didDocumentDataModel.representationSpecificEntries;
-
-          generateDidCorePropertiesTests(
-            {did, didDocumentDataModel, resolutionResult});
+          describe(mediaType, () => {
+            generateDidCorePropertiesTests(
+              {did, didDocumentDataModel, resolutionResult});
+          });
         }
       }
     });
