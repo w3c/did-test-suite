@@ -1,0 +1,44 @@
+{
+  "didMethod": "did:monid",
+  "implementation": "did-method-monid (2021 lx tech)",
+  "implementer": "Min Ju",
+  "supportedContentTypes": ["application/did+ld+json"],
+  "dids": [
+    "did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2"
+  ],
+  "didParameters": {},
+  "did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2",
+        "verificationMethod": [
+          {
+            "id": "did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2#keys-1",
+            "type": "Secp256k1VerificationKey2018",
+            "controller": "did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2",
+            "publicKeyHex": "0298a5f231fc9224ca466bdbd0b27cb34d27939d0e8aa4b65ba4ef1ed805f14975"
+          }
+        ],
+        "authentication": ["#keys-1"],
+        "assertionMethod": ["#keys-1"],
+        "capabilityInvocation": ["#keys-1"],
+        "capabilityDelegation": ["#keys-1"],
+        "keyAgreement": ["#keys-1"]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2\",\"verificationMethod\":[{\"id\":\"did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2#keys-1\",\"type\":\"Secp256k1VerificationKey2018\",\"controller\":\"did:monid:1fb352353ff51248c5104b407f9c04c3666627fcf5a167d693c9fc84b75964e2\",\"publicKeyHex\":\"0298a5f231fc9224ca466bdbd0b27cb34d27939d0e8aa4b65ba4ef1ed805f14975\"}],\"authentication\":[\"#keys-1\"],\"assertionMethod\":[\"#keys-1\"],\"capabilityDelegation\":[\"#keys-1\"],\"capabilityInvocation\":[\"#keys-1\"],\"keyAgreement\":[\"#keys-1\"]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

@@ -1,6 +1,5 @@
 const utils = require('../utils');
 const jsonMediaTypes = ['application/did+ld+json', 'application/did+json'];
-const deepEqual = require('deep-equal')
 
 const generateDidProducerTests = (
   {did, didDocumentDataModel, resolutionResult}) => {
@@ -27,7 +26,7 @@ const generateDidProducerTests = (
       if(jsonMediaTypes.includes(contentType)) {
         const dataModel = {...dmRse, ...dmProperties};
         const parsedDataModel = JSON.parse(representation);
-        expect(deepEqual(dataModel, parsedDataModel)).toBe(true);
+        expect(dataModel).toEqual(parsedDataModel);
       } else {
         throw new Error('Unknown producer for content-type: '+ contentType);
       }
@@ -44,7 +43,7 @@ const generateDidProducerTests = (
       if(jsonMediaTypes.includes(contentType)) {
         const dataModel = {...dmRse, ...dmProperties};
         parsedDataModel = JSON.parse(JSON.stringify(dataModel));
-        expect(deepEqual(dataModel, parsedDataModel)).toBe(true);
+        expect(dataModel).toEqual(parsedDataModel);
       } else {
         throw new Error('Unknown producer for content-type: '+ contentType);
       }

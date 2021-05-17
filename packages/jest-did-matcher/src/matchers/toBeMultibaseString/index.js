@@ -2,21 +2,21 @@ import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils';
 import predicate from './predicate';
 
 const passMessage = received => () =>
-    matcherHint('.not.toBeDidCoreDatetime', 'received', '') +
+    matcherHint('.not.toBeMultibaseString', 'received', '') +
     '\n\n' +
-    'Expected value to not be of a valid DID Core Datetime received:\n' +
+    'Expected value to not be a Multibase string received:\n' +
     `  ${printReceived(received)}`;
 
-const failMessage = received => () => 
-    matcherHint('.toBeDidCoreDatetime', 'received', '') +
+const failMessage = received => () =>
+    matcherHint('.toBeMultibaseString', 'received', '') +
     '\n\n' +
-    'Expected value to be of a valid DID Core Datetime:\n' +
-    `  ${printExpected('a valid DID Core Datetime')}\n` +
+    'Expected value to be a Multibase string:\n' +
+    `  ${printExpected('a Multibase string')}` +
     'Received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
-    toBeDidCoreDatetime: expected => {
+    toBeMultibaseString: expected => {
         const pass = predicate(expected);
         if (pass) {
             return { pass: true, message: passMessage(expected) };
@@ -25,7 +25,7 @@ export default {
         return { pass: false, message: failMessage(expected) };
     },
 
-    isDidCoreDatetime: obj => {
+    isMultibaseString: obj => {
         return predicate(obj);
     }
 };
