@@ -23,7 +23,7 @@ const didMetadataStructureTest_Map_Recursive = (didDocumentMetadata) => {
        'MUST be one of these data types as well.', () => {
             Object.keys(didDocumentMetadata).forEach((property_name) => {
                 if (typeof didDocumentMetadata[property_name] == "object") {
-                    didMetadataStructureTest_r(didDocumentMetadata[property_name]);
+                    didMetadataStructureTest_Map_Recursive(didDocumentMetadata[property_name]);
                 }
             });
         });
