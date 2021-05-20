@@ -10,5 +10,8 @@ module.exports = {
     require('../implementations/did-trust.json'),
     require('../implementations/did-v1-vof.json'),
     require('../implementations/did-monid.json'),
+    require('../implementations/did-key-mattr.json'),
+    require('../implementations/did-web-mattr.json'),
+    require('../implementations/did-indy-mattr.json')
   ]
 }
