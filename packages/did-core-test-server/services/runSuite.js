@@ -8,7 +8,7 @@ module.exports = async (suiteName, config) => {
       // ci: true,
       // silent: true,
       roots: [path.resolve(__dirname, `../suites/${suiteName}`)],
-      globals: JSON.stringify({ suiteConfig: config }),
+      globals: JSON.stringify({ systemSuiteConfig: config }),
     },
     [process.cwd()]
   );
