@@ -31,17 +31,17 @@ const generateDidCorePropertiesTests = (
       }
   });
 
-  it('5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If ' +
-    'present, the value MUST be an ordered set where each item in the set ' +
-    'is a URI conforming to [RFC3986].', async () => {
-      const {alsoKnownAs} = didDocument;
-      if(alsoKnownAs) {
-        expect(alsoKnownAs).toBeArray();
-        alsoKnownAs.forEach(alsoKnownAsValue => {
-          expect(alsoKnownAsValue).toBeValidUri();
-        });
-      }
-  });
+  const {alsoKnownAs} = didDocument;
+  if(alsoKnownAs) {
+    it('5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If ' +
+        'present, the value MUST be an ordered set where each item in the set ' +
+        'is a URI conforming to [RFC3986].', async () => {
+      expect(alsoKnownAs).toBeArray();
+      alsoKnownAs.forEach(alsoKnownAsValue => {
+        expect(alsoKnownAsValue).toBeValidUri();
+      });
+    });
+  }
 
   it('5.2 Verification Methods - The verificationMethod property is ' +
     'OPTIONAL. If present, the value MUST be an ordered set of verification ' +
@@ -383,9 +383,10 @@ const didCorePropertiesTests = (suiteConfig) => {
           const {didDocumentDataModel} = suiteConfig[did];
           didDocumentDataModel.representationSpecificEntries =
             resolutionResult.didDocumentDataModel.representationSpecificEntries;
-
-          generateDidCorePropertiesTests(
-            {did, didDocumentDataModel, resolutionResult});
+          describe(mediaType, () => {
+            generateDidCorePropertiesTests(
+              {did, didDocumentDataModel, resolutionResult});
+          });
         }
       }
     });

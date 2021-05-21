@@ -25,7 +25,8 @@
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
     "docker:up": "docker-compose up",
-    "docker:build": "docker-compose up --build"
+    "docker:build": "docker-compose up --build",
+    "generate-report": "lerna run generate-report --stream"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
