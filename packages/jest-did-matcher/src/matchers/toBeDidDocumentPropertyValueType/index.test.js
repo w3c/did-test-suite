@@ -9,6 +9,7 @@ describe('.toBeDidDocumentPropertyValueType', () => {
     ["String"],
     [new String],
     [{}],
+    [new Map],
     [[]],
     [new Array],
     [new Set],
