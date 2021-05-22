@@ -11,7 +11,7 @@ const failMessage = received => () =>
     matcherHint('.toBeDidDocumentPropertyValueType', 'received', '') +
     '\n\n' +
     'Expected value to be of type allowed in DID Document:\n' +
-    `  ${printExpected('type of type allowed in DID Document')}` +
+    `  ${printExpected('value type allowed in DID Document')}\n` +
     'Received:\n' +
     `  ${printReceived(received)}`;
 
