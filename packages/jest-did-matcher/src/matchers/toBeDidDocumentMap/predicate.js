@@ -9,14 +9,12 @@ export function predicate(expected) {
         return expected.map(element => predicate(element)).reduce( (p, c) => (p && c), true);
     }
 
-    if (expected instanceof Set) {
-        return expected.map(element => predicate(element)).reduce( (p, c) => (p && c), true);
+    if (expected instanceof Map || expected instanceof Set) {
+        let r = true;
+        expected.forEach(v => { r = r && predicate(v); });
+        return r;
     }
 
-    if (expected instanceof Map) {
-        return expected.map(element => predicate(element)).reduce( (p, c) => (p && c), true);
-    }
-    
     if (typeof expected == "object") {
         return Object.keys(expected).map(key => predicate(expected[key])).reduce( (p, c) => (p && c), true);
     }
