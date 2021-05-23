@@ -40,7 +40,7 @@ To generate a report, run:
 ```npm
 npm i
 npm run generate-report
-``
+```
 
 ## DID Working Group Repositories
 
