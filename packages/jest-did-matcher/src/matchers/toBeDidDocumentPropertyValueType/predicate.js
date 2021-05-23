@@ -8,7 +8,7 @@ export default expected => {
         return true;
     }
 
-    if (expected instanceof Set) {
+    if (expected instanceof Map || expected instanceof Set) {
         return true;
     }
 
