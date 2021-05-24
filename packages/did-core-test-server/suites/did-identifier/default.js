@@ -12,6 +12,7 @@ module.exports = {
     require('../implementations/did-monid.json'),
     require('../implementations/did-unisot.json'),
     require('../implementations/did-vaa.json'),
-    require('../implementations/did-orb.json')
+    require('../implementations/did-orb.json'),
+    require('../implementations/did-nft-2021-3box-labs.json')
   ]
 }
