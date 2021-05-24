@@ -11,6 +11,7 @@ module.exports = {
     require('../implementations/did-v1-vof.json'),
     require('../implementations/did-monid.json'),
     require('../implementations/did-unisot.json'),
-    require('../implementations/did-vaa.json')
+    require('../implementations/did-vaa.json'),
+    require('../implementations/did-schema.json')
   ]
 }
