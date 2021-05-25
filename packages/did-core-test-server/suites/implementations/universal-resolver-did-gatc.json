@@ -1,1 +1,46 @@
-{"implementation":"Universal Resolver","implementer":"Decentralized Identity Foundation and Contributors","expectedOutcomes":{"defaultOutcomes":[0],"invalidDidErrorOutcome":[],"notFoundErrorOutcome":[],"representationNotSupportedErrorOutcome":[],"deactivatedOutcome":[]},"executions":[{"function":"resolveRepresentation","input":{"did":"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7","resolutionOptions":{"accept":"application/did+ld+json"}},"output":{"didResolutionMetadata":{"didUrl":{"did":{"didString":"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7","method":"gatc","methodSpecificId":"2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7","parseRuleCount":null,"parseTree":null},"didUrlString":"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7","fragment":null,"parameters":{},"parseRuleCount":null,"parseTree":null,"path":"","query":null},"driverUrl":"http://gataca-did-resolver-driver:8080/1.0/identifiers/","duration":344,"identifier":"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7","pattern":"^(did:gatc:.+)$"},"didDocumentStream":"{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\"],\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"publicKey\":[{\"@context\":[\"https://w3id.org/security/v1\"],\"controller\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\",\"publicKeyBase58\":\"B3FBGKFoQtR9zMkTWggev3wHCWueB292Hjui33a67Ysy\",\"type\":\"Ed25519VerificationKey2018\"}]}","didDocumentMetadata":{}}}]}
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "gatc",
+                            "methodSpecificId": "2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7"
+                        },
+                        "didUrlString": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://gataca-did-resolver-driver:8080/1.0/identifiers/",
+                    "duration": 824,
+                    "identifier": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                    "pattern": "^(did:gatc:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\"],\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"publicKey\":[{\"@context\":[\"https://w3id.org/security/v1\"],\"controller\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\",\"publicKeyBase58\":\"B3FBGKFoQtR9zMkTWggev3wHCWueB292Hjui33a67Ysy\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

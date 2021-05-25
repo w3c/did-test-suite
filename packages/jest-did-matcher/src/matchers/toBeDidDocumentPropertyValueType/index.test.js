@@ -7,11 +7,15 @@ expect.extend(matcher);
 describe('.toBeDidDocumentPropertyValueType', () => {
   each([
     ["String"],
-    [new String],
+    [new String()],
     [{}],
+    [{ a: "1", b: "2", c: {"x": "1", "y": "2"}}],
+    [new Map()],
+    [new Map(Object.entries({ a: "1", b: "2", c: {"x": "1", "y": "2"}}))],
     [[]],
-    [new Array],
-    [new Set],
+    [new Array(1)],
+    [new Set()],
+    [new Set(["1", "2", "3", ["4", "5", "6"], {"x":"1", "y": "2"}])],
     [true],
     [false],
     [null]

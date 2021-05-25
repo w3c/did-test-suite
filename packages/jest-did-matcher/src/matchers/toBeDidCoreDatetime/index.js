@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeDidCoreDatetime', 'received', '') +
     '\n\n' +
-    'Expected value to be of a valid DID Core Datetime:\n' +
-    `  ${printExpected('a valid DID Core Datetime')}\n` +
-    'Received:\n' +
+    'Expected value to be of a valid DID Core Datetime, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {

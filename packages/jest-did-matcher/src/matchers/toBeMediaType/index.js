@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeMediaType', 'received', '') +
     '\n\n' +
-    'Expected value to be of a valid Media Type:\n' +
-    `  ${printExpected('a valid Media Type')}` +
-    'Received:\n' +
+    'Expected value to be of a valid Media Type, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {

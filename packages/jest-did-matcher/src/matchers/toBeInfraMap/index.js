@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeInfraMap', 'received', '') +
     '\n\n' +
-    'Expected value to be of type INFRA map:\n' +
-    `  ${printExpected('type of INFRA map')}` +
-    'Received:\n' +
+    'Expected value to be of type INFRA map, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
