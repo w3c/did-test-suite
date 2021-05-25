@@ -1,0 +1,70 @@
+{
+    "executions": [{
+        "function": "resolve",
+        "input": {
+            "did": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "content-type": "application/did+ld+json",
+                "error": "notFound"
+            }
+        }
+    }, {
+        "function": "resolve",
+        "input": {
+            "did": "did:sov:mattr-dev:_222",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "content-type": "application/did+ld+json",
+                "error": "notFound"
+            }
+        }
+    }, {
+        "function": "resolve",
+        "input": {
+            "did": "did:sov:mattr-dev:123",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "content-type": "application/did+ld+json",
+                "error": "notFound"
+            }
+        }
+    }, {
+        "function": "resolveRepresentation",
+        "input": {
+            "did": "did:sov:mattr-dev:123",
+            "resolutionOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "didDocumentMetadata": {},
+            "didDocumentStream": "null",
+            "didResolutionMetadata": {
+                "content-type": "application/did+ld+json",
+                "error": "notFound"
+            }
+        }
+    }],
+    "expectedOutcomes": {
+        "deactivatedOutcome": [],
+        "defaultOutcome": [0],
+        "invalidDidErrorOutcome": [1],
+        "notFoundErrorOutcome": [2],
+        "representationNotSupportedErrorOutcome": []
+    },
+    "implementation": "MATTR internal libraries",
+    "implementer": "MATTR Limited"
+}
