@@ -13,22 +13,30 @@
     "didDocumentDataModel": {
       "properties": {
         "id": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ",
-        "controllor": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ",
+	"created": "2020-11-25T18:23:33.019Z",
+        "controller": ["did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ"],
         "publicKey": [
           {
             "id": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#key1",
             "type": "RsaVerificationKey2018",
-            "controller": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ",
+            "controller": ["did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ"],
             "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDb/A4iQ0Lq6NU9Q3i91vbqZ8jh\nUj/Hr64683e9NvNkFBeFePp7wfuZJRSTMrllP5LEQwXPmeZzQBJjKkY34iQV7EXA\nARKMisvqUR/ucU1mj7ZCiFM+MNCcxn+eD1WfBsXMYfne/BPJPhIUfjjIzBaTQuhI\ntLhGD6WrDv6fovK/GQIDAQAB\n-----END PUBLIC KEY-----\n"
           }
         ],
         "service": [
           {
-            "id": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#resolver",
+            "id": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#resolver",
             "type": "DIDResolve",
             "serviceEndpoint": "https://www.citln.cn"
           }
-        ]
+        ],
+	 "proof": {
+         "created": "2020-11-25T18:23:33.019Z",
+         "signatureValue": "Tov28noNERDLNfvY1QHnS4zUYXJjLy1oiXXYb533wkq77rfdzy77/vRfBKVAt7iNY1GjpL5tytZpmPjYFLDFwz6SOdlsuCrKTM8sIGLybRS12EOWZl7PAfdYPwknpG4aK7Zmvc7u9ORN9o+YLTK3rP9H4GyJpYWUScy3S3YZU6A=",
+         "type": "RsaSignature2018",
+         "verificationMethod": "did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#key1"
+       },
+	 "updated": "2020-11-25T18:23:33.019Z"
       }
     },
     "application/did+ld+json": {
@@ -39,7 +47,7 @@
           ]
         }
       },
-      "representation": "{\"@context\":\"https://www.w3.org/2019/did/v1\",\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC\",\"controllor\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC\",\"publicKey\":[{\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#key1\",\"type\":\"RsaVerificationKey2018\",\"controller\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDb/A4iQ0Lq6NU9Q3i91vbqZ8jh\\nUj/Hr64683e9NvNkFBeFePp7wfuZJRSTMrllP5LEQwXPmeZzQBJjKkY34iQV7EXA\\nARKMisvqUR/ucU1mj7ZCiFM+MNCcxn+eD1WfBsXMYfne/BPJPhIUfjjIzBaTQuhI\\ntLhGD6WrDv6fovK/GQIDAQAB\\n-----END PUBLIC KEY-----\\n\"}],\"created\":\"2020-11-25T18:23:33Z\",\"updated\":\"2020-11-25T18:23:33Z\",\"proof\":{\"type\":\"RsaSignature2018\",\"created\":\"2020-11-25T18:23:33Z\",\"verificationMethod\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#key1\",\"signatureValue\":\"Tov28noNERDLNfvY1QHnS4zUYXJjLy1oiXXYb533wkq77rfdzy77/vRfBKVAt7iNY1GjpL5tytZpmPjYFLDFwz6SOdlsuCrKTM8sIGLybRS12EOWZl7PAfdYPwknpG4aK7Zmvc7u9ORN9o+YLTK3rP9H4GyJpYWUScy3S3YZU6A=\"},\"service\":[{\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#resolver\",\"type\":\"DIDResolve\",\"serviceEndpoint\":\"https://www.citln.cn\"}]}",
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ\",\"controller\":[\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ\"],\"publicKey\":[{\"id\":\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#key1\",\"type\":\"RsaVerificationKey2018\",\"controller\":[\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ\"],\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDb/A4iQ0Lq6NU9Q3i91vbqZ8jh\\nUj/Hr64683e9NvNkFBeFePp7wfuZJRSTMrllP5LEQwXPmeZzQBJjKkY34iQV7EXA\\nARKMisvqUR/ucU1mj7ZCiFM+MNCcxn+eD1WfBsXMYfne/BPJPhIUfjjIzBaTQuhI\\ntLhGD6WrDv6fovK/GQIDAQAB\\n-----END PUBLIC KEY-----\\n\"}],\"created\":\"2020-11-25T18:23:33.019Z\",\"updated\":\"2020-11-25T18:23:33.019Z\",\"proof\":{\"type\":\"RsaSignature2018\",\"created\":\"2020-11-25T18:23:33.019Z\",\"verificationMethod\":\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#key1\",\"signatureValue\":\"Tov28noNERDLNfvY1QHnS4zUYXJjLy1oiXXYb533wkq77rfdzy77/vRfBKVAt7iNY1GjpL5tytZpmPjYFLDFwz6SOdlsuCrKTM8sIGLybRS12EOWZl7PAfdYPwknpG4aK7Zmvc7u9ORN9o+YLTK3rP9H4GyJpYWUScy3S3YZU6A=\"},\"service\":[{\"id\":\"did:vaa:2H9XwzRXZ1o5ZwSoYDEZn24eHXcQ#resolver\",\"type\":\"DIDResolve\",\"serviceEndpoint\":\"https://www.citln.cn\"}]}",
       "didDocumentMetadata": {
       },
       "didResolutionMetadata": {
