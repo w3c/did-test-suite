@@ -20,6 +20,7 @@ You can also prepare by running `npm run prepare` at the top level of `did-test-
   - toBeValidDid / isValidDid
   - toBeValidDidUrl / isValidDidUrl
   - toBeDidCoreDatetime / isDidCoreDatetime
+  - toBeDidDocumentMap / isDidDocumentMap
   - toBeDidDocumentPropertyValueType / isDidDocumentPropertyValueType
 - Various encoding formats
   - toBeBase58String / isBase58String

@@ -13,5 +13,8 @@ module.exports = {
     require('../implementations/did-key-mattr.json'),
     require('../implementations/did-web-mattr.json'),
     require('../implementations/did-indy-mattr.json')
+    require('../implementations/did-unisot.json'),
+    require('../implementations/did-vaa.json'),
+    require('../implementations/did-orb.json')
   ]
 }
