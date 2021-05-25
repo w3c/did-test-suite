@@ -73,7 +73,8 @@ const generateDidCorePropertiesTests = (
     'Section § 3.2 DID URL Syntax.', async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        expect(vm.id).toBeValidDidUrl();
+        let absoluteURL = getAbsoluteDIDURL(didDocument.id,vm.id);
+        expect(absoluteURL).toBeValidDidUrl();
       });
   });
 

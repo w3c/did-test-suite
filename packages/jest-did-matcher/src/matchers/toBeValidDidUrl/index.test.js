@@ -15,6 +15,7 @@ describe('.toBeValidDidUrl', () => {
     ["did:example:123456/path%20with%20space"],
     ["did:example:123456?versionId=1"],
     ["did:example:123#public-key-0"],
+    ["did:example:123#sig_064bebcc"],
     ["did:example:123?service=agent&relativeRef=/credentials#degree"]
   ]).test('passes when the item is a valid DID: %s', given => {
     expect(given).toBeValidDidUrl();
