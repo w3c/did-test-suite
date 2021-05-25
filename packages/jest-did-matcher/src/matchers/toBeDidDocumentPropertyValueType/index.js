@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () =>
     matcherHint('.toBeDidDocumentPropertyValueType', 'received', '') +
     '\n\n' +
-    'Expected value to be of type allowed in DID Document:\n' +
-    `  ${printExpected('type of type allowed in DID Document')}` +
-    'Received:\n' +
+    'Expected value to be of type allowed in DID Document, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
