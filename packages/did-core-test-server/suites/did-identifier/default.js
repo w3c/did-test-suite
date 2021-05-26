@@ -1,6 +1,6 @@
 module.exports = {
-  "name": "did-identity",
-  "didMethods": [
+  name: 'did-identity',
+  didMethods: [
     require('../implementations/did-example-didwg.json'),
     require('../implementations/did-is.json'),
     require('../implementations/did-key-2018-db.json'),
@@ -13,6 +13,7 @@ module.exports = {
     require('../implementations/did-unisot.json'),
     require('../implementations/did-vaa.json'),
     require('../implementations/did-ion.json'),
-    require('../implementations/did-orb.json')
-  ]
-}
+    require('../implementations/did-orb.json'),
+    require('../implementations/did-lit.json')
+  ],
+};
