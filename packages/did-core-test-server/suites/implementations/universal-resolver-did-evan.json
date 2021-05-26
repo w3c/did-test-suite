@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:evan",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://evan-did-driver:8080/1.0/identifiers/",
-                    "duration": 865,
+                    "duration": 911,
                     "identifier": "did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734",
                     "pattern": "^(did:evan:.+)$"
                 },

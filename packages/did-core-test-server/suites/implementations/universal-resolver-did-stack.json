@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:stack",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-stack:8080/1.0/identifiers/",
-                    "duration": 4618,
+                    "duration": 3377,
                     "identifier": "did:stack:v0:16EMaNw3pkn3v6f2BgnSSs53zAKH4Q8YJg-0",
                     "pattern": "^(did:stack:.+)$"
                 },

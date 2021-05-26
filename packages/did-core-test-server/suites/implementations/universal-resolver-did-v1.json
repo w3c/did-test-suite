@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:v1",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0,
@@ -36,7 +37,7 @@
                         "query": null
                     },
                     "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
-                    "duration": 429,
+                    "duration": 874,
                     "identifier": "did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR",
                     "pattern": "^(did:v1:nym:.+)$"
                 },
@@ -67,7 +68,7 @@
                         "query": null
                     },
                     "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
-                    "duration": 239,
+                    "duration": 249,
                     "identifier": "did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t",
                     "pattern": "^(did:v1:test:nym:.+)$"
                 },
@@ -98,7 +99,7 @@
                         "query": null
                     },
                     "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
-                    "duration": 270,
+                    "duration": 275,
                     "identifier": "did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud",
                     "pattern": "^(did:v1:test:nym:.+)$"
                 },

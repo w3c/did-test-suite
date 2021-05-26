@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:jolo",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://jolocom-did-driver:8080/1.0/identifiers/",
-                    "duration": 764,
+                    "duration": 1090,
                     "identifier": "did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21",
                     "pattern": "^(did:jolo:.+)$"
                 },
