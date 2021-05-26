@@ -1,20 +1,22 @@
 import { matcherHint, printExpected, printReceived } from 'jest-matcher-utils';
-import predicate from './predicate';
+import { predicate }  from './predicate';
 
 const passMessage = received => () =>
-    matcherHint('.not.toBeAsciiString', 'received', '') +
+    matcherHint('.not.toBeDidDocumentMap', 'received', '') +
     '\n\n' +
-    'Expected value to not be of type INFRA string received:\n' +
+    'Expected value to not be a DID document map:\n' +
     `  ${printReceived(received)}`;
 
-const failMessage = received => () => 
-    matcherHint('.toBeAsciiString', 'received', '') +
+const failMessage = received => () =>
+    matcherHint('.toBeDidDocumentMap', 'received', '') +
     '\n\n' +
-    'Expected value to be of type INFRA string, but received:\n' +
+    'Expected value to be of a DID document map:\n' +
+    `  ${printExpected('A DID document map')}\n` +
+    'Received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
-    toBeAsciiString: expected => {
+    toBeDidDocumentMap: expected => {
         const pass = predicate(expected);
         if (pass) {
             return { pass: true, message: passMessage(expected) };
@@ -23,7 +25,7 @@ export default {
         return { pass: false, message: failMessage(expected) };
     },
 
-    isAsciiString: obj => {
+    isDidDocumentMap: obj => {
         return predicate(obj);
     }
 };

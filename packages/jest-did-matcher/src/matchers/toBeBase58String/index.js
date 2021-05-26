@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeBase58String', 'received', '') +
     '\n\n' +
-    'Expected value to be of a Base58 string:\n' +
-    `  ${printExpected('a Base 58 string')}` +
-    'Received:\n' +
+    'Expected value to be of a Base58 string, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
