@@ -25,8 +25,8 @@ module.exports = getReportResults = async (suites) => {
   let allResults = [];
   const runAll = async () => {
     await Promise.all(
-      suites.map(async (s) => {
-        const results = await runSuite(s.name, s);
+      suites.suites.map(async (s) => {
+        const results = await runSuite(s.suite_name, s);
         allResults.push(results);
       })
     );
