@@ -39,7 +39,7 @@ To generate a report, run:
 
 ```npm
 npm i
-npm run generate-report
+npm run test-and-generate-report
 ```
 
 ## If tests are failing

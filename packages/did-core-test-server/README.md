@@ -17,10 +17,10 @@ cd ./packages/did-core-test-server
 
 Important note: since this test suite depends on a local, non-published package [`jest-did-matcher`](../jest-did-matcher), please run `npm i` at the top-level of this repository to correctly configure the relationship of packages.
 
-The suites can be tests manually, using:
+To test and generate a report at the root of the repository, run
 
 ```
-npm run generate-report
+npm run test-and-generate-report
 ```
 
 Or via http,
@@ -50,12 +50,17 @@ The test suite functionality can be embedded in any HTTP server,
 
 See [example](./routes/index.js).
 
+The following commands are available:
+
 ```
 npm run test
 npm run start
 npm run docker:build
 npm run docker:publish
 npm run docker:run
+npm run generate-test-data
+npm run generate-report
+npm run test-and-generate-report
 ```
 
 ## When you observe errors
