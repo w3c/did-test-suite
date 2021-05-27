@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:schema",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0,
@@ -35,7 +36,7 @@
                         "query": null
                     },
                     "driverUrl": "http://schema-registry-did-resolver:8080/1.0/identifiers/",
-                    "duration": 3712,
+                    "duration": 1326,
                     "identifier": "did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
                     "pattern": "^(did:schema:.+)$"
                 },
@@ -66,7 +67,7 @@
                         "query": null
                     },
                     "driverUrl": "http://schema-registry-did-resolver:8080/1.0/identifiers/",
-                    "duration": 298,
+                    "duration": 169,
                     "identifier": "did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
                     "pattern": "^(did:schema:.+)$"
                 },

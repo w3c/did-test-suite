@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:elem",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "https://element-did.com/api/v1/sidetree/$1",
-                    "duration": 6818,
+                    "duration": 3484,
                     "identifier": "did:elem:EiAS3mqC4OLMKOwcz3ItIL7XfWduPT7q3Fa4vHgiCfSG2A",
                     "pattern": "^did:elem:(.+)$"
                 },

@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:github",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "https://github-did.com/api/v1/did/$1",
-                    "duration": 6584,
+                    "duration": 5379,
                     "identifier": "did:github:gjgd",
                     "pattern": "^(did:github:.+)$"
                 },

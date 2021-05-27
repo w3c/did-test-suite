@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:bba",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0,
@@ -35,7 +36,7 @@
                         "query": null
                     },
                     "driverUrl": "http://bba-did-driver:8080/1.0/identifiers/",
-                    "duration": 2393,
+                    "duration": 2139,
                     "identifier": "did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044",
                     "pattern": "^(did:bba:.+)$"
                 },
@@ -66,7 +67,7 @@
                         "query": null
                     },
                     "driverUrl": "http://bba-did-driver:8080/1.0/identifiers/",
-                    "duration": 1848,
+                    "duration": 1726,
                     "identifier": "did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf",
                     "pattern": "^(did:bba:.+)$"
                 },

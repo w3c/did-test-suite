@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:unisot",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://unisot-did-driver:8080/1.0/identifiers/",
-                    "duration": 981,
+                    "duration": 1608,
                     "identifier": "did:unisot:test:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4",
                     "pattern": "^(did:unisot:.+)$"
                 },
