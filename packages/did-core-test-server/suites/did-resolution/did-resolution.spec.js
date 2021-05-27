@@ -8,21 +8,22 @@ runtimeSuiteConfig = Object.assign({}, defaultSuiteConfig, systemSuiteConfig);
 const utils = require('../resolution-utils');
 
 describe("suites/did-resolution", () => {
-  runtimeSuiteConfig.resolvers.forEach((implementation) => {
-  
-    describe("IMPLEMENTATION ::" + implementation.implementation + "::", () => {
-      let suiteName = `7.1.x DID Resolution - ${implementation.implementation} - ${implementation.implementer}`;
+  runtimeSuiteConfig.resolvers.forEach((imp) => {
+    const {didMethod, implementation, implementer} = imp;
+
+    describe(`IMPLEMENTATION ::${didMethod}::${implementation}::${implementer}::`, () => {
+      let suiteName = `7.1.x DID Resolution - ${imp.implementation} - ${imp.implementer}`;
 
       describe(suiteName, () => {
         it('All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.', async () => {
-          expect(implementation.executions).not.toBeEmpty();
-          const execution = implementation.executions.find((execution) => (execution.function === 'resolveRepresentation'));
+          expect(imp.executions).not.toBeEmpty();
+          const execution = imp.executions.find((execution) => (execution.function === 'resolveRepresentation'));
           expect(execution).not.toBeFalsy();
           utils.expectConformantDidDocumentRepresentation(execution.output.didDocumentStream, execution.output.didResolutionMetadata.contentType);
         });
         let i = 0;
-        implementation.executions.forEach((execution) => {
-          const expectedOutcome = utils.findExpectedOutcome(implementation.expectedOutcomes, i++);
+        imp.executions.forEach((execution) => {
+          const expectedOutcome = utils.findExpectedOutcome(imp.expectedOutcomes, i++);
           require('./did-resolution').didResolutionTests(execution, expectedOutcome, implementation);
         });
       });
