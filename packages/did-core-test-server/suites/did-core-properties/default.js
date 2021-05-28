@@ -14,6 +14,7 @@ module.exports = {
     require('../implementations/did-vaa.json'),
     require('../implementations/did-ion.json'),
     require('../implementations/did-orb.json'),
-    require('../implementations/did-lit.json')
+    require('../implementations/did-lit.json'),
+    require('../implementations/did-schema.json')
   ],
 };
