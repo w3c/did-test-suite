@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:trust",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0,
@@ -35,7 +36,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-trust:8080/1.0/identifiers/",
-                    "duration": 1223,
+                    "duration": 1600,
                     "identifier": "did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw",
                     "pattern": "^(did:trust:.+)$"
                 },
@@ -86,7 +87,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-trust:8080/1.0/identifiers/",
-                    "duration": 1527,
+                    "duration": 1339,
                     "identifier": "did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg",
                     "pattern": "^(did:trust:.+)$"
                 },

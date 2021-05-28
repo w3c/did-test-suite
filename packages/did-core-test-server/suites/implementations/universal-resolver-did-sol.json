@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:sol",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-sol:8080/1.0/identifiers/",
-                    "duration": 1124,
+                    "duration": 809,
                     "identifier": "did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa",
                     "pattern": "^(did:sol:.+)$"
                 },

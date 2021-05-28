@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:nacl",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
-                    "duration": 1446,
+                    "duration": 1745,
                     "identifier": "did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI",
                     "pattern": "^(did:nacl:.+)$"
                 },

@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:vaa",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-vaa:8080/1.0/identifiers/",
-                    "duration": 996,
+                    "duration": 1104,
                     "identifier": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC",
                     "pattern": "^(did:vaa:.+)$"
                 },

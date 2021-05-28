@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ont",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://ontid-driver:8080/1.0/identifiers/",
-                    "duration": 323,
+                    "duration": 382,
                     "identifier": "did:ont:AN5g6gz9EoQ3sCNu7514GEghZurrktCMiH",
                     "pattern": "^(did:ont:.+)$"
                 },
