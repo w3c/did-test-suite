@@ -32,6 +32,15 @@ ${subSection}
     } else {
       result = Object.keys(section)
         .map((statement) => {
+          const allImplementations = new Set(section[statement].map((test) => {
+            if(test.implementation.includes('Example')) {
+              return 'EXAMPLE';
+            }
+
+            return test.implementation;
+          }));
+          allImplementations.delete('EXAMPLE');
+          const implementations = allImplementations.size;
           const count = section[statement]
             .map((test) => {
               return {
@@ -62,15 +71,35 @@ ${subSection}
 <tr>
 <th class='status'>${count.failed ? `<span class='failed'>&nbsp;(${count.failed})</span>` : ''}
 ${(count.failed && count.passed) ? `<br/>` : ''}
-${count.passed ? `<span class='passed'>&nbsp;(${count.passed})</span>` : ''} 
+${count.passed ? `<span class='passed'>&nbsp;(${count.passed - 1})</span>` : ''}
 ${(count.todo && count.todo) ? `<br/>` : ''}
-${count.todo ? `<span class='todo'>&nbsp;(${count.todo})</span>` : ''} 
+${count.todo ? `<span class='todo'>&nbsp;(${count.todo})</span>` : ''}
 </th>
 ${summary_titles_html}
 <th class='param'>Parameters</th>
 </tr>
+${(!statement.startsWith("Implementation:"))
+    ? '<tr><td colspan=4>' +
+      'Total implementations: ' + implementations +
+      '</td></tr>'
+    : ''
+}
+${(implementations < 2 && !statement.startsWith("Implementation:"))
+    ? '<tr><td colspan=4>' +
+      '<div class="issue" title="Insufficient implementations">' +
+      'At least two independent and conforming implementations do not ' +
+      'exist for the following feature: ' + statement +
+      '</div></td></tr>'
+    : ''
+}
+
 ${section[statement]
   .sort((a,b) => { return a.did_method.localeCompare(b.did_method); }).map((tr) => {
+    if(tr.implementation.includes('Example') &&
+      !statement.startsWith("Implementation:")) {
+      return '';
+    }
+
     return `
 <tr>
 <td class='${tr.status}'></td>
