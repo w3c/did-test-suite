@@ -1,0 +1,86 @@
+{
+  "didMethod": "did:orb",
+  "implementation": "DID Orb Test Suite",
+  "implementer": "SecureKey",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1,
+      2
+    ],
+    "invalidDidErrorOutcome": [],
+    "notFoundErrorOutcome": [],
+    "representationNotSupportedErrorOutcome": [],
+    "deactivatedOutcome": []
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {},
+        "didDocument": {
+          "id": "did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+          "verificationMethod":[
+            {
+              "controller":"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+              "id":"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q#j6UbMgjnkg9HpU_xPkBK_p_XguOXnAM1kbY5mMGxuwU",
+              "publicKeyJwk":{
+                "kty":"EC",
+                "crv":"P-256",
+                "x":"CQvEuooMNFTa8sDMGFyjfRGgto1pNkv8UHh_4VOhtl0",
+                "y":"XTToG4iSegnFi3LQ8zNqcK6YKf0N7sqX7st6Nus2hVo"
+              },
+              "type":"JsonWebKey2020"
+            }
+          ],
+          "authentication":[
+            "did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q#j6UbMgjnkg9HpU_xPkBK_p_XguOXnAM1kbY5mMGxuwU"
+          ]
+        },
+        "didDocumentMetadata": {
+          "canonicalId":"did:orb:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+          "equivalentId":[
+            "did:orb:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+            "did:orb:webcas:testnet.orb.local:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q"
+          ],
+          "method":{
+            "updateCommitment":"EiCJkLA6VMOCTtVi0myQVr22M4YF3TWUySbjJz2mwKli7A",
+            "recoveryCommitment":"EiC3aCOTtg49WOTyFksJRlqDzuPoCD4bvvHeLZae2kZ88w",
+            "published":true
+          }
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\n    \"@context\":[\n      \"https://www.w3.org/ns/did/v1\",\n      \"https://w3id.org/security/suites/jws-2020/v1\"\n    ],\n    \"id\":\"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q\",\n    \"verificationMethod\":[\n      {\n        \"controller\":\"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q\",\n        \"id\":\"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q#j6UbMgjnkg9HpU_xPkBK_p_XguOXnAM1kbY5mMGxuwU\",\n        \"publicKeyJwk\":{\n          \"kty\":\"EC\",\n          \"crv\":\"P-256\",\n          \"x\":\"CQvEuooMNFTa8sDMGFyjfRGgto1pNkv8UHh_4VOhtl0\",\n          \"y\":\"XTToG4iSegnFi3LQ8zNqcK6YKf0N7sqX7st6Nus2hVo\"\n        },\n        \"type\":\"JsonWebKey2020\"\n      }\n    ],\n    \"authentication\":[\n      \"did:orb:interim:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q#j6UbMgjnkg9HpU_xPkBK_p_XguOXnAM1kbY5mMGxuwU\"\n    ]\n  }",
+        "didDocumentMetadata": {
+          "canonicalId":"did:orb:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+          "equivalentId":[
+            "did:orb:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q",
+            "did:orb:webcas:testnet.orb.local:bafkreigdb75qo7jtqb3kmingpwhluz2fdoarb5fgw4b7jg4euhamq4vozi:EiDHdXhNm7LuCqxo4JvAwKYKiFmpf85YFswAovxTxI_y4Q"
+          ],
+          "method":{
+            "updateCommitment":"EiCJkLA6VMOCTtVi0myQVr22M4YF3TWUySbjJz2mwKli7A",
+            "recoveryCommitment":"EiC3aCOTtg49WOTyFksJRlqDzuPoCD4bvvHeLZae2kZ88w",
+            "published":true
+          }
+        }
+      }
+    }
+  ]
+}

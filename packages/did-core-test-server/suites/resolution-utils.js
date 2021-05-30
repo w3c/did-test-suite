@@ -33,7 +33,7 @@ const findExecutionByDidUrl = ((implementation, didUrl) => {
 
 const parseDidMethod = (did) => {
   var match = /^did:(.+):(.+)$/.exec(did);
-  return match[1];
+  return match[2];
 };
 
 const produceRepresentation = (didDocument, contentType) => {
