@@ -36,5 +36,6 @@ module.exports = {
     require('../implementations/universal-resolver-did-vaa.json'),
     require('../implementations/universal-resolver-did-web.json'),
     require('../implementations/universal-resolver-did-work.json'),
+    require('../implementations/resolver-did-orb.json')
   ],
 };
