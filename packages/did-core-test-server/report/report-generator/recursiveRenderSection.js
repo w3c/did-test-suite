@@ -56,16 +56,6 @@ ${subSection}
               return tally;
             }, {});
           const resultTable = `
-<style>
-.test-status { table-layout: auto; }
-.test-status .failed:before { content: "❌"; }
-.test-status .passed:before { content: "✅"; }
-.test-status .todo:before { content: "⚠️"; }
-.test-status .status { width: 10%; }
-.test-status .suite { width: 20%; }
-.test-status .implementation { width: 20%; }
-.test-status .param { width: auto; }
-</style>
 <table class="simple test-status" style="width: 100%;">
 <tbody>
 <tr>
