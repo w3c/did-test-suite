@@ -26,7 +26,7 @@
     "test": "lerna run test --stream",
     "docker:up": "docker-compose up",
     "docker:build": "docker-compose up --build",
-    "generate-test-data": "lerna run generate-report --stream",
+    "generate-test-data": "lerna run generate-test-data --stream",
     "generate-report": "lerna run generate-report",
     "test-and-generate-report": "lerna run test-and-generate-report"
   },
