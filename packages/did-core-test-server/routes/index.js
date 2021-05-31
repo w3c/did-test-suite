@@ -23,7 +23,7 @@ const registerRoutes = (server) => {
         summary: "Generate Report",
         description: "Run tests on supplied suites",
         body: {
-          type: "array",
+          type: "object",
           example: suitesInput,
           additionalProperties: true,
         },
