@@ -28,7 +28,16 @@ const isValidJwk = (jwk) => {
   try {
     jose.JWK.asKey(jwk);
     valid = true;
-  } catch (error) {}
+  } catch (error) {
+    // un comment to see JWKs that might 
+    // be valid but not yet supported
+    // widely supported, like BLS 12381
+    // console.warn('invalid jwk', jwk)
+  }
+  // relaxed JWK public key check
+  if (!jwk.d && jwk.kty){
+    valid = true
+  }
   return valid;
 };
 
