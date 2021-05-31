@@ -9,6 +9,20 @@
         width: 100%;
         height: 500px;
       }
+      .implementation-summary { table-layout: auto; }
+      .implementation-summary .failed:before { content: "❌"; }
+      .implementation-summary .passed:before { content: "✅"; }
+      .implementation-summary .todo:before { content: "⚠️"; }
+      .implementation-summary .method { width: 10%; }
+      .implementation-summary .implementation { width: 20%; }
+      .test-status { table-layout: auto; }
+      .test-status .failed:before { content: "❌"; }
+      .test-status .passed:before { content: "✅"; }
+      .test-status .todo:before { content: "⚠️"; }
+      .test-status .status { width: 10%; }
+      .test-status .suite { width: 20%; }
+      .test-status .implementation { width: 20%; }
+      .test-status .param { width: auto; }
     </style>
     <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>

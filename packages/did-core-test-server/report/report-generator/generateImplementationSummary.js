@@ -12,14 +12,6 @@ module.exports = generateImplementationSummary = ($, talliedResults) => {
     let suiteNames = talliedResults.suiteNames;
 
     let result_table = `
-<style>
-.implementation-summary { table-layout: auto; }
-.implementation-summary .failed:before { content: "❌"; }
-.implementation-summary .passed:before { content: "✅"; }
-.implementation-summary .todo:before { content: "⚠️"; }
-.implementation-summary .method { width: 10%; }
-.implementation-summary .implementation { width: 20%; }
-</style>
 <table class="simple implementation-summary" style="width: 100%;">
 <tbody>
 <tr>
