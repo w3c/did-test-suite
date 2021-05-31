@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ccp",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0,
@@ -35,7 +36,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-ccp:8080/1.0/identifiers/",
-                    "duration": 1657,
+                    "duration": 1487,
                     "identifier": "did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd",
                     "pattern": "^(did:ccp:.+)$"
                 },
@@ -75,7 +76,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-ccp:8080/1.0/identifiers/",
-                    "duration": 1659,
+                    "duration": 1510,
                     "identifier": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw",
                     "pattern": "^(did:ccp:.+)$"
                 },

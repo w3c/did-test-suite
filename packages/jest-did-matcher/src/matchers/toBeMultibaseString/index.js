@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () =>
     matcherHint('.toBeMultibaseString', 'received', '') +
     '\n\n' +
-    'Expected value to be a Multibase string:\n' +
-    `  ${printExpected('a Multibase string')}` +
-    'Received:\n' +
+    'Expected value to be a Multibase string, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {

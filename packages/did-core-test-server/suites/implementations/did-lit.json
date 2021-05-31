@@ -1,0 +1,98 @@
+{
+  "didMethod": "did:lit",
+  "implementation": "did-lit (2021)",
+  "implementer": "IBCT",
+  "supportedContentTypes": ["application/did+ld+json"],
+  "dids": ["did:lit:AEZ87t1bi5bRxmVh3ksMUi"],
+  "didParameters": {},
+  "did:lit:AEZ87t1bi5bRxmVh3ksMUi": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+        "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+        "authentication": ["did:lit:AEZ87t1bi5bRxmVh3ksMUi#0"],
+        "assertionMethod": ["did:lit:AEZ87t1bi5bRxmVh3ksMUi#1"],
+        "keyAgreement": ["did:lit:AEZ87t1bi5bRxmVh3ksMUi#2"],
+        "capabilityDelegation": ["did:lit:AEZ87t1bi5bRxmVh3ksMUi#3"],
+        "capabilityInvocation": [],
+        "verificationMethod": [
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#0",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "zbPJfARDmbshQ2iSZ3fg5WxAh9VEXAoiyi6QRBJBBj2z"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#1",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "24YpP4L2ydSffMn92KF1EvzgwcStdzixut1CDizuCpaqD"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#2",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "277hEJxdh596ptwNmyApNTa1TZLMjgpEeQgXbTbXGYns1"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#3",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "foWWHmUrwxXFu12aEoS4GK9MdqVNTKLbpGEF9ND7wEvH"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#4",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "qVFze1eaPJavKvmGqEsF4LPRdUDzsvFukqQH5KVhseE1"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#5",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "29NGo9CDpMcVWhTp1XKNse63DVzgHUHiQpWv1bQMXj7Wx"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#6",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "nnvBVyLX77f39KwNrsUhkdvjWCVXt4o71U6DBbZSbDZA"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#7",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "nESzTFNwQfdar2v4aHPKeYZA6fobDfdYsssFV8ZBzRTZ"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#8",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "sZzPChJYcibqcvr7nvHJHyVUtACKoNyRarsppdwMJvGN"
+          },
+          {
+            "id": "did:lit:AEZ87t1bi5bRxmVh3ksMUi#9",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+            "publicKeyBase58": "z2SqWSUz92ULURxmr254RWbg3UdFLwRSLQctuwHHxbWy"
+          }
+        ],
+        "service": [],
+        "createdAt": "2021-03-17T07:05:14+00:00",
+        "updatedAt": "2021-03-17T07:05:14+00:00"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"assertionMethod\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#1\"],\"authentication\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#0\"],\"capabilityDelegation\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#3\"],\"capabilityInvocation\":[],\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"createdAt\":\"2021-03-17T07:05:14+00:00\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"keyAgreement\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#2\"],\"service\":[],\"updatedAt\":\"2021-03-17T07:05:14+00:00\",\"verificationMethod\":[{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#0\",\"publicKeyBase58\":\"zbPJfARDmbshQ2iSZ3fg5WxAh9VEXAoiyi6QRBJBBj2z\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#1\",\"publicKeyBase58\":\"24YpP4L2ydSffMn92KF1EvzgwcStdzixut1CDizuCpaqD\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#2\",\"publicKeyBase58\":\"277hEJxdh596ptwNmyApNTa1TZLMjgpEeQgXbTbXGYns1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#3\",\"publicKeyBase58\":\"foWWHmUrwxXFu12aEoS4GK9MdqVNTKLbpGEF9ND7wEvH\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#4\",\"publicKeyBase58\":\"qVFze1eaPJavKvmGqEsF4LPRdUDzsvFukqQH5KVhseE1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#5\",\"publicKeyBase58\":\"29NGo9CDpMcVWhTp1XKNse63DVzgHUHiQpWv1bQMXj7Wx\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#6\",\"publicKeyBase58\":\"nnvBVyLX77f39KwNrsUhkdvjWCVXt4o71U6DBbZSbDZA\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#7\",\"publicKeyBase58\":\"nESzTFNwQfdar2v4aHPKeYZA6fobDfdYsssFV8ZBzRTZ\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#8\",\"publicKeyBase58\":\"sZzPChJYcibqcvr7nvHJHyVUtACKoNyRarsppdwMJvGN\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#9\",\"publicKeyBase58\":\"z2SqWSUz92ULURxmr254RWbg3UdFLwRSLQctuwHHxbWy\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

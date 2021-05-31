@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeAsciiString', 'received', '') +
     '\n\n' +
-    'Expected value to be of type INFRA string:\n' +
-    `  ${printExpected('type of INFRA string')}` +
-    'Received:\n' +
+    'Expected value to be of type INFRA string, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {

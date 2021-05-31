@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>DID Core Specification Test Suite</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.css">
+    <style type="text/css" media="screen">
+      #report-suites-input {
+        position: relative;
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+    <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
+    <script class="remove">
+      // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
+      var respecConfig = {
+        specStatus: 'ED',
+        shortName: 'did-test-suite',
+        group: 'did',
+        github: {
+          repoURL: 'https://github.com/w3c/did-test-suite/',
+          branch: 'master',
+        },
+        editors: [
+          {
+            name: 'Orie Steele',
+            url: 'https://www.linkedin.com/in/or13b/',
+            company: 'Transmute',
+            companyURL: 'https://www.transmute.industries/',
+            w3cid: 109171,
+          },
+        ],
+        noRecTrack: 'true',
+      };
+    </script>
+  </head>
+  <body>
+    <section id="abstract">
+      <p>
+        This document describes the did core test suite, and summarizes the
+        latest test results.
+      </p>
+    </section>
+    <section id="sotd">
+      <p>
+        This document is under active development and implementers are advised
+        against using the document unless they are directly involved with the
+        W3C DID Working Group.
+      </p>
+    </section>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        The DID Core Specification strives to make no untestable normative
+        statements with [[RFC2119]] Language.
+      </p>
+
+      <p>
+        This document attempts to demonstrate that all such language has been
+        tested, and is supported by at least 2 independent implementations.
+      </p>
+
+      <p class="issue">
+        This document does not contain a comprehensive lists of normative
+        statements made by the did core spec.
+      </p>
+
+      <p class="issue">Not all statements in this document have been tested.</p>
+    </section>
+
+    <section>
+      <h2>Terminology</h2>
+
+      <section>
+        <h2>Suite</h2>
+        <p>
+          A test suite is a collection of tests and a json suite configuration
+          file.
+        </p>
+        <pre class="example" title="Example json suite configuration">          {
+            "name": "test-suite-a",
+            "a": 1,
+            "b": 2
+          }          
+          </pre>
+
+        <pre class="example" title="Example javascript test file">let { suiteConfig } = global;
+
+if (!suiteConfig) {
+  suiteConfig = require("./defaultSuiteConfig.json");
+}
+
+describe("test-suite-a", () =&gt; {
+  it("suite config should have correct name", async () =&gt; {
+    expect(suiteConfig.name).toBe("test-suite-a");
+  });
+
+  it("a should be 1", async () =&gt; {
+    expect(suiteConfig.a).toBe(1);
+  });
+
+  it("b should be 2", async () =&gt; {
+    expect(suiteConfig.b).toBe(2);
+  });
+});
+          </pre>
+        <p></p>
+
+        <p>Test Suites MUST have unique descriptive names.</p>
+
+        <p class="note">
+          For the purposes of the DID Core WG, the suite name is assumed to be
+          "did-spec". However, we may choose to add additional test suites, with
+          different names in the future.
+        </p>
+        <p>Test suites MAY be split into positive and negative cases.</p>
+
+        <p>
+          A suite is considered passing when all associated tests are passing.
+        </p>
+      </section>
+
+      <section>
+        <h2>Statement</h2>
+        <p>Normative statements are mapped to one or more tests.</p>
+        <pre class="example" title="Example normative statement">          The DID method name MUST be an ASCII lowercase string.
+          </pre>
+
+        <pre class="example" title="Example test of statement">it('The DID method name MUST be an ASCII lowercase string.', () =&gt; {
+  const method = did.split(':')[1];
+  expect(utils.isAsciiString(method)).toBe(true);
+  expect(method.toLowerCase()).toBe(method);
+});
+          </pre>
+        <p>Tests SHOULD match normative statements in the DID Core.</p>
+        <p>
+          Tests SHOULD reuse utility functions like
+          <code>isAsciiString</code>, or <code>decodeBase64UrlToString</code>.
+        </p>
+      </section>
+
+      <section>
+        <h2>Suite Configuration</h2>
+        <p>
+          In order to run a test suite, a configuration file must be provided
+          for the test file to be run against.
+        </p>
+
+        <p>Multiple suites can be run at once.</p>
+
+        <p class="advisement">
+          For the latest version of this file, please see
+          <a href="https://github.com/w3c/did-test-suite/blob/master/packages/did-core-test-server/suites/did-spec/default.json">
+            latest did spec suite configuration
+          </a>
+        </p>
+        <pre id="did-spec-suite-configuration" class="example" title="The current did-spec configuration file">  {
+  "name": "did-core-suites",
+  "suites": [
+    {
+      "suite_name": "did-core-properties"
+    },
+    {
+      "suite_name": "did-identifier"
+    },
+    {
+      "suite_name": "did-production"
+    },
+    {
+      "suite_name": "did-resolution"
+    },
+    {
+      "suite_name": "did-url-dereferencing"
+    }
+  ]
+}
+        </pre>
+      </section>
+
+      <section>
+        <h2>Raw Test Suite Run Result</h2>
+        <p>
+          Test results are produced by <a href="https://jestjs.io/">jest</a>,
+          with a post processing filter.
+        </p>
+
+        <p>
+          Both console and JSON output are provided.
+          The member <code>suitesReportTerminal</code> contains encoded captures
+          from standard out and error, and can be safely ignored.
+        </p>
+        <p></p>
+          Following is an example of a raw test suite run result.
+          Latest output is in <a href="#raw-test-suite-run-result"></a>
+        <p></p>
+
+        <pre class="example" title="Example test results">{
+  "suitesReportTerminal": "G1s5OTlEG1tLG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvdGVzdC1zdWl0ZS1hLxtbMjJtG1sxbXRlc3Qtc3VpdGUtYS5zcGVjLmpzG1syMm0KICB0ZXN0LXN1aXRlLWEKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUgKDEgbXMpG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybWEgc2hvdWxkIGJlIDEbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJtYiBzaG91bGQgYmUgMhtbMjJtCgobWzk5OUQbW0sbWzFtVGVzdCBTdWl0ZXM6IBtbMjJtG1sxbRtbMzJtMSBwYXNzZWQbWzM5bRtbMjJtLCAxIHRvdGFsChtbMW1UZXN0czogICAgICAgG1syMm0bWzFtG1szMm0zIHBhc3NlZBtbMzltG1syMm0sIDMgdG90YWwKG1sxbVNuYXBzaG90czogICAbWzIybTAgdG90YWwKG1sxbVRpbWU6G1syMm0gICAgICAgIDAuODk5IHMsIGVzdGltYXRlZCAxIHMKG1sybVJhbiBhbGwgdGVzdCBzdWl0ZXMbWzIybRtbMm0uG1syMm0KG1s5OTlEG1tLG1s5OTlEG1tLG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvdGVzdC1zdWl0ZS1iLxtbMjJtG1sxbXRlc3Qtc3VpdGUtYi5zcGVjLmpzG1syMm0KICB0ZXN0LXN1aXRlLWIKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJteCBzaG91bGQgYmUgMyAoMSBtcykbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJteSBzaG91bGQgYmUgNBtbMjJtCgobWzk5OUQbW0sbWzFtVGVzdCBTdWl0ZXM6IBtbMjJtG1sxbRtbMzJtMSBwYXNzZWQbWzM5bRtbMjJtLCAxIHRvdGFsChtbMW1UZXN0czogICAgICAgG1syMm0bWzFtG1szMm0zIHBhc3NlZBtbMzltG1syMm0sIDMgdG90YWwKG1sxbVNuYXBzaG90czogICAbWzIybTAgdG90YWwKG1sxbVRpbWU6G1syMm0gICAgICAgIDAuMTQzIHMsIGVzdGltYXRlZCAxIHMKG1sybVJhbiBhbGwgdGVzdCBzdWl0ZXMbWzIybRtbMm0uG1syMm0KG1swbRtbN20bWzFtG1szMm0gUEFTUyAbWzM5bRtbMjJtG1syN20bWzBtIBtbMm1zdWl0ZXMvaXNzdWVyLWFwaS8bWzIybRtbMW1pc3N1ZXItYXBpLnNwZWMuanMbWzIybQogIGlzc3Vlci1hcGkKICAgIBtbMzJt4pyTG1szOW0gG1sybXN1aXRlIGNvbmZpZyBzaG91bGQgaGF2ZSBjb3JyZWN0IG5hbWUbWzIybQogICAgG1szMm3inJMbWzM5bSAbWzJtZW5kcG9pbnQgbXVzdCBjb250YWluIC9pc3N1ZS9jcmVkZW50aWFscxtbMjJtCiAgICAbWzMybeKckxtbMzltIBtbMm12ZXJpZmljYXRpb25NZXRob2RzIG11c3QgYmUgZ3JlYXRlciB0aGFuIDEgKDEgbXMpG1syMm0KICAgIBtbMzJt4pyTG1szOW0gG1sybWNyZWRlbnRpYWxzIG11c3QgYmUgYXQgbGVhc3QgMRtbMjJtCiAgICAbWzMybeKckxtbMzltIBtbMm1jYW4gaXNzdWUgYWxsIGNyZWRlbnRpYWxzIGZyb20gYWxsIHZlcmlmaWNhdGlvbk1ldGhvZHMgKDY0NCBtcykbWzIybQoKG1s5OTlEG1tLG1sxbVRlc3QgU3VpdGVzOiAbWzIybRtbMW0bWzMybTEgcGFzc2VkG1szOW0bWzIybSwgMSB0b3RhbAobWzFtVGVzdHM6ICAgICAgIBtbMjJtG1sxbRtbMzJtNSBwYXNzZWQbWzM5bRtbMjJtLCA1IHRvdGFsChtbMW1TbmFwc2hvdHM6ICAgG1syMm0wIHRvdGFsChtbMW1UaW1lOhtbMjJtICAgICAgICAwLjk3OCBzLCBlc3RpbWF0ZWQgNCBzChtbMm1SYW4gYWxsIHRlc3Qgc3VpdGVzG1syMm0bWzJtLhtbMjJtCg==",
+  "suitesReportJson": [
+    {
+      "suite": "test-suite-a",
+      "testResults": [
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "a should be 1",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-a"],
+          "title": "b should be 2",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "suite": "test-suite-b",
+      "testResults": [
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "suite config should have correct name",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "x should be 3",
+          "status": "passed"
+        },
+        {
+          "ancestors": ["test-suite-b"],
+          "title": "y should be 4",
+          "status": "passed"
+        }
+      ]
+    }
+  ]
+}                   
+</pre>
+      </section>
+      <section>
+        <h2>Conformance Report</h2>
+        <p>
+          Conformance Report is derived by processing the Raw Test Run Result.
+          The Conformance Report on the latest test run is in
+          <a href="#conformance-report"></a>.
+        </p>
+      </section>
+    </section>
+
+    <section id="conformance-report">
+      <h1>Conformance Report</h1>
+
+      <section id="executive-summary">
+        <h2>Executive Summary</h2>
+      </section>
+
+      <section id="implementation-summary">
+        <h2>Summary by Method Implementation</h2>
+      </section>
+
+      <section id="report-by-test-suites">
+        <h2>Report by Test Suites</h2>
+      </section>
+
+      <section id="report-by-methods">
+        <h2>Report by Methods</h2>
+      </section>
+
+    </section>
+
+</body></html>

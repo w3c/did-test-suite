@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:hcr",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "http://hacera-did-driver:8080/1.0/identifiers/",
-                    "duration": 459,
+                    "duration": 991,
                     "identifier": "did:hcr:0f674e7e-4b49-4898-85f6-96176c1e30de",
                     "pattern": "^(did:hcr:.+)$"
                 },

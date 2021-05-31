@@ -39,9 +39,13 @@ To generate a report, run:
 
 ```npm
 npm i
-npm run generate-report
+npm run test-and-generate-report
 ```
 
+## If tests are failing
+
+- Every time after updating any code, run `npm i`.
+- Please refer to [When you observe errors section in packages/did-core-test-server/README.md](packages/did-core-test-server/README.md#when-you-observe-errors)
 ## DID Working Group Repositories
 
 - [W3C Decentralized Identifier Specification v1.0](https://github.com/w3c/did-core)

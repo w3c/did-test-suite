@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ebsi",
     "expectedOutcomes": {
         "defaultOutcomes": [
             0
@@ -34,7 +35,7 @@
                         "query": null
                     },
                     "driverUrl": "https://api.preprod.ebsi.eu/did-registry/v2/identifiers/$1",
-                    "duration": 2723,
+                    "duration": 2209,
                     "identifier": "did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE",
                     "pattern": "^(did:ebsi:.+)$"
                 },

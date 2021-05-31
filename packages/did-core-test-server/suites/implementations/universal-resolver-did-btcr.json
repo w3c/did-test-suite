@@ -1,6 +1,7 @@
 {
     "implementation": "Universal Resolver",
     "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:btcr",
     "expectedOutcomes": {
         "defaultOutcomes": [
             1
@@ -37,7 +38,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
-                    "duration": 7522,
+                    "duration": 3415,
                     "identifier": "did:btcr:x705-jznz-q3nl-srs",
                     "pattern": "^(did:btcr:.+)$"
                 },
@@ -101,7 +102,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
-                    "duration": 12694,
+                    "duration": 12310,
                     "identifier": "did:btcr:xkrn-xz7q-qsye-28p",
                     "pattern": "^(did:btcr:.+)$"
                 },
@@ -211,7 +212,7 @@
                         "query": null
                     },
                     "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
-                    "duration": 4458,
+                    "duration": 6386,
                     "identifier": "did:btcr:xz35-jznz-q9yu-ply",
                     "pattern": "^(did:btcr:.+)$"
                 },

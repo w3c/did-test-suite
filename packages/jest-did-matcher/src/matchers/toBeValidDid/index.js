@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeValidDid', 'received', '') +
     '\n\n' +
-    'Expected value to be of valid DID:\n' +
-    `  ${printExpected('DID')}` +
-    'Received:\n' +
+    'Expected value to be of valid DID, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {
