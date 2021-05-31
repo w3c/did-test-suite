@@ -13,6 +13,6 @@ jobs:
       - name: Install
         run: npm install
       - name: Lint
-        run: npm run lint -- --since origin/main
+        run: npm run lint 
       - name: Test
-        run: npm run test -- --since origin/main
+        run: npm run test 
