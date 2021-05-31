@@ -30,7 +30,7 @@ const isValidJwk = (jwk) => {
     valid = true;
   } catch (error) {
     // un comment to see JWKs that might 
-    // be valid but not yet supported
+    // be valid but not yet
     // widely supported, like BLS 12381
     // console.warn('invalid jwk', jwk)
   }
