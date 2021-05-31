@@ -14,7 +14,11 @@ module.exports = {
     require('../implementations/did-ion.json'),
     require('../implementations/did-orb.json'),
     require('../implementations/did-lit.json'),
-    require('../implementations/did-schema.json')
+    require('../implementations/did-schema.json'),
+    require('../implementations/did-key-transmute.json'),
+    require('../implementations/did-web-transmute.json'),
+    require('../implementations/did-photon-transmute.json'),
+    require('../implementations/did-elem-transmute.json'),
 
     // commented out breaking fixtures
     // require('../implementations/did-unisot.json'),
