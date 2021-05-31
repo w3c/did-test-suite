@@ -12,40 +12,42 @@
   "didParameters": {},
   "did:web:did.actor:mike": {
     "didDocumentDataModel": {
-      "id": "did:web:did.actor:mike",
-      "rating": 4.5,
-      "publicAccess": true,
-      "additionalType": null,
-      "verificationMethod": [
-        {
-          "id": "#g1",
-          "controller": "did:web:did.actor:mike",
-          "type": "JsonWebKey2020",
-          "publicKeyJwk": {
-            "kty": "EC",
-            "crv": "BLS12381_G1",
-            "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+      "properties": {
+        "id": "did:web:did.actor:mike",
+        "rating": 4.5,
+        "publicAccess": true,
+        "additionalType": null,
+        "verificationMethod": [
+          {
+            "id": "#g1",
+            "controller": "did:web:did.actor:mike",
+            "type": "JsonWebKey2020",
+            "publicKeyJwk": {
+              "kty": "EC",
+              "crv": "BLS12381_G1",
+              "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+            }
+          },
+          {
+            "id": "#g2",
+            "controller": "did:web:did.actor:mike",
+            "type": "JsonWebKey2020",
+            "publicKeyJwk": {
+              "kty": "EC",
+              "crv": "BLS12381_G2",
+              "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+            }
           }
-        },
-        {
-          "id": "#g2",
-          "controller": "did:web:did.actor:mike",
-          "type": "JsonWebKey2020",
-          "publicKeyJwk": {
-            "kty": "EC",
-            "crv": "BLS12381_G2",
-            "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
-          }
-        }
-      ],
-      "authentication": [
-        "did:web:did.actor:mike#g1",
-        "did:web:did.actor:mike#g2"
-      ],
-      "assertionMethod": [
-        "did:web:did.actor:mike#g1",
-        "did:web:did.actor:mike#g2"
-      ]
+        ],
+        "authentication": [
+          "did:web:did.actor:mike#g1",
+          "did:web:did.actor:mike#g2"
+        ],
+        "assertionMethod": [
+          "did:web:did.actor:mike#g1",
+          "did:web:did.actor:mike#g2"
+        ]
+      }
     },
     "application/did+json": {
       "didDocumentDataModel": {
