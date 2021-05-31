@@ -1,3 +1,8 @@
+
+const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
+  require('../implementations/did-unisot.json'),
+] : []
+
 module.exports = {
   name: 'did-consumption',
   didMethods: [
@@ -19,8 +24,6 @@ module.exports = {
     require('../implementations/did-web-transmute.json'),
     require('../implementations/did-photon-transmute.json'),
     require('../implementations/did-elem-transmute.json'),
-
-    // commented out breaking fixtures
-    // require('../implementations/did-unisot.json'),
+    ...brokenFixtures
   ],
 };

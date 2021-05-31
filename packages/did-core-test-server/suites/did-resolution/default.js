@@ -1,3 +1,10 @@
+const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
+  require('../implementations/resolver-example-didwg.json'),
+  require('../implementations/universal-resolver-did-ccp.json'),
+  require('../implementations/universal-resolver-did-gatc.json'),
+  require('../implementations/resolver-ethr-consensys-mesh.json'),
+] : []
+
 module.exports = {
   name: '7.1 DID Resolution',
   resolvers: [
@@ -32,13 +39,7 @@ module.exports = {
     require('../implementations/universal-resolver-did-vaa.json'),
     require('../implementations/universal-resolver-did-web.json'),
     require('../implementations/universal-resolver-did-work.json'),
-    require('../implementations/resolver-did-orb.json')
-
-
-    // commented out breaking fixtures
-    // require('../implementations/resolver-example-didwg.json'),
-    // require('../implementations/universal-resolver-did-ccp.json'),
-    // require('../implementations/universal-resolver-did-gatc.json'),
-    // require('../implementations/resolver-ethr-consensys-mesh.json'),
+    require('../implementations/resolver-did-orb.json'),
+    ...brokenFixtures
   ],
 };

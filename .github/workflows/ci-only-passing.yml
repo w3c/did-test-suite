@@ -1,4 +1,4 @@
-name: CI
+name: Only Passing
 on: [push]
 jobs:
   ci:
