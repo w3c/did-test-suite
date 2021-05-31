@@ -1,5 +1,7 @@
 # ![W3C Logo](https://www.w3.org/Icons/w3c_home) DID Test Suite
 
+[![Only Passing](https://github.com/w3c/did-test-suite/actions/workflows/ci-only-passing.yml/badge.svg)](https://github.com/w3c/did-test-suite/actions/workflows/ci-only-passing.yml) [![Include Breaking](https://github.com/w3c/did-test-suite/actions/workflows/ci-include-breaking.yml/badge.svg)](https://github.com/w3c/did-test-suite/actions/workflows/ci-include-breaking.yml)
+
 This test suite performs interoperability tests on the W3C
 [Decentralized Identifier](https://www.w3.org/TR/did-core/) specification and
 is maintained by the W3C [DID Working Group](https://www.w3.org/2019/did-wg/).
