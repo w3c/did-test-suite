@@ -1,0 +1,93 @@
+{
+  "didMethod": "did:web",
+  "implementation": "https://github.com/transmute-industries/did-core",
+  "implementer": "Transmute",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:web:did.actor:mike"
+  ],
+  "didParameters": {},
+  "did:web:did.actor:mike": {
+    "didDocumentDataModel": {
+      "id": "did:web:did.actor:mike",
+      "rating": 4.5,
+      "publicAccess": true,
+      "additionalType": null,
+      "verificationMethod": [
+        {
+          "id": "#g1",
+          "controller": "did:web:did.actor:mike",
+          "type": "JsonWebKey2020",
+          "publicKeyJwk": {
+            "kty": "EC",
+            "crv": "BLS12381_G1",
+            "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+          }
+        },
+        {
+          "id": "#g2",
+          "controller": "did:web:did.actor:mike",
+          "type": "JsonWebKey2020",
+          "publicKeyJwk": {
+            "kty": "EC",
+            "crv": "BLS12381_G2",
+            "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+          }
+        }
+      ],
+      "authentication": [
+        "did:web:did.actor:mike#g1",
+        "did:web:did.actor:mike#g2"
+      ],
+      "assertionMethod": [
+        "did:web:did.actor:mike#g1",
+        "did:web:did.actor:mike#g2"
+      ]
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/jws-2020/v1",
+            {
+              "@base": "did:web:did.actor:mike",
+              "rating": "https://schema.org/Rating",
+              "publicAccess": "https://schema.org/publicAccess",
+              "additionalType": "https://schema.org/additionalType"
+            }
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/jws-2020/v1\",{\"@base\":\"did:web:did.actor:mike\",\"rating\":\"https://schema.org/Rating\",\"publicAccess\":\"https://schema.org/publicAccess\",\"additionalType\":\"https://schema.org/additionalType\"}],\"id\":\"did:web:did.actor:mike\",\"rating\":4.5,\"publicAccess\":true,\"additionalType\":null,\"verificationMethod\":[{\"id\":\"#g1\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G1\",\"x\":\"hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG\"}},{\"id\":\"#g2\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G2\",\"x\":\"l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-\"}}],\"authentication\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"assertionMethod\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/jws-2020/v1",
+            {
+              "@base": "did:web:did.actor:mike",
+              "rating": "https://schema.org/Rating",
+              "publicAccess": "https://schema.org/publicAccess",
+              "additionalType": "https://schema.org/additionalType"
+            }
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/jws-2020/v1\",{\"@base\":\"did:web:did.actor:mike\",\"rating\":\"https://schema.org/Rating\",\"publicAccess\":\"https://schema.org/publicAccess\",\"additionalType\":\"https://schema.org/additionalType\"}],\"id\":\"did:web:did.actor:mike\",\"rating\":4.5,\"publicAccess\":true,\"additionalType\":null,\"verificationMethod\":[{\"id\":\"#g1\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G1\",\"x\":\"hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG\"}},{\"id\":\"#g2\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G2\",\"x\":\"l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-\"}}],\"authentication\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"assertionMethod\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
