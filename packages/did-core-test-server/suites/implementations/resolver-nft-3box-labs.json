@@ -1,0 +1,73 @@
+{
+  "implementation": "@ceramicnetwork/nft-did-resolver",
+  "implementer": "3Box Labs",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1, 2 ],
+    "invalidDidErrorOutcome": [ ],
+    "notFoundErrorOutcome": [ ],
+    "representationNotSupportedErrorOutcome": [ ],
+    "deactivatedOutcome": [ ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didResolutionMetadata":{
+        },
+        "didDocument":{
+          "id": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2",
+          "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+          "verificationMethod": [
+            {
+              "id": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2#owner",
+              "type": "BlockchainVerificationMethod2021",
+              "controller": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2",
+              "blockchainAccountId": "0x06eb48572a2ef9a3b230d69ca731330793b65bdc@eip155:1"
+            }
+          ]
+        },
+        "didDocumentMetadata":{
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2",
+        "resolutionOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2\", \"controller\": \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\", \"verificationMethod\":[{ \"id\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2#owner\", \"type\":\"BlockchainVerificationMethod2021\", \"controller\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2\", \"blockchainAccountId\":\"0x06eb48572a2ef9a3b230d69ca731330793b65bdc@eip155:1\"}]}",
+        "didDocumentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2\", \"controller\": \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\", \"verificationMethod\":[{ \"id\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2#owner\", \"type\":\"BlockchainVerificationMethod2021\", \"controller\":\"did:nft:eip155.1_erc721.0xb300a43751601bd54ffee7de35929537b28e1488_2\", \"blockchainAccountId\":\"0x06eb48572a2ef9a3b230d69ca731330793b65bdc@eip155:1\"}]}",
+        "didDocumentMetadata": {
+        }
+      }
+    }
+  ]
+}
