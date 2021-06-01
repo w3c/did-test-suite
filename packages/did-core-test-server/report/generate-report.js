@@ -7,6 +7,7 @@ const updateReportMetaInformation = require("./report-generator/updateReportMeta
 const generateDetailedReportBySuites = require("./report-generator/generateDetailedReportBySuites");
 const generateDetailedReportByMethods = require("./report-generator/generateDetailedReportByMethods");
 const generateImplementationSummary = require("./report-generator/generateImplementationSummary");
+const generateSpecStatementSummary = require("./report-generator/generateSpecStatementSummary");
 
 const latestResults = require('./tmp/did-spec-test-run.latest.json');
 const talliedResults = tallyResults(latestResults);
@@ -21,8 +22,9 @@ const reportOutput = path.resolve(__dirname, './index.html');
 
   updateReportMetaInformation($, systemSuitesConfig);
 
-  generateDetailedReportBySuites($, talliedResults);
   generateImplementationSummary($, talliedResults);
+  generateSpecStatementSummary($, talliedResults);
+  generateDetailedReportBySuites($, talliedResults);
   generateDetailedReportByMethods($, talliedResults);
 
   const updatedSpec = $.html();

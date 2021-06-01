@@ -2,6 +2,7 @@ module.exports = tallyResults = (results) => {
     let bySuite = {};
     let byMethod = {};
     let summaryByMethod = {};
+    let summaryByTitle = {};
 
     results.forEach((r) => {
         r.testResults.forEach((tr) => {
@@ -47,6 +48,12 @@ module.exports = tallyResults = (results) => {
                     summaryByMethod[did_method][implementation][suite_name] || {};
                 summaryByMethod[did_method][implementation][suite_name][tr.status] =
                     summaryByMethod[did_method][implementation][suite_name][tr.status] + 1 || 1;
+
+                summaryByTitle[tr.title] = summaryByTitle[tr.title] || {};
+                summaryByTitle[tr.title][did_method] = summaryByTitle[tr.title][did_method] || {};
+                summaryByTitle[tr.title][did_method][tr.status] =
+                    summaryByTitle[tr.title][did_method][tr.status] || [];
+                summaryByTitle[tr.title][did_method][tr.status].push(implementation);
             }
         });
     });
@@ -56,5 +63,6 @@ module.exports = tallyResults = (results) => {
         bySuite: bySuite,
         byMethod: byMethod,
         summaryByMethod: summaryByMethod,
+        summaryByTitle: summaryByTitle
     };
 };
