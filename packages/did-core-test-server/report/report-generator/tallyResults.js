@@ -13,38 +13,41 @@ module.exports = tallyResults = (results) => {
                 tuple.shift();
             }
             else {
-                tuple = ["undefined", "undefined", "undefined"]
+                tuple = ["undefined", "undefined", "undefined"];
             }
             let [did_method, implementation, implementer] = tuple;
             did_method = (did_method == "undefined" || !did_method) ? "unspecified" : did_method;
-            let parameters = [did,
-                ...(ancestors.filter(a => a.match(/^PARAMETER (.*)/)) || []).map(a => a.replace(/PARAMETER /, '')),
-                ...(ancestors.filter(a => a.match(/^application\//)) || [])];
-            let didMethodTestResult = {
-                status: tr.status,
-                did_method: did_method,
-                implementation: implementation,
-                implementer: implementer,
-                suite_name: suite_name,
-                did: did,
-                parameters: parameters
-            };
 
-            bySuite[suite_name] = bySuite[suite_name] || {};
-            bySuite[suite_name][tr.title] = bySuite[suite_name][tr.title] || [];
-            bySuite[suite_name][tr.title].push(didMethodTestResult);
+            if (!implementation.match(/example/i)) {
+                let parameters = [did,
+                    ...(ancestors.filter(a => a.match(/^PARAMETER (.*)/)) || []).map(a => a.replace(/PARAMETER /, '')),
+                    ...(ancestors.filter(a => a.match(/^application\//)) || [])];
+                let didMethodTestResult = {
+                    status: tr.status,
+                    did_method: did_method,
+                    implementation: implementation,
+                    implementer: implementer,
+                    suite_name: suite_name,
+                    did: did,
+                    parameters: parameters
+                };
 
-            let implementation_key = `Implementation: ${implementation}`;
-            byMethod[did_method] = byMethod[did_method] || {};
-            byMethod[did_method][implementation_key] = byMethod[did_method][implementation_key] || [];
-            byMethod[did_method][implementation_key].push(didMethodTestResult);
+                bySuite[suite_name] = bySuite[suite_name] || {};
+                bySuite[suite_name][tr.title] = bySuite[suite_name][tr.title] || [];
+                bySuite[suite_name][tr.title].push(didMethodTestResult);
 
-            summaryByMethod[did_method] = summaryByMethod[did_method] || {};
-            summaryByMethod[did_method][implementation] = summaryByMethod[did_method][implementation] || {};
-            summaryByMethod[did_method][implementation][suite_name] =
-                summaryByMethod[did_method][implementation][suite_name] || {};
-            summaryByMethod[did_method][implementation][suite_name][tr.status] =
-                summaryByMethod[did_method][implementation][suite_name][tr.status] + 1 || 1;
+                let implementation_key = `Implementation: ${implementation}`;
+                byMethod[did_method] = byMethod[did_method] || {};
+                byMethod[did_method][implementation_key] = byMethod[did_method][implementation_key] || [];
+                byMethod[did_method][implementation_key].push(didMethodTestResult);
+
+                summaryByMethod[did_method] = summaryByMethod[did_method] || {};
+                summaryByMethod[did_method][implementation] = summaryByMethod[did_method][implementation] || {};
+                summaryByMethod[did_method][implementation][suite_name] =
+                    summaryByMethod[did_method][implementation][suite_name] || {};
+                summaryByMethod[did_method][implementation][suite_name][tr.status] =
+                    summaryByMethod[did_method][implementation][suite_name][tr.status] + 1 || 1;
+            }
         });
     });
 
