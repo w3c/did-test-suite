@@ -32,7 +32,7 @@ ${ suiteNames.map(n => `<th>${n}</th>`).join("") }
 </tr>
 </tbody>
 `;
-    Object.keys(summaryByMethod).forEach( method => {
+    Object.keys(summaryByMethod).sort().forEach( method => {
       Object.keys(summaryByMethod[method]).map( implementation => {
         result_table += `<tr><td>${method}</td><td>${implementation}</td>` +
         suiteNames.map( suite => {
