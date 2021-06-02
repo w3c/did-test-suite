@@ -1,11 +1,11 @@
 module.exports = tallyResults = (results) => {
-    let bySuite = {};
-    let byMethod = {};
-    let summaryByMethod = {};
-    let summaryByTitle = {};
+    let bySuite = {}, byMethod = {};
+    let summaryByMethod = {}, summaryByTitle = {};
+    let method2id = {}, title2id = {};
 
     results.forEach((r) => {
         r.testResults.forEach((tr) => {
+            let title = tr.title;
             let ancestors = [...tr.ancestors];
             let suite_name = ancestors.shift().match(/^suites\/(.*)$/)[1];
             let did = ancestors.find(a => a.match(/^did:/)) || "did:UNKNOWN";
@@ -18,6 +18,9 @@ module.exports = tallyResults = (results) => {
             }
             let [did_method, implementation, implementer] = tuple;
             did_method = (did_method == "undefined" || !did_method) ? "unspecified" : did_method;
+
+            title2id[title] = 0;
+            method2id[did_method] = 0;
 
             if (!implementation.match(/example/i)) {
                 let parameters = [did,
@@ -34,8 +37,8 @@ module.exports = tallyResults = (results) => {
                 };
 
                 bySuite[suite_name] = bySuite[suite_name] || {};
-                bySuite[suite_name][tr.title] = bySuite[suite_name][tr.title] || [];
-                bySuite[suite_name][tr.title].push(didMethodTestResult);
+                bySuite[suite_name][title] = bySuite[suite_name][title] || [];
+                bySuite[suite_name][title].push(didMethodTestResult);
 
                 let implementation_key = `Implementation: ${implementation}`;
                 byMethod[did_method] = byMethod[did_method] || {};
@@ -49,20 +52,27 @@ module.exports = tallyResults = (results) => {
                 summaryByMethod[did_method][implementation][suite_name][tr.status] =
                     summaryByMethod[did_method][implementation][suite_name][tr.status] + 1 || 1;
 
-                summaryByTitle[tr.title] = summaryByTitle[tr.title] || {};
-                summaryByTitle[tr.title][did_method] = summaryByTitle[tr.title][did_method] || {};
-                summaryByTitle[tr.title][did_method][tr.status] =
-                    summaryByTitle[tr.title][did_method][tr.status] || [];
-                summaryByTitle[tr.title][did_method][tr.status].push(implementation);
+                summaryByTitle[title] = summaryByTitle[title] || {};
+                summaryByTitle[title][did_method] = summaryByTitle[title][did_method] || {};
+                summaryByTitle[title][did_method][tr.status] =
+                    summaryByTitle[title][did_method][tr.status] || [];
+                summaryByTitle[title][did_method][tr.status].push(implementation);
             }
         });
     });
+
+    // Assign ID in sorted order
+    Object.keys(title2id).sort().forEach( (k, i) => title2id[k] = `T${1 + i}` ); 
+    Object.keys(method2id).sort().forEach( (k, i) => method2id[k] = `M${1 + i}` ); 
+    method2id['did:unspecified'] = method2id['unspecified'];
 
     return {
         suiteNames: Object.keys(bySuite),
         bySuite: bySuite,
         byMethod: byMethod,
         summaryByMethod: summaryByMethod,
-        summaryByTitle: summaryByTitle
+        summaryByTitle: summaryByTitle,
+        title2id: title2id,
+        method2id: method2id
     };
 };

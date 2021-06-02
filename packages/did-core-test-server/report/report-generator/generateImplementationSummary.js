@@ -3,6 +3,7 @@ const updateSection = require("./updateSection");
 module.exports = generateImplementationSummary = ($, talliedResults) => {
     let section_id = "implementation-summary";
     let section_title = "Summary by Method Implementation";
+    let method2id = talliedResults.method2id;
 
     if (!talliedResults) {
         updateSection($, section_id, section_title, '');
@@ -26,7 +27,7 @@ ${ suiteNames.map(n => `<th>${n}</th>`).join("") }
 `;
     Object.keys(summaryByMethod).sort().forEach( method => {
       Object.keys(summaryByMethod[method]).map( implementation => {
-        result_table += `<tr><td>${method}</td><td>${implementation}</td>` +
+        result_table += `<tr><td><a href="#${method2id[method]}">${method}</a></td><td>${implementation}</td>` +
         suiteNames.map( suite => {
                 let r = summaryByMethod[method][implementation][suite];
                 return !r ? `<td></td>` : `

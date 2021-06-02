@@ -7,7 +7,7 @@ const did_clip = (v) => {
   return r;
 };
 
-module.exports = recursiveRenderSection = (id, section, level, summary_titles, summary_line) => {
+module.exports = recursiveRenderSection = (id, section, id_tweak, subsection_prefix, level, summary_titles, summary_line) => {
     let result = '';
     let section_number = 1;
     let summary_titles_html = summary_titles.map( t => `<th class="${t.toLowerCase()}">${t}</th>`).join("\n");
@@ -15,14 +15,14 @@ module.exports = recursiveRenderSection = (id, section, level, summary_titles, s
     if (section && id && Object.keys(section).length) {
       result = `
 
-    ${Object.keys(section)
+    ${Object.keys(section).sort()
       .map((key) => {
         const value = section[key];
-        const subSection = recursiveRenderSection(null, value, level + 1, summary_titles, summary_line);
+        const subSection = recursiveRenderSection(null, value, null, null, level + 1, summary_titles, summary_line);
         return `
-<section id="${id}-${section_number++}">
+<section id="${id_tweak(id,key,section_number++)}">
 <h${level}>${key}</h${level}>
-${subSection}
+${subsection_prefix(key,value)}${subSection}
 </section>
     `;
       })
