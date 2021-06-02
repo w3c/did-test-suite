@@ -15,7 +15,7 @@
         {
             "function": "resolveRepresentation",
             "input": {
-                "did": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC",
+                "did": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV",
                 "resolutionOptions": {
                     "accept": "application/did+ld+json"
                 }
@@ -25,28 +25,28 @@
                     "contentType": "application/did+ld+json",
                     "didUrl": {
                         "did": {
-                            "method": "vaa",
-                            "methodSpecificId": "3wJVWDQWtDFx27FqvSqyo5xsTsxC"
+                            "method": "bid",
+                            "methodSpecificId": "sfUt7GMaqhWTByMcYscXvqr5brc3fLEV"
                         },
-                        "didUrlString": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC",
+                        "didUrlString": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV",
                         "fragment": null,
                         "parameters": {},
                         "path": "",
                         "query": null
                     },
-                    "driverUrl": "http://driver-did-vaa:8080/1.0/identifiers/",
+                    "driverUrl": "http://driver-did-bid:8080/1.0/identifiers/",
                     "duration": 1104,
-                    "identifier": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC",
-                    "pattern": "^(did:vaa:.+)$"
+                    "identifier": "did:bid:3wJVWDQWtDFx27FqvSqyo5xsTsxC",
+                    "pattern": "^(did:bid:.+)$"
                 },
-                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC\",\"publicKey\":[{\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#key1\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDb/A4iQ0Lq6NU9Q3i91vbqZ8jh\\nUj/Hr64683e9NvNkFBeFePp7wfuZJRSTMrllP5LEQwXPmeZzQBJjKkY34iQV7EXA\\nARKMisvqUR/ucU1mj7ZCiFM+MNCcxn+eD1WfBsXMYfne/BPJPhIUfjjIzBaTQuhI\\ntLhGD6WrDv6fovK/GQIDAQAB\\n-----END PUBLIC KEY-----\\n\",\"type\":\"RsaVerificationKey2018\"}],\"service\":[{\"id\":\"did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#resolver\",\"serviceEndpoint\":\"https://www.citln.cn\",\"type\":\"DIDResolve\"}]}",
+                "didDocumentStream": "{"authentication": ["did:bid:sf22AoVJJk7PqaW9b57MtN8ZYxbpRL7XE"],"context": "https://w3id.org/did/v1","created": "2021-05-12T08:13:05Z","extra": "extra","id": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV","isEnable": true, "name": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV","publicKey": [  { "authority": "all", "controller": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV", "id": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV#key-1", "publicKey": "046ef94b2d01cb99d08f948894966469983f26236e934555d50601719403c2be555f5a2c15db6ca396ecd2e33bdc8f21f35439024b1e5e6ff57b4efe3da13d865d", "type": "secp256k1" }, {  "authority": "all", "controller": "did:bid:sf22AoVJJk7PqaW9b57MtN8ZYxbpRL7XE","id": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV#key-2","publicKey": "0442d6cc4e8633ffe69a2d5d9483f5cc24545b0ba22136f4dd848dcfb6cace52424d8b5b59ac2cdcdb76393f41b70dc3d055923d9e57cbc71807b2e7ab36e0be4c", "type": "secp256k1"  } ],"service": [ {"id": "did:bid:sf22AoVJJk7PqaW9b57MtN8ZYxbpRL7XE","serviceEndpoint": "url", "type": "service" }],"type": 0,"updated": "2021-05-12T08:13:05Z"}",
                 "didDocumentMetadata": {
                     "created": "2020-11-25T18:23:33Z",
                     "proof": {
                         "created": "2020-11-25T18:23:33Z",
-                        "signatureValue": "Tov28noNERDLNfvY1QHnS4zUYXJjLy1oiXXYb533wkq77rfdzy77/vRfBKVAt7iNY1GjpL5tytZpmPjYFLDFwz6SOdlsuCrKTM8sIGLybRS12EOWZl7PAfdYPwknpG4aK7Zmvc7u9ORN9o+YLTK3rP9H4GyJpYWUScy3S3YZU6A=",
-                        "type": "RsaSignature2018",
-                        "verificationMethod": "did:vaa:3wJVWDQWtDFx27FqvSqyo5xsTsxC#key1"
+                        "signatureValue": "0x523c78c71eb8c0ce2080586fb3895c8599453013f58b35fa69f94283be4118952cea6674ad27f6e759cca1691e55bb05cb2b556ca68b9c3671a3766fcf3a4a1d",
+                        "type": "secp256k1",
+                        "verificationMethod": "did:bid:sfUt7GMaqhWTByMcYscXvqr5brc3fLEV#key1"
                     },
                     "updated": "2020-11-25T18:23:33Z"
                 }
