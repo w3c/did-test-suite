@@ -33,8 +33,13 @@ ${subsection_prefix(key,value)}${subSection}
       result = Object.keys(section)
         .map((statement) => {
           const allImplementations = new Set(section[statement].map((test) => {
+            if(test.implementation.includes('Example')) {
+              return 'EXAMPLE';
+            }
+
             return test.implementation;
           }));
+          allImplementations.delete('EXAMPLE');
           const implementations = allImplementations.size;
           const count = section[statement]
             .map((test) => {
