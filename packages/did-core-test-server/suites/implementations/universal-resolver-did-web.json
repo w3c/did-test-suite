@@ -1,0 +1,143 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:web",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:web:did.actor:alice",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "web",
+                            "methodSpecificId": "did.actor:alice"
+                        },
+                        "didUrlString": "did:web:did.actor:alice",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 134,
+                    "identifier": "did:web:did.actor:alice",
+                    "pattern": "^(did:web:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2018/v1\"],\"assertionMethod\":[\"did:web:did.actor:alice#z6MkrmNwty5ajKtFqc1U48oL2MMLjWjartwc5sf2AihZwXDN\"],\"authentication\":[\"did:web:did.actor:alice#z6MkrmNwty5ajKtFqc1U48oL2MMLjWjartwc5sf2AihZwXDN\"],\"capabilityDelegation\":[\"did:web:did.actor:alice#z6MkrmNwty5ajKtFqc1U48oL2MMLjWjartwc5sf2AihZwXDN\"],\"capabilityInvocation\":[\"did:web:did.actor:alice#z6MkrmNwty5ajKtFqc1U48oL2MMLjWjartwc5sf2AihZwXDN\"],\"id\":\"did:web:did.actor:alice\",\"keyAgreement\":[{\"controller\":\"did:web:did.actor:alice\",\"id\":\"did:web:did.actor:alice#zC8GybikEfyNaausDA4mkT4egP7SNLx2T1d1kujLQbcP6h\",\"publicKeyBase58\":\"CaSHXEvLKS6SfN9aBfkVGBpp15jSnaHazqHgLHp8KZ3Y\",\"type\":\"X25519KeyAgreementKey2019\"}],\"publicKey\":[{\"controller\":\"did:web:did.actor:alice\",\"id\":\"did:web:did.actor:alice#z6MkrmNwty5ajKtFqc1U48oL2MMLjWjartwc5sf2AihZwXDN\",\"publicKeyBase58\":\"DK7uJiq9PnPnj7AmNZqVBFoLuwTjT1hFPrk6LSjZ2JRz\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:web:did.actor:bob",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "web",
+                            "methodSpecificId": "did.actor:bob"
+                        },
+                        "didUrlString": "did:web:did.actor:bob",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 229,
+                    "identifier": "did:web:did.actor:bob",
+                    "pattern": "^(did:web:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:web:did.actor:bob\"}],\"id\":\"did:web:did.actor:bob\",\"publicKey\":[{\"controller\":\"\",\"id\":\"#z6MkkQBvgvqb6zGvS4cydworpUaRDzpszSFixq49ahbDeUTG\",\"publicKeyBase58\":\"6wvt6gb9mSnTKZnGxNr1yP2RQRZ2aZ1NGp9DkRdCjFft\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:web:did.actor:carol",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "web",
+                            "methodSpecificId": "did.actor:carol"
+                        },
+                        "didUrlString": "did:web:did.actor:carol",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 137,
+                    "identifier": "did:web:did.actor:carol",
+                    "pattern": "^(did:web:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:web:did.actor:carol\"}],\"assertionMethod\":[\"#z6MkpzW2izkFjNwMBwwvKqmELaQcH8t54QL5xmBdJg9Xh1y4\"],\"id\":\"did:web:did.actor:carol\",\"keyAgreementKey\":[{\"id\":\"#zC1NNfktSJCW3tkwTbog7xhuwSR395PouREtA9Lp3evEqy\",\"publicKeyBase58\":\"sexPhd6pkmTetV9QBYzYkG9AmL7q7HvLzs7VjFFozjm\",\"type\":\"X25519KeyAgreementKey2019\"}],\"publicKey\":[{\"controller\":\"\",\"id\":\"#z6MkpzW2izkFjNwMBwwvKqmELaQcH8t54QL5xmBdJg9Xh1y4\",\"publicKeyBase58\":\"BYEz8kVpPqSt5T7DeGoPVUrcTZcDeX5jGkGhUQBWmoBg\",\"type\":\"Ed25519VerificationKey2018\"}],\"service\":[{\"id\":\"#github\",\"serviceEndpoint\":\"https://raw.githubusercontent.com\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:web:did.actor:mike",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "web",
+                            "methodSpecificId": "did.actor:mike"
+                        },
+                        "didUrlString": "did:web:did.actor:mike",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 385,
+                    "identifier": "did:web:did.actor:mike",
+                    "pattern": "^(did:web:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:web:did.actor:mike\",\"additionalType\":\"https://schema.org/additionalType\",\"publicAccess\":\"https://schema.org/publicAccess\",\"rating\":\"https://schema.org/Rating\"}],\"additionalType\":null,\"assertionMethod\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"authentication\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"id\":\"did:web:did.actor:mike\",\"publicAccess\":true,\"rating\":4.5,\"verificationMethod\":[{\"controller\":\"did:web:did.actor:mike\",\"id\":\"#g1\",\"publicKeyJwk\":{\"crv\":\"BLS12381_G1\",\"kty\":\"EC\",\"x\":\"hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG\"},\"type\":\"JsonWebKey2020\"},{\"controller\":\"did:web:did.actor:mike\",\"id\":\"#g2\",\"publicKeyJwk\":{\"crv\":\"BLS12381_G2\",\"kty\":\"EC\",\"x\":\"l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-\"},\"type\":\"JsonWebKey2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

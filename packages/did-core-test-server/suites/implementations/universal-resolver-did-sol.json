@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:sol",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "sol",
+                            "methodSpecificId": "ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa"
+                        },
+                        "didUrlString": "did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-sol:8080/1.0/identifiers/",
+                    "duration": 809,
+                    "identifier": "did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa",
+                    "pattern": "^(did:sol:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://w3id.org/did/v1.0\",\"https://w3id.org/sol/v1\"],\"assertionMethod\":[],\"authentication\":[],\"capabilityDelegation\":[],\"capabilityInvocation\":[\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa#default\"],\"id\":\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa\",\"keyAgreement\":[],\"publicKey\":[{\"controller\":\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa\",\"id\":\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa#default\",\"publicKeyBase58\":\"aAnWKawD4wwWgzhCDUsW7xmxm7KeQo3dFBaedKDBFE1\",\"type\":\"Ed25519VerificationKey2018\"}],\"service\":[],\"verificationMethod\":[{\"controller\":\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa\",\"id\":\"did:sol:ygGfLvAyuRymPNv2fJDK1ZMpdy59m8cV5dak6A8uHKa#default\",\"publicKeyBase58\":\"aAnWKawD4wwWgzhCDUsW7xmxm7KeQo3dFBaedKDBFE1\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

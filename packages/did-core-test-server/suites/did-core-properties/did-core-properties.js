@@ -31,17 +31,17 @@ const generateDidCorePropertiesTests = (
       }
   });
 
-  it('5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If ' +
-    'present, the value MUST be an ordered set where each item in the set ' +
-    'is a URI conforming to [RFC3986].', async () => {
-      const {alsoKnownAs} = didDocument;
-      if(alsoKnownAs) {
-        expect(alsoKnownAs).toBeArray();
-        alsoKnownAs.forEach(alsoKnownAsValue => {
-          expect(alsoKnownAsValue).toBeValidUri();
-        });
-      }
-  });
+  const {alsoKnownAs} = didDocument;
+  if(alsoKnownAs) {
+    it('5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If ' +
+        'present, the value MUST be an ordered set where each item in the set ' +
+        'is a URI conforming to [RFC3986].', async () => {
+      expect(alsoKnownAs).toBeArray();
+      alsoKnownAs.forEach(alsoKnownAsValue => {
+        expect(alsoKnownAsValue).toBeValidUri();
+      });
+    });
+  }
 
   it('5.2 Verification Methods - The verificationMethod property is ' +
     'OPTIONAL. If present, the value MUST be an ordered set of verification ' +
@@ -73,7 +73,8 @@ const generateDidCorePropertiesTests = (
     'Section § 3.2 DID URL Syntax.', async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        expect(vm.id).toBeValidDidUrl();
+        let absoluteURL = getAbsoluteDIDURL(didDocument.id,vm.id);
+        expect(absoluteURL).toBeValidDidUrl();
       });
   });
 
@@ -95,14 +96,14 @@ const generateDidCorePropertiesTests = (
       });
   });
 
-  it('5.2 Verification Methods - The publicKeyBase58 property is ' +
+  it('5.2 Verification Methods - The publicKeyMultibase property is ' +
     'OPTIONAL. This feature is non-normative. If present, the value MUST be a' +
-    'string representation of a [BASE58] encoded public key.', async () => {
+    'string representation of a [MULTIBASE] encoded public key.', async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
-        const {publicKeyBase58} = vm;
-        if(publicKeyBase58) {
-          expect(publicKeyBase58).toBeBase58String();
+        const {publicKeyMultibase} = vm;
+        if(publicKeyMultibase) {
+          expect(publicKeyMultibase).toBeMultibaseString();
         }
       });
   });
@@ -141,16 +142,25 @@ const generateDidCorePropertiesTests = (
   it('5.2.1 Verification Material - A verification method MUST NOT ' +
     'contain multiple verification material properties for the same ' +
     'material. For example, expressing key material in a verification method ' +
-    'using both publicKeyJwk and publicKeyBase58 at the same time is ' +
+    'using both publicKeyJwk and publicKeyMultibase at the same time is ' +
     'prohibited.',
     async () => {
       const verificationMethods = getAllVerificationMethods(didDocument);
       verificationMethods.forEach(vm => {
         const {publicKeyBase58} = vm;
+        const {publicKeyMultibase} = vm;
         const {publicKeyJwk} = vm;
-        if(publicKeyBase58 !== undefined && publicKeyJwk !== undefined) {
-          throw new Error('Both publicKeyJwk and publicKeyBase58 are ' +
-            'defined at the same time.');
+        let count = 0;
+        count =
+          (publicKeyBase58 === undefined) ? count : count + 1;
+        count =
+          (publicKeyMultibase === undefined) ? count : count + 1;
+        count =
+          (publicKeyJwk === undefined) ? count : count + 1;
+
+        if(count > 1) {
+          throw new Error('Multiple key material values are ' +
+            'defined for the same verification method.');
         }
       });
   });
@@ -374,9 +384,10 @@ const didCorePropertiesTests = (suiteConfig) => {
           const {didDocumentDataModel} = suiteConfig[did];
           didDocumentDataModel.representationSpecificEntries =
             resolutionResult.didDocumentDataModel.representationSpecificEntries;
-
-          generateDidCorePropertiesTests(
-            {did, didDocumentDataModel, resolutionResult});
+          describe(mediaType, () => {
+            generateDidCorePropertiesTests(
+              {did, didDocumentDataModel, resolutionResult});
+          });
         }
       }
     });

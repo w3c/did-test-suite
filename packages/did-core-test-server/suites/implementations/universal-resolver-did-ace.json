@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ace",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ace",
+                            "methodSpecificId": "0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3"
+                        },
+                        "didUrlString": "did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://ace-did-driver:8080/1.0/identifiers/",
+                    "duration": 700,
+                    "identifier": "did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3",
+                    "pattern": "^(did:ace:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"created\":\"2020-07-14T08:25:15Z\",\"id\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3\",\"proof\":{\"created\":\"2020-07-14T08:25:16Z\",\"creator\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3#selfIssued-1\",\"signatureValue\":\"MEQCIDiWhWaHte+/G/9emToSx6JwYG7OWEGCm5u1P1QXUfs2AiAQzp+gO1nLaEMKHQ22bxxT9T9pnm0bIfYHbqeAHsKXxA==\",\"type\":\"LinkedDataSignature2015\"},\"publicKey\":[{\"controller\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3\",\"id\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3#selfIssued-1\",\"publicKeyJwk\":\"{\\\"kty\\\":\\\"EC\\\",\\\"crv\\\":\\\"secp256k1\\\",\\\"x\\\":\\\"qdVu4dIjLSS2A_dEp7DYovzoTgFSw309yLTrZanR0Mo\\\",\\\"y\\\":\\\"jAhMNEKzvITyyXIr12emFCz5SiCvSwT9qxTRKViKYFk\\\"}\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEqdVu4dIjLSS2A/dEp7DYovzoTgFSw309yLTrZanR0MqM\\nCEw0QrO8hPLJcivXZ6YULPlKIK9LBP2rFNEpWIpgWQ==\\n-----END PUBLIC KEY-----\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3\",\"id\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3#selfIssued-2\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmefTYRNzfzrmy7rnyf8WrGg0AnS9McZc\\n79xN9W901R4G9U7Ci36N216dhkQS2FiTzYjlcHwDnv8X7lkN1LokfFRR0Q96m11nrvbkmd4lrTsa\\nngGHZm+9lLSrjlAbXO+h6lA7aPK0/Vu0HZtdEmXF8RzsxjHhwY6U8hgGGotTjEPL96Zntc5fCB52\\nCJMGof+sg5xnu8PxW2/z4Pqkw0n6JWhqg8xVy+vq0FYqtbLOKPHpfSKECG7PnNYqImlnHRQd5r+j\\nEtMPFkrT78Unm9lPWIhuVyt1S17hmkJColBNsO+f0G1NE1FE+RALcrZ99Mjc9sb9BYK7L1qk9RW7\\n2nLmIBrpu327ZPYQA765bYKLIUq3ItmqR14KlKGHPmlIe6tEE8XrRxT2HYShB19xgLL9tgSkr+wd\\nNXmzCSM1GFTMkRh3mOa3BZvqnVgSaJjjeMilPzTDNcbHRqEsj9qbx35Svi02qINBLuXGLQTCitto\\nCqfOcxvn37e6QMcLXXkfraOGLhk4RGrjUvvlLN1YmOJdbqeczuIhIdn2ylER4y2ZKYZidjcnUvug\\ndF3reduTQscwUV9ZObs13awtjVaAZxnb1DOXu5iKDutqoH+T44JVYAZTYubyyHk2zekO+aTRYMSw\\nYKpbqMPbfI9TJ4Nt0RB4QLW/ibBMdH/+FIA10y3TBsUCAwEAAQ==\\n-----END PUBLIC KEY-----\",\"type\":\"RsaVerificationKey2018\"},{\"controller\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3\",\"id\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3#iot-1\",\"publicKeyJwk\":\"{\\\"kty\\\":\\\"EC\\\",\\\"crv\\\":\\\"secp256k1\\\",\\\"x\\\":\\\"z2u9bUwDLvDwu6kn5IJ6ualJ75Et7BaAyVhBEhulVPc\\\",\\\"y\\\":\\\"ANg2Wl2VE5PthKYqV7xKTMOVlUmOnRV4GISLYfbuW0o\\\"}\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEz2u9bUwDLvDwu6kn5IJ6ualJ75Et7BaAyVhBEhulVPcA\\n2DZaXZUTk+2EpipXvEpMw5WVSY6dFXgYhIth9u5bSg==\\n-----END PUBLIC KEY-----\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3\",\"id\":\"did:ace:0xf81c16a78b257c10fddf87ed4324d433317169a005ddf36a3a1ba937ba9788e3#selfIssued-3\",\"publicKeyJwk\":\"{\\\"kty\\\":\\\"EC\\\",\\\"crv\\\":\\\"P-256\\\",\\\"x\\\":\\\"bAjFl3tl5IbSwPTw8viMoO9RTMpLTcezAfcZU7C4zmI\\\",\\\"y\\\":\\\"3AFDqy8mBJcHZgoHjcidhX-l7zdgbYEZQa5zpxwfJ7k\\\"}\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbAjFl3tl5IbSwPTw8viMoO9RTMpLTcezAfcZU7C4\\nzmLcAUOrLyYElwdmCgeNyJ2Ff6XvN2BtgRlBrnOnHB8nuQ==\\n-----END PUBLIC KEY-----\",\"type\":\"EcdsaSecp256r1VerificationKey2019\"}],\"updated\":\"2020-07-14T08:25:15Z\"}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:evan",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "evan",
+                            "methodSpecificId": "testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734"
+                        },
+                        "didUrlString": "did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://evan-did-driver:8080/1.0/identifiers/",
+                    "duration": 911,
+                    "identifier": "did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734",
+                    "pattern": "^(did:evan:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[\"did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734#key-1\"],\"id\":\"did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734\",\"publicKey\":[{\"id\":\"did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734#key-1\",\"publicKeyHex\":\"045adfd502c0bc55f4fcb90eea36368d7e19c5b3045aa6f51dfa3699046e9751251d21bc6bdd06c1ff0014fcbbf9f1d83c714434f2b33d713aaf46760f2d53f10d\",\"type\":[\"Secp256k1SignatureVerificationKey2018\",\"ERC725ManagementKey\"]}],\"service\":[{\"id\":\"did:evan:testcore:0x126E901F6F408f5E260d95c62E7c73D9B60fd734#randomService\",\"serviceEndpoint\":\"https://openid.example.com/770853367\",\"type\":\"randomService-770853367\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

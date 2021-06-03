@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:mpg",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "mpg",
+                            "methodSpecificId": "7PGGnRdvKKFftSXU3Jw75Vk5npfg"
+                        },
+                        "didUrlString": "did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-mpg:8080/1.0/identifiers/",
+                    "duration": 55,
+                    "identifier": "did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg",
+                    "pattern": "^(did:mpg:(?:(?:\\w[-\\w]*(?::\\w[-\\w]*)*):)?(?:[1-9A-HJ-NP-Za-km-z]{21,29}))$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"authentication\":[{\"controller\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"publicKeyBase64\":\"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFSHdjZzRUQ21ucktKeHUrOXVmemlqZmp4TW5OZwplcytSRlNzTDVQTWJlM0VFcDcwMzRsYzg0TU92akhaelEyM000SENYWUs2QUlIdVNEODlXdEU4SkZRPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==\",\"type\":\"Ed25519VerificationKey2018\"}],\"controller\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"created\":\"2020-05-20T05:36:51.709Z\",\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"publicKey\":[{\"controller\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg#keys-1\",\"publicKeyBase64\":\"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFSHdjZzRUQ21ucktKeHUrOXVmemlqZmp4TW5OZwplcytSRlNzTDVQTWJlM0VFcDcwMzRsYzg0TU92akhaelEyM000SENYWUs2QUlIdVNEODlXdEU4SkZRPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==\",\"type\":\"Ed25519VerificationKey2018\"},{\"controller\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg\",\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg#key-2\",\"publicKeyBase64\":\"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFdFk4NkcrK0pFcFZEUnE1S25rY0pVdmJBbytoQQplbXB6MzREL2tPeXlUTUNWS3FEc0RXeEZlRU1WQm1CY1hENDJyWStmK2lRU1g5UXdFU0RHU3FkSEZ3PT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==\",\"type\":\"Ed25519VerificationKey2018\"}],\"service\":[{\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg#service-1\",\"serviceEndpoint\":\"http://server-url/getcredentials\",\"type\":\"VerifiableCredentials\"},{\"id\":\"did:mpg:7PGGnRdvKKFftSXU3Jw75Vk5npfg#service-2\",\"serviceEndpoint\":\"http://server-url/didauth\",\"type\":\"DidAuthService\"}],\"updated\":\"\"}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 {
   "didMethod": "did:example",
-  "implementation": "DID Test Suite",
+  "implementation": "Example",
   "implementer": "DID Working Group",
   "supportedContentTypes": [
     "application/did+json",

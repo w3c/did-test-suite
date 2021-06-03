@@ -1,0 +1,79 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:bba",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "bba",
+                            "methodSpecificId": "47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044"
+                        },
+                        "didUrlString": "did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://bba-did-driver:8080/1.0/identifiers/",
+                    "duration": 2139,
+                    "identifier": "did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044",
+                    "pattern": "^(did:bba:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/v1\"],\"id\":\"did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044\",\"publicKey\":[{\"id\":\"did:bba:47ef0798566073ea302b8178943aaa83f227614d6f36a4d2bcd92993bbed6044#z6MkeV3RcLrU6t3XXA1ivvxBGHu8Wzr7g4LmbgrmBJWLeECW\",\"publicKeyBase58\":\"12nP26c2mLZ4QfB2FMzLRCM8hRaGGB6QufwqM2YKj1R8\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "bba",
+                            "methodSpecificId": "t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf"
+                        },
+                        "didUrlString": "did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://bba-did-driver:8080/1.0/identifiers/",
+                    "duration": 1726,
+                    "identifier": "did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf",
+                    "pattern": "^(did:bba:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/v1\"],\"authentication\":[{\"id\":\"did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf#zAHd7ePaivnaJLK6feRrmrt1JJZb1t6EdeXrhH63hkn4zpAf3\",\"publicKeyPem\":\"-----BEGIN PUBLIC KEY-----\\r\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5rdiNoPlx9PkJ3mCrRB5\\r\\nWckY5AArfMo5OI4TGP+nN74/tVY2xffyb9CZiJqpfNaYAXcXWJuX/brzYeMaa+sA\\r\\nbFkOMpY4LwHqYZmOrUWvpW/KcTOfvydOwzRjLjVHmWjHeCy5TdupU649r/YRYjKE\\r\\niPFh9RanXEbKeTDozyoEcrqdmW3onqFJ+U+b7kUd9ys0y5lf9F/mZmFrP+SZp0D6\\r\\nKgZC/jUR/ACaSv0jdb710BGROobvanTwXr7dLPVKZxbHAnlnftQ5+4Cjy5zxZO8o\\r\\n/KjKLSjPuO4l55Pth2oLPH7XT+PFUu/ejva1TcgpJooE96ODHLxmO94dgVxFdvtS\\r\\neQIDAQAB\\r\\n-----END PUBLIC KEY-----\\r\\n\",\"type\":\"RsaVerificationKey2018\"}],\"id\":\"did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf\",\"service\":[{\"id\":\"did:bba:t:45e6df15dc0a7d91dcccd24fda3b52c3983a214fb0eed0938321c11ec99403cf#openid\",\"serviceEndpoint\":\"https://openid.example.com/\",\"type\":\"OpenIdConnectVersion1.0Service\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:kilt",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "kilt",
+                            "methodSpecificId": "5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx"
+                        },
+                        "didUrlString": "did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://kilt-did-driver:8080/1.0/identifiers/",
+                    "duration": 638,
+                    "identifier": "did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx",
+                    "pattern": "^(did:kilt:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[{\"publicKey\":[\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1\"],\"type\":\"Ed25519SignatureAuthentication2018\"}],\"id\":\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx\",\"publicKey\":[{\"controller\":\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx\",\"id\":\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-1\",\"publicKeyHex\":\"0x2203a7731f1e4362cb21ff3ef7ce79204e1891fc62c4657040753283a00300d8\",\"type\":\"Ed25519VerificationKey2018\"},{\"controller\":\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx\",\"id\":\"did:kilt:5CqJa4Ct7oMeMESzehTiN9fwYdGLd7tqeirRMpGDh2XxYYyx#key-2\",\"publicKeyHex\":\"0xd0a90ed3b87db1ab599bd3cc0c8e0dc7ffcf2347299a6d494567a14f06861952\",\"type\":\"X25519Salsa20Poly1305Key2018\"}],\"service\":[{\"serviceEndpoint\":\"https://services.kilt.io:443/messaging\",\"type\":\"KiltMessagingService\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:v1",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1,
+            2
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "v1",
+                            "methodSpecificId": "nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR"
+                        },
+                        "didUrlString": "did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
+                    "duration": 874,
+                    "identifier": "did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR",
+                    "pattern": "^(did:v1:nym:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://w3id.org/did/v0.11\",\"https://w3id.org/veres-one/v1\"],\"assertionMethod\":[{\"controller\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"id\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR#z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"publicKeyBase58\":\"8NNydiyd3KjF46ERwY7rycTBvGKRh4J1BbnYvTYCK283\",\"type\":\"Ed25519VerificationKey2018\"}],\"authentication\":[{\"controller\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"id\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR#z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"publicKeyBase58\":\"8NNydiyd3KjF46ERwY7rycTBvGKRh4J1BbnYvTYCK283\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityDelegation\":[{\"controller\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"id\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR#z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"publicKeyBase58\":\"8NNydiyd3KjF46ERwY7rycTBvGKRh4J1BbnYvTYCK283\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityInvocation\":[{\"controller\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"id\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR#z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\",\"publicKeyBase58\":\"8NNydiyd3KjF46ERwY7rycTBvGKRh4J1BbnYvTYCK283\",\"type\":\"Ed25519VerificationKey2018\"}],\"id\":\"did:v1:nym:z6Mkmpe2DyE4NsDiAb58d75hpi1BjqbH6wYMschUkjWDEEuR\"}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "v1",
+                            "methodSpecificId": "test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t"
+                        },
+                        "didUrlString": "did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
+                    "duration": 249,
+                    "identifier": "did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t",
+                    "pattern": "^(did:v1:test:nym:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://w3id.org/did/v0.11\",\"https://w3id.org/veres-one/v1\"],\"assertionMethod\":[{\"controller\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\",\"id\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t#z6Mksn2L6yxeZBrALghomUsxwik7yZpxPLiJvBCgP8mK3ALm\",\"publicKeyBase58\":\"EKmHWjiDDeMhEBs75uv86dC89zZ6yTTxEAHkYroJ7wZP\",\"type\":\"Ed25519VerificationKey2018\"}],\"authentication\":[{\"controller\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\",\"id\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t#z6Mkq76ZBzJJjUQCXB2g8RuKSpLji6ssD3v2jj83wifuR56y\",\"publicKeyBase58\":\"BeqWbk3sPvujQgBySrwUbinjtXc1oAfg3iD87ShtVrKb\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityDelegation\":[{\"controller\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\",\"id\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t#z6Mkg8GSGyco8vQaiUCHymt7UVACDcq8Mbs2sS97W42b2YAg\",\"publicKeyBase58\":\"2g1PgjNMoNv7byMbJCvGdPcCQ3ZGwicgBREBfn4a7KPJ\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityInvocation\":[{\"controller\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\",\"id\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t#z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\",\"publicKeyBase58\":\"2noriM5vTwEJvQUsW66Tjuh7cij3kSymecvCR7RoN1NW\",\"type\":\"Ed25519VerificationKey2018\"}],\"id\":\"did:v1:test:nym:z6MkgF4uJbLMoUin2uKaBf4Jb1F7SHzuALE8Ldq8FPPpHE9t\"}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "v1",
+                            "methodSpecificId": "test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud"
+                        },
+                        "didUrlString": "did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-did-v1-driver:8080/1.0/identifiers/",
+                    "duration": 275,
+                    "identifier": "did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud",
+                    "pattern": "^(did:v1:test:nym:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://w3id.org/did/v0.11\",\"https://w3id.org/veres-one/v1\"],\"assertionMethod\":[{\"controller\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\",\"id\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud#z6MkugY88ui8rYGr7Ux8f6SHPbZjTj34nfMS7jJFDmBAYzvQ\",\"publicKeyBase58\":\"GEH5YfThWznNzz7RyXUSYW1je9mDNn75RiPKPVD9dn92\",\"type\":\"Ed25519VerificationKey2018\"}],\"authentication\":[{\"controller\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\",\"id\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud#z6Mkv74HkqD8epYRZPKGSsVJA6mFGL1w65LmbwcBaJ3qvxmY\",\"publicKeyBase58\":\"GeoFAaxhKH3xStUZmJXTK1DFSkk5gC6QuvhFk25q1jzA\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityDelegation\":[{\"controller\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\",\"id\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud#z6Mkon5H77wMbj8usmdavHbk6k3aRo5bn2whfKF9etTQbwUh\",\"publicKeyBase58\":\"AKpEWsgvGBeSmGntEiduFeVacDokN9hLyJLDpcVPgihK\",\"type\":\"Ed25519VerificationKey2018\"}],\"capabilityInvocation\":[{\"controller\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\",\"id\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud#z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\",\"publicKeyBase58\":\"845fadppZ8TD8p6eXhUARchnBkYd7zNkum6zCRNxci8F\",\"type\":\"Ed25519VerificationKey2018\"}],\"id\":\"did:v1:test:nym:z6MkmWLiAt5FtfwgFJwMDGS1GiFn1KpUXsd7bn1v2hLyXvud\"}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

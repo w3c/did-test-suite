@@ -1,0 +1,50 @@
+{
+  "didMethod": "did:schema",
+  "implementation": "@51nodes/decentralized-schema-registry",
+  "implementer": "51nodes GmbH",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5"
+  ],
+  "didParameters": {},
+  "did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5",
+        "service": [
+          {
+            "id": "did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5#get",
+            "type": "GetSchemaService",
+            "serviceEndpoint": "https://ipfs.infura.io/ipfs/QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5"
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\":\"did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5\",\"service\":[{\"id\":\"did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5#get\",\"type\":\"GetSchemaService\",\"serviceEndpoint\":\"https://ipfs.infura.io/ipfs/QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5\"}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5\",\"service\":[{\"id\":\"did:schema:public-ipfs:xsd:QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5#get\",\"type\":\"GetSchemaService\",\"serviceEndpoint\":\"https://ipfs.infura.io/ipfs/QmUQAxKQ5sbWWrcBZzwkThktfUGZvuPQyTrqMzb3mZnLE5\"}]}",
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      },
+      "didDocumentMetadata": {}
+    }
+  }
+}

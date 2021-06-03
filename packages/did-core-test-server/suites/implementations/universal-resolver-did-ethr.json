@@ -1,0 +1,504 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ethr",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 513,
+                    "identifier": "did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:1\",\"controller\":\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1891,
+                    "identifier": "did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:1\",\"controller\":\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x1:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 2075,
+                    "identifier": "did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:1\",\"controller\":\"did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 2237,
+                    "identifier": "did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:30\",\"controller\":\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x1e:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1691,
+                    "identifier": "did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:30\",\"controller\":\"did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:0x1e:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x26bf14321004e770e7a8b080b7a526d8eed8b388"
+                        },
+                        "didUrlString": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 753,
+                    "identifier": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\"],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1\",\"publicKeyHex\":\"04808f0530d0f39b3f71e9258c555666f63d839bb8aa06beb77dbb2b5d81ed7e59ed4507188a89f231bb36fe85918c9b8b3bd1bcd105163604e6e288f1ccdd72d3\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "updated": "2021-03-22T18:14:29Z",
+                    "versionId": "12090175"
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 639,
+                    "identifier": "did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:1\",\"controller\":\"did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1870,
+                    "identifier": "did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:4\",\"controller\":\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:0x4:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "updated": "2018-08-10T08:26:23Z",
+                    "versionId": "2787965"
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 570,
+                    "identifier": "did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:4\",\"controller\":\"did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:0x4:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 336,
+                    "identifier": "did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:1\",\"controller\":\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:mainnet:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1745,
+                    "identifier": "did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:1\",\"controller\":\"did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:mainnet:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 2350,
+                    "identifier": "did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:4\",\"controller\":\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:rinkeby:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "updated": "2018-08-10T08:26:23Z",
+                    "versionId": "2787965"
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 808,
+                    "identifier": "did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:4\",\"controller\":\"did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:rinkeby:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479"
+                        },
+                        "didUrlString": "did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1511,
+                    "identifier": "did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"authentication\":[\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\"],\"id\":\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"verificationMethod\":[{\"blockchainAccountId\":\"0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74@eip155:30\",\"controller\":\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"},{\"controller\":\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"id\":\"did:ethr:rsk:0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479#controllerKey\",\"publicKeyHex\":\"0x03fdd57adec3d438ea237fe46b33ee1e016eda6b585c3e27ea66686c2ea5358479\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ethr",
+                            "methodSpecificId": "rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736"
+                        },
+                        "didUrlString": "did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 2006,
+                    "identifier": "did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736",
+                    "pattern": "^(did:ethr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"assertionMethod\":[\"did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"authentication\":[\"did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\"],\"id\":\"did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"verificationMethod\":[{\"blockchainAccountId\":\"0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736@eip155:30\",\"controller\":\"did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736\",\"id\":\"did:ethr:rsk:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

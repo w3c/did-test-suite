@@ -1,0 +1,79 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:schema",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "schema",
+                            "methodSpecificId": "evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J"
+                        },
+                        "didUrlString": "did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://schema-registry-did-resolver:8080/1.0/identifiers/",
+                    "duration": 1326,
+                    "identifier": "did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                    "pattern": "^(did:schema:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J\",\"service\":[{\"id\":\"did:schema:evan-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J#get\",\"serviceEndpoint\":\"https://ipfs.evan.network/ipfs/Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J\",\"type\":\"GetSchemaService\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "schema",
+                            "methodSpecificId": "public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J"
+                        },
+                        "didUrlString": "did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://schema-registry-did-resolver:8080/1.0/identifiers/",
+                    "duration": 169,
+                    "identifier": "did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J",
+                    "pattern": "^(did:schema:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J\",\"service\":[{\"id\":\"did:schema:public-ipfs:json-schema:Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J#get\",\"serviceEndpoint\":\"https://ipfs.infura.io/ipfs/Qma2beXKwZeiUXcaRaQKwbBV1TqyiJnsMTYExUTdQue43J\",\"type\":\"GetSchemaService\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

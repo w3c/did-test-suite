@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:gatc",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "gatc",
+                            "methodSpecificId": "2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7"
+                        },
+                        "didUrlString": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://gataca-did-resolver-driver:8080/1.0/identifiers/",
+                    "duration": 1225,
+                    "identifier": "did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7",
+                    "pattern": "^(did:gatc:.+)$"
+                },
+                "didDocumentStream": "{\"authentication\":[\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\"],\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"publicKey\":[{\"controller\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7\",\"id\":\"did:gatc:2xtSori9UQZdTqzxrkp7zqKM4Kj5B4C7#keys-1\",\"publicKeyBase58\":\"B3FBGKFoQtR9zMkTWggev3wHCWueB292Hjui33a67Ysy\",\"type\":\"Ed25519VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

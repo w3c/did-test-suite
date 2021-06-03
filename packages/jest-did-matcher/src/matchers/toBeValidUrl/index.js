@@ -10,9 +10,7 @@ const passMessage = received => () =>
 const failMessage = received => () => 
     matcherHint('.toBeValidUrl', 'received', '') +
     '\n\n' +
-    'Expected value to be of a valid URL:\n' +
-    `  ${printExpected('a valid URL')}` +
-    'Received:\n' +
+    'Expected value to be of a valid URL, but received:\n' +
     `  ${printReceived(received)}`;
 
 export default {

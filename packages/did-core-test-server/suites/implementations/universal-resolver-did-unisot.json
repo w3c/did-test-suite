@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:unisot",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "unisot",
+                            "methodSpecificId": "test:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4"
+                        },
+                        "didUrlString": "did:unisot:test:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://unisot-did-driver:8080/1.0/identifiers/",
+                    "duration": 1608,
+                    "identifier": "did:unisot:test:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4",
+                    "pattern": "^(did:unisot:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[\"did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4#key1\"],\"id\":\"did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4\",\"publicKey\":[{\"controller\":\"did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4\",\"id\":\"did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4#key1\",\"publicKeyBase58\":\"KmtFiGC5VCbvM3Hk3ibeZxBN5ZDu8cDRR3QRakRaMqxMUUxK7FKx7TSxYLBJ5WNEntFzNTPdNHVssMfDUE3NJo2971\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}],\"service\":[{\"id\":\"did:unisot:n1aAmTXAg4o44Z9k8YCQncEY91r3TV7WU4#service\",\"serviceEndpoint\":\"https://service.example.com/vc\",\"type\":\"VerifiableCredentialService\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

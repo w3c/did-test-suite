@@ -1,0 +1,97 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ccp",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ccp",
+                            "methodSpecificId": "3CzQLF3qfFVQ1CjGVzVRZaFXrjAd"
+                        },
+                        "didUrlString": "did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-ccp:8080/1.0/identifiers/",
+                    "duration": 1487,
+                    "identifier": "did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd",
+                    "pattern": "^(did:ccp:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/2019/did/v1\",\"authentication\":[{\"publicKey\":[\"did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd#key-1\"],\"type\":\"Secp256k1\"}],\"id\":\"did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd\",\"publicKey\":[{\"id\":\"did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd#key-1\",\"publicKeyHex\":\"0440b3fa8e848297ff26b04088263101fa87d3541ac48bbc32fe7b77b73246578241236ab6097d4012ac17a514272a54a7b728790e914bbbff431e49d421aa1eef\",\"type\":\"Secp256k1\"},{\"id\":\"did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd#key-2\",\"publicKeyHex\":\"04df4cf82984c9ecd4cf113e24762fb4404c1653df84ac424e4e2985ba7eb4de9249c2609414a24feea7845649299049b4babd6380ee69ef9e91c843931c877e7f\",\"type\":\"Secp256k1\"}],\"service\":[{\"serviceEndpoint\":\"https://did.baidu.com\",\"type\":\"DIDResolve\"}]}",
+                "didDocumentMetadata": {
+                    "created": "2019-10-23T09:14:17.961Z",
+                    "proof": {
+                        "creator": "did:ccp:3CzQLF3qfFVQ1CjGVzVRZaFXrjAd#key-1",
+                        "signatureValue": "3045022100ff51c2629c9eb5d75d9786506ad45e82a87bf91b991a4b37f6d81ce70984220302201f4aa4f609a7ff96de190db68a25603fc849f1098d3f506098dc79af826b4a67",
+                        "type": "Secp256k1"
+                    },
+                    "updated": "2019-10-23T09:14:17.961Z",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ccp",
+                            "methodSpecificId": "ceNobbK6Me9F5zwyE3MKY88QZLw"
+                        },
+                        "didUrlString": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-ccp:8080/1.0/identifiers/",
+                    "duration": 1510,
+                    "identifier": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw",
+                    "pattern": "^(did:ccp:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/2019/did/v1\",\"authentication\":[{\"publicKey\":[\"did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw#key-1\"],\"type\":\"Secp256k1\"}],\"id\":\"did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw\",\"publicKey\":[{\"id\":\"did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw#key-1\",\"publicKeyHex\":\"046fcbedd1107ca45be3e81fc445e5a366886a89e7087fe3d128e6236302f31594740f250433ebe9f0abcbd04dbf9c5979e270a0772ad1cc502cec2d5de9504c8c\",\"type\":\"Secp256k1\"},{\"id\":\"did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw#key-2\",\"publicKeyHex\":\"0496712d16b0836684aacd5ab6ba3d489c35efa31f414a1c6a455fc6b37ff28e5fa97ac29c1021b76e5b78e2bbceac1dfc4ec98e6b2b3e65a29f7f1cd4944dfb93\",\"type\":\"Secp256k1\"}],\"service\":[{\"serviceEndpoint\":\"https://did.baidu.com\",\"type\":\"DIDResolve\"}]}",
+                "didDocumentMetadata": {
+                    "created": "2019-10-21T11:12:13.065Z",
+                    "proof": {
+                        "creator": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw#key-1",
+                        "signatureValue": "30440220211ffc76ae2858d6baa29faa9b576d6b2e048e8f4f7767ee1c2fba7ae6c2a78102205f5b56cd1431830b45109d716631638d961e5b252c2c2354d8bb96782d8a62ef",
+                        "type": "Secp256k1"
+                    },
+                    "updated": "2019-10-21T11:17:49.379Z",
+                    "version": 2
+                }
+            }
+        }
+    ]
+}

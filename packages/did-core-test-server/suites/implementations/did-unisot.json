@@ -1,0 +1,106 @@
+{
+  "didMethod": "did:unisot",
+  "implementation": "@unisot/unisot-did-resolverer",
+  "implementer": "UNISOT AS",
+  "supportedContentTypes": [
+    "application/did+ld+json",
+    "application/did+json"
+  ],
+  "dids": [
+    "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+  ],
+  "didParameters": {
+    "versionTime": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7?versionTime=2021-05-17T09:21:38.612Z"
+  },
+  "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7",
+        "created": "2021-05-17T09:21:38.612Z",
+        "controller": [
+          "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+        ],
+        "verificationMethod": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ],
+        "authentication": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ],
+        "assertionMethod": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ],
+        "keyAgreement": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ],
+        "capabilityInvocation": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ],
+        "capabilityDelegation": [
+          {
+            "id": "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#Key1",
+            "type": "EcdsaSecp256k1Signature2019",
+            "controller": [
+              "did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7"
+            ]
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"@context\":[\"https:\/\/www.w3.org\/ns\/did\/v1\",\"https:\/\/w3id.org\/security\/v1\"],\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"],\"verificationMethod\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"authentication\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"assertionMethod\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"keyAgreement\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"capabilityInvocation\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"capabilityDelegation\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"service\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#vcs\",\"type\":\"VerifiableCredentialService\",\"serviceEndpoint\":\"https:\/\/service.example.com\/vc\"}],\"created\":\"2021-05-17T09:21:38.612Z\"}",
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      },
+      "didDocumentMetadata": {
+        "created": "2021-05-17T09:21:38.612Z"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{\"@context\":[\"https:\/\/www.w3.org\/ns\/did\/v1\",\"https:\/\/w3id.org\/security\/v1\"],\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"],\"verificationMethod\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"authentication\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"assertionMethod\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"keyAgreement\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"capabilityInvocation\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"capabilityDelegation\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":[\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7\"]}],\"service\":[{\"id\":\"did:unisot:test:mtF5XVLJvXEeffY8fo2eUfpXqs9CqQzpj7#vcs\",\"type\":\"VerifiableCredentialService\",\"serviceEndpoint\":\"https:\/\/service.example.com\/vc\"}],\"created\":\"2021-05-17T09:21:38.612Z\"}",
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      },
+      "didDocumentMetadata": {
+        "created": "2021-05-17T09:21:38.612Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:trust",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "trust",
+                            "methodSpecificId": "cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw"
+                        },
+                        "didUrlString": "did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-trust:8080/1.0/identifiers/",
+                    "duration": 1600,
+                    "identifier": "did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw",
+                    "pattern": "^(did:trust:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw\"}],\"authentication\":[{\"controller\":\"\",\"id\":\"#key3\",\"publicKeyJwk\":{\"crv\":\"secp256k1\",\"kty\":\"EC\",\"x\":\"SGVk9e1ojdQWrafhZtvkumI8YNGUt3z6-2ELN_yg41w\",\"y\":\"wuWvF7LouHrT8JtI9Ml5rXM2SYRqhpAWVvSQ2aIMzjk\"},\"type\":\"EcdsaSecp256k1VerificationKey2019\"}],\"id\":\"did:trust:cert.EiDi8NEZVyvqmHeWRB5kUagWo3sDSQlCtl1nZ1vVgLdozw\",\"service\":[{\"id\":\"#hub\",\"serviceEndpoint\":\"http://localhost:9000/\",\"type\":\"IdentityHub\"}]}",
+                "didDocumentMetadata": {
+                    "operationPublicKeys": [
+                        {
+                            "controller": "",
+                            "id": "#key4",
+                            "publicKeyJwk": {
+                                "crv": "secp256k1",
+                                "kty": "EC",
+                                "x": "h8OjMz4lsUnN0-_kY75-yocrjuQg76LE9MGSbFlyJQE",
+                                "y": "8qoOam1qFFlfZvuU9kEzmLeRnqlUW26Ati2Vk6vzUw4"
+                            },
+                            "type": "EcdsaSecp256k1VerificationKey2019"
+                        }
+                    ],
+                    "recoveryKey": {
+                        "crv": "secp256k1",
+                        "kty": "EC",
+                        "x": "dGwQi-Z9KjAvXpZrcE67S8i7eFgfUoby_kdGMJrQP_A",
+                        "y": "KcAfduz27Kyojj4-UOeK2Ys5-iDemISp9d4kgqt2txs"
+                    }
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "trust",
+                            "methodSpecificId": "license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg"
+                        },
+                        "didUrlString": "did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-trust:8080/1.0/identifiers/",
+                    "duration": 1339,
+                    "identifier": "did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg",
+                    "pattern": "^(did:trust:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg\"}],\"authentication\":[{\"controller\":\"\",\"id\":\"#key3\",\"publicKeyJwk\":{\"crv\":\"secp256k1\",\"kty\":\"EC\",\"x\":\"9sX6JKDug47PTAUnerYfj8VRkho8PXB7lgOGkXHs7bU\",\"y\":\"ROHaw0X1jyKVeAYOIBbRyY_pk7fFeJoQFr10CAnPJWk\"},\"type\":\"EcdsaSecp256k1VerificationKey2019\"}],\"id\":\"did:trust:license.EiBdAy5GeNr9qcVQ-40fOwMVQW2CRGT2M238cp6yLJLnGg\",\"service\":[{\"id\":\"#hub\",\"serviceEndpoint\":\"http://localhost:9000/\",\"type\":\"IdentityHub\"}]}",
+                "didDocumentMetadata": {
+                    "operationPublicKeys": [
+                        {
+                            "controller": "",
+                            "id": "#key4",
+                            "publicKeyJwk": {
+                                "crv": "secp256k1",
+                                "kty": "EC",
+                                "x": "p5vzLxXYWvPLP9VLTLw9CfkbLtqIzOCaY3POD9eqE0g",
+                                "y": "8m1FHPLYH5j1Uq0H0OtD4JAwAcwInntXrTfcAv3wKiI"
+                            },
+                            "type": "EcdsaSecp256k1VerificationKey2019"
+                        }
+                    ],
+                    "recoveryKey": {
+                        "crv": "secp256k1",
+                        "kty": "EC",
+                        "x": "nV7kUiXT1XQv23N2EE5X4irJGwkqE9DeEVCaudWRDgk",
+                        "y": "mMU7XeFkCzpTwr7N64XsHTbwq_NXEY9oELXylECmEWk"
+                    }
+                }
+            }
+        }
+    ]
+}

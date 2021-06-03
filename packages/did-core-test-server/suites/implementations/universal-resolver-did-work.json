@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:work",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:work:2UUHQCd4psvkPLZGnWY33L",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "work",
+                            "methodSpecificId": "2UUHQCd4psvkPLZGnWY33L"
+                        },
+                        "didUrlString": "did:work:2UUHQCd4psvkPLZGnWY33L",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://work-did-driver:8080/1.0/identifiers/",
+                    "duration": 1786,
+                    "identifier": "did:work:2UUHQCd4psvkPLZGnWY33L",
+                    "pattern": "^(did:work:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/2019/did/v1\",\"id\":\"did:work:2UUHQCd4psvkPLZGnWY33L\",\"publicKey\":[{\"controller\":\"did:work:4PUfQhXdyRY4LLNkKUs16S\",\"id\":\"did:work:2UUHQCd4psvkPLZGnWY33L#key-1\",\"publicKeyBase58\":\"oatUtA5A97kQ7mWYK8qHkVFvJKtnhRdBZPSwuC3dADw\",\"type\":\"Ed25519VerificationKey2018\"}],\"service\":[{\"serviceEndpoint\":\"did:work:8RcWPSBtB4QwfC68yneDxC;id=860285e2-183d-4fe3-9767-babc744396b8;version=1.0\",\"type\":\"schema\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

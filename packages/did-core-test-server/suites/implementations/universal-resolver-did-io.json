@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:io",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "io",
+                            "methodSpecificId": "0x476c81C27036D05cB5ebfe30ae58C23351a61C4A"
+                        },
+                        "didUrlString": "did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-io:8080/1.0/identifiers/",
+                    "duration": 625,
+                    "identifier": "did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A",
+                    "pattern": "^(did:io:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"authentication\":[{\"controller\":\"did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A\",\"id\":\"did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A#owner\",\"publicKeyHex\":\"0355237d4af6afc7f139e396329d56a4d1235c94abde9a25782241774c06cccfb6\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}],\"id\":\"did:io:0x476c81C27036D05cB5ebfe30ae58C23351a61C4A\",\"proof\":{}}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ebsi",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ebsi",
+                            "methodSpecificId": "DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE"
+                        },
+                        "didUrlString": "did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "https://api.preprod.ebsi.eu/did-registry/v2/identifiers/$1",
+                    "duration": 2209,
+                    "identifier": "did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE",
+                    "pattern": "^(did:ebsi:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"assertionMethod\":[\"did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE#keys-1\"],\"authentication\":[\"did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE\"],\"id\":\"did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE\",\"verificationMethod\":[{\"controller\":\"did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE\",\"id\":\"did:ebsi:DfPaUdYwuzcqFoiMDSrUX8aQyZnr2SesH3vDVASYv8PE#keys-1\",\"publicKeyHex\":\"043a11af6a12120efd605c39303ae542bdafc7e98e9b8f165cf102175168d70574ea972e142203fc5651194eb2888c2bafb69cd221c3d0ffd67d849c9116438f13\",\"type\":\"Secp256k1VerificationKey2018\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

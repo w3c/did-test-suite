@@ -1,0 +1,54 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:ion",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "ion",
+                            "methodSpecificId": "EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w"
+                        },
+                        "didUrlString": "did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-ion:8080/1.0/identifiers/",
+                    "duration": 913,
+                    "identifier": "did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w",
+                    "pattern": "^(did:ion:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w\"}],\"authentication\":[\"#someKeyId\"],\"id\":\"did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w\",\"service\":[{\"id\":\"#linkedin\",\"serviceEndpoint\":\"linkedin.com/in/henry-tsai-6b884014\",\"type\":\"linkedin\"},{\"id\":\"#github\",\"serviceEndpoint\":\"github.com/thehenrytsai\",\"type\":\"github\"}],\"verificationMethod\":[{\"controller\":\"\",\"id\":\"#someKeyId\",\"publicKeyJwk\":{\"crv\":\"secp256k1\",\"kty\":\"EC\",\"x\":\"WfY7Px6AgH6x-_dgAoRbg8weYRJA36ON-gQiFnETrqw\",\"y\":\"IzFx3BUGztK0cyDStiunXbrZYYTtKbOUzx16SUK0sAY\"},\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "canonicalId": "did:ion:EiClkZMDxPKqC9c-umQfTkR8vvZ9JPhl_xLDI9Nfk38w5w",
+                    "method": {
+                        "published": true,
+                        "recoveryCommitment": "EiDKYXZ2MkHRCYDVtXI7ONiTkTdVfs9Tnb-tDDHGXLzmOw",
+                        "updateCommitment": "EiDNk40DUvxCef8_BinU5DDIAhNWE4e7Ea9Q6P7GAbJ6VA"
+                    }
+                }
+            }
+        }
+    ]
+}

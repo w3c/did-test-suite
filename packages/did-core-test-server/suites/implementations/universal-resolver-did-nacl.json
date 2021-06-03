@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:nacl",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "nacl",
+                            "methodSpecificId": "Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI"
+                        },
+                        "didUrlString": "did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 1745,
+                    "identifier": "did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI",
+                    "pattern": "^(did:nacl:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[{\"publicKey\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI#key1\",\"type\":\"ED25519SigningAuthentication\"}],\"id\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI\",\"publicKey\":[{\"id\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI#key1\",\"owner\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI\",\"publicKeyBase64\":\"Md8JiMIwsapml/FtQ2ngnGftNP5UmVCAUuhnLyAsPxI=\",\"type\":\"ED25519SignatureVerification\"},{\"id\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI#key2\",\"owner\":\"did:nacl:Md8JiMIwsapml_FtQ2ngnGftNP5UmVCAUuhnLyAsPxI\",\"publicKeyBase64\":\"OAsnUyuUBISGsOherdxO6rgzUeGe9SnffDXQk6KpkAY=\",\"type\":\"Curve25519EncryptionPublicKey\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

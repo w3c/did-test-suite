@@ -10,7 +10,8 @@ describe('.toBeValidDid', () => {
     ["did:example:123456789abcdefghi"],
     ["did:example:123456789-abcdefghi"],
     ["did:example:123456789_abcdefghi"],
-    ["did:example:123456789%20abcdefghi"]
+    ["did:example:123456789%20abcdefghi"],
+    ["did:example:123abc:123456789abcdefghi"],
   ]).test('passes when the item is a valid DID: %s', given => {
     expect(given).toBeValidDid();
   });

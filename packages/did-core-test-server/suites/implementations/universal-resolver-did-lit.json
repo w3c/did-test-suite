@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:lit",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "lit",
+                            "methodSpecificId": "AEZ87t1bi5bRxmVh3ksMUi"
+                        },
+                        "didUrlString": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-lit:8080/1.0/identifiers/",
+                    "duration": 1529,
+                    "identifier": "did:lit:AEZ87t1bi5bRxmVh3ksMUi",
+                    "pattern": "^(did:lit:(?:[1-9A-HJ-NP-Za-km-z]{21,22}))$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"assertionMethod\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#1\"],\"authentication\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#0\"],\"capabilityDelegation\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#3\"],\"capabilityInvocation\":[],\"controller\":\"didtesttest1\",\"createdAt\":\"2021-03-17T07:05:14+00:00\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"keyAgreement\":[\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#2\"],\"service\":[],\"updatedAt\":\"2021-03-17T07:05:14+00:00\",\"verificationMethod\":[{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#0\",\"publicKeyBase58\":\"zbPJfARDmbshQ2iSZ3fg5WxAh9VEXAoiyi6QRBJBBj2z\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#1\",\"publicKeyBase58\":\"24YpP4L2ydSffMn92KF1EvzgwcStdzixut1CDizuCpaqD\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#2\",\"publicKeyBase58\":\"277hEJxdh596ptwNmyApNTa1TZLMjgpEeQgXbTbXGYns1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#3\",\"publicKeyBase58\":\"foWWHmUrwxXFu12aEoS4GK9MdqVNTKLbpGEF9ND7wEvH\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#4\",\"publicKeyBase58\":\"qVFze1eaPJavKvmGqEsF4LPRdUDzsvFukqQH5KVhseE1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#5\",\"publicKeyBase58\":\"29NGo9CDpMcVWhTp1XKNse63DVzgHUHiQpWv1bQMXj7Wx\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#6\",\"publicKeyBase58\":\"nnvBVyLX77f39KwNrsUhkdvjWCVXt4o71U6DBbZSbDZA\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#7\",\"publicKeyBase58\":\"nESzTFNwQfdar2v4aHPKeYZA6fobDfdYsssFV8ZBzRTZ\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#8\",\"publicKeyBase58\":\"sZzPChJYcibqcvr7nvHJHyVUtACKoNyRarsppdwMJvGN\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"controller\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi\",\"id\":\"did:lit:AEZ87t1bi5bRxmVh3ksMUi#9\",\"publicKeyBase58\":\"z2SqWSUz92ULURxmr254RWbg3UdFLwRSLQctuwHHxbWy\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

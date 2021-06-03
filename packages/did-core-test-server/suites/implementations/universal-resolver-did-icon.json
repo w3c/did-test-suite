@@ -1,0 +1,54 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:icon",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:icon:02:6f7a00a29deb82cb36d501d687c18bad79a8f1c154ef0c78",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "icon",
+                            "methodSpecificId": "02:6f7a00a29deb82cb36d501d687c18bad79a8f1c154ef0c78"
+                        },
+                        "didUrlString": "did:icon:02:6f7a00a29deb82cb36d501d687c18bad79a8f1c154ef0c78",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-icon:8080/1.0/identifiers/",
+                    "duration": 1021,
+                    "identifier": "did:icon:02:6f7a00a29deb82cb36d501d687c18bad79a8f1c154ef0c78",
+                    "pattern": "^(did:icon:02:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://www.w3.org/2019/did/v1\",\"authentication\":[{\"publicKey\":[\"MyIdEventVerifier\"]}],\"id\":\"did:icon:02:6f7a00a29deb82cb36d501d687c18bad79a8f1c154ef0c78\",\"publicKey\":[{\"created\":10787133,\"id\":\"MyIdEventVerifier\",\"publicKeyBase64\":\"BNCLnQY+kM6dnIiTWjy+X4IDt5MOGwNofzDCxqVO6ylSLFDTWXJ7iv18GyeJW+L2fCmSqkUIifUuaG23OP0GneU=\",\"revoked\":0,\"type\":\"Secp256k1VerificationKey\"}],\"service\":[]}",
+                "didDocumentMetadata": {
+                    "nodeUrl": "https://test-ctz.solidwallet.io/api/v3",
+                    "scoreAddress": "cx8b19bdb4e1ad3e10b599d8887dd256e02995f340",
+                    "service": {
+                        "id": "ZZEUNG",
+                        "serviceEndpoint": "https://zzeung.id/#/"
+                    }
+                }
+            }
+        }
+    ]
+}

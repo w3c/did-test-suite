@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:jolo",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "jolo",
+                            "methodSpecificId": "e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21"
+                        },
+                        "didUrlString": "did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://jolocom-did-driver:8080/1.0/identifiers/",
+                    "duration": 1090,
+                    "identifier": "did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21",
+                    "pattern": "^(did:jolo:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[{\"AuthenticationSuite\":\"sec:AuthenticationSuite\",\"CryptographicKey\":\"sec:Key\",\"LinkedDataSignature2016\":\"sec:LinkedDataSignature2016\",\"authentication\":\"sec:authenticationMethod\",\"created\":{\"@id\":\"dc:created\",\"@type\":\"xsd:dateTime\"},\"creator\":{\"@id\":\"dc:creator\",\"@type\":\"@id\"},\"dc\":\"http://purl.org/dc/terms/\",\"didv\":\"https://w3id.org/did#\",\"digestAlgorithm\":\"sec:digestAlgorithm\",\"digestValue\":\"sec:digestValue\",\"domain\":\"sec:domain\",\"entity\":\"sec:entity\",\"expires\":{\"@id\":\"sec:expiration\",\"@type\":\"xsd:dateTime\"},\"id\":\"@id\",\"name\":\"schema:name\",\"nonce\":\"sec:nonce\",\"normalizationAlgorithm\":\"sec:normalizationAlgorithm\",\"owner\":{\"@id\":\"sec:owner\",\"@type\":\"@id\"},\"privateKey\":{\"@id\":\"sec:privateKey\",\"@type\":\"@id\"},\"proof\":\"sec:proof\",\"proofAlgorithm\":\"sec:proofAlgorithm\",\"proofType\":\"sec:proofType\",\"proofValue\":\"sec:proofValue\",\"publicKey\":{\"@container\":\"@set\",\"@id\":\"sec:publicKey\",\"@type\":\"@id\"},\"rdfs\":\"http://www.w3.org/2000/01/rdf-schema#\",\"requiredProof\":\"sec:requiredProof\",\"revoked\":{\"@id\":\"sec:revoked\",\"@type\":\"xsd:dateTime\"},\"schema\":\"http://schema.org/\",\"sec\":\"https://w3id.org/security#\",\"signature\":\"sec:signature\",\"signatureAlgorithm\":\"sec:signatureAlgorithm\",\"signatureValue\":\"sec:signatureValue\",\"type\":\"@type\",\"xsd\":\"http://www.w3.org/2001/XMLSchema#\"}],\"authentication\":[{\"publicKey\":\"did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21#keys-1\",\"type\":\"Secp256k1SignatureAuthentication2018\"}],\"created\":\"2019-01-17T16:49:32.018Z\",\"id\":\"did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21\",\"proof\":{\"created\":\"2019-01-17T16:49:32.018Z\",\"creator\":\"did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21#keys-1\",\"nonce\":\"cbc71953e0db2f26\",\"signatureValue\":\"68b5f47631ba121b840b169dde54242d3b1845d16742d62189c6700b6ab46e24743e9738c04bf5c6c0f2ba208c4ecda65166d3e4563da01fd7f811715cd5fbc3\",\"type\":\"EcdsaKoblitzSignature2016\"},\"publicKey\":[{\"id\":\"did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21#keys-1\",\"owner\":\"did:jolo:e76fb4b4900e43891f613066b9afca366c6d22f7d87fc9f78a91515be24dfb21\",\"publicKeyHex\":\"0339f4a432a16ecc733f973af36417f5634f3d8a9195edcb668933a2cb7a988a37\",\"type\":\"Secp256k1VerificationKey2018\"}],\"service\":[]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

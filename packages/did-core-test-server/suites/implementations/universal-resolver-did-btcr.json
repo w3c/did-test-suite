@@ -1,0 +1,257 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:btcr",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": [
+            0,
+            2
+        ]
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:btcr:x705-jznz-q3nl-srs",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "btcr",
+                            "methodSpecificId": "x705-jznz-q3nl-srs"
+                        },
+                        "didUrlString": "did:btcr:x705-jznz-q3nl-srs",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
+                    "duration": 3415,
+                    "identifier": "did:btcr:x705-jznz-q3nl-srs",
+                    "pattern": "^(did:btcr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"authentication\":[{\"type\":\"EcdsaSecp256k1SignatureAuthentication2019\",\"verificationMethod\":\"#satoshi\"}],\"id\":\"did:btcr:x705-jznz-q3nl-srs\",\"verificationMethod\":[{\"id\":\"did:btcr:x705-jznz-q3nl-srs#key-0\",\"publicKeyBase58\":\"02e0e01a8c302976e1556e95c54146e8464adac8626a5d29474718a7281133ff49\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:x705-jznz-q3nl-srs#key-1\",\"publicKeyBase58\":\"02e0e01a8c302976e1556e95c54146e8464adac8626a5d29474718a7281133ff49\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:x705-jznz-q3nl-srs#satoshi\",\"publicKeyBase58\":\"02e0e01a8c302976e1556e95c54146e8464adac8626a5d29474718a7281133ff49\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "blockHeight": 1354004,
+                    "chain": "TESTNET",
+                    "continuationUri": null,
+                    "deactivated": true,
+                    "initialBlockHeight": 1353983,
+                    "initialTransactionPosition": 83,
+                    "initialTxid": {
+                        "chain": "TESTNET",
+                        "txid": "80871cf043c1d96f3d716f5bc02daa15a5e534b2a00e81a530fb40aa07ceceb6",
+                        "txoIndex": 0
+                    },
+                    "initialTxoIndex": 0,
+                    "inputScriptPubKey": "02e0e01a8c302976e1556e95c54146e8464adac8626a5d29474718a7281133ff49",
+                    "spentInChainAndTxids": [
+                        {
+                            "continuationUri": null,
+                            "inputScriptPubKey": "02e0e01a8c302976e1556e95c54146e8464adac8626a5d29474718a7281133ff49",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "be5be4b2c4e530b49af139a8448ae2ae8b5882f2e7f5c7908eca0268f72494e9",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        }
+                    ],
+                    "transactionPosition": 195,
+                    "txid": {
+                        "chain": "TESTNET",
+                        "txid": "be5be4b2c4e530b49af139a8448ae2ae8b5882f2e7f5c7908eca0268f72494e9",
+                        "txoIndex": 0
+                    },
+                    "txoIndex": 0
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:btcr:xkrn-xz7q-qsye-28p",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "btcr",
+                            "methodSpecificId": "xkrn-xz7q-qsye-28p"
+                        },
+                        "didUrlString": "did:btcr:xkrn-xz7q-qsye-28p",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
+                    "duration": 12310,
+                    "identifier": "did:btcr:xkrn-xz7q-qsye-28p",
+                    "pattern": "^(did:btcr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://www.w3.org/ns/did/v1\"],\"authentication\":[{\"type\":\"EcdsaSecp256k1SignatureAuthentication2019\",\"verificationMethod\":\"#satoshi\"}],\"id\":\"did:btcr:xkrn-xz7q-qsye-28p\",\"verificationMethod\":[{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-0\",\"publicKeyBase58\":\"024a63c4362772b0fafc51ac02470dae3f8da8a05d90bae9e1ef3f5243180120dd\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-1\",\"publicKeyBase58\":\"02b5470c5c0557ef7548dec23220d4d75f8c4aa1b459c190f100f4f78a1adb215b\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-2\",\"publicKeyBase58\":\"02e2078417a258acc2c9f9eb856b35b508d1e5a23fc1dcf94fd6f7337b1cb7fb90\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-3\",\"publicKeyBase58\":\"02074f9b37f26ae410742ec754b02b3f7d078ff73d7e06b6f7a670d5701805ef82\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-4\",\"publicKeyBase58\":\"02b4021b6907fbc12b2c0d9278d21bc0f371a56b553fc75eaf75b79d925301f7a4\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#key-5\",\"publicKeyBase58\":\"03479e1bde881c15edc82b7c4d0d04441c5e7f6dce4b703f43c5d5c12948df32d2\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xkrn-xz7q-qsye-28p#satoshi\",\"publicKeyBase58\":\"03479e1bde881c15edc82b7c4d0d04441c5e7f6dce4b703f43c5d5c12948df32d2\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "blockHeight": 1202316,
+                    "chain": "TESTNET",
+                    "continuation": {
+                        "@context": [
+                            "https://www.w3.org/ns/did/v1"
+                        ],
+                        "id": "did:btcr:xkrn-xz7q-qsye-28p"
+                    },
+                    "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                    "deactivated": false,
+                    "initialBlockHeight": 1156667,
+                    "initialTransactionPosition": 30,
+                    "initialTxid": {
+                        "chain": "TESTNET",
+                        "txid": "b01a3498ff817def5017e0c17c9171c4e19cced1a6a63d67f617ac06fe5baf96",
+                        "txoIndex": 0
+                    },
+                    "initialTxoIndex": 0,
+                    "inputScriptPubKey": "03479e1bde881c15edc82b7c4d0d04441c5e7f6dce4b703f43c5d5c12948df32d2",
+                    "spentInChainAndTxids": [
+                        {
+                            "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                            "inputScriptPubKey": "024a63c4362772b0fafc51ac02470dae3f8da8a05d90bae9e1ef3f5243180120dd",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "3a966c8b2254a73ee594498a55e5d6746f9e66df44730217a1ffe045f83b79a7",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        },
+                        {
+                            "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                            "inputScriptPubKey": "02b5470c5c0557ef7548dec23220d4d75f8c4aa1b459c190f100f4f78a1adb215b",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "06dff479edb2ad0bf4dc2d970518207f80673b47832f823317719fda900acddb",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        },
+                        {
+                            "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                            "inputScriptPubKey": "02e2078417a258acc2c9f9eb856b35b508d1e5a23fc1dcf94fd6f7337b1cb7fb90",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "dd0c39bc488b3e154f460920e6e6f1cf1b308736348d28dc2d126907e10e4800",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        },
+                        {
+                            "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                            "inputScriptPubKey": "02074f9b37f26ae410742ec754b02b3f7d078ff73d7e06b6f7a670d5701805ef82",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "a8150d3d1e7e635314ca0bd2b8976aa5d98d46f7bd64dfc850969586afb2526e",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        },
+                        {
+                            "continuationUri": "https://raw.githubusercontent.com/peacekeeper/self/master/ddo",
+                            "inputScriptPubKey": "02b4021b6907fbc12b2c0d9278d21bc0f371a56b553fc75eaf75b79d925301f7a4",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "5310788c3f8c47d2e0336a4de7ecaceb52405699b571bd1254bf4580caf66950",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        }
+                    ],
+                    "transactionPosition": 80,
+                    "txid": {
+                        "chain": "TESTNET",
+                        "txid": "5310788c3f8c47d2e0336a4de7ecaceb52405699b571bd1254bf4580caf66950",
+                        "txoIndex": 0
+                    },
+                    "txoIndex": 0
+                }
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:btcr:xz35-jznz-q9yu-ply",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "btcr",
+                            "methodSpecificId": "xz35-jznz-q9yu-ply"
+                        },
+                        "didUrlString": "did:btcr:xz35-jznz-q9yu-ply",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-btcr:8080/1.0/identifiers/",
+                    "duration": 6386,
+                    "identifier": "did:btcr:xz35-jznz-q9yu-ply",
+                    "pattern": "^(did:btcr:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"authentication\":[{\"type\":\"EcdsaSecp256k1SignatureAuthentication2019\",\"verificationMethod\":\"#satoshi\"}],\"id\":\"did:btcr:xz35-jznz-q9yu-ply\",\"verificationMethod\":[{\"id\":\"did:btcr:xz35-jznz-q9yu-ply#key-0\",\"publicKeyBase58\":\"020a5a5c8c3575489cd2c17d43f642fc2b34792d47c9b026fafe33b3469e31b841\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xz35-jznz-q9yu-ply#key-1\",\"publicKeyBase58\":\"020a5a5c8c3575489cd2c17d43f642fc2b34792d47c9b026fafe33b3469e31b841\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"},{\"id\":\"did:btcr:xz35-jznz-q9yu-ply#satoshi\",\"publicKeyBase58\":\"020a5a5c8c3575489cd2c17d43f642fc2b34792d47c9b026fafe33b3469e31b841\",\"type\":\"EcdsaSecp256k1VerificationKey2019\"}]}",
+                "didDocumentMetadata": {
+                    "blockHeight": 1354004,
+                    "chain": "TESTNET",
+                    "continuationUri": null,
+                    "deactivated": true,
+                    "initialBlockHeight": 1354001,
+                    "initialTransactionPosition": 83,
+                    "initialTxid": {
+                        "chain": "TESTNET",
+                        "txid": "2f1838f481be7b4f4d37542a751aa3a27be7114f798feb24ff0fc764730973d0",
+                        "txoIndex": 0
+                    },
+                    "initialTxoIndex": 0,
+                    "inputScriptPubKey": "020a5a5c8c3575489cd2c17d43f642fc2b34792d47c9b026fafe33b3469e31b841",
+                    "spentInChainAndTxids": [
+                        {
+                            "continuationUri": null,
+                            "inputScriptPubKey": "020a5a5c8c3575489cd2c17d43f642fc2b34792d47c9b026fafe33b3469e31b841",
+                            "spentInChainAndTxid": {
+                                "chain": "TESTNET",
+                                "txid": "be5be4b2c4e530b49af139a8448ae2ae8b5882f2e7f5c7908eca0268f72494e9",
+                                "txoIndex": 0
+                            },
+                            "transactionTime": 0
+                        }
+                    ],
+                    "transactionPosition": 195,
+                    "txid": {
+                        "chain": "TESTNET",
+                        "txid": "be5be4b2c4e530b49af139a8448ae2ae8b5882f2e7f5c7908eca0268f72494e9",
+                        "txoIndex": 0
+                    },
+                    "txoIndex": 0
+                }
+            }
+        }
+    ]
+}
