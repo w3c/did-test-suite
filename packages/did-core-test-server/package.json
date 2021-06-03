@@ -10,7 +10,7 @@
     "serve": "node run.js",
     "generate-test-data": "node report/generate-test-data.js",
     "generate-report": "node report/generate-report.js",
-    "test-and-generate-report": "node report/generate-test-data.js; node report/generate-report.js",
+    "test-and-generate-report": "node report/generate-test-data.js; node report/generate-report.js; mv ./report/index.html ../../docs",
     "docker:build": "docker build --tag or13/did-core-test-server:1.0 .",
     "docker:run": "docker run --publish 8080:8080 or13/did-core-test-server:1.0",
     "docker:publish": "docker push or13/did-core-test-server:1.0"

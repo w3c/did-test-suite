@@ -16,3 +16,10 @@ jobs:
         run: npm run lint 
       - name: Test
         run: DID_WG_INCLUDE_BREAKING='🔥' npm run test || true
+      - name: Build Report
+        run: npm run test-and-generate-report
+      - name: Deploy Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
