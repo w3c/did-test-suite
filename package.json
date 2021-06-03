@@ -18,7 +18,7 @@
     "w3c"
   ],
   "scripts": {
-    "install:ci": "npm install --ignore-scripts && lerna link && lerna bootstrap --since origin/master --include-dependencies",
+    "install:ci": "npm install --ignore-scripts && lerna link && lerna bootstrap --since origin/main --include-dependencies",
     "postinstall": "lerna bootstrap",
     "prepare": "lerna run prepare",
     "start": "npm run docker:up",
