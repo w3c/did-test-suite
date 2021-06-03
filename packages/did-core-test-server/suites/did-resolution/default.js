@@ -1,19 +1,21 @@
+const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
+  require('../implementations/resolver-ethr-consensys-mesh.json'),
+  require('../implementations/universal-resolver-did-gatc.json'),
+  require('../implementations/universal-resolver-did-ccp.json'),
+  require('../implementations/resolver-did-ion.json'),
+] : []
+
 module.exports = {
   name: '7.1 DID Resolution',
   resolvers: [
-    require('../implementations/resolver-3-3box-labs.json'),
-    // require('../implementations/resolver-ethr-consensys-mesh.json'),
-    require('../implementations/resolver-example-didwg.json'),
     require('../implementations/universal-resolver-did-ace.json'),
     require('../implementations/universal-resolver-did-bba.json'),
     require('../implementations/universal-resolver-did-btcr.json'),
-    require('../implementations/universal-resolver-did-ccp.json'),
     require('../implementations/universal-resolver-did-ebsi.json'),
     require('../implementations/universal-resolver-did-elem.json'),
     require('../implementations/universal-resolver-did-emtrust.json'),
     require('../implementations/universal-resolver-did-ethr.json'),
     require('../implementations/universal-resolver-did-evan.json'),
-    require('../implementations/universal-resolver-did-gatc.json'),
     require('../implementations/universal-resolver-did-github.json'),
     require('../implementations/universal-resolver-did-hcr.json'),
     require('../implementations/universal-resolver-did-icon.json'),
@@ -36,8 +38,11 @@ module.exports = {
     require('../implementations/universal-resolver-did-vaa.json'),
     require('../implementations/universal-resolver-did-web.json'),
     require('../implementations/universal-resolver-did-work.json'),
-    require('../implementations/resolver-did-ion.json'),
+    require('../implementations/resolver-did-orb.json'),
     require('../implementations/resolver-nft-3box-labs.json'),
-    require('../implementations/resolver-did-orb.json')
+    require('../implementations/resolver-example-didwg.json'),
+    require('../implementations/resolver-3-3box-labs.json'),
+    ...brokenFixtures
+   
   ],
 };

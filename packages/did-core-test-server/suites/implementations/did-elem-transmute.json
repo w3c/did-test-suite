@@ -1,0 +1,95 @@
+{
+  "didMethod": "did:elem",
+  "implementation": "https://github.com/transmute-industries/did-core",
+  "implementer": "Transmute",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ"
+  ],
+  "didParameters": {},
+  "did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ",
+        "verificationMethod": [
+          {
+            "id": "#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS",
+            "controller": "did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ",
+            "type": "JsonWebKey2020",
+            "publicKeyJwk": {
+              "crv": "Ed25519",
+              "kid": "T70vcG-qIY4VNvS9LOJZsLs8dA31gyGmab7Ta_WE6N8",
+              "kty": "OKP",
+              "x": "n_BSOLvzjAHUCrkGLrz3VJsU6YygQr9k-59K6LxHcO0"
+            }
+          },
+          {
+            "id": "#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2",
+            "controller": "did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ",
+            "type": "JsonWebKey2020",
+            "publicKeyJwk": {
+              "crv": "X25519",
+              "kty": "OKP",
+              "x": "bjhrdjJ-2n-XWaaJRFbOcqZQ5koJ58Ldql7Fj94auFU"
+            }
+          }
+        ],
+        "authentication": [
+          "#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS"
+        ],
+        "assertionMethod": [
+          "#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS"
+        ],
+        "capabilityInvocation": [
+          "#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS"
+        ],
+        "capabilityDelegation": [
+          "#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS"
+        ],
+        "keyAgreement": [
+          "#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2"
+        ],
+        "service": [
+          {
+            "id": "#resolver-0",
+            "type": "Resolver",
+            "serviceEndpoint": "https://example.com"
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/jws-2020/v1"
+          ]
+        }
+      },
+      "representation": "{\"id\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/jws-2020/v1\"],\"verificationMethod\":[{\"id\":\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\",\"controller\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"crv\":\"Ed25519\",\"kid\":\"T70vcG-qIY4VNvS9LOJZsLs8dA31gyGmab7Ta_WE6N8\",\"kty\":\"OKP\",\"x\":\"n_BSOLvzjAHUCrkGLrz3VJsU6YygQr9k-59K6LxHcO0\"}},{\"id\":\"#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2\",\"controller\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"crv\":\"X25519\",\"kty\":\"OKP\",\"x\":\"bjhrdjJ-2n-XWaaJRFbOcqZQ5koJ58Ldql7Fj94auFU\"}}],\"authentication\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"assertionMethod\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"capabilityInvocation\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"capabilityDelegation\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"keyAgreement\":[\"#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2\"],\"service\":[{\"id\":\"#resolver-0\",\"type\":\"Resolver\",\"serviceEndpoint\":\"https://example.com\"}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/jws-2020/v1"
+          ]
+        }
+      },
+      "representation": "{\"id\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/jws-2020/v1\"],\"verificationMethod\":[{\"id\":\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\",\"controller\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"crv\":\"Ed25519\",\"kid\":\"T70vcG-qIY4VNvS9LOJZsLs8dA31gyGmab7Ta_WE6N8\",\"kty\":\"OKP\",\"x\":\"n_BSOLvzjAHUCrkGLrz3VJsU6YygQr9k-59K6LxHcO0\"}},{\"id\":\"#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2\",\"controller\":\"did:elem:ropsten:EiBVk9F3eLf2u9xwLJ91-vTIXD-B7Q4m3iGhCbB2OyRiwQ\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"crv\":\"X25519\",\"kty\":\"OKP\",\"x\":\"bjhrdjJ-2n-XWaaJRFbOcqZQ5koJ58Ldql7Fj94auFU\"}}],\"authentication\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"assertionMethod\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"capabilityInvocation\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"capabilityDelegation\":[\"#z6MkqDbQmpZ825F8H6cBAqR8PUnZrcA2ykdtZ61iDwvM5pDS\"],\"keyAgreement\":[\"#z6LSj6RuiS4C2jG3oSRPatA92LFfjqbAj1tVC9D3sKXRtKK2\"],\"service\":[{\"id\":\"#resolver-0\",\"type\":\"Resolver\",\"serviceEndpoint\":\"https://example.com\"}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
