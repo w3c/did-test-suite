@@ -42,6 +42,7 @@ module.exports = {
     require('../implementations/resolver-nft-3box-labs.json'),
     require('../implementations/resolver-example-didwg.json'),
     require('../implementations/resolver-3-3box-labs.json'),
+    require('../implementations/universal-resolver-did-bid.json'),
     ...brokenFixtures
    
   ],
