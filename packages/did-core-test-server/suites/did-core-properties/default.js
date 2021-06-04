@@ -25,6 +25,7 @@ module.exports = {
     require('../implementations/did-web-transmute.json'),
     require('../implementations/did-photon-transmute.json'),
     require('../implementations/did-elem-transmute.json'),
+    require('../implementations/did-bid.json'),
     ...brokenFixtures
    
   ],
