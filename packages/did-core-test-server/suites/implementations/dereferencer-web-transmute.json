@@ -1,0 +1,27 @@
+{
+  "implementation": "https://github.com/OR13/deno-did-pm",
+  "implementer": "Transmute",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ ],
+    "notFoundErrorOutcome": [ ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:web:or13.github.io:deno-did-pm?service=github&relativeRef=/OR13/deno-did-pm/master/docs/example-mod/mod.ts",
+        "dereferenceOptions": {
+          "accept": "application/typescript"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/typescript; charset=utf-8"
+        },
+        "contentStream": "// DENO DID PM Module as:\n// http://localhost:8000/did-modules/did:web:or13.github.io:deno-did-pm?service=github&relativeRef=/OR13/deno-did-pm/master/docs/example-mod/mod.ts\n// GitHub URL as:\n// https://raw.githubusercontent.com/OR13/deno-did-pm/master/docs/example-mod/mod.ts\n\nexport const sayHello = () => {\n  console.info(\"hello\");\n};",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}
