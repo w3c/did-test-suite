@@ -3,6 +3,7 @@ const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
   require('../implementations/universal-resolver-did-gatc.json'),
   require('../implementations/universal-resolver-did-ccp.json'),
   require('../implementations/resolver-did-ion.json'),
+  require('../implementations/universal-resolver-did-bid.json'),
 ] : []
 
 module.exports = {
@@ -42,7 +43,7 @@ module.exports = {
     require('../implementations/resolver-nft-3box-labs.json'),
     require('../implementations/resolver-example-didwg.json'),
     require('../implementations/resolver-3-3box-labs.json'),
-    require('../implementations/universal-resolver-did-bid.json'),
+
     ...brokenFixtures
    
   ],
