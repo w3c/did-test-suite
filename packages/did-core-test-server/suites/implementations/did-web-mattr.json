@@ -1,0 +1,47 @@
+{
+    "didMethod": "did:web:did.actor:healthcare:doctor:robert",
+    "implementation": "MATTR Internal Libraries",
+    "implementer": "MATTR Limited",
+    "supportedContentTypes": ["application/did+ld+json"],
+    "dids": ["did:web:did.actor:healthcare:doctor:robert"],
+    "didParameters": {
+        "hl": "did:web:did.actor:healthcare:doctor:robert?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+        "service": "did:web:did.actor:healthcare:doctor:robert?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+        "relativeRef": "did:web:did.actor:healthcare:doctor:robert?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
+        "versionId": "did:web:did.actor:healthcare:doctor:robert?versionId=0.1.0",
+        "versionTime": "did:web:did.actor:healthcare:doctor:robert?versionTime=2020-09-26T20:14:02Z"
+    },
+    "did:web:did.actor:healthcare:doctor:robert": {
+        "didDocumentDataModel": {
+            "properties": {
+                "@context": ["https://www.w3.org/ns/did/v1"],
+                "id": "did:web:did.actor:healthcare:doctor:robert",
+                "verificationMethod": [{
+                    "id": "#g1",
+                    "type": "Bls12381G1Key2020",
+                    "controller": "did:web:did.actor:healthcare:doctor:robert",
+                    "publicKeyBase58": "6RC6BhU93EFEbdqBE43KTmeTraiTLw6ukAFJH3sTavrzpKfFAXKxKKud4cy2KeDLpH"
+                }, {
+                    "id": "#g2",
+                    "type": "Bls12381G2Key2020",
+                    "controller": "did:web:did.actor:healthcare:doctor:robert",
+                    "publicKeyBase58": "25TLkGwTeWqQZ1mVpJCzRPFUvvs1y3o9EeDUNE19S65uVkSubBf3cHDxa7wXG5TSnYXHJhmDfmjbsdu1ZnWs3rceY7bGwAeDjdk8XqwoMrff3svgpUzwqHqX53crLQtCQUcS"
+                }],
+                "authentication": ["#g1", "#g2"],
+                "assertionMethod": ["#g1", "#g2"]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {
+                    "@context": ["https://www.w3.org/ns/did/v1"]
+                }
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:web:did.actor:healthcare:doctor:robert\",\"verificationMethod\":[{\"id\":\"#g1\",\"type\":\"Bls12381G1Key2020\",\"controller\":\"did:web:did.actor:healthcare:doctor:robert\",\"publicKeyBase58\":\"6RC6BhU93EFEbdqBE43KTmeTraiTLw6ukAFJH3sTavrzpKfFAXKxKKud4cy2KeDLpH\"},{\"id\":\"#g2\",\"type\":\"Bls12381G2Key2020\",\"controller\":\"did:web:did.actor:healthcare:doctor:robert\",\"publicKeyBase58\":\"25TLkGwTeWqQZ1mVpJCzRPFUvvs1y3o9EeDUNE19S65uVkSubBf3cHDxa7wXG5TSnYXHJhmDfmjbsdu1ZnWs3rceY7bGwAeDjdk8XqwoMrff3svgpUzwqHqX53crLQtCQUcS\"}],\"authentication\":[\"#g1\",\"#g2\"],\"assertionMethod\":[\"#g1\",\"#g2\"]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json"
+            }
+        }
+    }
+}
