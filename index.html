@@ -1358,6 +1358,18 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <span class="todo">&#xA0;(1)</span> 
 </td>
 </tr>
+<tr><td><a href="#M39">unspecified</a></td><td>MATTR internal libraries</td><td></td>
+<td></td>
+<td></td>
+<td></td>
+
+<td>
+
+<span class="passed">&#xA0;(155)</span> 
+<br>
+<span class="todo">&#xA0;(9)</span> 
+</td>
+</tr>
 
 </table>
 
@@ -1389,14 +1401,14 @@ are suppressed for readability.
 <th class="methods">Methods</th>
 </tr>
 </tbody>
-<tr><td class="title">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
+<tr><td class="title">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
 <tr><td class="title">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionId - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionTime - If present, the associated value MUST be an ASCII string which is a valid XML datetime value, as defined in section 3.3.7 of W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes [XMLSCHEMA11-2]. This datetime value MUST be normalized to UTC 00:00:00 and without sub-second decimal precision. For example: 2020-12-20T19:17:47Z.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M10">example</a>, <a href="#M24">nft</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</td><td class="methods"><span class="todo"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
+<tr><td class="title">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</td><td class="methods"><span class="todo"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
 <tr><td class="title">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
@@ -1477,21 +1489,24 @@ are suppressed for readability.
 <tr><td class="title">7.1.3 DID Document Metadata - nextUpdate is later than updated.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - nextVersionId is different from versionId.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - updated is later or equal than created.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M35">vaa</a>, <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - A conformant DID URL as a single string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - A metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(10)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing function was called and successful, this MUST contain a resource corresponding to the DID URL.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is successful, this MUST be a metadata structure, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This structure is REQUIRED, and in the case of an error in the dereferencing process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type that the caller prefers for contentStream.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The Media Type value MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(5)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - A conformant DID URL as a single string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - A metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(28)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing function was called and successful, this MUST contain a resource corresponding to the DID URL.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is successful, this MUST be a metadata structure, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This structure is REQUIRED, and in the case of an error in the dereferencing process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type that the caller prefers for contentStream.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The Media Type value MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(12)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The value of this property MUST be a single keyword ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - Each property name MUST be a string.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - Each property value MUST be a string, map, list, ordered set, boolean, or null.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
@@ -34660,7 +34675,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -34668,7 +34683,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -34704,6 +34719,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -34721,13 +34799,13 @@ are suppressed for readability.
 
 
 <br>
-<span class="todo">&#xA0;(5)</span>
+<span class="todo">&#xA0;(14)</span>
 </th>
 <th class="method">Method</th>
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -34763,6 +34841,69 @@ are suppressed for readability.
 <td class="todo"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -34778,7 +34919,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -34786,7 +34927,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -34822,6 +34963,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -34837,7 +35041,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -34845,7 +35049,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -34881,6 +35085,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -34896,7 +35163,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -34904,7 +35171,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -34940,6 +35207,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -34955,7 +35285,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(9)</span>
+<span class="passed">&#xA0;(27)</span>
 
 
 </th>
@@ -34963,7 +35293,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35034,6 +35364,132 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35049,7 +35505,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35057,7 +35513,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35093,6 +35549,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35108,7 +35627,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35116,7 +35635,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35152,6 +35671,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35167,7 +35749,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35175,7 +35757,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35211,6 +35793,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35226,7 +35871,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35234,7 +35879,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35270,6 +35915,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35285,7 +35993,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35293,7 +36001,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35329,6 +36037,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35344,7 +36115,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35352,7 +36123,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35388,6 +36159,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35697,7 +36531,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35705,7 +36539,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35741,6 +36575,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35756,7 +36653,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35764,7 +36661,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35800,6 +36697,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35815,7 +36775,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35823,7 +36783,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35859,6 +36819,69 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35874,7 +36897,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(11)</span>
 
 
 </th>
@@ -35882,7 +36905,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35918,6 +36941,55 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 </tbody></table>
@@ -35933,7 +37005,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(4)</span>
+<span class="passed">&#xA0;(13)</span>
 
 
 </th>
@@ -35941,7 +37013,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 3</td></tr>
+<tr><td colspan="4">Total implementations: 4</td></tr>
 
 
 
@@ -35977,6 +37049,169 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>https://github.com/OR13/deno-did-pm</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>7.2.2 DID URL Dereferencing Metadata - The value of this property MUST be a single keyword ASCII string.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(1)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 1</td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.2.2 DID URL Dereferencing Metadata - The value of this property MUST be a single keyword ASCII string.</div></td></tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(0)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 1</td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</div></td></tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(0)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 1</td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</div></td></tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>unspecified</td><td>MATTR internal libraries</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
@@ -68181,7 +69416,7 @@ are suppressed for readability.
 
 <section id="M39">
 <h3>unspecified</h3>
-<p>Total Implementations for unspecified : 4</p>
+<p>Total Implementations for unspecified : 5</p>
 <div>
 <p>Implementation: @ceramicnetwork/nft-did-resolver</p>
 
@@ -70836,6 +72071,1177 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did-url-dereferencing</td>
 <td>did:web:or13.github.io:d&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>Implementation: MATTR internal libraries</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(154)</span>
+<br>
+<span class="todo">&#xA0;(9)</span>
+</th>
+<th class="suite">Suite</th>
+<th class="param">Parameters</th>
+</tr>
+
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:web:kyledenhartog.co&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example_333, expected outcome: invalidDidUrlErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:example:444, expected outcome: notFoundErrorOutcome</td>
 </tr>
 
 </tbody></table>
