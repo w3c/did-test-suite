@@ -18,7 +18,7 @@ describe("suites/did-url-dereferencing", () => {
         let i = 0;
         imp.executions.forEach((execution) => {
           const expectedOutcome = utils.findExpectedOutcome(imp.expectedOutcomes, i++);
-          require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome, implementation);
+          require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome, imp);
         });
       });
     });
