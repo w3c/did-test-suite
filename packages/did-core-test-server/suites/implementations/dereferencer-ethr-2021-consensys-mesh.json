@@ -1,0 +1,49 @@
+{
+  "implementation": "ethr-did-resolver",
+  "implementer": "ConsenSys Mesh",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ ],
+    "notFoundErrorOutcome": [ ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=1",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"]}",
+        "contentMetadata": {
+          "nextVersionId":"12090175",
+          "nextUpdate":"2021-03-22T18:14:29Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388?versionId=1",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https:\/\/www.w3.org\/ns\/did\/v1\",\"https:\/\/identity.foundation\/EcdsaSecp256k1RecoverySignature2020\/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld\"],\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"verificationMethod\":[{\"id\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388\",\"blockchainAccountId\":\"0x26bF14321004e770E7A8b080b7a526d8eed8b388@eip155:1\"}],\"authentication\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"],\"assertionMethod\":[\"did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller\"]}",
+        "contentMetadata": {
+          "nextVersionId":"12090175",
+          "nextUpdate":"2021-03-22T18:14:29Z"
+        }
+      }
+    }
+  ]
+}
