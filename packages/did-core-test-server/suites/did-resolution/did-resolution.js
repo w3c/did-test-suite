@@ -1,6 +1,6 @@
 const utils = require('../resolution-utils');
 
-const didResolutionTests = (execution, expectedOutcome, implementation) => {
+const didResolutionTests = (execution, expectedOutcome, imp) => {
   const { did, resolutionOptions } = execution.input;
   const { didResolutionMetadata, didDocument, didDocumentStream, didDocumentMetadata } = execution.output;
   describe(did, () => {
