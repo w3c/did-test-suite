@@ -2,38 +2,28 @@
   "didMethod": "did:key",
   "implementation": "did-method-key-js (2020 cryptosuite)",
   "implementer": "Digital Bazaar",
-  "supportedContentTypes": [
-    "application/did+ld+json"
-  ],
+  "supportedContentTypes": ["application/did+ld+json"],
   "dids": ["did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"],
   "didParameters": {},
   "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH": {
     "didDocumentDataModel": {
       "properties": {
-        "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+        "id": "did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh",
         "verificationMethod": [{
-          "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+          "id": "did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh",
           "type": "Ed25519VerificationKey2020",
-          "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
-          "publicKeyMultibase": "zB12NYF8RrR3h41TDCTJojY59usg3mbtbjnFs7Eud1Y6u"
+          "controller": "did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh",
+          "publicKeyMultibase": "z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh"
         }],
-        "authentication": [
-          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
-        ],
-        "assertionMethod": [
-          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
-        ],
-        "capabilityDelegation": [
-          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
-        ],
-        "capabilityInvocation": [
-          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
-        ],
+        "authentication": ["did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh"],
+        "assertionMethod": ["did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh"],
+        "capabilityDelegation": ["did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh"],
+        "capabilityInvocation": ["did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh"],
         "keyAgreement": [{
-          "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#zBzoR5sqFgi6q3iFia8JPNfENCpi7RNSTKF7XNXX96SBY4",
+          "id": "did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6LSgfZQjTYyX6t1GQSeFb6HCDhcAJFk9dN7YBCqtbH1ciHr",
           "type": "X25519KeyAgreementKey2020",
-          "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
-          "publicKeyMultibase": "zJhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr"
+          "controller": "did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh",
+          "publicKeyMultibase": "z6LSgfZQjTYyX6t1GQSeFb6HCDhcAJFk9dN7YBCqtbH1ciHr"
         }]
       }
     },
@@ -47,7 +37,7 @@
           ]
         }
       },
-      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/x25519-2020/v1\"],\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"verificationMethod\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyMultibase\":\"zB12NYF8RrR3h41TDCTJojY59usg3mbtbjnFs7Eud1Y6u\"}],\"authentication\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"assertionMethod\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityDelegation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityInvocation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"keyAgreement\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#zBzoR5sqFgi6q3iFia8JPNfENCpi7RNSTKF7XNXX96SBY4\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyMultibase\":\"zJhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr\"}]}",
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/x25519-2020/v1\"],\"id\":\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\",\"verificationMethod\":[{\"id\":\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\",\"publicKeyMultibase\":\"z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\"}],\"authentication\":[\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\"],\"assertionMethod\":[\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\"],\"capabilityDelegation\":[\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\"],\"capabilityInvocation\":[\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\"],\"keyAgreement\":[{\"id\":\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh#z6LSgfZQjTYyX6t1GQSeFb6HCDhcAJFk9dN7YBCqtbH1ciHr\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:key:z6MktZw8HgaRUoG8S9asnmDKQL458uEhuuNT9U2UK5cT6Tmh\",\"publicKeyMultibase\":\"z6LSgfZQjTYyX6t1GQSeFb6HCDhcAJFk9dN7YBCqtbH1ciHr\"}]}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
