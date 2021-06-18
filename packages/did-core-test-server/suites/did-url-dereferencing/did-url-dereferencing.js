@@ -1,7 +1,7 @@
 const utils = require('../resolution-utils');
 const resolution = require('../did-resolution/did-resolution.js');
 
-const didUrlDereferencingTests = (execution, expectedOutcome, implementation) => {
+const didUrlDereferencingTests = (execution, expectedOutcome, imp) => {
   const { didUrl, dereferenceOptions } = execution.input;
   const { dereferencingMetadata, contentStream, contentMetadata } = execution.output;
   describe(didUrl, () => {
@@ -23,11 +23,10 @@ const didUrlDereferencingTests = (execution, expectedOutcome, implementation) =>
         it('7.2 DID URL Dereferencing - To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.', async () => {
           if(didUrl.includes('#')) {
             const didUrlWithoutFragment = didUrl.substring(0, didUrl.indexOf('#'));
-            const executionWithoutFragment = utils.findExecutionByDidUrl(implementation, didUrlWithoutFragment);
-            if (executionWithoutFragment !== undefined) {
-              const contentStreamWithoutFragment = executionWithoutFragment.output.contentStream;
-              expect(contentStreamWithoutFragment).not.toBe(contentStream);
-            }
+            const executionWithoutFragment = utils.findExecutionByDidUrl(imp, didUrlWithoutFragment);
+            expect(executionWithoutFragment).toBeDefined();
+            const contentStreamWithoutFragment = executionWithoutFragment.output.contentStream;
+            expect(contentStreamWithoutFragment).not.toBe(contentStream);
           }
         });
         it('7.2 DID URL Dereferencing - This input is REQUIRED.', async () => {
