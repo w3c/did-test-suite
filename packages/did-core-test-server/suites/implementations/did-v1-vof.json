@@ -3,7 +3,7 @@
   "implementation": "did-veres-one (2021)",
   "implementer": "Veres One Foundation",
   "supportedContentTypes": [
-    "application/did+json"
+    "application/did+json",
     "application/did+ld+json"
   ],
   "dids": ["did:v1:nym:z6Mkh18zyRvTikTTYwi3p4S8kQNqLkExDamQHERxeB34AMvL"],
