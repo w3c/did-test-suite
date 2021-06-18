@@ -1040,12 +1040,19 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td>
 
-<span class="passed">&#xA0;(20)</span> 
+<span class="passed">&#xA0;(95)</span> 
 
  
 </td>
 
-<td></td></tr>
+
+<td>
+
+<span class="passed">&#xA0;(34)</span> 
+<br>
+<span class="todo">&#xA0;(2)</span> 
+</td>
+</tr>
 <tr><td><a href="#M30">did:sov</a></td><td>MATTR internal libraries</td><td></td>
 <td></td>
 <td></td>
@@ -1420,14 +1427,14 @@ are suppressed for readability.
 <th class="methods">Methods</th>
 </tr>
 </tbody>
-<tr><td class="title">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
 <tr><td class="title">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionId - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionTime - If present, the associated value MUST be an ASCII string which is a valid XML datetime value, as defined in section 3.3.7 of W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes [XMLSCHEMA11-2]. This datetime value MUST be normalized to UTC 00:00:00 and without sub-second decimal precision. For example: 2020-12-20T19:17:47Z.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M10">example</a>, <a href="#M24">nft</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</td><td class="methods"><span class="todo"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</td><td class="methods"><span class="todo"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
 <tr><td class="title">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
@@ -1471,30 +1478,30 @@ are suppressed for readability.
 <tr><td class="title">6.3.1 JSON-LD Production - The DID document and any DID document data structures expressed by the data model MUST be serialized to the JSON-LD representation according to the JSON representation production rules as defined in &#xA7; 6.2 JSON.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">6.3.1 JSON-LD Production - The serialized value of @context MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON Array where the first item is the JSON String https://www.w3.org/ns/did/v1 and the subsequent items are serialized according to the JSON representation production rules.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">6.3.1 JSON-LD Production - When serializing a JSON-LD representation of a DID document, a conforming producer MUST specify a media type of application/did+ld+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M10">example</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - A metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace(2)</a>, <a href="#M3">bba(4)</a>, <a href="#M4">btcr(6)</a>, <a href="#M5">ebsi(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M7">emtrust(2)</a>, <a href="#M8">ethr(30)</a>, <a href="#M9">evan(2)</a>, <a href="#M11">github(2)</a>, <a href="#M12">hcr(2)</a>, <a href="#M13">icon(2)</a>, <a href="#M14">io(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M17">jolo(2)</a>, <a href="#M18">key(14)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit(2)</a>, <a href="#M22">mpg(2)</a>, <a href="#M23">nacl(2)</a>, <a href="#M25">ont(2)</a>, <a href="#M26">orb(22)</a>, <a href="#M28">schema(4)</a>, <a href="#M29">sol(2)</a>, <a href="#M30">sov(10)</a>, <a href="#M31">stack(2)</a>, <a href="#M32">trust(4)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(6)</a>, <a href="#M35">vaa(2)</a>, <a href="#M36">web(16)</a>, <a href="#M38">work(2)</a>, <a href="#M39">unspecified(32)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If resolveRepresentation was called, this structure MUST contain a contentType property containing the Media Type of the representation found in the didDocumentStream.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is successful, and if the resolve function was called, this MUST be a DID document abstract data model (a map) as described in &#xA7; 4. Data Model that is capable of being transformed into a conforming DID Document (representation), using the production rules specified by the representation.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(3)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is successful, and if the resolveRepresentation function was called, this MUST be a byte stream of the resolved DID document in one of the conformant representations.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is successful, this MUST be a metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this value MUST be an empty stream.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(3)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - The value of id in the resolved DID document MUST match the DID that was resolved.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(3)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - This input is REQUIRED and the value MUST be a conformant DID as defined in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1 DID Resolution - This structure is REQUIRED, and in the case of an error in the resolution process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.1 DID Resolution Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
-<tr><td class="title">7.1.1 DID Resolution Options - The Media Type of the caller&apos;s preferred representation of the DID document.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
-<tr><td class="title">7.1.1 DID Resolution Options - This property is OPTIONAL for the resolveRepresentation function and MUST NOT be used with the resolve function.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - The caller of the resolveRepresentation function MUST use this value when determining how to parse and process the didDocumentStream returned by this function into the data model.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - The value of this property MUST be a single keyword ASCII string.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key(2)</a>, <a href="#M30">sov(2)</a>, <a href="#M36">web(2)</a>, <a href="#M39">unspecified(2)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - This property MUST NOT be present if the resolve function was called.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - This property is REQUIRED if resolution is successful and if the resolveRepresentation function was called.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - This property is REQUIRED when there is an error in the resolution process.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(5)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov</a>, <a href="#M36">web</a>, <a href="#M39">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov</a>, <a href="#M36">web</a>, <a href="#M39">unspecified</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - A metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace(2)</a>, <a href="#M3">bba(4)</a>, <a href="#M4">btcr(6)</a>, <a href="#M5">ebsi(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M7">emtrust(2)</a>, <a href="#M8">ethr(30)</a>, <a href="#M9">evan(2)</a>, <a href="#M11">github(2)</a>, <a href="#M12">hcr(2)</a>, <a href="#M13">icon(2)</a>, <a href="#M14">io(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M17">jolo(2)</a>, <a href="#M18">key(14)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit(2)</a>, <a href="#M22">mpg(2)</a>, <a href="#M23">nacl(2)</a>, <a href="#M25">ont(2)</a>, <a href="#M26">orb(22)</a>, <a href="#M28">schema(4)</a>, <a href="#M29">sol(2)</a>, <a href="#M30">sov(18)</a>, <a href="#M31">stack(2)</a>, <a href="#M32">trust(4)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(6)</a>, <a href="#M35">vaa(2)</a>, <a href="#M36">web(16)</a>, <a href="#M38">work(2)</a>, <a href="#M39">unspecified(32)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If resolveRepresentation was called, this structure MUST contain a contentType property containing the Media Type of the representation found in the didDocumentStream.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is successful, and if the resolve function was called, this MUST be a DID document abstract data model (a map) as described in &#xA7; 4. Data Model that is capable of being transformed into a conforming DID Document (representation), using the production rules specified by the representation.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(6)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is successful, and if the resolveRepresentation function was called, this MUST be a byte stream of the resolved DID document in one of the conformant representations.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is successful, this MUST be a metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this value MUST be an empty stream.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - If the resolution is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(6)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - The value of id in the resolved DID document MUST match the DID that was resolved.</td><td class="methods"><span class="passed"><strong>[5 methods]:</strong> <a href="#M18">key(3)</a>, <a href="#M26">orb(6)</a>, <a href="#M30">sov(6)</a>, <a href="#M36">web(3)</a>, <a href="#M39">unspecified(7)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - This input is REQUIRED and the value MUST be a conformant DID as defined in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1 DID Resolution - This structure is REQUIRED, and in the case of an error in the resolution process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.1 DID Resolution Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
+<tr><td class="title">7.1.1 DID Resolution Options - The Media Type of the caller&apos;s preferred representation of the DID document.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
+<tr><td class="title">7.1.1 DID Resolution Options - This property is OPTIONAL for the resolveRepresentation function and MUST NOT be used with the resolve function.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - The caller of the resolveRepresentation function MUST use this value when determining how to parse and process the didDocumentStream returned by this function into the data model.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - The value of this property MUST be a single keyword ASCII string.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key(2)</a>, <a href="#M30">sov(4)</a>, <a href="#M36">web(2)</a>, <a href="#M39">unspecified(2)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - The value of this property MUST be an ASCII string that is the Media Type of the conformant representations.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(4)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(5)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(5)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(9)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - This property MUST NOT be present if the resolve function was called.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - This property is REQUIRED if resolution is successful and if the resolveRepresentation function was called.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - This property is REQUIRED when there is an error in the resolution process.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov(2)</a>, <a href="#M36">web</a>, <a href="#M39">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov(2)</a>, <a href="#M36">web</a>, <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M15">ion</a>, <a href="#M26">orb(9)</a>, <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M26">orb(11)</a>, <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M4">btcr(2)</a>, <a href="#M26">orb</a>, <a href="#M39">unspecified</a></span></td></tr>
@@ -1508,22 +1515,22 @@ are suppressed for readability.
 <tr><td class="title">7.1.3 DID Document Metadata - nextUpdate is later than updated.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - nextVersionId is different from versionId.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
 <tr><td class="title">7.1.3 DID Document Metadata - updated is later or equal than created.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M35">vaa</a>, <a href="#M39">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - A conformant DID URL as a single string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - A metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(32)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing function was called and successful, this MUST contain a resource corresponding to the DID URL.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is successful, this MUST be a metadata structure, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - This structure is REQUIRED, and in the case of an error in the dereferencing process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2 DID URL Dereferencing - To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type that the caller prefers for contentStream.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
-<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The Media Type value MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(14)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - A conformant DID URL as a single string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - A metadata structure.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(4)</a>, <a href="#M39">unspecified(32)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing function was called and successful, this MUST contain a resource corresponding to the DID URL.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is successful, this MUST be a metadata structure, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this output MUST be an empty metadata structure.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing is unsuccessful, this value MUST be empty.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED, but the structure MAY be empty.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This input is REQUIRED.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - This structure is REQUIRED, and in the case of an error in the dereferencing process, this MUST NOT be empty.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2 DID URL Dereferencing - To dereference a DID fragment, the complete DID URL including the DID fragment MUST be used.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2.1 DID URL Dereferencing Options - The Media Type that the caller prefers for contentStream.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The Media Type value MUST be expressed as an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(14)</a></span></td></tr>
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - The value of this property MUST be a single keyword ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(2)</a></span></td></tr>
-<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified(16)</a></span></td></tr>
+<tr><td class="title">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M39">unspecified(16)</a></span></td></tr>
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M39">unspecified</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - Each property name MUST be a string.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
@@ -1531,7 +1538,7 @@ are suppressed for readability.
 <tr><td class="title">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - The structure used to communicate this metadata MUST be a map of properties.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">7.3 Metadata Structure - The values within any complex data structures such as maps and lists MUST be one of these data types as well.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M10">example(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(18)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba</a>, <a href="#M4">btcr</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(2)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb</a>, <a href="#M28">schema</a>, <a href="#M29">sol</a>, <a href="#M30">sov(2)</a>, <a href="#M31">stack</a>, <a href="#M32">trust</a>, <a href="#M33">unisot</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(4)</a></span></td></tr>
+<tr><td class="title">All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba</a>, <a href="#M4">btcr</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(2)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb</a>, <a href="#M28">schema</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust</a>, <a href="#M33">unisot</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M38">work</a>, <a href="#M39">unspecified(4)</a></span></td></tr>
 
 </table>
 
@@ -21842,7 +21849,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(37)</span>
+<span class="passed">&#xA0;(38)</span>
 
 
 </th>
@@ -22031,6 +22038,13 @@ are suppressed for readability.
 
 <tr>
 <td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:UNKNOWN</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
 <td>did:sov</td><td>MATTR internal libraries</td>
 <td>did:UNKNOWN</td>
 </tr>
@@ -22126,7 +22140,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -22541,6 +22555,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -22773,7 +22815,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(189)</span>
+<span class="passed">&#xA0;(197)</span>
 
 
 </th>
@@ -23594,6 +23636,62 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -24043,7 +24141,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -24458,6 +24556,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -24690,7 +24816,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -25105,6 +25231,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -25337,7 +25491,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -25752,6 +25906,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -25984,7 +26166,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -26399,6 +26581,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -26631,7 +26841,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(21)</span>
+<span class="passed">&#xA0;(24)</span>
 
 
 </th>
@@ -26639,7 +26849,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
 
 
@@ -26703,6 +26913,27 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:orb</td><td>DID Orb Test Suite</td>
 <td>did:orb:interim:EiDQF58K&#x2026;, expected outcome: deactivatedOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -26785,7 +27016,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(21)</span>
+<span class="passed">&#xA0;(24)</span>
 
 
 </th>
@@ -26793,7 +27024,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
 
 
@@ -26857,6 +27088,27 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:orb</td><td>DID Orb Test Suite</td>
 <td>did:orb:interim:EiDQF58K&#x2026;, expected outcome: deactivatedOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -26939,7 +27191,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(21)</span>
+<span class="passed">&#xA0;(24)</span>
 
 
 </th>
@@ -26947,7 +27199,7 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
 
 
@@ -27011,6 +27263,27 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:orb</td><td>DID Orb Test Suite</td>
 <td>did:orb:interim:EiDQF58K&#x2026;, expected outcome: deactivatedOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -27093,7 +27366,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -27508,6 +27781,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -27740,7 +28041,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -28155,6 +28456,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -28387,7 +28716,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -28802,6 +29131,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -29034,7 +29391,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -29449,6 +29806,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -29681,7 +30066,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -30096,6 +30481,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -30328,7 +30741,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -30743,6 +31156,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -30975,7 +31416,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(94)</span>
+<span class="passed">&#xA0;(98)</span>
 
 
 </th>
@@ -31390,6 +31831,34 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
 </tr>
 
 
@@ -31803,7 +32272,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(72)</span>
+<span class="passed">&#xA0;(73)</span>
 
 
 </th>
@@ -32155,6 +32624,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -32320,7 +32796,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(72)</span>
+<span class="passed">&#xA0;(73)</span>
 
 
 </th>
@@ -32672,6 +33148,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -32837,7 +33320,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(72)</span>
+<span class="passed">&#xA0;(73)</span>
 
 
 </th>
@@ -33189,6 +33672,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -33354,7 +33844,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(72)</span>
+<span class="passed">&#xA0;(73)</span>
 
 
 </th>
@@ -33706,6 +34196,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -33871,7 +34368,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(72)</span>
+<span class="passed">&#xA0;(73)</span>
 
 
 </th>
@@ -34223,6 +34720,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:sov</td><td>Universal Resolver</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -34752,6 +35256,194 @@ are suppressed for readability.
 
 
 <div>
+<p>7.1.2 DID Resolution Metadata - The value of this property MUST be a single keyword ASCII string.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(9)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 2</td></tr>
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did:key</td><td>MATTR internal libraries</td>
+<td>did:key_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:key</td><td>MATTR internal libraries</td>
+<td>did:key:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>MATTR internal libraries</td>
+<td>did:sov:mattr-dev::$_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>MATTR internal libraries</td>
+<td>did:sov:mattr-dev:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>MATTR internal libraries</td>
+<td>did:web::$_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>MATTR internal libraries</td>
+<td>did:web:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(4)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 2</td></tr>
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did:key</td><td>MATTR internal libraries</td>
+<td>did:key:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>MATTR internal libraries</td>
+<td>did:sov:mattr-dev:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>MATTR internal libraries</td>
+<td>did:web:123, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</p>
+
+<table class="simple test-status" style="width: 100%;">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(4)</span>
+
+
+</th>
+<th class="method">Method</th>
+<th class="implementation">Implementation</th>
+<th class="param">Parameters</th>
+</tr>
+<tr><td colspan="4">Total implementations: 2</td></tr>
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did:key</td><td>MATTR internal libraries</td>
+<td>did:key_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>MATTR internal libraries</td>
+<td>did:sov:mattr-dev::$_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>MATTR internal libraries</td>
+<td>did:web::$_222, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+</tbody></table>
+
+</div>
+
+
+<div>
 <p>7.1.3 DID Document Metadata - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</p>
 
 <table class="simple test-status" style="width: 100%;">
@@ -34954,166 +35646,6 @@ are suppressed for readability.
 
 </div>
 
-
-<div>
-<p>7.1.2 DID Resolution Metadata - The value of this property MUST be a single keyword ASCII string.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(7)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.2 DID Resolution Metadata - The value of this property MUST be a single keyword ASCII string.</div></td></tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:key</td><td>MATTR internal libraries</td>
-<td>did:key_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:key</td><td>MATTR internal libraries</td>
-<td>did:key:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:sov</td><td>MATTR internal libraries</td>
-<td>did:sov:mattr-dev::$_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:sov</td><td>MATTR internal libraries</td>
-<td>did:sov:mattr-dev:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:web</td><td>MATTR internal libraries</td>
-<td>did:web::$_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:web</td><td>MATTR internal libraries</td>
-<td>did:web:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(3)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</div></td></tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:key</td><td>MATTR internal libraries</td>
-<td>did:key_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:sov</td><td>MATTR internal libraries</td>
-<td>did:sov:mattr-dev::$_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:web</td><td>MATTR internal libraries</td>
-<td>did:web::$_222, expected outcome: invalidDidErrorOutcome</td>
-</tr>
-
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(3)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</div></td></tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:key</td><td>MATTR internal libraries</td>
-<td>did:key:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:sov</td><td>MATTR internal libraries</td>
-<td>did:sov:mattr-dev:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did:web</td><td>MATTR internal libraries</td>
-<td>did:web:123, expected outcome: notFoundErrorOutcome</td>
-</tr>
-
-
-</tbody></table>
-
-</div>
-
 </section>
     
 
@@ -35128,7 +35660,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -35136,8 +35668,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -35266,14 +35812,28 @@ are suppressed for readability.
 
 
 <br>
-<span class="todo">&#xA0;(16)</span>
+<span class="todo">&#xA0;(18)</span>
 </th>
 <th class="method">Method</th>
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="todo"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -35400,7 +35960,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -35408,8 +35968,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -35536,7 +36110,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -35544,8 +36118,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -35672,7 +36260,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -35680,8 +36268,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -35808,7 +36410,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(31)</span>
+<span class="passed">&#xA0;(35)</span>
 
 
 </th>
@@ -35816,8 +36418,36 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36056,7 +36686,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36064,8 +36694,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36192,7 +36836,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36200,8 +36844,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36328,7 +36986,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36336,8 +36994,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36464,7 +37136,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36472,8 +37144,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36600,7 +37286,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36608,8 +37294,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -36736,7 +37436,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -36744,8 +37444,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -37004,7 +37718,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -37012,8 +37726,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -37140,7 +37868,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -37148,8 +37876,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -37276,7 +38018,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -37284,8 +38026,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -37412,7 +38168,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(13)</span>
+<span class="passed">&#xA0;(15)</span>
 
 
 </th>
@@ -37420,8 +38176,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -37534,7 +38304,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(15)</span>
+<span class="passed">&#xA0;(17)</span>
 
 
 </th>
@@ -37542,8 +38312,22 @@ are suppressed for readability.
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 5</td></tr>
+<tr><td colspan="4">Total implementations: 6</td></tr>
 
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:sov</td><td>Universal Resolver</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
 
 
 <tr>
@@ -64033,9 +64817,9 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(19)</span>
-
-
+<span class="passed">&#xA0;(128)</span>
+<br>
+<span class="todo">&#xA0;(2)</span>
 </th>
 <th class="suite">Suite</th>
 <th class="param">Parameters</th>
@@ -64181,6 +64965,783 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did-resolution</td>
 <td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcomes</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:UNKNOWN</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:0000000000000000&#x2026;, expected outcome: notFoundErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-resolution</td>
+<td>did:sov:danube:_$::, expected outcome: invalidDidErrorOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="todo"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-url-dereferencing</td>
+<td>did:sov:WRfXPg8dantKVubE&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 </tbody></table>
