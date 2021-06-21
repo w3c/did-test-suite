@@ -29,6 +29,7 @@ module.exports = {
     require('../implementations/did-key-mattr.json'),
     require('../implementations/did-web-mattr.json'),
     require('../implementations/did-sov-mattr.json'),
+    require('../implementations/universal-resolver-identifier-tests.json'),
    ...brokenFixtures
   ],
 };
