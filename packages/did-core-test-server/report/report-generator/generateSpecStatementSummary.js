@@ -47,6 +47,10 @@ are suppressed for readability.
         let todo_methods = [];
 
         Object.keys(summaryByTitle[title]).sort().map( method => {
+            if(method === 'did:example') {
+              return;
+            }
+
             let m = method.replace(/^did:(.*)$/, "$1");
             let status = summaryByTitle[title][method];
             if (status['passed']) {
