@@ -1,6 +1,6 @@
 {
   "didMethod": "did:vaa",
-  "implementation": "DID IS Test Suite",
+  "implementation": "DID VAA Test Suite",
   "implementer": "CAICT",
   "supportedContentTypes": [
     "application/did+ld+json"
