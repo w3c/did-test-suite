@@ -1,0 +1,123 @@
+{
+    "didMethod": "did:kilt",
+    "implementation": "DID Test Suite",
+    "implementer": "Kilt Protocol",
+    "supportedContentTypes": [
+      "application/did+json",
+      "application/did+ld+json"
+    ],
+    "dids": [
+        "did:kilt:04siJtc4dYq2gPre8Xj6KJcSjVAdi1gmjctUzjf3AwrtNnhvy",
+        "did:kilt:14siJtc4dYq2gPre8Xj6KJcSjVAdi1gmjctUzjf3AwrtNnhvy"
+    ],
+    "didParameters": {},
+    "did:kilt:04siJtc4dYq2gPre8Xj6KJcSjVAdi1gmjctUzjf3AwrtNnhvy": {
+      "didDocumentDataModel": {
+        "properties": {
+          "id": "did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+          "verificationMethod": [
+            {
+              "id": "did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#authentication",
+              "type": "Ed25519VerificationKey2018",
+              "controller": "did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+              "publicKeyBase58": "5mMUjxBBZFnLcPgqe3bSWdn4nUH7TjXaWyy5pxEqeJ94"
+            },
+            {
+                "id": "did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#key-agreement",
+                "type": "X25519KeyAgreementKey2019",
+                "controller": "did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+                "publicKeyBase58": "H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt"
+            }            
+          ],
+          "authentication": ["#authentication"],
+          "keyAgreement": ["#key-agreement"]
+        }
+      },
+      "application/did+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {}
+        },
+        "representation": "{\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"verificationMethod\":[{\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#authentication\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"5mMUjxBBZFnLcPgqe3bSWdn4nUH7TjXaWyy5pxEqeJ94\"},{\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#key-agreement\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt\"}],\"authentication\":[\"#authentication\"],\"keyAgreement\":[\"#key-agreement\"]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        }
+      },
+      "application/did+ld+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {
+            "@context": ["https://www.w3.org/ns/did/v1"]
+          }
+        },
+        "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"verificationMethod\":[{\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#authentication\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"5mMUjxBBZFnLcPgqe3bSWdn4nUH7TjXaWyy5pxEqeJ94\"},{\"id\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#key-agreement\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:kilt:04pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt\"}],\"authentication\":[\"#authentication\"],\"keyAgreement\":[\"#key-agreement\"]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        }
+      }
+    },
+    "did:kilt:14siJtc4dYq2gPre8Xj6KJcSjVAdi1gmjctUzjf3AwrtNnhvy": {
+      "didDocumentDataModel": {
+        "properties": {
+          "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+          "verificationMethod": [
+            {
+              "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B",
+              "type": "Ed25519VerificationKey2018",
+              "controller": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+              "publicKeyBase58": "Ge7mFBKiGbSnff1FYnhB2ZNB3mrM96MYwgSbss3wXQA7"
+            },
+            {
+                "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F",
+                "type": "X25519KeyAgreementKey2019",
+                "controller": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+                "publicKeyBase58": "H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt"
+            },
+            {
+                "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2",
+                "type": "Ed25519VerificationKey2018",
+                "controller": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+                "publicKeyBase58": "J2wDLnyUNequXyZQqxokf1jbywJSPDU3S3qJYpNrZkip"
+            },
+            {
+                "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417",
+                "type": "Ed25519VerificationKey2018",
+                "controller": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im",
+                "publicKeyBase58": "58n2r2RCoToNATgmaXydkLVubhgtceKEcPiv9mxjgDQz"
+            }
+          ],
+          "authentication": ["#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B"],
+          "keyAgreement": ["#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F"],
+          "assertionMethod": ["#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2"],
+          "capabilityDelegation": ["#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417"],
+          "service": [{
+              "id": "did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#webpage",
+              "type": "LinkedDomains",
+              "serviceEndpoint": "https://kilt.io"
+          }]
+        }
+      },
+      "application/did+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {}
+        },
+        "representation": "{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"verificationMethod\":[{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"Ge7mFBKiGbSnff1FYnhB2ZNB3mrM96MYwgSbss3wXQA7\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"J2wDLnyUNequXyZQqxokf1jbywJSPDU3S3qJYpNrZkip\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"58n2r2RCoToNATgmaXydkLVubhgtceKEcPiv9mxjgDQz\"}],\"authentication\":[\"#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B\"],\"keyAgreement\":[\"#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F\"],\"assertionMethod\":[\"#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2\"],\"capabilityDelegation\":[\"#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417\"],\"service\":[{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#webpage\",\"type\":\"LinkedDomains\",\"serviceEndpoint\":\"https://kilt.io\"}]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        }
+      },
+      "application/did+ld+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {
+            "@context": ["https://www.w3.org/ns/did/v1"]
+          }
+        },
+        "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"verificationMethod\":[{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"Ge7mFBKiGbSnff1FYnhB2ZNB3mrM96MYwgSbss3wXQA7\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"H56xqbGC7egoubPuPP6m386SaBXKRMgDEavDG5QuTKBt\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"J2wDLnyUNequXyZQqxokf1jbywJSPDU3S3qJYpNrZkip\"},{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im\",\"publicKeyBase58\":\"58n2r2RCoToNATgmaXydkLVubhgtceKEcPiv9mxjgDQz\"}],\"authentication\":[\"#616E893F2072B3D6D97BEC9435D4F70CF1B4C37AFD94B3AFCFEA2D27A02C4B4B\"],\"keyAgreement\":[\"#8AD637DDBB173FB4435436B75F4BF000A826CCD5028BCFBB140D75FEF976D49F\"],\"assertionMethod\":[\"#04BF24DE3573B594B06CEFFE2EF3199322CC5069974789F802655D0CB64E80F2\"],\"capabilityDelegation\":[\"#B49EB6CC5035440DD62C638DDE13A4D80FD885EE2106D71E19272D49C9807417\"],\"service\":[{\"id\":\"did:kilt:14pWtccdDcdCJhXJnyqJHL3kk2u3oPyhAsYwpBhcMVJLo38im#webpage\",\"type\":\"LinkedDomains\",\"serviceEndpoint\":\"https://kilt.io\"}]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        }
+      }        
+    }
+  }

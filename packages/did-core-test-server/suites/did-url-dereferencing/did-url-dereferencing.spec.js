@@ -8,15 +8,17 @@ runtimeSuiteConfig = Object.assign({}, defaultSuiteConfig, systemSuiteConfig);
 const utils = require('../resolution-utils');
 
 describe("suites/did-url-dereferencing", () => {
-  runtimeSuiteConfig.dereferencers.forEach((implementation) => {
-    describe("IMPLEMENTATION ::" + implementation.implementation + "::", () => {
-      let suiteName = `7.2.x DID URL Dereferencing - ${implementation.implementation} - ${implementation.implementer}`;
+  runtimeSuiteConfig.dereferencers.forEach((imp) => {
+    const {didMethod, implementation, implementer} = imp;
+
+    describe(`IMPLEMENTATION ::${didMethod}::${implementation}::${implementer}::`, () => {
+      let suiteName = `7.2.x DID URL Dereferencing - ${imp.implementation} - ${imp.implementer}`;
 
       describe(suiteName, () => {
         let i = 0;
-        implementation.executions.forEach((execution) => {
-          const expectedOutcome = utils.findExpectedOutcome(implementation.expectedOutcomes, i++);
-          require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome, implementation);
+        imp.executions.forEach((execution) => {
+          const expectedOutcome = utils.findExpectedOutcome(imp.expectedOutcomes, i++);
+          require('./did-url-dereferencing').didUrlDereferencingTests(execution, expectedOutcome, imp);
         });
       });
     });

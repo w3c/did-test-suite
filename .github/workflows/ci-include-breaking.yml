@@ -1,0 +1,25 @@
+name: Include Breaking
+on: [push]
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Begin CI...
+        uses: actions/checkout@v2
+      - name: Use Node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Install
+        run: npm install
+      - name: Lint
+        run: npm run lint 
+      - name: Test
+        run: DID_WG_INCLUDE_BREAKING='🔥' npm run test || true
+      - name: Build Report
+        run: npm run test-and-generate-report
+      - name: Deploy Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

@@ -1,10 +1,15 @@
+const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
+  require('../implementations/did-ion.json'),
+] : []
+
 module.exports = {
-  "name": "did-spec",
-  "didMethods": [
+  name: 'did-spec',
+  didMethods: [
     require('../implementations/did-example-didwg.json'),
     require('../implementations/did-is.json'),
     require('../implementations/did-key-2018-db.json'),
     require('../implementations/did-key-2020-db.json'),
+    require('../implementations/did-kilt-2021.json'),
     require('../implementations/did-3-2021-3box-labs.json'),
     require('../implementations/did-ethr-2021-consensys-mesh.json'),
     require('../implementations/did-trust.json'),
@@ -12,6 +17,18 @@ module.exports = {
     require('../implementations/did-monid.json'),
     require('../implementations/did-unisot.json'),
     require('../implementations/did-vaa.json'),
-    require('../implementations/did-orb.json')
-  ]
-}
+    require('../implementations/did-lit.json'),
+    require('../implementations/did-schema.json'),
+    require('../implementations/did-orb.json'),
+    require('../implementations/did-nft-2021-3box-labs.json'),
+    require('../implementations/did-key-transmute.json'),
+    require('../implementations/did-web-transmute.json'),
+    require('../implementations/did-photon-transmute.json'),
+    require('../implementations/did-elem-transmute.json'),
+    require('../implementations/did-key-mattr.json'),
+    require('../implementations/did-web-mattr.json'),
+    require('../implementations/did-sov-mattr.json'),
+    ...brokenFixtures
+   
+  ],
+};

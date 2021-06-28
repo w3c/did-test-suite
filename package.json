@@ -18,7 +18,7 @@
     "w3c"
   ],
   "scripts": {
-    "install:ci": "npm install --ignore-scripts && lerna link && lerna bootstrap --since origin/master --include-dependencies",
+    "install:ci": "npm install --ignore-scripts && lerna link && lerna bootstrap --since origin/main --include-dependencies",
     "postinstall": "lerna bootstrap",
     "prepare": "lerna run prepare",
     "start": "npm run docker:up",
@@ -26,7 +26,9 @@
     "test": "lerna run test --stream",
     "docker:up": "docker-compose up",
     "docker:build": "docker-compose up --build",
-    "generate-report": "lerna run generate-report --stream"
+    "generate-test-data": "lerna run generate-test-data --stream",
+    "generate-report": "lerna run generate-report",
+    "test-and-generate-report": "lerna run test-and-generate-report"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
@@ -36,5 +38,8 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }

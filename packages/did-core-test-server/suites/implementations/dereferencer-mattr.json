@@ -1,0 +1,145 @@
+{
+    "implementation": "MATTR internal libraries",
+    "implementer": "MATTR Limited",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 1, 2, 3, 4, 5, 6],
+        "invalidDidUrlErrorOutcome": [7],
+        "notFoundErrorOutcome": [8]
+    },
+    "executions": [{
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"@context\":[\"https://w3.org/ns/did/v1\",\"https://kyledenhartog/context/doggoservice\",\"https://www.w3id.org/security/suites/ed25519-2018/v1\",\"https://www.w3id.org/security/suites/x25519-2019/v1\"],\"id\":\"did:web:kyledenhartog.com\",\"verificationMethod\":[{\"id\":\"#signingKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH\"},{\"id\":\"did:web:kyledenhartog.com#handshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj\"},{\"id\":\"/pathHandshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"5YLjenFRbMKCHV9HsFWhYbmxUnVnuEQxREwYvmRcLpX7\"}],\"authentication\":[\"did:web:kyledenhartog.com#signingKey\"],\"assertionMethod\":[\"did:web:kyledenhartog.com#signingKey\",{\"id\":\"did:web:kyledenhartog.com/fullyQualifiedPathSigningKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"Fwwr3ccA6UEWFWWpd7X7Xo1vEqSDw8Zj56fKw1q2FBjq\"}],\"capabilityDelegation\":[\"did:web:kyledenhartog.com#signingKey\"],\"capabilityInvocation\":[\"did:web:kyledenhartog.com#signingKey\"],\"keyAgreement\":[\"did:web:kyledenhartog.com#handshakeKey\",\"/pathHandshakeKey\"],\"service\":[{\"id\":\"did:web:kyledenhartog.com#dogPicService\",\"type\":\"DogPicService\",\"serviceEndpoint\":\"https://i.imgur.com\"}]}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com#handshakeKey",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"did:web:kyledenhartog.com#handshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com#signingKey",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"#signingKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com/pathHandshakeKey",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"/pathHandshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"5YLjenFRbMKCHV9HsFWhYbmxUnVnuEQxREwYvmRcLpX7\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com/fullyQualifiedPathSigningKey",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"did:web:kyledenhartog.com/fullyQualifiedPathSigningKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"Fwwr3ccA6UEWFWWpd7X7Xo1vEqSDw8Zj56fKw1q2FBjq\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com?service=dogPicService",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"did:web:kyledenhartog.com#dogPicService\",\"type\":\"DogPicService\",\"serviceEndpoint\":\"https://i.imgur.com\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:web:kyledenhartog.com?service=dogPicService&relativeRef=KW6NCtG.jpg",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "https://i.imgur.com/KW6NCtG.jpg",
+            "dereferencingMetadata": {
+                "contentType": "text/url"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:example_333",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "invalidDidUrl"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:example:444",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "notFound"
+            },
+            "contentMetadata": {}
+        }
+    }]
+}

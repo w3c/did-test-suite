@@ -45,16 +45,11 @@ const didMetadataStructureTests = (suiteConfig) => {
                             expect(didDocumentMetadata).toEqual(obj);
                         });
 
-                        it.todo('7.3 Metadata Structure - ' +
-                                'All metadata property definitions registered in the DID Specification Registries ' +
-                                '[DID-SPEC-REGISTRIES] MUST define the value type, including any additional formats ' +
-                                'or restrictions to that value (for example, a string formatted as a date or as a decimal integer).');
-
-                    };
+                    }
                 });
-            })
+            });
         });
-    })
+    });
 };
 
 module.exports = { didMetadataStructureTests };

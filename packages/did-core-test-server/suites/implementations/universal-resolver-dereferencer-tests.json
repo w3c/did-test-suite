@@ -1,0 +1,208 @@
+{
+    "implementation" : "Universal Resolver",
+    "implementer" : "Decentralized Identity Foundation and Contributors",
+    "didMethod" : "did:sov",
+    "expectedOutcomes" : {
+        "notFoundErrorOutcome" : [ 3, 4 ],
+        "invalidDidUrlErrorOutcome" : [ 2 ],
+        "defaultOutcome" : [ 0, 1 ]
+    },
+    "executions" : [ {
+        "function" : "dereference",
+        "input" : {
+            "didUrl" : "did:sov:WRfXPg8dantKVubE3HX8pw",
+            "dereferenceOptions" : {
+                "accept" : "application/did+ld+json"
+            }
+        },
+        "output" : {
+            "dereferencingMetadata" : {
+                "contentType" : "application/did+ld+json"
+            },
+            "contentStream" : "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:sov:WRfXPg8dantKVubE3HX8pw\",\"verificationMethod\":[{\"type\":\"Ed25519VerificationKey2018\",\"id\":\"did:sov:WRfXPg8dantKVubE3HX8pw#key-1\",\"publicKeyBase58\":\"H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV\"}],\"authentication\":[{\"type\":\"Ed25519VerificationKey2018\",\"id\":\"did:sov:WRfXPg8dantKVubE3HX8pw#key-1\",\"publicKeyBase58\":\"H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV\"}],\"assertionMethod\":[{\"type\":\"Ed25519VerificationKey2018\",\"id\":\"did:sov:WRfXPg8dantKVubE3HX8pw#key-1\",\"publicKeyBase58\":\"H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV\"}],\"service\":[{\"type\":\"agent\",\"serviceEndpoint\":\"https://agents.danubeclouds.com/agent/WRfXPg8dantKVubE3HX8pw\"},{\"type\":\"xdi\",\"serviceEndpoint\":\"https://xdi03-at.danubeclouds.com/cl/+!:did:sov:WRfXPg8dantKVubE3HX8pw\"}]}",
+            "contentMetadata" : {
+                "attrResponse" : {
+                    "result" : {
+                        "dest" : "WRfXPg8dantKVubE3HX8pw",
+                        "type" : "104",
+                        "seqNo" : 21.0,
+                        "reqId" : 1.62428647887700685E18,
+                        "data" : "{\"endpoint\":{\"agent\":\"https://agents.danubeclouds.com/agent/WRfXPg8dantKVubE3HX8pw\",\"xdi\":\"https://xdi03-at.danubeclouds.com/cl/+!:did:sov:WRfXPg8dantKVubE3HX8pw\"}}",
+                        "txnTime" : 1.504719117E9,
+                        "identifier" : "KZd8KnBowpgtonV3q587zc",
+                        "raw" : "endpoint",
+                        "state_proof" : {
+                            "multi_signature" : {
+                                "value" : {
+                                    "timestamp" : 1.624286202E9,
+                                    "state_root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps",
+                                    "pool_state_root_hash" : "711hDE49V1mk8pN7dRXz74VbcJrMhSDiF1sM8NicthCB",
+                                    "ledger_id" : 1.0,
+                                    "txn_root_hash" : "CHi7ai91hmydgjD1TNb4P66DUZrog6Qw3SS7RrgpQboJ"
+                                },
+                                "participants" : [ "VeridiumIDC", "OASFCU", "pcValidator01", "icenode", "ServerVS", "DustStorm", "prosovitor", "danube", "findentity", "atbsovrin", "sovrin.sicpa.com", "BIGAWSUSEAST1-001", "Stuard" ],
+                                "signature" : "Qw6XkbX3cA4oh8KRJcGMSG9Vp1npVtD7YGq75oFqDXDaML12AqeREUZhiyKXZgV8YiexsWaAxzWTZVpt9NjrANX6hBq5xPTye9tdvMz9X4JjWjGp18MGumz3vaP3ZacJRQDqyzSzZiiR9x6cFGxgDVtWa1CrRAohjN2xB4Z4hUNAP9"
+                            },
+                            "proof_nodes" : "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",
+                            "root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps"
+                        }
+                    },
+                    "op" : "REPLY"
+                },
+                "poolVersion" : 2,
+                "nymResponse" : {
+                    "result" : {
+                        "dest" : "WRfXPg8dantKVubE3HX8pw",
+                        "type" : "105",
+                        "seqNo" : 104.0,
+                        "reqId" : 1.62428647725295104E18,
+                        "data" : "{\"dest\":\"WRfXPg8dantKVubE3HX8pw\",\"identifier\":\"BrYDA5NubejDVHkCYBbpY5\",\"role\":null,\"seqNo\":104,\"txnTime\":1541709495,\"verkey\":\"~P7F3BNs5VmQ6eVpwkNKJ5D\"}",
+                        "txnTime" : 1.541709495E9,
+                        "identifier" : "KZd8KnBowpgtonV3q587zc",
+                        "state_proof" : {
+                            "multi_signature" : {
+                                "value" : {
+                                    "timestamp" : 1.624286202E9,
+                                    "state_root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps",
+                                    "pool_state_root_hash" : "711hDE49V1mk8pN7dRXz74VbcJrMhSDiF1sM8NicthCB",
+                                    "ledger_id" : 1.0,
+                                    "txn_root_hash" : "CHi7ai91hmydgjD1TNb4P66DUZrog6Qw3SS7RrgpQboJ"
+                                },
+                                "participants" : [ "VeridiumIDC", "OASFCU", "pcValidator01", "icenode", "ServerVS", "DustStorm", "prosovitor", "danube", "findentity", "atbsovrin", "sovrin.sicpa.com", "BIGAWSUSEAST1-001", "Stuard" ],
+                                "signature" : "Qw6XkbX3cA4oh8KRJcGMSG9Vp1npVtD7YGq75oFqDXDaML12AqeREUZhiyKXZgV8YiexsWaAxzWTZVpt9NjrANX6hBq5xPTye9tdvMz9X4JjWjGp18MGumz3vaP3ZacJRQDqyzSzZiiR9x6cFGxgDVtWa1CrRAohjN2xB4Z4hUNAP9"
+                            },
+                            "proof_nodes" : "+QWt+J2fIEUXWXmiOzUjXAl+0g1WTcital73zH8ZtT6Dg4YBLbh7+Hm4d3siaWRlbnRpZmllciI6IkJyWURBNU51YmVqRFZIa0NZQmJwWTUiLCJyb2xlIjpudWxsLCJzZXFObyI6MTA0LCJ0eG5UaW1lIjoxNTQxNzA5NDk1LCJ2ZXJrZXkiOiJ+UDdGM0JOczVWbVE2ZVZwd2tOS0o1RCJ9+FGAgICAgICAgKDvFfrMCOLpuL9giztlBG11bvJ0QZwp8RL6jWVZ0eaZY6B7KxPxoJBwPU9pj4Z1cY56ncndZBdj4M025Lv6uN1+r4CAgICAgID4kaAv0ABX4ZvkGVwPFn6EQaWRIM8qclCqzw4Eu/tJbdmlyYCAoEA4/kTMN6A0EdN9zdsQdX2gdy7e7ZghvDcSlydpPMscgICAgICAoE1RkVXS40Uhz6wzn7gVHE82+kzZf0ZhPTb34erqzGCQgICAgKCFfZdqEPvrEX+dgGX7tr01LL9+CD5r6FSFTmqGbL+23YD5AhGggefUaLbOnQ5X5Fu59UsQfWT+rR8UyNQgt01TrzMSpX6gmHClKFgKEk72NKMRYMLkukkb6z4yp5HiOG94dB8BuzGgl56z2U00P7AcnpU6AgmlV8DFZnQtARlj+3JtIbODXB2g5Imyvl7l/eYzmCu2Z5DU2wTHOS1RN3/QtX9TiOSq7z+gTkxHvKSoSpFWAQm9Q2973hkPTPJu3ju7lU5TpGuVytWgZ9rVgHaiyrajJ2THyUS0Foy7Hex7b80x1FSAJwqhTW6gZS1VJsI5+CA+nGcorpCIcQzSnB5EPECLHb0TGqC14wygkrH/fjs3VpH//hU+q9ooWviUT4QNpGi08u2M85KlwRyglYcyRo9lgR6HXl4XavAkKNw6VnK2WI+O+cTTG0uT8MqgMNckO1hCbXq4WddMMXzauJw2e0EYcEmwwi4PFeXz5ymg6qhtiG5NfjUlr0woLqgnZPlYRhLaVZQufXMs/n8lO5Kga1aVk8V0aROvLBKiJ4X8DUx2g8eeM/OCspNdmVq2kB6gTvWh4GQY7uD0Xorb6S3DTIBy17ya1dWOW5V9PoH/w7CgaQs8zGJexExn5GyLCIxZC0QWng+oiF/dxrcVWyMxbAagR2Dj97/VKwpt4VJ/FHQFLRZiREDrzYXsmdpkpaKywc2gfWRwSfluESAj7AlxnIr0qjgXv5Ew162+ipMnTg85QeOA+QIRoN0wY7um78ll7d30xY+5PnoouLUVKgp3x0ka/BFfNfQqoHICilQZ0n8W3y/Je3vCerQmxyXlDG2xkg0fhTZ3IgpWoPhjOJZg95mn1vca/Q/LhbHwHcnnXlGeMRMiBD5XfI+hoCXwM0qclYp7pukNmu5cKBIoa0yiL2QnSicDS0rZi8NNoBaDnDf0VGMFq67md2+dhHnCtDybIk82GbLfcfCYi4OAoA1qcRe5mBbOPUHeQWoeog1bnJrouhbGqkPcGCKYD/j4oKhqf2XZrVR+ajLZ1eGLHJ945Y9VgOij/Mk3fA4dPjOyoNrqbNEJN8SUF/EZA5HMi6xIUJoNowVSuHHfEQaM37s0oK0V2qnRasSO5Wt/R9UsFHE12LaqW08osvQA6Q34FqV+oCaIlTwRMRon7BYHV4lI2uQ5FPxJuzrLfnZ65usQp9huoBOFKu1n+gZfvonzHdPvmNka7y6gqMtN9Ked2+XfeX7FoIrPP0FtWMeRi/iEfDzbbicky5L/ZunUh8ZrI6XA3raAoJdv3wASCfuV2mLuoqyCEIwc9h5UCTPLdrV89G9xvV0ioM1dkSiRaZiVPa9Hn8t/qfHGfIOGyn5D5pcvN4dFqR4goEM8mBFWOxZrmwimqL3ncfbzDfZeqsIhQv3wXvMEDXJOoKltYlvyQFNmrpuu21pD2bBlaK/zTKtR/K2JIF2OfcBMgA==",
+                            "root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps"
+                        }
+                    },
+                    "op" : "REPLY"
+                },
+                "network" : "_"
+            }
+        }
+    }, {
+        "function" : "dereference",
+        "input" : {
+            "didUrl" : "did:sov:WRfXPg8dantKVubE3HX8pw#key-1",
+            "dereferenceOptions" : {
+                "accept" : "application/did+ld+json"
+            }
+        },
+        "output" : {
+            "dereferencingMetadata" : {
+                "contentType" : "application/ld+json"
+            },
+            "contentStream" : "{\"type\":\"Ed25519VerificationKey2018\",\"id\":\"did:sov:WRfXPg8dantKVubE3HX8pw#key-1\",\"publicKeyBase58\":\"H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV\"}",
+            "contentMetadata" : {
+                "attrResponse" : {
+                    "result" : {
+                        "dest" : "WRfXPg8dantKVubE3HX8pw",
+                        "type" : "104",
+                        "seqNo" : 21.0,
+                        "reqId" : 1.62428647968761242E18,
+                        "data" : "{\"endpoint\":{\"agent\":\"https://agents.danubeclouds.com/agent/WRfXPg8dantKVubE3HX8pw\",\"xdi\":\"https://xdi03-at.danubeclouds.com/cl/+!:did:sov:WRfXPg8dantKVubE3HX8pw\"}}",
+                        "txnTime" : 1.504719117E9,
+                        "identifier" : "KZd8KnBowpgtonV3q587zc",
+                        "raw" : "endpoint",
+                        "state_proof" : {
+                            "multi_signature" : {
+                                "value" : {
+                                    "timestamp" : 1.624286202E9,
+                                    "state_root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps",
+                                    "pool_state_root_hash" : "711hDE49V1mk8pN7dRXz74VbcJrMhSDiF1sM8NicthCB",
+                                    "ledger_id" : 1.0,
+                                    "txn_root_hash" : "CHi7ai91hmydgjD1TNb4P66DUZrog6Qw3SS7RrgpQboJ"
+                                },
+                                "participants" : [ "VeridiumIDC", "OASFCU", "pcValidator01", "icenode", "ServerVS", "DustStorm", "prosovitor", "danube", "findentity", "atbsovrin", "sovrin.sicpa.com", "BIGAWSUSEAST1-001", "Stuard" ],
+                                "signature" : "Qw6XkbX3cA4oh8KRJcGMSG9Vp1npVtD7YGq75oFqDXDaML12AqeREUZhiyKXZgV8YiexsWaAxzWTZVpt9NjrANX6hBq5xPTye9tdvMz9X4JjWjGp18MGumz3vaP3ZacJRQDqyzSzZiiR9x6cFGxgDVtWa1CrRAohjN2xB4Z4hUNAP9"
+                            },
+                            "proof_nodes" : "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",
+                            "root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps"
+                        }
+                    },
+                    "op" : "REPLY"
+                },
+                "poolVersion" : 2,
+                "nymResponse" : {
+                    "result" : {
+                        "dest" : "WRfXPg8dantKVubE3HX8pw",
+                        "type" : "105",
+                        "seqNo" : 104.0,
+                        "reqId" : 1.6242864794245993E18,
+                        "data" : "{\"dest\":\"WRfXPg8dantKVubE3HX8pw\",\"identifier\":\"BrYDA5NubejDVHkCYBbpY5\",\"role\":null,\"seqNo\":104,\"txnTime\":1541709495,\"verkey\":\"~P7F3BNs5VmQ6eVpwkNKJ5D\"}",
+                        "txnTime" : 1.541709495E9,
+                        "identifier" : "KZd8KnBowpgtonV3q587zc",
+                        "state_proof" : {
+                            "multi_signature" : {
+                                "value" : {
+                                    "timestamp" : 1.624286202E9,
+                                    "state_root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps",
+                                    "pool_state_root_hash" : "711hDE49V1mk8pN7dRXz74VbcJrMhSDiF1sM8NicthCB",
+                                    "ledger_id" : 1.0,
+                                    "txn_root_hash" : "CHi7ai91hmydgjD1TNb4P66DUZrog6Qw3SS7RrgpQboJ"
+                                },
+                                "participants" : [ "VeridiumIDC", "OASFCU", "pcValidator01", "icenode", "ServerVS", "DustStorm", "prosovitor", "danube", "findentity", "atbsovrin", "sovrin.sicpa.com", "BIGAWSUSEAST1-001", "Stuard" ],
+                                "signature" : "Qw6XkbX3cA4oh8KRJcGMSG9Vp1npVtD7YGq75oFqDXDaML12AqeREUZhiyKXZgV8YiexsWaAxzWTZVpt9NjrANX6hBq5xPTye9tdvMz9X4JjWjGp18MGumz3vaP3ZacJRQDqyzSzZiiR9x6cFGxgDVtWa1CrRAohjN2xB4Z4hUNAP9"
+                            },
+                            "proof_nodes" : "+QWt+J2fIEUXWXmiOzUjXAl+0g1WTcital73zH8ZtT6Dg4YBLbh7+Hm4d3siaWRlbnRpZmllciI6IkJyWURBNU51YmVqRFZIa0NZQmJwWTUiLCJyb2xlIjpudWxsLCJzZXFObyI6MTA0LCJ0eG5UaW1lIjoxNTQxNzA5NDk1LCJ2ZXJrZXkiOiJ+UDdGM0JOczVWbVE2ZVZwd2tOS0o1RCJ9+FGAgICAgICAgKDvFfrMCOLpuL9giztlBG11bvJ0QZwp8RL6jWVZ0eaZY6B7KxPxoJBwPU9pj4Z1cY56ncndZBdj4M025Lv6uN1+r4CAgICAgID4kaAv0ABX4ZvkGVwPFn6EQaWRIM8qclCqzw4Eu/tJbdmlyYCAoEA4/kTMN6A0EdN9zdsQdX2gdy7e7ZghvDcSlydpPMscgICAgICAoE1RkVXS40Uhz6wzn7gVHE82+kzZf0ZhPTb34erqzGCQgICAgKCFfZdqEPvrEX+dgGX7tr01LL9+CD5r6FSFTmqGbL+23YD5AhGggefUaLbOnQ5X5Fu59UsQfWT+rR8UyNQgt01TrzMSpX6gmHClKFgKEk72NKMRYMLkukkb6z4yp5HiOG94dB8BuzGgl56z2U00P7AcnpU6AgmlV8DFZnQtARlj+3JtIbODXB2g5Imyvl7l/eYzmCu2Z5DU2wTHOS1RN3/QtX9TiOSq7z+gTkxHvKSoSpFWAQm9Q2973hkPTPJu3ju7lU5TpGuVytWgZ9rVgHaiyrajJ2THyUS0Foy7Hex7b80x1FSAJwqhTW6gZS1VJsI5+CA+nGcorpCIcQzSnB5EPECLHb0TGqC14wygkrH/fjs3VpH//hU+q9ooWviUT4QNpGi08u2M85KlwRyglYcyRo9lgR6HXl4XavAkKNw6VnK2WI+O+cTTG0uT8MqgMNckO1hCbXq4WddMMXzauJw2e0EYcEmwwi4PFeXz5ymg6qhtiG5NfjUlr0woLqgnZPlYRhLaVZQufXMs/n8lO5Kga1aVk8V0aROvLBKiJ4X8DUx2g8eeM/OCspNdmVq2kB6gTvWh4GQY7uD0Xorb6S3DTIBy17ya1dWOW5V9PoH/w7CgaQs8zGJexExn5GyLCIxZC0QWng+oiF/dxrcVWyMxbAagR2Dj97/VKwpt4VJ/FHQFLRZiREDrzYXsmdpkpaKywc2gfWRwSfluESAj7AlxnIr0qjgXv5Ew162+ipMnTg85QeOA+QIRoN0wY7um78ll7d30xY+5PnoouLUVKgp3x0ka/BFfNfQqoHICilQZ0n8W3y/Je3vCerQmxyXlDG2xkg0fhTZ3IgpWoPhjOJZg95mn1vca/Q/LhbHwHcnnXlGeMRMiBD5XfI+hoCXwM0qclYp7pukNmu5cKBIoa0yiL2QnSicDS0rZi8NNoBaDnDf0VGMFq67md2+dhHnCtDybIk82GbLfcfCYi4OAoA1qcRe5mBbOPUHeQWoeog1bnJrouhbGqkPcGCKYD/j4oKhqf2XZrVR+ajLZ1eGLHJ945Y9VgOij/Mk3fA4dPjOyoNrqbNEJN8SUF/EZA5HMi6xIUJoNowVSuHHfEQaM37s0oK0V2qnRasSO5Wt/R9UsFHE12LaqW08osvQA6Q34FqV+oCaIlTwRMRon7BYHV4lI2uQ5FPxJuzrLfnZ65usQp9huoBOFKu1n+gZfvonzHdPvmNka7y6gqMtN9Ked2+XfeX7FoIrPP0FtWMeRi/iEfDzbbicky5L/ZunUh8ZrI6XA3raAoJdv3wASCfuV2mLuoqyCEIwc9h5UCTPLdrV89G9xvV0ioM1dkSiRaZiVPa9Hn8t/qfHGfIOGyn5D5pcvN4dFqR4goEM8mBFWOxZrmwimqL3ncfbzDfZeqsIhQv3wXvMEDXJOoKltYlvyQFNmrpuu21pD2bBlaK/zTKtR/K2JIF2OfcBMgA==",
+                            "root_hash" : "SP9jPTgBbdQKK2EN2DZWJYjtpcBrh8KEUmYi9ubgQps"
+                        }
+                    },
+                    "op" : "REPLY"
+                },
+                "network" : "_"
+            }
+        }
+    }, {
+        "function" : "dereference",
+        "input" : {
+            "didUrl" : "did:sov:WRfXPg8dantKVubE3HX8pw#key-1#key-2",
+            "dereferenceOptions" : {
+                "accept" : "application/did+ld+json"
+            }
+        },
+        "output" : {
+            "dereferencingMetadata" : {
+                "errorMessage" : "Cannot parse DID URL: did:sov:WRfXPg8dantKVubE3HX8pw#key-1#key-2",
+                "error" : "invalidDidUrl",
+                "contentType" : "application/did+ld+json"
+            },
+            "contentStream" : "",
+            "contentMetadata" : { }
+        }
+    }, {
+        "function" : "dereference",
+        "input" : {
+            "didUrl" : "did:sov:WRfXPg8dantKVubE3HX8pw#key-3",
+            "dereferenceOptions" : {
+                "accept" : "application/did+ld+json"
+            }
+        },
+        "output" : {
+            "dereferencingMetadata" : {
+                "errorMessage" : "Fragment not found: key-3",
+                "error" : "notFound",
+                "contentType" : "application/did+ld+json"
+            },
+            "contentStream" : "",
+            "contentMetadata" : { }
+        }
+    }, {
+        "function" : "dereference",
+        "input" : {
+            "didUrl" : "did:sov:0000000000000000000000",
+            "dereferenceOptions" : {
+                "accept" : "application/did+ld+json"
+            }
+        },
+        "output" : {
+            "dereferencingMetadata" : {
+                "errorMessage" : "Error notFound from resolver: No resolve result for did:sov:0000000000000000000000",
+                "error" : "notFound",
+                "contentType" : "application/did+ld+json"
+            },
+            "contentStream" : "",
+            "contentMetadata" : { }
+        }
+    } ]
+}

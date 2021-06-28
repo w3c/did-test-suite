@@ -1,0 +1,98 @@
+{
+    "didMethod": "did:key",
+    "implementation": "MATTR internal libraries",
+    "implementer": "MATTR Limited",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 3],
+        "invalidDidErrorOutcome": [1],
+        "notFoundErrorOutcome": [2],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": {
+                "@context": "https://w3.org/ns/did/v1",
+                "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                "publicKey": [{
+                    "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                    "type": "Ed25519VerificationKey2018",
+                    "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                    "publicKeyBase58": "B12NYF8RrR3h41TDCTJojY59usg3mbtbjnFs7Eud1Y6u"
+                }],
+                "authentication": ["did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"],
+                "assertionMethod": ["did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"],
+                "capabilityDelegation": ["did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"],
+                "capabilityInvocation": ["did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"],
+                "keyAgreement": [{
+                    "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6LSbysY2xFMRpGMhb7tFTLMpeuPRaqaWM1yECx2AtzE3KCc",
+                    "type": "X25519KeyAgreementKey2019",
+                    "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                    "publicKeyBase58": "JhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr"
+                }]
+            },
+            "didResolutionMetadata": {
+                "didUrl": {
+                    "did": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                    "methodName": "key",
+                    "methodSpecificId": "z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+                },
+                "duration": 15
+            },
+            "didDocumentMetadata": {}
+        }
+    }, {
+        "function": "resolve",
+        "input": {
+            "did": "did:key_222",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "invalidDid"
+            },
+            "didDocumentMetadata": {}
+        }
+    }, {
+        "function": "resolve",
+        "input": {
+            "did": "did:key:123",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "notFound"
+            },
+            "didDocumentMetadata": {}
+        }
+    }, {
+        "function": "resolveRepresentation",
+        "input": {
+            "did": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+            "resolutionOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json",
+                "didUrl": {
+                    "did": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+                    "methodName": "key",
+                    "methodSpecificId": "z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+                },
+                "duration": 15
+            },
+            "didDocumentMetadata": {},
+            "didDocumentStream": "{\"@context\":\"https://w3.org/ns/did/v1\",\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKey\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyBase58\":\"B12NYF8RrR3h41TDCTJojY59usg3mbtbjnFs7Eud1Y6u\"}],\"authentication\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"assertionMethod\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityDelegation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"capabilityInvocation\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"keyAgreement\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6LSbysY2xFMRpGMhb7tFTLMpeuPRaqaWM1yECx2AtzE3KCc\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyBase58\":\"JhNWeSVLMYccCk7iopQW4guaSJTojqpMEELgSLhKwRr\"}]}"
+        }
+    }]
+}

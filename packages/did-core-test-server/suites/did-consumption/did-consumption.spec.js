@@ -11,8 +11,8 @@ runtimeSuiteConfig.didMethods.forEach((didMethodSuiteConfig) => {
     `6.x Consumption - ${didMethod} - ${implementation} - ${implementer}`;
 
   describe(suiteName, () => {
-    describe("IMPLEMENTATION ::" + implementation + "::", () => {
-      require('./did-consumer').didConsumerTests(
+    describe(`IMPLEMENTATION ::${didMethod}::${implementation}::${implementer}::`, () => {
+        require('./did-consumer').didConsumerTests(
         didMethodSuiteConfig
       );
       require('./did-json-consumption').didJsonConsumptionTests(

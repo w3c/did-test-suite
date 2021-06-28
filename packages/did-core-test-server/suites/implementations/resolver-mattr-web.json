@@ -1,0 +1,106 @@
+{
+    "implementation": "MATTR internal libraries",
+    "implementer": "MATTR Limited",
+    "didMethod": "did:web",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 3],
+        "invalidDidErrorOutcome": [1],
+        "notFoundErrorOutcome": [2],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:web:kyledenhartog.com",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": {
+                "@context": ["https://www.w3.org/ns/did/v1", "https://kyledenhartog/context/doggoservice"],
+                "id": "did:web:kyledenhartog.com",
+                "verificationMethod": [{
+                    "id": "#signingKey",
+                    "type": "Ed25519VerificationKey2018",
+                    "controller": "did:web:kyledenhartog.com",
+                    "publicKeyBase58": "AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH"
+                }, {
+                    "id": "did:web:kyledenhartog.com#handshakeKey",
+                    "type": "Ed25519VerificationKey2018",
+                    "controller": "did:web:kyledenhartog.com",
+                    "publicKeyBase58": "trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj"
+                }],
+                "authentication": ["did:web:kyledenhartog.com#signingKey"],
+                "assertionMethod": ["did:web:kyledenhartog.com#signingKey"],
+                "capabilityDelegation": ["did:web:kyledenhartog.com#signingKey"],
+                "capabilityInvocation": ["did:web:kyledenhartog.com#signingKey"],
+                "keyAgreement": ["did:web:kyledenhartog.com#handshakeKey"],
+                "service": [{
+                    "id": "did:web:kyledenhartog.com#dogPicService",
+                    "type": "DogPicService",
+                    "serviceEndpoint": "https://kyledenhartog.com"
+                }]
+            },
+            "didResolutionMetadata": {
+                "didUrl": {
+                    "did": "did:web:kyledenhartog.com",
+                    "methodName": "web",
+                    "methodSpecificId": "kyledenhartog.com"
+                },
+                "duration": 49
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:web::$_222",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "invalidDid"
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:web:123",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "notFound"
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolveRepresentation",
+        "input": {
+            "did": "did:web:123",
+            "resolutionOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json",
+                "didUrl": {
+                    "did": "did:web:kyledenhartog.com",
+                    "methodName": "web",
+                    "methodSpecificId": "kyledenhartog.com"
+                },
+                "duration": 278
+            },
+            "didDocumentMetadata": {},
+            "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://kyledenhartog/context/doggoservice\"],\"id\":\"did:web:kyledenhartog.com\",\"verificationMethod\":[{\"id\":\"#signingKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH\"},{\"id\":\"did:web:kyledenhartog.com#handshakeKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj\"}],\"authentication\":[\"did:web:kyledenhartog.com#signingKey\"],\"assertionMethod\":[\"did:web:kyledenhartog.com#signingKey\"],\"capabilityDelegation\":[\"did:web:kyledenhartog.com#signingKey\"],\"capabilityInvocation\":[\"did:web:kyledenhartog.com#signingKey\"],\"keyAgreement\":[\"did:web:kyledenhartog.com#handshakeKey\"],\"service\":[{\"id\":\"did:web:kyledenhartog.com#dogPicService\",\"type\":\"DogPicService\",\"serviceEndpoint\":\"https://kyledenhartog.com\"}]}"
+        }
+    }]
+}

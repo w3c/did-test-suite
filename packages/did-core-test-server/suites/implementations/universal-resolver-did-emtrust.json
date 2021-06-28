@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:emtrust",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:emtrust:0x242a5ac36676462bd58a",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "emtrust",
+                            "methodSpecificId": "0x242a5ac36676462bd58a"
+                        },
+                        "didUrlString": "did:emtrust:0x242a5ac36676462bd58a",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://driver-did-emtrust:8080/1.0/identifiers/",
+                    "duration": 1104,
+                    "identifier": "did:emtrust:0x242a5ac36676462bd58a",
+                    "pattern": "^(did:emtrust:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":\"https://w3id.org/did/v1\",\"authentication\":[\"did:emtrust:0x242a5ac36676462bd58a\"],\"created\":\"Sun, 23 May 2021 14:16:40 GMT\",\"endorsements\":[{\"@context\":[\"https://www.w3.org/2018/credentials/v1\",\"https://www.halialabs.io/2019/endorsements/v1\"],\"credentialSubject\":{\"associatedWith\":{\"desc\":\"Member for organization\",\"id\":\"did:emtrust:0x64aa07881bbeb991527c\",\"type\":\"Member\"},\"id\":\"did:emtrust:0x242a5ac36676462bd58a\"},\"id\":\"420f4b15-337c-4887-a18f-4559ae808987\",\"issuanceDate\":\"2021-05-23T14:16:40.013Z\",\"issuer\":\"https://emtrust.io/issuer/f429a8ea-7872-4422-9fec-7d355f7da040\",\"proof\":{\"created\":\"2021-05-23T14:16:40.013Z\",\"issuanceDate\":\"0001-01-01T00:00:00Z\",\"jws\":\"304502203e6e82d2a3fc45fe0033ad03e0755960e217b96c751c626f5956e44e6348360e022100e4ce992f054052448aaf7a49723699e157c2d2eaef29c336ec38c4fe24bdc65d\",\"proofPurpose\":\"assertionMethod\",\"type\":\"ECDSA\",\"verificationMethod\":\"https://emtrust.io/api/crypto/endorsements/verify\"},\"type\":[\"VerifiableCredential\",\"MembershipCredential\"],\"variableCredentials\":{\"@context\":null,\"beneficiaryDID\":\"\",\"credentialSubject\":{\"associatedWith\":{\"desc\":\"\",\"id\":\"\",\"type\":\"\"},\"id\":\"\"},\"id\":\"\",\"issuer\":\"\",\"proof\":{\"created\":\"0001-01-01T00:00:00Z\",\"issuanceDate\":\"0001-01-01T00:00:00Z\",\"jws\":\"\",\"type\":\"\",\"verificationMethod\":\"\"},\"requestedDate\":\"0001-01-01T00:00:00Z\"}}],\"id\":\"did:emtrust:0x242a5ac36676462bd58a\",\"publicKey\":[{\"authorizations\":[],\"controller\":\"f429a8ea-7872-4422-9fec-7d355f7da040\",\"id\":\"did:emtrust:0x242a5ac36676462bd58a\",\"publicKeyBase58\":\"04be801096991c0cfff0306e037f2b1d04d4f3aba2bb8320e5b2116f95056846b504f376513ec66aa8409472638483287b6d1ec42a3511d7fdce9f0a533f057268\",\"type\":\"ED25519SignatureVerification\"}],\"updated\":\"Sun, 23 May 2021 14:16:40 GMT\"}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}
