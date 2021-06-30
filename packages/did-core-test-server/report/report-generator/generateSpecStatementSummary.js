@@ -20,10 +20,7 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     let summaryByTitle= talliedResults.summaryByTitle;
 
     let result_table = `
-<p>Note: Numbers in parentheses denote the number of implementations.
-    If the number of implementations is one, the number and parentheses
-    are suppressed for readability.</p>
-<table class="simple spec-statement-summary" style="width: 100%;">
+<table class="simple spec-statement-summary">
 <tbody>
 <tr>
 <th class='title'>Specification Statement</th>
@@ -75,5 +72,11 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     result_table += `
 </table>
 `;
-    updateSection($, section_id, section_title, result_table);
+
+    let preamble = `
+    <p>Numbers in parentheses denote the number of implementations.
+        If the number of implementations is one, the report generator suppresses
+        the number and parentheses "(1)" for readability.</p>
+    `;
+    updateSection($, section_id, section_title, preamble, result_table);
 };

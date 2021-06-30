@@ -21,6 +21,10 @@ module.exports = generateDetailedReportBySuites = ($, talliedResults) => {
     tr => `<td>${tr.did_method}</td><td>${tr.implementation}</td>`
     );
 
+  let preamble = `
+  <p>Note: Report generator shortens longer parameters and replaces them 
+      with an ellipsis (\u{2026}) for readability.</p>
+  `;
 
-  updateSection($, section_id, section_title, testResultReport);
+  updateSection($, section_id, section_title, preamble, testResultReport);
 };
