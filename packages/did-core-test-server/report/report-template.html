@@ -15,6 +15,14 @@
       .implementation-summary .todo:before { content: "⚠️"; }
       .implementation-summary .method { width: 10%; }
       .implementation-summary .implementation { width: 20%; }
+      .spec-statement-summary { table-layout: auto; }
+      .spec-statement-summary .failed:before { content: "❌"; }
+      .spec-statement-summary .passed:before { content: "✅"; }
+      .spec-statement-summary .todo:before { content: "⚠️"; }
+      .spec-statement-summary .title { width: 60%; }
+      .spec-statement-summary td.title { vertical-align: top; }
+      .spec-statement-summary .methods { width: 30%; }
+      .spec-statement-summary td.methods { vertical-align: top; }
       .test-status { table-layout: auto; }
       .test-status .failed:before { content: "❌"; }
       .test-status .passed:before { content: "✅"; }
