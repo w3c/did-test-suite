@@ -20,19 +20,9 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     let summaryByTitle= talliedResults.summaryByTitle;
 
     let result_table = `
-<style>
-.spec-statement-summary { table-layout: auto; }
-.spec-statement-summary .failed:before { content: "❌"; }
-.spec-statement-summary .passed:before { content: "✅"; }
-.spec-statement-summary .todo:before { content: "⚠️"; }
-.spec-statement-summary .title { width: 60%; }
-.spec-statement-summary td.title { vertical-align: top; }
-.spec-statement-summary .methods { width: 30%; }
-.spec-statement-summary td.methods { vertical-align: top; }
-</style>
-Note: Numbers in parentheses denote the number of implementations.
-If the number of implementations is one, the number and parentheses
-are suppressed for readability.
+<p>Note: Numbers in parentheses denote the number of implementations.
+    If the number of implementations is one, the number and parentheses
+    are suppressed for readability.</p>
 <table class="simple spec-statement-summary" style="width: 100%;">
 <tbody>
 <tr>
