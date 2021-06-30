@@ -1209,7 +1209,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td>
 
-<span class="passed">&#xA0;(23)</span> 
+<span class="passed">&#xA0;(22)</span> 
 
  
 </td>
@@ -1371,7 +1371,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td>
 
-<span class="passed">&#xA0;(68)</span> 
+<span class="passed">&#xA0;(65)</span> 
 
  
 </td>
@@ -1379,7 +1379,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td>
 
-<span class="passed">&#xA0;(52)</span> 
+<span class="passed">&#xA0;(44)</span> 
 <br>
 <span class="todo">&#xA0;(2)</span> 
 </td>
@@ -1514,19 +1514,17 @@ are suppressed for readability.
 <tr><td class="title">7.1.2 DID Resolution Metadata - This property is REQUIRED when there is an error in the resolution process.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
 <tr><td class="title">7.1.2 DID Resolution Metadata - invalidDid - The DID supplied to the DID resolution function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov(2)</a>, <a href="#M36">web</a>, <a href="#M40">unspecified</a></span></td></tr>
 <tr><td class="title">7.1.2 DID Resolution Metadata - notFound - The DID resolver was unable to find the DID document resulting from this resolution request.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M18">key</a>, <a href="#M30">sov(2)</a>, <a href="#M36">web</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M15">ion</a>, <a href="#M26">orb(9)</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M26">orb(11)</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M4">btcr(2)</a>, <a href="#M26">orb</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M4">btcr</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - The value of canonicalId MUST be a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M15">ion</a>, <a href="#M26">orb(9)</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M26">orb(11)</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M35">vaa</a>, <a href="#M40">unspecified(5)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - The value of the property MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M8">ethr(3)</a>, <a href="#M40">unspecified(12)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - The value of the property MUST follow the same formatting rules as the created property.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M8">ethr(3)</a>, <a href="#M35">vaa</a>, <a href="#M40">unspecified(12)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - nextUpdate is later than created.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M40">unspecified(2)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - nextUpdate is later than updated.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M40">unspecified(2)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - nextVersionId is different from versionId.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M40">unspecified(2)</a></span></td></tr>
-<tr><td class="title">7.1.3 DID Document Metadata - updated is later or equal than created.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M35">vaa</a>, <a href="#M40">unspecified(5)</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - canonicalId - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M15">ion</a>, <a href="#M26">orb(9)</a>, <a href="#M40">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - canonicalId - The value of canonicalId MUST be a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M15">ion</a>, <a href="#M26">orb(9)</a>, <a href="#M40">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M35">vaa</a>, <a href="#M40">unspecified(5)</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - deactivated - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M4">btcr(2)</a>, <a href="#M26">orb</a>, <a href="#M40">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - deactivated - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M4">btcr</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - equivalentId - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M26">orb(11)</a>, <a href="#M40">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - equivalentId - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M26">orb(11)</a>, <a href="#M40">unspecified</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - nextUpdate - The value of the property MUST follow the same formatting rules as the created property.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M40">unspecified(4)</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - nextVersionId - The value of the property MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M40">unspecified(4)</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M8">ethr(3)</a>, <a href="#M35">vaa</a>, <a href="#M40">unspecified(8)</a></span></td></tr>
+<tr><td class="title">7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M8">ethr(3)</a>, <a href="#M40">unspecified(8)</a></span></td></tr>
 <tr><td class="title">7.2 DID URL Dereferencing - A conformant DID URL as a single string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(5)</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
 <tr><td class="title">7.2 DID URL Dereferencing - A metadata structure.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(10)</a>, <a href="#M40">unspecified(32)</a></span></td></tr>
 <tr><td class="title">7.2 DID URL Dereferencing - If the dereferencing function was called and successful, this MUST contain a resource corresponding to the DID URL.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(5)</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
@@ -33062,7 +33060,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST follow the same formatting rules as the created property.</p>
+<p>7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -33156,7 +33154,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST be an ASCII string.</p>
+<p>7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -35863,7 +35861,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.</p>
+<p>7.1.3 DID Document Metadata - deactivated - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -35909,7 +35907,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</p>
+<p>7.1.3 DID Document Metadata - deactivated - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -35925,7 +35923,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - deactivated - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.</div></td></tr>
 
 
 <tr>
@@ -35940,7 +35938,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of canonicalId MUST be a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</p>
+<p>7.1.3 DID Document Metadata - canonicalId - The value of canonicalId MUST be a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -36035,7 +36033,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.</p>
+<p>7.1.3 DID Document Metadata - canonicalId - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -36130,59 +36128,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(3)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 2</td></tr>
-
-
-
-<tr>
-<td class="passed"></td>
-<td>did:vaa</td><td>Universal Resolver</td>
-<td>did:vaa:3wJVWDQWtDFx27Fq&#x2026;, expected outcome: defaultOutcomes</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>7.1.3 DID Document Metadata - updated is later or equal than created.</p>
+<p>7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -36422,7 +36368,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</p>
+<p>7.1.3 DID Document Metadata - equivalentId - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -36438,7 +36384,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - equivalentId - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section &#xA7; 3.1 DID Syntax.</div></td></tr>
 
 
 <tr>
@@ -36524,7 +36470,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</p>
+<p>7.1.3 DID Document Metadata - equivalentId - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -36540,7 +36486,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - equivalentId - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.</div></td></tr>
 
 
 <tr>
@@ -38830,14 +38776,14 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST follow the same formatting rules as the created property.</p>
+<p>7.1.3 DID Document Metadata - nextUpdate - The value of the property MUST follow the same formatting rules as the created property.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(5)</span>
+<span class="passed">&#xA0;(3)</span>
 
 
 </th>
@@ -38860,20 +38806,6 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>ethr-did-resolver</td>
 <td>did:ethr:0x26bf14321004e7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -38896,14 +38828,14 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST be an ASCII string.</p>
+<p>7.1.3 DID Document Metadata - nextVersionId - The value of the property MUST be an ASCII string.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(5)</span>
+<span class="passed">&#xA0;(3)</span>
 
 
 </th>
@@ -38926,20 +38858,6 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>unspecified</td><td>ethr-did-resolver</td>
 <td>did:ethr:0x26bf14321004e7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
 
 
@@ -39803,7 +39721,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</p>
+<p>7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -39819,7 +39737,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</div></td></tr>
 
 
 <tr>
@@ -39841,7 +39759,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - updated is later or equal than created.</p>
+<p>7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -39857,7 +39775,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - updated is later or equal than created.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.</div></td></tr>
 
 
 <tr>
@@ -39879,7 +39797,7 @@ are suppressed for readability.
 
 
 <div>
-<p>7.1.3 DID Document Metadata - nextUpdate is later than created.</p>
+<p>7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.</p>
 
 <table class="simple test-status" style="width: 100%;">
 <tbody>
@@ -39895,83 +39813,7 @@ are suppressed for readability.
 <th class="param">Parameters</th>
 </tr>
 <tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - nextUpdate is later than created.</div></td></tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>7.1.3 DID Document Metadata - nextUpdate is later than updated.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(1)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - nextUpdate is later than updated.</div></td></tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>unspecified</td><td>@ceramicnetwork/3id-did-resolver</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>7.1.3 DID Document Metadata - nextVersionId is different from versionId.</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status">
-
-<span class="passed">&#xA0;(1)</span>
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - nextVersionId is different from versionId.</div></td></tr>
+<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.</div></td></tr>
 
 
 <tr>
@@ -71853,7 +71695,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(22)</span>
+<span class="passed">&#xA0;(21)</span>
 
 
 </th>
@@ -71868,13 +71710,6 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did-resolution</td>
 <td>did:UNKNOWN</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-resolution</td>
-<td>did:vaa:3wJVWDQWtDFx27Fq&#x2026;, expected outcome: defaultOutcomes</td>
 </tr>
 
 
@@ -76903,7 +76738,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(119)</span>
+<span class="passed">&#xA0;(108)</span>
 <br>
 <span class="todo">&#xA0;(2)</span>
 </th>
@@ -77371,27 +77206,6 @@ are suppressed for readability.
 
 <tr>
 <td class="passed"></td>
-<td>did-resolution</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-resolution</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-resolution</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
 <td>did-url-dereferencing</td>
 <td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
@@ -77559,63 +77373,7 @@ are suppressed for readability.
 
 
 <tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
 <td class="todo"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-url-dereferencing</td>
-<td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
 <td>did-url-dereferencing</td>
 <td>did:3:kjzl6cwe1jw145m7&#x2026;, expected outcome: defaultOutcome</td>
 </tr>
