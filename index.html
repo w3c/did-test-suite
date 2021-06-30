@@ -1216,17 +1216,9 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td></td></tr>
 <tr><td><a href="#M36">did:web</a></td><td>https://github.com/transmute-industries/did-core</td>
-<td><span class="failed">&#xA0;(2)</span>
-<br>
-<span class="passed">&#xA0;(58)</span> 
+<td>
 
- 
-</td>
-
-
-<td><span class="failed">&#xA0;(1)</span>
-<br>
-<span class="passed">&#xA0;(3)</span> 
+<span class="passed">&#xA0;(116)</span> 
 
  
 </td>
@@ -1234,7 +1226,15 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <td>
 
-<span class="passed">&#xA0;(55)</span> 
+<span class="passed">&#xA0;(4)</span> 
+
+ 
+</td>
+
+
+<td>
+
+<span class="passed">&#xA0;(87)</span> 
 
  
 </td>
@@ -1442,55 +1442,54 @@ are suppressed for readability.
 <tr><td class="title">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(5)</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
 <tr><td class="title">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
-<tr><td class="title">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span><br>
-<span class="failed"><strong>[1 method]:</strong> <a href="#M36">web</a></span></td></tr>
+<tr><td class="title">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionId - If present, the associated value MUST be an ASCII string.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">ethr</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
 <tr><td class="title">3.2.1 DID Parameters - versionTime - If present, the associated value MUST be an ASCII string which is a valid XML datetime value, as defined in section 3.3.7 of W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes [XMLSCHEMA11-2]. This datetime value MUST be normalized to UTC 00:00:00 and without sub-second decimal precision. For example: 2020-12-20T19:17:47Z.</td><td class="methods"><span class="passed"><strong>[4 methods]:</strong> <a href="#M1">3</a>, <a href="#M24">nft</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a>, <a href="#M30">sov</a></span></td></tr>
 <tr><td class="title">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</td><td class="methods"><span class="todo"><strong>[2 methods]:</strong> <a href="#M30">sov(5)</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
-<tr><td class="title">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. If present, the value MUST be a map representing a JSON Web Key that conforms to [RFC7517].</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The publicKeyMultibase property is OPTIONAL. This feature is non-normative. If present, the value MUST be astring representation of a [MULTIBASE] encoded public key.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The value of the controller property MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The value of the id property for a verification method MUST be a string that conforms to the rules in Section &#xA7; 3.2 DID URL Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The value of the type property MUST be a string that references exactly one verification method type.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The verification method map MUST include the id, type, controller, and specific verification material properties that are determined by the value of type and are defined in &#xA7; 5.2.1 Verification Material.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2 Verification Methods - The verificationMethod property is OPTIONAL. If present, the value MUST be an ordered set of verification methods, where each verification method is expressed using a map.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.2.1 Verification Material - A verification method MUST NOT contain multiple verification material properties for the same material. For example, expressing key material in a verification method using both publicKeyJwk and publicKeyMultibase at the same time is prohibited.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.3.1 Authentication - The authentication property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.3.2 Assertion - The assertionMethod property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.3.4 Capability Invocation - The capabilityInvocation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.3.5 Capability Delegation - The capabilityDelegation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - A conforming consumer MUST produce an error if it detects multiple service entries with the same id.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - A conforming producer MUST NOT produce multiple service entries with the same id.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - All [serviceEndpoint] string values MUST be valid URIs conforming to [RFC3986] and normalized according to the Normalization and Comparison rules in RFC3986 and to any normalization rules in its applicable URI scheme specification.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - Each service map MUST contain id, type, and serviceEndpoint properties.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - The service property is OPTIONAL. If present, the associated value MUST be an ordered set of services, where each service is described by a map.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - The value of the id property MUST be a URI conforming to [RFC3986].</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - The value of the serviceEndpoint property MUST be a string, a map, or an ordered set composed of one or more strings and/or maps.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">5.4 Services - The value of the type property MUST be a string or an ordered set of strings.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST NOT produce non-conforming DIDs or DID documents.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST return the Media Type string associated with the representation after the production process completes.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST serialize all entries in the DID document data model, and the representation-specific entries map, that do not have explicit processing rules for the representation being produced using only the representation&apos;s data type processing rules and return the serialization after the production process completes.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST take a DID document data model and a representation-specific entries map as input into the production process. The conforming producer MAY accept additional options as input into the production process.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - All entries of a DID document MUST be included in the root JSON Object.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(8)</a>, <a href="#M19">kilt(2)</a>, <a href="#M24">nft</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M36">web</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - When serializing a DID document, a conforming producer MUST specify a media type of application/did+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(8)</a>, <a href="#M19">kilt(2)</a>, <a href="#M24">nft</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M36">web</a></span></td></tr>
+<tr><td class="title">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. If present, the value MUST be a map representing a JSON Web Key that conforms to [RFC7517].</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The publicKeyMultibase property is OPTIONAL. This feature is non-normative. If present, the value MUST be astring representation of a [MULTIBASE] encoded public key.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The value of the controller property MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The value of the id property for a verification method MUST be a string that conforms to the rules in Section &#xA7; 3.2 DID URL Syntax.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The value of the type property MUST be a string that references exactly one verification method type.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The verification method map MUST include the id, type, controller, and specific verification material properties that are determined by the value of type and are defined in &#xA7; 5.2.1 Verification Material.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2 Verification Methods - The verificationMethod property is OPTIONAL. If present, the value MUST be an ordered set of verification methods, where each verification method is expressed using a map.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.2.1 Verification Material - A verification method MUST NOT contain multiple verification material properties for the same material. For example, expressing key material in a verification method using both publicKeyJwk and publicKeyMultibase at the same time is prohibited.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.3.1 Authentication - The authentication property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.3.2 Assertion - The assertionMethod property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.3.4 Capability Invocation - The capabilityInvocation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.3.5 Capability Delegation - The capabilityDelegation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - A conforming consumer MUST produce an error if it detects multiple service entries with the same id.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - A conforming producer MUST NOT produce multiple service entries with the same id.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - All [serviceEndpoint] string values MUST be valid URIs conforming to [RFC3986] and normalized according to the Normalization and Comparison rules in RFC3986 and to any normalization rules in its applicable URI scheme specification.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - Each service map MUST contain id, type, and serviceEndpoint properties.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - The service property is OPTIONAL. If present, the associated value MUST be an ordered set of services, where each service is described by a map.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - The value of the id property MUST be a URI conforming to [RFC3986].</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - The value of the serviceEndpoint property MUST be a string, a map, or an ordered set composed of one or more strings and/or maps.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">5.4 Services - The value of the type property MUST be a string or an ordered set of strings.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST NOT produce non-conforming DIDs or DID documents.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST return the Media Type string associated with the representation after the production process completes.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST serialize all entries in the DID document data model, and the representation-specific entries map, that do not have explicit processing rules for the representation being produced using only the representation&apos;s data type processing rules and return the serialization after the production process completes.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.1 Production and Consumption - A conforming producer MUST take a DID document data model and a representation-specific entries map as input into the production process. The conforming producer MAY accept additional options as input into the production process.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - All entries of a DID document MUST be included in the root JSON Object.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(8)</a>, <a href="#M19">kilt(2)</a>, <a href="#M24">nft</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M36">web(2)</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - When serializing a DID document, a conforming producer MUST specify a media type of application/did+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(8)</a>, <a href="#M19">kilt(2)</a>, <a href="#M24">nft</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M36">web(2)</a></span></td></tr>
 <tr><td class="title">6.2.1 JSON Production - boolean: A JSON Boolean.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M32">trust</a>, <a href="#M36">web</a></span></td></tr>
 <tr><td class="title">6.2.1 JSON Production - datetime: A JSON String serialized as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.</td><td class="methods"></td></tr>
 <tr><td class="title">6.2.1 JSON Production - double: A JSON Number with a decimal and fractional component.</td><td class="methods"></td></tr>
 <tr><td class="title">6.2.1 JSON Production - integer: A JSON Number without a decimal or fractional component.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M36">web</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - list: A JSON Array, where each element of the list is serialized, in order, as a value of the array according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M6">elem(8)</a>, <a href="#M8">ethr(3)</a>, <a href="#M15">ion(6)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(51)</a>, <a href="#M19">kilt(9)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(4)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(7)</a>, <a href="#M34">v1(6)</a>, <a href="#M36">web(4)</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - map: A JSON Object, where each entry is serialized as a member of the JSON Object with the entry key as a JSON String member name and the entry value according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(4)</a>, <a href="#M6">elem(5)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(5)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(20)</a>, <a href="#M19">kilt(7)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(3)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M36">web(5)</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - list: A JSON Array, where each element of the list is serialized, in order, as a value of the array according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M6">elem(8)</a>, <a href="#M8">ethr(3)</a>, <a href="#M15">ion(6)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(51)</a>, <a href="#M19">kilt(9)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(4)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(7)</a>, <a href="#M34">v1(6)</a>, <a href="#M36">web(7)</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - map: A JSON Object, where each entry is serialized as a member of the JSON Object with the entry key as a JSON String member name and the entry value according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(4)</a>, <a href="#M6">elem(5)</a>, <a href="#M8">ethr(2)</a>, <a href="#M15">ion(5)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(20)</a>, <a href="#M19">kilt(7)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(3)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M36">web(7)</a></span></td></tr>
 <tr><td class="title">6.2.1 JSON Production - null: A JSON null literal.</td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M36">web</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - set: A JSON Array, where each element of the set is added, in order, as a value of the array according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M6">elem(8)</a>, <a href="#M8">ethr(3)</a>, <a href="#M15">ion(6)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(51)</a>, <a href="#M19">kilt(9)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(4)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(7)</a>, <a href="#M34">v1(6)</a>, <a href="#M36">web(4)</a></span></td></tr>
-<tr><td class="title">6.2.1 JSON Production - string: A JSON String.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(17)</a>, <a href="#M6">elem(24)</a>, <a href="#M8">ethr(12)</a>, <a href="#M15">ion(15)</a>, <a href="#M16">is(16)</a>, <a href="#M18">key(129)</a>, <a href="#M19">kilt(35)</a>, <a href="#M24">nft(6)</a>, <a href="#M27">photon(13)</a>, <a href="#M28">schema(4)</a>, <a href="#M32">trust(10)</a>, <a href="#M34">v1(16)</a>, <a href="#M36">web(25)</a></span></td></tr>
-<tr><td class="title">6.3.1 JSON-LD Production - In addition to using the JSON  representation production rules, JSON-LD production MUST include the representation-specific @context entry.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.3.1 JSON-LD Production - The DID document and any DID document data structures expressed by the data model MUST be serialized to the JSON-LD representation according to the JSON representation production rules as defined in &#xA7; 6.2 JSON.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.3.1 JSON-LD Production - The serialized value of @context MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON Array where the first item is the JSON String https://www.w3.org/ns/did/v1 and the subsequent items are serialized according to the JSON representation production rules.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">6.3.1 JSON-LD Production - When serializing a JSON-LD representation of a DID document, a conforming producer MUST specify a media type of application/did+ld+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - set: A JSON Array, where each element of the set is added, in order, as a value of the array according to its type, as defined in this table.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M6">elem(8)</a>, <a href="#M8">ethr(3)</a>, <a href="#M15">ion(6)</a>, <a href="#M16">is(4)</a>, <a href="#M18">key(51)</a>, <a href="#M19">kilt(9)</a>, <a href="#M24">nft</a>, <a href="#M27">photon(4)</a>, <a href="#M28">schema</a>, <a href="#M32">trust(7)</a>, <a href="#M34">v1(6)</a>, <a href="#M36">web(7)</a></span></td></tr>
+<tr><td class="title">6.2.1 JSON Production - string: A JSON String.</td><td class="methods"><span class="passed"><strong>[13 methods]:</strong> <a href="#M1">3(17)</a>, <a href="#M6">elem(24)</a>, <a href="#M8">ethr(12)</a>, <a href="#M15">ion(15)</a>, <a href="#M16">is(16)</a>, <a href="#M18">key(129)</a>, <a href="#M19">kilt(35)</a>, <a href="#M24">nft(6)</a>, <a href="#M27">photon(13)</a>, <a href="#M28">schema(4)</a>, <a href="#M32">trust(10)</a>, <a href="#M34">v1(16)</a>, <a href="#M36">web(35)</a></span></td></tr>
+<tr><td class="title">6.3.1 JSON-LD Production - In addition to using the JSON  representation production rules, JSON-LD production MUST include the representation-specific @context entry.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.3.1 JSON-LD Production - The DID document and any DID document data structures expressed by the data model MUST be serialized to the JSON-LD representation according to the JSON representation production rules as defined in &#xA7; 6.2 JSON.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.3.1 JSON-LD Production - The serialized value of @context MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON Array where the first item is the JSON String https://www.w3.org/ns/did/v1 and the subsequent items are serialized according to the JSON representation production rules.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">6.3.1 JSON-LD Production - When serializing a JSON-LD representation of a DID document, a conforming producer MUST specify a media type of application/did+ld+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</td><td class="methods"><span class="passed"><strong>[18 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">schema</a>, <a href="#M30">sov</a>, <a href="#M32">trust</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">7.1 DID Resolution - A metadata structure.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace(2)</a>, <a href="#M3">bba(4)</a>, <a href="#M4">btcr(6)</a>, <a href="#M5">ebsi(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M7">emtrust(2)</a>, <a href="#M8">ethr(30)</a>, <a href="#M9">evan(2)</a>, <a href="#M11">github(2)</a>, <a href="#M12">hcr(2)</a>, <a href="#M13">icon(2)</a>, <a href="#M14">io(2)</a>, <a href="#M15">ion(2)</a>, <a href="#M17">jolo(2)</a>, <a href="#M18">key(14)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit(2)</a>, <a href="#M22">mpg(2)</a>, <a href="#M23">nacl(2)</a>, <a href="#M25">ont(2)</a>, <a href="#M26">orb(22)</a>, <a href="#M28">schema(4)</a>, <a href="#M29">sol(2)</a>, <a href="#M30">sov(18)</a>, <a href="#M31">stack(2)</a>, <a href="#M32">trust(4)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(6)</a>, <a href="#M35">vaa(2)</a>, <a href="#M36">web(16)</a>, <a href="#M38">work(2)</a>, <a href="#M40">unspecified(32)</a></span></td></tr>
 <tr><td class="title">7.1 DID Resolution - If resolveRepresentation was called, this structure MUST contain a contentType property containing the Media Type of the representation found in the didDocumentStream.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
 <tr><td class="title">7.1 DID Resolution - If the resolution is not successful, this structure MUST contain an error property describing the error.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M4">btcr(3)</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr(15)</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(7)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb(11)</a>, <a href="#M28">schema(2)</a>, <a href="#M29">sol</a>, <a href="#M30">sov(9)</a>, <a href="#M31">stack</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot</a>, <a href="#M34">v1(3)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(8)</a>, <a href="#M38">work</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
@@ -1546,13 +1545,12 @@ are suppressed for readability.
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(5)</a>, <a href="#M40">unspecified(16)</a></span></td></tr>
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov</a>, <a href="#M40">unspecified</a></span></td></tr>
 <tr><td class="title">7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M30">sov(2)</a>, <a href="#M40">unspecified</a></span></td></tr>
-<tr><td class="title">7.3 Metadata Structure - Each property name MUST be a string.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">7.3 Metadata Structure - Each property value MUST be a string, map, list, ordered set, boolean, or null.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">7.3 Metadata Structure - The structure used to communicate this metadata MUST be a map of properties.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
-<tr><td class="title">7.3 Metadata Structure - The values within any complex data structures such as maps and lists MUST be one of these data types as well.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">7.3 Metadata Structure - Each property name MUST be a string.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">7.3 Metadata Structure - Each property value MUST be a string, map, list, ordered set, boolean, or null.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">7.3 Metadata Structure - The structure used to communicate this metadata MUST be a map of properties.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
+<tr><td class="title">7.3 Metadata Structure - The values within any complex data structures such as maps and lists MUST be one of these data types as well.</td><td class="methods"><span class="passed"><strong>[19 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M6">elem(2)</a>, <a href="#M8">ethr(2)</a>, <a href="#M16">is</a>, <a href="#M18">key(19)</a>, <a href="#M19">kilt(4)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft(2)</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon(2)</a>, <a href="#M28">schema(2)</a>, <a href="#M30">sov</a>, <a href="#M32">trust(2)</a>, <a href="#M33">unisot(2)</a>, <a href="#M34">v1(2)</a>, <a href="#M35">vaa</a>, <a href="#M36">web(4)</a>, <a href="#M37">web:did.actor:healthcare:doctor:robert</a></span></td></tr>
 <tr><td class="title">All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.</td><td class="methods"><span class="passed"><strong>[32 methods]:</strong> <a href="#M2">ace</a>, <a href="#M3">bba</a>, <a href="#M4">btcr</a>, <a href="#M5">ebsi</a>, <a href="#M6">elem</a>, <a href="#M7">emtrust</a>, <a href="#M8">ethr</a>, <a href="#M9">evan</a>, <a href="#M11">github</a>, <a href="#M12">hcr</a>, <a href="#M13">icon</a>, <a href="#M14">io</a>, <a href="#M15">ion</a>, <a href="#M17">jolo</a>, <a href="#M18">key(2)</a>, <a href="#M19">kilt</a>, <a href="#M20">lit</a>, <a href="#M22">mpg</a>, <a href="#M23">nacl</a>, <a href="#M25">ont</a>, <a href="#M26">orb</a>, <a href="#M28">schema</a>, <a href="#M29">sol</a>, <a href="#M30">sov(3)</a>, <a href="#M31">stack</a>, <a href="#M32">trust</a>, <a href="#M33">unisot</a>, <a href="#M34">v1</a>, <a href="#M35">vaa</a>, <a href="#M36">web(2)</a>, <a href="#M38">work</a>, <a href="#M40">unspecified(4)</a></span></td></tr>
-<tr><td class="title">encountered a declaration exception</td><td class="methods"><span class="failed"><strong>[1 method]:</strong> <a href="#M36">web(2)</a></span></td></tr>
 
 </table>
 
@@ -1577,7 +1575,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -2001,6 +1999,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -2023,7 +2035,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -2447,6 +2459,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -2469,7 +2495,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -2893,6 +2919,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -2915,7 +2955,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -3339,6 +3379,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -3361,7 +3415,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -3785,6 +3839,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -3807,7 +3875,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -4231,6 +4299,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -4253,7 +4335,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -4677,6 +4759,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -4699,7 +4795,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -5123,6 +5219,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -5145,7 +5255,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -5569,6 +5679,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -5591,7 +5715,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -6015,6 +6139,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -6037,7 +6175,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -6461,6 +6599,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -6483,7 +6635,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -6907,6 +7059,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -6929,7 +7095,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -7353,6 +7519,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -7375,7 +7555,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -7799,6 +7979,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -7821,7 +8015,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -8245,6 +8439,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -8267,7 +8475,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -8691,6 +8899,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -8713,7 +8935,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -9137,6 +9359,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -9159,7 +9395,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -9583,6 +9819,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -9605,7 +9855,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -10029,6 +10279,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -10051,7 +10315,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -10475,6 +10739,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -10497,7 +10775,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -10921,6 +11199,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -10943,7 +11235,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -11367,6 +11659,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -11389,7 +11695,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -11813,6 +12119,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -11835,7 +12155,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -12259,6 +12579,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -12281,7 +12615,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -12705,6 +13039,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -12727,7 +13075,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -13151,6 +13499,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -13173,7 +13535,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -13597,6 +13959,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -13619,7 +13995,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -14043,6 +14419,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -14065,7 +14455,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -14494,46 +14884,22 @@ are suppressed for readability.
 
 <tr>
 <td class="passed"></td>
-<td>did:web:did.actor:healthcare:doctor:robert</td><td>MATTR Internal Libraries</td>
-<td>did:web:did.actor:health&#x2026;, application/did+ld+json</td>
-</tr>
-
-</tbody></table>
-
-</div>
-
-
-<div>
-<p>encountered a declaration exception</p>
-
-<table class="simple test-status" style="width: 100%;">
-<tbody>
-<tr>
-<th class="status"><span class="failed">&#xA0;(2)</span>
-
-
-
-
-</th>
-<th class="method">Method</th>
-<th class="implementation">Implementation</th>
-<th class="param">Parameters</th>
-</tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: encountered a declaration exception</div></td></tr>
-
-
-<tr>
-<td class="failed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
 </tr>
 
 
 <tr>
-<td class="failed"></td>
+<td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web:did.actor:healthcare:doctor:robert</td><td>MATTR Internal Libraries</td>
+<td>did:web:did.actor:health&#x2026;, application/did+ld+json</td>
 </tr>
 
 </tbody></table>
@@ -14956,9 +15322,9 @@ are suppressed for readability.
 <table class="simple test-status" style="width: 100%;">
 <tbody>
 <tr>
-<th class="status"><span class="failed">&#xA0;(1)</span>
-<br>
-<span class="passed">&#xA0;(2)</span>
+<th class="status">
+
+<span class="passed">&#xA0;(3)</span>
 
 
 </th>
@@ -14972,7 +15338,7 @@ are suppressed for readability.
 
 
 <tr>
-<td class="failed"></td>
+<td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:UNKNOWN</td>
 </tr>
@@ -15115,7 +15481,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -15539,6 +15905,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -15561,7 +15941,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -15985,6 +16365,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -16007,7 +16401,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -16431,6 +16825,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -16453,7 +16861,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(61)</span>
+<span class="passed">&#xA0;(63)</span>
 
 
 </th>
@@ -16882,6 +17290,20 @@ are suppressed for readability.
 
 <tr>
 <td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
 <td>did:web:did.actor:healthcare:doctor:robert</td><td>MATTR Internal Libraries</td>
 <td>did:web:did.actor:health&#x2026;, application/did+ld+json</td>
 </tr>
@@ -16899,7 +17321,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(339)</span>
+<span class="passed">&#xA0;(349)</span>
 
 
 </th>
@@ -19182,6 +19604,111 @@ are suppressed for readability.
 <td>did:web:did.actor:mike, value=https://schema.org/Date</td>
 </tr>
 
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=PgpVerificationKey2021</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v4.10.9
+Comment: https://openpgpjs.org
+
+xsBNBGAEy9sBCADPgG2ZN1sHM2UC6etMd+z94h41AJJT+ve1YX3QWuo0ZZlh
+ktRRRPCZDWY2L4hL1IyqlWcFj8DPf5WLMEUPwJm7LGoUHZ5E+UKiP+0YYUEx
+V+mdD/SHx+DXV6Ji6/oU12SMlfQivFHsCzqRj8unFpp4YB4aqMPaVw4DNxx6
+fejnkOlIHQivvUxhIUUJPU/A7R+tQurahfMaV94JW8h0ux8zEEadLqYqKP21
+IMA+tSDLWj96hhWhBUu4Z1EZakTIEyTV0LniNCOn+o8hlgX5rZP6Z/lvRcoW
+mmHmQ+RTwLy3Uu4B8qWfxNe/X3a9jwcVrDtH1nlFiZbvgl2oK1m9wzxVABEB
+AAHNJWxkcy1wZ3AyMDIxIDxsZHMtcGdwMjAyMUBleGFtcGxlLmNvbT7CwKUE
+EwEIADgWIQRP1AF9YYj/m08HKZ4C/szWMG8pnAUCYATL2wIbAwULCQgHAgYV
+CgkICwIEFgIDAQIeAQIXgAAhCRAC/szWMG8pnBYhBE/UAX1hiP+bTwcpngL+
+zNYwbymc7bsH/2VGeS98UuZgSaTZknBiRF+EYGtSqNXQ4CWiRkN+W/5gQwcd
+2XjoZtW3rP4u8RlQACSXJk+GsDOGL3nbjZ6MnoLdLT2Q4dsoqIQOIiiZFZHm
+f4hcKAQFnpK6bDbG8wX6URQLaMc8QEnKiT4jU2N65WRXsSWaA1wQ2cpZuvSg
+cUlXFaoRiEq8X2PekYoTaSJYtE5LgnHHE/m7+nUK8mltjZaACPFpQd0ScKv3
+s/AfJb4pLvvUZasXoTX7pKSMujDn66qNuoT1wGIKKAq86w2tQi1Z9+f2JaMU
+SjvGQ0+gOeMK19XVvmOIkTpBKmndQ+Wb2BTdWtiTYy6mr4PHHIwRQUjOwE0E
+YATL2wEIANwobd+bGmq64aLPgzMuYxsTEd/nictChfPEpBAZDY13ghng6Eds
+NEeZHiCRI9VaIyJBLfzv1YvP8NeSaX3HVequjCfIXudOmsSBWg0q8Sj4IXcN
+KbBC9LP/KbEnOcUasOu0gWLESUuQ+XBWhSkDBPesD26V/u/uvImk/6SkyNcj
+0fUzTLt0ci1lTXVi1DOXMnvN/FnR7mp6xi2iLCzSKZK2dTKGJyQZlT1Su7X1
+k2IY61rQpuRsmePD3hYhaV92ZQgtTNqc8xsWOPsKW5VhZ/m2UgTg2yFPVyi9
+zkxiBm7GFDVmKbtUSuxKt53pvx0p1dOM4p5x4bBQXkaZYTUESn0AEQEAAcLA
+jQQYAQgAIBYhBE/UAX1hiP+bTwcpngL+zNYwbymcBQJgBMvbAhsMACEJEAL+
+zNYwbymcFiEET9QBfWGI/5tPBymeAv7M1jBvKZxZdggArsGwTgOzAjC+/KPF
+nod6Fu2kMTGM/kelM1TzvTOFJTb2bgQiMDKvHhYjQMgSmtkws0vQQbd7O5K+
+zwuCL4h7wiwFQswsBdIP3SBLZh8bLGiUUp+WvBOELL1dnFN98p78UY4OhHTd
+jSSzf0/Af7GV+pHxnAZd3x4oM2+JRz7asJKroEyeQhaZWpDpXJ0hI46k9nG8
+7Gs4Cp2WhrGOyen66xQoD4CHkWGc+/2FmLk/sINPTYmOqB7o9/Pcfeb+NH3G
+5sA/hlG+NMC3YfJaDcwX2FnqcpTSYL2bFeWOj65wAQp+9KUSNe8EveDvLO4x
+MRLParJJyd26xMp7bMKFpjlxCA==
+=NL+O
+-----END PGP PUBLIC KEY BLOCK-----
+</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=#github</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=RawGitHubUserContent</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://raw.githubusercontent.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://w3id.org/security/suites/pgp-2021/v1</td>
+</tr>
+
 </tbody></table>
 
 </div>
@@ -19195,7 +19722,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(112)</span>
+<span class="passed">&#xA0;(115)</span>
 
 
 </th>
@@ -19959,6 +20486,27 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/jws-2020/v1,[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/pgp-2021/v1</td>
 </tr>
 
 </tbody></table>
@@ -19974,7 +20522,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(112)</span>
+<span class="passed">&#xA0;(115)</span>
 
 
 </th>
@@ -20740,6 +21288,27 @@ are suppressed for readability.
 <td>did:web:did.actor:mike, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/jws-2020/v1,[object Object]</td>
 </tr>
 
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/pgp-2021/v1</td>
+</tr>
+
 </tbody></table>
 
 </div>
@@ -20753,7 +21322,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(64)</span>
+<span class="passed">&#xA0;(66)</span>
 
 
 </th>
@@ -21193,6 +21762,20 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
 </tr>
 
 </tbody></table>
@@ -21361,7 +21944,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(21)</span>
+<span class="passed">&#xA0;(22)</span>
 
 
 </th>
@@ -21518,6 +22101,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 </tbody></table>
@@ -21533,7 +22123,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(21)</span>
+<span class="passed">&#xA0;(22)</span>
 
 
 </th>
@@ -21692,6 +22282,13 @@ are suppressed for readability.
 <td>did:web:did.actor:mike</td>
 </tr>
 
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
 </tbody></table>
 
 </div>
@@ -21705,7 +22302,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(39)</span>
+<span class="passed">&#xA0;(40)</span>
 
 
 </th>
@@ -21981,6 +22578,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 
@@ -22003,7 +22607,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(39)</span>
+<span class="passed">&#xA0;(40)</span>
 
 
 </th>
@@ -22279,6 +22883,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 
@@ -22301,7 +22912,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(39)</span>
+<span class="passed">&#xA0;(40)</span>
 
 
 </th>
@@ -22577,6 +23188,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 
@@ -22599,7 +23217,7 @@ are suppressed for readability.
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(39)</span>
+<span class="passed">&#xA0;(40)</span>
 
 
 </th>
@@ -22875,6 +23493,13 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>https://github.com/transmute-industries/did-core</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 
@@ -72115,9 +72740,9 @@ are suppressed for readability.
 <table class="simple test-status" style="width: 100%;">
 <tbody>
 <tr>
-<th class="status"><span class="failed">&#xA0;(3)</span>
-<br>
-<span class="passed">&#xA0;(115)</span>
+<th class="status">
+
+<span class="passed">&#xA0;(206)</span>
 
 
 </th>
@@ -72467,82 +73092,474 @@ are suppressed for readability.
 <tr>
 <td class="passed"></td>
 <td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+json</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
 </tr>
 
 
 <tr>
 <td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+ld+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+ld+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+ld+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+ld+json</td>
-</tr>
-
-
-<tr>
-<td class="passed"></td>
-<td>did-core-properties</td>
-<td>did:web:did.actor:mike, application/did+ld+json</td>
-</tr>
-
-
-<tr>
-<td class="failed"></td>
 <td>did-core-properties</td>
 <td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
 </tr>
 
 
 <tr>
-<td class="failed"></td>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
 <td>did-core-properties</td>
 <td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
@@ -72570,7 +73587,7 @@ are suppressed for readability.
 
 
 <tr>
-<td class="failed"></td>
+<td class="passed"></td>
 <td>did-identifier</td>
 <td>did:UNKNOWN</td>
 </tr>
@@ -72629,6 +73646,62 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did-production</td>
 <td>did:web:did.actor:mike, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, application/did+ld+json</td>
 </tr>
 
 
@@ -72936,7 +74009,175 @@ are suppressed for readability.
 <tr>
 <td class="passed"></td>
 <td>did-production</td>
-<td>did:web:did.actor:mike</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=PgpVerificationKey2021</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v4.10.9
+Comment: https://openpgpjs.org
+
+xsBNBGAEy9sBCADPgG2ZN1sHM2UC6etMd+z94h41AJJT+ve1YX3QWuo0ZZlh
+ktRRRPCZDWY2L4hL1IyqlWcFj8DPf5WLMEUPwJm7LGoUHZ5E+UKiP+0YYUEx
+V+mdD/SHx+DXV6Ji6/oU12SMlfQivFHsCzqRj8unFpp4YB4aqMPaVw4DNxx6
+fejnkOlIHQivvUxhIUUJPU/A7R+tQurahfMaV94JW8h0ux8zEEadLqYqKP21
+IMA+tSDLWj96hhWhBUu4Z1EZakTIEyTV0LniNCOn+o8hlgX5rZP6Z/lvRcoW
+mmHmQ+RTwLy3Uu4B8qWfxNe/X3a9jwcVrDtH1nlFiZbvgl2oK1m9wzxVABEB
+AAHNJWxkcy1wZ3AyMDIxIDxsZHMtcGdwMjAyMUBleGFtcGxlLmNvbT7CwKUE
+EwEIADgWIQRP1AF9YYj/m08HKZ4C/szWMG8pnAUCYATL2wIbAwULCQgHAgYV
+CgkICwIEFgIDAQIeAQIXgAAhCRAC/szWMG8pnBYhBE/UAX1hiP+bTwcpngL+
+zNYwbymc7bsH/2VGeS98UuZgSaTZknBiRF+EYGtSqNXQ4CWiRkN+W/5gQwcd
+2XjoZtW3rP4u8RlQACSXJk+GsDOGL3nbjZ6MnoLdLT2Q4dsoqIQOIiiZFZHm
+f4hcKAQFnpK6bDbG8wX6URQLaMc8QEnKiT4jU2N65WRXsSWaA1wQ2cpZuvSg
+cUlXFaoRiEq8X2PekYoTaSJYtE5LgnHHE/m7+nUK8mltjZaACPFpQd0ScKv3
+s/AfJb4pLvvUZasXoTX7pKSMujDn66qNuoT1wGIKKAq86w2tQi1Z9+f2JaMU
+SjvGQ0+gOeMK19XVvmOIkTpBKmndQ+Wb2BTdWtiTYy6mr4PHHIwRQUjOwE0E
+YATL2wEIANwobd+bGmq64aLPgzMuYxsTEd/nictChfPEpBAZDY13ghng6Eds
+NEeZHiCRI9VaIyJBLfzv1YvP8NeSaX3HVequjCfIXudOmsSBWg0q8Sj4IXcN
+KbBC9LP/KbEnOcUasOu0gWLESUuQ+XBWhSkDBPesD26V/u/uvImk/6SkyNcj
+0fUzTLt0ci1lTXVi1DOXMnvN/FnR7mp6xi2iLCzSKZK2dTKGJyQZlT1Su7X1
+k2IY61rQpuRsmePD3hYhaV92ZQgtTNqc8xsWOPsKW5VhZ/m2UgTg2yFPVyi9
+zkxiBm7GFDVmKbtUSuxKt53pvx0p1dOM4p5x4bBQXkaZYTUESn0AEQEAAcLA
+jQQYAQgAIBYhBE/UAX1hiP+bTwcpngL+zNYwbymcBQJgBMvbAhsMACEJEAL+
+zNYwbymcFiEET9QBfWGI/5tPBymeAv7M1jBvKZxZdggArsGwTgOzAjC+/KPF
+nod6Fu2kMTGM/kelM1TzvTOFJTb2bgQiMDKvHhYjQMgSmtkws0vQQbd7O5K+
+zwuCL4h7wiwFQswsBdIP3SBLZh8bLGiUUp+WvBOELL1dnFN98p78UY4OhHTd
+jSSzf0/Af7GV+pHxnAZd3x4oM2+JRz7asJKroEyeQhaZWpDpXJ0hI46k9nG8
+7Gs4Cp2WhrGOyen66xQoD4CHkWGc+/2FmLk/sINPTYmOqB7o9/Pcfeb+NH3G
+5sA/hlG+NMC3YfJaDcwX2FnqcpTSYL2bFeWOj65wAQp+9KUSNe8EveDvLO4x
+MRLParJJyd26xMp7bMKFpjlxCA==
+=NL+O
+-----END PGP PUBLIC KEY BLOCK-----
+</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=[object Object]</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=#github</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=RawGitHubUserContent</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://raw.githubusercontent.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/pgp-2021/v1</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1,https://w3id.org/security/suites/pgp-2021/v1</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://www.w3.org/ns/did/v1</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;, value=https://w3id.org/security/suites/pgp-2021/v1</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 
@@ -72958,6 +74199,41 @@ are suppressed for readability.
 <td class="passed"></td>
 <td>did-production</td>
 <td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:did.actor:mike</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td>
+<td>did:web:or13.github.io:d&#x2026;</td>
 </tr>
 
 </tbody></table>
