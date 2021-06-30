@@ -11,6 +11,7 @@ module.exports = {
     require('../implementations/dereferencer-web-transmute.json'),
     require('../implementations/universal-resolver-dereferencer-tests.json'),
     require('../implementations/dereferencer-mattr.json'),
+    require('../implementations/derefrencer-polygon-ayanworks.json'),
     ...brokenFixtures
     
   ]

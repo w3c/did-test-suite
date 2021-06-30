@@ -47,6 +47,7 @@ module.exports = {
     require('../implementations/resolver-mattr-key.json'),
     require('../implementations/resolver-mattr-web.json'),
     require('../implementations/resolver-mattr-sov.json'),
+    require('../implementations/resolver-polygon-ayanworks.json'),
     ...brokenFixtures
    
   ],

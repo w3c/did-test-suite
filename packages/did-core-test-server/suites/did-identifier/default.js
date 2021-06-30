@@ -30,6 +30,7 @@ module.exports = {
     require('../implementations/did-web-mattr.json'),
     require('../implementations/did-sov-mattr.json'),
     require('../implementations/universal-resolver-identifier-tests.json'),
+    require('../implementations/did-polygon-ayanworks.json'),
    ...brokenFixtures
   ],
 };
