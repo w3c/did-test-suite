@@ -13,12 +13,12 @@ module.exports = generateImplementationSummary = ($, talliedResults) => {
     let suiteNames = talliedResults.suiteNames;
 
     let result_table = `
-<table class="simple implementation-summary" style="width: 100%;">
+<table class="simple implementation-summary">
 <tbody>
 <tr>
 <th class='method' rowspan="2">Method</th>
 <th class='implementation' rowspan="2">Implementation</th>
-<th colspan="${suiteNames.length}">Test Suites</th>
+<th class='test-suites' colspan="${suiteNames.length}">Test Suites</th>
 </tr>
 <tr>
 ${ suiteNames.map(n => `<th>${n}</th>`).join("") }
@@ -32,9 +32,7 @@ ${ suiteNames.map(n => `<th>${n}</th>`).join("") }
                 let r = summaryByMethod[method][implementation][suite];
                 return !r ? `<td></td>` : `
 <td>${r.failed ? `<span class='failed'>&nbsp;(${r.failed})</span>` : ''}
-${(r.failed && r.passed) ? `<br/>` : ''}
 ${r.passed ? `<span class='passed'>&nbsp;(${r.passed})</span>` : ''} 
-${(r.todo && r.todo) ? `<br/>` : ''}
 ${r.todo ? `<span class='todo'>&nbsp;(${r.todo})</span>` : ''} 
 </td>
 `;
@@ -44,5 +42,8 @@ ${r.todo ? `<span class='todo'>&nbsp;(${r.todo})</span>` : ''}
     result_table += `
 </table>
 `;
-    updateSection($, section_id, section_title, result_table);
+
+    let preamble = ``;
+
+    updateSection($, section_id, section_title, preamble, result_table);
 };
