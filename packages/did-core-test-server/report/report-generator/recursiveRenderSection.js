@@ -4,7 +4,7 @@ const value_clip = (v) => {
   return r != v ?  `${r}\u{2026}` : r;
 };
 
-module.exports = recursiveRenderSection = (id, section, id_tweak, subsection_prefix, level, summary_titles, summary_line, sort_func_given = null) => {
+module.exports = recursiveRenderSection = (id, section, title2id, id_tweak, subsection_prefix, level, summary_titles, summary_line, sort_func_given = null) => {
     let result = '';
     let section_number = 1;
     let summary_titles_html = summary_titles.map( t => `<th class="${t.toLowerCase()}">${t}</th>`).join("\n");
@@ -20,7 +20,7 @@ module.exports = recursiveRenderSection = (id, section, id_tweak, subsection_pre
     ${Object.keys(section).sort()
       .map((key) => {
         const value = section[key];
-        const subSection = recursiveRenderSection(null, value, null, null, level + 1, summary_titles, summary_line);
+        const subSection = recursiveRenderSection(null, value, title2id, null, null, level + 1, summary_titles, summary_line);
         return `
 <section id="${id_tweak(id,key,section_number++)}">
 <h${level}>${key}</h${level}>
@@ -106,9 +106,14 @@ ${summary_line(tr)}
 </table>
 `;
 
+          let statement_with_tag = `<p>${statement}</p>`;
+          if (title2id) {
+            statement_with_tag = `<h${level} class="statement-header" id="${title2id[statement]}"}>Statement: ${statement}</h${level}>`;
+          }
+
           return `
 <div>
-<p>${statement}</p>
+${statement_with_tag}
 ${resultTable}
 </div>
 `;

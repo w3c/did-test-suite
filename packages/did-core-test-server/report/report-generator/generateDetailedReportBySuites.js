@@ -10,11 +10,13 @@ module.exports = generateDetailedReportBySuites = ($, talliedResults) => {
     return;
   }
   let bySuite = talliedResults.bySuite;
+  let title2id = talliedResults.title2id;
 
   let level = 3;
   let testResultReport = recursiveRenderSection(
     section_id,
     bySuite,
+    title2id,
     (id, key, section_number) => `${id}-${key}`,
     (key, value) => "",
     level, ["Method", "Implementation"],

@@ -34,7 +34,8 @@ module.exports = tallyResults = (results) => {
                 suite_name: suite_name,
                 did: did,
                 parameters: parameters,
-                title: title_clip(tr.title)
+                title: tr.title,
+                title_clip: title_clip(tr.title)
             };
 
             title2id[title] = 0;

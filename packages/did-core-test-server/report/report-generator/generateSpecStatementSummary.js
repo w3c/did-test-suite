@@ -12,6 +12,7 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     let section_id = "spec-statement-summary";
     let section_title = "Summary by Specification Statements";
     let method2id = talliedResults.method2id;
+    let title2id = talliedResults.title2id;
 
     if (!talliedResults) {
         updateSection($, section_id, section_title, '');
@@ -67,7 +68,7 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
         method_status_line('failed', failed_methods);
         method_status_line('todo', todo_methods);
 
-        result_table += `<tr><td class="title">${title}</td><td class="methods">` + status_set.join("<br/>\n") + `</td></tr>\n`;
+        result_table += `<tr><td class="title"><a href="#${title2id[title]}">${title}</a></td><td class="methods">` + status_set.join("<br/>\n") + `</td></tr>\n`;
     });
     result_table += `
 </table>
