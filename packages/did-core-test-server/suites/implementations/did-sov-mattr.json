@@ -2,28 +2,27 @@
     "didMethod": "did:sov",
     "implementation": "MATTR Internal Libraries",
     "implementer": "MATTR Limited",
-    "supportedContentTypes": ["application/did+ld+json"],
-    "dids": ["did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV"],
-    "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV": {
+    "supportedContentTypes": ["application/did+ld+json", "application/did+json"],
+    "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP": {
         "didDocumentDataModel": {
             "properties": {
                 "@context": "https://www.w3.org/ns/did/v1",
-                "id": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV",
-                "assertionMethod": ["did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2"],
-                "authentication": ["did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2"],
-                "capabilityDelegation": ["did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2"],
-                "capabilityInvocation": ["did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2"],
+                "id": "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP",
+                "assertionMethod": ["did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW"],
+                "authentication": ["did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW"],
+                "capabilityDelegation": ["did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW"],
+                "capabilityInvocation": ["did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW"],
                 "keyAgreement": [{
-                    "id": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GoqUPBC3Tc",
+                    "id": "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#DPVUftknVe",
                     "type": "X25519KeyAgreementKey2019",
-                    "controller": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV",
-                    "publicKeyBase58": "GoqUPBC3TceCXgPyPtnMrKEwZpqQe8eiVcoWyi5wg6w2"
+                    "controller": "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP",
+                    "publicKeyBase58": "DPVUftknVeH6pndT81shhT1dtqNALTbzk9J3NDZEdZP1"
                 }],
                 "publicKey": [{
-                    "id": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2",
+                    "id": "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW",
                     "type": "Ed25519VerificationKey2018",
-                    "controller": "did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV",
-                    "publicKeyBase58": "GWg6D3Vct2XdD73Juf85hstsTgPFPSEXWosPYZ6hatDx"
+                    "controller": "did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP",
+                    "publicKeyBase58": "5j8n1udfzW5X6cYnk15pi5e1Xo3sPJd9SVUukvGzVjCq"
                 }]
             }
         },
@@ -33,11 +32,22 @@
                     "@context": "https://www.w3.org/ns/did/v1"
                 }
             },
-            "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV\",\"assertionMethod\":[\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2\"],\"authentication\":[\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2\"],\"capabilityDelegation\":[\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2\"],\"capabilityInvocation\":[\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2\"],\"keyAgreement\":[{\"id\":\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GoqUPBC3Tc\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV\",\"publicKeyBase58\":\"GoqUPBC3TceCXgPyPtnMrKEwZpqQe8eiVcoWyi5wg6w2\"}],\"publicKey\":[{\"id\":\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV#GWg6D3Vct2\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:sov:mattr-dev:9bpZcycJ1BamZ6NyjXi4EV\",\"publicKeyBase58\":\"GWg6D3Vct2XdD73Juf85hstsTgPFPSEXWosPYZ6hatDx\"}]}",
+            "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"assertionMethod\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"authentication\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"capabilityDelegation\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"capabilityInvocation\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"keyAgreement\":[{\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#DPVUftknVe\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"publicKeyBase58\":\"DPVUftknVeH6pndT81shhT1dtqNALTbzk9J3NDZEdZP1\"}],\"publicKey\":[{\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"publicKeyBase58\":\"5j8n1udfzW5X6cYnk15pi5e1Xo3sPJd9SVUukvGzVjCq\"}]}",
             "didDocumentMetadata": {},
             "didResolutionMetadata": {
                 "contentType": "application/did+ld+json"
             }
+        },
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"assertionMethod\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"authentication\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"capabilityDelegation\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"capabilityInvocation\":[\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\"],\"keyAgreement\":[{\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#DPVUftknVe\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"publicKeyBase58\":\"DPVUftknVeH6pndT81shhT1dtqNALTbzk9J3NDZEdZP1\"}],\"publicKey\":[{\"id\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP#5j8n1udfzW\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP\",\"publicKeyBase58\":\"5j8n1udfzW5X6cYnk15pi5e1Xo3sPJd9SVUukvGzVjCq\"}]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+json"
+            }
         }
-    }
+    },
+    "dids": ["did:sov:mattr-dev:3WhAjtBidfhGbiAyNQBxPP"]
 }

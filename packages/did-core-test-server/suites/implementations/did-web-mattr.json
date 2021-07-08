@@ -1,16 +1,8 @@
 {
-    "didMethod": "did:web:did.actor:healthcare:doctor:robert",
+    "didMethod": "did:web",
     "implementation": "MATTR Internal Libraries",
     "implementer": "MATTR Limited",
-    "supportedContentTypes": ["application/did+ld+json"],
-    "dids": ["did:web:did.actor:healthcare:doctor:robert"],
-    "didParameters": {
-        "hl": "did:web:did.actor:healthcare:doctor:robert?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
-        "service": "did:web:did.actor:healthcare:doctor:robert?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "relativeRef": "did:web:did.actor:healthcare:doctor:robert?service=agent&relativeRef=%2Fpath%2Fto%2Fresource",
-        "versionId": "did:web:did.actor:healthcare:doctor:robert?versionId=0.1.0",
-        "versionTime": "did:web:did.actor:healthcare:doctor:robert?versionTime=2020-09-26T20:14:02Z"
-    },
+    "supportedContentTypes": ["application/did+ld+json", "application/did+json"],
     "did:web:did.actor:healthcare:doctor:robert": {
         "didDocumentDataModel": {
             "properties": {
@@ -42,6 +34,142 @@
             "didResolutionMetadata": {
                 "contentType": "application/did+ld+json"
             }
+        },
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:web:did.actor:healthcare:doctor:robert\",\"verificationMethod\":[{\"id\":\"#g1\",\"type\":\"Bls12381G1Key2020\",\"controller\":\"did:web:did.actor:healthcare:doctor:robert\",\"publicKeyBase58\":\"6RC6BhU93EFEbdqBE43KTmeTraiTLw6ukAFJH3sTavrzpKfFAXKxKKud4cy2KeDLpH\"},{\"id\":\"#g2\",\"type\":\"Bls12381G2Key2020\",\"controller\":\"did:web:did.actor:healthcare:doctor:robert\",\"publicKeyBase58\":\"25TLkGwTeWqQZ1mVpJCzRPFUvvs1y3o9EeDUNE19S65uVkSubBf3cHDxa7wXG5TSnYXHJhmDfmjbsdu1ZnWs3rceY7bGwAeDjdk8XqwoMrff3svgpUzwqHqX53crLQtCQUcS\"}],\"authentication\":[\"#g1\",\"#g2\"],\"assertionMethod\":[\"#g1\",\"#g2\"]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+json"
+            }
         }
-    }
+    },
+    "did:web:did.actor:mike": {
+        "didDocumentDataModel": {
+            "properties": {
+                "@context": ["https://www.w3.org/ns/did/v1", {
+                    "@base": "did:web:did.actor:mike",
+                    "rating": "https://schema.org/Rating",
+                    "publicAccess": "https://schema.org/publicAccess",
+                    "additionalType": "https://schema.org/additionalType"
+                }],
+                "id": "did:web:did.actor:mike",
+                "rating": 4.5,
+                "publicAccess": true,
+                "additionalType": null,
+                "verificationMethod": [{
+                    "id": "#g1",
+                    "controller": "did:web:did.actor:mike",
+                    "type": "JsonWebKey2020",
+                    "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G1",
+                        "x": "hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG"
+                    }
+                }, {
+                    "id": "#g2",
+                    "controller": "did:web:did.actor:mike",
+                    "type": "JsonWebKey2020",
+                    "publicKeyJwk": {
+                        "kty": "EC",
+                        "crv": "BLS12381_G2",
+                        "x": "l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-"
+                    }
+                }],
+                "authentication": ["did:web:did.actor:mike#g1", "did:web:did.actor:mike#g2"],
+                "assertionMethod": ["did:web:did.actor:mike#g1", "did:web:did.actor:mike#g2"]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {
+                    "@context": ["https://www.w3.org/ns/did/v1", {
+                        "@base": "did:web:did.actor:mike",
+                        "rating": "https://schema.org/Rating",
+                        "publicAccess": "https://schema.org/publicAccess",
+                        "additionalType": "https://schema.org/additionalType"
+                    }]
+                }
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:web:did.actor:mike\",\"rating\":\"https://schema.org/Rating\",\"publicAccess\":\"https://schema.org/publicAccess\",\"additionalType\":\"https://schema.org/additionalType\"}],\"id\":\"did:web:did.actor:mike\",\"rating\":4.5,\"publicAccess\":true,\"additionalType\":null,\"verificationMethod\":[{\"id\":\"#g1\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G1\",\"x\":\"hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG\"}},{\"id\":\"#g2\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G2\",\"x\":\"l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-\"}}],\"authentication\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"assertionMethod\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json"
+            }
+        },
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:web:did.actor:mike\",\"rating\":\"https://schema.org/Rating\",\"publicAccess\":\"https://schema.org/publicAccess\",\"additionalType\":\"https://schema.org/additionalType\"}],\"id\":\"did:web:did.actor:mike\",\"rating\":4.5,\"publicAccess\":true,\"additionalType\":null,\"verificationMethod\":[{\"id\":\"#g1\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G1\",\"x\":\"hxF12gtsn9ju4-kJq2-nUjZQKVVWpcBAYX5VHnUZMDilClZsGuOaDjlXS8pFE1GG\"}},{\"id\":\"#g2\",\"controller\":\"did:web:did.actor:mike\",\"type\":\"JsonWebKey2020\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"BLS12381_G2\",\"x\":\"l4MeBsn_OGa2OEDtHeHdq0TBC8sYh6QwoI7QsNtZk9oAru1OnGClaAPlMbvvs73EABDB6GjjzybbOHarkBmP6pon8H1VuMna0nkEYihZi8OodgdbwReDiDvWzZuXXMl-\"}}],\"authentication\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"],\"assertionMethod\":[\"did:web:did.actor:mike#g1\",\"did:web:did.actor:mike#g2\"]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+json"
+            }
+        }
+    },
+    "did:web:kyledenhartog.com": {
+        "didDocumentDataModel": {
+            "properties": {
+                "@context": ["https://www.w3.org/ns/did/v1", "https://kyledenhartog/context/doggoservice", "https://www.w3id.org/security/suites/ed25519-2018/v1", "https://www.w3id.org/security/suites/x25519-2019/v1"],
+                "id": "did:web:kyledenhartog.com",
+                "verificationMethod": [{
+                    "id": "#signingKey",
+                    "type": "Ed25519VerificationKey2018",
+                    "controller": "did:web:kyledenhartog.com",
+                    "publicKeyBase58": "AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH"
+                }, {
+                    "id": "did:web:kyledenhartog.com#handshakeKey",
+                    "type": "X25519KeyAgreementKey2019",
+                    "controller": "did:web:kyledenhartog.com",
+                    "publicKeyBase58": "trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj"
+                }, {
+                    "id": "/pathHandshakeKey",
+                    "type": "X25519KeyAgreementKey2019",
+                    "controller": "did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD",
+                    "publicKeyBase58": "5YLjenFRbMKCHV9HsFWhYbmxUnVnuEQxREwYvmRcLpX7"
+                }],
+                "authentication": ["did:web:kyledenhartog.com#signingKey"],
+                "assertionMethod": ["did:web:kyledenhartog.com#signingKey", {
+                    "id": "did:web:kyledenhartog.com/fullyQualifiedPathSigningKey",
+                    "type": "Ed25519VerificationKey2018",
+                    "controller": "did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD",
+                    "publicKeyBase58": "Fwwr3ccA6UEWFWWpd7X7Xo1vEqSDw8Zj56fKw1q2FBjq"
+                }],
+                "capabilityDelegation": ["did:web:kyledenhartog.com#signingKey"],
+                "capabilityInvocation": ["did:web:kyledenhartog.com#signingKey"],
+                "keyAgreement": ["did:web:kyledenhartog.com#handshakeKey", "/pathHandshakeKey"],
+                "service": [{
+                    "id": "did:web:kyledenhartog.com#dogPicService",
+                    "type": "DogPicService",
+                    "serviceEndpoint": "https://i.imgur.com"
+                }]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {
+                    "@context": ["https://www.w3.org/ns/did/v1", "https://kyledenhartog/context/doggoservice", "https://www.w3id.org/security/suites/ed25519-2018/v1", "https://www.w3id.org/security/suites/x25519-2019/v1"]
+                }
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://kyledenhartog/context/doggoservice\",\"https://www.w3id.org/security/suites/ed25519-2018/v1\",\"https://www.w3id.org/security/suites/x25519-2019/v1\"],\"id\":\"did:web:kyledenhartog.com\",\"verificationMethod\":[{\"id\":\"#signingKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH\"},{\"id\":\"did:web:kyledenhartog.com#handshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj\"},{\"id\":\"/pathHandshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"5YLjenFRbMKCHV9HsFWhYbmxUnVnuEQxREwYvmRcLpX7\"}],\"authentication\":[\"did:web:kyledenhartog.com#signingKey\"],\"assertionMethod\":[\"did:web:kyledenhartog.com#signingKey\",{\"id\":\"did:web:kyledenhartog.com/fullyQualifiedPathSigningKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"Fwwr3ccA6UEWFWWpd7X7Xo1vEqSDw8Zj56fKw1q2FBjq\"}],\"capabilityDelegation\":[\"did:web:kyledenhartog.com#signingKey\"],\"capabilityInvocation\":[\"did:web:kyledenhartog.com#signingKey\"],\"keyAgreement\":[\"did:web:kyledenhartog.com#handshakeKey\",\"/pathHandshakeKey\"],\"service\":[{\"id\":\"did:web:kyledenhartog.com#dogPicService\",\"type\":\"DogPicService\",\"serviceEndpoint\":\"https://i.imgur.com\"}]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json"
+            }
+        },
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://kyledenhartog/context/doggoservice\",\"https://www.w3id.org/security/suites/ed25519-2018/v1\",\"https://www.w3id.org/security/suites/x25519-2019/v1\"],\"id\":\"did:web:kyledenhartog.com\",\"verificationMethod\":[{\"id\":\"#signingKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"AywtfWyMWRTokKnnwLChyCDMM32sbLzcGFxuuxKtwmxH\"},{\"id\":\"did:web:kyledenhartog.com#handshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:web:kyledenhartog.com\",\"publicKeyBase58\":\"trJuKT83nv2FruwDkmMD5945R1syU5sCDiLm4kr2mTj\"},{\"id\":\"/pathHandshakeKey\",\"type\":\"X25519KeyAgreementKey2019\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"5YLjenFRbMKCHV9HsFWhYbmxUnVnuEQxREwYvmRcLpX7\"}],\"authentication\":[\"did:web:kyledenhartog.com#signingKey\"],\"assertionMethod\":[\"did:web:kyledenhartog.com#signingKey\",{\"id\":\"did:web:kyledenhartog.com/fullyQualifiedPathSigningKey\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkuQCtdrrbS1iyN1MXJgUxNtZv4Qi5M1p5m7aFmHo3AQXD\",\"publicKeyBase58\":\"Fwwr3ccA6UEWFWWpd7X7Xo1vEqSDw8Zj56fKw1q2FBjq\"}],\"capabilityDelegation\":[\"did:web:kyledenhartog.com#signingKey\"],\"capabilityInvocation\":[\"did:web:kyledenhartog.com#signingKey\"],\"keyAgreement\":[\"did:web:kyledenhartog.com#handshakeKey\",\"/pathHandshakeKey\"],\"service\":[{\"id\":\"did:web:kyledenhartog.com#dogPicService\",\"type\":\"DogPicService\",\"serviceEndpoint\":\"https://i.imgur.com\"}]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+json"
+            }
+        }
+    },
+    "dids": ["did:web:did.actor:healthcare:doctor:robert", "did:web:did.actor:mike", "did:web:kyledenhartog.com"]
 }
