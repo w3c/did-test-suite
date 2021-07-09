@@ -1,0 +1,13 @@
+{
+    "implementation" : "Universal Resolver",
+    "implementer" : "Decentralized Identity Foundation and Contributors",
+    "didMethod" : "sov",
+    "dids" : [ "did:sov:WRfXPg8dantKVubE3HX8pw" ],
+    "didParameters" : {
+        "service" : "did:sov:WRfXPg8dantKVubE3HX8pw?service=files&relativeRef=%2Fmyresume%2Fdoc%3Fversion%3Dlatest%23intro",
+        "relativeRef" : "did:sov:WRfXPg8dantKVubE3HX8pw?service=files&relativeRef=%2Fmyresume%2Fdoc%3Fversion%3Dlatest%23intro",
+        "hl" : "did:sov:WRfXPg8dantKVubE3HX8pw?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+        "versionId" : "did:sov:WRfXPg8dantKVubE3HX8pw?versionId=4",
+        "versionTime" : "did:sov:WRfXPg8dantKVubE3HX8pw?versionTime=2016-10-17T02:41:00Z"
+    }
+}
