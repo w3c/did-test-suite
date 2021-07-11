@@ -3,6 +3,14 @@
     "implementation": "MATTR Internal Libraries",
     "implementer": "MATTR Limited",
     "supportedContentTypes": ["application/did+ld+json", "application/did+json"],
+    "dids": [
+      "did:web:did.actor:healthcare:doctor:robert",
+      "did:web:did.actor:mike",
+      "did:web:kyledenhartog.com"
+    ],
+    "didParameters": {
+      "hl": "did:web:kyledenhartog.com?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e"
+    },
     "did:web:did.actor:healthcare:doctor:robert": {
         "didDocumentDataModel": {
             "properties": {
@@ -170,6 +178,5 @@
                 "contentType": "application/did+json"
             }
         }
-    },
-    "dids": ["did:web:did.actor:healthcare:doctor:robert", "did:web:did.actor:mike", "did:web:kyledenhartog.com"]
+    }
 }
