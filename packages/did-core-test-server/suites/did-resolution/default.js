@@ -2,8 +2,8 @@ const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
   require('../implementations/universal-resolver-did-gatc.json'),
   require('../implementations/universal-resolver-did-ccp.json'),
   require('../implementations/resolver-did-ion.json'),
-  require('../implementations/universal-resolver-did-bid.json'),
   require('../implementations/resolver-polygon-ayanworks.json')
+  //require('../implementations/universal-resolver-did-bid.json') INVALID JSON
 ] : []
 
 module.exports = {
