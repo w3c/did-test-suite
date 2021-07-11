@@ -185,6 +185,7 @@ const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutco
     if (didDocumentMetadata.hasOwnProperty('created')) {
       it('7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
         expect(didDocumentMetadata['created']).toBeDidCoreDatetime();
+        //console.log("CREATED CHECK", didDocumentMetadata['created'], 'SUCCESS');
       });
     }
   });
@@ -192,6 +193,7 @@ const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutco
     if (didDocumentMetadata.hasOwnProperty('updated')) {
       it('7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.', async () => {
         expect(didDocumentMetadata['updated']).toBeDidCoreDatetime();
+        //console.log("UPDATED CHECK", didDocumentMetadata['updated'], 'SUCCESS');
       });
       /*
        * While it is interesting to test this, it's not actually a normative statement in the specification, therefore this doesn't have to be tested.
@@ -244,6 +246,7 @@ const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutco
     if (didDocumentMetadata.hasOwnProperty('versionId')) {
       it('7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.', async () => {
         expect(didDocumentMetadata['versionId']).toBeAsciiString();
+        //console.log("VERSION_ID CHECK", didDocumentMetadata['versionId'], 'SUCCESS');
       });
     }
   });
