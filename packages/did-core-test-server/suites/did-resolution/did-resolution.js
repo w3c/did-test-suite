@@ -183,33 +183,39 @@ const didResolutionTests = (execution, expectedOutcome, imp) => {
 const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutcome) => {
   describe('created', () => {
     if (didDocumentMetadata.hasOwnProperty('created')) {
-      it('7.1.3 DID Document Metadata - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
+      it('7.1.3 DID Document Metadata - created - The value of the property MUST be a string formatted as an XML Datetime normalized to UTC 00:00:00 and without sub-second decimal precision.', async () => {
         expect(didDocumentMetadata['created']).toBeDidCoreDatetime();
+        //console.log("CREATED CHECK", didDocumentMetadata['created'], 'SUCCESS');
       });
     }
   });
   describe('updated', () => {
     if (didDocumentMetadata.hasOwnProperty('updated')) {
-      it('7.1.3 DID Document Metadata - The value of the property MUST follow the same formatting rules as the created property.', async () => {
+      it('7.1.3 DID Document Metadata - updated - The value of the property MUST follow the same formatting rules as the created property.', async () => {
         expect(didDocumentMetadata['updated']).toBeDidCoreDatetime();
+        //console.log("UPDATED CHECK", didDocumentMetadata['updated'], 'SUCCESS');
       });
+      /*
+       * While it is interesting to test this, it's not actually a normative statement in the specification, therefore this doesn't have to be tested.
+       *
       if (didDocumentMetadata.hasOwnProperty('created')) {
-        it('7.1.3 DID Document Metadata - updated is later or equal than created.', async () => {
+        it('7.1.3 DID Document Metadata - updated - updated is later or equal than created.', async () => {
           expect((new Date(didDocumentMetadata['updated'])).getTime()).toBeGreaterThanOrEqual((new Date(didDocumentMetadata['created'])).getTime())
         });
       }
+      */
     }
   });
   describe('deactivated', () => {
     if (expectedOutcome && (expectedOutcome === 'deactivatedOutcome')) {
-      it('7.1.3 DID Document Metadata - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.', async () => {
+      it('7.1.3 DID Document Metadata - deactivated - If a DID has been deactivated, DID document metadata MUST include this property with the boolean value true.', async () => {
         expect(Object.keys(didDocumentMetadata)).toContain('deactivated');
         expect(didDocumentMetadata['deactivated']).toBe(true);
       });
     }
     if (expectedOutcome && (expectedOutcome !== 'deactivatedOutcome')) {
       if (didDocumentMetadata.hasOwnProperty('deactivated')) {
-        it('7.1.3 DID Document Metadata - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.', async () => {
+        it('7.1.3 DID Document Metadata - deactivated - If a DID has not been deactivated, this property is OPTIONAL, but if included, MUST have the boolean value false.', async () => {
           expect(didDocumentMetadata['deactivated']).toBe(false);
         });
       }
@@ -217,49 +223,58 @@ const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutco
   });
   describe('nextUpdate', () => {
     if (didDocumentMetadata.hasOwnProperty('nextUpdate')) {
-      it('7.1.3 DID Document Metadata - The value of the property MUST follow the same formatting rules as the created property.', async () => {
+      it('7.1.3 DID Document Metadata - nextUpdate - The value of the property MUST follow the same formatting rules as the created property.', async () => {
         expect(didDocumentMetadata['nextUpdate']).toBeDidCoreDatetime();
       });
+      /*
+       * While it is interesting to test this, it's not actually a normative statement in the specification, therefore this doesn't have to be tested.
+       *
       if (didDocumentMetadata.hasOwnProperty('created')) {
-        it('7.1.3 DID Document Metadata - nextUpdate is later than created.', async () => {
+        it('7.1.3 DID Document Metadata - nextUpdate - nextUpdate is later than created.', async () => {
           expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['created'])).getTime())
         });
       }
       if (didDocumentMetadata.hasOwnProperty('updated')) {
-        it('7.1.3 DID Document Metadata - nextUpdate is later than updated.', async () => {
+        it('7.1.3 DID Document Metadata - nextUpdate - nextUpdate is later than updated.', async () => {
           expect((new Date(didDocumentMetadata['nextUpdate'])).getTime()).toBeGreaterThan((new Date(didDocumentMetadata['updated'])).getTime())
         });
       }
+       */
     }
   });
   describe('versionId', () => {
     if (didDocumentMetadata.hasOwnProperty('versionId')) {
-      it('7.1.3 DID Document Metadata - The value of the property MUST be an ASCII string.', async () => {
+      it('7.1.3 DID Document Metadata - versionId - The value of the property MUST be an ASCII string.', async () => {
         expect(didDocumentMetadata['versionId']).toBeAsciiString();
+        //console.log("VERSION_ID CHECK", didDocumentMetadata['versionId'], 'SUCCESS');
       });
     }
   });
   describe('nextVersionId', () => {
     if (didDocumentMetadata.hasOwnProperty('nextVersionId')) {
-      it('7.1.3 DID Document Metadata - The value of the property MUST be an ASCII string.', async () => {
+      it('7.1.3 DID Document Metadata - nextVersionId - The value of the property MUST be an ASCII string.', async () => {
         expect(didDocumentMetadata['nextVersionId']).toBeAsciiString();
       });
+      /*
+       * While it is interesting to test this, it's not actually a normative statement in the specification, therefore this doesn't have to be tested.
+       *
       if (didDocumentMetadata.hasOwnProperty('versionId')) {
-        it('7.1.3 DID Document Metadata - nextVersionId is different from versionId.', async () => {
+        it('7.1.3 DID Document Metadata - nextVersionId - nextVersionId is different from versionId.', async () => {
           expect(didDocumentMetadata['nextVersionId']).not.toBe(didDocumentMetadata['versionId']);
         });
       }
+       */
     }
   });
   describe('equivalentId', () => {
     if (didDocumentMetadata.hasOwnProperty('equivalentId')) {
-      it('7.1.3 DID Document Metadata - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
+      it('7.1.3 DID Document Metadata - equivalentId - The value of equivalentId MUST be a set where each item in the list is a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
         expect(Array.isArray(didDocumentMetadata['equivalentId'])).toBe(true);
         didDocumentMetadata['equivalentId'].forEach((equivalentId) => {
           expect(equivalentId).toBeValidDid();
         })
       });
-      it('7.1.3 DID Document Metadata - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
+      it('7.1.3 DID Document Metadata - equivalentId - Each equivalentId DID value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
         if (didDocument) {
           didDocumentMetadata['equivalentId'].forEach((equivalentId) => {
             expect(utils.parseDidMethod(equivalentId)).toBe(utils.parseDidMethod(didDocument['id']));
@@ -274,11 +289,11 @@ const testDidDocumentMetadata = (didDocumentMetadata, didDocument, expectedOutco
   });
   describe('canonicalId', () => {
     if (didDocumentMetadata.hasOwnProperty('canonicalId')) {
-      it('7.1.3 DID Document Metadata - The value of canonicalId MUST be a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
+      it('7.1.3 DID Document Metadata - canonicalId - The value of canonicalId MUST be a string that conforms to the rules in Section § 3.1 DID Syntax.', async () => {
         const canonicalId = didDocumentMetadata['canonicalId'];
         expect(canonicalId).toBeValidDid();
       });
-      it('7.1.3 DID Document Metadata - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
+      it('7.1.3 DID Document Metadata - canonicalId - A canonicalId value MUST be produced by, and a form of, the same DID Method as the id property value.', async () => {
         if (didDocument) {
           const canonicalId = didDocumentMetadata['canonicalId'];
           expect(utils.parseDidMethod(canonicalId)).toBe(utils.parseDidMethod(didDocument['id']));

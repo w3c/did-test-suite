@@ -1,6 +1,7 @@
 {
   "implementation": "ethr-did-resolver",
   "implementer": "ConsenSys Mesh",
+  "didMethod" : "did:ethr",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1, 2 ],
     "invalidDidErrorOutcome": [ ],
@@ -41,7 +42,7 @@
           "assertionMethod": [
             "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#controller",
             "did:ethr:0x26bf14321004e770e7a8b080b7a526d8eed8b388#delegate-1"
-          ]          
+          ]
         },
         "didDocumentMetadata":{
           "versionId": "12090175",

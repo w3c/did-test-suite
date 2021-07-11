@@ -1,6 +1,7 @@
 {
   "implementation": "ethr-did-resolver",
   "implementer": "ConsenSys Mesh",
+  "didMethod" : "did:ethr",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1 ],
     "invalidDidUrlErrorOutcome": [ ],

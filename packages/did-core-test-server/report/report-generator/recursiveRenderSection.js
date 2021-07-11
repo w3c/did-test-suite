@@ -1,16 +1,18 @@
-// function to clip long DID
-const did_clip = (v) => {
-  let r = v.replace(/^((value=)?(did:[^:]+:.{0,16})).*$/, "$1");
-  if (r != v) {
-    r += "\u{2026}";
-  }
-  return r;
+// function to clip long DID (max 32 chars for method-specific-id) or long value(max 64chars)
+const value_clip = (v) => {
+  let r = v.replace(/^((value=)?(did:[^:]+:.{0,32}|.{0,64})).*$/, "$1");
+  return r != v ?  `${r}\u{2026}` : r;
 };
 
-module.exports = recursiveRenderSection = (id, section, id_tweak, subsection_prefix, level, summary_titles, summary_line) => {
+module.exports = recursiveRenderSection = (id, section, title2id, id_tweak, subsection_prefix, level, summary_titles, summary_line, sort_func_given = null) => {
     let result = '';
     let section_number = 1;
     let summary_titles_html = summary_titles.map( t => `<th class="${t.toLowerCase()}">${t}</th>`).join("\n");
+
+    let sort_func_default = (a,b) => { let order1 =  a.did_method.localeCompare(b.did_method); // order by method
+      return order1 == 0 && a.title.localeCompare(b.title);   // then title
+    };
+    let sort_func = sort_func_given || sort_func_default;
 
     if (section && id && Object.keys(section).length) {
       result = `
@@ -18,7 +20,7 @@ module.exports = recursiveRenderSection = (id, section, id_tweak, subsection_pre
     ${Object.keys(section).sort()
       .map((key) => {
         const value = section[key];
-        const subSection = recursiveRenderSection(null, value, null, null, level + 1, summary_titles, summary_line);
+        const subSection = recursiveRenderSection(null, value, title2id, null, null, level + 1, summary_titles, summary_line);
         return `
 <section id="${id_tweak(id,key,section_number++)}">
 <h${level}>${key}</h${level}>
@@ -56,7 +58,7 @@ ${subsection_prefix(key,value)}${subSection}
               return tally;
             }, {});
           const resultTable = `
-<table class="simple test-status" style="width: 100%;">
+<table class="simple test-status">
 <tbody>
 <tr>
 <th class='status'>${count.failed ? `<span class='failed'>&nbsp;(${count.failed})</span>` : ''}
@@ -84,7 +86,7 @@ ${(implementations < 2 && !statement.startsWith("Implementation:"))
 }
 
 ${section[statement]
-  .sort((a,b) => { return a.did_method.localeCompare(b.did_method); }).map((tr) => {
+  .sort(sort_func).map((tr) => {
     if(tr.implementation.includes('Example') &&
       !statement.startsWith("Implementation:")) {
       return '';
@@ -95,7 +97,7 @@ ${section[statement]
 <td class='${tr.status}'></td>
 ${summary_line(tr)}
 <td>${tr.parameters.map( (v) => {
-    return v ? did_clip(v) : ''; // Replacing long string into shorter one with ellipsis
+    return v ? value_clip(v) : ''; // Replacing long string into shorter one with ellipsis
   }).join(', ')}</td>
 </tr>
 `;
@@ -104,9 +106,14 @@ ${summary_line(tr)}
 </table>
 `;
 
+          let statement_with_tag = `<p>${statement}</p>`;
+          if (title2id) {
+            statement_with_tag = `<h${level} class="statement-header" id="${title2id[statement]}"}>Statement: ${statement}</h${level}>`;
+          }
+
           return `
 <div>
-<p>${statement}</p>
+${statement_with_tag}
 ${resultTable}
 </div>
 `;

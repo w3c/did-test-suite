@@ -1,6 +1,7 @@
 {
   "implementation": "https://github.com/OR13/deno-did-pm",
   "implementer": "Transmute",
+  "didMethod": "did:web",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1 ],
     "invalidDidUrlErrorOutcome": [ ],
@@ -10,7 +11,7 @@
     {
       "function": "dereference",
       "input": {
-        "didUrl": "did:web:or13.github.io:deno-did-pm?service=github&relativeRef=/OR13/deno-did-pm/master/docs/example-mod/mod.ts",
+        "didUrl": "did:web:or13.github.io:deno-did-pm?service=github&relativeRef=%2FOR13%2Fdeno-did-pm%2Fmaster%2Fdocs%2Fexample-mod%2Fmod.ts",
         "dereferenceOptions": {
           "accept": "application/typescript"
         }

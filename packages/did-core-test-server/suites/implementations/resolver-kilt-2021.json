@@ -1,6 +1,7 @@
 {
   "implementation": "kilt-did-resolver-2021",
   "implementer": "Kilt Protocol",
+  "didMethod": "did:kilt",
   "expectedOutcomes": {
     "defaultOutcome": [0, 1],
     "invalidDidErrorOutcome": [],

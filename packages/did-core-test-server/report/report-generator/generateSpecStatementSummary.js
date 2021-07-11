@@ -12,6 +12,7 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     let section_id = "spec-statement-summary";
     let section_title = "Summary by Specification Statements";
     let method2id = talliedResults.method2id;
+    let title2id = talliedResults.title2id;
 
     if (!talliedResults) {
         updateSection($, section_id, section_title, '');
@@ -20,20 +21,7 @@ module.exports = generateSpecStatementSummary = ($, talliedResults) => {
     let summaryByTitle= talliedResults.summaryByTitle;
 
     let result_table = `
-<style>
-.spec-statement-summary { table-layout: auto; }
-.spec-statement-summary .failed:before { content: "❌"; }
-.spec-statement-summary .passed:before { content: "✅"; }
-.spec-statement-summary .todo:before { content: "⚠️"; }
-.spec-statement-summary .title { width: 60%; }
-.spec-statement-summary td.title { vertical-align: top; }
-.spec-statement-summary .methods { width: 30%; }
-.spec-statement-summary td.methods { vertical-align: top; }
-</style>
-Note: Numbers in parentheses denote the number of implementations.
-If the number of implementations is one, the number and parentheses
-are suppressed for readability.
-<table class="simple spec-statement-summary" style="width: 100%;">
+<table class="simple spec-statement-summary">
 <tbody>
 <tr>
 <th class='title'>Specification Statement</th>
@@ -80,10 +68,16 @@ are suppressed for readability.
         method_status_line('failed', failed_methods);
         method_status_line('todo', todo_methods);
 
-        result_table += `<tr><td class="title">${title}</td><td class="methods">` + status_set.join("<br/>\n") + `</td></tr>\n`;
+        result_table += `<tr><td class="title"><a href="#${title2id[title]}">${title}</a></td><td class="methods">` + status_set.join("<br/>\n") + `</td></tr>\n`;
     });
     result_table += `
 </table>
 `;
-    updateSection($, section_id, section_title, result_table);
+
+    let preamble = `
+    <p>Numbers in parentheses denote the number of implementations.
+        If the number of implementations is one, the report generator suppresses
+        the number and parentheses "(1)" for readability.</p>
+    `;
+    updateSection($, section_id, section_title, preamble, result_table);
 };

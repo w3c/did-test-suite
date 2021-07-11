@@ -1,3 +1,8 @@
+const title_clip = (v) => {
+    let r = v.replace(/^(.{0,64}).*$/, "$1");
+    return r != v ?  `${r}\u{2026}` : r;
+};
+
 module.exports = tallyResults = (results) => {
     let bySuite = {}, byMethod = {};
     let summaryByMethod = {}, summaryByTitle = {};
@@ -28,7 +33,9 @@ module.exports = tallyResults = (results) => {
                 implementer: implementer,
                 suite_name: suite_name,
                 did: did,
-                parameters: parameters
+                parameters: parameters,
+                title: tr.title,
+                title_clip: title_clip(tr.title)
             };
 
             title2id[title] = 0;

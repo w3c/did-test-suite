@@ -1,0 +1,59 @@
+{
+    "implementation": "polygon-did-dereferencer",
+    "implementer": "Ayanworks",
+    "didMethod": "did:polygon",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 1, 2, 3, 4, 5, 6],
+        "invalidDidUrlErrorOutcome": [7],
+        "notFoundErrorOutcome": [8]
+    },
+    "executions": [{
+            "function": "dereference",
+            "input": {
+                "didUrl": "did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E",
+                "dereferenceOptions": {
+                    "accept": "application/did+json"
+                }
+            },
+            "output": {
+                "dereferencingMetadata": {
+                    "contentType": "application/did+json"
+                },
+                "contentStream": "{\n\t\"@context\": \"https://w3id.org/did/v1\",\n\t\"id\": \"did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E\",\n\t\"verificationMethod\": [{\n\t\t\"id\": \"did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E\",\n\t\t\"type\": \"EcdsaSecp256k1VerificationKey2019\",\n\t\t\"controller\": \"did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E\",\n\t\t\"publicKeyBase58\": \"7Lnm1evgNdC3VNWRea5kMHqMWKDNzTbFjPLV4rtCbPHjDP29xQu58dgS5DRk9kaVzbFxFkbeWVEt5hAd5TPmXx6AHYHDw\"\n\t}]\n}",
+                "contentMetadata": {}
+            }
+        },
+        {
+            "function": "dereference",
+            "input": {
+                "didUrl": "did:polygon_3:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E",
+                "dereferenceOptions": {
+                    "accept": "application/did+json"
+                }
+            },
+            "output": {
+                "dereferencingMetadata": {
+                    "error": "invalidDidUrl"
+                },
+                "contentStream": "",
+                "contentMetadata": {}
+            }
+        },
+        {
+            "function": "dereference",
+            "input": {
+                "didUrl": "did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E",
+                "dereferenceOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "dereferencingMetadata": {
+                    "error": "notFound"
+                },
+                "contentStream": "",
+                "contentMetadata": {}
+            }
+        }
+    ]
+}

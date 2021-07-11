@@ -9,20 +9,31 @@
         width: 100%;
         height: 500px;
       }
-      .implementation-summary { table-layout: auto; }
+      .implementation-summary { table-layout: auto; width: 100%; }
       .implementation-summary .failed:before { content: "❌"; }
       .implementation-summary .passed:before { content: "✅"; }
       .implementation-summary .todo:before { content: "⚠️"; }
       .implementation-summary .method { width: 10%; }
       .implementation-summary .implementation { width: 20%; }
-      .test-status { table-layout: auto; }
+      .implementation-summary .test-suites { width: 70%; }
+      .spec-statement-summary { table-layout: auto; width: 100%; }
+      .spec-statement-summary .failed:before { content: "❌"; }
+      .spec-statement-summary .passed:before { content: "✅"; }
+      .spec-statement-summary .todo:before { content: "⚠️"; }
+      .spec-statement-summary .title { width: 60%; }
+      .spec-statement-summary td.title { vertical-align: top; }
+      .spec-statement-summary .methods { width: 40%; }
+      .spec-statement-summary td.methods { vertical-align: top; }
+      .test-status { table-layout: auto; width: 100%; }
       .test-status .failed:before { content: "❌"; }
       .test-status .passed:before { content: "✅"; }
       .test-status .todo:before { content: "⚠️"; }
-      .test-status .status { width: 10%; }
-      .test-status .suite { width: 20%; }
-      .test-status .implementation { width: 20%; }
-      .test-status .param { width: auto; }
+      .test-status .status { width: 5%; }
+      .test-status .suite { width: 10%; }
+      .test-status .implementation { width:35%; }
+      .test-status .statement { width: 35%; }
+      .test-status .param { width: 50%; }
+      .statement-header { width: 100%; }
     </style>
     <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
@@ -97,7 +108,7 @@
             "name": "test-suite-a",
             "a": 1,
             "b": 2
-          }          
+          }
           </pre>
 
         <pre class="example" title="Example javascript test file">let { suiteConfig } = global;
@@ -254,7 +265,7 @@ describe("test-suite-a", () =&gt; {
       ]
     }
   ]
-}                   
+}
 </pre>
       </section>
       <section>

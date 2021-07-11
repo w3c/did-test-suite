@@ -1,6 +1,7 @@
 {
   "implementation": "Example Resolver",
   "implementer": "DID Working Group",
+  "didMethod": "did:example",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 4, 5, 6 ],
     "invalidDidErrorOutcome": [ 1 ],
