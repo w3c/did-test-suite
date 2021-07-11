@@ -29,5 +29,18 @@
             },
             "didDocumentMetadata": {}
         }
+    }, {
+      "function": "resolveRepresentation",
+      "input": {
+          "did": "did:polygon:0xBCFdE12C425E4CbDb45226Fe51F89F2d99667d3E",
+          "resolutionOptions": {}
+      },
+      "output": {
+          "didResolutionMetadata": {
+            "contentType": ""
+          },
+          "didDocumentMetadata": {},
+          "didDocumentStream": ""
+      }
     }]
 }
