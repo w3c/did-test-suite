@@ -9,14 +9,14 @@
         width: 100%;
         height: 500px;
       }
-      .implementation-summary { table-layout: auto; width: 100em; }
+      .implementation-summary { table-layout: auto; width: 100%; }
       .implementation-summary .failed:before { content: "❌"; }
       .implementation-summary .passed:before { content: "✅"; }
       .implementation-summary .todo:before { content: "⚠️"; }
       .implementation-summary .method { width: 10%; }
       .implementation-summary .implementation { width: 20%; }
       .implementation-summary .test-suites { width: 70%; }
-      .spec-statement-summary { table-layout: auto; width: 100em; }
+      .spec-statement-summary { table-layout: auto; width: 100%; }
       .spec-statement-summary .failed:before { content: "❌"; }
       .spec-statement-summary .passed:before { content: "✅"; }
       .spec-statement-summary .todo:before { content: "⚠️"; }
@@ -24,7 +24,7 @@
       .spec-statement-summary td.title { vertical-align: top; }
       .spec-statement-summary .methods { width: 40%; }
       .spec-statement-summary td.methods { vertical-align: top; }
-      .test-status { table-layout: auto; width: 100em; }
+      .test-status { table-layout: auto; width: 100%; }
       .test-status .failed:before { content: "❌"; }
       .test-status .passed:before { content: "✅"; }
       .test-status .todo:before { content: "⚠️"; }
@@ -33,7 +33,7 @@
       .test-status .implementation { width:35%; }
       .test-status .statement { width: 35%; }
       .test-status .param { width: 50%; }
-      .statement-header { width: 100em; }
+      .statement-header { width: 100%; }
     </style>
     <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.js"></script>
@@ -108,7 +108,7 @@
             &quot;name&quot;: &quot;test-suite-a&quot;,
             &quot;a&quot;: 1,
             &quot;b&quot;: 2
-          }          
+          }
           </pre>
 
         <pre class="example" title="Example javascript test file">let { suiteConfig } = global;
@@ -266,7 +266,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
       ]
     }
   ]
-}                   
+}
 </pre>
       </section>
       <section>
@@ -1085,7 +1085,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 
 <td>
-<span class="passed">&#xA0;(3)</span> 
+<span class="passed">&#xA0;(4)</span> 
  
 </td>
 
@@ -1247,7 +1247,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 </tbody>
 <tr><td class="title"><a href="#T1">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M31">sov(5)</a>, <a href="#M40">unspecified(22)</a></span></td></tr>
 <tr><td class="title"><a href="#T2">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</a></td><td class="methods"><span class="passed"><strong>[20 methods]:</strong> <a href="#M1">3</a>, <a href="#M6">elem</a>, <a href="#M8">ethr</a>, <a href="#M15">ion</a>, <a href="#M16">is</a>, <a href="#M18">key(11)</a>, <a href="#M19">kilt(2)</a>, <a href="#M20">lit</a>, <a href="#M21">monid</a>, <a href="#M24">nft</a>, <a href="#M26">orb(11)</a>, <a href="#M27">photon</a>, <a href="#M28">polygon</a>, <a href="#M29">schema</a>, <a href="#M31">sov</a>, <a href="#M33">trust</a>, <a href="#M35">v1</a>, <a href="#M36">vaa</a>, <a href="#M37">web(5)</a>, <a href="#M31">sov</a></span></td></tr>
-<tr><td class="title"><a href="#T3">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M31">sov</a></span></td></tr>
+<tr><td class="title"><a href="#T3">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">web</a>, <a href="#M31">sov</a></span></td></tr>
 <tr><td class="title"><a href="#T4">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">web</a>, <a href="#M31">sov</a></span></td></tr>
 <tr><td class="title"><a href="#T5">3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">web</a>, <a href="#M31">sov</a></span></td></tr>
 <tr><td class="title"><a href="#T6">3.2.1 DID Parameters - versionId - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">ethr</a>, <a href="#M31">sov</a></span></td></tr>
@@ -16895,7 +16895,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(1)</span>
+<span class="passed">&#xA0;(2)</span>
 
 
 </th>
@@ -16903,9 +16903,16 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</div></td></tr>
+<tr><td colspan="4">Total implementations: 2</td></tr>
 
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>MATTR Internal Libraries</td>
+<td>did:UNKNOWN</td>
+</tr>
 
 
 <tr>
@@ -80056,7 +80063,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(331)</span>
+<span class="passed">&#xA0;(332)</span>
 
 
 </th>
@@ -80086,6 +80093,13 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did-identifier</td><td><a href="#T2">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Ru&#x2026;</a></td>
 <td>did:web:kyledenhartog.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-identifier</td><td><a href="#T3">3.2.1 DID Parameters - hl - If present, the associated value MUS&#x2026;</a></td>
+<td>did:UNKNOWN</td>
 </tr>
 
 
