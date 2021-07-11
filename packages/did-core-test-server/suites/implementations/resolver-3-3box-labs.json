@@ -1,6 +1,7 @@
 {
   "implementation": "@ceramicnetwork/3id-did-resolver",
   "implementer": "3Box Labs",
+  "didMethod": "did:3",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1, 2 ],
     "invalidDidErrorOutcome": [ ],

@@ -1,6 +1,7 @@
 {
   "implementation": "Example Dereferencer",
   "implementer": "DID Working Group",
+  "didMethod": "did:example",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1 ],
     "invalidDidUrlErrorOutcome": [ 2 ],

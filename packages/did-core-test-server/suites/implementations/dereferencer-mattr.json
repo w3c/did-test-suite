@@ -1,6 +1,7 @@
 {
     "implementation": "MATTR internal libraries",
     "implementer": "MATTR Limited",
+    "didMethod": "did:web",
     "expectedOutcomes": {
         "defaultOutcome": [0, 1, 2, 3, 4, 5, 6],
         "invalidDidUrlErrorOutcome": [10],

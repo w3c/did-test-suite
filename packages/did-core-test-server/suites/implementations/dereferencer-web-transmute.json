@@ -1,6 +1,7 @@
 {
   "implementation": "https://github.com/OR13/deno-did-pm",
   "implementer": "Transmute",
+  "didMethod": "did:web",
   "expectedOutcomes": {
     "defaultOutcome": [ 0, 1 ],
     "invalidDidUrlErrorOutcome": [ ],

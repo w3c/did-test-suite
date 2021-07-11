@@ -1,6 +1,7 @@
 {
     "implementation": "https://github.com/ayanworks/polygon-did-resolver",
     "implementer": "Ayanworks",
+    "didMethod": "did:polygon",
     "expectedOutcomes": {
         "defaultOutcome": [0, 1],
         "invalidDidErrorOutcome": [],
