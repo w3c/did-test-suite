@@ -1,0 +1,41 @@
+{
+  "didMethod": "did:onion",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-onion",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1
+    ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\"}],\"id\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\"verificationMethod\":[{\"id\":\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"LIUp9Jdi2R17QcZnbPFZOYyV5oyotNHU2J5dQUdTUa4\"}},{\"id\":\"#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"X25519\",\"x\":\"785EYGRUOU2sNrWMZJgsCgQFs4lXpVWgvM9K6CyBogU\"}},{\"id\":\"#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\"publicKeyBase58\":\"3zni9pmFAWvFvuGCnnMVSRxYkjv5gkFMKsMsAtqX1SJq\"}],\"authentication\":[\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"],\"assertionMethod\":[\"#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA\"],\"keyAgreement\":[\"#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8\"],\"capabilityInvocation\":[\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"],\"capabilityDelegation\":[\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"@base\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\"}],\"id\":\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"LIUp9Jdi2R17QcZnbPFZOYyV5oyotNHU2J5dQUdTUa4\"}}",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

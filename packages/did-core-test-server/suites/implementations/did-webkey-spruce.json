@@ -1,0 +1,74 @@
+{
+  "didMethod": "did:webkey",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-webkey",
+  "implementer": "Spruce Systems, Inc.",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys"
+  ],
+  "didParameters": {},
+  "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys": {
+    "didDocumentDataModel": {
+      "properties": {
+        "assertionMethod": [
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY",
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ",
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE"
+        ],
+        "authentication": [
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY",
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ",
+          "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE"
+        ],
+        "id": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys",
+        "verificationMethod": [
+          {
+            "controller": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys",
+            "id": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY",
+            "publicKeyJwk": {
+              "crv": "P-256",
+              "kty": "EC",
+              "x": "Ny2EeLlWXdo5-MxrY-8KcuCcgp-KiG6kYxZqWnpfYiU",
+              "y": "PLcH_NKwH18s7bAFJUnLo4EbUIZyope1pVoG1on5T9s"
+            },
+            "type": "EcdsaSecp256r1VerificationKey2019"
+          },
+          {
+            "controller": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys",
+            "id": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ",
+            "publicKeyJwk": {
+              "crv": "Ed25519",
+              "kty": "OKP",
+              "x": "otVmcA7GOzqAi8rjlBh7AlMwmJLkmrNdqtiAlwh9_7k"
+            },
+            "type": "Ed25519VerificationKey2018"
+          },
+          {
+            "controller": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys",
+            "id": "did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE",
+            "publicKeyJwk": {
+              "e": "AQAB",
+              "kty": "RSA",
+              "n": "wvbwjDkSJ_EDQtNankIJttqsZOQjW9J0-zzBrvPkNZZQ-RFL8ePerqObLMJPl8pGydxW37eFyvcil5qgPsn5L-H_ZmkIpLMmxjnkVb9WdSK2iXhJkcmlnVw3vKBAN9OxytLhF7g4XfBRcKIP_Gsg5Nnr4wF19J0EPvSPkyiwDH9vkKhLSAnetKaUc1EMzCQwIU4n3qGiEkdpzXcLN2rPWsessCidzqy82QYrWvui_ZyUa2xWBhH4f3_48AUwsoqqfwkdSnYu5CApqXemJNLJn9587LAroFhghYRf6-3n2KciUqmZ4ShXW-0NDtbMDqeFxa4GJZKfpTokXcILBTSfiw"
+            },
+            "type": "RsaVerificationKey2018"
+          }
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{\n  \"@context\": \"https://www.w3.org/ns/did/v1\",\n  \"id\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY\",\n      \"type\": \"EcdsaSecp256r1VerificationKey2019\",\n      \"controller\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys\",\n      \"publicKeyJwk\": {\n        \"kty\": \"EC\",\n        \"crv\": \"P-256\",\n        \"x\": \"Ny2EeLlWXdo5-MxrY-8KcuCcgp-KiG6kYxZqWnpfYiU\",\n        \"y\": \"PLcH_NKwH18s7bAFJUnLo4EbUIZyope1pVoG1on5T9s\"\n      }\n    },\n    {\n      \"id\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ\",\n      \"type\": \"Ed25519VerificationKey2018\",\n      \"controller\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys\",\n      \"publicKeyJwk\": {\n        \"kty\": \"OKP\",\n        \"crv\": \"Ed25519\",\n        \"x\": \"otVmcA7GOzqAi8rjlBh7AlMwmJLkmrNdqtiAlwh9_7k\"\n      }\n    },\n    {\n      \"id\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE\",\n      \"type\": \"RsaVerificationKey2018\",\n      \"controller\": \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys\",\n      \"publicKeyJwk\": {\n        \"kty\": \"RSA\",\n        \"n\": \"wvbwjDkSJ_EDQtNankIJttqsZOQjW9J0-zzBrvPkNZZQ-RFL8ePerqObLMJPl8pGydxW37eFyvcil5qgPsn5L-H_ZmkIpLMmxjnkVb9WdSK2iXhJkcmlnVw3vKBAN9OxytLhF7g4XfBRcKIP_Gsg5Nnr4wF19J0EPvSPkyiwDH9vkKhLSAnetKaUc1EMzCQwIU4n3qGiEkdpzXcLN2rPWsessCidzqy82QYrWvui_ZyUa2xWBhH4f3_48AUwsoqqfwkdSnYu5CApqXemJNLJn9587LAroFhghYRf6-3n2KciUqmZ4ShXW-0NDtbMDqeFxa4GJZKfpTokXcILBTSfiw\",\n        \"e\": \"AQAB\"\n      }\n    }\n  ],\n  \"authentication\": [\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY\",\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ\",\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE\"\n  ],\n  \"assertionMethod\": [\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#8SblvHVCDVjYk56I2Gu3mSFb1dMVA9uG1GU2kYziQlY\",\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#b2sb-RCkrCm9c569tNc76JBbirQiR9WCL6kf8GlqbvQ\",\n    \"did:webkey:ssh:demo.spruceid.com:2021:07:14:keys#s4new-KFNkSR6KbJhFGqCZ3iZB6nHby-BK-ruIZT3iE\"\n  ]\n}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

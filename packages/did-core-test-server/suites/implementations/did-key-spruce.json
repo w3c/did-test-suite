@@ -1,0 +1,154 @@
+{
+  "didMethod": "did:key",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-key",
+  "implementer": "Spruce Systems, Inc.",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+    "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169",
+    "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme"
+  ],
+  "didParameters": {},
+  "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH": {
+    "didDocumentDataModel": {
+      "properties": {
+        "assertionMethod": [
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "authentication": [
+          "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH"
+        ],
+        "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+        "verificationMethod": [
+          {
+            "controller": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+            "id": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+            "publicKeyJwk": {
+              "crv": "Ed25519",
+              "kty": "OKP",
+              "x": "lJZrfAjkBXdfjebMHEUI9usidAPhAlssitLXR3OYxbI"
+            },
+            "type": "Ed25519VerificationKey2018"
+          }
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "Ed25519VerificationKey2018": "https://w3id.org/security#Ed25519VerificationKey2018",
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
+          ]
+        }
+      },
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"Ed25519VerificationKey2018\": \"https://w3id.org/security#Ed25519VerificationKey2018\",\n      \"publicKeyJwk\": {\n        \"@id\": \"https://w3id.org/security#publicKeyJwk\",\n        \"@type\": \"@json\"\n      }\n    }\n  ],\n  \"id\": \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\n      \"type\": \"Ed25519VerificationKey2018\",\n      \"controller\": \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\n      \"publicKeyJwk\": {\n        \"kty\": \"OKP\",\n        \"crv\": \"Ed25519\",\n        \"x\": \"lJZrfAjkBXdfjebMHEUI9usidAPhAlssitLXR3OYxbI\"\n      }\n    }\n  ],\n  \"authentication\": [\n    \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"\n  ],\n  \"assertionMethod\": [\n    \"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"\n  ]\n}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  },
+  "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169": {
+    "didDocumentDataModel": {
+      "properties": {
+        "assertionMethod": [
+          "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169"
+        ],
+        "authentication": [
+          "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169"
+        ],
+        "id": "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169",
+        "verificationMethod": [
+          {
+            "controller": "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169",
+            "id": "did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169",
+            "publicKeyJwk": {
+              "crv": "P-256",
+              "kty": "EC",
+              "x": "fyNYMN0976ci7xqiSdag3buk-ZCwgXU4kz9XNkBlNUI",
+              "y": "hW2ojTNfH7Jbi8--CJUo3OCbH3y5n91g-IMA9MLMbTU"
+            },
+            "type": "EcdsaSecp256r1VerificationKey2019"
+          }
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "EcdsaSecp256r1VerificationKey2019": "https://w3id.org/security#EcdsaSecp256r1VerificationKey2019",
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
+          ]
+        }
+      },
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256r1VerificationKey2019\": \"https://w3id.org/security#EcdsaSecp256r1VerificationKey2019\",\n      \"publicKeyJwk\": {\n        \"@id\": \"https://w3id.org/security#publicKeyJwk\",\n        \"@type\": \"@json\"\n      }\n    }\n  ],\n  \"id\": \"did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169\",\n      \"type\": \"EcdsaSecp256r1VerificationKey2019\",\n      \"controller\": \"did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169\",\n      \"publicKeyJwk\": {\n        \"kty\": \"EC\",\n        \"crv\": \"P-256\",\n        \"x\": \"fyNYMN0976ci7xqiSdag3buk-ZCwgXU4kz9XNkBlNUI\",\n        \"y\": \"hW2ojTNfH7Jbi8--CJUo3OCbH3y5n91g-IMA9MLMbTU\"\n      }\n    }\n  ],\n  \"authentication\": [\n    \"did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169\"\n  ],\n  \"assertionMethod\": [\n    \"did:key:zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169#zDnaerDaTF5BXEavCrfRZEk316dpbLsfPDZ3WJ5hRTPFU2169\"\n  ]\n}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  },
+  "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme": {
+    "didDocumentDataModel": {
+      "properties": {
+        "assertionMethod": [
+          "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme"
+        ],
+        "authentication": [
+          "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme"
+        ],
+        "id": "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme",
+        "verificationMethod": [
+          {
+            "controller": "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme",
+            "id": "did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme",
+            "publicKeyJwk": {
+              "crv": "secp256k1",
+              "kty": "EC",
+              "x": "h0wVx_2iDlOcblulc8E5iEw1EYh5n1RYtLQfeSTyNc0",
+              "y": "O2EATIGbu6DezKFptj5scAIRntgfecanVNXxat1rnwE"
+            },
+            "type": "EcdsaSecp256k1VerificationKey2019"
+          }
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "EcdsaSecp256k1VerificationKey2019": "https://w3id.org/security#EcdsaSecp256k1VerificationKey2019",
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
+          ]
+        }
+      },
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1VerificationKey2019\": \"https://w3id.org/security#EcdsaSecp256k1VerificationKey2019\",\n      \"publicKeyJwk\": {\n        \"@id\": \"https://w3id.org/security#publicKeyJwk\",\n        \"@type\": \"@json\"\n      }\n    }\n  ],\n  \"id\": \"did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme\",\n      \"type\": \"EcdsaSecp256k1VerificationKey2019\",\n      \"controller\": \"did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme\",\n      \"publicKeyJwk\": {\n        \"kty\": \"EC\",\n        \"crv\": \"secp256k1\",\n        \"x\": \"h0wVx_2iDlOcblulc8E5iEw1EYh5n1RYtLQfeSTyNc0\",\n        \"y\": \"O2EATIGbu6DezKFptj5scAIRntgfecanVNXxat1rnwE\"\n      }\n    }\n  ],\n  \"authentication\": [\n    \"did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme\"\n  ],\n  \"assertionMethod\": [\n    \"did:key:zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme#zQ3shokFTS3brHcDQrn82RUDfCZESWL1ZdCEJwekUDPQiYBme\"\n  ]\n}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

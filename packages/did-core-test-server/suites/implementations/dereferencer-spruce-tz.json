@@ -1,0 +1,41 @@
+{
+  "didMethod": "did:tz",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-tezos",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1
+    ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\":\"https://w3id.org/security#Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\"blockchainAccountId\":\"https://w3id.org/security#blockchainAccountId\"}],\"id\":\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x\",\"verificationMethod\":[{\"id\":\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\",\"type\":\"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\"controller\":\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x\",\"blockchainAccountId\":\"tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x@tezos:mainnet\"}],\"authentication\":[\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\"],\"assertionMethod\":[\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\"]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\":\"https://w3id.org/security#Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\"blockchainAccountId\":\"https://w3id.org/security#blockchainAccountId\"}],\"id\":\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\",\"type\":\"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\"controller\":\"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x\",\"blockchainAccountId\":\"tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x@tezos:mainnet\"}",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}
