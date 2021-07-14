@@ -1,0 +1,61 @@
+{
+  "didMethod": "did:web",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-web",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "notFoundErrorOutcome": [
+      1
+    ],
+    "defaultOutcome": [
+      0,
+      2
+    ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:web:identity.foundation",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1"
+          ],
+          "id": "did:web:identity.foundation"
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:web:did.actor:nonexistent",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": null,
+        "didResolutionMetadata": {
+          "error": "notFound"
+        },
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:web:identity.foundation",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocumentStream": "{\n  \"@context\": [\"https://www.w3.org/ns/did/v1\"],\n  \"id\": \"did:web:identity.foundation\"\n}\n",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}

@@ -12,6 +12,12 @@ module.exports = {
     require('../implementations/universal-resolver-dereferencer-tests.json'),
     require('../implementations/dereferencer-mattr.json'),
     require('../implementations/dereferencer-polygon-ayanworks.json'),
+    require('../implementations/dereferencer-spruce-key.json'),
+    require('../implementations/dereferencer-spruce-web.json'),
+    require('../implementations/dereferencer-spruce-tz.json'),
+    require('../implementations/dereferencer-spruce-onion.json'),
+    require('../implementations/dereferencer-spruce-pkh.json'),
+    require('../implementations/dereferencer-spruce-webkey.json'),
     ...brokenFixtures
 
   ]

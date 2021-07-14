@@ -1,0 +1,62 @@
+{
+  "didMethod": "did:pkh",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-pkh",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1
+    ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "EcdsaSecp256k1RecoveryMethod2020": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020",
+              "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+            }
+          ],
+          "id": "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L",
+          "verificationMethod": [
+            {
+              "id": "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId",
+              "type": "EcdsaSecp256k1RecoveryMethod2020",
+              "controller": "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L",
+              "blockchainAccountId": "DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L@bip122:1a91e3dace36e2be3bf030a65679fe82"
+            }
+          ],
+          "authentication": [
+            "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId"
+          ],
+          "assertionMethod": [
+            "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocumentStream": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1RecoveryMethod2020\": \"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId\",\n      \"type\": \"EcdsaSecp256k1RecoveryMethod2020\",\n      \"controller\": \"did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L\",\n      \"blockchainAccountId\": \"DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L@bip122:1a91e3dace36e2be3bf030a65679fe82\"\n    }\n  ],\n  \"authentication\": [\n    \"did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId\"\n  ],\n  \"assertionMethod\": [\n    \"did:pkh:doge:DH5yaieqoZN36fDVciNyRueRGvGLR3mr7L#blockchainAccountId\"\n  ]\n}",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}

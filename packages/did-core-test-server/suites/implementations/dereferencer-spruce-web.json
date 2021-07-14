@@ -1,0 +1,58 @@
+{
+  "didMethod": "did:web",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-web",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      1,
+      2
+    ],
+    "notFoundErrorOutcome": [
+      0
+    ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:web:did.actor:nonexistent",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "notFound"
+        },
+        "contentStream": "",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:web:demo.spruceid.com:2021:07:14:service-example",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:web:demo.spruceid.com:2021:07:14:service-example\",\"service\":[{\"id\":\"#hello\",\"type\":\"#HelloService\",\"serviceEndpoint\":\"https://demo.spruceid.com/2021/07/14/service-example/hello.txt\"}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:web:demo.spruceid.com:2021:07:14:service-example?service=hello",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "text/url"
+        },
+        "contentStream": "https://demo.spruceid.com/2021/07/14/service-example/hello.txt?service=hello",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

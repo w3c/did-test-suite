@@ -1,0 +1,68 @@
+{
+  "didMethod": "did:web",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-web",
+  "implementer": "Spruce Systems, Inc.",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:web:demo.spruceid.com:2021:07:08"
+  ],
+  "didParameters": {
+    "service": "did:web:demo.spruceid.com:2021:07:14:service-example?service=hello"
+  },
+  "did:web:demo.spruceid.com:2021:07:08": {
+    "didDocumentDataModel": {
+      "properties": {
+        "assertionMethod": [
+          "did:web:demo.spruceid.com:2021:07:08#ed25519-1",
+          "did:web:demo.spruceid.com:2021:07:08#rsa-1"
+        ],
+        "authentication": [
+          "did:web:demo.spruceid.com:2021:07:08#ed25519-1",
+          "did:web:demo.spruceid.com:2021:07:08#rsa-1"
+        ],
+        "id": "did:web:demo.spruceid.com:2021:07:08",
+        "verificationMethod": [
+          {
+            "controller": "did:web:demo.spruceid.com:2021:07:08",
+            "id": "did:web:demo.spruceid.com:2021:07:08#ed25519-1",
+            "publicKeyBase58": "1xxpw5pKJbL8j3aQKsYCdQViXBPKJtWNkYKCZfgbUAV",
+            "type": "Ed25519VerificationKey2018"
+          },
+          {
+            "controller": "did:web:demo.spruceid.com:2021:07:08",
+            "id": "did:web:demo.spruceid.com:2021:07:08#rsa-1",
+            "publicKeyJwk": {
+              "e": "AQAB",
+              "kty": "RSA",
+              "n": "tmUPNfRyWBG8x_bY2iw_8_uYYfZmPvLr-AMglzm8N6vL_zAOWkPowip31w5J5NM_73ug6aNglRLejfNRyc0h3RYbOri09O3g9mqta6ylzv3w1Ykwg4__6_mvNbZ1zfy82cNLFMm23G2atyV-_7IBaWU0ACRTY1E5IgApf2O61GGRn_DHAO03NwgqidRhl5cHuuobjtffqNOVjzjXQAVo_w4WHEqAgCBVMtlryl8EwUcVQ8EFq7ZarGiRt-lN6zTolD13nDh98eOvLN_Ku4vdA_wKRQXIo26kxnLYXaUR29jGFPR2lrNkvfAZws0vb_3QAxMhzPLh_c_xVrYuTesD1w"
+            },
+            "type": "RsaVerificationKey2018"
+          }
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/v2",
+            {
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
+          ]
+        }
+      },
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    \"https://w3id.org/security/v2\",\n    {\n      \"publicKeyJwk\": {\n        \"@id\": \"https://w3id.org/security#publicKeyJwk\",\n        \"@type\": \"@json\"\n      }\n    }\n  ],\n  \"id\": \"did:web:demo.spruceid.com:2021:07:08\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:web:demo.spruceid.com:2021:07:08#ed25519-1\",\n      \"type\": \"Ed25519VerificationKey2018\",\n      \"controller\": \"did:web:demo.spruceid.com:2021:07:08\",\n      \"publicKeyBase58\": \"1xxpw5pKJbL8j3aQKsYCdQViXBPKJtWNkYKCZfgbUAV\"\n    },\n    {\n      \"id\": \"did:web:demo.spruceid.com:2021:07:08#rsa-1\",\n      \"type\": \"RsaVerificationKey2018\",\n      \"controller\": \"did:web:demo.spruceid.com:2021:07:08\",\n      \"publicKeyJwk\": {\n        \"kty\": \"RSA\",\n        \"n\": \"tmUPNfRyWBG8x_bY2iw_8_uYYfZmPvLr-AMglzm8N6vL_zAOWkPowip31w5J5NM_73ug6aNglRLejfNRyc0h3RYbOri09O3g9mqta6ylzv3w1Ykwg4__6_mvNbZ1zfy82cNLFMm23G2atyV-_7IBaWU0ACRTY1E5IgApf2O61GGRn_DHAO03NwgqidRhl5cHuuobjtffqNOVjzjXQAVo_w4WHEqAgCBVMtlryl8EwUcVQ8EFq7ZarGiRt-lN6zTolD13nDh98eOvLN_Ku4vdA_wKRQXIo26kxnLYXaUR29jGFPR2lrNkvfAZws0vb_3QAxMhzPLh_c_xVrYuTesD1w\",\n        \"e\": \"AQAB\"\n      }\n    }\n  ],\n  \"assertionMethod\": [\n    \"did:web:demo.spruceid.com:2021:07:08#ed25519-1\",\n    \"did:web:demo.spruceid.com:2021:07:08#rsa-1\"\n  ],\n  \"authentication\": [\n    \"did:web:demo.spruceid.com:2021:07:08#ed25519-1\",\n    \"did:web:demo.spruceid.com:2021:07:08#rsa-1\"\n  ]\n}\n",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

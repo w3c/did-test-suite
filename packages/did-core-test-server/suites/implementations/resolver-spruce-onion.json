@@ -1,0 +1,90 @@
+{
+  "didMethod": "did:onion",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-onion",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1
+    ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "@base": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid"
+            }
+          ],
+          "id": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+          "verificationMethod": [
+            {
+              "id": "#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E",
+              "type": "JsonWebKey2020",
+              "controller": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+              "publicKeyJwk": {
+                "kty": "OKP",
+                "crv": "Ed25519",
+                "x": "LIUp9Jdi2R17QcZnbPFZOYyV5oyotNHU2J5dQUdTUa4"
+              }
+            },
+            {
+              "id": "#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8",
+              "type": "JsonWebKey2020",
+              "controller": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+              "publicKeyJwk": {
+                "kty": "OKP",
+                "crv": "X25519",
+                "x": "785EYGRUOU2sNrWMZJgsCgQFs4lXpVWgvM9K6CyBogU"
+              }
+            },
+            {
+              "id": "#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA",
+              "type": "Ed25519VerificationKey2018",
+              "controller": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+              "publicKeyBase58": "3zni9pmFAWvFvuGCnnMVSRxYkjv5gkFMKsMsAtqX1SJq"
+            }
+          ],
+          "authentication": [
+            "#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E"
+          ],
+          "assertionMethod": [
+            "#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA"
+          ],
+          "keyAgreement": [
+            "#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8"
+          ],
+          "capabilityInvocation": [
+            "#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E"
+          ],
+          "capabilityDelegation": [
+            "#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocumentStream": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"@base\": \"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\"\n    }\n  ],\n  \"id\": \"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\",\n      \"type\": \"JsonWebKey2020\",\n      \"controller\": \"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\n      \"publicKeyJwk\": {\n        \"crv\": \"Ed25519\",\n        \"kty\": \"OKP\",\n        \"x\": \"LIUp9Jdi2R17QcZnbPFZOYyV5oyotNHU2J5dQUdTUa4\"\n      }\n    },\n    {\n      \"id\": \"#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8\",\n      \"type\": \"JsonWebKey2020\",\n      \"controller\": \"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\n      \"publicKeyJwk\": {\n        \"crv\": \"X25519\",\n        \"kty\": \"OKP\",\n        \"x\": \"785EYGRUOU2sNrWMZJgsCgQFs4lXpVWgvM9K6CyBogU\"\n      }\n    },\n    {\n      \"id\": \"#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA\",\n      \"type\": \"Ed25519VerificationKey2018\",\n      \"controller\": \"did:onion:fscst5exmlmr262byztwz4kzhggjlzumvc2ndvgytzoucr2tkgxf7mid\",\n      \"publicKeyBase58\": \"3zni9pmFAWvFvuGCnnMVSRxYkjv5gkFMKsMsAtqX1SJq\"\n    }\n  ],\n  \"authentication\": [\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"],\n  \"assertionMethod\": [\"#iFPG3dtLcg-0jI4CVa9b94g06KadgrpM8rC9EMI94nA\"],\n  \"capabilityInvocation\": [\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"],\n  \"capabilityDelegation\": [\"#g7r2t9G8dBBnG7yZkD8sly3ImDlrntB25s2pGuaD97E\"],\n  \"keyAgreement\": [\"#5CRqmSH-XbX2V1qysBH0vPWzgveQEZObyOrAiaOY9U8\"]\n}\n",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}
