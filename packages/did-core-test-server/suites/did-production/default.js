@@ -36,6 +36,7 @@ module.exports = {
     require('../implementations/did-onion-spruce.json'),
     require('../implementations/did-pkh-spruce.json'),
     require('../implementations/did-webkey-spruce.json'),
+    require('../implementations/did-ebsi.json'),
     ...brokenFixtures
   ],
 };
