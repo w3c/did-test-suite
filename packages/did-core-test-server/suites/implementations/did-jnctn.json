@@ -1,0 +1,49 @@
+{
+    "didMethod": "did:jnctn",
+    "implementation": "DID JNCTN Test Suite",
+    "implementer": "JNCTN Limited",
+    "supportedContentTypes": [
+        "application/did+json"
+    ],
+    "dids": [
+        "did:jnctn:187c4af8932a444a9e9503fb96cb672f"
+    ],
+    "didParameters": {},
+    "did:jnctn:187c4af8932a444a9e9503fb96cb672f": {
+        "didDocumentDataModel": {
+            "properties": {
+                "id": "did:jnctn:187c4af8932a444a9e9503fb96cb672f",
+                "verificationMethod": [
+                    {
+                        "id": "did:jnctn:187c4af8932a444a9e9503fb96cb672f#key-0",
+                        "controller": "did:jnctn:70a40d1680b648ae8c77959a6a28d365",
+                        "type": "Ed25519VerificationKey2020",
+                        "publicKeyMultibase": "m82ogFXXXP/V17+8muZyd6h0sH4Q6SiTBCUl3/VatWAE"
+                    }
+                ],
+                "assertionMethod": [
+                    "#key-0"
+                ]
+            }
+        },
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"verificationMethod\":[{\"id\":\"did:jnctn:187c4af8932a444a9e9503fb96cb672f#key-0\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:jnctn:70a40d1680b648ae8c77959a6a28d365\",\"publicKeyMultibase\":\"m82ogFXXXP/V17+8muZyd6h0sH4Q6SiTBCUl3/VatWAE\"}],\"assertionMethod\":[\"#key-0\"],\"id\":\"did:jnctn:187c4af8932a444a9e9503fb96cb672f\"}",
+            "didDocumentMetadata": {
+                "created": "2021-06-26T10:20:18.187Z"
+            },
+            "didResolutionMetadata": {
+                "retrieved": "2021-06-26T10:20:20.137Z",
+                "contentType": "application/did+json",
+                "sequence": 0,
+                "proof": {
+                    "type": "Ed25519VerificationKey2020",
+                    "publicKeyMultibase": "m82ogFXXXP/V17+8muZyd6h0sH4Q6SiTBCUl3/VatWAE"
+                },
+                "duration": 6
+            }
+        }
+    }
+}

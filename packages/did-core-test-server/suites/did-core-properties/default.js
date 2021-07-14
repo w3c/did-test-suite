@@ -29,6 +29,7 @@ module.exports = {
     require('../implementations/did-web-mattr.json'),
     require('../implementations/did-sov-mattr.json'),
     require('../implementations/did-polygon-ayanworks.json'),
+    require('../implementations/did-jnctn.json'),
     ...brokenFixtures
 
   ],
