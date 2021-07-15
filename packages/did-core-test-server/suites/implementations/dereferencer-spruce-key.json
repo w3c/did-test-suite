@@ -1,0 +1,58 @@
+{
+  "didMethod": "did:key",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-key",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1
+    ],
+    "invalidDidUrlErrorOutcome": [
+      2
+    ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"Ed25519VerificationKey2018\":\"https://w3id.org/security#Ed25519VerificationKey2018\",\"publicKeyJwk\":{\"@id\":\"https://w3id.org/security#publicKeyJwk\",\"@type\":\"@json\"}}],\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"verificationMethod\":[{\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"lJZrfAjkBXdfjebMHEUI9usidAPhAlssitLXR3OYxbI\"}}],\"authentication\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"],\"assertionMethod\":[\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\"]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",{\"Ed25519VerificationKey2018\":\"https://w3id.org/security#Ed25519VerificationKey2018\",\"publicKeyJwk\":{\"@id\":\"https://w3id.org/security#publicKeyJwk\",\"@type\":\"@json\"}}],\"id\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH#z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:key:z6MkpTHR8VNsBxYAAWHut2Geadd9jSwuBV8xRoAnwWsdvktH\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"lJZrfAjkBXdfjebMHEUI9usidAPhAlssitLXR3OYxbI\"}}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "bad:invalid",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "invalidDidUrl"
+        },
+        "contentStream": "",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

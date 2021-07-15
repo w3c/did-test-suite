@@ -32,6 +32,12 @@ module.exports = {
     require('../implementations/universal-resolver-identifier-tests.json'),
     require('../implementations/did-polygon-ayanworks.json'),
     require('../implementations/did-jnctn.json'),
+    require('../implementations/did-key-spruce.json'),
+    require('../implementations/did-web-spruce.json'),
+    require('../implementations/did-tz-spruce.json'),
+    require('../implementations/did-onion-spruce.json'),
+    require('../implementations/did-pkh-spruce.json'),
+    require('../implementations/did-webkey-spruce.json'),
    ...brokenFixtures
   ],
 };

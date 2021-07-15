@@ -1,0 +1,170 @@
+{
+  "didMethod": "did:tz",
+  "implementation": "https://github.com/spruceid/ssi/tree/main/did-tezos",
+  "implementer": "Spruce Systems, Inc.",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021": "https://w3id.org/security#Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+            }
+          ],
+          "id": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x",
+          "verificationMethod": [
+            {
+              "id": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId",
+              "type": "Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "controller": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x",
+              "blockchainAccountId": "tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x@tezos:mainnet"
+            }
+          ],
+          "authentication": [
+            "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId"
+          ],
+          "assertionMethod": [
+            "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021": "https://w3id.org/security#Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+            }
+          ],
+          "id": "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq",
+          "verificationMethod": [
+            {
+              "id": "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq#blockchainAccountId",
+              "type": "Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "controller": "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq",
+              "blockchainAccountId": "tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq@tezos:delphinet"
+            }
+          ],
+          "authentication": [
+            "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq#blockchainAccountId"
+          ],
+          "assertionMethod": [
+            "did:tz:delphinet:tz1WvvbEGpBXGeTVbLiR6DYBe1izmgiYuZbq#blockchainAccountId"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "EcdsaSecp256k1RecoveryMethod2020": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020",
+              "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+            }
+          ],
+          "id": "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq",
+          "verificationMethod": [
+            {
+              "id": "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq#blockchainAccountId",
+              "type": "EcdsaSecp256k1RecoveryMethod2020",
+              "controller": "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq",
+              "blockchainAccountId": "tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq@tezos:mainnet"
+            }
+          ],
+          "authentication": [
+            "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq#blockchainAccountId"
+          ],
+          "assertionMethod": [
+            "did:tz:tz2BFTyPeYRzxd5aiBchbXN3WCZhx7BqbMBq#blockchainAccountId"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            {
+              "P256PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021": "https://w3id.org/security#P256PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+            }
+          ],
+          "id": "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX",
+          "verificationMethod": [
+            {
+              "id": "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX#blockchainAccountId",
+              "type": "P256PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021",
+              "controller": "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX",
+              "blockchainAccountId": "tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX@tezos:mainnet"
+            }
+          ],
+          "authentication": [
+            "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX#blockchainAccountId"
+          ],
+          "assertionMethod": [
+            "did:tz:tz3agP9LGe2cXmKQyYn6T68BHKjjktDbbSWX#blockchainAccountId"
+          ]
+        },
+        "didResolutionMetadata": {},
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocumentStream": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\": \"https://w3id.org/security#Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\",\n      \"type\": \"Ed25519PublicKeyBLAKE2BDigestSize20Base58CheckEncoded2021\",\n      \"controller\": \"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x\",\n      \"blockchainAccountId\": \"tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x@tezos:mainnet\"\n    }\n  ],\n  \"authentication\": [\n    \"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\"\n  ],\n  \"assertionMethod\": [\n    \"did:tz:tz1YwA1FwpgLtc1G8DKbbZ6e6PTb1dQMRn5x#blockchainAccountId\"\n  ]\n}",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}

@@ -48,6 +48,12 @@ module.exports = {
     require('../implementations/resolver-mattr-key.json'),
     require('../implementations/resolver-mattr-web.json'),
     require('../implementations/resolver-mattr-sov.json'),
+    require('../implementations/resolver-spruce-key.json'),
+    require('../implementations/resolver-spruce-web.json'),
+    require('../implementations/resolver-spruce-tz.json'),
+    require('../implementations/resolver-spruce-onion.json'),
+    require('../implementations/resolver-spruce-pkh.json'),
+    require('../implementations/resolver-spruce-webkey.json'),
     ...brokenFixtures
 
   ],
