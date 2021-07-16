@@ -1,0 +1,35 @@
+{
+  "didMethod": "did:web",
+  "implementation": "Evernym DID infrastructure",
+  "implementer": "Evernym",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:web:evernym.com"
+  ],
+  "didParameters": {},
+  "did:web:evernym.com": {
+    "didDocumentDataModel": {
+      "properties": {
+        "alsoKnownAs": [
+          "http://www.respectnetwork.com/"
+        ],
+        "controller": "did:key:z6MksvuoUimiLz49o5AF3MpFMhWW2PMEuQF8MYuDFHXWkeJz",
+        "id": "did:web:evernym.com"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{ \"@context\": \"https://www.w3.org/ns/did/v1\", \"alsoKnownAs\": [ \"http://www.respectnetwork.com/\" ], \"controller\": \"did:key:z6MksvuoUimiLz49o5AF3MpFMhWW2PMEuQF8MYuDFHXWkeJz\", \"id\": \"did:web:evernym.com\" }",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
