@@ -1412,6 +1412,26 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <span class="todo">&#xA0;(3)</span> 
 </td>
 </tr>
+<tr><td><a href="#M44">did:web</a></td><td>Evernym DID infrastructure</td>
+<td>
+<span class="passed">&#xA0;(30)</span> 
+ 
+</td>
+
+
+<td>
+<span class="passed">&#xA0;(1)</span> 
+ 
+</td>
+
+
+<td>
+<span class="passed">&#xA0;(8)</span> 
+ 
+</td>
+
+<td></td>
+<td></td></tr>
 <tr><td><a href="#M44">did:web</a></td><td>Universal Resolver</td><td></td>
 <td></td>
 <td></td>
@@ -1511,7 +1531,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 </tr>
 </tbody>
 <tr><td class="title"><a href="#T1">3.1 DID Syntax - All DID URLs MUST conform to the DID URL Syntax ABNF Rules.</a></td><td class="methods"><span class="passed"><strong>[11 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M22">key(3)</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion(2)</a>, <a href="#M33">pkh(2)</a>, <a href="#M34">polygon(3)</a>, <a href="#M37">sov(5)</a>, <a href="#M40">tz(2)</a>, <a href="#M44">web(16)</a>, <a href="#M45">webkey(2)</a></span></td></tr>
-<tr><td class="title"><a href="#T2">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(6)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T2">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Rules.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(7)</a>, <a href="#M45">webkey</a></span></td></tr>
 <tr><td class="title"><a href="#T3">3.2.1 DID Parameters - hl - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">sov</a>, <a href="#M44">web</a></span></td></tr>
 <tr><td class="title"><a href="#T4">3.2.1 DID Parameters - relativeRef - If present, the associated value MUST be an ASCII string and MUST use percent-encoding for certain characters as specified in RFC3986 Section 2.1.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">sov</a>, <a href="#M44">web</a></span></td></tr>
 <tr><td class="title"><a href="#T5">3.2.1 DID Parameters - service - If present, the associated value MUST be an ASCII string.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">sov</a>, <a href="#M44">web(2)</a></span></td></tr>
@@ -1519,37 +1539,37 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr><td class="title"><a href="#T7">3.2.1 DID Parameters - versionTime - If present, the associated value MUST be an ASCII string which is a valid XML datetime value, as defined in section 3.3.7 of W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes [XMLSCHEMA11-2]. This datetime value MUST be normalized to UTC 00:00:00 and without sub-second decimal precision. For example: 2020-12-20T19:17:47Z.</a></td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M1">3</a>, <a href="#M28">nft</a>, <a href="#M37">sov</a></span><br>
 <span class="failed"><strong>[1 method]:</strong> <a href="#M41">unisot</a></span></td></tr>
 <tr><td class="title"><a href="#T8">3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.</a></td><td class="methods"><span class="todo"><strong>[11 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M22">key(3)</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion(2)</a>, <a href="#M33">pkh(2)</a>, <a href="#M34">polygon(3)</a>, <a href="#M37">sov(5)</a>, <a href="#M40">tz(2)</a>, <a href="#M44">web(16)</a>, <a href="#M45">webkey(2)</a></span></td></tr>
-<tr><td class="title"><a href="#T9">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T10">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T11">5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If present, the value MUST be an ordered set where each item in the set is a URI conforming to [RFC3986].</a></td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M7">ebsi</a></span></td></tr>
-<tr><td class="title"><a href="#T12">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T13">5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. If present, the value MUST be a map representing a JSON Web Key that conforms to [RFC7517].</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T14">5.2 Verification Methods - The publicKeyMultibase property is OPTIONAL. This feature is non-normative. If present, the value MUST be astring representation of a [MULTIBASE] encoded public key.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T15">5.2 Verification Methods - The value of the controller property MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax.</a></td><td class="methods"><span class="passed"><strong>[25 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span><br>
+<tr><td class="title"><a href="#T9">5.1.1 DID Subject - The value of id MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax and MUST exist in the root map of the data model for the DID document.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T10">5.1.2 DID Controller - The controller property is OPTIONAL. If present, the value MUST be a string or an ordered set of strings that conform to the rules in &#xA7; 3.1 DID Syntax.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T11">5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If present, the value MUST be an ordered set where each item in the set is a URI conforming to [RFC3986].</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M7">ebsi</a>, <a href="#M44">web</a></span></td></tr>
+<tr><td class="title"><a href="#T12">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any other members of the private information class as described in Registration Template.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T13">5.2 Verification Methods - The publicKeyJwk property is OPTIONAL. If present, the value MUST be a map representing a JSON Web Key that conforms to [RFC7517].</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T14">5.2 Verification Methods - The publicKeyMultibase property is OPTIONAL. This feature is non-normative. If present, the value MUST be astring representation of a [MULTIBASE] encoded public key.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T15">5.2 Verification Methods - The value of the controller property MUST be a string that conforms to the rules in &#xA7; 3.1 DID Syntax.</a></td><td class="methods"><span class="passed"><strong>[25 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span><br>
 <span class="failed"><strong>[1 method]:</strong> <a href="#M18">ion(2)</a></span></td></tr>
-<tr><td class="title"><a href="#T16">5.2 Verification Methods - The value of the id property for a verification method MUST be a string that conforms to the rules in Section &#xA7; 3.2 DID URL Syntax.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T17">5.2 Verification Methods - The value of the type property MUST be a string that references exactly one verification method type.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T18">5.2 Verification Methods - The verification method map MUST include the id, type, controller, and specific verification material properties that are determined by the value of type and are defined in &#xA7; 5.2.1 Verification Material.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T19">5.2 Verification Methods - The verificationMethod property is OPTIONAL. If present, the value MUST be an ordered set of verification methods, where each verification method is expressed using a map.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T20">5.2.1 Verification Material - A verification method MUST NOT contain multiple verification material properties for the same material. For example, expressing key material in a verification method using both publicKeyJwk and publicKeyMultibase at the same time is prohibited.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T21">5.3.1 Authentication - The authentication property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T22">5.3.2 Assertion - The assertionMethod property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T23">5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T24">5.3.4 Capability Invocation - The capabilityInvocation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T25">5.3.5 Capability Delegation - The capabilityDelegation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T26">5.4 Services - A conforming consumer MUST produce an error if it detects multiple service entries with the same id.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T27">5.4 Services - A conforming producer MUST NOT produce multiple service entries with the same id.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T28">5.4 Services - All [serviceEndpoint] string values MUST be valid URIs conforming to [RFC3986] and normalized according to the Normalization and Comparison rules in RFC3986 and to any normalization rules in its applicable URI scheme specification.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T29">5.4 Services - Each service map MUST contain id, type, and serviceEndpoint properties.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T30">5.4 Services - The service property is OPTIONAL. If present, the associated value MUST be an ordered set of services, where each service is described by a map.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T31">5.4 Services - The value of the id property MUST be a URI conforming to [RFC3986].</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T32">5.4 Services - The value of the serviceEndpoint property MUST be a string, a map, or an ordered set composed of one or more strings and/or maps.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T33">5.4 Services - The value of the type property MUST be a string or an ordered set of strings.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T34">6.1 Production and Consumption - A conforming producer MUST NOT produce non-conforming DIDs or DID documents.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T35">6.1 Production and Consumption - A conforming producer MUST return the Media Type string associated with the representation after the production process completes.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T36">6.1 Production and Consumption - A conforming producer MUST serialize all entries in the DID document data model, and the representation-specific entries map, that do not have explicit processing rules for the representation being produced using only the representation&apos;s data type processing rules and return the serialization after the production process completes.</a></td><td class="methods"><span class="passed"><strong>[25 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span><br>
+<tr><td class="title"><a href="#T16">5.2 Verification Methods - The value of the id property for a verification method MUST be a string that conforms to the rules in Section &#xA7; 3.2 DID URL Syntax.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T17">5.2 Verification Methods - The value of the type property MUST be a string that references exactly one verification method type.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T18">5.2 Verification Methods - The verification method map MUST include the id, type, controller, and specific verification material properties that are determined by the value of type and are defined in &#xA7; 5.2.1 Verification Material.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T19">5.2 Verification Methods - The verificationMethod property is OPTIONAL. If present, the value MUST be an ordered set of verification methods, where each verification method is expressed using a map.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T20">5.2.1 Verification Material - A verification method MUST NOT contain multiple verification material properties for the same material. For example, expressing key material in a verification method using both publicKeyJwk and publicKeyMultibase at the same time is prohibited.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T21">5.3.1 Authentication - The authentication property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T22">5.3.2 Assertion - The assertionMethod property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T23">5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T24">5.3.4 Capability Invocation - The capabilityInvocation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T25">5.3.5 Capability Delegation - The capabilityDelegation property is OPTIONAL. If present, the associated value MUST be an ordered set of one or more verification methods.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T26">5.4 Services - A conforming consumer MUST produce an error if it detects multiple service entries with the same id.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T27">5.4 Services - A conforming producer MUST NOT produce multiple service entries with the same id.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T28">5.4 Services - All [serviceEndpoint] string values MUST be valid URIs conforming to [RFC3986] and normalized according to the Normalization and Comparison rules in RFC3986 and to any normalization rules in its applicable URI scheme specification.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T29">5.4 Services - Each service map MUST contain id, type, and serviceEndpoint properties.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T30">5.4 Services - The service property is OPTIONAL. If present, the associated value MUST be an ordered set of services, where each service is described by a map.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T31">5.4 Services - The value of the id property MUST be a URI conforming to [RFC3986].</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T32">5.4 Services - The value of the serviceEndpoint property MUST be a string, a map, or an ordered set composed of one or more strings and/or maps.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T33">5.4 Services - The value of the type property MUST be a string or an ordered set of strings.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T34">6.1 Production and Consumption - A conforming producer MUST NOT produce non-conforming DIDs or DID documents.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T35">6.1 Production and Consumption - A conforming producer MUST return the Media Type string associated with the representation after the production process completes.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T36">6.1 Production and Consumption - A conforming producer MUST serialize all entries in the DID document data model, and the representation-specific entries map, that do not have explicit processing rules for the representation being produced using only the representation&apos;s data type processing rules and return the serialization after the production process completes.</a></td><td class="methods"><span class="passed"><strong>[25 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span><br>
 <span class="failed"><strong>[1 method]:</strong> <a href="#M41">unisot(2)</a></span></td></tr>
-<tr><td class="title"><a href="#T37">6.1 Production and Consumption - A conforming producer MUST take a DID document data model and a representation-specific entries map as input into the production process. The conforming producer MAY accept additional options as input into the production process.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T37">6.1 Production and Consumption - A conforming producer MUST take a DID document data model and a representation-specific entries map as input into the production process. The conforming producer MAY accept additional options as input into the production process.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
 <tr><td class="title"><a href="#T38">6.2.1 JSON Production - All entries of a DID document MUST be included in the root JSON Object.</a></td><td class="methods"><span class="passed"><strong>[17 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(10)</a>, <a href="#M23">kilt(2)</a>, <a href="#M28">nft</a>, <a href="#M32">photon</a>, <a href="#M34">polygon</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M44">web(5)</a></span></td></tr>
 <tr><td class="title"><a href="#T39">6.2.1 JSON Production - When serializing a DID document, a conforming producer MUST specify a media type of application/did+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</a></td><td class="methods"><span class="passed"><strong>[17 methods]:</strong> <a href="#M1">3</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(10)</a>, <a href="#M23">kilt(2)</a>, <a href="#M28">nft</a>, <a href="#M32">photon</a>, <a href="#M34">polygon</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M44">web(5)</a></span></td></tr>
 <tr><td class="title"><a href="#T40">6.2.1 JSON Production - boolean: A JSON Boolean.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M39">trust</a>, <a href="#M44">web(2)</a></span></td></tr>
@@ -1561,10 +1581,10 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr><td class="title"><a href="#T46">6.2.1 JSON Production - null: A JSON null literal.</a></td><td class="methods"><span class="passed"><strong>[1 method]:</strong> <a href="#M44">web(2)</a></span></td></tr>
 <tr><td class="title"><a href="#T47">6.2.1 JSON Production - set: A JSON Array, where each element of the set is added, in order, as a value of the array according to its type, as defined in this table.</a></td><td class="methods"><span class="passed"><strong>[17 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M8">elem(8)</a>, <a href="#M10">ethr(3)</a>, <a href="#M18">ion(6)</a>, <a href="#M19">is(4)</a>, <a href="#M20">jnctn(2)</a>, <a href="#M22">key(64)</a>, <a href="#M23">kilt(9)</a>, <a href="#M28">nft</a>, <a href="#M32">photon(4)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema</a>, <a href="#M37">sov(6)</a>, <a href="#M39">trust(7)</a>, <a href="#M41">unisot(13)</a>, <a href="#M42">v1(6)</a>, <a href="#M44">web(23)</a></span></td></tr>
 <tr><td class="title"><a href="#T48">6.2.1 JSON Production - string: A JSON String.</a></td><td class="methods"><span class="passed"><strong>[17 methods]:</strong> <a href="#M1">3(17)</a>, <a href="#M8">elem(24)</a>, <a href="#M10">ethr(12)</a>, <a href="#M18">ion(15)</a>, <a href="#M19">is(16)</a>, <a href="#M20">jnctn(6)</a>, <a href="#M22">key(156)</a>, <a href="#M23">kilt(35)</a>, <a href="#M28">nft(6)</a>, <a href="#M32">photon(13)</a>, <a href="#M34">polygon(6)</a>, <a href="#M35">schema(4)</a>, <a href="#M37">sov(14)</a>, <a href="#M39">trust(10)</a>, <a href="#M41">unisot(21)</a>, <a href="#M42">v1(16)</a>, <a href="#M44">web(101)</a></span></td></tr>
-<tr><td class="title"><a href="#T49">6.3.1 JSON-LD Production - In addition to using the JSON  representation production rules, JSON-LD production MUST include the representation-specific @context entry.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(6)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T50">6.3.1 JSON-LD Production - The DID document and any DID document data structures expressed by the data model MUST be serialized to the JSON-LD representation according to the JSON representation production rules as defined in &#xA7; 6.2 JSON.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(6)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T51">6.3.1 JSON-LD Production - The serialized value of @context MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON Array where the first item is the JSON String https://www.w3.org/ns/did/v1 and the subsequent items are serialized according to the JSON representation production rules.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(6)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T52">6.3.1 JSON-LD Production - When serializing a JSON-LD representation of a DID document, a conforming producer MUST specify a media type of application/did+ld+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(6)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T49">6.3.1 JSON-LD Production - In addition to using the JSON  representation production rules, JSON-LD production MUST include the representation-specific @context entry.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(7)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T50">6.3.1 JSON-LD Production - The DID document and any DID document data structures expressed by the data model MUST be serialized to the JSON-LD representation according to the JSON representation production rules as defined in &#xA7; 6.2 JSON.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(7)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T51">6.3.1 JSON-LD Production - The serialized value of @context MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON Array where the first item is the JSON String https://www.w3.org/ns/did/v1 and the subsequent items are serialized according to the JSON representation production rules.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(7)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T52">6.3.1 JSON-LD Production - When serializing a JSON-LD representation of a DID document, a conforming producer MUST specify a media type of application/did+ld+json to downstream applications such as described in &#xA7; 7.1.2 DID Resolution Metadata.</a></td><td class="methods"><span class="passed"><strong>[23 methods]:</strong> <a href="#M1">3</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M10">ethr</a>, <a href="#M18">ion</a>, <a href="#M22">key(14)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon</a>, <a href="#M33">pkh(6)</a>, <a href="#M35">schema</a>, <a href="#M37">sov</a>, <a href="#M39">trust</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(7)</a>, <a href="#M45">webkey</a></span></td></tr>
 <tr><td class="title"><a href="#T53">7.1 DID Resolution - A metadata structure.</a></td><td class="methods"><span class="passed"><strong>[41 methods]:</strong> <a href="#M1">3(6)</a>, <a href="#M2">ace(2)</a>, <a href="#M3">bba(4)</a>, <a href="#M4">bid(2)</a>, <a href="#M5">btcr(6)</a>, <a href="#M6">ccp(4)</a>, <a href="#M7">ebsi(2)</a>, <a href="#M8">elem(2)</a>, <a href="#M9">emtrust(2)</a>, <a href="#M10">ethr(36)</a>, <a href="#M11">evan(2)</a>, <a href="#M13">gatc(2)</a>, <a href="#M14">github(2)</a>, <a href="#M15">hcr(2)</a>, <a href="#M16">icon(2)</a>, <a href="#M17">io(2)</a>, <a href="#M18">ion(6)</a>, <a href="#M21">jolo(2)</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(2)</a>, <a href="#M24">lit(2)</a>, <a href="#M26">mpg(2)</a>, <a href="#M27">nacl(2)</a>, <a href="#M28">nft(6)</a>, <a href="#M29">onion(4)</a>, <a href="#M30">ont(2)</a>, <a href="#M31">orb(22)</a>, <a href="#M33">pkh(4)</a>, <a href="#M34">polygon(4)</a>, <a href="#M35">schema(4)</a>, <a href="#M36">sol(2)</a>, <a href="#M37">sov(18)</a>, <a href="#M38">stack(2)</a>, <a href="#M39">trust(4)</a>, <a href="#M40">tz(10)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(6)</a>, <a href="#M43">vaa(2)</a>, <a href="#M44">web(22)</a>, <a href="#M45">webkey(4)</a>, <a href="#M46">work(2)</a></span></td></tr>
 <tr><td class="title"><a href="#T54">7.1 DID Resolution - If resolveRepresentation was called, this structure MUST contain a contentType property containing the Media Type of the representation found in the didDocumentStream.</a></td><td class="methods"><span class="passed"><strong>[39 methods]:</strong> <a href="#M1">3(3)</a>, <a href="#M2">ace</a>, <a href="#M3">bba(2)</a>, <a href="#M5">btcr(3)</a>, <a href="#M6">ccp(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M9">emtrust</a>, <a href="#M10">ethr(18)</a>, <a href="#M11">evan</a>, <a href="#M14">github</a>, <a href="#M15">hcr</a>, <a href="#M16">icon</a>, <a href="#M17">io</a>, <a href="#M18">ion(3)</a>, <a href="#M21">jolo</a>, <a href="#M22">key(12)</a>, <a href="#M23">kilt</a>, <a href="#M24">lit</a>, <a href="#M26">mpg</a>, <a href="#M27">nacl</a>, <a href="#M28">nft(3)</a>, <a href="#M29">onion(2)</a>, <a href="#M30">ont</a>, <a href="#M31">orb(11)</a>, <a href="#M33">pkh(2)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M36">sol</a>, <a href="#M37">sov(9)</a>, <a href="#M38">stack</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(5)</a>, <a href="#M41">unisot</a>, <a href="#M42">v1(3)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey(2)</a>, <a href="#M46">work</a></span><br>
 <span class="failed"><strong>[3 methods]:</strong> <a href="#M4">bid</a>, <a href="#M13">gatc</a>, <a href="#M34">polygon</a></span></td></tr>
@@ -1624,11 +1644,11 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr><td class="title"><a href="#T103">7.2.2 DID URL Dereferencing Metadata - This property is REQUIRED when there is an error in the dereferencing process.</a></td><td class="methods"><span class="passed"><strong>[11 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M22">key(3)</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion(2)</a>, <a href="#M33">pkh(2)</a>, <a href="#M34">polygon(3)</a>, <a href="#M37">sov(5)</a>, <a href="#M40">tz(2)</a>, <a href="#M44">web(16)</a>, <a href="#M45">webkey(2)</a></span></td></tr>
 <tr><td class="title"><a href="#T104">7.2.2 DID URL Dereferencing Metadata - invalidDidUrl - The DID URL supplied to the DID URL dereferencing function does not conform to valid syntax.</a></td><td class="methods"><span class="passed"><strong>[3 methods]:</strong> <a href="#M22">key</a>, <a href="#M37">sov</a>, <a href="#M44">web</a></span></td></tr>
 <tr><td class="title"><a href="#T105">7.2.2 DID URL Dereferencing Metadata - notFound - The DID URL dereferencer was unable to find the contentStream resulting from this dereferencing request.</a></td><td class="methods"><span class="passed"><strong>[2 methods]:</strong> <a href="#M37">sov(2)</a>, <a href="#M44">web(5)</a></span></td></tr>
-<tr><td class="title"><a href="#T106">7.3 Metadata Structure - Each property name MUST be a string.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T107">7.3 Metadata Structure - Each property value MUST be a string, map, list, ordered set, boolean, or null.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T108">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T109">7.3 Metadata Structure - The structure used to communicate this metadata MUST be a map of properties.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
-<tr><td class="title"><a href="#T110">7.3 Metadata Structure - The values within any complex data structures such as maps and lists MUST be one of these data types as well.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(11)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T106">7.3 Metadata Structure - Each property name MUST be a string.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T107">7.3 Metadata Structure - Each property value MUST be a string, map, list, ordered set, boolean, or null.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T108">7.3 Metadata Structure - The entire metadata structure MUST be serializable according to the JSON serialization rules in the [INFRA] specification.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T109">7.3 Metadata Structure - The structure used to communicate this metadata MUST be a map of properties.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
+<tr><td class="title"><a href="#T110">7.3 Metadata Structure - The values within any complex data structures such as maps and lists MUST be one of these data types as well.</a></td><td class="methods"><span class="passed"><strong>[26 methods]:</strong> <a href="#M1">3(2)</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem(2)</a>, <a href="#M10">ethr(2)</a>, <a href="#M18">ion(2)</a>, <a href="#M19">is</a>, <a href="#M20">jnctn</a>, <a href="#M22">key(24)</a>, <a href="#M23">kilt(4)</a>, <a href="#M24">lit</a>, <a href="#M25">monid</a>, <a href="#M28">nft(2)</a>, <a href="#M29">onion</a>, <a href="#M31">orb(11)</a>, <a href="#M32">photon(2)</a>, <a href="#M33">pkh(6)</a>, <a href="#M34">polygon</a>, <a href="#M35">schema(2)</a>, <a href="#M37">sov(2)</a>, <a href="#M39">trust(2)</a>, <a href="#M40">tz(4)</a>, <a href="#M41">unisot(2)</a>, <a href="#M42">v1(2)</a>, <a href="#M43">vaa</a>, <a href="#M44">web(12)</a>, <a href="#M45">webkey</a></span></td></tr>
 <tr><td class="title"><a href="#T111">All conformant DID resolvers MUST implement the DID resolution functions for at least one DID method and MUST be able to return a DID document in at least one conformant representation.</a></td><td class="methods"><span class="passed"><strong>[38 methods]:</strong> <a href="#M1">3</a>, <a href="#M2">ace</a>, <a href="#M3">bba</a>, <a href="#M5">btcr</a>, <a href="#M6">ccp</a>, <a href="#M7">ebsi</a>, <a href="#M8">elem</a>, <a href="#M9">emtrust</a>, <a href="#M10">ethr(2)</a>, <a href="#M11">evan</a>, <a href="#M14">github</a>, <a href="#M15">hcr</a>, <a href="#M16">icon</a>, <a href="#M17">io</a>, <a href="#M18">ion</a>, <a href="#M21">jolo</a>, <a href="#M22">key(3)</a>, <a href="#M23">kilt</a>, <a href="#M24">lit</a>, <a href="#M26">mpg</a>, <a href="#M27">nacl</a>, <a href="#M28">nft</a>, <a href="#M29">onion</a>, <a href="#M30">ont</a>, <a href="#M31">orb</a>, <a href="#M33">pkh</a>, <a href="#M35">schema</a>, <a href="#M36">sol</a>, <a href="#M37">sov(3)</a>, <a href="#M38">stack</a>, <a href="#M39">trust</a>, <a href="#M40">tz</a>, <a href="#M41">unisot</a>, <a href="#M42">v1</a>, <a href="#M43">vaa</a>, <a href="#M44">web(3)</a>, <a href="#M45">webkey</a>, <a href="#M46">work</a></span><br>
 <span class="failed"><strong>[4 methods]:</strong> <a href="#M4">bid</a>, <a href="#M13">gatc</a>, <a href="#M18">ion</a>, <a href="#M34">polygon</a></span></td></tr>
 
@@ -1659,7 +1679,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -1667,7 +1687,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -2286,6 +2306,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -2322,7 +2349,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -2330,7 +2357,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -2949,6 +2976,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -2985,7 +3019,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -2993,7 +3027,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -3612,6 +3646,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -3648,7 +3689,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -3656,7 +3697,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -4275,6 +4316,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -4311,7 +4359,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -4319,7 +4367,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -4938,6 +4986,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -4974,7 +5029,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -4982,7 +5037,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -5601,6 +5656,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -5637,7 +5699,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status"><span class="failed">&#xA0;(2)</span>
 <br>
-<span class="passed">&#xA0;(90)</span>
+<span class="passed">&#xA0;(91)</span>
 
 
 </th>
@@ -5645,7 +5707,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -6264,6 +6326,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -6300,7 +6369,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -6308,7 +6377,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -6927,6 +6996,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -6963,7 +7039,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -6971,7 +7047,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -7590,6 +7666,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -7626,7 +7709,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -7634,7 +7717,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -8253,6 +8336,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -8289,7 +8379,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -8297,7 +8387,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -8916,6 +9006,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -8952,7 +9049,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -8960,7 +9057,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -9579,6 +9676,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -9615,7 +9719,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -9623,7 +9727,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -10242,6 +10346,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -10278,7 +10389,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -10286,7 +10397,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -10905,6 +11016,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -10941,7 +11059,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -10949,7 +11067,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -11568,6 +11686,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -11604,7 +11729,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -11612,7 +11737,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -12231,6 +12356,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -12267,7 +12399,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -12275,7 +12407,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -12894,6 +13026,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -12930,7 +13069,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -12938,7 +13077,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -13557,6 +13696,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -13593,7 +13739,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -13601,7 +13747,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -14220,6 +14366,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -14256,7 +14409,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -14264,7 +14417,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -14883,6 +15036,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -14919,7 +15079,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -14927,7 +15087,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -15546,6 +15706,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -15582,7 +15749,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -15590,7 +15757,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -16209,6 +16376,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -16245,7 +16419,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -16253,7 +16427,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -16872,6 +17046,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -16908,7 +17089,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -16916,7 +17097,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -17535,6 +17716,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -17571,7 +17759,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -17579,7 +17767,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -18198,6 +18386,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -18234,7 +18429,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -18242,7 +18437,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -18861,6 +19056,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -18897,7 +19099,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -18905,7 +19107,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -19524,6 +19726,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -19560,7 +19769,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -19568,7 +19777,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -20187,6 +20396,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -20223,7 +20439,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -20231,7 +20447,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -20855,6 +21071,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <tr>
 <td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
 <td>did:ebsi</td><td>EBSI libraries and APIs</td>
 <td>did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5Z&#x2026;, application/did+ld+json</td>
 </tr>
@@ -20886,7 +21109,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(0)</span>
+<span class="passed">&#xA0;(1)</span>
 
 
 </th>
@@ -20894,8 +21117,15 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 1</td></tr>
-<tr><td colspan="4"><div class="issue" title="Insufficient implementations">At least two independent and conforming implementations do not exist for the following feature: 5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If present, the value MUST be an ordered set where each item in the set is a URI conforming to [RFC3986].</div></td></tr>
+<tr><td colspan="4">Total implementations: 2</td></tr>
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
 
 
 <tr>
@@ -20922,7 +21152,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(64)</span>
+<span class="passed">&#xA0;(65)</span>
 
 
 </th>
@@ -20930,7 +21160,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 27</td></tr>
+<tr><td colspan="4">Total implementations: 28</td></tr>
 
 
 
@@ -21371,6 +21601,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 
 <tr>
 <td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
 <td>did:ebsi</td><td>EBSI libraries and APIs</td>
 <td>did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5Z&#x2026;</td>
 </tr>
@@ -21623,7 +21860,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -21631,7 +21868,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -22250,6 +22487,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -22286,7 +22530,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status"><span class="failed">&#xA0;(2)</span>
 <br>
-<span class="passed">&#xA0;(90)</span>
+<span class="passed">&#xA0;(91)</span>
 
 
 </th>
@@ -22294,7 +22538,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -22913,6 +23157,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -22949,7 +23200,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -22957,7 +23208,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -23576,6 +23827,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -23612,7 +23870,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(92)</span>
+<span class="passed">&#xA0;(93)</span>
 
 
 </th>
@@ -23620,7 +23878,7 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 26</td></tr>
+<tr><td colspan="4">Total implementations: 27</td></tr>
 
 
 
@@ -24239,6 +24497,13 @@ describe(&quot;test-suite-a&quot;, () =&gt; {
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 
@@ -31272,7 +31537,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(60)</span>
+<span class="passed">&#xA0;(61)</span>
 
 
 </th>
@@ -31280,7 +31545,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 23</td></tr>
+<tr><td colspan="4">Total implementations: 24</td></tr>
 
 
 
@@ -31688,6 +31953,13 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com</td>
 </tr>
 
 
@@ -31717,7 +31989,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(60)</span>
+<span class="passed">&#xA0;(61)</span>
 
 
 </th>
@@ -31725,7 +31997,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 23</td></tr>
+<tr><td colspan="4">Total implementations: 24</td></tr>
 
 
 
@@ -32133,6 +32405,13 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com</td>
 </tr>
 
 
@@ -32162,7 +32441,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(60)</span>
+<span class="passed">&#xA0;(61)</span>
 
 
 </th>
@@ -32170,7 +32449,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 23</td></tr>
+<tr><td colspan="4">Total implementations: 24</td></tr>
 
 
 
@@ -32578,6 +32857,13 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com</td>
 </tr>
 
 
@@ -32607,7 +32893,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <tr>
 <th class="status">
 
-<span class="passed">&#xA0;(60)</span>
+<span class="passed">&#xA0;(61)</span>
 
 
 </th>
@@ -32615,7 +32901,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <th class="implementation">Implementation</th>
 <th class="param">Parameters</th>
 </tr>
-<tr><td colspan="4">Total implementations: 23</td></tr>
+<tr><td colspan="4">Total implementations: 24</td></tr>
 
 
 
@@ -33023,6 +33309,13 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did:webkey</td><td>https://github.com/spruceid/ssi/tree/main/did-webkey</td>
 <td>did:webkey:ssh:demo.spruceid.com:2021:07:14&#x2026;</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did:web</td><td>Evernym DID infrastructure</td>
+<td>did:web:evernym.com</td>
 </tr>
 
 
@@ -103144,7 +103437,7 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 
 <section id="M44">
 <h3>did:web</h3>
-<p>Total Implementations for did:web : 6</p>
+<p>Total Implementations for did:web : 7</p>
 <div>
 <p>Implementation: https://github.com/transmute-industries/did-core</p>
 
@@ -108019,6 +108312,303 @@ MRLParJJyd26xMp7bMKFpjlxCA==
 <td class="passed"></td>
 <td>did-resolution</td><td><a href="#T111">All conformant DID resolvers MUST implement the DID resolution f&#x2026;</a></td>
 <td>did:UNKNOWN</td>
+</tr>
+
+</tbody></table>
+
+</div>
+
+
+<div>
+<p>Implementation: Evernym DID infrastructure</p>
+
+<table class="simple test-status">
+<tbody>
+<tr>
+<th class="status">
+
+<span class="passed">&#xA0;(38)</span>
+
+
+</th>
+<th class="suite">Suite</th>
+<th class="statement">Statement</th>
+<th class="param">Parameters</th>
+</tr>
+
+
+
+
+<tr>
+<td class="passed"></td>
+<td>did-identifier</td><td><a href="#T2">3.1 DID Syntax - All DIDs MUST conform to the DID Syntax ABNF Ru&#x2026;</a></td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T9">5.1.1 DID Subject - The value of id MUST be a string that confor&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T10">5.1.2 DID Controller - The controller property is OPTIONAL. If p&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T11">5.1.3 Also Known As - The alsoKnownAs property is OPTIONAL. If p&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T12">5.2 Verification Methods - The map MUST NOT contain &quot;d&quot;, or any &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T13">5.2 Verification Methods - The publicKeyJwk property is OPTIONAL&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T14">5.2 Verification Methods - The publicKeyMultibase property is OP&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T15">5.2 Verification Methods - The value of the controller property &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T16">5.2 Verification Methods - The value of the id property for a ve&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T17">5.2 Verification Methods - The value of the type property MUST b&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T18">5.2 Verification Methods - The verification method map MUST incl&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T19">5.2 Verification Methods - The verificationMethod property is OP&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T20">5.2.1 Verification Material - A verification method MUST NOT con&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T21">5.3.1 Authentication - The authentication property is OPTIONAL. &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T22">5.3.2 Assertion - The assertionMethod property is OPTIONAL. If p&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T23">5.3.3 Key Agreement - The keyAgreement property is OPTIONAL. If &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T24">5.3.4 Capability Invocation - The capabilityInvocation property &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T25">5.3.5 Capability Delegation - The capabilityDelegation property &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T26">5.4 Services - A conforming consumer MUST produce an error if it&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T27">5.4 Services - A conforming producer MUST NOT produce multiple s&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T28">5.4 Services - All [serviceEndpoint] string values MUST be valid&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T29">5.4 Services - Each service map MUST contain id, type, and servi&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T30">5.4 Services - The service property is OPTIONAL. If present, the&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T31">5.4 Services - The value of the id property MUST be a URI confor&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T32">5.4 Services - The value of the serviceEndpoint property MUST be&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T33">5.4 Services - The value of the type property MUST be a string o&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T34">6.1 Production and Consumption - A conforming producer MUST NOT &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T35">6.1 Production and Consumption - A conforming producer MUST retu&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T36">6.1 Production and Consumption - A conforming producer MUST seri&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T37">6.1 Production and Consumption - A conforming producer MUST take&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T49">6.3.1 JSON-LD Production - In addition to using the JSON  repres&#x2026;</a></td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T50">6.3.1 JSON-LD Production - The DID document and any DID document&#x2026;</a></td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T51">6.3.1 JSON-LD Production - The serialized value of @context MUST&#x2026;</a></td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-production</td><td><a href="#T52">6.3.1 JSON-LD Production - When serializing a JSON-LD representa&#x2026;</a></td>
+<td>did:web:evernym.com</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T106">7.3 Metadata Structure - Each property name MUST be a string.</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T107">7.3 Metadata Structure - Each property value MUST be a string, m&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T108">7.3 Metadata Structure - The entire metadata structure MUST be s&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T109">7.3 Metadata Structure - The structure used to communicate this &#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
+</tr>
+
+
+<tr>
+<td class="passed"></td>
+<td>did-core-properties</td><td><a href="#T110">7.3 Metadata Structure - The values within any complex data stru&#x2026;</a></td>
+<td>did:web:evernym.com, application/did+ld+json</td>
 </tr>
 
 </tbody></table>
