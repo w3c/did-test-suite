@@ -15,7 +15,7 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Build Report
-        run: DID_WG_INCLUDE_BREAKING='🔥' npm run test-and-generate-report
+        run: DID_WG_INCLUDE_BREAKING=1 npm run test-and-generate-report
       - name: Deploy Report
         uses: peaceiris/actions-gh-pages@v3
         with:
