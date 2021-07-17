@@ -30,6 +30,7 @@ module.exports = {
     require('../implementations/did-sov-mattr.json'),
     require('../implementations/did-web-mattr.json'),
     require('../implementations/did-polygon-ayanworks.json'),
+    require('../implementations/did-jnctn.json'),
     require('../implementations/did-key-spruce.json'),
     require('../implementations/did-web-spruce.json'),
     require('../implementations/did-tz-spruce.json'),

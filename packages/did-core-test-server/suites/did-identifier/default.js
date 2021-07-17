@@ -31,6 +31,7 @@ module.exports = {
     require('../implementations/did-sov-mattr.json'),
     require('../implementations/universal-resolver-identifier-tests.json'),
     require('../implementations/did-polygon-ayanworks.json'),
+    require('../implementations/did-jnctn.json'),
     require('../implementations/did-key-spruce.json'),
     require('../implementations/did-web-spruce.json'),
     require('../implementations/did-tz-spruce.json'),
