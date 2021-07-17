@@ -1,0 +1,52 @@
+{
+  "didMethod": "did:ebsi",
+  "implementation": "EBSI libraries and APIs",
+  "implementer": "EBSI",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd"
+  ],
+  "didParameters": {},
+  "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd": {
+    "didDocumentDataModel": {
+      "properties": {
+        "alsoKnownAs": [
+          "https://danubetech.com/"
+        ],
+        "authentication": [
+          "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1"
+        ],
+        "service": [],
+        "id": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd",
+        "verificationMethod": [{
+          "id": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1",
+          "type": "Secp256k1VerificationKey2018",
+          "controller": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd",
+          "publicKeyJwk": {
+            "kty": "EC",
+            "crv": "secp256k1",
+            "x": "SweGUiB0HA5C07fX2TnpGa64nm4AjgoCxC3OjxG10nc",
+            "y": "UGs0kqk1Gr1suiZqUPqDNB_-nlq4Lc-0heYJRKATJDE"
+          }
+        }],
+        "assertionMethod": [
+          "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1"
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{ \"@context\": \"https://www.w3.org/ns/did/v1\", \"alsoKnownAs\": [ \"https://danubetech.com/\" ], \"authentication\": [ \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\" ], \"service\": [], \"id\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd\", \"verificationMethod\": [ { \"id\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\", \"type\": \"Secp256k1VerificationKey2018\", \"controller\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd\", \"publicKeyJwk\": { \"kty\": \"EC\", \"crv\": \"secp256k1\", \"x\": \"SweGUiB0HA5C07fX2TnpGa64nm4AjgoCxC3OjxG10nc\", \"y\": \"UGs0kqk1Gr1suiZqUPqDNB_-nlq4Lc-0heYJRKATJDE\" } } ], \"assertionMethod\": [ \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\" ] }",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
