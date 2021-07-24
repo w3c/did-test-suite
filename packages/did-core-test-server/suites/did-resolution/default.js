@@ -54,6 +54,7 @@ module.exports = {
     require('../implementations/resolver-spruce-onion.json'),
     require('../implementations/resolver-spruce-pkh.json'),
     require('../implementations/resolver-spruce-webkey.json'),
+    require('../implementations/resolver-ssb.json'),
     ...brokenFixtures
 
   ],

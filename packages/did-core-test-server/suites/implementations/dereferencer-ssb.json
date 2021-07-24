@@ -1,0 +1,71 @@
+{
+  "didMethod": "did:ssb",
+  "implementation": "ssb-did-resolver",
+  "implementer": "Secure Scuttlebutt Consortium",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1,
+      2
+    ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU\",\"controller\":\"did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG\",\"alsoKnownAs\":[\"did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA\",\"did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc\"]}",
+        "contentMetadata": {
+          "versionId": "%CdDGtStGYtoPVQAlhMwebMMohagJfIfZVregZD3xKFo=.sha256",
+          "created": "2021-07-24T03:38:45Z",
+          "updated": "2021-07-24T04:09:03Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU?versionId=%25Vlo6kAc%2BIbGGBhD2MUi2r3ULz%2FNAGBWwGb%2FEMa4w4FI%3D.sha256",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU\",\"controller\":\"did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG\"}",
+        "contentMetadata": {
+          "versionId": "%Vlo6kAc+IbGGBhD2MUi2r3ULz/NAGBWwGb/EMa4w4FI=.sha256",
+          "nextVersionId": "%CdDGtStGYtoPVQAlhMwebMMohagJfIfZVregZD3xKFo=.sha256",
+          "nextUpdate": "2021-07-24T04:09:03Z",
+          "created": "2021-07-24T03:38:45Z",
+          "updated": "2021-07-24T04:05:23Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU?versionTime=2021-07-24T03:38:46Z",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU\"}",
+        "contentMetadata": {
+          "versionId": "%dT3InSxC/BNRqbC/aN01+ubmjxp/ETHPbFcRb3hODG0=.sha256",
+          "nextVersionId": "%Vlo6kAc+IbGGBhD2MUi2r3ULz/NAGBWwGb/EMa4w4FI=.sha256",
+          "nextUpdate": "2021-07-24T04:05:23Z",
+          "created": "2021-07-24T03:38:45Z"
+        }
+      }
+    }
+  ]
+}

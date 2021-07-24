@@ -1,0 +1,43 @@
+{
+  "didMethod": "did:ssb",
+  "implementation": "ssb-did-resolver",
+  "implementer": "Secure Scuttlebutt Consortium",
+  "supportedContentTypes": [
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU"
+  ],
+  "didParameters": {
+    "versionId": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU?versionId=%25Vlo6kAc%2BIbGGBhD2MUi2r3ULz%2FNAGBWwGb%2FEMa4w4FI%3D.sha256",
+    "versionTime": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU?versionTime=2021-07-24T03:38:46Z"
+  },
+  "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+        "controller": "did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG",
+        "alsoKnownAs": [
+          "did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA",
+          "did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc"
+        ]
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": "https://www.w3.org/ns/did/v1"
+        }
+      },
+      "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU\",\"controller\":\"did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG\",\"alsoKnownAs\":[\"did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA\",\"did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc\"]}",
+      "didDocumentMetadata": {
+        "versionId": "%CdDGtStGYtoPVQAlhMwebMMohagJfIfZVregZD3xKFo=.sha256",
+        "created": "2021-07-24T03:38:45Z",
+        "updated": "2021-07-24T04:09:03Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

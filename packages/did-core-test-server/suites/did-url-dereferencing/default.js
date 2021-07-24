@@ -18,6 +18,7 @@ module.exports = {
     require('../implementations/dereferencer-spruce-onion.json'),
     require('../implementations/dereferencer-spruce-pkh.json'),
     require('../implementations/dereferencer-spruce-webkey.json'),
+    require('../implementations/dereferencer-ssb.json'),
     ...brokenFixtures
 
   ]
