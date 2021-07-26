@@ -1,0 +1,79 @@
+{
+  "didMethod": "did:ssb",
+  "implementation": "ssb-did-resolver",
+  "implementer": "Secure Scuttlebutt Consortium",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0,
+      1,
+      2
+    ]
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {},
+        "didDocument": {
+          "@context": "https://www.w3.org/ns/did/v1",
+          "id": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+          "controller": "did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG",
+          "alsoKnownAs": [
+            "did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA",
+            "did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc"
+          ]
+        },
+        "didDocumentMetadata": {
+          "versionId": "%CdDGtStGYtoPVQAlhMwebMMohagJfIfZVregZD3xKFo=.sha256",
+          "created": "2021-07-24T03:38:45Z",
+          "updated": "2021-07-24T04:09:03Z"
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU\",\"controller\":\"did:key:z6Mko4u4GMcQu12BjNqBWbZdVFJ2fiGLKfcrxiZV8u3gmBCG\",\"alsoKnownAs\":[\"did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA\",\"did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc\"]}",
+        "didDocumentMetadata": {
+          "versionId": "%CdDGtStGYtoPVQAlhMwebMMohagJfIfZVregZD3xKFo=.sha256",
+          "created": "2021-07-24T03:38:45Z",
+          "updated": "2021-07-24T04:09:03Z"
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {},
+        "didDocument": {
+          "@context": "https://www.w3.org/ns/did/v1",
+          "id": "did:ssb:ed25519:6RpN4Ztw3jLwzQtHl8XpnnR58LWZTAjwq2vvfyx7zkc",
+          "controller": "did:key:z6Mkv9CJWMeyBNaS2BdHHXuwKiSfxi2H3eimi4dpck5PTmXU",
+          "alsoKnownAs": [
+            "did:ssb:ed25519:f_6sQ6d2CMxRUhLpspgGIulDxDCwYD7DzFzPNr7u5AU",
+            "did:ssb:ed25519:lOUVT-Phkvai9a_cCS_RKo-S9hnPAQdVixms_7ldpPA"
+          ]
+        },
+        "didDocumentMetadata": {
+          "versionId": "%uvhFPHlfyxBcLxFgatjvolI0pcWEeH2Q4PIOHz48v2A=.sha256",
+          "created": "2021-07-24T04:23:02Z"
+        }
+      }
+    }
+  ]
+}

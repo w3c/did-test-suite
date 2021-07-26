@@ -40,6 +40,7 @@ module.exports = {
     require('../implementations/did-webkey-spruce.json'),
     require('../implementations/did-web-evernym.json'),
     require('../implementations/did-ebsi.json'),
+    require('../implementations/did-ssb.json'),
    ...brokenFixtures
   ],
 };
