@@ -65,7 +65,7 @@
         "id": "did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011",
         "verificationMethod": [
           {
-            "blockchainAccountId": "0xa0ae58da58dfa46fa55c3b86545e7065f90ff011@eip155:mainnet",
+            "blockchainAccountId": "0xa0ae58da58dfa46fa55c3b86545e7065f90ff011@eip155:42220",
             "controller": "did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011",
             "id": "did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020",
             "type": "EcdsaSecp256k1RecoveryMethod2020"
@@ -85,7 +85,7 @@
           ]
         }
       },
-      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1RecoveryMethod2020\": \"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\",\n      \"type\": \"EcdsaSecp256k1RecoveryMethod2020\",\n      \"controller\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011\",\n      \"blockchainAccountId\": \"0xa0ae58da58dfa46fa55c3b86545e7065f90ff011@eip155:mainnet\"\n    }\n  ],\n  \"authentication\": [\n    \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\"\n  ],\n  \"assertionMethod\": [\n    \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\"\n  ]\n}",
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1RecoveryMethod2020\": \"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\",\n      \"type\": \"EcdsaSecp256k1RecoveryMethod2020\",\n      \"controller\": \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011\",\n      \"blockchainAccountId\": \"0xa0ae58da58dfa46fa55c3b86545e7065f90ff011@eip155:42220\"\n    }\n  ],\n  \"authentication\": [\n    \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\"\n  ],\n  \"assertionMethod\": [\n    \"did:pkh:celo:0xa0ae58da58dfa46fa55c3b86545e7065f90ff011#Recovery2020\"\n  ]\n}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
@@ -143,7 +143,7 @@
         "id": "did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a",
         "verificationMethod": [
           {
-            "blockchainAccountId": "0xb9c5714089478a327f09197987f16f9e5d936e8a@eip155:mainnet",
+            "blockchainAccountId": "0xb9c5714089478a327f09197987f16f9e5d936e8a@eip155:1",
             "controller": "did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a",
             "id": "did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020",
             "type": "EcdsaSecp256k1RecoveryMethod2020"
@@ -163,7 +163,7 @@
           ]
         }
       },
-      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1RecoveryMethod2020\": \"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\",\n      \"type\": \"EcdsaSecp256k1RecoveryMethod2020\",\n      \"controller\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a\",\n      \"blockchainAccountId\": \"0xb9c5714089478a327f09197987f16f9e5d936e8a@eip155:mainnet\"\n    }\n  ],\n  \"authentication\": [\n    \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\"\n  ],\n  \"assertionMethod\": [\n    \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\"\n  ]\n}",
+      "representation": "{\n  \"@context\": [\n    \"https://www.w3.org/ns/did/v1\",\n    {\n      \"EcdsaSecp256k1RecoveryMethod2020\": \"https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoveryMethod2020\",\n      \"blockchainAccountId\": \"https://w3id.org/security#blockchainAccountId\"\n    }\n  ],\n  \"id\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a\",\n  \"verificationMethod\": [\n    {\n      \"id\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\",\n      \"type\": \"EcdsaSecp256k1RecoveryMethod2020\",\n      \"controller\": \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a\",\n      \"blockchainAccountId\": \"0xb9c5714089478a327f09197987f16f9e5d936e8a@eip155:1\"\n    }\n  ],\n  \"authentication\": [\n    \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\"\n  ],\n  \"assertionMethod\": [\n    \"did:pkh:eth:0xb9c5714089478a327f09197987f16f9e5d936e8a#Recovery2020\"\n  ]\n}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
