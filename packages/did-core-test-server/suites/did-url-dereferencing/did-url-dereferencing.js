@@ -14,6 +14,7 @@ const didUrlDereferencingTests = (execution, expectedOutcome, imp) => {
           }
         });
   
+        it.todo('3.2.2 Relative DID URLs - When resolving a relative DID URL reference, the algorithm specified in RFC3986 Section 5: Reference Resolution MUST be used.');
         it('7.2 DID URL Dereferencing - A conformant DID URL as a single string.', async() => {
           if (! dereferencingMetadata.hasOwnProperty('error') || dereferencingMetadata['error'] !== 'invalidDidUrl') {
             expect(didUrl).toBeValidDidUrl();
