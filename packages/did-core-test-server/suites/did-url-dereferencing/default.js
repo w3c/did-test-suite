@@ -20,6 +20,5 @@ module.exports = {
     require('../implementations/dereferencer-spruce-webkey.json'),
     require('../implementations/dereferencer-ssb.json'),
     ...brokenFixtures
-
   ]
 }

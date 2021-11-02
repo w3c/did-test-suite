@@ -1,0 +1,86 @@
+{
+  "didMethod": "did:algo",
+  "implementation": "DID implementation build on top of the Algorand Blockchain and IPFS",
+  "implementer": "AID:Tech and Algorand Foundation",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": ["did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef"],
+  "didParameters": {
+    "hl": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+    "service": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef?service=algo-connect",
+    "relativeRef": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef?service=algo-connect&relativeRef=type",
+    "versionId": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef?versionId=0.1.0",
+    "versionTime": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef?versionTime=2021-10-20T03:19:33Z"
+  },
+  "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef": {
+    "didDocumentDataModel": {
+      "properties": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/v1"
+        ],
+        "id": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef",
+        "created": "2021-10-20T03:19:33Z",
+        "updated": "2021-10-20T04:07:55Z",
+        "verificationMethod": [
+          {
+            "id": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master",
+            "type": "Ed25519VerificationKey2018",
+            "controller": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef",
+            "publicKeyMultibase": "zCh9PDTZzeWxk2WdH4M1e8k2951D5D11jz7Uti9HRBGiK"
+          }
+        ],
+        "authentication": [
+          "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master"
+        ],
+        "service": [
+          {
+            "id": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#algo-connect",
+            "type": "did.algorand.foundation.ExternalService",
+            "serviceEndpoint": "https://did.algorand.foundation",
+            "extensions": [
+              {
+                "id": "algo-address",
+                "version": "0.1.0",
+                "data": [
+                  {
+                    "address": "GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE",
+                    "asset": "ALGO",
+                    "network": "testnet"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/v1\"],\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"created\":\"2021-10-20T03:19:33Z\",\"updated\":\"2021-10-20T04:07:55Z\",\"verificationMethod\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"publicKeyMultibase\":\"zCh9PDTZzeWxk2WdH4M1e8k2951D5D11jz7Uti9HRBGiK\"}],\"authentication\":[\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\"],\"service\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#algo-connect\",\"type\":\"did.algorand.foundation.ExternalService\",\"serviceEndpoint\":\"https://did.algorand.foundation\",\"extensions\":[{\"id\":\"algo-address\",\"version\":\"0.1.0\",\"data\":[{\"address\":\"GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE\",\"asset\":\"ALGO\",\"network\":\"testnet\"}]}]}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/v1\"],\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"created\":\"2021-10-20T03:19:33Z\",\"updated\":\"2021-10-20T04:07:55Z\",\"verificationMethod\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"publicKeyMultibase\":\"zCh9PDTZzeWxk2WdH4M1e8k2951D5D11jz7Uti9HRBGiK\"}],\"authentication\":[\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\"],\"service\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#algo-connect\",\"type\":\"did.algorand.foundation.ExternalService\",\"serviceEndpoint\":\"https://did.algorand.foundation\",\"extensions\":[{\"id\":\"algo-address\",\"version\":\"0.1.0\",\"data\":[{\"address\":\"GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE\",\"asset\":\"ALGO\",\"network\":\"testnet\"}]}]}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

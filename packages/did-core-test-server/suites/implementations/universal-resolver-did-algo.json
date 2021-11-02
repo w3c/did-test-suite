@@ -1,0 +1,46 @@
+{
+  "didMethod": "did:algo",
+  "implementation": "DID implementation build on top of the Algorand Blockchain and IPFS",
+  "implementer": "AID:Tech and Algorand Foundation",
+  "expectedOutcomes": {
+    "defaultOutcomes": [
+      0
+    ],
+    "invalidDidErrorOutcome": [],
+    "notFoundErrorOutcome": [],
+    "representationNotSupportedErrorOutcome": [],
+    "deactivatedOutcome": []
+  },
+  "executions": [
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef",
+        "resolutionOptions": {
+          "accept": "application/json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json",
+          "didUrl": {
+            "did": {
+              "method": "algo",
+              "methodSpecificId": "f30304e2-e702-4f47-b242-2e9e064f6eef"
+            },
+            "didUrlString": "f30304e2-e702-4f47-b242-2e9e064f6eef",
+            "fragment": null,
+            "parameters": {},
+            "path": "",
+            "query": null
+          },
+          "driverUrl": "https://did-agent.aidtech.network/v1/retrieve/algo/$1",
+          "duration": 5379,
+          "identifier": "f30304e2-e702-4f47-b242-2e9e064f6eef"
+        },
+        "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/v1\"],\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"created\":\"2021-10-20T03:19:33Z\",\"updated\":\"2021-10-20T04:07:55Z\",\"verificationMethod\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef\",\"publicKeyMultibase\":\"zCh9PDTZzeWxk2WdH4M1e8k2951D5D11jz7Uti9HRBGiK\"}],\"authentication\":[\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#master\"],\"service\":[{\"id\":\"did:algo:f30304e2-e702-4f47-b242-2e9e064f6eef#algo-connect\",\"type\":\"did.algorand.foundation.ExternalService\",\"serviceEndpoint\":\"https://did.algorand.foundation\",\"extensions\":[{\"id\":\"algo-address\",\"version\":\"0.1.0\",\"data\":[{\"address\":\"GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE\",\"asset\":\"ALGO\",\"network\":\"testnet\"}]}]}]}",
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}
