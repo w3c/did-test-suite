@@ -2,38 +2,38 @@
   "didMethod": "did:ebsi",
   "implementation": "EBSI libraries and APIs",
   "implementer": "EBSI",
-  "supportedContentTypes": [
-    "application/did+ld+json"
-  ],
-  "dids": [
-    "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd"
-  ],
+  "supportedContentTypes": ["application/did+ld+json", "application/did+json"],
+  "dids": ["did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m"],
   "didParameters": {},
-  "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd": {
+  "did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m": {
     "didDocumentDataModel": {
       "properties": {
-        "alsoKnownAs": [
-          "https://danubetech.com/"
-        ],
-        "authentication": [
-          "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1"
-        ],
-        "service": [],
-        "id": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd",
-        "verificationMethod": [{
-          "id": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1",
-          "type": "Secp256k1VerificationKey2018",
-          "controller": "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd",
-          "publicKeyJwk": {
-            "kty": "EC",
-            "crv": "secp256k1",
-            "x": "SweGUiB0HA5C07fX2TnpGa64nm4AjgoCxC3OjxG10nc",
-            "y": "UGs0kqk1Gr1suiZqUPqDNB_-nlq4Lc-0heYJRKATJDE"
+        "id": "did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m",
+        "verificationMethod": [
+          {
+            "id": "did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1",
+            "type": "Secp256k1VerificationKey2018",
+            "controller": "did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m",
+            "publicKeyJwk": {
+              "kty": "EC",
+              "crv": "secp256k1",
+              "x": "Ou6y1zrJBeVnpV739kcTyez7RmQZFYg3F9bWGm6V5dQ",
+              "y": "jOq6B8CsOxoXj-WXAGY28PH0Ype1x6bnOB6_YOo3lK0"
+            }
           }
-        }],
-        "assertionMethod": [
-          "did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1"
-        ]
+        ],
+        "authentication": ["did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1"],
+        "assertionMethod": ["did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1"]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m\",\"verificationMethod\":[{\"id\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\",\"type\":\"Secp256k1VerificationKey2018\",\"controller\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"Ou6y1zrJBeVnpV739kcTyez7RmQZFYg3F9bWGm6V5dQ\",\"y\":\"jOq6B8CsOxoXj-WXAGY28PH0Ype1x6bnOB6_YOo3lK0\"}}],\"authentication\":[\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\"],\"assertionMethod\":[\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\"]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
       }
     },
     "application/did+ld+json": {
@@ -42,7 +42,7 @@
           "@context": "https://www.w3.org/ns/did/v1"
         }
       },
-      "representation": "{ \"@context\": \"https://www.w3.org/ns/did/v1\", \"alsoKnownAs\": [ \"https://danubetech.com/\" ], \"authentication\": [ \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\" ], \"service\": [], \"id\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd\", \"verificationMethod\": [ { \"id\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\", \"type\": \"Secp256k1VerificationKey2018\", \"controller\": \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd\", \"publicKeyJwk\": { \"kty\": \"EC\", \"crv\": \"secp256k1\", \"x\": \"SweGUiB0HA5C07fX2TnpGa64nm4AjgoCxC3OjxG10nc\", \"y\": \"UGs0kqk1Gr1suiZqUPqDNB_-nlq4Lc-0heYJRKATJDE\" } } ], \"assertionMethod\": [ \"did:ebsi:4RPpNqqGv6NtrMMuPStGUJQ4zgCmUn5ZNqcxmkmdpWbd#keys-1\" ] }",
+      "representation": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m\",\"verificationMethod\":[{\"id\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\",\"type\":\"Secp256k1VerificationKey2018\",\"controller\":\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"Ou6y1zrJBeVnpV739kcTyez7RmQZFYg3F9bWGm6V5dQ\",\"y\":\"jOq6B8CsOxoXj-WXAGY28PH0Ype1x6bnOB6_YOo3lK0\"}}],\"authentication\":[\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\"],\"assertionMethod\":[\"did:ebsi:znHeZWvhAK2FK2Dk1jXNe7m#keys-1\"]}",
       "didDocumentMetadata": {},
       "didResolutionMetadata": {
         "contentType": "application/did+ld+json"
