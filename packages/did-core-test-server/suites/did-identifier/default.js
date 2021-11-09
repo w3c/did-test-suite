@@ -41,6 +41,7 @@ module.exports = {
     require('../implementations/did-web-evernym.json'),
     require('../implementations/did-ebsi.json'),
     require('../implementations/did-ssb.json'),
+    require('../implementations/did-algo.json'),
    ...brokenFixtures
   ],
 };

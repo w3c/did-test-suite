@@ -1,0 +1,90 @@
+{
+  "didMethod": "did:algo",
+  "implementation": "DID Algo Test Suite",
+  "implementer": "AID:Tech and Algorand Foundation",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:algo:56da1708-eead-4e2d-9558-f53d684003fd"
+  ],
+  "didParameters": {
+    "hl": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+    "service": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd?service=algo-connect",
+    "relativeRef": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd?service=algo-connect&relativeRef=type",
+    "versionId": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd?versionId=0.1.0",
+    "versionTime": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd?versionTime=2021-10-20T03:19:33Z"
+  },
+  "did:algo:56da1708-eead-4e2d-9558-f53d684003fd": {
+    "didDocumentDataModel": {
+      "properties": {
+        "@context": [
+          "https://www.w3.org/ns/did/v1",
+          "https://w3id.org/security/suites/ed25519-2020/v1",
+          "https://w3id.org/security/suites/x25519-2020/v1",
+          "https://did-ns.aidtech.network/v1"
+        ],
+        "id": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd",
+        "verificationMethod": [
+          {
+            "id": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd",
+            "publicKeyMultibase": "z8sdBpaoefmAi7iFbY96ZkP1ff9VoRSRTJs4NQEyLfunH"
+          }
+        ],
+        "authentication": [
+          "did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master"
+        ],
+        "service": [
+          {
+            "id": "did:algo:56da1708-eead-4e2d-9558-f53d684003fd#algo-connect",
+            "type": "AlgorandExternalService",
+            "serviceEndpoint": "https://did.algorand.foundation",
+            "extensions": [
+              {
+                "id": "algo-address",
+                "version": "0.1.0",
+                "data": [
+                  {
+                    "address": "GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE",
+                    "asset": "ALGO",
+                    "network": "testnet"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{ \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3id.org/security/suites/ed25519-2020/v1\", \"https://w3id.org/security/suites/x25519-2020/v1\", \"https://did-ns.aidtech.network/v1\" ], \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd\", \"verificationMethod\": [ { \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master\", \"type\": \"Ed25519VerificationKey2020\", \"controller\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd\", \"publicKeyMultibase\": \"z8sdBpaoefmAi7iFbY96ZkP1ff9VoRSRTJs4NQEyLfunH\" } ], \"authentication\": [ \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master\" ], \"service\": [ { \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#algo-connect\", \"type\": \"AlgorandExternalService\", \"serviceEndpoint\": \"https://did.algorand.foundation\", \"extensions\": [ { \"id\": \"algo-address\", \"version\": \"0.1.0\", \"data\": [ { \"address\": \"GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE\", \"asset\": \"ALGO\", \"network\": \"testnet\" } ] } ] } ] }",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1",
+            "https://w3id.org/security/suites/x25519-2020/v1",
+            "https://did-ns.aidtech.network/v1"
+          ]
+        }
+      },
+      "representation": "{ \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3id.org/security/suites/ed25519-2020/v1\", \"https://w3id.org/security/suites/x25519-2020/v1\", \"https://did-ns.aidtech.network/v1\" ], \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd\", \"verificationMethod\": [ { \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master\", \"type\": \"Ed25519VerificationKey2020\", \"controller\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd\", \"publicKeyMultibase\": \"z8sdBpaoefmAi7iFbY96ZkP1ff9VoRSRTJs4NQEyLfunH\" } ], \"authentication\": [ \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#master\" ], \"service\": [ { \"id\": \"did:algo:56da1708-eead-4e2d-9558-f53d684003fd#algo-connect\", \"type\": \"AlgorandExternalService\", \"serviceEndpoint\": \"https://did.algorand.foundation\", \"extensions\": [ { \"id\": \"algo-address\", \"version\": \"0.1.0\", \"data\": [ { \"address\": \"GZAURFQR7VRUL2TRVMUJ3G3IGFYSFXBWHBFFQBEITXWDLFVVHTICFNY2LE\", \"asset\": \"ALGO\", \"network\": \"testnet\" } ] } ] } ] }",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

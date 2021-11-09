@@ -56,6 +56,5 @@ module.exports = {
     require('../implementations/resolver-spruce-webkey.json'),
     require('../implementations/resolver-ssb.json'),
     ...brokenFixtures
-
   ],
 };
