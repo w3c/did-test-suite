@@ -3,7 +3,7 @@
   "implementer": "Decentralized Identity Foundation and Contributors",
   "didMethod": "did:ebsi",
   "expectedOutcomes": {
-    "defaultOutcomes": [0],
+    "defaultOutcomes": [0, 1],
     "invalidDidErrorOutcome": [],
     "notFoundErrorOutcome": [],
     "representationNotSupportedErrorOutcome": [],
