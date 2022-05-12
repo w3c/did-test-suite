@@ -40,6 +40,7 @@ module.exports = {
     require('../implementations/did-ebsi.json'),
     require('../implementations/did-ssb.json'),
     require('../implementations/did-algo.json'),
+    require('../implementations/did-cheqd.json'),
     ...brokenFixtures
   ]
 };
