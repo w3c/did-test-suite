@@ -12,40 +12,39 @@
     "didDocumentDataModel": {
       "properties": {
         "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+        "verificationMethod": [
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "publicKeyMultibase": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn"
+          }
+        ],
         "authentication": [
           "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1"
         ],
         "service": [
           {
             "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website",
-            "serviceEndpoint": "https://www.cheqd.io",
-            "type": "LinkedDomains"
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://www.cheqd.io"
           },
           {
             "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image",
-            "serviceEndpoint": "https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe",
-            "type": "LinkedDomains"
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe"
           },
           {
             "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter",
-            "serviceEndpoint": "https://twitter.com/cheqd_io",
-            "type": "LinkedDomains"
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://twitter.com/cheqd_io"
           },
           {
             "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin",
-            "serviceEndpoint": "https://www.linkedin.com/company/cheqd-identity/",
-            "type": "LinkedDomains"
-          }
-        ],
-        "verificationMethod": [
-          {
-            "controller": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
-            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1",
-            "publicKeyMultibase": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn",
-            "type": "Ed25519VerificationKey2020"
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://www.linkedin.com/company/cheqd-identity/"
           }
         ]
-    
       }
     },
     "application/did+json": {
@@ -53,7 +52,7 @@
         "representationSpecificEntries": {
         }
       },
-      "representation": "{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}],\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}]}",
+      "representation": "{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
       "didDocumentMetadata": {
         "created": "2022-04-05T11:49:19Z",
         "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
@@ -74,7 +73,7 @@
           "@context": ["https://www.w3.org/ns/did/v1"]
         }
       },
-      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}],\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}]}",
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
       "didDocumentMetadata": {
         "created": "2022-04-05T11:49:19Z",
         "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
