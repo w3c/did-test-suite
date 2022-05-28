@@ -41,6 +41,7 @@ module.exports = {
     require('../implementations/did-ssb.json'),
     require('../implementations/did-algo.json'),
     require('../implementations/did-cheqd.json'),
+    require('../implementations/did-art.json'),
     ...brokenFixtures
   ]
 };

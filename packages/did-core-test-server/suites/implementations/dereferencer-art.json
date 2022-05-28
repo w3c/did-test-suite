@@ -1,0 +1,43 @@
+{
+    "didMethod": "did:art",
+    "implementation": "ArtracID DID Method",
+    "implementer": "ART GROUP LIMITED ARTRACX.COM",
+    "expectedOutcomes": {
+      "defaultOutcome": [ 0, 1 ]
+    },
+    "executions": [
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+ld+json"
+          },
+          "contentStream": "{ \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3c-ccg.github.io/ld-cryptosuite-registry/#ecdsasecp256k1signature2019\" ], \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"verificationMethod\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\", \"type\": \"EcdsaSecp256k1VerificationKey2019\", \"controller\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"publicKeyMultibase\": \"fef2823c7d237bd094d633a1765d5896b0f442481a997da2f83d7a928ddce7e65\", \"blockchainAccountId\":\"enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\" } ], \"authentication\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"assertionMethod\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"service\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#service\", \"type\": \"LinkedDomains\", \"serviceEndpoint\": \"https://did.artrac.id\" } ] }",
+          "contentMetadata": {}
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+json"
+          },
+          "contentStream": "{ \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\", \"type\": \"EcdsaSecp256k1VerificationKey2019\", \"controller\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"publicKeyMultibase\": \"fef2823c7d237bd094d633a1765d5896b0f442481a997da2f83d7a928ddce7e65\", \"blockchainAccountId\":\"enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\" }",
+          "contentMetadata": {}
+        }
+      }
+    ]
+  }
+  
