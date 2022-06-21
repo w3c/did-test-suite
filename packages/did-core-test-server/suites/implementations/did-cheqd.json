@@ -1,0 +1,97 @@
+{
+  "didMethod": "did:cheqd",
+  "implementation": "cheqd DID Method",
+  "implementer": "cheqd",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": ["did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY"],
+  "didParameters": {},
+  "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+        "verificationMethod": [
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "publicKeyMultibase": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn"
+          }
+        ],
+        "authentication": [
+          "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1"
+        ],
+        "service": [
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website",
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://www.cheqd.io"
+          },
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image",
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe"
+          },
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter",
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://twitter.com/cheqd_io"
+          },
+          {
+            "id": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin",
+            "type": "LinkedDomains",
+            "serviceEndpoint": "https://www.linkedin.com/company/cheqd-identity/"
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
+      "didDocumentMetadata": {
+        "created": "2022-04-05T11:49:19Z",
+        "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+json",
+        "retrieved": "2022-05-11T14:08:00Z",
+        "did": {
+          "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+          "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+          "method": "cheqd"
+        }
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1",
+            "https://identity.foundation/.well-known/did-configuration/v1",
+            "https://www.w3.org/TR/did-spec-registries/#linkeddomains"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://identity.foundation/.well-known/did-configuration/v1\",\"https://www.w3.org/TR/did-spec-registries/#linkeddomains\"],\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
+      "didDocumentMetadata": {
+        "created": "2022-04-05T11:49:19Z",
+        "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json",
+        "retrieved": "2022-05-11T14:08:00Z",
+        "did": {
+          "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+          "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+          "method": "cheqd"
+        }
+      }
+    }
+  }
+}

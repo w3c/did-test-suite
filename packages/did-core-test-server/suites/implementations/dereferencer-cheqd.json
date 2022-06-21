@@ -1,0 +1,161 @@
+{
+  "didMethod": "did:cheqd",
+  "implementation": "cheqd DID Method",
+  "implementer": "cheqd",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1, 4, 5 ],
+    "invalidDidUrlErrorOutcome": [ 2 ],
+    "notFoundErrorOutcome": [ 3 ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json",
+          "retrieved": "2022-05-11T14:45:33Z",
+          "did": {
+            "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "method": "cheqd"
+          }
+        },
+        "contentStream": "{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
+        "contentMetadata": {
+          "created": "2022-04-05T11:49:19Z",
+          "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json",
+          "retrieved": "2022-05-11T14:45:33Z",
+          "did": {
+            "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "method": "cheqd"
+          }
+        },
+        "contentStream": "{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}",
+        "contentMetadata": {
+          "created": "2022-04-05T11:49:19Z",
+          "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did_cheqd_mainnet_zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json",
+          "error": "invalidDidUrl",
+          "retrieved": "2022-05-11T14:54:20Z",
+          "did": {
+            "didString": "did_cheqd_mainnet_zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "methodSpecificId": "did_cheqd_mainnet_zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "method": "cheqd"
+          }
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWku",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json",
+          "error": "notFound",
+          "retrieved": "2022-05-11T14:31:02Z",
+          "did": {
+            "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWku",
+            "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWku",
+            "method": "cheqd"
+          }
+      
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json",
+          "retrieved": "2022-05-11T14:45:33Z",
+          "did": {
+            "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "method": "cheqd"
+          }
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://identity.foundation/.well-known/did-configuration/v1\",\"https://www.w3.org/TR/did-spec-registries/#linkeddomains\"],\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"verificationMethod\":[{\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}],\"authentication\":[\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\"],\"service\":[{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#website\",\"serviceEndpoint\":\"https://www.cheqd.io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#non-fungible-image\",\"serviceEndpoint\":\"https://gateway.ipfs.io/ipfs/bafybeihetj2ng3d74k7t754atv2s5dk76pcqtvxls6dntef3xa6rax25xe\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#twitter\",\"serviceEndpoint\":\"https://twitter.com/cheqd_io\",\"type\":\"LinkedDomains\"},{\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#linkedin\",\"serviceEndpoint\":\"https://www.linkedin.com/company/cheqd-identity/\",\"type\":\"LinkedDomains\"}]}",
+        "contentMetadata": {
+          "created": "2022-04-05T11:49:19Z",
+          "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json",
+          "retrieved": "2022-05-11T14:45:33Z",
+          "did": {
+            "didString": "did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "methodSpecificId": "zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY",
+            "method": "cheqd"
+          }
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY#key1\",\"controller\":\"did:cheqd:mainnet:zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkY\",\"publicKeyMultibase\":\"zF7rhDBfUt9d1gJPjx7s1JXfUY7oVWkYsWCo7fztHtepn\",\"type\":\"Ed25519VerificationKey2020\"}",
+        "contentMetadata": {
+          "created": "2022-04-05T11:49:19Z",
+          "versionId": "EDEAD35C83E20A72872ACD3C36B7BA42300712FC8E3EEE1340E47E2F1B216B2D"
+        }
+      }
+    }
+  ]
+}
