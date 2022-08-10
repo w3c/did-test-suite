@@ -1,0 +1,75 @@
+{
+    "didMethod": "did:art",
+    "implementation": "ArtracID DID Method",
+    "implementer": "ART GROUP LIMITED ARTRACX.COM",
+    "supportedContentTypes": [
+      "application/did+json",
+      "application/did+ld+json"
+    ],
+    "dids": [
+      "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c"
+    ],
+    "didParameters": {
+      "versionId": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c?versionId=0.1.0",
+      "versionTime": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c?versionTime=2022-04-01T00:00:00Z"
+    },
+    "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c": {
+      "didDocumentDataModel": {
+        "properties": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3c-ccg.github.io/ld-cryptosuite-registry/#ecdsasecp256k1signature2019"
+          ],
+          "id": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c",
+          "verificationMethod": [
+            {
+              "id": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey",
+              "type": "EcdsaSecp256k1VerificationKey2019",
+              "controller": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c",
+              "publicKeyMultibase": "fef2823c7d237bd094d633a1765d5896b0f442481a997da2f83d7a928ddce7e65",
+              "blockchainAccountId":"enq:f045c5c7d50145b65ca2702c38b4e2d46658293c"
+            }
+          ],
+          "authentication": [
+            "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey"
+          ],
+          "assertionMethod": [
+            "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey"
+          ],
+          "service": [
+            {
+          "id": "did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#service",
+              "type": "LinkedDomains",
+              "serviceEndpoint": "https://did.artrac.id"
+            }
+          ]
+        }
+      },
+      "application/did+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {}
+        },
+        "representation": "{ \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3c-ccg.github.io/ld-cryptosuite-registry/#ecdsasecp256k1signature2019\" ], \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"verificationMethod\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\", \"type\": \"EcdsaSecp256k1VerificationKey2019\", \"controller\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"publicKeyMultibase\": \"fef2823c7d237bd094d633a1765d5896b0f442481a997da2f83d7a928ddce7e65\", \"blockchainAccountId\":\"enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\" } ], \"authentication\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"assertionMethod\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"service\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#service\", \"type\": \"LinkedDomains\", \"serviceEndpoint\": \"https://did.artrac.id\" } ] }",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        }
+      },
+      "application/did+ld+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {
+            "@context": [
+              "https://www.w3.org/ns/did/v1",
+              "https://w3c-ccg.github.io/ld-cryptosuite-registry/#ecdsasecp256k1signature2019"
+            ]
+          }
+        },
+        "representation": "{ \"@context\": [ \"https://www.w3.org/ns/did/v1\", \"https://w3c-ccg.github.io/ld-cryptosuite-registry/#ecdsasecp256k1signature2019\" ], \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"verificationMethod\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\", \"type\": \"EcdsaSecp256k1VerificationKey2019\", \"controller\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\", \"publicKeyMultibase\": \"fef2823c7d237bd094d633a1765d5896b0f442481a997da2f83d7a928ddce7e65\", \"blockchainAccountId\":\"enq:f045c5c7d50145b65ca2702c38b4e2d46658293c\" } ], \"authentication\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"assertionMethod\": [ \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#masterkey\" ], \"service\": [ { \"id\": \"did:art:enq:f045c5c7d50145b65ca2702c38b4e2d46658293c#service\", \"type\": \"LinkedDomains\", \"serviceEndpoint\": \"https://did.artrac.id\" } ] }",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        }
+      }
+    }
+  }
+  
