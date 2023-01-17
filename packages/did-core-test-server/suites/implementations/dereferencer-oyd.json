@@ -1,0 +1,113 @@
+{
+    "didMethod": "did:oyd",
+    "implementation": "OYDID libraries and APIs",
+    "implementer": "OwnYourData",
+    "expectedOutcomes": {
+      "defaultOutcome": [ 0, 1, 2 ],
+      "invalidDidUrlErrorOutcome": [ 3 ],
+      "notFoundErrorOutcome": [ 4 ] 
+    },
+    "executions": [
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+ld+json"
+          },
+          "contentStream": "{\"@context\":\"https://www.w3.org/ns/did/v1\",\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6MusYB5iT5krCHYsZ76EzBaTdRwGKsaBhMcSbrXaPJgkuRQ\"},{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6Mv7EYihbAat6Wq7GsjNsjcxt58dZT8fmsRjQGTkYamYrjB\"}]}",
+          "contentMetadata": {}
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+json"
+          },
+          "contentStream": "{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6MusYB5iT5krCHYsZ76EzBaTdRwGKsaBhMcSbrXaPJgkuRQ\"}",
+          "contentMetadata": {}
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR?versionTime=2022-01-03T15:49:00Z",
+          "dereferenceOptions": {}
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+ld+json"
+          },
+          "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV\",\"publicKeyMultibase\":\"z6MuyXnvW3o9HVq3oD5FY9yzSEneiWe8YmoxzasGxmDbrP2x\"},{\"id\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV\",\"publicKeyMultibase\":\"z6MurxAg6d26HtToacPh5jDivb447qgYoTnzszwsRLRScp8H\"}],\"service\":[{\"id\":\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"content\":\"original\"}}]}",
+          "contentMetadata": {
+            "versionId": "zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV",
+            "nextVersionId": "zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR",
+            "nextUpdate": "2022-01-03T15:50:32Z",
+            "created": "2022-01-03T15:49:00Z",
+            "updated": "2022-01-03T15:50:32Z"
+          }
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:invalid",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+json",
+            "error": "invalidDidUrl",
+            "retrieved": "2023-01-08T10:15:44Z",
+            "did": {
+              "didString": "did:invalid",
+              "methodSpecificId": "",
+              "method": ""
+            }
+          },
+          "contentStream": "",
+          "contentMetadata": {
+          }
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:oyd:invalid",
+          "dereferenceOptions": {
+            "accept": "application/did+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+json",
+            "error": "notFound",
+            "retrieved": "2023-01-08T10:15:13Z",
+            "did": {
+              "didString": "did:oyd:invalid",
+              "methodSpecificId": "invalid",
+              "method": "oyd"
+            }
+          },
+          "contentStream": "",
+          "contentMetadata": {
+          }
+        }
+      }
+    ]
+  }
+  

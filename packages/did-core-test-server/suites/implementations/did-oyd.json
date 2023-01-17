@@ -1,0 +1,200 @@
+{
+  "didMethod": "did:oyd",
+  "implementation": "OYDID libraries and APIs",
+  "implementer": "OwnYourData",
+  "supportedContentTypes": ["application/did+ld+json", "application/did+json"],
+  "dids": [
+    "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+    "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR",
+    "did:oyd:test" ],
+  "didParameters": {
+    "hl": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh?hl=zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+    "service": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh?service=payload",
+    "relativeRef": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh?service=payload&relativeRef=value",
+    "versionId": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh?versionId=1",
+    "versionTime": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh?versionTime=2022-01-03T15:45:36Z"
+  },
+  "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+        "verificationMethod": [
+          {
+            "id": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+            "publicKeyMultibase": "z6MusYB5iT5krCHYsZ76EzBaTdRwGKsaBhMcSbrXaPJgkuRQ"
+          },
+          {
+            "id": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-rev",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh",
+            "publicKeyMultibase": "z6Mv7EYihbAat6Wq7GsjNsjcxt58dZT8fmsRjQGTkYamYrjB"
+          }
+        ],
+        "service": [
+          {
+            "id": "did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#payload",
+            "type": "Custom",
+            "serviceEndpoint": "https://oydid.ownyourdata.eu",
+            "payload": {
+              "simple": "example"
+            }
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6MusYB5iT5krCHYsZ76EzBaTdRwGKsaBhMcSbrXaPJgkuRQ\"},{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6Mv7EYihbAat6Wq7GsjNsjcxt58dZT8fmsRjQGTkYamYrjB\"}],\"service\":[{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"simple\":\"example\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6MusYB5iT5krCHYsZ76EzBaTdRwGKsaBhMcSbrXaPJgkuRQ\"},{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh\",\"publicKeyMultibase\":\"z6Mv7EYihbAat6Wq7GsjNsjcxt58dZT8fmsRjQGTkYamYrjB\"}],\"service\":[{\"id\":\"did:oyd:zQmaBZTghndXTgxNwfbdpVLWdFf6faYE4oeuN2zzXdQt1kh#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"simple\":\"example\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  },
+  "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR",
+        "verificationMethod": [
+          {
+            "id": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-doc",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR",
+            "publicKeyMultibase": "z6Mv4q7EFUKq7p8KKGGfh1UjduMrpNnzdprtaMiFsp9Kq9gD"
+          },
+          {
+            "id": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-rev",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR",
+            "publicKeyMultibase": "z6MuxmEJYvuo7kre1hXcdVuTm7igpGxi7MkkgrtstRmGVyxY"
+          }
+        ],
+        "alsoKnownAs": [
+          "did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV"
+        ],
+        "service": [
+          {
+            "id": "did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#payload",
+            "type": "Custom",
+            "serviceEndpoint": "https://oydid.ownyourdata.eu",
+            "payload": {
+              "content": "updated"
+            }
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"publicKeyMultibase\":\"z6Mv4q7EFUKq7p8KKGGfh1UjduMrpNnzdprtaMiFsp9Kq9gD\"},{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"publicKeyMultibase\":\"z6MuxmEJYvuo7kre1hXcdVuTm7igpGxi7MkkgrtstRmGVyxY\"}],\"alsoKnownAs\":[\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV\"],\"service\":[{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"content\":\"updated\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"publicKeyMultibase\":\"z6Mv4q7EFUKq7p8KKGGfh1UjduMrpNnzdprtaMiFsp9Kq9gD\"},{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR\",\"publicKeyMultibase\":\"z6MuxmEJYvuo7kre1hXcdVuTm7igpGxi7MkkgrtstRmGVyxY\"}],\"alsoKnownAs\":[\"did:oyd:zQmdXNRiMWEYTiYF58a9BaiUkfB2xWUgL7G7ozyCCNPqjKV\"],\"service\":[{\"id\":\"did:oyd:zQmeArtmfxJ1JB6CXvoFdcQCyxPcYii5DUTBR44g4xYpCLR#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"content\":\"updated\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  },
+  "did:oyd:test": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg",
+        "verificationMethod": [
+          {
+            "id": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-doc",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg",
+            "publicKeyMultibase": "z6Mv6tYu3rkE2AhFoEgukV5XwakRpnXUdt9CpE1Sp66RPjXt"
+          },
+          {
+            "id": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-rev",
+            "type": "Ed25519VerificationKey2020",
+            "controller": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg",
+            "publicKeyMultibase": "z6Mv94m3kp6NCzWzqvppDjJYggmhxN8DHrgLdxxRcczWxcWg"
+          }
+        ],
+        "publicAccess": true,
+        "additionalType": null,
+        "datePublished": "2022-01-03T15:45:36Z",
+        "rating": 4.5,
+        "commentCount": 2,
+        "service": [
+          {
+            "id": "did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#payload",
+            "type": "Custom",
+            "serviceEndpoint": "https://oydid.ownyourdata.eu",
+            "payload": {
+              "demo": "data types"
+            }
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"publicKeyMultibase\":\"z6Mv6tYu3rkE2AhFoEgukV5XwakRpnXUdt9CpE1Sp66RPjXt\"},{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"publicKeyMultibase\":\"z6Mv94m3kp6NCzWzqvppDjJYggmhxN8DHrgLdxxRcczWxcWg\"}],\"publicAccess\":true,\"additionalType\":null,\"datePublished\":\"2022-01-03T15:45:36Z\",\"rating\":4.5,\"commentCount\":2,\"service\":[{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"demo\":\"data types\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/ed25519-2020/v1",
+            {
+              "publicAccess": "https://schema.org/publicAccess",
+              "additionalType": "https://schema.org/additionalType",
+              "datePublished": "https://schema.org/datePublished",
+              "rating": "https://schema.org/Rating",
+              "commentCount": "https://schema.org/commentCount"
+            }
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",{\"publicAccess\":\"https://schema.org/publicAccess\",\"additionalType\":\"https://schema.org/additionalType\",\"datePublished\":\"https://schema.org/datePublished\",\"rating\":\"https://schema.org/Rating\",\"commentCount\":\"https://schema.org/commentCount\"}],\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"verificationMethod\":[{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-doc\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"publicKeyMultibase\":\"z6Mv6tYu3rkE2AhFoEgukV5XwakRpnXUdt9CpE1Sp66RPjXt\"},{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#key-rev\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg\",\"publicKeyMultibase\":\"z6Mv94m3kp6NCzWzqvppDjJYggmhxN8DHrgLdxxRcczWxcWg\"}],\"publicAccess\":true,\"additionalType\":null,\"datePublished\":\"2022-01-03T15:45:36Z\",\"rating\":4.5,\"commentCount\":2,\"service\":[{\"id\":\"did:oyd:zQmeNewsraS3Aeqf6d647pm4RRPr3uZHj5puhMYnJCNjceg#payload\",\"type\":\"Custom\",\"serviceEndpoint\":\"https://oydid.ownyourdata.eu\",\"payload\":{\"demo\":\"data types\"}}]}",
+      "didDocumentMetadata": {},
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
