@@ -9,6 +9,7 @@ const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
 module.exports = {
   name: '7.1 DID Resolution',
   resolvers: [
+    require('../implementations/universal-resolver-did-dxd.json'),
     require('../implementations/resolver-ethr-consensys-mesh.json'),
     require('../implementations/universal-resolver-did-ace.json'),
     require('../implementations/universal-resolver-did-bba.json'),

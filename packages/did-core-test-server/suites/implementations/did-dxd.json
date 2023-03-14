@@ -1,0 +1,97 @@
+{
+  "didMethod": "did:dxd",
+  "implementation": "Data-Alliance DID Method",
+  "implementer": "Data Alliance Co., Ltd.",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb"
+  ],
+  "didParameters": {},
+  "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb",
+        "controller": "did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629",
+        "created": "2022-03-05T18:19:39Z",
+        "updated": "2022-04-05T18:19:39Z",
+        "deactivated": false,
+        "authentication": [
+          "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1"
+        ],
+        "assertionMethod": [
+          "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1"
+        ],
+        "keyAgreement": [
+          "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1"
+        ],
+        "verificationMethod": [
+          {
+            "id": "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "controller": "did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb",
+            "publicKeyBase58": "49PpU4vgqFNtNUAeaeR2m6ZLsgMavL54HtXaTwYdqyi7xKQXREUw219nEH"
+          }
+        ],
+		"service": [
+		  {
+			"id": "did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-did",
+			"type": "DidControl",
+			"serviceEndpoint": "https://did.data-alliance.com"
+		  },
+		  {
+			"id": "did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-citizenship",
+			"type": "CitizenShip",
+			"serviceEndpoint": "https://citizen.data-alliance.com"
+		  },
+		  {
+			"id": "did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-lora",
+			"type": "IotLoRa",
+			"serviceEndpoint": "https://lora.data-alliance.com"
+		  },
+		  {
+			"id": "did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-wifi",
+			"type": "IotWifi",
+			"serviceEndpoint": "https://wifi.data-alliance.com"
+		  }
+		]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1-2019/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1-2019/v1\"],\"id\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb\",\"controller\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629\",\"created\":\"2022-03-05T18:19:39Z\",\"updated\":\"2022-04-05T18:19:39Z\",\"deactivated\":false,\"authentication\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"assertionMethod\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"keyAgreement\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"verificationMethod\":[{\"id\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb\",\"publicKeyBase58\":\"49PpU4vgqFNtNUAeaeR2m6ZLsgMavL54HtXaTwYdqyi7xKQXREUw219nEH\"}],\"service\":[{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-did\",\"type\":\"DidControl\",\"serviceEndpoint\":\"https://did.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-citizenship\",\"type\":\"CitizenShip\",\"serviceEndpoint\":\"https://citizen.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-lora\",\"type\":\"IotLoRa\",\"serviceEndpoint\":\"https://lora.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-wifi\",\"type\":\"IotWifi\",\"serviceEndpoint\":\"https://wifi.data-alliance.com\"}]}",
+      "didDocumentMetadata": {
+        "created": "2022-03-05T18:19:39Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1-2019/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1-2019/v1\"],\"id\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb\",\"controller\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629\",\"created\":\"2022-03-05T18:19:39Z\",\"updated\":\"2022-04-05T18:19:39Z\",\"deactivated\":false,\"authentication\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"assertionMethod\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"keyAgreement\":[\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\"],\"verificationMethod\":[{\"id\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb#keys-1\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:dxd:00007127335b579899ad235b7143fba1565fd1a4c3acfcc3d5eb\",\"publicKeyBase58\":\"49PpU4vgqFNtNUAeaeR2m6ZLsgMavL54HtXaTwYdqyi7xKQXREUw219nEH\"}],\"service\":[{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-did\",\"type\":\"DidControl\",\"serviceEndpoint\":\"https://did.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-citizenship\",\"type\":\"CitizenShip\",\"serviceEndpoint\":\"https://citizen.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-lora\",\"type\":\"IotLoRa\",\"serviceEndpoint\":\"https://lora.data-alliance.com\"},{\"id\":\"did:dxd:0000935a266caf085c4b81f260729b0b83d05aedf32be1d73629#svc-iot-wifi\",\"type\":\"IotWifi\",\"serviceEndpoint\":\"https://wifi.data-alliance.com\"}]}",
+      "didDocumentMetadata": {
+        "created": "2022-03-05T18:19:39Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}

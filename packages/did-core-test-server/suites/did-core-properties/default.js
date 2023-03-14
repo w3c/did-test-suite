@@ -5,6 +5,7 @@ const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
 module.exports = {
   name: 'did-spec',
   didMethods: [
+    require('../implementations/did-dxd.json'),
     require('../implementations/did-example-didwg.json'),
     require('../implementations/did-is.json'),
     require('../implementations/did-key-2018-db.json'),
