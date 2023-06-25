@@ -57,6 +57,7 @@ module.exports = {
     require('../implementations/resolver-spruce-webkey.json'),
     require('../implementations/resolver-ssb.json'),
     require('../implementations/resolver-did-cheqd.json'),
+    require('../implementations/resolver-knox.json'),
     ...brokenFixtures
   ],
 };

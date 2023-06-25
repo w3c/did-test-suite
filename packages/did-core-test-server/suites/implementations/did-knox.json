@@ -1,6 +1,6 @@
 {
     "didMethod": "did:knox",
-    "implementation": "did-method-knox-registry-mgmt",
+    "implementation": "Knox Networks DID Method",
     "implementer": "Knox Networks",
     "supportedContentTypes":
     [
@@ -8,51 +8,59 @@
     ],
     "dids":
     [
-        "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF"
+        "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy"
     ],
     "didParameters":
     {},
-    "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF":
+    "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy":
     {
         "didDocumentDataModel":
         {
             "properties":
             {
-                "id": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
+                "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
                 "authentication":
                 [
                     {
-                        "id": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM",
                         "type": "Ed25519VerificationKey2020",
-                        "controller": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
-                        "publicKeyMultibase": "z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF"
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM"
                     }
                 ],
                 "capabilityInvocation":
                 [
                     {
-                        "id": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E",
                         "type": "Ed25519VerificationKey2020",
-                        "controller": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
-                        "publicKeyMultibase": "z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF"
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E"
                     }
                 ],
                 "capabilityDelegation":
                 [
                     {
-                        "id": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr",
                         "type": "Ed25519VerificationKey2020",
-                        "controller": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
-                        "publicKeyMultibase": "z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF"
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr"
                     }
                 ],
                 "assertionMethod":
                 [
                     {
-                        "id": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn",
                         "type": "Ed25519VerificationKey2020",
-                        "controller": "did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF",
-                        "publicKeyMultibase": "z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF"
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn"
+                    }
+                ],
+                "service":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry",
+                        "type": "IssuerRegistry",
+                        "serviceEndpoint": "http://bar.example.com/{issuerId}"
                     }
                 ]
             }
@@ -70,16 +78,15 @@
                     ]
                 }
             },
-            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"authentication\":[{\"id\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"publicKeyMultibase\":\"z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"publicKeyMultibase\":\"z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"publicKeyMultibase\":\"z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\"}],\"assertionMethod\":[{\"id\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF#z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\",\"publicKeyMultibase\":\"z6Mkv9L4S8FQ3qcu8UqG8NFHt5LKcfzPeLvPJB7uW5vrp3WF\"}]}",
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"authentication\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\"}],\"assertionMethod\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\"}],\"service\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}]}",
             "didDocumentMetadata":
             {
-                "created":"2022-05-07T17:24:28.787Z",
-                "updated":"2022-05-07T17:24:28.787Z"
+                "created":"2023-05-07T17:24:28.787Z",
+                "updated":"2023-05-07T17:24:28.787Z"
             },
-            "didResolutionMetadata":
-            {
+            "didResolutionMetadata": {
                 "contentType": "application/did+ld+json"
-            }
+              }
         }
     }
 }
