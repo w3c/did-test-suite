@@ -1,0 +1,79 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:knox",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0,
+            1
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "knox",
+                            "methodSpecificId": "z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy"
+                        },
+                        "didUrlString": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 134,
+                    "identifier": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                    "pattern": "^(did:knox:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"authentication\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\"}],\"assertionMethod\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\"}],\"service\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}]}",
+                "didDocumentMetadata": {}
+            }
+        },
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "knox",
+                            "methodSpecificId": "zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV"
+                        },
+                        "didUrlString": "did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 229,
+                    "identifier": "did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV",
+                    "pattern": "^(did:knox:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV\",\"authentication\":[{\"id\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV#z221jkqfb2DLMgHDcZAzpThnvfPLHbPfUD962TV7AGMwQC\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV\",\"publicKeyMultibase\":\"z221jkqfb2DLMgHDcZAzpThnvfPLHbPfUD962TV7AGMwQC\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV#znW6Na8pTuM4BqgehPU1Fb9VFP8CDqGGYHaBn9iSbswNH\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV\",\"publicKeyMultibase\":\"znW6Na8pTuM4BqgehPU1Fb9VFP8CDqGGYHaBn9iSbswNH\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV#zkzvp9U1rdsA2HEatK18ppiqNCoZhg4fBDe4aEHxPVK64\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV\",\"publicKeyMultibase\":\"zkzvp9U1rdsA2HEatK18ppiqNCoZhg4fBDe4aEHxPVK64\"}],\"assertionMethod\":[{\"id\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV#znm65gGAMucswS26VvFCULbQaeonkPi4ZcGhMMLHgQLxa\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:zpbk7KanoqudXQ3H84fmDjpAhLGQLry3aKGbEKxNcJXoV\",\"publicKeyMultibase\":\"znm65gGAMucswS26VvFCULbQaeonkPi4ZcGhMMLHgQLxa\"}],\"service\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

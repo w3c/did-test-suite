@@ -42,6 +42,7 @@ module.exports = {
     require('../implementations/universal-resolver-did-work.json'),
     require('../implementations/universal-resolver-resolver-tests.json'),
     require('../implementations/universal-resolver-did-art.json'),
+    require('../implementations/universal-resolver-did-knox.json'),
     require('../implementations/resolver-did-orb.json'),
     require('../implementations/resolver-nft-3box-labs.json'),
     require('../implementations/resolver-example-didwg.json'),
