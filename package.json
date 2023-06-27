@@ -31,7 +31,7 @@
     "test-and-generate-report": "lerna run test-and-generate-report"
   },
   "devDependencies": {
-    "lerna": "^6.6.2"
+    "lerna": "^3.22.1"
   },
   "prettier": {
     "printWidth": 80,
