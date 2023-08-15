@@ -1,0 +1,129 @@
+{
+    "implementation": "Knox Networks",
+    "implementer": "Knox Networks",
+    "didMethod": "did:knox",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 3],
+        "invalidDidErrorOutcome": [1],
+        "notFoundErrorOutcome": [2],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": {
+                "@context": ["https://www.w3.org/ns/did/v1",  "https://w3id.org/security/suites/ed25519-2020/v1"],
+                "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                "authentication":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM",
+                        "type": "Ed25519VerificationKey2020",
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM"
+                    }
+                ],
+                "capabilityInvocation":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E",
+                        "type": "Ed25519VerificationKey2020",
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E"
+                    }
+                ],
+                "capabilityDelegation":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr",
+                        "type": "Ed25519VerificationKey2020",
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr"
+                    }
+                ],
+                "assertionMethod":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn",
+                        "type": "Ed25519VerificationKey2020",
+                        "controller": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                        "publicKeyMultibase": "z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn"
+                    }
+                ],
+                "service":
+                [
+                    {
+                        "id": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry",
+                        "type": "IssuerRegistry",
+                        "serviceEndpoint": "http://bar.example.com/{issuerId}"
+                    }
+                ]
+            },
+            "didResolutionMetadata": {
+                "didUrl": {
+                    "did": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                    "methodName": "knox",
+                    "methodSpecificId": "z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy"
+                },
+                "duration": 49
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:knox::$_222",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "invalidDid"
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolve",
+        "input": {
+            "did": "did:knox:123",
+            "resolutionOptions": {}
+        },
+        "output": {
+            "didDocument": null,
+            "didResolutionMetadata": {
+                "error": "notFound"
+            },
+            "didDocumentMetadata": {}
+        }
+    },
+    {
+        "function": "resolveRepresentation",
+        "input": {
+            "did": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+            "resolutionOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json",
+                "didUrl": {
+                    "did": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+                    "methodName": "knox",
+                    "methodSpecificId": "z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy"
+                },
+                "duration": 278
+            },
+            "didDocumentMetadata": {},
+            "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"authentication\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\"}],\"assertionMethod\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\"}],\"service\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}]}"
+        }
+    }]
+}
