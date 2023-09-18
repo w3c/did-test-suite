@@ -44,6 +44,7 @@ module.exports = {
     require('../implementations/did-cheqd.json'),
     require('../implementations/did-art.json'),
     require('../implementations/did-knox.json'),
+    require('../implementations/did-self.json'),
     ...brokenFixtures
   ],
 };

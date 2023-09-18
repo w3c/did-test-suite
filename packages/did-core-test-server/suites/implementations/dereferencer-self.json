@@ -1,0 +1,80 @@
+{
+  "implementation": "Example Dereferencer",
+  "implementer": "DID Working Group",
+  "didMethod": "did:self",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ 2 ],
+    "notFoundErrorOutcome": [ 3 ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:self:222",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\": \"did:self:222\",\"verificationMethod\": [{\"id\": \"did:self:222#key-1\",\"controller\": \"did:self:222\",\"publicKeyBase58\": \"F6NxfeuPJ5NhmDM6QT2TeSFxcnnkQBgtv6yfQziS5NPM\"}],\"service\": []}",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:self:222#key-1",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\": \"did:self:222#key-1\",\"controller\": \"did:self:222\",\"publicKeyBase58\": \"F6NxfeuPJ5NhmDM6QT2TeSFxcnnkQBgtv6yfQziS5NPM\"}",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:self_333",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "invalidDidUrl"
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:self:444",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "notFound"
+        },
+        "contentStream": "",
+        "contentMetadata": {
+        }
+      }
+    }
+  ]
+}
