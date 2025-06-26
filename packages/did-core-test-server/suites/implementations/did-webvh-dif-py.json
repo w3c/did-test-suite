@@ -1,0 +1,101 @@
+{
+    "didMethod": "did:webvh",
+    "implementation": "https://github.com/decentralized-identity/didwebvh-py",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "supportedContentTypes": [
+        "application/did+ld+json"
+    ],
+    "dids": [
+        "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io"
+    ],
+    "didParameters": {},
+    "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io": {
+        "didDocumentDataModel": {
+            "properties":{
+                "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    "https://w3id.org/security/multikey/v1"
+                ],
+                "id": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                "verificationMethod": [
+                    {
+                        "id": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N",
+                        "type": "Multikey",
+                        "controller": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                        "publicKeyMultibase": "z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N"
+                    }
+                ],
+                "authentication": [
+                    "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N"
+                ],
+                "assertionMethod": [
+                    "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N"
+                ],
+                "service": [
+                    {
+                        "id": "#files",
+                        "type": "relativeRef",
+                        "serviceEndpoint": "https://opsecid.github.io"
+                    },
+                    {
+                        "@context": "https://identity.foundation/linked-vp/contexts/v1",
+                        "id": "#whois",
+                        "type": "LinkedVerifiablePresentation",
+                        "serviceEndpoint": "https://opsecid.github.io/whois.vp"
+                    }
+                ]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/multikey/v1\"],\"id\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io\",\"authentication\":[\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"],\"assertionMethod\":[\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"],\"verificationMethod\":[{\"id\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\",\"type\":\"Multikey\",\"controller\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io\",\"publicKeyMultibase\":\"z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"}],\"service\":[{\"id\":\"#files\",\"type\":\"relativeRef\",\"serviceEndpoint\":\"https://opsecid.github.io\"},{\"@context\":\"https://identity.foundation/linked-vp/contexts/v1\",\"id\":\"#whois\",\"type\":\"LinkedVerifiablePresentation\",\"serviceEndpoint\":\"https://opsecid.github.io/whois.vp\"}]}",
+            "didDocumentMetadata": {
+                "versionId": "2-QmegMEJR3AWiLbZDNKgyMY6yK8MwPmaciqh9Jxaw5P5hLf",
+                "created": "2025-06-18T20:20:34Z",
+                "updated": "2025-06-18T20:20:34Z",
+                "previousLogEntryHash": "QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn",
+                "scid": "QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn",
+                "prerotation": false,
+                "portable": false,
+                "nextKeyHashes": [],
+                "deactivated": false,
+                "updateKeys": [
+                    "z6MkuGchjsuFKGyciyGNct85PEtDRpD65YZdcXCEdTW1f9dy"
+                ],
+                "witness": {
+                    "witnesses": [],
+                    "threshold": "0"
+                },
+                "watchers": null,
+                "latestVersionId": "2-QmegMEJR3AWiLbZDNKgyMY6yK8MwPmaciqh9Jxaw5P5hLf"
+            },
+            "didResolutionMetadata": {
+                "driverDuration": 87,
+                "contentType": "application/did+ld+json",
+                "retrieved": "2025-06-25T20:00:23.694Z",
+                "pattern": "^(did:webvh:.+)$",
+                "driverUrl": "http://driver-did-webvh:8080/1.0/identifiers/",
+                "duration": 87,
+                "did": {
+                    "didString": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                    "methodSpecificId": "QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                    "method": "webvh"
+                },
+                "didUrl": {
+                    "path": null,
+                    "fragment": null,
+                    "query": null,
+                    "didUrlString": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                    "parameters": null,
+                    "did": {
+                        "didString": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                        "methodSpecificId": "QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                        "method": "webvh"
+                    }
+                }
+            }
+        }
+    }
+}
