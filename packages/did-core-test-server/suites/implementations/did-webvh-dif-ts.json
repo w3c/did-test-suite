@@ -1,0 +1,101 @@
+{
+    "didMethod": "did:webvh",
+    "implementation": "https://github.com/decentralized-identity/didwebvh-ts",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "supportedContentTypes": [
+        "application/did+ld+json"
+    ],
+    "dids": [
+        "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw"
+    ],
+    "didParameters": {},
+    "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw": {
+        "didDocumentDataModel": {
+            "properties":{
+                "@context": [
+                    "https://www.w3.org/ns/did/v1",
+                    "https://w3id.org/security/multikey/v1"
+                ],
+                "id": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                "verificationMethod": [
+                    {
+                        "id": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC",
+                        "type": "Multikey",
+                        "controller": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                        "publicKeyMultibase": "z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC"
+                    }
+                ],
+                "authentication": [
+                    "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC"
+                ],
+                "assertionMethod": [
+                    "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC"
+                ],
+                "service": [
+                    {
+                        "id": "#files",
+                        "type": "relativeRef",
+                        "serviceEndpoint": "https://gist.githubusercontent.com/brianorwhatever/9c4633d18eb644f7a47f93a802691626/raw"
+                    },
+                    {
+                        "@context": "https://identity.foundation/linked-vp/contexts/v1",
+                        "id": "#whois",
+                        "type": "LinkedVerifiablePresentation",
+                        "serviceEndpoint": "https://gist.githubusercontent.com/brianorwhatever/9c4633d18eb644f7a47f93a802691626/raw/whois.vp"
+                    }
+                ]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/multikey/v1\"],\"id\":\"did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw\",\"authentication\":[\"did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC\"],\"assertionMethod\":[\"did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC\"],\"verificationMethod\":[{\"id\":\"did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw#z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC\",\"type\":\"Multikey\",\"controller\":\"did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw\",\"publicKeyMultibase\":\"z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC\"}],\"service\":[{\"id\":\"#files\",\"type\":\"relativeRef\",\"serviceEndpoint\":\"https://gist.githubusercontent.com/brianorwhatever/9c4633d18eb644f7a47f93a802691626/raw\"},{\"@context\":\"https://identity.foundation/linked-vp/contexts/v1\",\"id\":\"#whois\",\"type\":\"LinkedVerifiablePresentation\",\"serviceEndpoint\":\"https://gist.githubusercontent.com/brianorwhatever/9c4633d18eb644f7a47f93a802691626/raw/whois.vp\"}]}",
+            "didDocumentMetadata": {
+                "versionId": "2-QmRRaLXwc6BjBuBPosSupJwEQ8w9f3znP7yfbpGfwcnLr6",
+                "created": "2025-01-23T04:12:36Z",
+                "updated": "2025-01-23T04:12:36Z",
+                "previousLogEntryHash": "QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p",
+                "scid": "QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p",
+                "prerotation": false,
+                "portable": false,
+                "nextKeyHashes": [],
+                "deactivated": false,
+                "updateKeys": [
+                    "z6MkhkBLZJSX8ZD6wLKoKVp7xbXzbVXtH3akop4cQBfS57aC"
+                ],
+                "witness": {
+                    "witnesses": [],
+                    "threshold": "0"
+                },
+                "watchers": null,
+                "latestVersionId": "1-QmRRaLXwc6BjBuBPosSupJwEQ8w9f3znP7yfbpGfwcnLr6"
+            },
+            "didResolutionMetadata": {
+                "driverDuration": 87,
+                "contentType": "application/did+ld+json",
+                "retrieved": "2025-06-25T20:00:23.694Z",
+                "pattern": "^(did:webvh:.+)$",
+                "driverUrl": "http://driver-did-webvh:8080/1.0/identifiers/",
+                "duration": 87,
+                "did": {
+                    "didString": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                    "methodSpecificId": "QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                    "method": "webvh"
+                },
+                "didUrl": {
+                    "path": null,
+                    "fragment": null,
+                    "query": null,
+                    "didUrlString": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                    "parameters": null,
+                    "did": {
+                        "didString": "did:webvh:QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                        "methodSpecificId": "QmPEQVM1JPTyrvEgBcDXwjK4TeyLGSX1PxjgyeAisdWM1p:gist.githubusercontent.com:brianorwhatever:9c4633d18eb644f7a47f93a802691626:raw",
+                        "method": "webvh"
+                    }
+                }
+            }
+        }
+    }
+}
