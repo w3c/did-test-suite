@@ -19,7 +19,7 @@ const generateJsonldProductionTests = (
       expect(didDocument).toHaveProperty('@context');
   });
 
-  it('6.3.1 JSON-LD Production - The serialized value of @context ' +
+  it('6.3.1 JSON-LD Production (DID v1.0) - The serialized value of @context ' +
     'MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON ' +
     'Array where the first item is the JSON String ' +
     'https://www.w3.org/ns/did/v1 and the subsequent items are serialized ' +
@@ -30,6 +30,24 @@ const generateJsonldProductionTests = (
         expect(context).toBe('https://www.w3.org/ns/did/v1');
       } else if(Array.isArray(context)) {
         expect(context[0]).toBe('https://www.w3.org/ns/did/v1');
+        reserializedContext = JSON.parse(JSON.stringify(context));
+        expect(context).toEqual(reserializedContext);
+      } else {
+        throw new Error('Invalid @context value '+ context);
+      }
+  });
+
+  it('6.3.1 JSON-LD Production (DID v1.1) - The serialized value of @context ' +
+    'MUST be the JSON String https://www.w3.org/ns/did/v1.1, or a JSON ' +
+    'Array where the first item is the JSON String ' +
+    'https://www.w3.org/ns/did/v1.1 and the subsequent items are serialized ' +
+    'according to the JSON representation production rules.', async () => {
+      const context = didDocument['@context'];
+
+      if(typeof context === 'string') {
+        expect(context).toBe('https://www.w3.org/ns/did/v1.1');
+      } else if(Array.isArray(context)) {
+        expect(context[0]).toBe('https://www.w3.org/ns/did/v1.1');
         reserializedContext = JSON.parse(JSON.stringify(context));
         expect(context).toEqual(reserializedContext);
       } else {
