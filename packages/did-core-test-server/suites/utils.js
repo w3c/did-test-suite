@@ -126,7 +126,7 @@ function updateContextsToDidv11(obj) {
             newRepresentation['@context'][0] = 'https://www.w3.org/ns/did/v1.1';
         }
         obj['representation'] = JSON.stringify(newRepresentation);
-    }
+      }
     } else {
       if(typeof obj[key] === 'object' && obj[key] !== null) {
         updateContextsToDidv11(obj[key]);
