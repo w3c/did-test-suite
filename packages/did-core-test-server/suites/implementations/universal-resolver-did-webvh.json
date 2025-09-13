@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:webvh",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "web",
+                            "methodSpecificId": "QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io"
+                        },
+                        "didUrlString": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "http://uni-resolver-driver-did-uport:8081/1.0/identifiers/",
+                    "duration": 134,
+                    "identifier": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io",
+                    "pattern": "^(did:webvh:.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/multikey/v1\"],\"id\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io\",\"authentication\":[\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"],\"assertionMethod\":[\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"],\"verificationMethod\":[{\"id\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io#z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\",\"type\":\"Multikey\",\"controller\":\"did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io\",\"publicKeyMultibase\":\"z6MkijT9pkV3BWDDWbMVm3qrDjYR8JEUgYzfjhnGPKN7gk5N\"}],\"service\":[{\"id\":\"#files\",\"type\":\"relativeRef\",\"serviceEndpoint\":\"https://opsecid.github.io\"},{\"@context\":\"https://identity.foundation/linked-vp/contexts/v1\",\"id\":\"#whois\",\"type\":\"LinkedVerifiablePresentation\",\"serviceEndpoint\":\"https://opsecid.github.io/whois.vp\"}]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}

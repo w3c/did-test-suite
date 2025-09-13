@@ -1,13 +1,14 @@
+const { addDidv11Implementations } = require("../utils");
 const brokenFixtures = process.env.DID_WG_INCLUDE_BREAKING ? [
   require('../implementations/did-unisot.json'),
 ] : []
 
-
 module.exports = {
   name: 'did-production',
-  didMethods: [
+  didMethods: addDidv11Implementations([
     require('../implementations/did-example-didwg.json'),
     require('../implementations/did-is.json'),
+    require('../implementations/did-dxd.json'),
     require('../implementations/did-key-2018-db.json'),
     require('../implementations/did-key-2020-db.json'),
     require('../implementations/did-kilt-2021.json'),
@@ -44,6 +45,9 @@ module.exports = {
     require('../implementations/did-cheqd.json'),
     require('../implementations/did-art.json'),
     require('../implementations/did-rm.json'),
+    require('../implementations/did-knox.json'),
+    require('../implementations/did-webvh-dif-py.json'),
+    require('../implementations/did-webvh-dif-ts.json'),
     ...brokenFixtures
-  ],
+  ]),
 };

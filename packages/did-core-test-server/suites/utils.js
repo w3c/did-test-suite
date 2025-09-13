@@ -29,7 +29,7 @@ const isValidJwk = (jwk) => {
     jose.JWK.asKey(jwk);
     valid = true;
   } catch (error) {
-    // un comment to see JWKs that might 
+    // un comment to see JWKs that might
     // be valid but not yet
     // widely supported, like BLS 12381
     // console.warn('invalid jwk', jwk)
@@ -105,6 +105,52 @@ const isValidVerificationMethod = (vm) => {
   return true;
 }
 
+function updateContextsToDidv11(obj) {
+  if(typeof obj !== 'object' || obj === null) {
+    return;
+  }
+
+  for(const key in obj) {
+    if(key === '@context') {
+      if(obj['@context'][0] ===
+        'https://www.w3.org/ns/did/v1') {
+          obj['@context'][0] = 'https://www.w3.org/ns/did/v1.1';
+      }
+    }
+
+    if(key === 'representation') {
+      let newRepresentation = JSON.parse(obj['representation']);
+      if(newRepresentation['@context'] !== undefined) {
+        if(newRepresentation['@context'][0] ===
+          'https://www.w3.org/ns/did/v1') {
+            newRepresentation['@context'][0] = 'https://www.w3.org/ns/did/v1.1';
+        }
+        obj['representation'] = JSON.stringify(newRepresentation);
+      }
+    } else {
+      if(typeof obj[key] === 'object' && obj[key] !== null) {
+        updateContextsToDidv11(obj[key]);
+      }
+    }
+  }
+}
+
+const addDidv11Implementations = (implementations) => {
+  const allImplementations = [];
+
+  implementations.forEach((suiteConfig) => {
+    v10SuiteConfig = suiteConfig;
+    v11SuiteConfig = structuredClone(suiteConfig);
+    v10SuiteConfig.implementation += ' (DID v1.0)';
+    v11SuiteConfig.implementation += ' (DID v1.1)';
+    updateContextsToDidv11(v11SuiteConfig);
+    allImplementations.push(v10SuiteConfig);
+    allImplementations.push(v11SuiteConfig);
+  })
+
+  return allImplementations;
+}
+
 module.exports = {
   getAbsoluteDIDURL,
   getQueryParamValueFromDidUri,
@@ -117,5 +163,6 @@ module.exports = {
   isXmlDatetime,
   isAsciiString,
   getQueryParamValueFromDidUri,
-  isValidVerificationMethod
+  isValidVerificationMethod,
+  addDidv11Implementations
 };

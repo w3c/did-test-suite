@@ -22,6 +22,9 @@ module.exports = {
     require('../implementations/dereferencer-cheqd.json'),
     require('../implementations/dereferencer-art.json'),
     require('../implementations/dereferencer-rm.json'),
+    require('../implementations/dereferencer-dxd.json'),
+    require('../implementations/dereferencer-knox.json'),
+    require('../implementations/dereferencer-dif-webvh.json'),
     ...brokenFixtures
   ]
 }
