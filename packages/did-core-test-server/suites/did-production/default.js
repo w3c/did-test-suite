@@ -8,6 +8,7 @@ module.exports = {
   didMethods: addDidv11Implementations([
     require('../implementations/did-example-didwg.json'),
     require('../implementations/did-is.json'),
+    require('../implementations/did-dxd.json'),
     require('../implementations/did-key-2018-db.json'),
     require('../implementations/did-key-2020-db.json'),
     require('../implementations/did-kilt-2021.json'),
