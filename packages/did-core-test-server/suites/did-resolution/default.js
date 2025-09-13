@@ -43,6 +43,7 @@ module.exports = {
     require('../implementations/universal-resolver-did-work.json'),
     require('../implementations/universal-resolver-resolver-tests.json'),
     require('../implementations/universal-resolver-did-art.json'),
+    require('../implementations/universal-resolver-did-rm.json'),    
     require('../implementations/universal-resolver-did-knox.json'),
     require('../implementations/universal-resolver-did-webvh.json'),
     require('../implementations/resolver-did-orb.json'),
