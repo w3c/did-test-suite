@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
-    <title>DID Core Specification Test Suite and Implementation Report</title>
+    <title>DID Implementation Report</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" defer="defer" class="remove"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/xterm.min.css">
     <style type="text/css" media="screen">
@@ -40,38 +40,52 @@
     <script class="remove">
       // See https://github.com/w3c/respec/wiki/ for how to configure ReSpec
       var respecConfig = {
-        specStatus: 'base',
+        specStatus: 'NOTE',
+        subtitle: 'Test suite results for DID v1.0 and v1.1',
         shortName: 'did-test-suite',
         group: 'did',
         github: {
           repoURL: 'https://github.com/w3c/did-test-suite/',
-          branch: 'master',
+          branch: 'main',
         },
         editors: [
+          {
+            name: 'Manu Sporny',
+            url: 'http://manu.sporny.org/',
+            company: 'Digital Bazaar',
+            companyURL: 'https://digitalbazaar.com/',
+            note: 'v1.0 and v1.1'
+          }
+        ],
+        formerEditors: [
           {
             name: 'Orie Steele',
             url: 'https://www.linkedin.com/in/or13b/',
             company: 'Transmute',
             companyURL: 'https://www.transmute.industries/',
             w3cid: 109171,
+            note: 'v1.0'
           },
           {
             name: 'Shigeya Suzuki',
             url: 'http://member.wide.ad.jp/~shigeya/',
             company: 'Keio University',
-            companyURL: 'https://www.students.keio.ac.jp/'
+            companyURL: 'https://www.students.keio.ac.jp/',
+            note: 'v1.0'
           },
           {
             name: 'Manu Sporny',
             url: 'http://manu.sporny.org/',
             company: 'Digital Bazaar',
-            companyURL: 'https://digitalbazaar.com/'
+            companyURL: 'https://digitalbazaar.com/',
+            note: 'v1.0'
           },
           {
             name: 'Markus Sabadello',
             url: 'https://www.linkedin.com/in/markus-sabadello-353a0821/',
             company: 'Danube Tech',
-            companyURL: 'https://danubetech.com/'
+            companyURL: 'https://danubetech.com/',
+            note: 'v1.0'
           },
         ],
         noRecTrack: 'true',
@@ -81,22 +95,21 @@
   <body>
     <section id="abstract">
       <p>
-        This document describes the did core test suite, and summarizes the
-        latest test results.
+        This document summarizes the results of the DID test suite.
       </p>
     </section>
     <section id="sotd">
       <p>
-        This document is under active development and implementers are advised
-        against using the document unless they are directly involved with the
-        W3C DID Working Group.
+This document is automatically generated and updated as new implementations
+are included in the test suite. Care should be taken when citing this
+document as it changes often.
       </p>
     </section>
     <section id="conformance"></section>
     <section id="introduction">
       <h2>Introduction</h2>
       <p>
-        The DID Core Specification strives to make no untestable normative
+        The DID Specification strives to make no untestable normative
         statements with [[RFC2119]] Language.
       </p>
 
@@ -298,8 +311,8 @@ describe("test-suite-a", () =&gt; {
         <p>
 This Implementation Report demonstrates that there are a minimum of two
 independent implementations of each normative statement in the DID Core
-Specification, in accordance with the criteria and resolutions set forth by 
-the Decentralized Identifier Working Group and the World Wide Web 
+Specification, in accordance with the criteria and resolutions set forth by
+the Decentralized Identifier Working Group and the World Wide Web
 Consortium.
         </p>
       </section>
