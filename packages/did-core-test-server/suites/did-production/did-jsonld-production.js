@@ -20,16 +20,18 @@ const generateJsonldProductionTests = (
   });
 
   it('6.3.1 JSON-LD Production - The serialized value of @context ' +
-    'MUST be the JSON String https://www.w3.org/ns/did/v1, or a JSON ' +
+    'MUST be the JSON String https://www.w3.org/ns/did/v1 (DID v1.0) or '+
+    'https://www.w3.org/ns/did/v1.1 (DID v1.1), or a JSON ' +
     'Array where the first item is the JSON String ' +
-    'https://www.w3.org/ns/did/v1 and the subsequent items are serialized ' +
+    'https://www.w3.org/ns/did/v1 or https://www.w3.org/ns/did/v1.1, '+
+    'and the subsequent items are serialized ' +
     'according to the JSON representation production rules.', async () => {
       const context = didDocument['@context'];
 
       if(typeof context === 'string') {
-        expect(context).toBe('https://www.w3.org/ns/did/v1');
+        expect(context).toMatch(/^https\:\/\/www.w3.org\/ns\/did\/v1|https\:\/\/www.w3.org\/ns\/did\/v1\.1$/);
       } else if(Array.isArray(context)) {
-        expect(context[0]).toBe('https://www.w3.org/ns/did/v1');
+        expect(context[0]).toMatch(/^https\:\/\/www.w3.org\/ns\/did\/v1|https\:\/\/www.w3.org\/ns\/did\/v1\.1$/);
         reserializedContext = JSON.parse(JSON.stringify(context));
         expect(context).toEqual(reserializedContext);
       } else {

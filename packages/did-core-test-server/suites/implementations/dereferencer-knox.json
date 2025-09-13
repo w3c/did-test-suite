@@ -1,0 +1,138 @@
+{
+    "implementation": "Knox Networks",
+    "implementer": "Knox Networks",
+    "didMethod": "did:knox",
+    "expectedOutcomes": {
+        "defaultOutcome": [0, 1, 2],
+        "notFoundErrorOutcome": [3,4,5,6],
+        "invalidDidUrlErrorOutcome": [7]
+    },
+    "didParameters": {
+        "hl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+        "service": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?service=IssuerRegistry",
+        "relativeRef": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?service=IssuerRegistry&relativeRef=status%3Dactive",
+        "versionId": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?versionId=1",
+        "versionTime": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?versionTime=2023-06-26T20:14:02Z"
+    },
+    "executions": [{
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\"],\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"authentication\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\"}],\"capabilityInvocation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23wU6rXC6VeMjGLwbNr3EHytcabDa5nmaSucYLVLk4L3E\"}],\"capabilityDelegation\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"zr5tzEJNgepzEXxpk9PRJK1pKRYrFsNXTgfMMpx6Qmpgr\"}],\"assertionMethod\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23PE75QbknqhbwURgvvo8etkg7KKNXgx6B3qeUvPtrkgn\"}],\"service\":[{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}]}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+ld+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy\",\"publicKeyMultibase\":\"z23fgBTfnsAF8PnYjJJPBLLRB5NJtNaWrUPPf6P4BdmucM\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?service=issuer-registry",
+            "dereferenceOptions": {
+                "accept": "application/did+json"
+            }
+        },
+        "output": {
+            "contentStream": "{\"id\":\"did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy#issuer-registry\",\"type\":\"IssuerRegistry\",\"serviceEndpoint\":\"http://bar.example.com/{issuerId}\"}",
+            "dereferencingMetadata": {
+                "contentType": "application/did+json"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?hl=zQmWvQxTqbG2Z9HPJgG57jjwR154cKhbtJenbyYTWkjgF3e",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "notFound"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?versionId=1",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "notFound"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:knox:z2BgV8eWjwoQLKJeZqYqKmNozD9PqRTiiaBLUSVEXQRJjy?versionTime=2020-09-26T20:14:02Z",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "notFound"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:example:444",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "notFound"
+            },
+            "contentMetadata": {}
+        }
+    }, {
+        "function": "dereference",
+        "input": {
+            "didUrl": "did:example_333",
+            "dereferenceOptions": {
+                "accept": "application/did+ld+json"
+            }
+        },
+        "output": {
+            "contentStream": "",
+            "dereferencingMetadata": {
+                "error": "invalidDidUrl"
+            },
+            "contentMetadata": {}
+        }
+    }]
+}

@@ -44,7 +44,7 @@ const generateJsonProductionTests = (
             expect(produce(value)).toBe(true);
           });
         } else if(typeof value === 'number') {
-          if(!Number.isInteger(value)) {
+          if(Number.isInteger(value)) {
             it('6.2.1 JSON Production - integer: A JSON Number without a ' +
               'decimal or fractional component.', () => {
               expect(produce(value)).toBe(true);

@@ -1,0 +1,27 @@
+{
+  "didMethod": "did:webvh",
+  "implementation": "DIF",
+  "implementer": "Decentralized Identity Foundation and Contributors",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0
+    ],
+    "notFoundErrorOutcome": []
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:webvh:QmVJ5nUYb9iugnUz4yDfbe8UFbhmnsvS2EAzSpSfPScRAn:opsecid.github.io?service=whois",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "text/url"
+        },
+        "contentStream": "https://opsecid.github.io/whois.vp?service=whois",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

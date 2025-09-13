@@ -43,6 +43,9 @@ module.exports = {
     require('../implementations/did-algo.json'),
     require('../implementations/did-cheqd.json'),
     require('../implementations/did-art.json'),
+    require('../implementations/did-knox.json'),
+    require('../implementations/did-webvh-dif-py.json'),
+    require('../implementations/did-webvh-dif-ts.json'),
     ...brokenFixtures
   ]
 };
