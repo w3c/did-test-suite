@@ -140,7 +140,7 @@ const addDidv11Implementations = (implementations) => {
 
   implementations.forEach((suiteConfig) => {
     v10SuiteConfig = suiteConfig;
-    v11SuiteConfig = structuredClone(suiteConfig);
+    v11SuiteConfig = JSON.parse(JSON.stringify(suiteConfig));
     v10SuiteConfig.implementation += ' (DID v1.0)';
     v11SuiteConfig.implementation += ' (DID v1.1)';
     updateContextsToDidv11(v11SuiteConfig);
