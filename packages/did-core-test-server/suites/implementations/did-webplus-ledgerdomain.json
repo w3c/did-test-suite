@@ -1,0 +1,80 @@
+{
+    "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw": {
+        "application/did+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {}
+            },
+            "didDocumentMetadata": {
+                "created": "2025-10-23T23:26:21Z",
+                "createdMilliseconds": "2025-10-23T23:26:21.975Z",
+                "updated": "2025-10-23T23:26:22Z",
+                "updatedMilliseconds": "2025-10-23T23:26:22.014Z",
+                "versionId": "2",
+                "deactivated": false
+            },
+            "didResolutionMetadata": {
+                "contentType": "application/did+json",
+                "fetchedUpdatesFromVDR": true,
+                "didDocumentResolvedLocally": false,
+                "didDocumentMetadataResolvedLocally": false
+            },
+            "representation": "{\"assertionMethod\":[\"#0\"],\"authentication\":[\"#0\"],\"capabilityDelegation\":[\"#0\"],\"capabilityInvocation\":[\"#0\"],\"id\":\"did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw\",\"keyAgreement\":[\"#0\"],\"prevDIDDocumentSelfHash\":\"uHiD9W3dhj1ZxzE6KSgrZYfhpG1EFKXEf-S4iu2Byic-9vw\",\"proofs\":[\"eyJhbGciOiJFZDI1NTE5Iiwia2lkIjoidTdRSDZYMy1wekctOWpCUlZWUllUSGxsM2gzZVh0bGhKY1V4NjRsS1B1ZXZzNEEiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..86HmZ7Lc79z6Y53aYTJ3O31bDiIGt6_f8dZlVjOWVXllwiEDfDQPW6IHa4FWsdOlP13mfC8zRYiy416NSC61Bw\"],\"selfHash\":\"uHiDeGCcPdv2pCslC3xoO3aP80-lN1aF1Se0Vodl-azA7iA\",\"updateRules\":{\"hashedKey\":\"uHiDAGngK3FlaazXYrxrPsF0nQT1ZqdfM9X81xI_-WgJMdQ\"},\"validFrom\":\"2025-10-23T23:26:22.014Z\",\"verificationMethod\":[{\"controller\":\"did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw\",\"id\":\"did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw#0\",\"publicKeyJwk\":{\"crv\":\"Ed25519\",\"kid\":\"did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw#0\",\"kty\":\"OKP\",\"x\":\"NGWVSVr59z0zu4qhwTr90EB48RzS6UxhgyMghalY1iM\"},\"type\":\"JsonWebKey2020\"}],\"versionId\":2}"
+        },
+        "didDocumentDataModel": {
+            "properties": {
+                "assertionMethod": [
+                    "#0"
+                ],
+                "authentication": [
+                    "#0"
+                ],
+                "capabilityDelegation": [
+                    "#0"
+                ],
+                "capabilityInvocation": [
+                    "#0"
+                ],
+                "id": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw",
+                "keyAgreement": [
+                    "#0"
+                ],
+                "prevDIDDocumentSelfHash": "uHiD9W3dhj1ZxzE6KSgrZYfhpG1EFKXEf-S4iu2Byic-9vw",
+                "proofs": [
+                    "eyJhbGciOiJFZDI1NTE5Iiwia2lkIjoidTdRSDZYMy1wekctOWpCUlZWUllUSGxsM2gzZVh0bGhKY1V4NjRsS1B1ZXZzNEEiLCJjcml0IjpbImI2NCJdLCJiNjQiOmZhbHNlfQ..86HmZ7Lc79z6Y53aYTJ3O31bDiIGt6_f8dZlVjOWVXllwiEDfDQPW6IHa4FWsdOlP13mfC8zRYiy416NSC61Bw"
+                ],
+                "selfHash": "uHiDeGCcPdv2pCslC3xoO3aP80-lN1aF1Se0Vodl-azA7iA",
+                "updateRules": {
+                    "hashedKey": "uHiDAGngK3FlaazXYrxrPsF0nQT1ZqdfM9X81xI_-WgJMdQ"
+                },
+                "validFrom": "2025-10-23T23:26:22.014Z",
+                "verificationMethod": [
+                    {
+                        "controller": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw",
+                        "id": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw#0",
+                        "publicKeyJwk": {
+                            "crv": "Ed25519",
+                            "kid": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw#0",
+                            "kty": "OKP",
+                            "x": "NGWVSVr59z0zu4qhwTr90EB48RzS6UxhgyMghalY1iM"
+                        },
+                        "type": "JsonWebKey2020"
+                    }
+                ],
+                "versionId": 2
+            }
+        }
+    },
+    "didMethod": "did:webplus",
+    "didParameters": {
+        "selfHash": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw?selfHash=uHiDeGCcPdv2pCslC3xoO3aP80-lN1aF1Se0Vodl-azA7iA",
+        "versionId": "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw?versionId=1"
+    },
+    "dids": [
+        "did:webplus:ledgerdomain.github.io:did-webplus-spec:uHiDl11D_0kVZXDEPMY0uQpFRD3V3-dRKphuSI6f8ee3GIw"
+    ],
+    "implementation": "https://github.com/ledgerdomain/did-webplus",
+    "implementer": "LedgerDomain",
+    "supportedContentTypes": [
+        "application/did+json"
+    ]
+}
