@@ -48,6 +48,7 @@ module.exports = {
     require('../implementations/did-knox.json'),
     require('../implementations/did-webvh-dif-py.json'),
     require('../implementations/did-webvh-dif-ts.json'),
+    require('../implementations/did-webs.json'),
     require('../implementations/did-webplus-ledgerdomain.json'),
     ...brokenFixtures
   ]),

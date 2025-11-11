@@ -1,0 +1,80 @@
+{
+  "didMethod": "did:webs",
+  "implementation": "DID WebS DID Method",
+  "implementer": "GLEIF",
+  "supportedContentTypes": [
+    "application/did+json"
+  ],
+  "dids": ["did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr"],
+  "didParameters": {
+  },
+  "did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+        "verificationMethod": [
+          {
+            "id": "#DMxPdEQMvEE1y4SD2V9moEXpe6iCIpt_6yhbxxZ1VL81",
+            "type": "JsonWebKey",
+            "controller": "did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+            "publicKeyJwk": {
+              "kid": "DMxPdEQMvEE1y4SD2V9moEXpe6iCIpt_6yhbxxZ1VL81",
+              "kty": "OKP",
+              "crv": "Ed25519",
+              "x": "zE90RAy8QTXLhIPZX2agRel7qIIim3_rKFvHFnVUvzU"
+            }
+          }
+        ],
+        "service": [
+          {
+            "id": "#BJqHtDoLT_K_XyOgr2ejBOqD9276TYMTg2EEqWKs-V0q/witness",
+            "type": "witness",
+            "serviceEndpoint": {
+              "https": "https://wit1.testnet.gleif.org:5641/",
+              "tcp": "tcp://wit1.testnet.gleif.org:5631/"
+            }
+          }
+        ],
+        "alsoKnownAs": [
+          "did:web:hook.testnet.gleif.org%3a7702:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+          "did:webs:hook.testnet.gleif.org%3a7702:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+          "did:web:example.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+          "did:web:foo.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+          "did:webs:foo.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr"
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+        }
+      },
+      "representation": "{\"id\": \"did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"verificationMethod\": [{\"id\": \"#DMxPdEQMvEE1y4SD2V9moEXpe6iCIpt_6yhbxxZ1VL81\", \"type\": \"JsonWebKey\", \"controller\": \"did:webs:hook.testnet.gleif.org%3A7702:dws:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"publicKeyJwk\": {\"kid\": \"DMxPdEQMvEE1y4SD2V9moEXpe6iCIpt_6yhbxxZ1VL81\", \"kty\": \"OKP\", \"crv\": \"Ed25519\", \"x\": \"zE90RAy8QTXLhIPZX2agRel7qIIim3_rKFvHFnVUvzU\"}}], \"service\": [{\"id\": \"#BJqHtDoLT_K_XyOgr2ejBOqD9276TYMTg2EEqWKs-V0q/witness\", \"type\": \"witness\", \"serviceEndpoint\": {\"https\": \"https://wit1.testnet.gleif.org:5641/\", \"tcp\": \"tcp://wit1.testnet.gleif.org:5631/\"}}], \"alsoKnownAs\": [\"did:web:hook.testnet.gleif.org%3a7702:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"did:webs:hook.testnet.gleif.org%3a7702:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"did:web:example.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"did:web:foo.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\", \"did:webs:foo.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr\"]}",
+      "didDocumentMetadata": {
+        "witnesses": [
+          {
+            "idx": "0",
+            "scheme": "https",
+            "url": "https://wit1.testnet.gleif.org:5641/"
+          },
+          {
+            "idx": "0",
+            "scheme": "tcp",
+            "url": "tcp://wit1.testnet.gleif.org:5631/"
+          }
+        ],
+        "versionId": "2",
+        "equivalentId": [
+          "did:webs:hook.testnet.gleif.org%3a7702:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr",
+          "did:webs:foo.com:ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr"
+        ],
+        "didDocUrl": "https://hook.testnet.gleif.org:7702/dws/ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr/did.json",
+        "keriCesrUrl": "https://hook.testnet.gleif.org:7702/dws/ED1e8pD24aqd0dCZTQHaGpfcluPFD2ajGIY3ARgE5Yvr/keri.cesr"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+json",
+        "retrieved": "2025-11-11T19:06:58Z"
+      }
+    }
+  }
+}
