@@ -1,0 +1,66 @@
+{
+    "didMethod": "did:iden3",
+    "implementation": "iden3 DID Method",
+    "implementer": "iden3",
+    "expectedOutcomes": {
+      "defaultOutcome": [0, 2],
+      "invalidDidUrlErrorOutcome": [],
+      "notFoundErrorOutcome": [1]
+    },
+    "didParameters": {
+        "gist": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?gist=0000000000000000000000000000000000000000000000000000000000000000",
+        "state": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?state=0000000000000000000000000000000000000000000000000000000000000001",
+        "signature": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?signature=EthereumEip712Signature2021"
+      },
+    "executions": [
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?gist=0000000000000000000000000000000000000000000000000000000000000000",
+          "dereferenceOptions": {
+            "accept": "application/did+ld+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+ld+json"
+          },
+          "contentStream": "{\"@context\":\"https://w3id.org/did-resolution/v1\",\"didDocument\":{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"verificationMethod\":[{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"stateContractAddress\":\"21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896\",\"published\":false,\"global\":{\"root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"0\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"0\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"siblings\":[],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}},\"didResolutionMetadata\":{\"@context\":[\"https://schema.iden3.io/core/jsonld/resolution.jsonld\"],\"contentType\":\"application/did+ld+json\",\"type\":\"Iden3ResolutionMetadata\"},\"didDocumentMetadata\":{}}",
+          "contentMetadata": {}
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?state=0000000000000000000000000000000000000000000000000000000000000001",
+          "dereferenceOptions": {
+            "accept": "application/did+ld+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "error": "notFound"
+          },
+          "contentStream": "",
+          "contentMetadata": {}
+        }
+      },
+      {
+        "function": "dereference",
+        "input": {
+          "didUrl": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?signature=EthereumEip712Signature2021",
+          "dereferenceOptions": {
+            "accept": "application/did+ld+json"
+          }
+        },
+        "output": {
+          "dereferencingMetadata": {
+            "contentType": "application/did+ld+json"
+          },
+          "contentStream": "{\"@context\":\"https://w3id.org/did-resolution/v1\",\"didDocument\":{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"verificationMethod\":[{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"stateContractAddress\":\"21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896\",\"published\":false,\"global\":{\"root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"0\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"0\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"siblings\":[],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}},\"didResolutionMetadata\":{\"@context\":[\"https://schema.iden3.io/core/jsonld/resolution.jsonld\"],\"contentType\":\"application/did+ld+json\",\"type\":\"Iden3ResolutionMetadata\"},\"didDocumentMetadata\":{}}",
+          "contentMetadata": {}
+        }
+      }
+    ]
+  }
+  

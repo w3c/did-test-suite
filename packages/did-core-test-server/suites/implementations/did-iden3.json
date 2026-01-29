@@ -1,0 +1,85 @@
+{
+    "didMethod": "did:iden3",
+    "implementation": "iden3 DID Method",
+    "implementer": "iden3",
+    "supportedContentTypes": [
+      "application/did+json",
+      "application/did+ld+json"
+    ],
+    "dids": [
+      "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd"
+    ],
+    "didParameters": {
+      "gist": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?gist=0000000000000000000000000000000000000000000000000000000000000000",
+      "state": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?state=0000000000000000000000000000000000000000000000000000000000000001",
+      "signature": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd?signature=EthereumEip712Signature2021"
+    },
+    "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd": {
+      "didDocumentDataModel": {
+        "properties": {
+          "id": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+          "verificationMethod": [
+            {
+              "id": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info",
+              "type": "Iden3StateInfo2023",
+              "controller": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+              "stateContractAddress": "21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896",
+              "published": false,
+              "global": {
+                "root": "0000000000000000000000000000000000000000000000000000000000000000",
+                "replacedByRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+                "createdAtTimestamp": "0",
+                "replacedAtTimestamp": "0",
+                "createdAtBlock": "0",
+                "replacedAtBlock": "0",
+                "proof": {
+                  "existence": false,
+                  "siblings": [],
+                  "type": "Iden3SparseMerkleTreeProof"
+                }
+              }
+            }
+          ]
+        }
+      },
+  
+      "application/did+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {}
+        },
+        "representation": "{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"verificationMethod\":[{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"stateContractAddress\":\"21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896\",\"published\":false,\"global\":{\"root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"0\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"0\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"siblings\":[],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+json",
+          "did": {
+            "didString": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+            "method": "iden3",
+            "methodSpecificId": "billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd"
+          }
+        }
+      },
+  
+      "application/did+ld+json": {
+        "didDocumentDataModel": {
+          "representationSpecificEntries": {
+            "@context": [
+              "https://www.w3.org/ns/did/v1",
+              "https://schema.iden3.io/core/jsonld/auth.jsonld",
+              "https://schema.iden3.io/core/jsonld/iden3proofs.jsonld"
+            ]
+          }
+        },
+        "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"verificationMethod\":[{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"stateContractAddress\":\"21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896\",\"published\":false,\"global\":{\"root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"0\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"0\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"siblings\":[],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json",
+          "did": {
+            "didString": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+            "method": "iden3",
+            "methodSpecificId": "billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd"
+          }
+        }
+      }
+    }
+  }
+  

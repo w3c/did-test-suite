@@ -62,6 +62,7 @@ module.exports = {
     require('../implementations/resolver-ssb.json'),
     require('../implementations/resolver-did-cheqd.json'),
     require('../implementations/resolver-knox.json'),
+    require('../implementations/resolver-did-iden3.json'),
     ...brokenFixtures
   ],
 };

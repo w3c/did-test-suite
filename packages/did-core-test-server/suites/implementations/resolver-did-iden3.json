@@ -1,0 +1,91 @@
+{
+  "didMethod": "did:iden3",
+  "implementation": "iden3 DID Method",
+  "implementer": "iden3",
+  "expectedOutcomes": {
+    "defaultOutcome": [0, 1],
+    "invalidDidErrorOutcome": [2],
+    "notFoundErrorOutcome": [],
+    "representationNotSupportedErrorOutcome": [],
+    "deactivatedOutcome": []
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "@context": "https://w3id.org/did-resolution/v1",
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://schema.iden3.io/core/jsonld/auth.jsonld",
+            "https://schema.iden3.io/core/jsonld/iden3proofs.jsonld"
+          ],
+          "id": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+          "verificationMethod": [
+            {
+              "id": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info",
+              "type": "Iden3StateInfo2023",
+              "controller": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+              "stateContractAddress": "21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896",
+              "published": false,
+              "global": {
+                "root": "0000000000000000000000000000000000000000000000000000000000000000",
+                "replacedByRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+                "createdAtTimestamp": "0",
+                "replacedAtTimestamp": "0",
+                "createdAtBlock": "0",
+                "replacedAtBlock": "0",
+                "proof": {
+                  "existence": false,
+                  "siblings": [],
+                  "type": "Iden3SparseMerkleTreeProof"
+                }
+              }
+            }
+          ]
+        },
+        "didResolutionMetadata": {
+          "@context": ["https://schema.iden3.io/core/jsonld/resolution.jsonld"],
+          "retrieved": "2026-01-28T15:37:40.76876093Z",
+          "type": "Iden3ResolutionMetadata"
+        },
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd",
+        "resolutionOptions": {"accept": "application/did+ld+json"}
+      },
+      "output": {
+        "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"verificationMethod\":[{\"id\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:billions:main:2VqyGrn58pEhr8YYwsL2qkiPg8mBAmpRngurkqaEXd\",\"stateContractAddress\":\"21000:0x3C9acB2205Aa72A05F6D77d708b5Cf85FCa3a896\",\"published\":false,\"global\":{\"root\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"0\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"0\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"siblings\":[],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:UNKNOWN",
+        "resolutionOptions": {
+        }
+      },
+      "output": {
+        "didDocument": null,
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "error": "invalidDid",
+          "message": "incorrect DID: can't parse ID string",
+          "retrieved": "2026-01-28T15:53:53.086621839Z"
+        }
+      }
+    }
+  ]
+}
