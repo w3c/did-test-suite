@@ -1,0 +1,67 @@
+{
+  "implementation": "Universal Resolver",
+  "implementer": "Decentralized Identity Foundation and Contributors",
+  "didMethod": "did:hedera",
+  "expectedOutcomes": {
+    "defaultOutcomes": [
+      0,
+      1
+    ],
+    "invalidDidErrorOutcome": [],
+    "notFoundErrorOutcome": [],
+    "representationNotSupportedErrorOutcome": [],
+    "deactivatedOutcome": []
+  },
+  "executions": [
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+        "resolutionOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "driverDuration": 134,
+          "contentType": "application/did+json",
+          "pattern": "^(did:hedera:.+)$",
+          "driverUrl": "http://driver-did-hedera:8080/1.0/identifiers/$1",
+          "duration": 134,
+          "did": {
+            "didString": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+            "methodSpecificId": "testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+            "method": "hedera"
+          }
+        },
+        "didDocumentStream": "{\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"controller\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"verificationMethod\":[{\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\",\"controller\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"type\":\"Ed25519VerificationKey2020\",\"publicKeyMultibase\":\"z6MkqkjKnqdSPAYmneMEwLr2cLJg5drN6Ys3cnBwY8AoTz1H\"}],\"service\":[{\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#service-1\",\"type\":\"VerifiableCredentialService\",\"serviceEndpoint\":\"https://example.com/vc\"}],\"authentication\":[\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\"],\"assertionMethod\":[\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\"]}",
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "driverDuration": 160,
+          "contentType": "application/did+ld+json",
+          "pattern": "^(did:hedera:.+)$",
+          "driverUrl": "http://driver-did-hedera:8080/1.0/identifiers/$1",
+          "duration": 160,
+          "did": {
+            "didString": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+            "methodSpecificId": "testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+            "method": "hedera"
+          }
+        },
+        "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/ed25519-2018/v1\"],\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"controller\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"verificationMethod\":[{\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\",\"controller\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963\",\"type\":\"Ed25519VerificationKey2020\",\"publicKeyMultibase\":\"z6MkqkjKnqdSPAYmneMEwLr2cLJg5drN6Ys3cnBwY8AoTz1H\"}],\"service\":[{\"id\":\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#service-1\",\"type\":\"VerifiableCredentialService\",\"serviceEndpoint\":\"https://example.com/vc\"}],\"authentication\":[\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\"],\"assertionMethod\":[\"did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963#did-root-key\"]}",
+        "didDocumentMetadata": {}
+      }
+    }
+  ]
+}

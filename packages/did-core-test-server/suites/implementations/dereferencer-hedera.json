@@ -1,0 +1,48 @@
+{
+  "didMethod": "did:hedera",
+  "implementation": "https://github.com/hiero-ledger/hiero-did-sdk-js",
+  "implementer": "The Hashgraph Association and DSR Corporation",
+  "expectedOutcomes": {
+    "defaultOutcome": [
+      0
+    ],
+    "notFoundErrorOutcome": []
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963?service=service-1",
+        "dereferenceOptions": {}
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "driverDuration": 148,
+          "created": "2026-02-27T13:33:00.923Z",
+          "updated": "2026-02-27T13:33:27.307Z",
+          "deactivated": false,
+          "contentType": "application/did",
+          "pattern": "^(did:hedera:.+)$",
+          "driverUrl": "http://driver-did-hedera:8080/1.0/identifiers/$1",
+          "duration": 150,
+          "didUrl": {
+            "path": null,
+            "fragment": null,
+            "query": "service=service-1",
+            "didUrlString": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963?service=service-1",
+            "parameters": {
+              "service": "service-1"
+            },
+            "did": {
+              "didString": "did:hedera:testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+              "methodSpecificId": "testnet:CJUHCbP13d4Jg9WYFmtBmEkgG4aWgfcgvmH1hrCnYmDu_0.0.8046963",
+              "method": "hedera"
+            }
+          }
+        },
+        "contentStream": "https://example.com/vc/",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}
