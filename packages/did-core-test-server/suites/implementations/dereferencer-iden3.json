@@ -1,0 +1,113 @@
+{
+  "didMethod": "did:iden3",
+  "implementation": "iden3 DID Method",
+  "implementer": "iden3",
+  "expectedOutcomes": {
+    "defaultOutcome": [0, 1, 2, 3, 4],
+    "invalidDidUrlErrorOutcome": [],
+    "notFoundErrorOutcome": [5]
+  },
+  "didParameters": {
+    "gist": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?gist=577f01be71efe1965b2a8d1ed12000b4deb8cde2b7ae035dc70d56a9ccd4b02c",
+    "state": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?state=81b5ea5b4d78123bd96a5dbbdf4da2c9b31112ea0795ee9a85b901edc2672c16",
+    "signature": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?signature=EthereumEip712Signature2021"
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":true,\"info\":{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"state\":\"02dcd0af531ed40575e4710923746b49c03f03fae04e34dbb62c16f9b566e319\",\"replacedByState\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\"},\"global\":{\"root\":\"a0cb2761a5e8e436e4eb2ba9442de5b3eadd0a9717ef04b8ff94ce39e2855c14\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":true,\"siblings\":[\"11018122192114956510944669946149027340305262067722633230986299612759907085369\",\"709563351598689846994557777345815612236058745217094127782991711371758324362\",\"6298225857999323255738372729906041021046331865859595105510582761566997403421\",\"13751720749108165330870264194942303307059070179401897611125526721083632982380\",\"6570119099451843930647877602180403435032388740261485649610113531563374914308\",\"3800075430806220147960479662464267009918857460898245643076038111562747340228\",\"19191731573853409036340759842317648361294630187967260426648923749134701359004\",\"9670086411255878808022932363085030296091435604962033837544225155110846516587\"],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?gist=577f01be71efe1965b2a8d1ed12000b4deb8cde2b7ae035dc70d56a9ccd4b02c",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":false,\"global\":{\"root\":\"577f01be71efe1965b2a8d1ed12000b4deb8cde2b7ae035dc70d56a9ccd4b02c\",\"replacedByRoot\":\"24f77ef933a065568ea9be5aca3d7e03b989f3f6104f72e582e1df84d7bedc19\",\"createdAtTimestamp\":\"1754668861\",\"replacedAtTimestamp\":\"1762358845\",\"createdAtBlock\":\"74956976\",\"replacedAtBlock\":\"78626991\",\"proof\":{\"existence\":false,\"node_aux\":{\"key\":\"19306529053234232075441450748650267632289095339585147936220891939652426931349\",\"value\":\"3449695206146427189018703521787130619514900667827721926992932885709050561016\"},\"siblings\":[\"9920015504224127980342128795198609538037231628160160466204248387432495018823\",\"9244335937371018812199869565009201156919283836853710132561604816072763759978\",\"16251807283501536004824266590867331866514788591187558307698023859283212760960\",\"13751720749108165330870264194942303307059070179401897611125526721083632982380\",\"6570119099451843930647877602180403435032388740261485649610113531563374914308\",\"12933907678884511124412190971518474968622074766974039871600166288654061001545\",\"19191731573853409036340759842317648361294630187967260426648923749134701359004\"],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?state=81b5ea5b4d78123bd96a5dbbdf4da2c9b31112ea0795ee9a85b901edc2672c16",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\"],\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":true,\"info\":{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"state\":\"81b5ea5b4d78123bd96a5dbbdf4da2c9b31112ea0795ee9a85b901edc2672c16\",\"replacedByState\":\"02dcd0af531ed40575e4710923746b49c03f03fae04e34dbb62c16f9b566e319\",\"createdAtTimestamp\":\"1765213809\",\"replacedAtTimestamp\":\"1769685908\",\"createdAtBlock\":\"80054383\",\"replacedAtBlock\":\"82282959\"}}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?signature=EthereumEip712Signature2021",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":true,\"info\":{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"state\":\"02dcd0af531ed40575e4710923746b49c03f03fae04e34dbb62c16f9b566e319\",\"replacedByState\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\"},\"global\":{\"root\":\"a0cb2761a5e8e436e4eb2ba9442de5b3eadd0a9717ef04b8ff94ce39e2855c14\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":true,\"siblings\":[\"11018122192114956510944669946149027340305262067722633230986299612759907085369\",\"709563351598689846994557777345815612236058745217094127782991711371758324362\",\"6298225857999323255738372729906041021046331865859595105510582761566997403421\",\"13751720749108165330870264194942303307059070179401897611125526721083632982380\",\"6570119099451843930647877602180403435032388740261485649610113531563374914308\",\"3800075430806220147960479662464267009918857460898245643076038111562747340228\",\"19191731573853409036340759842317648361294630187967260426648923749134701359004\",\"9670086411255878808022932363085030296091435604962033837544225155110846516587\"],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wjbTr3XJa9YdeFGjSmMVrNVFimyoYyRzFpReqMt5x",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:polygon:main:wjbTr3XJa9YdeFGjSmMVrNVFimyoYyRzFpReqMt5x\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wjbTr3XJa9YdeFGjSmMVrNVFimyoYyRzFpReqMt5x#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wjbTr3XJa9YdeFGjSmMVrNVFimyoYyRzFpReqMt5x\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":false,\"global\":{\"root\":\"a0cb2761a5e8e436e4eb2ba9442de5b3eadd0a9717ef04b8ff94ce39e2855c14\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":false,\"node_aux\":{\"key\":\"5194094626131474807238408447846737773251005979535784600788857540179197796177\",\"value\":\"19636689395568783440038005074291263430625822368845197413876526755262424397573\"},\"siblings\":[\"11018122192114956510944669946149027340305262067722633230986299612759907085369\",\"709563351598689846994557777345815612236058745217094127782991711371758324362\",\"3108497839623723386779667140610784032873257600456936398989280539323731209627\",\"20274425286778408154889914897125461147708022250888358308365187980780161266137\",\"1413886136990324862549931820373152675233264731687376593453029219358391120883\",\"1484794406693016932759707113319368536728347362891770852597293035479315648548\",\"13648156768116721531950387523986463441661443698811867466608158307019675150525\"],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "contentMetadata": {}
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8?state=0000000000000000000000000000000000000000000000000000000000000001",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "error": "notFound"
+        },
+        "contentStream": "",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "didMethod": "did:iden3",
+  "implementation": "iden3 DID Method",
+  "implementer": "iden3",
+  "expectedOutcomes": {
+    "defaultOutcome": [0, 1],
+    "invalidDidErrorOutcome": [2],
+    "notFoundErrorOutcome": [],
+    "representationNotSupportedErrorOutcome": [],
+    "deactivatedOutcome": []
+  },
+  "executions": [
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "@context": "https://w3id.org/did-resolution/v1",
+        "didDocument": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://schema.iden3.io/core/jsonld/auth.jsonld",
+            "https://schema.iden3.io/core/jsonld/iden3proofs.jsonld"
+          ],
+          "id": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+          "verificationMethod": [
+            {
+              "id": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info",
+              "type": "Iden3StateInfo2023",
+              "controller": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+              "stateContractAddress": "137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D",
+              "published": true,
+              "info": {
+                "id": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+                "state": "02dcd0af531ed40575e4710923746b49c03f03fae04e34dbb62c16f9b566e319",
+                "replacedByState": "0000000000000000000000000000000000000000000000000000000000000000",
+                "createdAtTimestamp": "1769685908",
+                "replacedAtTimestamp": "0",
+                "createdAtBlock": "82282959",
+                "replacedAtBlock": "0"
+              },
+              "global": {
+                "root": "a0cb2761a5e8e436e4eb2ba9442de5b3eadd0a9717ef04b8ff94ce39e2855c14",
+                "replacedByRoot": "0000000000000000000000000000000000000000000000000000000000000000",
+                "createdAtTimestamp": "1769685908",
+                "replacedAtTimestamp": "0",
+                "createdAtBlock": "82282959",
+                "replacedAtBlock": "0",
+                "proof": {
+                  "existence": true,
+                  "siblings": [
+                    "11018122192114956510944669946149027340305262067722633230986299612759907085369",
+                    "709563351598689846994557777345815612236058745217094127782991711371758324362",
+                    "6298225857999323255738372729906041021046331865859595105510582761566997403421",
+                    "13751720749108165330870264194942303307059070179401897611125526721083632982380",
+                    "6570119099451843930647877602180403435032388740261485649610113531563374914308",
+                    "3800075430806220147960479662464267009918857460898245643076038111562747340228",
+                    "19191731573853409036340759842317648361294630187967260426648923749134701359004",
+                    "9670086411255878808022932363085030296091435604962033837544225155110846516587"
+                  ],
+                  "type": "Iden3SparseMerkleTreeProof"
+                }
+              }
+            }
+          ]
+        },
+        "didResolutionMetadata": {
+          "@context": ["https://schema.iden3.io/core/jsonld/resolution.jsonld"],
+          "retrieved": "2026-02-04T12:01:40.947795+02:00",
+          "type": "Iden3ResolutionMetadata"
+        },
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didDocumentStream":" {\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://schema.iden3.io/core/jsonld/auth.jsonld\",\"https://schema.iden3.io/core/jsonld/iden3proofs.jsonld\"],\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"verificationMethod\":[{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8#state-info\",\"type\":\"Iden3StateInfo2023\",\"controller\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"stateContractAddress\":\"137:0x624ce98D2d27b20b8f8d521723Df8fC4db71D79D\",\"published\":true,\"info\":{\"id\":\"did:iden3:polygon:main:wpaFHwfPYjVnimeX1gSxvxonmQ1NG66AcAPPbDWn8\",\"state\":\"02dcd0af531ed40575e4710923746b49c03f03fae04e34dbb62c16f9b566e319\",\"replacedByState\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\"},\"global\":{\"root\":\"a0cb2761a5e8e436e4eb2ba9442de5b3eadd0a9717ef04b8ff94ce39e2855c14\",\"replacedByRoot\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"createdAtTimestamp\":\"1769685908\",\"replacedAtTimestamp\":\"0\",\"createdAtBlock\":\"82282959\",\"replacedAtBlock\":\"0\",\"proof\":{\"existence\":true,\"siblings\":[\"11018122192114956510944669946149027340305262067722633230986299612759907085369\",\"709563351598689846994557777345815612236058745217094127782991711371758324362\",\"6298225857999323255738372729906041021046331865859595105510582761566997403421\",\"13751720749108165330870264194942303307059070179401897611125526721083632982380\",\"6570119099451843930647877602180403435032388740261485649610113531563374914308\",\"3800075430806220147960479662464267009918857460898245643076038111562747340228\",\"19191731573853409036340759842317648361294630187967260426648923749134701359004\",\"9670086411255878808022932363085030296091435604962033837544225155110846516587\"],\"type\":\"Iden3SparseMerkleTreeProof\"}}}]}",
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:UNKNOWN",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didDocument": null,
+        "didDocumentMetadata": {},
+        "didResolutionMetadata": {
+          "error": "invalidDid",
+          "message": "incorrect DID: character is not a-z OR 0-9",
+          "retrieved": "2026-02-02T13:22:04.202821+02:00"
+        }
+      }
+    }
+  ]
+}
