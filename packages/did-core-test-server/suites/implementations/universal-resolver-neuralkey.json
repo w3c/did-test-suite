@@ -1,0 +1,47 @@
+{
+    "implementation": "Universal Resolver",
+    "implementer": "Decentralized Identity Foundation and Contributors",
+    "didMethod": "did:neuralkey",
+    "expectedOutcomes": {
+        "defaultOutcomes": [
+            0
+        ],
+        "invalidDidErrorOutcome": [],
+        "notFoundErrorOutcome": [],
+        "representationNotSupportedErrorOutcome": [],
+        "deactivatedOutcome": []
+    },
+    "executions": [
+        {
+            "function": "resolveRepresentation",
+            "input": {
+                "did": "did:neuralkey:neuralkey.neuralsh.com",
+                "resolutionOptions": {
+                    "accept": "application/did+ld+json"
+                }
+            },
+            "output": {
+                "didResolutionMetadata": {
+                    "contentType": "application/did+ld+json",
+                    "didUrl": {
+                        "did": {
+                            "method": "neuralkey",
+                            "methodSpecificId": "neuralkey.neuralsh.com"
+                        },
+                        "didUrlString": "did:neuralkey:neuralkey.neuralsh.com",
+                        "fragment": null,
+                        "parameters": {},
+                        "path": "",
+                        "query": null
+                    },
+                    "driverUrl": "https://apineuralkey.neuralsh.com/api/v1/universal-resolver/$1",
+                    "duration": 3484,
+                    "identifier": "did:neuralkey:neuralkey.neuralsh.com",
+                    "pattern": "^did:neuralkey:(.+)$"
+                },
+                "didDocumentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://www.w3.org/ns/cid/v1\",\"https://w3id.org/security/jwk/v1\"],\"id\":\"did:neuralkey:neuralkey.neuralsh.com\",\"verificationMethod\":[{\"id\":\"did:neuralkey:neuralkey.neuralsh.com#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:neuralkey:neuralkey.neuralsh.com\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"pVFWWjSTrhmHZfY1WZSgNtOFGThTcvF6_Rhx12EgWlM\"}}],\"authentication\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"],\"assertionMethod\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"]}",
+                "didDocumentMetadata": {}
+            }
+        }
+    ]
+}
