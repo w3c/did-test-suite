@@ -43,7 +43,7 @@ module.exports = {
     require('../implementations/universal-resolver-did-work.json'),
     require('../implementations/universal-resolver-resolver-tests.json'),
     require('../implementations/universal-resolver-did-art.json'),
-    require('../implementations/universal-resolver-did-rm.json'),    
+    require('../implementations/universal-resolver-did-rm.json'),
     require('../implementations/universal-resolver-did-knox.json'),
     require('../implementations/universal-resolver-did-webvh.json'),
     require('../implementations/resolver-did-orb.json'),
@@ -62,6 +62,7 @@ module.exports = {
     require('../implementations/resolver-ssb.json'),
     require('../implementations/resolver-did-cheqd.json'),
     require('../implementations/resolver-knox.json'),
+    require('../implementations/universal-resolver-neuralkey.json'),
     ...brokenFixtures
   ],
 };

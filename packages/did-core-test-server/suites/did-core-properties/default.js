@@ -49,6 +49,8 @@ module.exports = {
     require('../implementations/did-webvh-dif-ts.json'),
     require('../implementations/did-webs.json'),
     require('../implementations/did-webplus-ledgerdomain.json'),
+    require('../implementations/did-neuralkey-neuralsh.com.json'),
+    require('../implementations/did-neuralkey-neuralsh.json'),
     ...brokenFixtures
   ],
 };
