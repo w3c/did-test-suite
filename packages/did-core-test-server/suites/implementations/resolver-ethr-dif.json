@@ -79,6 +79,17 @@
           "assertionMethod": [
             "did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller",
             "did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey"
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
+            "https://w3id.org/security/v2",
+            {
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
           ]
         },
         "didDocumentMetadata": {}
@@ -139,6 +150,10 @@
           ],
           "assertionMethod": [
             "did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller"
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
           ]
         },
         "didDocumentMetadata": {}
@@ -211,6 +226,17 @@
           "assertionMethod": [
             "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller",
             "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3"
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
+            "https://w3id.org/security/v2",
+            {
+              "publicKeyJwk": {
+                "@id": "https://w3id.org/security#publicKeyJwk",
+                "@type": "@json"
+              }
+            }
           ]
         },
         "didDocumentMetadata": {
@@ -292,6 +318,10 @@
               "type": "TravelRuleEmail",
               "serviceEndpoint": "mailto:did:ethr:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC@tr-email.notabene.dev"
             }
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
           ]
         },
         "didDocumentMetadata": {
@@ -368,6 +398,10 @@
               "type": "myname",
               "serviceEndpoint": "https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt"
             }
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
           ]
         },
         "didDocumentMetadata": {
@@ -426,7 +460,11 @@
           "id": "did:ethr:0xd6ce4c87ec3fb6e80d87ff5fa7c5ec8fdefadf5c",
           "verificationMethod": [],
           "authentication": [],
-          "assertionMethod": []
+          "assertionMethod": [],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
+          ]
         },
         "didDocumentMetadata": {
           "deactivated": true,
@@ -519,6 +557,11 @@
             "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1",
             "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2",
             "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3"
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
+            "https://w3id.org/security/suites/ed25519-2020/v1"
           ]
         },
         "didDocumentMetadata": {
@@ -595,6 +638,10 @@
               "type": "ServiceHub",
               "serviceEndpoint": "https://ssi-dev.miaid.me/did:ethr:0xB12c4093CFff8E668871f4318A5719a7E8824de6"
             }
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
           ]
         },
         "didDocumentMetadata": {
@@ -695,6 +742,13 @@
           "keyAgreement": [
             "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2",
             "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3"
+          ],
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
+            "https://w3id.org/security/suites/ed25519-2020/v1",
+            "https://w3id.org/security/suites/x25519-2020/v1",
+            "https://w3id.org/security/multikey/v1"
           ]
         },
         "didDocumentMetadata": {
@@ -758,7 +812,7 @@
     {
       "function": "resolve",
       "input": {
-        "did": "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc",
+        "did": "did:ethr:0x000000000000000000000000000000000000dead",
         "resolutionOptions": {}
       },
       "output": {

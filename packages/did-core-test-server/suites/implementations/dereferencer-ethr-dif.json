@@ -801,7 +801,7 @@
     {
       "function": "dereference",
       "input": {
-        "didUrl": "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc",
+        "didUrl": "did:ethr:0x000000000000000000000000000000000000dead",
         "dereferenceOptions": {
           "accept": "application/did+json"
         }
