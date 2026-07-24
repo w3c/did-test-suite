@@ -1,6 +1,6 @@
 {
-  "implementation": "Universal Resolver",
-  "implementer": "Decentralized Identity Foundation and Contributors",
+  "implementation": "ethr-did-resolver",
+  "implementer": "Decentralized Identity Foundation",
   "didMethod": "did:ethr",
   "expectedOutcomes": {
     "defaultOutcome": [
