@@ -11,6 +11,7 @@
     "did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e",
     "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6",
     "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc",
+    "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
     "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781",
     "did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6",
     "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d"
@@ -262,6 +263,65 @@
       "didDocumentMetadata": {
         "versionId": "18631820",
         "updated": "2023-11-23T03:42:11Z"
+      }
+    }
+  },
+  "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+        "verificationMethod": [
+          {
+            "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller",
+            "type": "EcdsaSecp256k1RecoveryMethod2020",
+            "controller": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+            "blockchainAccountId": "eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9"
+          }
+        ],
+        "authentication": [
+          "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller"
+        ],
+        "assertionMethod": [
+          "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller"
+        ],
+        "service": [
+          {
+            "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2",
+            "type": "myname",
+            "serviceEndpoint": "https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt"
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"verificationMethod\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"blockchainAccountId\":\"eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9\"}],\"authentication\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"assertionMethod\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"service\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2\",\"type\":\"myname\",\"serviceEndpoint\":\"https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt\"}]}",
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      },
+      "didDocumentMetadata": {
+        "versionId": "9793035",
+        "updated": "2020-04-02T14:11:14Z"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1",
+            "https://w3id.org/security/suites/secp256k1recovery-2020/v2"
+          ]
+        }
+      },
+      "representation": "{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"verificationMethod\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"blockchainAccountId\":\"eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9\"}],\"authentication\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"assertionMethod\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"service\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2\",\"type\":\"myname\",\"serviceEndpoint\":\"https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      },
+      "didDocumentMetadata": {
+        "versionId": "9793035",
+        "updated": "2020-04-02T14:11:14Z"
       }
     }
   },

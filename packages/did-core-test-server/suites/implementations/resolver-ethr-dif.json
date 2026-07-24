@@ -16,25 +16,30 @@
       9,
       10,
       11,
-      15,
-      16,
-      17,
+      12,
+      13,
+      14,
       18,
       19,
       20,
       21,
       22,
-      23
+      23,
+      24,
+      25,
+      26
     ],
     "invalidDidErrorOutcome": [
-      24
+      27
     ],
-    "notFoundErrorOutcome": [],
+    "notFoundErrorOutcome": [
+      28
+    ],
     "representationNotSupportedErrorOutcome": [],
     "deactivatedOutcome": [
-      12,
-      13,
-      14
+      15,
+      16,
+      17
     ]
   },
   "executions": [
@@ -330,6 +335,82 @@
         "didDocumentMetadata": {
           "versionId": "18631820",
           "updated": "2023-11-23T03:42:11Z"
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {},
+        "didDocument": {
+          "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+          "verificationMethod": [
+            {
+              "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller",
+              "type": "EcdsaSecp256k1RecoveryMethod2020",
+              "controller": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+              "blockchainAccountId": "eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9"
+            }
+          ],
+          "authentication": [
+            "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller"
+          ],
+          "assertionMethod": [
+            "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller"
+          ],
+          "service": [
+            {
+              "id": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2",
+              "type": "myname",
+              "serviceEndpoint": "https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt"
+            }
+          ]
+        },
+        "didDocumentMetadata": {
+          "versionId": "9793035",
+          "updated": "2020-04-02T14:11:14Z"
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+        "resolutionOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"verificationMethod\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"blockchainAccountId\":\"eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9\"}],\"authentication\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"assertionMethod\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"service\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2\",\"type\":\"myname\",\"serviceEndpoint\":\"https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt\"}]}",
+        "didDocumentMetadata": {
+          "versionId": "9793035",
+          "updated": "2020-04-02T14:11:14Z"
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"verificationMethod\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9\",\"blockchainAccountId\":\"eip155:1:0xb8587252114EB69445730F978b25fcCF4305dee9\"}],\"authentication\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"assertionMethod\":[\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#controller\"],\"service\":[{\"id\":\"did:ethr:0xb8587252114eb69445730f978b25fccf4305dee9#service-2\",\"type\":\"myname\",\"serviceEndpoint\":\"https://ipfs.io/ipfs/QmWx2dFnor8768VeETmNTCmHbRzTW1Qoo5VRGxJXT2QxgF?filename=vcjwt.txt\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
+        "didDocumentMetadata": {
+          "versionId": "9793035",
+          "updated": "2020-04-02T14:11:14Z"
         }
       }
     },
@@ -669,6 +750,20 @@
       "output": {
         "didResolutionMetadata": {
           "error": "invalidDid"
+        },
+        "didDocument": null,
+        "didDocumentMetadata": {}
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "error": "notFound"
         },
         "didDocument": null,
         "didDocumentMetadata": {}
