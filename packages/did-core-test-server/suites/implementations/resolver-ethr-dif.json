@@ -21,10 +21,13 @@
       17,
       18,
       19,
-      20
+      20,
+      21,
+      22,
+      23
     ],
     "invalidDidErrorOutcome": [
-      21
+      24
     ],
     "notFoundErrorOutcome": [],
     "representationNotSupportedErrorOutcome": [],
@@ -56,7 +59,12 @@
               "id": "did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey",
               "type": "EcdsaSecp256k1VerificationKey2019",
               "controller": "did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd",
-              "publicKeyHex": "037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd"
+              "publicKeyJwk": {
+                "kty": "EC",
+                "crv": "secp256k1",
+                "x": "f1mLN-Ua3J7IKVhg8L6qtNc59lgmoe0LtSRwJQOwMr0",
+                "y": "tFAjRmTWubmsGlVrloYZpkoIMWm3ODBCADXSIVzwik8"
+              }
             }
           ],
           "authentication": [
@@ -83,7 +91,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"verificationMethod\":[{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"},{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"publicKeyHex\":\"037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\"}],\"authentication\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"assertionMethod\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"verificationMethod\":[{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"},{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"f1mLN-Ua3J7IKVhg8L6qtNc59lgmoe0LtSRwJQOwMr0\",\"y\":\"tFAjRmTWubmsGlVrloYZpkoIMWm3ODBCADXSIVzwik8\"}}],\"authentication\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"assertionMethod\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"]}",
         "didDocumentMetadata": {}
       }
     },
@@ -99,7 +107,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"verificationMethod\":[{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"},{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"publicKeyHex\":\"037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\"}],\"authentication\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"assertionMethod\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"verificationMethod\":[{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"},{\"id\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"f1mLN-Ua3J7IKVhg8L6qtNc59lgmoe0LtSRwJQOwMr0\",\"y\":\"tFAjRmTWubmsGlVrloYZpkoIMWm3ODBCADXSIVzwik8\"}}],\"authentication\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"assertionMethod\":[\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controller\",\"did:ethr:0x037f598b37e51adc9ec8295860f0beaab4d739f65826a1ed0bb524702503b032bd#controllerKey\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v2\",{\"publicKeyJwk\":{\"@id\":\"https://w3id.org/security#publicKeyJwk\",\"@type\":\"@json\"}}]}",
         "didDocumentMetadata": {}
       }
     },
@@ -159,7 +167,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e\",\"verificationMethod\":[{\"id\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"}],\"authentication\":[\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\"],\"assertionMethod\":[\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e\",\"verificationMethod\":[{\"id\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e\",\"blockchainAccountId\":\"eip155:1:0xF932e07B8ef841828E219D4F40eead9FAD115b6E\"}],\"authentication\":[\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\"],\"assertionMethod\":[\"did:ethr:0xf932e07b8ef841828e219d4f40eead9fad115b6e#controller\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
         "didDocumentMetadata": {}
       }
     },
@@ -184,7 +192,12 @@
               "id": "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3",
               "type": "EcdsaSecp256k1VerificationKey2019",
               "controller": "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6",
-              "publicKeyHex": "0295dda1dca7f80e308ef60155ddeac00e46b797fd40ef407f422e88d2467a27eb"
+              "publicKeyJwk": {
+                "kty": "EC",
+                "crv": "secp256k1",
+                "x": "ld2h3Kf4DjCO9gFV3erADka3l_1A70B_Qi6I0kZ6J-s",
+                "y": "1cYHkRQo9pJDBgNBS14XoXnMzNe2ghbMEBPlruy5pkI"
+              }
             }
           ],
           "authentication": [
@@ -213,7 +226,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"},{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"publicKeyHex\":\"0295dda1dca7f80e308ef60155ddeac00e46b797fd40ef407f422e88d2467a27eb\"}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"},{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"ld2h3Kf4DjCO9gFV3erADka3l_1A70B_Qi6I0kZ6J-s\",\"y\":\"1cYHkRQo9pJDBgNBS14XoXnMzNe2ghbMEBPlruy5pkI\"}}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\"]}",
         "didDocumentMetadata": {
           "versionId": "8612549",
           "updated": "2019-09-24T15:28:49Z"
@@ -232,7 +245,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"},{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"publicKeyHex\":\"0295dda1dca7f80e308ef60155ddeac00e46b797fd40ef407f422e88d2467a27eb\"}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"},{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"ld2h3Kf4DjCO9gFV3erADka3l_1A70B_Qi6I0kZ6J-s\",\"y\":\"1cYHkRQo9pJDBgNBS14XoXnMzNe2ghbMEBPlruy5pkI\"}}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#delegate-3\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v2\",{\"publicKeyJwk\":{\"@id\":\"https://w3id.org/security#publicKeyJwk\",\"@type\":\"@json\"}}]}",
         "didDocumentMetadata": {
           "versionId": "8612549",
           "updated": "2019-09-24T15:28:49Z"
@@ -313,7 +326,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"verificationMethod\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"blockchainAccountId\":\"eip155:1:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"}],\"authentication\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"assertionMethod\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"service\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#service-4\",\"type\":\"TravelRuleProtocols\",\"serviceEndpoint\":\"https://travel-rule-protocols.notabene.dev/0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"},{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#service-12\",\"type\":\"TravelRuleEmail\",\"serviceEndpoint\":\"mailto:did:ethr:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC@tr-email.notabene.dev\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"verificationMethod\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"blockchainAccountId\":\"eip155:1:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"}],\"authentication\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"assertionMethod\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"service\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#service-4\",\"type\":\"TravelRuleProtocols\",\"serviceEndpoint\":\"https://travel-rule-protocols.notabene.dev/0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"},{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#service-12\",\"type\":\"TravelRuleEmail\",\"serviceEndpoint\":\"mailto:did:ethr:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC@tr-email.notabene.dev\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
         "didDocumentMetadata": {
           "versionId": "18631820",
           "updated": "2023-11-23T03:42:11Z"
@@ -373,7 +386,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0xd6ce4c87ec3fb6e80d87ff5fa7c5ec8fdefadf5c\",\"verificationMethod\":[],\"authentication\":[],\"assertionMethod\":[],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0xd6ce4c87ec3fb6e80d87ff5fa7c5ec8fdefadf5c\",\"verificationMethod\":[],\"authentication\":[],\"assertionMethod\":[],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
         "didDocumentMetadata": {
           "deactivated": true,
           "versionId": "13144265",
@@ -400,21 +413,21 @@
             },
             {
               "id": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1",
-              "type": "Ed25519VerificationKey2018",
+              "type": "Ed25519VerificationKey2020",
               "controller": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781",
-              "publicKeyHex": "fbf2eaa5f99915c937577bd848e09e6988141539b4ef567a578662880a375cab"
+              "publicKeyMultibase": "z6MkwQmDP7N5jEAV4kARQyBdFsenr2cBwaMHeuTxaYburvyY"
             },
             {
               "id": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2",
-              "type": "Ed25519VerificationKey2018",
+              "type": "Ed25519VerificationKey2020",
               "controller": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781",
-              "publicKeyHex": "e9c4fb6cd93e3a0290abe19a6b2983beeb5af3226c24460f0cb0edcf264d9bbe"
+              "publicKeyMultibase": "z6MkvBoFWntn6owuiXYDZcYQ2Wzem9tYTAzWwZjdpUExH9nV"
             },
             {
               "id": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3",
-              "type": "Ed25519VerificationKey2018",
+              "type": "Ed25519VerificationKey2020",
               "controller": "did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781",
-              "publicKeyHex": "7748c7724b9394da1a904e61e53aa525d61dc4051e19a5baa9d2c0d943ba17f1"
+              "publicKeyMultibase": "z6MknUtvm4UBw2SWgVEhStYM6T9yWBozw3cH1mR4LWAU9m7N"
             }
           ],
           "authentication": [
@@ -445,7 +458,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"blockchainAccountId\":\"eip155:137:0x2C1eeefcF840FEf9ed2A8582BADe785Cd9202781\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"fbf2eaa5f99915c937577bd848e09e6988141539b4ef567a578662880a375cab\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"e9c4fb6cd93e3a0290abe19a6b2983beeb5af3226c24460f0cb0edcf264d9bbe\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"7748c7724b9394da1a904e61e53aa525d61dc4051e19a5baa9d2c0d943ba17f1\"}],\"authentication\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"blockchainAccountId\":\"eip155:137:0x2C1eeefcF840FEf9ed2A8582BADe785Cd9202781\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MkwQmDP7N5jEAV4kARQyBdFsenr2cBwaMHeuTxaYburvyY\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MkvBoFWntn6owuiXYDZcYQ2Wzem9tYTAzWwZjdpUExH9nV\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MknUtvm4UBw2SWgVEhStYM6T9yWBozw3cH1mR4LWAU9m7N\"}],\"authentication\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\"]}",
         "didDocumentMetadata": {
           "versionId": "39742601",
           "updated": "2023-02-26T20:22:14Z"
@@ -464,7 +477,7 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"blockchainAccountId\":\"eip155:137:0x2C1eeefcF840FEf9ed2A8582BADe785Cd9202781\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"fbf2eaa5f99915c937577bd848e09e6988141539b4ef567a578662880a375cab\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"e9c4fb6cd93e3a0290abe19a6b2983beeb5af3226c24460f0cb0edcf264d9bbe\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\",\"type\":\"Ed25519VerificationKey2018\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyHex\":\"7748c7724b9394da1a904e61e53aa525d61dc4051e19a5baa9d2c0d943ba17f1\"}],\"authentication\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"blockchainAccountId\":\"eip155:137:0x2C1eeefcF840FEf9ed2A8582BADe785Cd9202781\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MkwQmDP7N5jEAV4kARQyBdFsenr2cBwaMHeuTxaYburvyY\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MkvBoFWntn6owuiXYDZcYQ2Wzem9tYTAzWwZjdpUExH9nV\"},{\"id\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781\",\"publicKeyMultibase\":\"z6MknUtvm4UBw2SWgVEhStYM6T9yWBozw3cH1mR4LWAU9m7N\"}],\"authentication\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#controller\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-1\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-2\",\"did:ethr:0x89:0x2c1eeefcf840fef9ed2a8582bade785cd9202781#delegate-3\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/suites/ed25519-2020/v1\"]}",
         "didDocumentMetadata": {
           "versionId": "39742601",
           "updated": "2023-02-26T20:22:14Z"
@@ -540,10 +553,110 @@
         "didResolutionMetadata": {
           "contentType": "application/did+ld+json"
         },
-        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6\",\"blockchainAccountId\":\"eip155:137:0xB12c4093CFff8E668871f4318A5719a7E8824de6\"}],\"authentication\":[\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\"],\"service\":[{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#service-1\",\"type\":\"ServiceHub\",\"serviceEndpoint\":\"https://ssi-dev.miaid.me/did:ethr:0xB12c4093CFff8E668871f4318A5719a7E8824de6\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/v3-unstable\"]}",
+        "didDocumentStream": "{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6\",\"verificationMethod\":[{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6\",\"blockchainAccountId\":\"eip155:137:0xB12c4093CFff8E668871f4318A5719a7E8824de6\"}],\"authentication\":[\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\"],\"assertionMethod\":[\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#controller\"],\"service\":[{\"id\":\"did:ethr:0x89:0xb12c4093cfff8e668871f4318a5719a7e8824de6#service-1\",\"type\":\"ServiceHub\",\"serviceEndpoint\":\"https://ssi-dev.miaid.me/did:ethr:0xB12c4093CFff8E668871f4318A5719a7E8824de6\"}],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
         "didDocumentMetadata": {
           "versionId": "73962377",
           "updated": "2025-07-14T20:14:02Z"
+        }
+      }
+    },
+    {
+      "function": "resolve",
+      "input": {
+        "did": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+        "resolutionOptions": {}
+      },
+      "output": {
+        "didResolutionMetadata": {},
+        "didDocument": {
+          "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+          "verificationMethod": [
+            {
+              "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller",
+              "type": "EcdsaSecp256k1RecoveryMethod2020",
+              "controller": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+              "blockchainAccountId": "eip155:100:0xF36cAD0fb057f01F852557317bB8aa05F8c2dF4D"
+            },
+            {
+              "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1",
+              "type": "Ed25519VerificationKey2020",
+              "controller": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+              "publicKeyMultibase": "z6Mkhi64CW2MGVkkQKhoo1tBer6f2TYTNQ8EtqmuHGXPGs85"
+            },
+            {
+              "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2",
+              "type": "X25519KeyAgreementKey2020",
+              "controller": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+              "publicKeyMultibase": "z6LSfut7z9fcG6GwysRmCaYnjbgZxuBoyviWSVAzWinTVzUq"
+            },
+            {
+              "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3",
+              "type": "Multikey",
+              "controller": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+              "publicKeyMultibase": "z9LYRdUGa3cVzqUZHSQJWXtBAaH5ry3TtnSPy7w1nHNbuWQWpBGvcgPEo8j2tLWWovdefVp3u8HKHGAQpK51AG9L4gU19czJki16FTzeBmP21Tw69JcBDVGSgTWSgFm72TCzKm9fNW3mX9zW2LwzqY7bVH3xhCQhQ51S7y32XAaePXsbWvf3AsCSYT816fYsQr49rX8gTXhymkhKfZxQosdFWpCLDLNyxRpMa55FDRsSgpYfPCnZSsLYmtD2SUxptQ7BcfSbMrrcLT5RJXRUjE8a1QafLboXPT8xy1UgTtwmrLhhWQAGFaRcWUExnqbQEPUbwR8W2kUP4brUjoHo5HgoQezq8AXsKDgCJzUi7dQe9uXFu9T57zKjjR86bjyvgWJu3fBKGWdyXDkoLCQJX1cr8zUPiwrJQgPixXEbAAVKomzaktRcVu7g8tcXQDBDGUuAV8wBMJrcYhCRYUf6UrB7yK5McDky69ndRbLWJNDc2YtnoLA7J6T78PFDDcSWA7GJfKoiq2kJMwVUEjVFhnYEVsLdokgmG7VRZ2jdPJzoVYYfQW1aAD2zegzD9Wr2eKCqbb56GyR4cNkVcs79FJRqmjsY2J5Pbc58SdSvGrNUTbPDtccz9RFN2N59fJimDxcKHP3eK1o96q26NX7vB5ghVADeW4tPBfjyFtkx4MoDTUMVRDc7kUBg4PVmDAv2zADypr7oe8J4hYeahopTBV4UUPQfeL9EkTV47MRBWPRwEbzoihn1RXJc9qT6KxYLWwWfWsbkJMEdEortnhF6Std8ugjih1Scq3NQsxkPQmNa1hoFt12D4mPdK9SrbnTU13oRh344PmkJYuMkCAz27PSeVDQBjesEpcYgcSviiHSJZAqHNpLkKyVtr92YGHxozQvxwfrEAZ5KK3w62QjwjHvyB9nmDbvY3Sc2rrNryi963yyYSevXD1miuSh1MfiEGKjjupKDttuQGu53zrijqKKxV26udunZHyR3nHZP5utFZoSZLbPsoSw4tuJVYtEBAL1tpHnUepT6SAaXoHUbuo19TC6LswXBJucsuk13xj6Tc9svL5qw1pS4cJuAPk6SdyZGoXin5mmgqsUYF7ef8miSiBgLENRwtGpitUbJgUqjo6MzefcgCfhAeXhhwDQkr4eu7389ax5i8TUWyZMbbejYX5vcgwiEr14TrdwbzkquHDLrHPYskv8RpsA1ostEoLeo4rWG3rZXA2qTwCEfCQtenki4gLjDkATjqxFKGGqEaX3BNV2xHtM1nvESqLCd9u9a3tVdmb3tBVsqucPnBHKBhFucQ1aWPJMMfoezjrqLSBi51fWFcSTYX1gpAmvyvmBf3XKrkYVhFs4kahoDred8QnHkeVqV566NLAB3R6sjH9mC9QpXUTFvJFwMrwA9RvHYuVkW9JGYRvakNX35pZMJnYbzrq7WH6KGGkbTCinLSaBZkNe3jtcvWaZg9dFVQHeN43xMjVj2C2myDjQrc8G9SLCgNwf4daqKfmM7uEL6jyTFKtb6vz1ho2Wrfakrp5UtZR5CXpYSJTzEJKGaWqkshDG9ZUdNP8vM3ztRwgsDseSoTRSWKdgajDQk7GdyqbhZKmfRvFLT7aUmj2mgq"
+            },
+            {
+              "id": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4",
+              "type": "Ed25519VerificationKey2020",
+              "controller": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+              "publicKeyMultibase": "z6MksoBm2hUcoKLLHsUQ77iA5YXxwNskXJ9fs7V7z8edniop"
+            }
+          ],
+          "authentication": [
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller",
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1"
+          ],
+          "assertionMethod": [
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller",
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1",
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4"
+          ],
+          "keyAgreement": [
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2",
+            "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3"
+          ]
+        },
+        "didDocumentMetadata": {
+          "versionId": "46509537",
+          "updated": "2026-06-03T16:21:15Z"
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+        "resolutionOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"verificationMethod\":[{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"blockchainAccountId\":\"eip155:100:0xF36cAD0fb057f01F852557317bB8aa05F8c2dF4D\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6Mkhi64CW2MGVkkQKhoo1tBer6f2TYTNQ8EtqmuHGXPGs85\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6LSfut7z9fcG6GwysRmCaYnjbgZxuBoyviWSVAzWinTVzUq\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3\",\"type\":\"Multikey\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z9LYRdUGa3cVzqUZHSQJWXtBAaH5ry3TtnSPy7w1nHNbuWQWpBGvcgPEo8j2tLWWovdefVp3u8HKHGAQpK51AG9L4gU19czJki16FTzeBmP21Tw69JcBDVGSgTWSgFm72TCzKm9fNW3mX9zW2LwzqY7bVH3xhCQhQ51S7y32XAaePXsbWvf3AsCSYT816fYsQr49rX8gTXhymkhKfZxQosdFWpCLDLNyxRpMa55FDRsSgpYfPCnZSsLYmtD2SUxptQ7BcfSbMrrcLT5RJXRUjE8a1QafLboXPT8xy1UgTtwmrLhhWQAGFaRcWUExnqbQEPUbwR8W2kUP4brUjoHo5HgoQezq8AXsKDgCJzUi7dQe9uXFu9T57zKjjR86bjyvgWJu3fBKGWdyXDkoLCQJX1cr8zUPiwrJQgPixXEbAAVKomzaktRcVu7g8tcXQDBDGUuAV8wBMJrcYhCRYUf6UrB7yK5McDky69ndRbLWJNDc2YtnoLA7J6T78PFDDcSWA7GJfKoiq2kJMwVUEjVFhnYEVsLdokgmG7VRZ2jdPJzoVYYfQW1aAD2zegzD9Wr2eKCqbb56GyR4cNkVcs79FJRqmjsY2J5Pbc58SdSvGrNUTbPDtccz9RFN2N59fJimDxcKHP3eK1o96q26NX7vB5ghVADeW4tPBfjyFtkx4MoDTUMVRDc7kUBg4PVmDAv2zADypr7oe8J4hYeahopTBV4UUPQfeL9EkTV47MRBWPRwEbzoihn1RXJc9qT6KxYLWwWfWsbkJMEdEortnhF6Std8ugjih1Scq3NQsxkPQmNa1hoFt12D4mPdK9SrbnTU13oRh344PmkJYuMkCAz27PSeVDQBjesEpcYgcSviiHSJZAqHNpLkKyVtr92YGHxozQvxwfrEAZ5KK3w62QjwjHvyB9nmDbvY3Sc2rrNryi963yyYSevXD1miuSh1MfiEGKjjupKDttuQGu53zrijqKKxV26udunZHyR3nHZP5utFZoSZLbPsoSw4tuJVYtEBAL1tpHnUepT6SAaXoHUbuo19TC6LswXBJucsuk13xj6Tc9svL5qw1pS4cJuAPk6SdyZGoXin5mmgqsUYF7ef8miSiBgLENRwtGpitUbJgUqjo6MzefcgCfhAeXhhwDQkr4eu7389ax5i8TUWyZMbbejYX5vcgwiEr14TrdwbzkquHDLrHPYskv8RpsA1ostEoLeo4rWG3rZXA2qTwCEfCQtenki4gLjDkATjqxFKGGqEaX3BNV2xHtM1nvESqLCd9u9a3tVdmb3tBVsqucPnBHKBhFucQ1aWPJMMfoezjrqLSBi51fWFcSTYX1gpAmvyvmBf3XKrkYVhFs4kahoDred8QnHkeVqV566NLAB3R6sjH9mC9QpXUTFvJFwMrwA9RvHYuVkW9JGYRvakNX35pZMJnYbzrq7WH6KGGkbTCinLSaBZkNe3jtcvWaZg9dFVQHeN43xMjVj2C2myDjQrc8G9SLCgNwf4daqKfmM7uEL6jyTFKtb6vz1ho2Wrfakrp5UtZR5CXpYSJTzEJKGaWqkshDG9ZUdNP8vM3ztRwgsDseSoTRSWKdgajDQk7GdyqbhZKmfRvFLT7aUmj2mgq\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6MksoBm2hUcoKLLHsUQ77iA5YXxwNskXJ9fs7V7z8edniop\"}],\"authentication\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\"],\"assertionMethod\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4\"],\"keyAgreement\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3\"]}",
+        "didDocumentMetadata": {
+          "versionId": "46509537",
+          "updated": "2026-06-03T16:21:15Z"
+        }
+      }
+    },
+    {
+      "function": "resolveRepresentation",
+      "input": {
+        "did": "did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d",
+        "resolutionOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "didResolutionMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "didDocumentStream": "{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"verificationMethod\":[{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"blockchainAccountId\":\"eip155:100:0xF36cAD0fb057f01F852557317bB8aa05F8c2dF4D\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6Mkhi64CW2MGVkkQKhoo1tBer6f2TYTNQ8EtqmuHGXPGs85\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2\",\"type\":\"X25519KeyAgreementKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6LSfut7z9fcG6GwysRmCaYnjbgZxuBoyviWSVAzWinTVzUq\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3\",\"type\":\"Multikey\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z9LYRdUGa3cVzqUZHSQJWXtBAaH5ry3TtnSPy7w1nHNbuWQWpBGvcgPEo8j2tLWWovdefVp3u8HKHGAQpK51AG9L4gU19czJki16FTzeBmP21Tw69JcBDVGSgTWSgFm72TCzKm9fNW3mX9zW2LwzqY7bVH3xhCQhQ51S7y32XAaePXsbWvf3AsCSYT816fYsQr49rX8gTXhymkhKfZxQosdFWpCLDLNyxRpMa55FDRsSgpYfPCnZSsLYmtD2SUxptQ7BcfSbMrrcLT5RJXRUjE8a1QafLboXPT8xy1UgTtwmrLhhWQAGFaRcWUExnqbQEPUbwR8W2kUP4brUjoHo5HgoQezq8AXsKDgCJzUi7dQe9uXFu9T57zKjjR86bjyvgWJu3fBKGWdyXDkoLCQJX1cr8zUPiwrJQgPixXEbAAVKomzaktRcVu7g8tcXQDBDGUuAV8wBMJrcYhCRYUf6UrB7yK5McDky69ndRbLWJNDc2YtnoLA7J6T78PFDDcSWA7GJfKoiq2kJMwVUEjVFhnYEVsLdokgmG7VRZ2jdPJzoVYYfQW1aAD2zegzD9Wr2eKCqbb56GyR4cNkVcs79FJRqmjsY2J5Pbc58SdSvGrNUTbPDtccz9RFN2N59fJimDxcKHP3eK1o96q26NX7vB5ghVADeW4tPBfjyFtkx4MoDTUMVRDc7kUBg4PVmDAv2zADypr7oe8J4hYeahopTBV4UUPQfeL9EkTV47MRBWPRwEbzoihn1RXJc9qT6KxYLWwWfWsbkJMEdEortnhF6Std8ugjih1Scq3NQsxkPQmNa1hoFt12D4mPdK9SrbnTU13oRh344PmkJYuMkCAz27PSeVDQBjesEpcYgcSviiHSJZAqHNpLkKyVtr92YGHxozQvxwfrEAZ5KK3w62QjwjHvyB9nmDbvY3Sc2rrNryi963yyYSevXD1miuSh1MfiEGKjjupKDttuQGu53zrijqKKxV26udunZHyR3nHZP5utFZoSZLbPsoSw4tuJVYtEBAL1tpHnUepT6SAaXoHUbuo19TC6LswXBJucsuk13xj6Tc9svL5qw1pS4cJuAPk6SdyZGoXin5mmgqsUYF7ef8miSiBgLENRwtGpitUbJgUqjo6MzefcgCfhAeXhhwDQkr4eu7389ax5i8TUWyZMbbejYX5vcgwiEr14TrdwbzkquHDLrHPYskv8RpsA1ostEoLeo4rWG3rZXA2qTwCEfCQtenki4gLjDkATjqxFKGGqEaX3BNV2xHtM1nvESqLCd9u9a3tVdmb3tBVsqucPnBHKBhFucQ1aWPJMMfoezjrqLSBi51fWFcSTYX1gpAmvyvmBf3XKrkYVhFs4kahoDred8QnHkeVqV566NLAB3R6sjH9mC9QpXUTFvJFwMrwA9RvHYuVkW9JGYRvakNX35pZMJnYbzrq7WH6KGGkbTCinLSaBZkNe3jtcvWaZg9dFVQHeN43xMjVj2C2myDjQrc8G9SLCgNwf4daqKfmM7uEL6jyTFKtb6vz1ho2Wrfakrp5UtZR5CXpYSJTzEJKGaWqkshDG9ZUdNP8vM3ztRwgsDseSoTRSWKdgajDQk7GdyqbhZKmfRvFLT7aUmj2mgq\"},{\"id\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4\",\"type\":\"Ed25519VerificationKey2020\",\"controller\":\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d\",\"publicKeyMultibase\":\"z6MksoBm2hUcoKLLHsUQ77iA5YXxwNskXJ9fs7V7z8edniop\"}],\"authentication\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\"],\"assertionMethod\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#controller\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-1\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-4\"],\"keyAgreement\":[\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-2\",\"did:ethr:gno:0xf36cad0fb057f01f852557317bb8aa05f8c2df4d#delegate-3\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\",\"https://w3id.org/security/suites/ed25519-2020/v1\",\"https://w3id.org/security/suites/x25519-2020/v1\",\"https://w3id.org/security/multikey/v1\"]}",
+        "didDocumentMetadata": {
+          "versionId": "46509537",
+          "updated": "2026-06-03T16:21:15Z"
         }
       }
     },
