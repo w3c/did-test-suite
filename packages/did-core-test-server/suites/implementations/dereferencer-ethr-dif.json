@@ -42,13 +42,17 @@
       35,
       36,
       37,
-      38
+      38,
+      39,
+      40,
+      41,
+      42
     ],
     "invalidDidUrlErrorOutcome": [
-      40
+      44
     ],
     "notFoundErrorOutcome": [
-      39
+      43
     ]
   },
   "executions": [
@@ -715,6 +719,82 @@
         "contentMetadata": {
           "versionId": "8612549",
           "updated": "2019-09-24T15:28:49Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6?versionTime=2019-09-01",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"]}",
+        "contentMetadata": {
+          "nextVersionId": "8576966",
+          "nextUpdate": "2019-09-19T01:36:55Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6?versionTime=2019-09-01",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"verificationMethod\":[{\"id\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6\",\"blockchainAccountId\":\"eip155:1:0xE6Fe788d8ca214A080b0f6aC7F48480b2AEfa9a6\"}],\"authentication\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"assertionMethod\":[\"did:ethr:0xe6fe788d8ca214a080b0f6ac7f48480b2aefa9a6#controller\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
+        "contentMetadata": {
+          "nextVersionId": "8576966",
+          "nextUpdate": "2019-09-19T01:36:55Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc?versionTime=2023-01-01",
+        "dereferenceOptions": {
+          "accept": "application/did+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+json"
+        },
+        "contentStream": "{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"verificationMethod\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"blockchainAccountId\":\"eip155:1:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"}],\"authentication\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"assertionMethod\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"]}",
+        "contentMetadata": {
+          "nextVersionId": "18631544",
+          "nextUpdate": "2023-11-23T02:46:47Z"
+        }
+      }
+    },
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc?versionTime=2023-01-01",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json"
+        },
+        "contentStream": "{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"verificationMethod\":[{\"id\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\",\"type\":\"EcdsaSecp256k1RecoveryMethod2020\",\"controller\":\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc\",\"blockchainAccountId\":\"eip155:1:0x6918893854B2Eb01B194c46c4Efe2ea1ef36B7BC\"}],\"authentication\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"assertionMethod\":[\"did:ethr:0x6918893854b2eb01b194c46c4efe2ea1ef36b7bc#controller\"],\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://w3id.org/security/suites/secp256k1recovery-2020/v2\"]}",
+        "contentMetadata": {
+          "nextVersionId": "18631544",
+          "nextUpdate": "2023-11-23T02:46:47Z"
         }
       }
     },
