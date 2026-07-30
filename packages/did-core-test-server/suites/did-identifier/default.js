@@ -51,6 +51,7 @@ module.exports = {
     require('../implementations/did-webvh-dif-ts.json'),
     require('../implementations/did-webs.json'),
     require('../implementations/did-webplus-ledgerdomain.json'),
+    require('../implementations/did-hedera.json'),
     require('../implementations/did-cid.json'),
     ...brokenFixtures
   ],
