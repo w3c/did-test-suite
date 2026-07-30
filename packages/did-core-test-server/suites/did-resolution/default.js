@@ -10,7 +10,7 @@ module.exports = {
   name: '7.1 DID Resolution',
   resolvers: [
     require('../implementations/universal-resolver-did-dxd.json'),
-    require('../implementations/resolver-ethr-consensys-mesh.json'),
+    require('../implementations/resolver-ethr-dif.json'),
     require('../implementations/universal-resolver-did-ace.json'),
     require('../implementations/universal-resolver-did-bba.json'),
     require('../implementations/universal-resolver-did-btcr.json'),
