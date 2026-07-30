@@ -1,0 +1,83 @@
+{
+  "didMethod": "did:cid",
+  "implementation": "https://github.com/archetech/archon",
+  "implementer": "Archetech",
+  "supportedContentTypes": [
+    "application/did+json",
+    "application/did+ld+json"
+  ],
+  "dids": [
+    "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca"
+  ],
+  "didParameters": {
+    "versionId": "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca?versionId=bagaaierak55he43tkdk5a75ppgtqsttl3weuwbl6gljp3hvp6tccdtr2wzkq",
+    "versionTime": "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca?versionTime=2026-05-28T16:47:27Z"
+  },
+  "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca": {
+    "didDocumentDataModel": {
+      "properties": {
+        "id": "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca",
+        "verificationMethod": [
+          {
+            "id": "#key-1",
+            "controller": "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca",
+            "type": "EcdsaSecp256k1VerificationKey2019",
+            "publicKeyJwk": {
+              "kty": "EC",
+              "crv": "secp256k1",
+              "x": "RBcPpN1q8dTrrZuz0sPcxSyWunydJE10OrJsh7Txo1I",
+              "y": "74GhaFAhOmNnN5pX-RKEGx4YQm30FDHVnYPbCuccVcU"
+            }
+          }
+        ],
+        "authentication": [
+          "#key-1"
+        ],
+        "assertionMethod": [
+          "#key-1"
+        ],
+        "service": [
+          {
+            "id": "did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca#lightning",
+            "type": "Lightning",
+            "serviceEndpoint": "http://cnenrr6v4wyyaizeeh6brpi25tl6gbnrpedggnzdkloxuqq3rbv6hfqd.onion:4222/invoice/bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca"
+          }
+        ]
+      }
+    },
+    "application/did+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {}
+      },
+      "representation": "{\"id\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\",\"verificationMethod\":[{\"id\":\"#key-1\",\"controller\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"RBcPpN1q8dTrrZuz0sPcxSyWunydJE10OrJsh7Txo1I\",\"y\":\"74GhaFAhOmNnN5pX-RKEGx4YQm30FDHVnYPbCuccVcU\"}}],\"authentication\":[\"#key-1\"],\"assertionMethod\":[\"#key-1\"],\"service\":[{\"id\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca#lightning\",\"type\":\"Lightning\",\"serviceEndpoint\":\"http://cnenrr6v4wyyaizeeh6brpi25tl6gbnrpedggnzdkloxuqq3rbv6hfqd.onion:4222/invoice/bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\"}]}",
+      "didDocumentMetadata": {
+        "created": "2026-01-28T21:29:32Z",
+        "versionId": "bagaaierak55he43tkdk5a75ppgtqsttl3weuwbl6gljp3hvp6tccdtr2wzkq",
+        "versionSequence": "34",
+        "updated": "2026-05-28T16:47:27Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+json"
+      }
+    },
+    "application/did+ld+json": {
+      "didDocumentDataModel": {
+        "representationSpecificEntries": {
+          "@context": [
+            "https://www.w3.org/ns/did/v1"
+          ]
+        }
+      },
+      "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\"],\"id\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\",\"verificationMethod\":[{\"id\":\"#key-1\",\"controller\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\",\"type\":\"EcdsaSecp256k1VerificationKey2019\",\"publicKeyJwk\":{\"kty\":\"EC\",\"crv\":\"secp256k1\",\"x\":\"RBcPpN1q8dTrrZuz0sPcxSyWunydJE10OrJsh7Txo1I\",\"y\":\"74GhaFAhOmNnN5pX-RKEGx4YQm30FDHVnYPbCuccVcU\"}}],\"authentication\":[\"#key-1\"],\"assertionMethod\":[\"#key-1\"],\"service\":[{\"id\":\"did:cid:bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca#lightning\",\"type\":\"Lightning\",\"serviceEndpoint\":\"http://cnenrr6v4wyyaizeeh6brpi25tl6gbnrpedggnzdkloxuqq3rbv6hfqd.onion:4222/invoice/bagaaieratxbzo7e4dqup37h7j6hs7kzpamevy4qud4psj23p3r3grzd2rjca\"}]}",
+      "didDocumentMetadata": {
+        "created": "2026-01-28T21:29:32Z",
+        "versionId": "bagaaierak55he43tkdk5a75ppgtqsttl3weuwbl6gljp3hvp6tccdtr2wzkq",
+        "versionSequence": "34",
+        "updated": "2026-05-28T16:47:27Z"
+      },
+      "didResolutionMetadata": {
+        "contentType": "application/did+ld+json"
+      }
+    }
+  }
+}
