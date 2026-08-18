@@ -1,0 +1,52 @@
+{
+    "didMethod": "did:neuralkey",
+    "implementation": "did-resolver, web-did-resolver, digitalbazaar/did-method-key",
+    "implementer": "neuralkey.neuralsh.com",
+    "supportedContentTypes": [
+        "application/did+ld+json"
+    ],
+    "dids": [
+        "did:neuralkey:neuralkey.neuralsh.com"
+    ],
+    "did:neuralkey:neuralkey.neuralsh.com": {
+        "didDocumentDataModel": {
+            "properties": {
+                "id": "did:neuralkey:neuralkey.neuralsh.com",
+                "verificationMethod": [
+                    {
+                        "id": "did:neuralkey:neuralkey.neuralsh.com#key-0",
+                        "type": "JsonWebKey2020",
+                        "controller": "did:neuralkey:neuralkey.neuralsh.com",
+                        "publicKeyJwk": {
+                            "kty": "OKP",
+                            "crv": "Ed25519",
+                            "x": "pVFWWjSTrhmHZfY1WZSgNtOFGThTcvF6_Rhx12EgWlM"
+                        }
+                    }
+                ],
+                "assertionMethod": [
+                    "did:neuralkey:neuralkey.neuralsh.com#key-0"
+                ],
+                "authentication": [
+                    "did:neuralkey:neuralkey.neuralsh.com#key-0"
+                ]
+            }
+        },
+        "application/did+ld+json": {
+            "didDocumentDataModel": {
+                "representationSpecificEntries": {
+                    "@context": [
+                        "https://www.w3.org/ns/did/v1",
+                        "https://www.w3.org/ns/cid/v1",
+                        "https://w3id.org/security/jwk/v1"
+                    ]
+                }
+            },
+            "representation": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://www.w3.org/ns/cid/v1\",\"https://w3id.org/security/jwk/v1\"],\"id\":\"did:neuralkey:neuralkey.neuralsh.com\",\"verificationMethod\":[{\"id\":\"did:neuralkey:neuralkey.neuralsh.com#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:neuralkey:neuralkey.neuralsh.com\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"pVFWWjSTrhmHZfY1WZSgNtOFGThTcvF6_Rhx12EgWlM\"}}],\"authentication\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"],\"assertionMethod\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"]}",
+            "didDocumentMetadata": {},
+            "didResolutionMetadata": {
+                "contentType": "application/did+ld+json"
+            }
+        }
+    }
+}

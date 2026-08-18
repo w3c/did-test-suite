@@ -1,0 +1,28 @@
+{
+  "implementation": "did-resolver, web-did-resolver, digitalbazaar/did-method-key",
+  "implementer": "neuralkey.neuralsh.com",
+  "didMethod": "did:neuralkey",
+  "expectedOutcomes": {
+    "defaultOutcome": [ 0, 1 ],
+    "invalidDidUrlErrorOutcome": [ ],
+    "notFoundErrorOutcome": [ ]
+  },
+  "executions": [
+    {
+      "function": "dereference",
+      "input": {
+        "didUrl": "did:neuralkey:neuralkey.neuralsh.com",
+        "dereferenceOptions": {
+          "accept": "application/did+ld+json"
+        }
+      },
+      "output": {
+        "dereferencingMetadata": {
+          "contentType": "application/did+ld+json; charset=utf-8"
+        },
+        "contentStream": "{\"@context\":[\"https://www.w3.org/ns/did/v1\",\"https://www.w3.org/ns/cid/v1\",\"https://w3id.org/security/jwk/v1\"],\"id\":\"did:neuralkey:neuralkey.neuralsh.com\",\"verificationMethod\":[{\"id\":\"did:neuralkey:neuralkey.neuralsh.com#key-0\",\"type\":\"JsonWebKey2020\",\"controller\":\"did:neuralkey:neuralkey.neuralsh.com\",\"publicKeyJwk\":{\"kty\":\"OKP\",\"crv\":\"Ed25519\",\"x\":\"ADTXUVoRZP9A0Lzt5lw8LGK0MLSmuhftNCZh5aQPXMc\"}}],\"authentication\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"],\"assertionMethod\":[\"did:neuralkey:neuralkey.neuralsh.com#key-0\"]}",
+        "contentMetadata": {}
+      }
+    }
+  ]
+}

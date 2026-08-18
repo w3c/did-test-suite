@@ -53,6 +53,8 @@ module.exports = {
     require('../implementations/did-webplus-ledgerdomain.json'),
     require('../implementations/did-hedera.json'),
     require('../implementations/did-cid.json'),
+    require('../implementations/did-neuralkey-neuralsh.com.json'),
+    require('../implementations/did-neuralkey-neuralsh.json'),
     ...brokenFixtures
   ],
 };

@@ -26,6 +26,7 @@ module.exports = {
     require('../implementations/dereferencer-knox.json'),
     require('../implementations/dereferencer-dif-webvh.json'),
     require('../implementations/dereferencer-hedera.json'),
+    require('../implementations/dereferencer-neuralkey.json'),
     ...brokenFixtures
   ]
 }
